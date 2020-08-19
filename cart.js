@@ -66,6 +66,18 @@ document.addEventListener("click", (e) => {
 /* ITEM COUNTER*/
 let cartCounter = document.getElementById("items-in-cart")
 
+/* Clear Cart */
+const clearCart = () => {
+localStorage.removeItem("Cart")
+cartCounter.innerText = "0"
+totalCar.innerText = "0"
+totalCar2.innerText = "0"
+checkButton.disabled = true
+checkButton.style.opacity = "50%"
+document.getElementById("allTotal").innerText = _item.allTotal()
+Storage.indicateEmptyCart()
+}
+
 
 class Storage {
   /* RETRIEVE ITEMS IN CART */
@@ -178,6 +190,7 @@ class CartItems {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = altheredItemID;
     let filteredCart = getbackcart.filter((items) => items.id !== itemID.toString())
+
     if(filteredCart.length === 0){
       totalCar.innerText = "0"
       totalCar2.innerText = "0"
@@ -187,10 +200,13 @@ class CartItems {
       document.getElementById("tax").innerText = Storage.getFees().taxesAndDeliveryFees[0].tax
       checkButton.disabled = true
       checkButton.style.opacity = "50%"
-    }else{
+    }
+    
+    else{
       checkButton.disabled = false
       checkButton.style.opacity = "100%"
     }
+
     localStorage.Cart = JSON.stringify(filteredCart)
     cartCounter.innerText = Storage.numberOfItemsInCart()
     totalQuantity.innerText = Storage.numberOfItemsInCart()

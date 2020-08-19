@@ -369,6 +369,26 @@ nav ul li{
     color: #086948;
 }
 
+.clear-cart{
+    background-color: transparent;
+    color: #090A0A;
+    /* padding: 10px 30px; */
+    border: 2px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-weight: 600;
+    position: sticky;
+    margin-right: 20px;
+    cursor: pointer;
+    float: right;}
+
+.clear-cart:hover{
+    text-decoration: 1px solid #090A0A underline;
+}
+
 .check-out{
     background-color: #090A0A;
     color: white;
@@ -450,6 +470,10 @@ nav ul li{
     color: aliceblue;
 }
 
+.cart-orders{
+    width: 70%;
+}
+
 .cart-full-details{
     width: 100%;
     height: auto;
@@ -464,8 +488,8 @@ nav ul li{
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    width: 70%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     padding: 20px;
     /* border: 1px solid rgba(128, 128, 128, 0.365); */
     border-radius: 10px;
