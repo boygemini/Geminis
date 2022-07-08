@@ -22,15 +22,24 @@
         </div>
     </section>
     <section class="hero" id="background">
-        <div class="images">
-            <img class="imgs" src="/HTML:CSS/IMAGES/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="" srcset="">
-            <img class="imgs" src="/HTML:CSS/IMAGES/716Ap-eCdtL._AC_SL1500_.jpg" alt="" srcset="">
-            <img class="imgs" src="/HTML:CSS/IMAGES/91otJ1fmuXS._AC_SL1500_.jpg" alt="" srcset="">
-            <img class="imgs" src="/HTML:CSS/IMAGES/sigmund-8zfhRkrs2xU-unsplash.jpg" alt="" srcset="">
+        <div class="images" id="images">
+            <div class="shade2">
+                <button class="tag" id="lm"></button>
+                <!-- <div class="arrows">
+                    <div class="arr arr1" onclick="decreSlide()"><img src="/HTML:CSS/IMAGES/left-arrow.png" alt=""></div>
+                    <div class="arr arr2" onclick="increSlide()"><img src="/HTML:CSS/IMAGES/right-arrow.png" alt=""></div>
+                </div> -->
+            </div>
+            <div class="imgs" id="imm1"></div>
+            <div class="imgs" id="imm2"></div>
+            <div class="imgs" id="imm3"></div>
+            <div class="imgs" id="imm4"></div>
+            <div class="imgs" id="imm5"></div>
         </div>
         <div class="shade">
             <div class="logo-nav">
                 <nav>
+                    <img src="/HTML:CSS/IMAGES/menu(2).png" alt="" class="menu">
                     <ul>
                         <li>Home</li>
                         <li>Shop</li>
@@ -39,6 +48,7 @@
                         <li>Contact</li>
                     </ul>
                 </nav>
+                
                 <h1 class="logo">Geministore.</h1>
                 <div class="login-cart">
                     <button class="login">Login</button>
@@ -46,27 +56,28 @@
             </div>
             <div class="intro-box">
                 <div class="intro">
-                    <h1>Welcome to the world of <span class="gradient">Electronics</span></h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, tempore.</p>
+                    <div class="introtext" id="introtext">
+                        <h1><span id="intro">Welcome to the world of</span> <span class="gradient" id="gradient">Electronics</span> </h1>
+                    <p id="intro2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae!</p>
+                    </div>
                     <div class="lm">
-                        <button class="learn-more" onclick="">Shop now</button>
-                        <p>Learn more</p>
+                        <button class="learn-more">Shop Now</button>
+                        <!-- <p>Learn more</p> -->
                     </div>
                 </div>
             </div>
-            <div class="radios">
+            <!-- <div class="radios">
                 <div class="radio"></div>
                 <div class="radio"></div>
                 <div class="radio"></div>
                 <div class="radio"></div>
                 <div class="radio"></div>
-            </div>
-            <div class="arrows">
-                <div class="arr arr1"><</div>
-                <div class="arr arr2">></div>
-            </div>
+            </div> -->
         </div>
-        
+    </section>
+
+    <section class="recently-added">
+        <h1>Recently Added</h1>
     </section>
 </body>
 </html>

@@ -1,54 +1,96 @@
-// "use strict"
+"use strict"
 
-// "use strict"
+let images = document.querySelectorAll(".imgs");
+let intro = document.getElementById("intro");
+let intro2 = document.getElementById("intro2");
+let gradient = document.getElementById("gradient");
+let intoText = document.getElementById("introtext")
+let lm = document.getElementById("lm");
+let counter = -1 ;
+let introContent = [
+  "Welcome to the world of ",
+  "Check out the new ",
+  "Check out the latest ",
+  "Check out the latest ",
+  "Check out the new ",
+];
 
-// let backgroundSlide = document.getElementById("background");
-//     let backPics = [
-//     '/HTML:CSS/IMAGES/li-lin-P5xn4DBeA3A-unsplash.jpg',
-//     '/HTML:CSS/IMAGES/71Kg9bzDE0L._AC_SL1500_.jpg',
-//     '/HTML:CSS/IMAGES/thomas-kelley-JoH60FhTp50-unsplash.jpg',
-//     '/HTML:CSS/IMAGES/sigmund-8zfhRkrs2xU-unsplash.jpg'
-// ];
-//     let counter = 0;
-//     const startSlide = () => {
-//     if(counter === 3){
-//         counter = 0;
-//     }
-//     backgroundSlide.style.background = `url(${backPics[counter++]})`;
-//     backgroundSlide.style.backgroundPosition = "center"
-//     backgroundSlide.style.backgroundSize = "cover"
-//     console.log(counter);
-// }
+let intro2Content = [
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, quibusdam.",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sequi!",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae!",
+  "Lorem ipsum, sit amet consectetur adipisicing elit. Repudiandae!",
+];
 
-// startSlide()
-// setInterval(()=>{
-//     startSlide()
-// },2000)
+let lmContent = ["New", "New", "New", "New", "New"];
 
-// // let x = 0;
-// // function start(){
-// //     x++;
-// //     console.log(x);
-// // }
+let gradientContent = [
+  "Electronics",
+  "iPhone 13 Pro Max",
+  "JBL Flip 6",
+  "Mackbook Pro Core M2",
+  "Oraimo Airpod",
+];
 
-let images = document.querySelectorAll(".imgs")
-let counter = 0;
-images[0].style.display = "block"
+
+images[0].style.display = "block";
 const startSlide = () => {
-    try {
-        for(let i = 0; i <= images.length; i++){
-            images[i].style.display = "none"
-        }
-    } catch (error) {
-        console.log(error.message);
+  disOther();
+  increSlide();
+};
+
+
+const disOther = () => {
+  try {
+    for (let i = 0; i <= images.length; i++) {
+      images[i].style.display = "none";
     }
-    counter++
-    if(counter === 3){
-        counter = 0
-    }
-    images[counter].style.display = "block"
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+
+const increSlide = () => {
+  disOther();
+  counter++;
+  if (counter === 4) {
+    counter = 0;
+  }
+ placing()
+};
+
+
+// const decreSlide = () => {
+//     disOther();
+//     counter--;
+//     if (counter <= -1) {
+//       counter = 4;
+//     }
+//     console.log(counter);
+//     placing()
+//   };
+
+
+const placing = () => {
+  images[counter].style.display = "block";
+  images[counter].style.opacity = "0";
+  intro.innerHTML = introContent[counter];
+  intro2.innerHTML = intro2Content[counter];
+  lm.innerText = lmContent[counter];
+  gradient.innerHTML = gradientContent[counter];
+  
+  setTimeout(()=>{
+    intoText.className += " rollin"
+    intoText.className = intoText.className.replace(" rollin", " rollout")
+    setTimeout(() => {
+      intoText.className = intoText.className.replace(" rollout", " rollin")
+    },400);
+  },8500)
 }
 
-startSlide()
-setInterval(startSlide, 10000)
+startSlide();
+setInterval(startSlide, 9000);
 
+//End of Hero

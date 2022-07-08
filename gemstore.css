@@ -7,10 +7,13 @@
     font-family: roboto;
     color: #090A0A;
     font-weight: 400;
+    font-size: 13px;
 }
 
 body{
     background-color: white;
+    width: 95%;
+    margin: auto;
 }
 
 .slimbanner{
@@ -24,7 +27,7 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 10px 20px 10px 20px;
-    width: 90%;
+    width: 100%;
 }
 
 .slimb-left, .slimb-right{
@@ -51,13 +54,18 @@ body{
 .hero{
     /* background-image: url('/HTML:CSS/IMAGES/li-lin-P5xn4DBeA3A-unsplash.jpg'); */
     height: 90vh;
-    width: 95%;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: auto;
+    /* background-color: #090A0A; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
     position: relative;
-    background-color: #090A0A;
 }
 
 .hero,
@@ -66,37 +74,158 @@ body{
 }
 
 .shade{
-    width: 100%;
+    width: 50%;
     height: 100%;
     padding:10px 0px 20px 0px ;
     /* background-color: #090a0abe; */
     /* background-color: #0a0401be; */
-    background: linear-gradient(to right, #090a0afc 20%, #090a0abe 100%);
-    position: absolute;
+    /* background: linear-gradient(to right, #090a0a 10%, #090a0a18 100%); */
+    position: relative;
     top: 0;
 }
 
-.images{
+.shade2{
+    position: relative;
+    background-color: #090a0a;
     width: 100%;
+    height: 100%;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding:0px 30px;
+    top: 45%;
+    z-index: 10;
+    margin: auto;
+    position: absolute;
+}
+
+.arr{
+    background-color: rgba(255, 255, 255, 0.449);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .2;
+    transition:.2s ease-in;
+    cursor: pointer;
+}
+
+.arr:hover{
+    opacity: 1;
+    transition:.2s ease-in;
+}
+
+.arr img{
+    width: 30px;
+    height: 30px;
+}
+
+.tag{
+    color: white;
+    background-image: linear-gradient(to right, #a73ef8 100%, #6507ac 0%);
+    width: 100px;
     height: 100px;
+    border: none;
+    /* border: 5px double #914cc5; */
+    border-radius: 100%;
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.images{
+    width: 50%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
     border-radius: 30px;
     position: relative;
+    overflow: hidden;
+    display: flex;
 }
 
 .imgs{
     width: 100%;
-    height: 90vh;
+    height: 100%;
+    position: absolute;
     border-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    display: none;
+    animation: fadein 20s ease-out;
+    opacity: 0;
 }
+
+/* #imm{
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+} */
+
+#imm1{
+    background: url('/HTML:CSS/IMAGES/hugo-agut-tugal-6cdIdu8KkLg-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#imm2{
+    background: url('/HTML:CSS/IMAGES/hector-martinez-EG49vTtKdvI-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#imm3{
+    background: url('/HTML:CSS/IMAGES/li-lin-P5xn4DBeA3A-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#imm4{
+    background: url('/HTML:CSS/IMAGES/sigmund-8zfhRkrs2xU-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#imm5{
+    background: url('/HTML:CSS/IMAGES/windows-ZQ-3NFtNOOc-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+/* .fadein{
+    animation: all fadein 10s ease-out;
+} */
+
+@keyframes fadein{
+    0%{
+        opacity: .5;
+        transform: scale(1.2);
+    }
+    20%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100%{
+        opacity: .5;
+        transform: scale(1.2);
+    }
+}
+
+
 
 .logo-nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: auto;
     border-bottom: .7px solid whitesmoke;
-    padding-bottom: 10px;
+    padding: 10px 10px 10px 10px;
 }
 
 nav, .login-cart{
@@ -110,22 +239,30 @@ nav, .login-cart{
 }
 
 nav ul{
-    display: flex;
+    display: none;
     align-items: center;
     column-gap: 40px;
     list-style: none;
 }
 
 nav ul li{
-    color: whitesmoke;
+    color:#090A0A;
+    font-size: 13px;
+}
+
+.menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .logo{
-    color: whitesmoke;
+    color:#090A0A;
     font-family: "open sans";
     height: 100%;
     display: flex;
     align-items: center;
+    font-size: 16px;
 }
 
 .login{
@@ -133,41 +270,84 @@ nav ul li{
     height: 40px;
     border-radius: 5px;
     border: none;
-    background-color: white;
-    color: #090A0A;
+    background-color:#090A0A;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes rollin {
+    0%{
+        width: 10px;
+        opacity: 0;
+    }
+
+    100%{
+        width: 600px;
+        opacity: 1;
+    }
+}
+
+@keyframes rollout {
+    0%{
+        width: 600px;
+        opacity: .3;
+    }
+
+    100%{
+        width: 10px;
+        opacity: 0;
+    }
+}
+
+.introtext{
+    overflow: hidden;
+    width: 600px;
+}
+
+.rollin{
+    animation: rollin .4s ease-in;
+}
+
+.rollout{
+    animation: rollout .4s ease-in;
 }
 
 .intro-box{
     width: 90%;
     margin: auto;
     display: flex;
-}
-
-.intro{
     margin-top: 200px;
-    width: 500px;
 }
 
-.intro h1{
+
+.intro h1 span{
     font-family: "open sans";
-    color: whitesmoke;
+    color:#090A0A;
     font-weight: 800;
     font-size: 50px;
 }
 
+.intro h1, .intro p{
+    width: 600px;
+}
+
 .gradient{
-    background-image: linear-gradient(to right, #a73ef8 10%, #6507ac 100%);
+    background-image: linear-gradient(-10deg, #a73ef8 30%, #6507ac 100%);
     background-clip: text;
     -webkit-text-fill-color:transparent;
     text-fill-color:transparent;
     -moz-text-fill-color :transparent;
     -o-text-fill-color :transparent;
     font-weight: 800;
+    font-size: 50px;
 }
 
 .intro p{
-    color: whitesmoke;
+    color: #090A0A;
     margin-top: 30px;
+    font-size: 17px;
+    font-weight:400;
+    font-family: "open sans";
 }
 
 .learn-more{
@@ -176,9 +356,9 @@ nav ul li{
     height: 50px;
     border: none;
     /* border: 5px double #914cc5; */
-    border-radius: 10px;
-    background-color: white;
-    color:#090A0A;
+    border-radius: 5px;
+    background-color: #090A0A;
+    color:white;
     font-size: 15px;
     font-weight: bold;
 }
@@ -205,7 +385,7 @@ nav ul li{
     justify-content: center;
 }
 
-.radio{
+/* .radio{
     width: 10px;
     height: 10px;
     padding: 7px;
@@ -224,24 +404,7 @@ nav ul li{
     outline-offset: 2px;
     outline: 4px solid #a73ef8;
     transition: .3s ease-in;
-}
+} */
 
-.arrows{
-    position: absolute;
-    display: flex;
-    width: 100%;
-    padding:0px 20px;
-    justify-content: space-between;
-    top: 50%;
-}
 
-.arr{
-    background-color: rgba(255, 255, 255, 0.468);
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
