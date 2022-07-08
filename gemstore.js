@@ -94,3 +94,218 @@ startSlide();
 setInterval(startSlide, 9000);
 
 //End of Hero
+
+//Selected For you
+
+let Gaming = [
+  {
+    "name": "PS5",
+    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "PS6",
+    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$984"
+  },
+  {
+    "name": "XBox",
+    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$1,230",
+    "oldItemPrice": ""
+  },
+  {
+    "name": "XBox 2",
+    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$1,130",
+    "oldItemPrice": "$1,050"
+  },
+  {
+    "name": "FIFA 2022",
+    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor",
+    "newItemPrice": "$1,930.99",
+    "oldItemPrice": "$2,050"
+  }
+];
+
+
+let cellPhones = [
+  {
+    "name": "iPhone 12 mini",
+    "itemImg" : "/HTML:CSS/IMAGES/frontIpad.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem as",
+    "newItemPrice": "$630.59",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "iPhone 12 Pro Max",
+    "itemImg" : "/HTML:CSS/IMAGES/frontIpad.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "iPhone 11",
+    "itemImg" : "/HTML:CSS/IMAGES/frontIpad.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$850",
+    "oldItemPrice": ""
+  },
+  {
+    "name": "iPhone 11 Pro Max",
+    "itemImg" : "/HTML:CSS/IMAGES/frontIpad.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "iPad Pro",
+    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$1,030",
+    "oldItemPrice": "$1,200"
+  }
+];
+
+let Speaker = [
+  {
+    "name": "JBl Flip 6",
+    "itemImg" : "/HTML:CSS/IMAGES/jblflip6.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "JBl Headphone",
+    "itemImg" : "/HTML:CSS/IMAGES/headphone.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$330",
+    "oldItemPrice": "$444.50"
+  }
+];
+
+let Computers = [
+  {
+    "name": "Apple Monitor",
+    "itemImg" : "/HTML:CSS/IMAGES/tv4.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "Apple Monitor",
+    "itemImg" : "/HTML:CSS/IMAGES/bigmonitor.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "L",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "Apple Monitor",
+    "itemImg" : "/HTML:CSS/IMAGES/tv4.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum ",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  }
+];
+
+let TV = [
+  {
+    "name": "LG",
+    "itemImg" : "/HTML:CSS/IMAGES/tv4.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "LG",
+    "itemImg" : "/HTML:CSS/IMAGES/tv5.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "LG",
+    "itemImg" : "/HTML:CSS/IMAGES/tv2.jpg",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "LG",
+    "itemImg" : "/HTML:CSS/IMAGES/tv1.jpg",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  }
+];
+
+let itemName = document.querySelectorAll("#itemName"),
+    mainDesc = document.querySelectorAll("#maindesc"),
+    minDesc = document.querySelectorAll("#mindesc"),
+    oldPrice = document.querySelectorAll("#oldprice"),
+    newPrice = document.querySelectorAll("#newprice");
+
+let Holder = document.getElementById("sel-container")
+
+const changeGaming = () => {
+  itemName.innerText = Gaming[0].name
+  mainDesc.innerText = Gaming[0].description1
+  minDesc.innerText = Gaming[0].description2
+  oldPrice.innerText = Gaming[0].oldItemPrice
+  newPrice.innerText = Gaming[0].newItemPrice
+}
+
+const createItem = (category) => {
+  let itemCreated = " "
+  for(let i in category){
+    itemCreated += `<div class="sel-box">
+    <div class="img-con">
+        
+        <img src=${category[i].itemImg} alt="">
+    </div>
+    <div class="sfu">
+        <p class="itemName2"">${category[i].name}</p>
+        <div class="description-box">
+            <p class="item-description">${category[i].description1}</p>
+            <p class="item-description">${category[i].description2}</p>
+        </div>
+        <div class="price-order">
+            <span class="price-box">
+                <span class="price">${category[i].newItemPrice}</span>
+                <span class="old-price price">${category[i].oldItemPrice}</span>
+            </span>
+            <button class="add-to-cart">Add</button>
+        </div>
+    </div>
+</div>`
+  }
+  Holder.innerHTML = itemCreated;
+}
+
+createItem(Gaming)
