@@ -23,7 +23,7 @@ let intro2Content = [
   "Lorem ipsum, sit amet consectetur adipisicing elit. Repudiandae!",
 ];
 
-let lmContent = ["New", "New", "New", "New", "New"];
+let lmContent = ["New!", "New!", "New!", "New!", "New!"];
 
 let gradientContent = [
   "Electronics",

@@ -60,6 +60,7 @@ body{
     background-size: cover;
     margin: auto;
     /* background-color: #090A0A; */
+    background-color: aliceblue;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -76,7 +77,7 @@ body{
 .shade{
     width: 50%;
     height: 100%;
-    padding:10px 0px 20px 0px ;
+    padding:10px 10px 20px 0px ;
     /* background-color: #090a0abe; */
     /* background-color: #0a0401be; */
     /* background: linear-gradient(to right, #090a0a 10%, #090a0a18 100%); */
@@ -301,7 +302,7 @@ nav ul li{
 
 .introtext{
     overflow: hidden;
-    width: 600px;
+    height: 300px;
 }
 
 .rollin{
@@ -325,6 +326,11 @@ nav ul li{
     color:#090A0A;
     font-weight: 800;
     font-size: 50px;
+}
+
+#intro2{
+    color: #090a0ac2;
+    width: 500px;
 }
 
 .intro h1, .intro p{
@@ -361,6 +367,7 @@ nav ul li{
     color:white;
     font-size: 15px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .lm{
@@ -408,3 +415,83 @@ nav ul li{
 
 
 
+/*End Of Hero*/
+
+
+.recently-added{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.r-head{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "open sans"
+}
+
+.recent-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    padding: 30px;
+}
+
+.recent{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    width: 300px;
+    height: 130px;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+}
+
+.recent:hover{
+    background-color: aliceblue;
+    transition: .2s ease-in-out;
+}
+
+.recent img{
+    width: 100px;
+    height: 100%;
+}
+
+.receInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 10px;
+    height: 100%;
+}
+
+.itemName{
+    font-weight: 500;
+    font-size: 13px;
+    background-color: #090A0A;
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 3px;
+    padding: 3px 5px;
+    align-self: flex-start;
+}
+
+.itemInfo{
+    color: #090a0ab1;
+    line-height: 1.3;
+}
+
+.itemPricing{
+    font-weight: 700;
+    font-size: 15px;
+    color: #090A0A;
+    border-radius: 3px;
+}
