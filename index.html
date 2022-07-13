@@ -24,11 +24,7 @@
     <section class="hero" id="background">
         <div class="images" id="images">
             <div class="shade2">
-                <button class="tag" id="lm"></button>
-                <!-- <div class="arrows">
-                    <div class="arr arr1" onclick="decreSlide()"><img src="/HTML:CSS/IMAGES/left-arrow.png" alt=""></div>
-                    <div class="arr arr2" onclick="increSlide()"><img src="/HTML:CSS/IMAGES/right-arrow.png" alt=""></div>
-                </div> -->
+                <button type="button" class="tag" id="lm">New</button>
             </div>
             <div class="imgs" id="imm1"></div>
             <div class="imgs" id="imm2"></div>
@@ -48,10 +44,9 @@
                         <li>Contact</li>
                     </ul>
                 </nav>
-                
                 <h1 class="logo">Geministore.</h1>
                 <div class="login-cart">
-                    <button class="login">Login</button>
+                    <button type="button" class="login">Login</button>
                 </div>
             </div>
             <div class="intro-box">
@@ -61,7 +56,7 @@
                     <p id="intro2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae!</p>
                     </div>
                     <div class="lm">
-                        <button class="learn-more">Shop Now</button>
+                        <button type="button" class="learn-more">Shop Now</button>
                         <!-- <p>Learn more</p> -->
                     </div>
                 </div>
@@ -76,47 +71,92 @@
         </div>
     </section>
 
-    <section class="recently-added">
-        <h1 class="r-head">Recently Added</h1>
-        <div class="recent-container">
-            <div class="recent">
-                <img src="/HTML:CSS/IMAGES/bigmonitor.png" alt="">
-                <div class="receInfo">
-                    <h1 class="itemName">Monitor</h1>
-                    <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
-                    <p class="itemPricing">$1,445</p>
+    <section class="major-container">
+        <section class="recently-added">
+            <div class="mmm">
+                <p class="sel">Recently Added</p>
+            </div>
+            <div class="recent-container">
+                <div class="recent">
+                    <img src="/HTML:CSS/IMAGES/bigmonitor.png" alt="">
+                    <div class="receInfo">
+                        <h1 class="itemName">Monitor</h1>
+                        <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
+                        <p class="itemPricing">$1,445</p>
+                    </div>
+                </div>
+                <div class="recent">
+                    <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                    <div class="receInfo">
+                        <h1 class="itemName">iPad</h1>
+                        <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
+                        <p class="itemPricing">$945</p>
+                    </div>
+                </div>
+                <div class="recent">
+                    <img src="/HTML:CSS/IMAGES/ipad2.png" alt="">
+                    <div class="receInfo">
+                        <h1 class="itemName">iPad</h1>
+                        <p class="itemInfo">Lorem ipsum dolor sit amet. Dolor sit amet.</p>
+                        <p class="itemPricing">$445</p>
+                    </div>
+                </div>
+                <div class="recent">
+                    <img src="/HTML:CSS/IMAGES/jblflip6.png" alt="">
+                    <div class="receInfo">
+                        <h1 class="itemName">Speaker</h1>
+                        <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
+                        <span class="itemPricing">$137</span>
+                    </div>
                 </div>
             </div>
-            <div class="recent">
-                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
-                <div class="receInfo">
-                    <h1 class="itemName">iPad</h1>
-                    <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
-                    <p class="itemPricing">$945</p>
+        </section>
+        <section class="selected-for-you">
+           <div class="mmm">
+            <p class="sel">Selected Just For You</p>
+            <div class="sel-table">
+                <ul>
+                    <li onclick="createItem(Gaming)">Gaming</li>
+                    <li onclick="createItem(cellPhones)">Cell Phones</li>
+                    <li onclick="createItem(Computers)">Computers</li>
+                    <li onclick="createItem(Speaker)">Speaker</li>
+                    <li onclick="createItem(TV)">TV</li>
+                </ul>
+                <p class="view-all">View all</p>
+            </div>
+           </div>
+            <div class="sell">
+                <div class="arrows">
+                    <div class="arr arr1" onclick="moveRight()"><img src="/HTML:CSS/IMAGES/left-arrow.png" alt=""></div>
+                    <div class="arr arr2" onclick="moveLeft()"><img src="/HTML:CSS/IMAGES/right-arrow.png" alt=""></div>
+                </div>
+                <div class="sel-container">
+                    <div class="" id="sel-container">
+                        <!-- <div class="sel-box">
+                            <div class="img-con">
+                                <p class="new">New</p>
+                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                            </div>
+                            <div class="sfu">
+                                <p class="itemName2">Speaker</p>
+                                <div class="description-box">
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="price-order">
+                                    <span class="price-box">
+                                        <span class="price">$637.23</span>
+                                        <span class="old-price price">$765</span>
+                                    </span>
+                                    <button class="add-to-cart">Add</button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
             </div>
-            <div class="recent">
-                <img src="/HTML:CSS/IMAGES/ipad2.png" alt="">
-                <div class="receInfo">
-                    <h1 class="itemName">iPad</h1>
-                    <p class="itemInfo">Lorem ipsum dolor sit amet. Dolor sit amet.</p>
-                    <p class="itemPricing">$445</p>
-                </div>
-            </div>
-            <div class="recent">
-                <img src="/HTML:CSS/IMAGES/jblflip6.png" alt="">
-                <div class="receInfo">
-                    <h1 class="itemName">Speaker</h1>
-                    <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
-                    <span class="itemPricing">$137</span>
-                </div>
-            </div>
-        </div>
+        </section>
     </section>
-    <section class="selected-for-you"></section>
-
-
-
 
 
 

@@ -46,9 +46,7 @@ const disOther = () => {
     for (let i = 0; i <= images.length; i++) {
       images[i].style.display = "none";
     }
-  } catch (error) {
-    console.log(error.message);
-  }
+  } catch (error) {};
 };
 
 
@@ -80,7 +78,6 @@ const placing = () => {
   intro2.innerHTML = intro2Content[counter];
   lm.innerText = lmContent[counter];
   gradient.innerHTML = gradientContent[counter];
-  
   setTimeout(()=>{
     intoText.className += " rollin"
     intoText.className = intoText.className.replace(" rollin", " rollout")
@@ -99,7 +96,7 @@ setInterval(startSlide, 9000);
 
 let Gaming = [
   {
-    "name": "PS5",
+    "name": "1",
     "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
@@ -107,7 +104,7 @@ let Gaming = [
     "oldItemPrice": "$544"
   },
   {
-    "name": "PS6",
+    "name": "2",
     "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
@@ -115,7 +112,7 @@ let Gaming = [
     "oldItemPrice": "$984"
   },
   {
-    "name": "XBox",
+    "name": "3",
     "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum dolor sit amet.",
@@ -123,7 +120,7 @@ let Gaming = [
     "oldItemPrice": ""
   },
   {
-    "name": "XBox 2",
+    "name": "4",
     "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
@@ -131,7 +128,23 @@ let Gaming = [
     "oldItemPrice": "$1,050"
   },
   {
-    "name": "FIFA 2022",
+    "name": "5",
+    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor",
+    "newItemPrice": "$1,930.99",
+    "oldItemPrice": "$2,050"
+  },
+  {
+    "name": "6",
+    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$1,130",
+    "oldItemPrice": "$1,050"
+  },
+  {
+    "name": "7",
     "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum dolor",
@@ -273,20 +286,11 @@ let itemName = document.querySelectorAll("#itemName"),
 
 let Holder = document.getElementById("sel-container")
 
-const changeGaming = () => {
-  itemName.innerText = Gaming[0].name
-  mainDesc.innerText = Gaming[0].description1
-  minDesc.innerText = Gaming[0].description2
-  oldPrice.innerText = Gaming[0].oldItemPrice
-  newPrice.innerText = Gaming[0].newItemPrice
-}
-
 const createItem = (category) => {
   let itemCreated = " "
   for(let i in category){
     itemCreated += `<div class="sel-box">
     <div class="img-con">
-        
         <img src=${category[i].itemImg} alt="">
     </div>
     <div class="sfu">
@@ -309,3 +313,30 @@ const createItem = (category) => {
 }
 
 createItem(Gaming)
+
+//Selected for You
+
+let boxCounter = 0;
+let container = document.getElementById("sel-container"),
+      box = document.querySelectorAll(".sel-box");
+// const moveRight = () => {
+//   boxCounter--;
+//   if(boxCounter < 0){boxCounter = 7}
+//   for(let y in box){
+//     container.style.marginLeft = (box[y].clientWidth * boxCounter)+"px"
+//   }
+//   console.log(boxCounter);
+// }
+
+// const moveLeft = () => {
+//   boxCounter++;
+//   if(boxCounter === 7){boxCounter = 0}
+//   for(let y in box){
+//     container.style.marginLeft = (-box[y].clientWidth * boxCounter)+"px"
+//   }
+//   console.log(boxCounter);
+// }
+
+// const moveRight = () => {
+//   .scrollIntoView()
+// }
