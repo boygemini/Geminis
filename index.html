@@ -35,7 +35,10 @@
         <div class="shade">
             <div class="logo-nav">
                 <nav>
-                    <img src="/HTML:CSS/IMAGES/menu(2).png" alt="" class="menu">
+                    <img src="/HTML:CSS/IMAGES/menu(2).png" alt="" id="mb" class="menu" onclick="openMenu()">
+                </nav>
+                <div id="menu">
+                    <img src="/HTML:CSS/IMAGES/cancel.png" alt="" class="menu" id="close" onclick="closeMenu()">
                     <ul>
                         <li>Home</li>
                         <li>Shop</li>
@@ -43,7 +46,7 @@
                         <li>About</li>
                         <li>Contact</li>
                     </ul>
-                </nav>
+                </div>
                 <h1 class="logo">Geministore.</h1>
                 <div class="login-cart">
                     <button type="button" class="login">Login</button>
@@ -127,8 +130,8 @@
            </div>
             <div class="sell">
                 <div class="arrows">
-                    <div class="arr arr1" onclick="moveRight()"><img src="/HTML:CSS/IMAGES/left-arrow.png" alt=""></div>
-                    <div class="arr arr2" onclick="moveLeft()"><img src="/HTML:CSS/IMAGES/right-arrow.png" alt=""></div>
+                    <div class="arr arr1" onclick="moveLeft()"><img src="/HTML:CSS/IMAGES/left-arrow.png" alt=""></div>
+                    <div class="arr arr2" onclick="moveRight()"><img src="/HTML:CSS/IMAGES/right-arrow.png" alt=""></div>
                 </div>
                 <div class="sel-container">
                     <div class="" id="sel-container">
@@ -156,11 +159,200 @@
                 </div>
             </div>
         </section>
+
+        <section class="selected-for-you" >
+            <div class="mmm">
+             <p class="sel">Our Weekly Featured</p>
+            </div>
+             <div class="sell">
+                 <div class="sel-container">
+                     <div class="" id="weekly-feature">
+                         <div class="sel-box">
+                             <div class="img-con">
+                                 <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                             </div>
+                             <div class="sfu">
+                                 <p class="itemName2">Speaker</p>
+                                 <div class="description-box">
+                                     <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                     <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                 </div>
+                                 <div class="price-order">
+                                     <span class="price-box">
+                                         <span class="price">$637.23</span>
+                                         <span class="old-price price">$765</span>
+                                     </span>
+                                     <button class="add-to-cart">Add</button>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="sel-box">
+                            <div class="img-con">
+                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                            </div>
+                            <div class="sfu">
+                                <p class="itemName2">Speaker</p>
+                                <div class="description-box">
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="price-order">
+                                    <span class="price-box">
+                                        <span class="price">$637.23</span>
+                                        <span class="old-price price">$765</span>
+                                    </span>
+                                    <button class="add-to-cart">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sel-box">
+                            <div class="img-con">
+                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                            </div>
+                            <div class="sfu">
+                                <p class="itemName2">Speaker</p>
+                                <div class="description-box">
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="price-order">
+                                    <span class="price-box">
+                                        <span class="price">$637.23</span>
+                                        <span class="old-price price">$765</span>
+                                    </span>
+                                    <button class="add-to-cart">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sel-box">
+                            <div class="img-con">
+                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                            </div>
+                            <div class="sfu">
+                                <p class="itemName2">Speaker</p>
+                                <div class="description-box">
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="price-order">
+                                    <span class="price-box">
+                                        <span class="price">$637.23</span>
+                                        <span class="old-price price">$765</span>
+                                    </span>
+                                    <button class="add-to-cart">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sel-box">
+                            <div class="img-con">
+                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                            </div>
+                            <div class="sfu">
+                                <p class="itemName2">Speaker</p>
+                                <div class="description-box">
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="price-order">
+                                    <span class="price-box">
+                                        <span class="price">$637.23</span>
+                                        <span class="old-price price">$765</span>
+                                    </span>
+                                    <button class="add-to-cart">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sel-box">
+                            <div class="img-con">
+                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                            </div>
+                            <div class="sfu">
+                                <p class="itemName2">Speaker</p>
+                                <div class="description-box">
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="price-order">
+                                    <span class="price-box">
+                                        <span class="price">$637.23</span>
+                                        <span class="old-price price">$765</span>
+                                    </span>
+                                    <button class="add-to-cart">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+        
+        <section class="about">
+            <img src="/HTML:CSS/IMAGES/hector-martinez-EG49vTtKdvI-unsplash.jpg" alt="" class="about-img">
+            <div class="about-text-container">
+                <div class="aat">
+                    <h1>We Serve You The Best Product At Best Prices</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatem minus officia quas reiciendis excepturi nostrum esse itaque nesciunt.</p>
+                </div>
+                <div class="about-boxes">
+                    <div class="ab">
+                        <div class="about-box">
+                            <img src="/HTML:CSS/IMAGES/shipped.png" alt="" class="a-icon">
+                            <div class="a-text">
+                                <h2>Free Shipping</h2>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                        <div class="about-box">
+                            <img src="/HTML:CSS/IMAGES/shipped.png" alt="" class="a-icon">
+                            <div class="a-text">
+                                <h2>Secured Payments</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="about-box">
+                            <img src="/HTML:CSS/IMAGES/shipped.png" alt="" class="a-icon">
+                            <div class="a-text">
+                                <h2>24/7 Online Support</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ab">
+                        <div class="about-box">
+                            <img src="/HTML:CSS/IMAGES/shipped.png" alt="" class="a-icon">
+                            <div class="a-text">
+                                <h2>Free Returns</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                        <div class="about-box">
+                            <img src="/HTML:CSS/IMAGES/shipped.png" alt="" class="a-icon">
+                            <div class="a-text">
+                                <h2>Customer Service</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="about-box">
+                            <img src="/HTML:CSS/IMAGES/shipped.png" alt="" class="a-icon">
+                            <div class="a-text">
+                                <h2>Instant Refund</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="visit-out-support">
+            <h1>Visit our Support Center</h1>
+            <button class="visit" type="button">Visit</button>
+        </section>
+        <footer>
+            <h1>
+                Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
+            </h1>
+        </footer>
     </section>
-
-
-
-
-    <br><br><br><br>
 </body>
 </html>

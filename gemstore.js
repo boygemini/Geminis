@@ -316,27 +316,46 @@ createItem(Gaming)
 
 //Selected for You
 
-let boxCounter = 0;
-let container = document.getElementById("sel-container"),
-      box = document.querySelectorAll(".sel-box");
-// const moveRight = () => {
-//   boxCounter--;
-//   if(boxCounter < 0){boxCounter = 7}
-//   for(let y in box){
-//     container.style.marginLeft = (box[y].clientWidth * boxCounter)+"px"
-//   }
-//   console.log(boxCounter);
-// }
+let boxCounter = -1;
+let container = document.getElementById("sel-container"), box = document.querySelectorAll(".sel-box");
+const moveRight = () => {
+  counter++
+  if(counter === Gaming.length){
+    counter = 0;
+  }
+  box[counter].scrollIntoView()
+  console.log(counter);
+}
 
-// const moveLeft = () => {
-//   boxCounter++;
-//   if(boxCounter === 7){boxCounter = 0}
-//   for(let y in box){
-//     container.style.marginLeft = (-box[y].clientWidth * boxCounter)+"px"
-//   }
-//   console.log(boxCounter);
-// }
+const moveLeft = () => {
+  counter--
+  if(counter < 0){
+    counter = Gaming.length
+  }
+  box[counter].scrollIntoView()
+  console.log(counter);
+}
 
-// const moveRight = () => {
-//   .scrollIntoView()
-// }
+
+let menu = document.getElementById("menu"), mb = document.getElementById("mb")
+let close = document.querySelectorAll("#close");
+menu.style.display = "none"
+
+const openMenu = (e) => {
+  menu.style.display = "flex"
+  menu.style.height = "0px"
+  setTimeout(()=>{menu.style.height = "400px";},20)
+}
+
+const closeMenu = () => {
+  menu.style.height = "0px";
+  setTimeout(() => {
+    menu.style.display = "none"
+  }, 520);
+}
+
+document.addEventListener("click", (e)=>{
+    if(e.target !== menu && menu.clientHeight > 0){
+      menu.style.height = "0px"
+    }
+})
