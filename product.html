@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+    <section class="slimbanner">
+        <div class="slimcontent">
+            <div class="slimb-left">
+                <p>Open doors to a world of Electronics</p>
+                <hr class="vhr">
+                <p class="dis-more">Discover More</p>
+            </div>
+            <div class="slimb-right">
+                <p>English</p>
+                <p>USD</p>
+            </div>
+        </div>
+    </section>
+    <section class="top-nav">
+        <div class="logo-nav">
+            <nav id="nav-and-products">
+                <img src="/HTML:CSS/IMAGES/menu(2).png" alt="" id="mb" class="menu" onclick="openMenu()">
+                <div class="products">
+                    <ul>
+                        <li>Gaming</li>
+                        <li>Cellphones</li>
+                        <li>Computer</li>
+                        <li>Ipads</li>
+                        <li>Speakers</li>
+                        <li>TVs</li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="menu">
+                <h1 class="logo" id="logo2">Geministore.</h1>
+                <img src="/HTML:CSS/IMAGES/cancel.png" alt="" class="menu" id="close" onclick="closeMenu()">
+                <ul>
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Blog</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <h1 class="logo">Geministore.</h1>
+            <div class="login-cart">
+                <div class="search-section">
+                    <input type="search" class="search" name="search" id="search" placeholder="Search a product">
+                    <input type="submit" class="go" value="GO">
+                </div>
+                <button type="button" class="login">Login</button>
+            </div>
+        </div>
+    </section>
+    <section class="body">
+        <div class="image">
+            <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+            <div class="image-thumbnail">
+                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+            </div>
+        </div>
+            <div class="product-details">
+                <h1>iPhone 13 Pro Max</h1>
+                <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
+                <div class="specifications">
+                    <div class="sep">
+                        <strong>Refurbished</strong>
+                        <p><strong>Model : </strong>MKLV3LL/A</p>
+                    </div>
+                    <div class="sep">
+                        <p><strong>SKU : </strong>87294820</p>
+                        <p><strong>Color : </strong>Sierra Blue</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
+
+    <script>
+        "use strict"
+
+        let menu = document.getElementById("menu"),
+            mb = document.getElementById("mb")
+        let close = document.querySelectorAll("#close");
+        menu.style.display = "none"
+
+        const removePadding = () => {
+            menu.style.height = "0px"
+            menu.style.padding = "0px";
+        }
+
+        const openMenu = (e) => {
+            menu.style.display = "flex"
+            removePadding()
+            setTimeout(() => {
+                menu.style.paddingTop = "20px";
+                menu.style.height = "400px";
+            }, 20)
+        }
+
+        const closeMenu = () => {
+            removePadding()
+            setTimeout(() => {
+                menu.style.display = "none"
+            }, 520);
+        }
+
+        document.addEventListener("click", (e) => {
+            if (e.target !== menu && menu.clientHeight > 0) {
+                removePadding()
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -38,6 +38,7 @@
                     <img src="/HTML:CSS/IMAGES/menu(2).png" alt="" id="mb" class="menu" onclick="openMenu()">
                 </nav>
                 <div id="menu">
+                    <h1 class="logo" id="logo2">Geministore.</h1>
                     <img src="/HTML:CSS/IMAGES/cancel.png" alt="" class="menu" id="close" onclick="closeMenu()">
                     <ul>
                         <li>Home</li>
@@ -59,10 +60,14 @@
                     <p id="intro2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae!</p>
                     </div>
                     <div class="lm">
-                        <button type="button" class="learn-more">Shop Now</button>
+                        <button type="button" class="learn-more" onclick="shopNow()">Shop Now</button>
                         <!-- <p>Learn more</p> -->
                     </div>
                 </div>
+            </div>
+            <div class="search-section">
+                <input type="search" class="search" name="search" id="search" placeholder="Search a product">
+                <input type="submit" class="go" value="GO">
             </div>
             <!-- <div class="radios">
                 <div class="radio"></div>
@@ -343,7 +348,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <section class="visit-out-support">
             <h1>Visit our Support Center</h1>
             <button class="visit" type="button">Visit</button>

@@ -90,6 +90,10 @@ const placing = () => {
 startSlide();
 setInterval(startSlide, 9000);
 
+const shopNow = () => {
+  window.location = "gemshop.html"
+}
+
 //End of Hero
 
 //Selected For you
@@ -341,21 +345,29 @@ let menu = document.getElementById("menu"), mb = document.getElementById("mb")
 let close = document.querySelectorAll("#close");
 menu.style.display = "none"
 
-const openMenu = (e) => {
-  menu.style.display = "flex"
+const removePadding = () => {
   menu.style.height = "0px"
-  setTimeout(()=>{menu.style.height = "400px";},20)
+  menu.style.padding = "0px";
+}
+
+const openMenu = (e) => {
+menu.style.display = "flex"
+removePadding()
+setTimeout(()=>{
+  menu.style.paddingTop = "20px";
+    menu.style.height = "400px";
+  },20)
 }
 
 const closeMenu = () => {
-  menu.style.height = "0px";
-  setTimeout(() => {
-    menu.style.display = "none"
-  }, 520);
+removePadding()
+setTimeout(() => {
+  menu.style.display = "none"
+}, 520);
 }
 
 document.addEventListener("click", (e)=>{
-    if(e.target !== menu && menu.clientHeight > 0){
-      menu.style.height = "0px"
-    }
+  if(e.target !== menu && menu.clientHeight > 0){
+    removePadding()
+  }
 })
