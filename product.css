@@ -298,13 +298,11 @@ nav ul li{
 .image{
     width: 40%;
     height: 100%;
-    padding: 50px;
+    /* padding: 50px; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
-    row-gap: 30px;
-    background-color: whitesmoke;
-    /* border: 1px solid grey; */
+    column-gap: 30px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -313,13 +311,14 @@ nav ul li{
 }
 
 .image img{
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
 }
 
 .image-thumbnail{
     display: flex;
-    column-gap: 10px;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
 .image-thumbnail img{
@@ -331,7 +330,7 @@ nav ul li{
     width: 60%;
     background-color: white;
 }
-
+ 
 .product-details h1{
     font-size: 40px;
     font-weight: 600;
@@ -429,6 +428,17 @@ strong{
     color: #090A0A;
 }
 
+.qty{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.qty h2{
+    color: #090A0A;
+    font-size: 14px;
+}
+
 .quantity{
     width: auto;
     height: 40px;
@@ -438,6 +448,12 @@ strong{
 
 .quantity button, .quantity input{
     height: 100%;
+    border-radius: 3px;
+    border: 1px solid #090a0a7a;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .quantity button{
@@ -484,7 +500,7 @@ strong{
     height: 300px;
     padding: 20px;
     position: relative;
-    box-shadow: 0px 15px 30px -25px #090a0a94;
+    /* box-shadow: 0px 15px 30px -25px #090a0a94; */
 }
 
 .price-tag{
@@ -535,11 +551,11 @@ strong{
     border: 2px solid #090A0A;
     background-color: white;
     font-weight: 600;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .buy-now{

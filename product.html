@@ -96,8 +96,11 @@
                     <h2>Picked : </h2><span>Space gray</span>
                 </div>
             </div>
-            <div class="quantity">
-                <button>-</button><input type="text" value="1"><button>+</button>
+            <div class="qty">
+                <h2>Quantity</h2>
+                <div class="quantity">
+                    <button>-</button><input type="text" value="1"><button>+</button>
+                </div>
             </div>
             <div class="shipping-pickup">
                 <div class="Pickup">
@@ -408,7 +411,7 @@
             setTimeout(() => {
                 menu.style.display = "none"
             }, 520);
-        }
+        } 
 
         document.addEventListener("click", (e) => {
             if (e.target !== menu && menu.clientHeight > 0) {

@@ -649,6 +649,14 @@ nav ul li{
     margin-top: 50px;
 }
 
+.weekly{
+    background-color: whitesmoke;
+}
+
+.added-style{
+    padding: 20px;
+}
+
 .sel-table{
     display: flex;
     justify-content: center;
