@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <section class="slimbanner">
+        <div class="slimcontent">
+            <div class="slimb-left">
+                <p>Open doors to a world of Electronics</p>
+                <hr class="vhr">
+                <p class="dis-more">Discover More</p>
+            </div>
+            <div class="slimb-right">
+                <p>English</p>
+                <p>USD</p>
+            </div>
+        </div>
+    </section>
+    <section class="top-nav">
+        <div class="logo-nav">
+            <nav id="nav-and-products">
+                <img src="/HTML:CSS/IMAGES/menu(2).png" alt="" id="mb" class="menu" onclick="openMenu()">
+                <div class="products">
+                    <ul>
+                        <li>Gaming</li>
+                        <li>Cellphones</li>
+                        <li>Computer</li>
+                        <li>Ipads</li>
+                        <li>Speakers</li>
+                        <li>TVs</li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="menu">
+                <h1 class="logo" id="logo2">Geministore.</h1>
+                <img src="/HTML:CSS/IMAGES/cancel.png" alt="" class="menu" id="close" onclick="closeMenu()">
+                <ul>
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Blog</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <h1 class="logo">Geministore.</h1>
+            <div class="login-cart">
+                <div class="search-section">
+                    <input type="search" class="search" name="search" id="search" placeholder="Search a product">
+                    <input type="submit" class="go" value="GO">
+                </div>
+                <img src="IMAGES/add-to-cart(2).png" alt="" srcset="">
+                <button type="button" class="login">Login</button>
+            </div>
+        </div>
+    </section>
+    <section class="cart-body">
+        <div class="cart-top">
+            <h1 class="head">Shopping Cart</h1>
+            <div class="total-checkout">
+                <h1><span class="sub-total-head">Sub Total (2 Items) : </span> <span class="amount">$ </span><span
+                        class="amount">1,525.96</span></h1>
+                <button class="continue">Continue Shopping</button>
+                <button class="check-out">Check Out</button>
+            </div>
+        </div>
+        <section class="orders-in-cart">
+            <div class="order">
+                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                <div class="order-info">
+                    <div class="info">
+                        <h1 class="item-name">iPhone 13 Pro Max</h1>
+                        <h2 class="item-title">Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
+                        <h2>Color : <span> Space Grey</span></h2>
+                    </div>
+                    <div class="qty">
+                        <h2>Quantity</h2>
+                        <div class="quantity">
+                            <button>-</button><input type="text" value="1"><button>+</button>
+                        </div>
+                    </div>
+
+                    <div class="save-delete">
+                        <h2>Save for later</h2>
+                        <h2 class="delete">Delete</h2>
+                    </div>
+                </div>
+                <div class="item-price">
+                    <span class="currency">$</span><span class="price">12.99</span>
+                </div>
+            </div>
+            <div class="order">
+                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                <div class="order-info">
+                    <div class="info">
+                        <h1 class="item-name">iPhone 13 Pro Max</h1>
+                        <h2 class="item-title">Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
+                        <h2>Color : <span> Space Grey</span></h2>
+                    </div>
+                    <div class="qty">
+                        <h2>Quantity</h2>
+                        <div class="quantity">
+                            <button>-</button><input type="text" value="1"><button>+</button>
+                        </div>
+                    </div>
+
+                    <div class="save-delete">
+                        <h2>Save for later</h2>
+                        <h2 class="delete">Delete</h2>
+                    </div>
+                </div>
+                <div class="item-price">
+                    <span class="currency">$</span><span class="price">12.99</span>
+                </div>
+            </div>
+        </section>
+
+    </section>
+</body>
+<footer>
+    <h1>
+        Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
+    </h1>
+</footer>
+
+
+
+<script>
+    "use strict"
+
+    //Menu
+    let menu = document.getElementById("menu"),
+        mb = document.getElementById("mb")
+    let close = document.querySelectorAll("#close");
+    menu.style.display = "none"
+
+    const removePadding = () => {
+        menu.style.height = "0px"
+        menu.style.padding = "0px";
+    }
+
+    const openMenu = (e) => {
+        menu.style.display = "flex"
+        removePadding()
+        setTimeout(() => {
+            menu.style.paddingTop = "20px";
+            menu.style.height = "400px";
+        }, 20)
+    }
+
+    const closeMenu = () => {
+        removePadding()
+        setTimeout(() => {
+            menu.style.display = "none"
+        }, 520);
+    }
+
+    document.addEventListener("click", (e) => {
+        if (e.target !== menu && menu.clientHeight > 0) {
+            removePadding()
+        }
+    })
+</script>
+
+</html>
