@@ -590,7 +590,7 @@ nav ul li{
 }
 
 .recent{
-    padding: 10px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -814,13 +814,9 @@ nav ul li{
     align-items: center;
 }
 
-.add-to-cart{
-    background-color: #090A0A;
-    color: whitesmoke;
-    border: none;
-    width: auto;
-    padding: 5px;
-    border-radius: 3px;
+#add-to-cart-img{
+    width: 30px;
+    height: 30px;
 }
 
 /*Weekly Featured*/
@@ -939,8 +935,20 @@ nav ul li{
     -o-border-radius: 10px;
 }
 
-.visit-out-support h1{
-    color: white;
+.vv{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    column-gap: 15px;
+}
+
+.vv img{
+    width: 30px;
+    height: 30px;
+}
+
+.vv h1{
+    color:white;
     font-size: 17px;
 }
 
