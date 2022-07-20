@@ -54,7 +54,7 @@ body{
 
 /* Hero */
 .hero{
-    /* background-image: url('/HTML:CSS/IMAGES/li-lin-P5xn4DBeA3A-unsplash.jpg'); */
+    /* background-image: url('/IMAGES/li-lin-P5xn4DBeA3A-unsplash.jpg'); */
     height: 90vh;
     width: 95%;
     background-position: center;
@@ -187,27 +187,27 @@ body{
 } */
 
 #imm1{
-    background: url('/HTML:CSS/IMAGES/hugo-agut-tugal-6cdIdu8KkLg-unsplash.jpg');
+    background: url('/IMAGES/hugo-agut-tugal-6cdIdu8KkLg-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }
 #imm2{
-    background: url('/HTML:CSS/IMAGES/hector-martinez-EG49vTtKdvI-unsplash.jpg');
+    background: url('/IMAGES/hector-martinez-EG49vTtKdvI-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }
 #imm3{
-    background: url('/HTML:CSS/IMAGES/li-lin-P5xn4DBeA3A-unsplash.jpg');
+    background: url('/IMAGES/li-lin-P5xn4DBeA3A-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }
 #imm4{
-    background: url('/HTML:CSS/IMAGES/sigmund-8zfhRkrs2xU-unsplash.jpg');
+    background: url('/IMAGES/sigmund-8zfhRkrs2xU-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }
 #imm5{
-    background: url('/HTML:CSS/IMAGES/windows-ZQ-3NFtNOOc-unsplash.jpg');
+    background: url('/IMAGES/windows-ZQ-3NFtNOOc-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -272,8 +272,8 @@ nav ul li{
 }
 
 .menu{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     z-index: 1002344;
 }
@@ -306,7 +306,7 @@ nav ul li{
     flex-direction: column;
     align-items: center;
     z-index: 2;
-    border-top-left-radius: 10px;
+    border-top-left-radius: 0px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow: hidden;
@@ -319,15 +319,10 @@ nav ul li{
 
 #close{
     position: absolute;
-    top: 25px;
-    left: 10px;
-    background-color: rgba(255, 255, 255, 0.791);
-    padding: 5px;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
+    top: 27px;
+    left: 15px;
+    width: 25px;
+    height: 25px;
 }
 
 #logo2{
@@ -343,6 +338,7 @@ nav ul li{
 }
 
 .logo{
+    cursor: pointer;
     border-radius: 10px;
     color:#090A0A;
     font-family: "lato";

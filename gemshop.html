@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link rel="stylesheet" href="/HTML:CSS/gemshop.css">
+    <link rel="stylesheet" href="/CSS/gemshop.css">
     <script src="/JAVASCRIPT/gemshop.js" defer></script>
 </head>
 <body> 
@@ -24,7 +24,7 @@
     <section class="top-nav">
         <div class="logo-nav">
             <nav id="nav-and-products">
-                <img src="/HTML:CSS/IMAGES/menu(2).png" alt="" id="mb" class="menu" onclick="openMenu()">
+                <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
                 <div class="products">
                     <ul>
                         <li>Gaming</li>
@@ -38,8 +38,8 @@
             </nav>
 
             <div id="menu">
-                <h1 class="logo" id="logo2">Geministore.</h1>
-                <img src="/HTML:CSS/IMAGES/cancel.png" alt="" class="menu" id="close" onclick="closeMenu()">
+                <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
+                <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
                 <ul>
                     <li>Home</li>
                     <li>Shop</li>
@@ -48,13 +48,13 @@
                     <li>Contact</li>
                 </ul>
             </div>
-            <h1 class="logo">Geministore.</h1>
+            <h1 class="logo" onclick="goHome()">Geministore.</h1>
             <div class="login-cart">
                 <div class="search-section">
                     <input type="search" class="search" name="search" id="search" placeholder="Search a product">
                     <input type="submit" class="go" value="GO">
                 </div>
-                <img src="IMAGES/add-to-cart(2).png" alt="" srcset="">
+                <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
                 <button type="button" class="login">Login</button>
             </div>
         </div>
@@ -175,8 +175,8 @@
             </div>
         </div>
         <div class="available-items">
-            <div class="item-box">
-                <img src="/HTML:CSS/IMAGES/ipad2.png" alt="">
+            <div class="item-box" onclick="toProduct()">
+                <img src="/IMAGES/ipad2.png" alt="">
                 <div class="item-details">
                     <h1>iPhone 13 Pro Max</h1>
                     <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
@@ -189,13 +189,13 @@
                 </div>
                 <div class="buy">
                     <div class="price-tag">
-                        <p><span class="currency">$ </span>854.99</p>
+                        <span class="currency">$</span><span class="price">945.99</span>
                     </div>
                     <button>Add to Cart</button>
                 </div>
             </div>
-            <div class="item-box">
-                <img src="/HTML:CSS/IMAGES/ipad2.png" alt="">
+            <div class="item-box" onclick="toProduct()">
+                <img src="/IMAGES/ipad2.png" alt="">
                 <div class="item-details">
                     <h1>iPhone 13 Pro Max</h1>
                     <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
@@ -208,13 +208,13 @@
                 </div>
                 <div class="buy">
                     <div class="price-tag">
-                        <p><span class="currency">$ </span>1,000.99</p>
+                        <span class="currency">$</span><span class="price">1,202.99</span>
                     </div>
                     <button>Add to Cart</button>
                 </div>
             </div>
-            <div class="item-box">
-                <img src="/HTML:CSS/IMAGES/ipad2.png" alt="">
+            <div class="item-box" onclick="toProduct()">
+                <img src="/IMAGES/ipad2.png" alt="">
                 <div class="item-details">
                     <h1>iPhone 13 Pro Max</h1>
                     <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
@@ -227,13 +227,13 @@
                 </div>
                 <div class="buy">
                     <div class="price-tag">
-                        <p><span class="currency">$ </span>1,000.99</p>
+                        <span class="currency">$</span><span class="price">1,000.99</span>
                     </div>
                     <button>Add to Cart</button>
                 </div>
             </div> 
-            <div class="item-box">
-                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+            <div class="item-box" onclick="toProduct()">
+                <img src="/IMAGES/frontIpad.png" alt="">
                 <div class="item-details">
                     <h1>iPhone 13 Pro Max</h1>
                     <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
@@ -246,37 +246,57 @@
                 </div>
                 <div class="buy">
                     <div class="price-tag">
-                        <p><span class="currency">$ </span>737.37</p>
+                        <span class="currency">$</span><span class="price">737.37</span>
                     </div>
                     <button>Add to Cart</button>
                 </div>
             </div>
-            <div class="item-box">
-                <img src="/HTML:CSS/IMAGES/ipad2.png" alt="">
+            <div class="item-box" onclick="toProduct()">
+                <img src="/IMAGES/ipad2.png" alt="">
                 <div class="item-details">
                     <h1>iPhone 13 Pro Max</h1>
                     <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
                     <div class="specifications">
                         <strong>Brand New</strong>
                         <p><strong>Model : </strong>MKLV3LL/A</p>
-                        <p><strong>SKU : </strong>87294820</p>
+                     <p><strong>SKU : </strong>87294820</p>
                         <p><strong>Color : </strong>Sierra Blue</p>
                     </div>
                 </div>
                 <div class="buy">
                     <div class="price-tag">
-                        <p><span class="currency">$ </span>1,000.99</p>
+                        <span class="currency">$</span><span class="price">1,000.99</span>
                     </div>
                     <button>Add to Cart</button>
                 </div>
             </div>
         </div>
         <section class="visit-our-support">
-            <h1>Visit our Support Center</h1>
+            <div class="vv">
+                <h1>Visit our Support Center</h1>
+                <img src="/IMAGES/customer-support.png" alt="">
+            </div>
             <button class="visit" type="button">Visit</button>
         </section>
 
     </section>
+
+
+    <script>
+        "use strict"
+
+        const toProduct = () => {
+            window.location.href = "/HTML/product.html";
+        }
+
+        const goHome = () => {
+            window.location.href = "/HTML/gemstore.html";
+        }
+
+        const toCart = () => {
+            window.location.href = "/HTML/cart.html";
+        }
+    </script>
 </body>
 <footer>
     <h1>

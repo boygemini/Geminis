@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="/CSS/product.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
     <section class="top-nav">
         <div class="logo-nav">
             <nav id="nav-and-products">
-                <img src="/HTML:CSS/IMAGES/menu(2).png" alt="" id="mb" class="menu" onclick="openMenu()">
+                <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
                 <div class="products">
                     <ul>
                         <li>Gaming</li>
@@ -40,8 +40,8 @@
             </nav>
 
             <div id="menu">
-                <h1 class="logo" id="logo2">Geministore.</h1>
-                <img src="/HTML:CSS/IMAGES/cancel.png" alt="" class="menu" id="close" onclick="closeMenu()">
+                <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
+                <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
                 <ul>
                     <li>Home</li>
                     <li>Shop</li>
@@ -50,25 +50,25 @@
                     <li>Contact</li>
                 </ul>
             </div>
-            <h1 class="logo">Geministore.</h1>
+            <h1 class="logo" onclick="goHome()">Geministore.</h1>
             <div class="login-cart">
                 <div class="search-section">
                     <input type="search" class="search" name="search" id="search" placeholder="Search a product">
                     <input type="submit" class="go" value="GO">
                 </div>
-                <img src="IMAGES/add-to-cart(2).png" alt="" srcset="">
+                <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
                 <button type="button" class="login">Login</button>
             </div>
         </div>
     </section>
     <section class="body">
         <div class="image">
-            <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+            <img src="/IMAGES/frontIpad.png" alt="">
             <div class="image-thumbnail">
-                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
-                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
-                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
-                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                <img src="/IMAGES/frontIpad.png" alt="">
+                <img src="/IMAGES/frontIpad.png" alt="">
+                <img src="/IMAGES/frontIpad.png" alt="">
+                <img src="/IMAGES/frontIpad.png" alt="">
             </div>
         </div>
         <div class="product-details">
@@ -122,8 +122,8 @@
                             mins</span></p>
                 </div>
                 <div class="to-cart-buy">
-                    <button class="add-to-cart">Add to Cart</button>
-                    <button class="buy-now">Buy Now</button>
+                    <button class="add-to-cart" onclick="toCart()">Add to Cart</button>
+                    <button class="buy-now" onclick="toCheckOut()">Buy Now</button>
                 </div>
             </div>
         </div>
@@ -385,6 +385,18 @@
 
     <script>
         "use strict"
+
+        const toCheckOut = () => {
+            window.location.href = "/HTML/checkout.html";
+        }
+
+        const toCart = () => {
+            window.location.href = "/HTML/cart.html";
+        }
+
+        const goHome = () => {
+            window.location.href = "/HTML/gemstore.html";
+        }
 
         //Menu
         let menu = document.getElementById("menu"),

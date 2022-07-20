@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemini store | Home</title>
-    <link rel="stylesheet" href="/HTML:CSS/gemstore.css">
+    <link rel="stylesheet" href="/CSS/gemstore.css">
     <script src="/JAVASCRIPT/gemstore.js" defer></script>
 </head>
 <body>
@@ -35,11 +35,11 @@
         <div class="shade">
             <div class="logo-nav"> 
                 <nav>
-                    <img src="/HTML:CSS/IMAGES/menu(2).png" alt="" id="mb" class="menu" onclick="openMenu()">
+                    <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
                 </nav>
                 <div id="menu">
-                    <h1 class="logo" id="logo2">Geministore.</h1>
-                    <img src="/HTML:CSS/IMAGES/cancel.png" alt="" class="menu" id="close" onclick="closeMenu()">
+                    <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
+                    <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
                     <ul>
                         <li>Home</li>
                         <li>Shop</li>
@@ -48,9 +48,9 @@
                         <li>Contact</li>
                     </ul>
                 </div>
-                <h1 class="logo">Geministore.</h1>
+                <h1 class="logo" onclick="goHome()">Geministore.</h1>
                 <div class="login-cart">
-                    <img src="IMAGES/add-to-cart(2).png" alt="" srcset="">
+                    <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
                     <button type="button" class="login">Login</button>
                 </div>
             </div>
@@ -87,46 +87,46 @@
             </div>
             <div class="recent-container">
                 <div class="recent">
-                    <img src="/HTML:CSS/IMAGES/bigmonitor.png" alt="">
+                    <img src="/IMAGES/bigmonitor.png" alt="">
                     <div class="receInfo">
                         <h1 class="itemName">Monitor</h1>
                         <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
                         <div class="price-order">
                             <span class="itemPricing">$1,475</span>
-                            <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                            <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="recent">
-                    <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                    <img src="/IMAGES/frontIpad.png" alt="">
                     <div class="receInfo">
                         <h1 class="itemName">iPad</h1>
                         <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
                         <div class="price-order">
                             <span class="itemPricing">$137</span>
-                            <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                            <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="recent">
-                    <img src="/HTML:CSS/IMAGES/ipad2.png" alt="">
+                    <img src="/IMAGES/ipad2.png" alt="">
                     <div class="receInfo">
                         <h1 class="itemName">iPad</h1>
                         <p class="itemInfo">Lorem ipsum dolor sit amet. Dolor sit amet.</p>
                         <div class="price-order">
                             <span class="itemPricing">$137</span>
-                            <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                            <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="recent">
-                    <img src="/HTML:CSS/IMAGES/jblflip6.png" alt="">
+                    <img src="/IMAGES/jblflip6.png" alt="">
                     <div class="receInfo">
                         <h1 class="itemName">Speaker</h1>
                         <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
                         <div class="price-order">
                             <span class="itemPricing">$137</span>
-                            <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                            <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -148,15 +148,15 @@
            </div>
             <div class="sell">
                 <div class="arrows">
-                    <div class="arr arr1" onclick="moveLeft()"><img src="/HTML:CSS/IMAGES/left-arrow.png" alt=""></div>
-                    <div class="arr arr2" onclick="moveRight()"><img src="/HTML:CSS/IMAGES/right-arrow.png" alt=""></div>
+                    <div class="arr arr1" onclick="moveLeft()"><img src="/IMAGES/left-arrow.png" alt=""></div>
+                    <div class="arr arr2" onclick="moveRight()"><img src="/IMAGES/right-arrow.png" alt=""></div>
                 </div>
                 <div class="sel-container">
                     <div class="" id="sel-container">
                         <!-- <div class="sel-box">
                             <div class="img-con">
                                 <p class="new">New</p>
-                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                                <img src="/IMAGES/frontIpad.png" alt="">
                             </div>
                             <div class="sfu">
                                 <p class="itemName2">Speaker</p>
@@ -169,7 +169,7 @@
                                         <span class="price">$637.23</span>
                                         <span class="old-price price">$765</span>
                                     </span>
-                                    <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                 </div>
                             </div>
                         </div> -->
@@ -187,7 +187,7 @@
                      <div class="" id="weekly-feature">
                          <div class="sel-box">
                              <div class="img-con">
-                                 <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                                 <img src="/IMAGES/frontIpad.png" alt="">
                              </div>
                              <div class="sfu">
                                  <p class="itemName2">Speaker</p>
@@ -200,13 +200,13 @@
                                          <span class="price">$637.23</span>
                                          <span class="old-price price">$765</span>
                                      </span>
-                                     <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                                     <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                  </div>
                              </div>
                          </div>
                          <div class="sel-box">
                             <div class="img-con">
-                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                                <img src="/IMAGES/frontIpad.png" alt="">
                             </div>
                             <div class="sfu">
                                 <p class="itemName2">Speaker</p>
@@ -219,13 +219,13 @@
                                         <span class="price">$637.23</span>
                                         <span class="old-price price">$765</span>
                                     </span>
-                                    <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="sel-box">
                             <div class="img-con">
-                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                                <img src="/IMAGES/frontIpad.png" alt="">
                             </div>
                             <div class="sfu">
                                 <p class="itemName2">Speaker</p>
@@ -238,13 +238,13 @@
                                         <span class="price">$637.23</span>
                                         <span class="old-price price">$765</span>
                                     </span>
-                                    <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="sel-box">
                             <div class="img-con">
-                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                                <img src="/IMAGES/frontIpad.png" alt="">
                             </div>
                             <div class="sfu">
                                 <p class="itemName2">Speaker</p>
@@ -257,13 +257,13 @@
                                         <span class="price">$637.23</span>
                                         <span class="old-price price">$765</span>
                                     </span>
-                                    <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="sel-box">
                             <div class="img-con">
-                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                                <img src="/IMAGES/frontIpad.png" alt="">
                             </div>
                             <div class="sfu">
                                 <p class="itemName2">Speaker</p>
@@ -276,13 +276,13 @@
                                         <span class="price">$637.23</span>
                                         <span class="old-price price">$765</span>
                                     </span>
-                                    <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="sel-box">
                             <div class="img-con">
-                                <img src="/HTML:CSS/IMAGES/frontIpad.png" alt="">
+                                <img src="/IMAGES/frontIpad.png" alt="">
                             </div>
                             <div class="sfu">
                                 <p class="itemName2">Speaker</p>
@@ -295,7 +295,7 @@
                                         <span class="price">$637.23</span>
                                         <span class="old-price price">$765</span>
                                     </span>
-                                    <img id="add-to-cart-img" src="/HTML:CSS/IMAGES/add-to-cart.png" alt="">
+                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -305,7 +305,7 @@
          </section>
         
         <section class="added-style about">
-            <img src="/HTML:CSS/IMAGES/hector-martinez-EG49vTtKdvI-unsplash.jpg" alt="" class="about-img">
+            <img src="/IMAGES/hector-martinez-EG49vTtKdvI-unsplash.jpg" alt="" class="about-img">
             <div class="about-text-container">
                 <div class="aat">
                     <h1>We Serve You The Best Product At Best Prices</h1>
@@ -314,21 +314,21 @@
                 <div class="about-boxes">
                     <div class="ab">
                         <div class="about-box">
-                            <img src="/HTML:CSS/IMAGES/shipped.png" alt="" class="a-icon">
+                            <img src="/IMAGES/shipped.png" alt="" class="a-icon">
                             <div class="a-text">
                                 <h2>Free Shipping</h2>
                                 <p>Lorem ipsum dolor sit amet.</p>
                             </div>
                         </div>
                         <div class="about-box">
-                            <img src="/HTML:CSS/IMAGES/credit-card(1).png" alt="" class="a-icon">
+                            <img src="/IMAGES/credit-card(1).png" alt="" class="a-icon">
                             <div class="a-text">
                                 <h2>Secured Payments</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                             </div>
                         </div>
                         <div class="about-box">
-                            <img src="/HTML:CSS/IMAGES/24-hours-support.png" alt="" class="a-icon">
+                            <img src="/IMAGES/24-hours-support.png" alt="" class="a-icon">
                             <div class="a-text">
                                 <h2>24/7 Online Support</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -337,21 +337,21 @@
                     </div>
                     <div class="ab">
                         <div class="about-box">
-                            <img src="/HTML:CSS/IMAGES/exchange.png" alt="" class="a-icon">
+                            <img src="/IMAGES/exchange.png" alt="" class="a-icon">
                             <div class="a-text">
                                 <h2>Free Returns</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                             </div>
                         </div>
                         <div class="about-box">
-                            <img src="/HTML:CSS/IMAGES/customer-support.png" alt="" class="a-icon">
+                            <img src="/IMAGES/customer-support.png" alt="" class="a-icon">
                             <div class="a-text">
                                 <h2>Customer Service</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                             </div>
                         </div>
                         <div class="about-box">
-                            <img src="/HTML:CSS/IMAGES/cashback.png" alt="" class="a-icon">
+                            <img src="/IMAGES/cashback.png" alt="" class="a-icon">
                             <div class="a-text">
                                 <h2>Instant Refund</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -365,7 +365,7 @@
         <section class="visit-out-support">
             <div class="vv">
                 <h1>Visit our Support Center</h1>
-                <img src="/HTML:CSS/IMAGES/customer-support(1).png" alt="">
+                <img src="/IMAGES/customer-support(1).png" alt="">
             </div>
             <button class="visit" type="button">Visit</button>
         </section>
@@ -375,5 +375,14 @@
             </h1>
         </footer>
     </section>
+
+
+    <script>
+        "use strict"
+
+        const goHome = () => {
+            window.location.href = "/HTML/index.html";
+        }
+    </script>
 </body>
 </html>

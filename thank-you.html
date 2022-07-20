@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="/CSS/cart.css">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/CSS/thank-you.css">
 </head>
 
-<body>
+<body> 
     <section class="slimbanner">
         <div class="slimcontent">
             <div class="slimb-left">
@@ -61,75 +61,74 @@
             </div>
         </div>
     </section>
+
     <section class="cart-body">
         <div class="cart-top">
-            <h1 class="head">Shopping Cart</h1>
-            <div class="total-checkout">
-                <h1><span class="sub-total-head">Sub Total (2 Items) : </span> <span class="amount">$ </span><span
-                        class="amount">1,525.96</span></h1>
-                <button class="continue">Continue Shopping</button>
-                <button class="check-out">Check Out</button>
+            <h1 class="head">Checkout</h1>
+        </div>
+        <div class="progress">
+            <div class="stages">
+                <div class="circle-box">
+                    <div class="circle">
+                        <h1>1</h1>
+                    </div>
+                    <h2>Sign in</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="stages">
+                <div class="circle-box">
+                    <div class="circle">
+                        <h1>2</h1>
+                    </div>
+                    <h2>Shopping Info</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="stages">
+                <div class="circle-box">
+                    <div class="circle">
+                        <h1>3</h1>
+                    </div>
+                    <h2>Payment</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="stages">
+                <div class="circle-box">
+                    <div class="circle">
+                        <h1>4</h1>
+                    </div>
+                    <h2>Confirmation</h2>
+                </div>
             </div>
         </div>
+        
         <section class="cart-full-details">
             <div class="orders-in-cart">
-                <div class="order">
-                    <img src="/IMAGES/frontIpad.png" alt="">
-                    <div class="order-info">
-                        <div class="info">
-                            <h1 class="item-name">iPhone 13 Pro Max</h1>
-                            <h2 class="item-title">Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
-                            <h2>Color : <span> Space Grey</span></h2>
-                        </div>
-                        <div class="qty">
-                            <h2>Quantity</h2>
-                            <div class="quantity">
-                                <button>-</button><input type="text" value="1"><button>+</button>
-                            </div>
-                        </div>
-    
-                        <div class="save-delete">
-                            <h2>Save for later</h2>
-                            <h2 class="delete">Delete</h2>
-                        </div>
+                <div class="confirmation-code">
+                    <img src="/IMAGES/order.png" alt="">
+                    <div class="confirm-note">
+                        <h1>Thank you!</h1>
+                    <p>Your order has been placed. Your confirmation code is <strong>A25GJE200OD93J24</strong></p>
                     </div>
-                    <div class="item-price">
-                        <span class="currency">$</span><span class="price">1022.99</span>
-                    </div>
-                </div>
-                <div class="order">
-                    <img src="/IMAGES/frontIpad.png" alt="">
-                    <div class="order-info">
-                        <div class="info">
-                            <h1 class="item-name">iPhone 13 Pro Max</h1>
-                            <h2 class="item-title">Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
-                            <h2>Color : <span> Space Grey</span></h2>
-                        </div>
-                        <div class="qty">
-                            <h2>Quantity</h2>
-                            <div class="quantity">
-                                <button>-</button><input type="text" value="1"><button>+</button>
-                            </div>
-                        </div>
-
-                        <div class="save-delete">
-                            <h2>Save for later</h2>
-                            <h2 class="delete">Delete</h2>
-                        </div>
-                    </div>
-                    <div class="item-price">
-                        <span class="currency">$</span><span class="price">937.99</span>
-                    </div>
-                </div>
-
+                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
             <div class="breakdown">
                 <div class="delivery">
                     <div class="dels"><p>Delivery : </p><h2>Free</h2></div>
                     <div class="dels2"><p>Delivery by </p><h2>July 25th, 2022</h2></div>
-                </div>
-                <div class="promo-code">
-                    <input type="text" placeholder="Promocode"><input type="submit" value="Apply">
                 </div>
                 <div class="breaking">
                     <div class="sub-total">
@@ -155,14 +154,12 @@
                         <h1><span>$</span><span>10.99</span></h1>
                     </div>
                     <div class="checkout-proceed">
-                        <button class="continue" onclick="toShop()">Continue Shopping</button>
-                        <button type="button" class="check-out" onclick="toCheckOut()">Proceed to Check Out</button>
+                        <button type="button" class="check-out">Paid $1,1050.99 </button>
                     </div>
                 </div>
             </div>
         </section>
 
-    </section>
 
     <footer>
         <h1>
@@ -170,32 +167,30 @@
         </h1>
     </footer>
 
+
+
     <script>
         "use strict"
 
-        const toShop = () => {
-            window.location.href = ("/HTML/gemshop.html")
-        }
-
-        const toCheckOut = () => {
-            window.location.href = ("/HTML/checkout.html")
+        const toCart = () => {
+            window.location.href = ("/HTML/cart.html")
         }
 
         const goHome = () => {
             window.location.href = "/HTML/gemstore.html";
         }
-    
+
         //Menu
         let menu = document.getElementById("menu"),
             mb = document.getElementById("mb")
         let close = document.querySelectorAll("#close");
         menu.style.display = "none"
-    
+
         const removePadding = () => {
             menu.style.height = "0px"
             menu.style.padding = "0px";
         }
-    
+
         const openMenu = (e) => {
             menu.style.display = "flex"
             removePadding()
@@ -204,14 +199,14 @@
                 menu.style.height = "400px";
             }, 20)
         }
-    
+
         const closeMenu = () => {
             removePadding()
             setTimeout(() => {
                 menu.style.display = "none"
             }, 520);
         }
-    
+
         document.addEventListener("click", (e) => {
             if (e.target !== menu && menu.clientHeight > 0) {
                 removePadding()
@@ -219,4 +214,5 @@
         })
     </script>
 </body>
+
 </html>

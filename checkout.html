@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/CSS/checkout.css">
+</head>
+
+<body> 
+    <section class="slimbanner">
+        <div class="slimcontent">
+            <div class="slimb-left">
+                <p>Open doors to a world of Electronics</p>
+                <hr class="vhr">
+                <p class="dis-more">Discover More</p>
+            </div>
+            <div class="slimb-right">
+                <p>English</p>
+                <p>USD</p>
+            </div>
+        </div>
+    </section>
+    <section class="top-nav">
+        <div class="logo-nav">
+            <nav id="nav-and-products">
+                <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
+                <div class="products">
+                    <ul>
+                        <li>Gaming</li>
+                        <li>Cellphones</li>
+                        <li>Computer</li>
+                        <li>Ipads</li>
+                        <li>Speakers</li>
+                        <li>TVs</li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="menu">
+                <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
+                <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
+                <ul>
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Blog</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <h1 class="logo" onclick="goHome()">Geministore.</h1>
+            <div class="login-cart">
+                <div class="search-section">
+                    <input type="search" class="search" name="search" id="search" placeholder="Search a product">
+                    <input type="submit" class="go" value="GO">
+                </div>
+                <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
+                <button type="button" class="login">Login</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cart-body">
+        <div class="cart-top">
+            <h1 class="head">Checkout</h1>
+            <div class="total-checkout">
+                <h1>
+                    <span class="sub-total-head">Sub Total (2 Items) : </span> 
+                    <span class="amount">$ </span><span class="amount">1,525.96</span>
+                </h1>
+                <button class="continue">Continue Shopping</button>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="stages">
+                <div class="circle-box">
+                    <div class="circle">
+                        <h1>1</h1>
+                    </div>
+                    <h2>Signin</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="stages">
+                <div class="circle-box">
+                    <div class="circle">
+                        <h1>2</h1>
+                    </div>
+                    <h2>Shopping Info</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="stages">
+                <div class="circle-box">
+                    <div class="circle">
+                        <h1>3</h1>
+                    </div>
+                    <h2>Payment</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="stages">
+                <div class="circle-box">
+                    <div class="circle">
+                        <h1>4</h1>
+                    </div>
+                    <h2>Confirmation</h2>
+                </div>
+            </div>
+        </div>
+        
+        <section class="cart-full-details">
+            <div class="orders-in-cart">
+                <div class="confirmation-code">
+                    <img src="/IMAGES/order.png" alt="">
+                    <div class="confirm-note">
+                        <h1>Thank you!</h1>
+                    <p>Your order has been placed. Your confirmation code is <strong>A25GJE200OD93J24</strong></p>
+                    </div>
+                 </div>
+                <form action="" method="get">
+                    <div class="sec stepps shipping-info">
+                        <h1>Shipping Information</h1>
+                        <div class="inputed-info"></div>
+                        <div class="flex-form">
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="Contant Name">
+                                <input type="text" name="" id="" placeholder="Street Address">
+                                <input type="text" name="" id="" placeholder="Country">
+                                <input type="text" name="" id="" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="Mobile Number">
+                                <input type="text" name="" id="" placeholder="Address 2">
+                                <input type="text" name="" id="" placeholder="State">
+                                <input type="text" name="" id="" placeholder="Zipode">
+                            </div>
+                        </div>
+                        <div class="check-b">
+                            <input type="checkbox" name="" id=""> Make default Address
+                        </div>
+                        <div class="check-b">
+                            <input type="checkbox" name="" id=""> Same as Biling Address
+                        </div>
+                    </div>
+
+                    <div class="sec stepps shipping-info">
+                        <h1>Billing Information</h1>
+                        <div class="inputed-info"></div>
+                        <div class="flex-form">
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="Contant Name">
+                                <input type="text" name="" id="" placeholder="Street Address">
+                                <input type="text" name="" id="" placeholder="Country">
+                                <input type="text" name="" id="" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="" id="" placeholder="Mobile Number">
+                                <input type="text" name="" id="" placeholder="Address 2">
+                                <input type="text" name="" id="" placeholder="State">
+                                <input type="text" name="" id="" placeholder="Zipode">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stepps payment-info">
+                        <h1>Choose a Payment Option</h1>
+                        <div class="inputed-info"></div>
+                        <div class="form-section">
+                            <div class="sec credit-card">
+                                <div class="select-option">
+                                    <input type="radio" name="" id=""> <h1>Credit/Debit Card</h1>
+                                </div>
+                                <div class="card-form">
+                                    <input type="text" name="" id="" placeholder="Card Holder's Name">
+                                    <input type="text" name="" id="" placeholder="Card Number">
+                                    <div class="exp-cvv">
+                                        <input type="text" name="" id="" placeholder="Expiry Date">
+                                        <input type="text" name="" id="" placeholder="CVV">
+                                    </div>
+                                    <div class="check-c" id="check-c">
+                                        <input type="checkbox" name="" id=""> Save this Card
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="sec credit-card">
+                                <div class="select-option">
+                                    <input type="radio" name="" id=""> <h1>PayPal</h1>
+                                </div>
+                                <div class="paypal-box card-form">
+                                    <button>Go to PayPal</button>
+                                </div>
+                            </div>
+                            
+                            <div class="sec credit-card">
+                                <div class="select-option">
+                                    <input type="radio" name="" id=""> <h1>Online Bank Transfer</h1>
+                                </div>
+                                <div class="paypal-box card-form">
+                                    <button>Link A Bank</button>
+                                </div>
+                            </div>
+
+                            <div class="sec credit-card">
+                                <div class="select-option">
+                                    <input type="radio" name="" id=""> <h1>MoneyGram/Western Union</h1>
+                                </div>
+                                <div class="paypal-box card-form">
+                                    <button>Open Wester Union</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Confirm and Place Order" onclick="makePayment()">
+                </form>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="breakdown">
+                <div class="delivery">
+                    <div class="dels"><p>Delivery : </p><h2>Free</h2></div>
+                    <div class="dels2"><p>Delivery by </p><h2>July 25th, 2022</h2></div>
+                </div>
+                <div class="promo-code">
+                    <input type="text" placeholder="Promocode"><input type="submit" value="Apply">
+                </div>
+                <div class="breaking">
+                    <div class="sub-total">
+                        <h1>Subtotal</h1>
+                        <h1><span>$</span><span>1,024.99</span></h1>
+                    </div>
+                    <div class="anyname">
+                        <div class="dets discount">
+                            <h2>Discount</h2>
+                            <h2>0%</h2>
+                        </div>
+                        <div class="dets delivery-fee">
+                            <h2>Delivery</h2>
+                            <h2><span>$</span><span>1,024.99</span></h2>
+                        </div>
+                        <div class="dets tax">
+                            <h2>Tax</h2>
+                            <h2><span>$</span><span>10.99</span></h2>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <h1>Total</h1>
+                        <h1><span>$</span><span>10.99</span></h1>
+                    </div>
+                    <div class="checkout-proceed">
+                        <button type="button" class="check-out" onclick="makePayment()">Pay $1,1050.99 </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <footer>
+        <h1>
+            Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
+        </h1>
+    </footer>
+
+
+
+    <script>
+        "use strict"
+
+        const makePayment = () => {
+            window.location.href = "/HTML/thank-you.html";
+        }
+
+        const toCart = () => {
+            window.location.href = "/HTML/cart.html";
+        }
+
+        const goHome = () => {
+            window.location.href = "/HTML/gemstore.html";
+        }
+
+        //Menu
+        let menu = document.getElementById("menu"),
+            mb = document.getElementById("mb")
+        let close = document.querySelectorAll("#close");
+        menu.style.display = "none"
+
+        const removePadding = () => {
+            menu.style.height = "0px"
+            menu.style.padding = "0px";
+        }
+
+        const openMenu = (e) => {
+            menu.style.display = "flex"
+            removePadding()
+            setTimeout(() => {
+                menu.style.paddingTop = "20px";
+                menu.style.height = "400px";
+            }, 20)
+        }
+
+        const closeMenu = () => {
+            removePadding()
+            setTimeout(() => {
+                menu.style.display = "none"
+            }, 520);
+        }
+
+        document.addEventListener("click", (e) => {
+            if (e.target !== menu && menu.clientHeight > 0) {
+                removePadding()
+            }
+        })
+    </script>
+</body>
+
+</html>
