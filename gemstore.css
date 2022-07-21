@@ -96,6 +96,7 @@ body{
 }
 
 .sell{
+    width: 100%;
     position: relative;
     margin-top: 20px;
     overflow: hidden;
@@ -109,7 +110,7 @@ body{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding:0px 30px;
+    padding:0px 0px;
     margin: auto;
     height: 0px;
     position: absolute;
@@ -125,7 +126,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: .2;
+    opacity: .5;
     transition:.2s ease-in;
     cursor: pointer;
 }
@@ -207,7 +208,7 @@ body{
     background-size: cover;
 }
 #imm5{
-    background: url('/IMAGES/windows-ZQ-3NFtNOOc-unsplash.jpg');
+    background: url('/IMAGES/giorgio-trovato-8krX0HkXw8c-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -246,7 +247,7 @@ body{
 nav, .login-cart{
     width: 30%;
 }
-
+ 
 .login-cart{
     display: flex;
     align-items: center;
@@ -645,62 +646,88 @@ nav ul li{
     margin-top: 50px;
 }
 
-.weekly{
-    background-color: whitesmoke;
-}
-
-.added-style{
-    padding: 20px;
-}
-
 .sel-table{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: auto;
     padding: 20px 0px;
-    margin-top: 10px;
-    position: relative;
+    margin-top: auto;
+    position: absolute;
+    width: 100%;
 }
 
 .mmm{
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
     border-bottom: 1px solid rgba(112, 128, 144, 0.362);
     height: 70px;
     width: 100%;
 }
 
+.sel{
+    /* background-color: #090A0A; */
+    /* width: 50%; */
+}
 
 .sel-table ul{
     display: flex;
     column-gap: 30px;
     list-style: none;
-    width: 70%;
+    /* width: 70%; */
 }
 
 .sel-table ul li{
     font-size: 16px;
+    font-weight: 600;
     color: #090a0a8e;
     transition: .3s ease-in-out;
     cursor: pointer;
+    font-family: "lato";
 }
 
 .sel-table ul li:hover{
-    color: #090A0A;
+    /* color: #090A0A; */
     transition: .3s ease-in-out;
 }
 
-.sel-table ul li:first-child{
+/* .sel-table ul li:first-child{
+    color: #090A0A;
+} */
+
+.active-li{
     color: #090A0A;
 }
 
 .view-all{
-    float: right;
     position: absolute;
-    right: 350px;
+    right: 0;
+    margin-right: 20px;
+    width: auto;
+    /* position: absolute; */
+    /* right: 350px; */
     font-size: 16px;
     color: #090a0a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.view-all:hover{
+    background-color: #090a0a1d;
+    padding: 5px 10px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .sel-container{
@@ -709,7 +736,9 @@ nav ul li{
     column-gap: 20px;
     margin-top: 20px;
     overflow-x: scroll;
+    overflow-y: hidden;
     width: 100%;
+    height: auto;
     margin: auto;
 }
 
@@ -718,14 +747,15 @@ nav ul li{
     align-items: center;
     column-gap: 20px;
     margin-top: 20px;
-    width: auto;
+    width: 100%;
+    height: 500px;
 }
 
 .sel-box{
-    width: 250px;
-    min-width: 250px;
-    height: 400px;
-    max-height: 400px;
+    width: 270px;
+    min-width: 270px;
+    height: 100%;
+    /* max-height: 400px; */
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -745,9 +775,9 @@ nav ul li{
 }
 
 .img-con{
-    /* background-color: whitesmoke; */
+    background-color: whitesmoke;
     width: 100%;
-    height: 300px;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -781,8 +811,10 @@ nav ul li{
     padding:0px 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     row-gap: 10px;
     width: 100%;
+    height: 25%;
 }
 
 .itemName2{
@@ -793,7 +825,7 @@ nav ul li{
 
 .item-description{
     font-size: 15px;
-    color: #090a0ad4;
+    color: #090a0ab6;
 }
 
 .price-box{
@@ -829,6 +861,65 @@ nav ul li{
     display: flex;
     justify-content: center;
     overflow: hidden;
+    width: 100%;
+    /* padding:0px 20px 20px 20px; */
+}
+
+.weekly{
+    /* background-color: #3c586b1f; */
+    background-color: #0a595414;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 100%;
+    height: 500%;
+    padding: 20px;
+}
+
+.weekly .sel-box:hover{
+    background-color: white;
+}
+
+#weekly-sell{
+    /* background-color: red; */
+    width: 100%;
+}
+
+#wkly:hover{
+    background-color: white;
+}
+
+#wkly .img-con{
+    background-color: transparent;
+}
+
+#wkly{
+    width: 20%;
+    height: 100%;
+    /* max-height: 400px; */
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    -ms-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+}
+
+#wkly img{
+    width: 170px;
+    height: 200px;
+}
+
+#wkly #add-to-cart-img{
+    width: 30px;
+    height: 30px;
 }
 
 /*End Of SFY*/
@@ -977,11 +1068,15 @@ nav ul li{
 }
 
 footer{
-    background-color: whitesmoke;
+    background-color: #3c586b1f;
     width: 100%;
     padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }

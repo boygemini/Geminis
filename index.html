@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemini store | Home</title>
-    <link rel="stylesheet" href="/CSS/gemstore.css">
-    <script src="/JAVASCRIPT/gemstore.js" defer></script>
+    <link rel="stylesheet" href="gemstore.css">
+    <script src="gemstore.js" defer></script>
 </head>
 <body>
     <section class="slimbanner">
@@ -47,7 +47,7 @@
                         <li>About</li>
                         <li>Contact</li>
                     </ul>
-                </div>
+                </div> 
                 <h1 class="logo" onclick="goHome()">Geministore.</h1>
                 <div class="login-cart">
                     <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
@@ -81,7 +81,7 @@
     </section>
 
     <section class="major-container">
-        <section class="added-style recently-added">
+        <section class="recently-added">
             <div class="mmm">
                 <p class="sel">Recently Added</p>
             </div>
@@ -132,26 +132,26 @@
                 </div>
             </div>
         </section>
-        <section class="added-style selected-for-you">
+        <section class="selected-for-you">
            <div class="mmm">
             <p class="sel">Selected Just For You</p>
             <div class="sel-table">
                 <ul>
-                    <li onclick="createItem(Gaming)">Gaming</li>
-                    <li onclick="createItem(cellPhones)">Cell Phones</li>
-                    <li onclick="createItem(Computers)">Computers</li>
-                    <li onclick="createItem(Speaker)">Speaker</li>
-                    <li onclick="createItem(TV)">TV</li>
+                    <li class="tab" onclick="createItem(Gaming)">Gaming</li>
+                    <li class="tab" onclick="createItem(cellPhones)">Cell Phones</li>
+                    <li class="tab" onclick="createItem(Computers)">Computers</li>
+                    <li class="tab" onclick="createItem(Speaker)">Speaker</li>
+                    <li class="tab" onclick="createItem(TV)">TV</li>
                 </ul>
-                <p class="view-all">View all</p>
             </div>
+            <p class="view-all" onclick="toShop()">View all</p>
            </div>
             <div class="sell">
                 <div class="arrows">
                     <div class="arr arr1" onclick="moveLeft()"><img src="/IMAGES/left-arrow.png" alt=""></div>
                     <div class="arr arr2" onclick="moveRight()"><img src="/IMAGES/right-arrow.png" alt=""></div>
                 </div>
-                <div class="sel-container">
+                <div class="sel-container" id="sel-holder">
                     <div class="" id="sel-container">
                         <!-- <div class="sel-box">
                             <div class="img-con">
@@ -159,10 +159,12 @@
                                 <img src="/IMAGES/frontIpad.png" alt="">
                             </div>
                             <div class="sfu">
-                                <p class="itemName2">Speaker</p>
+                                <div>
+                                    <p class="itemName2">Speaker</p>
                                 <div class="description-box">
                                     <p class="item-description">Lorem ipsum dolor sit amet.</p>
                                     <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                </div>
                                 </div>
                                 <div class="price-order">
                                     <span class="price-box">
@@ -178,124 +180,120 @@
             </div>
         </section>
 
-        <section class="added-style weekly selected-for-you" >
+        <section class="weekly selected-for-you" >
             <div class="mmm">
              <p class="sel">Our Weekly Featured</p>
             </div>
-             <div class="sell">
+             <div id="weekly-sell" class="sell">
                  <div class="sel-container">
                      <div class="" id="weekly-feature">
-                         <div class="sel-box">
-                             <div class="img-con">
-                                 <img src="/IMAGES/frontIpad.png" alt="">
-                             </div>
-                             <div class="sfu">
-                                 <p class="itemName2">Speaker</p>
-                                 <div class="description-box">
-                                     <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                     <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                 </div>
-                                 <div class="price-order">
-                                     <span class="price-box">
-                                         <span class="price">$637.23</span>
-                                         <span class="old-price price">$765</span>
-                                     </span>
-                                     <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="sel-box">
-                            <div class="img-con">
-                                <img src="/IMAGES/frontIpad.png" alt="">
-                            </div>
-                            <div class="sfu">
-                                <p class="itemName2">Speaker</p>
-                                <div class="description-box">
-                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                        <div class="" id="sel-container">
+                            <div id="wkly">
+                                <div class="img-con">
+                                    <p class="new">New</p>
+                                    <img src="/IMAGES/frontIpad.png" alt="">
                                 </div>
-                                <div class="price-order">
-                                    <span class="price-box">
-                                        <span class="price">$637.23</span>
-                                        <span class="old-price price">$765</span>
-                                    </span>
-                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                <div class="sfu">
+                                    <div>
+                                        <p class="itemName2">Speaker</p>
+                                    <div class="description-box">
+                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    </div>
+                                    <div class="price-order">
+                                        <span class="price-box">
+                                            <span class="price">$637.23</span>
+                                            <span class="old-price price">$765</span>
+                                        </span>
+                                        <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="sel-box">
-                            <div class="img-con">
-                                <img src="/IMAGES/frontIpad.png" alt="">
-                            </div>
-                            <div class="sfu">
-                                <p class="itemName2">Speaker</p>
-                                <div class="description-box">
-                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                            <div id="wkly">
+                                <div class="img-con">
+                                    <img src="/IMAGES/frontIpad.png" alt="">
                                 </div>
-                                <div class="price-order">
-                                    <span class="price-box">
-                                        <span class="price">$637.23</span>
-                                        <span class="old-price price">$765</span>
-                                    </span>
-                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sel-box">
-                            <div class="img-con">
-                                <img src="/IMAGES/frontIpad.png" alt="">
-                            </div>
-                            <div class="sfu">
-                                <p class="itemName2">Speaker</p>
-                                <div class="description-box">
-                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                </div>
-                                <div class="price-order">
-                                    <span class="price-box">
-                                        <span class="price">$637.23</span>
-                                        <span class="old-price price">$765</span>
-                                    </span>
-                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                <div class="sfu">
+                                    <div>
+                                        <p class="itemName2">Speaker</p>
+                                    <div class="description-box">
+                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    </div>
+                                    <div class="price-order">
+                                        <span class="price-box">
+                                            <span class="price">$637.23</span>
+                                            <span class="old-price price">$765</span>
+                                        </span>
+                                        <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="sel-box">
-                            <div class="img-con">
-                                <img src="/IMAGES/frontIpad.png" alt="">
-                            </div>
-                            <div class="sfu">
-                                <p class="itemName2">Speaker</p>
-                                <div class="description-box">
-                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                            <div id="wkly">
+                                <div class="img-con">
+                                    <p class="new">New</p>
+                                    <img src="/IMAGES/frontIpad.png" alt="">
                                 </div>
-                                <div class="price-order">
-                                    <span class="price-box">
-                                        <span class="price">$637.23</span>
-                                        <span class="old-price price">$765</span>
-                                    </span>
-                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                <div class="sfu">
+                                    <div>
+                                        <p class="itemName2">Speaker</p>
+                                    <div class="description-box">
+                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    </div>
+                                    <div class="price-order">
+                                        <span class="price-box">
+                                            <span class="price">$637.23</span>
+                                            <span class="old-price price">$765</span>
+                                        </span>
+                                        <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="sel-box">
-                            <div class="img-con">
-                                <img src="/IMAGES/frontIpad.png" alt="">
-                            </div>
-                            <div class="sfu">
-                                <p class="itemName2">Speaker</p>
-                                <div class="description-box">
-                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                            <div id="wkly">
+                                <div class="img-con">
+                                    <p class="new">New</p>
+                                    <img src="/IMAGES/frontIpad.png" alt="">
                                 </div>
-                                <div class="price-order">
-                                    <span class="price-box">
-                                        <span class="price">$637.23</span>
-                                        <span class="old-price price">$765</span>
-                                    </span>
-                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                <div class="sfu">
+                                    <div>
+                                        <p class="itemName2">Speaker</p>
+                                    <div class="description-box">
+                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    </div>
+                                    <div class="price-order">
+                                        <span class="price-box">
+                                            <span class="price">$637.23</span>
+                                            <span class="old-price price">$765</span>
+                                        </span>
+                                        <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="wkly">
+                                <div class="img-con">
+                                    <img src="/IMAGES/frontIpad.png" alt="">
+                                </div>
+                                <div class="sfu">
+                                    <div>
+                                        <p class="itemName2">Speaker</p>
+                                    <div class="description-box">
+                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    </div>
+                                    <div class="price-order">
+                                        <span class="price-box">
+                                            <span class="price">$637.23</span>
+                                            <span class="old-price price">$765</span>
+                                        </span>
+                                        <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -304,7 +302,7 @@
              </div>
          </section>
         
-        <section class="added-style about">
+        <section class="about">
             <img src="/IMAGES/hector-martinez-EG49vTtKdvI-unsplash.jpg" alt="" class="about-img">
             <div class="about-text-container">
                 <div class="aat">
@@ -381,7 +379,15 @@
         "use strict"
 
         const goHome = () => {
-            window.location.href = "/HTML/index.html";
+            window.location.href = "/HTML/gemstore.html";
+        }
+
+        const toShop = () => {
+            window.location.href = "/HTML/gemshop.html";
+        }
+
+        const toCart = () => {
+            window.location.href = "/HTML/cart.html";
         }
     </script>
 </body>

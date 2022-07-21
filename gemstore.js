@@ -53,10 +53,10 @@ const disOther = () => {
 const increSlide = () => {
   disOther();
   counter++;
-  if (counter === 4) {
+  if (counter === 5) {
     counter = 0;
   }
- placing()
+placing()
 };
 
 
@@ -100,56 +100,80 @@ const shopNow = () => {
 
 let Gaming = [
   {
-    "name": "1",
-    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "name": "XBOX 1",
+    "itemImg" : "/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
     "newItemPrice": "$630",
     "oldItemPrice": "$544"
   },
   {
-    "name": "2",
-    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "name": "XBOX 2",
+    "itemImg" : "/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
     "newItemPrice": "$630",
     "oldItemPrice": "$984"
   },
   {
-    "name": "3",
-    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "name": "XBOX 3",
+    "itemImg" : "/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum dolor sit amet.",
     "newItemPrice": "$1,230",
     "oldItemPrice": ""
   },
   {
-    "name": "4",
-    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "name": "XBOX 4",
+    "itemImg" : "/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
     "newItemPrice": "$1,130",
     "oldItemPrice": "$1,050"
   },
   {
-    "name": "5",
-    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "name": "XBOX 5",
+    "itemImg" : "/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum dolor",
     "newItemPrice": "$1,930.99",
     "oldItemPrice": "$2,050"
   },
   {
-    "name": "6",
-    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "name": "XBOX 6",
+    "itemImg" : "/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
     "newItemPrice": "$1,130",
     "oldItemPrice": "$1,050"
   },
   {
-    "name": "7",
-    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "name": "XBOX 7",
+    "itemImg" : "/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor",
+    "newItemPrice": "$1,930.99",
+    "oldItemPrice": "$2,050"
+  },
+  {
+    "name": "PS 3",
+    "itemImg" : "/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor",
+    "newItemPrice": "$1,930.99",
+    "oldItemPrice": "$2,050"
+  },
+  {
+    "name": "PS 4",
+    "itemImg" : "/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$1,130",
+    "oldItemPrice": "$1,050"
+  },
+  {
+    "name": "PS 4",
+    "itemImg" : "/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum dolor",
     "newItemPrice": "$1,930.99",
@@ -161,7 +185,7 @@ let Gaming = [
 let cellPhones = [
   {
     "name": "iPhone 12 mini",
-    "itemImg" : "/HTML:CSS/IMAGES/frontIpad.png",
+    "itemImg" : "/IMAGES/frontIpad.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem as",
     "newItemPrice": "$630.59",
@@ -169,7 +193,7 @@ let cellPhones = [
   },
   {
     "name": "iPhone 12 Pro Max",
-    "itemImg" : "/HTML:CSS/IMAGES/frontIpad.png",
+    "itemImg" : "/IMAGES/frontIpad.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
     "newItemPrice": "$630",
@@ -177,7 +201,7 @@ let cellPhones = [
   },
   {
     "name": "iPhone 11",
-    "itemImg" : "/HTML:CSS/IMAGES/frontIpad.png",
+    "itemImg" : "/IMAGES/frontIpad.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
     "newItemPrice": "$850",
@@ -185,7 +209,7 @@ let cellPhones = [
   },
   {
     "name": "iPhone 11 Pro Max",
-    "itemImg" : "/HTML:CSS/IMAGES/frontIpad.png",
+    "itemImg" : "/IMAGES/frontIpad.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
     "newItemPrice": "$630",
@@ -193,7 +217,47 @@ let cellPhones = [
   },
   {
     "name": "iPad Pro",
-    "itemImg" : "/HTML:CSS/IMAGES/ipad2.png",
+    "itemImg" : "/IMAGES/ipad2.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$1,030",
+    "oldItemPrice": "$1,200"
+  },
+  {
+    "name": "iPhone 12 mini",
+    "itemImg" : "/IMAGES/frontIpad.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem as",
+    "newItemPrice": "$630.59",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "iPhone 12 Pro Max",
+    "itemImg" : "/IMAGES/frontIpad.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "iPhone 11",
+    "itemImg" : "/IMAGES/frontIpad.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$850",
+    "oldItemPrice": ""
+  },
+  {
+    "name": "iPhone 11 Pro Max",
+    "itemImg" : "/IMAGES/frontIpad.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "iPad Pro",
+    "itemImg" : "/IMAGES/ipad2.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum dolor sit amet.",
     "newItemPrice": "$1,030",
@@ -204,7 +268,7 @@ let cellPhones = [
 let Speaker = [
   {
     "name": "JBl Flip 6",
-    "itemImg" : "/HTML:CSS/IMAGES/jblflip6.png",
+    "itemImg" : "/IMAGES/jblflip6.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
     "newItemPrice": "$630",
@@ -212,7 +276,71 @@ let Speaker = [
   },
   {
     "name": "JBl Headphone",
-    "itemImg" : "/HTML:CSS/IMAGES/headphone.png",
+    "itemImg" : "/IMAGES/headphone.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$330",
+    "oldItemPrice": "$444.50"
+  },
+  {
+    "name": "JBl Flip 6",
+    "itemImg" : "/IMAGES/jblflip6.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "JBl Headphone",
+    "itemImg" : "/IMAGES/headphone.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$330",
+    "oldItemPrice": "$444.50"
+  },
+  {
+    "name": "JBl Flip 6",
+    "itemImg" : "/IMAGES/jblflip6.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "JBl Headphone",
+    "itemImg" : "/IMAGES/headphone.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$330",
+    "oldItemPrice": "$444.50"
+  },
+  {
+    "name": "JBl Flip 6",
+    "itemImg" : "/IMAGES/jblflip6.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "JBl Headphone",
+    "itemImg" : "/IMAGES/headphone.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$330",
+    "oldItemPrice": "$444.50"
+  },
+  {
+    "name": "JBl Flip 6",
+    "itemImg" : "/IMAGES/jblflip6.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "$544"
+  },
+  {
+    "name": "JBl Headphone",
+    "itemImg" : "/IMAGES/headphone.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
     "newItemPrice": "$330",
@@ -223,7 +351,7 @@ let Speaker = [
 let Computers = [
   {
     "name": "Apple Monitor",
-    "itemImg" : "/HTML:CSS/IMAGES/tv4.png",
+    "itemImg" : "/IMAGES/tv4.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "",
     "newItemPrice": "$630",
@@ -231,7 +359,7 @@ let Computers = [
   },
   {
     "name": "Apple Monitor",
-    "itemImg" : "/HTML:CSS/IMAGES/bigmonitor.png",
+    "itemImg" : "/IMAGES/bigmonitor.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "L",
     "newItemPrice": "$630",
@@ -239,9 +367,65 @@ let Computers = [
   },
   {
     "name": "Apple Monitor",
-    "itemImg" : "/HTML:CSS/IMAGES/tv4.png",
+    "itemImg" : "/IMAGES/tv4.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum ",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "Apple Monitor",
+    "itemImg" : "/IMAGES/tv4.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "Apple Monitor",
+    "itemImg" : "/IMAGES/bigmonitor.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "L",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "Apple Monitor",
+    "itemImg" : "/IMAGES/tv4.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum ",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "Apple Monitor",
+    "itemImg" : "/IMAGES/tv4.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "Apple Monitor",
+    "itemImg" : "/IMAGES/bigmonitor.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "L",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "Apple Monitor",
+    "itemImg" : "/IMAGES/tv4.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "Apple Monitor",
+    "itemImg" : "/IMAGES/bigmonitor.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "L",
     "newItemPrice": "$630",
     "oldItemPrice": "544"
   }
@@ -250,7 +434,7 @@ let Computers = [
 let TV = [
   {
     "name": "LG",
-    "itemImg" : "/HTML:CSS/IMAGES/tv4.png",
+    "itemImg" : "/IMAGES/tv4.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum dolor sit amet.",
     "newItemPrice": "$630",
@@ -258,7 +442,7 @@ let TV = [
   },
   {
     "name": "LG",
-    "itemImg" : "/HTML:CSS/IMAGES/tv5.png",
+    "itemImg" : "/IMAGES/tv5.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum dolor sit amet.",
     "newItemPrice": "$630",
@@ -266,7 +450,7 @@ let TV = [
   },
   {
     "name": "LG",
-    "itemImg" : "/HTML:CSS/IMAGES/tv2.jpg",
+    "itemImg" : "/IMAGES/tv2.jpg",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum dolor sit amet.",
     "newItemPrice": "$630",
@@ -274,7 +458,55 @@ let TV = [
   },
   {
     "name": "LG",
-    "itemImg" : "/HTML:CSS/IMAGES/tv1.jpg",
+    "itemImg" : "/IMAGES/tv1.jpg",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "LG",
+    "itemImg" : "/IMAGES/tv4.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "LG",
+    "itemImg" : "/IMAGES/tv5.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "LG",
+    "itemImg" : "/IMAGES/tv2.jpg",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "LG",
+    "itemImg" : "/IMAGES/tv1.jpg",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "LG",
+    "itemImg" : "/IMAGES/tv4.png",
+    "description1": "Lorem ipsum dolor sit amet.",
+    "description2": "Lorem ipsum dolor sit amet.",
+    "newItemPrice": "$630",
+    "oldItemPrice": "544"
+  },
+  {
+    "name": "LG",
+    "itemImg" : "/IMAGES/tv5.png",
     "description1": "Lorem ipsum dolor sit amet.",
     "description2": "Lorem ipsum dolor sit amet.",
     "newItemPrice": "$630",
@@ -293,7 +525,7 @@ let Holder = document.getElementById("sel-container")
 const createItem = (category) => {
   let itemCreated = " "
   for(let i in category){
-    itemCreated += `<div class="sel-box">
+    itemCreated += `<div class="sell-box sel-box">
     <div class="img-con">
         <img src=${category[i].itemImg} alt="">
     </div>
@@ -308,7 +540,7 @@ const createItem = (category) => {
                 <span class="price">${category[i].newItemPrice}</span>
                 <span class="old-price price">${category[i].oldItemPrice}</span>
             </span>
-            <button class="add-to-cart">Add</button>
+            <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
         </div>
     </div>
 </div>`
@@ -318,28 +550,38 @@ const createItem = (category) => {
 
 createItem(Gaming)
 
+let tab = [...document.querySelectorAll(".tab")]
+tab[0].className = " active-li"
+for(let x in tab){
+  tab[x].addEventListener("click", (e)=>{
+    event.target.className += " active-li"
+  })
+}
+//end
+
+
 //Selected for You
 
-let boxCounter = -1;
-let container = document.getElementById("sel-container"), box = document.querySelectorAll(".sel-box");
+let boxCounter = 0;
+let container = document.getElementById("sel-container")
+let holder = document.getElementById("sel-holder")
+let box = [...document.querySelectorAll(".sell-box")];
+
 const moveRight = () => {
-  counter++
-  if(counter === Gaming.length){
-    counter = 0;
-  }
-  box[counter].scrollIntoView()
-  console.log(counter);
+  holder.scrollLeft += holder.clientWidth
 }
 
 const moveLeft = () => {
-  counter--
-  if(counter < 0){
-    counter = Gaming.length
-  }
-  box[counter].scrollIntoView()
-  console.log(counter);
+  holder.scrollLeft -= holder.clientWidth
 }
+//end
 
+
+
+
+
+
+//Menu
 
 let menu = document.getElementById("menu"), mb = document.getElementById("mb")
 let close = document.querySelectorAll("#close");
@@ -371,3 +613,4 @@ document.addEventListener("click", (e)=>{
     removePadding()
   }
 })
+//end
