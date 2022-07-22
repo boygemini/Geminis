@@ -651,10 +651,11 @@ nav ul li{
     justify-content: center;
     align-items: center;
     width: auto;
-    padding: 20px 0px;
+    padding: 0px 0px;
     margin-top: auto;
     position: absolute;
     width: 100%;
+    height: 100%;
 }
 
 .mmm{
@@ -677,38 +678,44 @@ nav ul li{
     display: flex;
     column-gap: 30px;
     list-style: none;
+    height: 100%;
     /* width: 70%; */
 }
 
 .sel-table ul li{
-    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
     font-weight: 600;
-    color: #090a0a8e;
     transition: .3s ease-in-out;
     cursor: pointer;
     font-family: "lato";
+    height: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100px;
 }
 
 .sel-table ul li:hover{
-    /* color: #090A0A; */
-    transition: .3s ease-in-out;
+    color: #090A0A;
 }
 
-/* .sel-table ul li:first-child{
-    color: #090A0A;
-} */
+.inactive-li{
+    color: #090a0a91;
+    border: 2px solid transparent;
+}
 
 .active-li{
     color: #090A0A;
+    border: 2px solid #090A0A;
 }
 
 .view-all{
     position: absolute;
-    right: 0;
-    margin-right: 20px;
+    right: 40px;
     width: auto;
-    /* position: absolute; */
-    /* right: 350px; */
     font-size: 16px;
     color: #090a0a;
     font-weight: 600;
