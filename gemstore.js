@@ -24,6 +24,7 @@ let intro2Content = [
 ];
 
 let lmContent = ["New!", "New!", "New!", "New!", "New!"];
+console.log(lmContent);
 
 let gradientContent = [
   "Electronics",
@@ -93,428 +94,23 @@ const shopNow = () => {
 
 //Selected For you
 
-let Gaming = [
-  {
-    name: "XBOX 1",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "XBOX 2",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$984",
-  },
-  {
-    name: "XBOX 3",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$1,230",
-    oldItemPrice: "",
-  },
-  {
-    name: "XBOX 4",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$1,130",
-    oldItemPrice: "$1,050",
-  },
-  {
-    name: "XBOX 5",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor",
-    newItemPrice: "$1,930.99",
-    oldItemPrice: "$2,050",
-  },
-  {
-    name: "XBOX 6",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$1,130",
-    oldItemPrice: "$1,050",
-  },
-  {
-    name: "XBOX 7",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor",
-    newItemPrice: "$1,930.99",
-    oldItemPrice: "$2,050",
-  },
-  {
-    name: "PS 3",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor",
-    newItemPrice: "$1,930.99",
-    oldItemPrice: "$2,050",
-  },
-  {
-    name: "PS 4",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$1,130",
-    oldItemPrice: "$1,050",
-  },
-  {
-    name: "PS 4",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor",
-    newItemPrice: "$1,930.99",
-    oldItemPrice: "$2,050",
-  },
-];
-
-let cellPhones = [
-  {
-    name: "iPhone 12 mini",
-    itemImg: "/IMAGES/frontIpad.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem as",
-    newItemPrice: "$630.59",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "iPhone 12 Pro Max",
-    itemImg: "/IMAGES/frontIpad.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "iPhone 11",
-    itemImg: "/IMAGES/frontIpad.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$850",
-    oldItemPrice: "",
-  },
-  {
-    name: "iPhone 11 Pro Max",
-    itemImg: "/IMAGES/frontIpad.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "iPad Pro",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$1,030",
-    oldItemPrice: "$1,200",
-  },
-  {
-    name: "iPhone 12 mini",
-    itemImg: "/IMAGES/frontIpad.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem as",
-    newItemPrice: "$630.59",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "iPhone 12 Pro Max",
-    itemImg: "/IMAGES/frontIpad.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "iPhone 11",
-    itemImg: "/IMAGES/frontIpad.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$850",
-    oldItemPrice: "",
-  },
-  {
-    name: "iPhone 11 Pro Max",
-    itemImg: "/IMAGES/frontIpad.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "iPad Pro",
-    itemImg: "/IMAGES/ipad2.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$1,030",
-    oldItemPrice: "$1,200",
-  },
-];
-
-let Speaker = [
-  {
-    name: "JBl Flip 6",
-    itemImg: "/IMAGES/jblflip6.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "JBl Headphone",
-    itemImg: "/IMAGES/headphone.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$330",
-    oldItemPrice: "$444.50",
-  },
-  {
-    name: "JBl Flip 6",
-    itemImg: "/IMAGES/jblflip6.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "JBl Headphone",
-    itemImg: "/IMAGES/headphone.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$330",
-    oldItemPrice: "$444.50",
-  },
-  {
-    name: "JBl Flip 6",
-    itemImg: "/IMAGES/jblflip6.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "JBl Headphone",
-    itemImg: "/IMAGES/headphone.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$330",
-    oldItemPrice: "$444.50",
-  },
-  {
-    name: "JBl Flip 6",
-    itemImg: "/IMAGES/jblflip6.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "JBl Headphone",
-    itemImg: "/IMAGES/headphone.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$330",
-    oldItemPrice: "$444.50",
-  },
-  {
-    name: "JBl Flip 6",
-    itemImg: "/IMAGES/jblflip6.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "$544",
-  },
-  {
-    name: "JBl Headphone",
-    itemImg: "/IMAGES/headphone.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$330",
-    oldItemPrice: "$444.50",
-  },
-];
-
-let Computers = [
-  {
-    name: "Apple Monitor",
-    itemImg: "/IMAGES/tv4.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "Apple Monitor",
-    itemImg: "/IMAGES/bigmonitor.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "L",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "Apple Monitor",
-    itemImg: "/IMAGES/tv4.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum ",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "Apple Monitor",
-    itemImg: "/IMAGES/tv4.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "Apple Monitor",
-    itemImg: "/IMAGES/bigmonitor.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "L",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "Apple Monitor",
-    itemImg: "/IMAGES/tv4.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum ",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "Apple Monitor",
-    itemImg: "/IMAGES/tv4.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "Apple Monitor",
-    itemImg: "/IMAGES/bigmonitor.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "L",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "Apple Monitor",
-    itemImg: "/IMAGES/tv4.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "Apple Monitor",
-    itemImg: "/IMAGES/bigmonitor.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "L",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-];
-
-let TV = [
-  {
-    name: "LG",
-    itemImg: "/IMAGES/tv4.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "LG",
-    itemImg: "/IMAGES/tv5.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "LG",
-    itemImg: "/IMAGES/tv2.jpg",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "LG",
-    itemImg: "/IMAGES/tv1.jpg",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "LG",
-    itemImg: "/IMAGES/tv4.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "LG",
-    itemImg: "/IMAGES/tv5.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "LG",
-    itemImg: "/IMAGES/tv2.jpg",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "LG",
-    itemImg: "/IMAGES/tv1.jpg",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "LG",
-    itemImg: "/IMAGES/tv4.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-  {
-    name: "LG",
-    itemImg: "/IMAGES/tv5.png",
-    description1: "Lorem ipsum dolor sit amet.",
-    description2: "Lorem ipsum dolor sit amet.",
-    newItemPrice: "$630",
-    oldItemPrice: "544",
-  },
-];
-
 let itemName = document.querySelectorAll("#itemName"),
   mainDesc = document.querySelectorAll("#maindesc"),
   minDesc = document.querySelectorAll("#mindesc"),
   oldPrice = document.querySelectorAll("#oldprice"),
   newPrice = document.querySelectorAll("#newprice");
-
 let Holder = document.getElementById("sel-container");
+let products;
+
+let product_request = new XMLHttpRequest();
+product_request.open("GET", "/JSON/product.json", false);
+product_request.onload = function () {
+  if (product_request.status === 200) {
+    products = JSON.parse(this.responseText);
+    console.log(typeof products);
+  }
+};
+product_request.send();
 
 const createItem = (category) => {
   let itemCreated = " ";
@@ -534,15 +130,20 @@ const createItem = (category) => {
                     <span class="price">${category[i].newItemPrice}</span>
                     <span class="old-price price">${category[i].oldItemPrice}</span>
                 </span>
-                <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="" onclick ="addToCart(this)">
             </div>
         </div>
     </div>`;
   }
   Holder.innerHTML = itemCreated;
 };
+createItem(products.gaming);
 
-createItem(Gaming);
+//Add Item To Cart
+
+const addToCart = (cat) => {
+  console.log(cat.indexOf);
+};
 
 let tab = [...document.querySelectorAll(".tab")];
 tab[0].className += " active-li";

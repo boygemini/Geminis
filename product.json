@@ -1,0 +1,416 @@
+{
+"gaming" : [
+    {
+      "name": "XBOX 1",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "XBOX 2",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$984"
+    },
+    {
+      "name": "XBOX 3",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$1,230",
+      "oldItemPrice": "$1,125"
+    },
+    {
+      "name": "XBOX 4",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$1,130",
+      "oldItemPrice": "$1,050"
+    },
+    {
+      "name": "XBOX 5",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor",
+      "newItemPrice": "$1,930.99",
+      "oldItemPrice": "$2,050"
+    },
+    {
+      "name": "XBOX 6",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$1,130",
+      "oldItemPrice": "$1,050"
+    },
+    {
+      "name": "XBOX 7",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor",
+      "newItemPrice": "$1,930.99",
+      "oldItemPrice": "$2,050"
+    },
+    {
+      "name": "PS 3",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor",
+      "newItemPrice": "$1,930.99",
+      "oldItemPrice": "$2,050"
+    },
+    {
+      "name": "PS 4",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$1,130",
+      "oldItemPrice": "$1,050"
+    },
+    {
+      "name": "PS 4",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor",
+      "newItemPrice": "$1,930.99",
+      "oldItemPrice": "$2,050"
+    }
+  ],
+  
+   "cellphones" : [
+    {
+      "name": "iPhone 12 mini",
+      "itemImg": "/IMAGES/frontIpad.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem as",
+      "newItemPrice": "$630.59",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "iPhone 12 Pro Max",
+      "itemImg": "/IMAGES/frontIpad.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "iPhone 11",
+      "itemImg": "/IMAGES/frontIpad.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$850",
+      "oldItemPrice": ""
+    },
+    {
+      "name": "iPhone 11 Pro Max",
+      "itemImg": "/IMAGES/frontIpad.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "iPad Pro",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$1,030",
+      "oldItemPrice": "$1,200"
+    },
+    {
+      "name": "iPhone 12 mini",
+      "itemImg": "/IMAGES/frontIpad.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem as",
+      "newItemPrice": "$630.59",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "iPhone 12 Pro Max",
+      "itemImg": "/IMAGES/frontIpad.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "iPhone 11",
+      "itemImg": "/IMAGES/frontIpad.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$850",
+      "oldItemPrice": ""
+    },
+    {
+      "name": "iPhone 11 Pro Max",
+      "itemImg": "/IMAGES/frontIpad.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "iPad Pro",
+      "itemImg": "/IMAGES/ipad2.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$1,030",
+      "oldItemPrice": "$1,200"
+    }
+  ],
+  
+  "speaker" : [
+    {
+      "name": "JBl Flip 6",
+      "itemImg": "/IMAGES/jblflip6.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "JBl Headphone",
+      "itemImg": "/IMAGES/headphone.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$330",
+      "oldItemPrice": "$444.50"
+    },
+    {
+      "name": "JBl Flip 6",
+      "itemImg": "/IMAGES/jblflip6.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "JBl Headphone",
+      "itemImg": "/IMAGES/headphone.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$330",
+      "oldItemPrice": "$444.50"
+    },
+    {
+      "name": "JBl Flip 6",
+      "itemImg": "/IMAGES/jblflip6.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "JBl Headphone",
+      "itemImg": "/IMAGES/headphone.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$330",
+      "oldItemPrice": "$444.50"
+    },
+    {
+      "name": "JBl Flip 6",
+      "itemImg": "/IMAGES/jblflip6.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "JBl Headphone",
+      "itemImg": "/IMAGES/headphone.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$330",
+      "oldItemPrice": "$444.50"
+    },
+    {
+      "name": "JBl Flip 6",
+      "itemImg": "/IMAGES/jblflip6.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "JBl Headphone",
+      "itemImg": "/IMAGES/headphone.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$330",
+      "oldItemPrice": "$444.50"
+    }
+  ],
+  
+ "computers" : [
+    {
+      "name": "Apple Monitor",
+      "itemImg": "/IMAGES/tv4.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "Apple Monitor",
+      "itemImg": "/IMAGES/bigmonitor.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "L",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "Apple Monitor",
+      "itemImg": "/IMAGES/tv4.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum ",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "Apple Monitor",
+      "itemImg": "/IMAGES/tv4.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "Apple Monitor",
+      "itemImg": "/IMAGES/bigmonitor.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "L",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "Apple Monitor",
+      "itemImg": "/IMAGES/tv4.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum ",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "Apple Monitor",
+      "itemImg": "/IMAGES/tv4.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "Apple Monitor",
+      "itemImg": "/IMAGES/bigmonitor.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "L",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "Apple Monitor",
+      "itemImg": "/IMAGES/tv4.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "Apple Monitor",
+      "itemImg": "/IMAGES/bigmonitor.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "L",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    }
+  ],
+  
+   "tv" : [
+    {
+      "name": "LG",
+      "itemImg": "/IMAGES/tv4.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "LG",
+      "itemImg": "/IMAGES/tv5.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "LG",
+      "itemImg": "/IMAGES/tv2.jpg",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "LG",
+      "itemImg": "/IMAGES/tv1.jpg",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "LG",
+      "itemImg": "/IMAGES/tv4.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "LG",
+      "itemImg": "/IMAGES/tv5.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "LG",
+      "itemImg": "/IMAGES/tv2.jpg",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "LG",
+      "itemImg": "/IMAGES/tv1.jpg",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "LG",
+      "itemImg": "/IMAGES/tv4.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    },
+    {
+      "name": "LG",
+      "itemImg": "/IMAGES/tv5.png",
+      "description1": "Lorem ipsum dolor sit amet.",
+      "description2": "Lorem ipsum dolor sit amet.",
+      "newItemPrice": "$630",
+      "oldItemPrice": "$544"
+    }
+  ]
+}
