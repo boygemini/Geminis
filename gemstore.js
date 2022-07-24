@@ -24,7 +24,6 @@ let intro2Content = [
 ];
 
 let lmContent = ["New!", "New!", "New!", "New!", "New!"];
-console.log(lmContent);
 
 let gradientContent = [
   "Electronics",
@@ -100,50 +99,128 @@ let itemName = document.querySelectorAll("#itemName"),
   oldPrice = document.querySelectorAll("#oldprice"),
   newPrice = document.querySelectorAll("#newprice");
 let Holder = document.getElementById("sel-container");
-let products;
+// let products;
 
 let product_request = new XMLHttpRequest();
 product_request.open("GET", "/JSON/product.json", false);
 product_request.onload = function () {
   if (product_request.status === 200) {
-    products = JSON.parse(this.responseText);
-    console.log(typeof products);
+    // products = JSON.parse(this.responseText);
+    localStorage.setItem("StoreItems", this.responseText)
   }
 };
 product_request.send();
 
-const createItem = (category) => {
+let itemsInStore = localStorage.getItem("StoreItems")
+let getItems = JSON.parse(itemsInStore)
+
+const createItem = (category, sub) => {
   let itemCreated = " ";
   for (let i in category) {
     itemCreated += `<div class="sell-box sel-box">
         <div class="img-con">
-            <img src=${category[i].itemImg} alt="">
+            <img src=${category[i].itemInfo.itemImg} alt="">
         </div>
         <div class="sfu">
-            <p class="itemName2"">${category[i].name}</p>
+            <p class="itemName2"">${category[i].itemInfo.name}</p>
             <div class="description-box">
-                <p class="item-description">${category[i].description1}</p>
-                <p class="item-description">${category[i].description2}</p>
+                <p class="item-description">${category[i].itemInfo.description1}</p>
+                <p class="item-description">${category[i].itemInfo.description2}</p>
             </div>
             <div class="price-order">
                 <span class="price-box">
-                    <span class="price">${category[i].newItemPrice}</span>
-                    <span class="old-price price">${category[i].oldItemPrice}</span>
+                    <span class="price">${category[i].itemInfo.newItemPrice}</span>
+                    <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
                 </span>
-                <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="" onclick ="addToCart(this)">
+                <img id="addto-cart-img" data-id = "${category[i].id}" data-category = "${sub}" src="/IMAGES/add-to-cart.png" alt="" onclick = "addToCart()">
             </div>
         </div>
     </div>`;
   }
   Holder.innerHTML = itemCreated;
 };
-createItem(products.gaming);
+createItem(getItems.gaming, "gaming");
+
+let cart = [];
+
+const addToCart = () => {
+  let cat = event.target.dataset.category
+  let check = Trr[`${cat}`].find(item => item.id === 2)
+  console.log(check); 
+}
+
+const grab = () => {
+  return "1"
+}
 
 //Add Item To Cart
 
-const addToCart = (cat) => {
-  console.log(cat.indexOf);
-};
+let Trr = {
+  "gaming" : [
+    {
+      "id" : 1,
+        "itemInfo" :
+        {
+          "name": "XBOX 1",
+          "itemImg": "/IMAGES/frontIpad.png",
+          "description1": "Lorem ipsum dolor sit amet.",
+          "description2": "",
+          "newItemPrice": "$630",
+          "oldItemPrice": "$544"
+        }
+    },
+    {
+      "id" : 2,
+        "itemInfo" :
+        {
+          "name": "XBOX 1",
+          "itemImg": "/IMAGES/frontIpad.png",
+          "description1": "Lorem ipsum dolor sit amet.",
+          "description2": "",
+          "newItemPrice": "$630",
+          "oldItemPrice": "$544"
+        }
+    }
+  ],
+  "speaker" : [
+    {
+      "id" : 3,
+        "itemInfo" :
+        {
+          "name": "XBOX 1",
+          "itemImg": "/IMAGES/jblflip6.png",
+          "description1": "Lorem ipsum dolor sit amet.",
+          "description2": "",
+          "newItemPrice": "$630",
+          "oldItemPrice": "$544"
+        }
+    },
+    {
+      "id" : 4,
+        "itemInfo" :
+        {
+          "name": "XBOX 1",
+          "itemImg": "/IMAGES/jblflip6.png",
+          "description1": "Lorem ipsum dolor sit amet.",
+          "description2": "",
+          "newItemPrice": "$630",
+          "oldItemPrice": "$544"
+        }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 let tab = [...document.querySelectorAll(".tab")];
 tab[0].className += " active-li";
