@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,13 @@
     <link rel="stylesheet" href="/CSS/gemstore.css">
     <script src="/JAVASCRIPT/gemstore.js" defer></script>
 </head>
-<body> 
+
+<body>
     <section class="slimbanner">
         <div class="slimcontent">
             <div class="slimb-left">
-                <p>Open doors to a world of Electronics</p> <hr class="vhr">
+                <p>Open doors to a world of Electronics</p>
+                <hr class="vhr">
                 <p class="dis-more">Discover More</p>
             </div>
             <div class="slimb-right">
@@ -33,7 +36,7 @@
             <div class="imgs" id="imm5"></div>
         </div>
         <div class="shade">
-            <div class="logo-nav"> 
+            <div class="logo-nav">
                 <nav>
                     <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
                 </nav>
@@ -47,18 +50,22 @@
                         <li>About</li>
                         <li>Contact</li>
                     </ul>
-                </div> 
+                </div>
                 <h1 class="logo" onclick="goHome()">Geministore.</h1>
                 <div class="login-cart">
-                    <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
+                    <div class="cart-box">
+                        <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
+                        <p id="items-in-cart">0</p>
+                    </div>
                     <button type="button" class="login">Login</button>
                 </div>
             </div>
             <div class="intro-box">
                 <div class="intro">
                     <div class="introtext" id="introtext">
-                        <h1><span id="intro">Welcome to the world of</span> <span class="gradient" id="gradient">Electronics</span> </h1>
-                    <p id="intro2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae!</p>
+                        <h1><span id="intro">Welcome to the world of</span> <span class="gradient"
+                                id="gradient">Electronics</span> </h1>
+                        <p id="intro2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae!</p>
                     </div>
                     <div class="lm">
                         <button type="button" class="learn-more" onclick="shopNow()">Shop Now</button>
@@ -93,7 +100,7 @@
                         <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
                         <div class="price-order">
                             <span class="itemPricing">$1,475</span>
-                            <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                            <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -104,7 +111,7 @@
                         <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
                         <div class="price-order">
                             <span class="itemPricing">$137</span>
-                            <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                            <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -115,7 +122,7 @@
                         <p class="itemInfo">Lorem ipsum dolor sit amet. Dolor sit amet.</p>
                         <div class="price-order">
                             <span class="itemPricing">$137</span>
-                            <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                            <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -126,26 +133,26 @@
                         <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
                         <div class="price-order">
                             <span class="itemPricing">$137</span>
-                            <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                            <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="selected-for-you">
-           <div class="mmm">
-            <p class="sel">Selected Just For You</p>
-            <div class="sel-table">
-                <ul>
-                    <li class="tab inactive-li" onclick="createItem(Gaming)">Gaming</li>
-                    <li class="tab inactive-li" onclick="createItem(cellPhones)">Cell Phones</li>
-                    <li class="tab inactive-li" onclick="createItem(Computers)">Computers</li>
-                    <li class="tab inactive-li" onclick="createItem(Speaker)">Speaker</li>
-                    <li class="tab inactive-li" onclick="createItem(TV)">TV</li>
-                </ul>
+            <div class="mmm">
+                <p class="sel">Selected Just For You</p>
+                <div class="sel-table">
+                    <ul>
+                        <li class="tab inactive-li" onclick="display.createItem(getItems.gaming,'gaming')">Gaming</li>
+                        <li class="tab inactive-li" onclick="display.createItem(getItems.cellphones, 'cellphones')">Cell Phones</li>
+                        <li class="tab inactive-li" onclick="display.createItem(getItems.computers, 'computers')">Computers</li>
+                        <li class="tab inactive-li" onclick="display.createItem(getItems.speaker, 'speaker')">Speaker</li>
+                        <li class="tab inactive-li" onclick="display.createItem(getItems.tv, 'tv')">TV</li>
+                    </ul>
+                </div>
+                <p class="view-all" onclick="toShop()">View all</p>
             </div>
-            <p class="view-all" onclick="toShop()">View all</p>
-           </div>
             <div class="sell">
                 <div class="arrows">
                     <div class="arr arr1" onclick="moveLeft()"><img src="/IMAGES/left-arrow.png" alt=""></div>
@@ -171,7 +178,7 @@
                                         <span class="price">$637.23</span>
                                         <span class="old-price price">$765</span>
                                     </span>
-                                    <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                    <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                 </div>
                             </div>
                         </div> -->
@@ -180,13 +187,13 @@
             </div>
         </section>
 
-        <section class="weekly selected-for-you" >
+        <section class="weekly selected-for-you">
             <div class="mmm">
-             <p class="sel">Our Weekly Featured</p>
+                <p class="sel">Our Weekly Featured</p>
             </div>
-             <div id="weekly-sell" class="sell">
-                 <div class="sel-container">
-                     <div class="" id="weekly-feature">
+            <div id="weekly-sell" class="sell">
+                <div class="sel-container">
+                    <div class="" id="weekly-feature">
                         <div class="" id="sel-container">
                             <div id="wkly">
                                 <div class="img-con">
@@ -196,17 +203,17 @@
                                 <div class="sfu">
                                     <div>
                                         <p class="itemName2">Speaker</p>
-                                    <div class="description-box">
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    </div>
+                                        <div class="description-box">
+                                            <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                            <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                        </div>
                                     </div>
                                     <div class="price-order">
                                         <span class="price-box">
                                             <span class="price">$637.23</span>
                                             <span class="old-price price">$765</span>
                                         </span>
-                                        <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                        <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -217,39 +224,17 @@
                                 <div class="sfu">
                                     <div>
                                         <p class="itemName2">Speaker</p>
-                                    <div class="description-box">
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                    </div>
-                                    <div class="price-order">
-                                        <span class="price-box">
-                                            <span class="price">$637.23</span>
-                                            <span class="old-price price">$765</span>
-                                        </span>
-                                        <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="wkly">
-                                <div class="img-con">
-                                    <p class="new">New</p>
-                                    <img src="/IMAGES/frontIpad.png" alt="">
-                                </div>
-                                <div class="sfu">
-                                    <div>
-                                        <p class="itemName2">Speaker</p>
-                                    <div class="description-box">
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    </div>
+                                        <div class="description-box">
+                                            <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                            <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                        </div>
                                     </div>
                                     <div class="price-order">
                                         <span class="price-box">
                                             <span class="price">$637.23</span>
                                             <span class="old-price price">$765</span>
                                         </span>
-                                        <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                        <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -261,17 +246,39 @@
                                 <div class="sfu">
                                     <div>
                                         <p class="itemName2">Speaker</p>
-                                    <div class="description-box">
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    </div>
+                                        <div class="description-box">
+                                            <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                            <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                        </div>
                                     </div>
                                     <div class="price-order">
                                         <span class="price-box">
                                             <span class="price">$637.23</span>
                                             <span class="old-price price">$765</span>
                                         </span>
-                                        <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                        <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="wkly">
+                                <div class="img-con">
+                                    <p class="new">New</p>
+                                    <img src="/IMAGES/frontIpad.png" alt="">
+                                </div>
+                                <div class="sfu">
+                                    <div>
+                                        <p class="itemName2">Speaker</p>
+                                        <div class="description-box">
+                                            <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                            <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </div>
+                                    <div class="price-order">
+                                        <span class="price-box">
+                                            <span class="price">$637.23</span>
+                                            <span class="old-price price">$765</span>
+                                        </span>
+                                        <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -282,32 +289,33 @@
                                 <div class="sfu">
                                     <div>
                                         <p class="itemName2">Speaker</p>
-                                    <div class="description-box">
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    </div>
+                                        <div class="description-box">
+                                            <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                            <p class="item-description">Lorem ipsum dolor sit amet.</p>
+                                        </div>
                                     </div>
                                     <div class="price-order">
                                         <span class="price-box">
                                             <span class="price">$637.23</span>
                                             <span class="old-price price">$765</span>
                                         </span>
-                                        <img id="add-to-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                        <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                     </div>
-                 </div>
-             </div>
-         </section>
-        
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="about">
             <img src="/IMAGES/hector-martinez-EG49vTtKdvI-unsplash.jpg" alt="" class="about-img">
             <div class="about-text-container">
                 <div class="aat">
                     <h1>We Serve You The Best Product At Best Prices</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatem minus officia quas reiciendis excepturi nostrum esse itaque nesciunt.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatem minus officia quas
+                        reiciendis excepturi nostrum esse itaque nesciunt.</p>
                 </div>
                 <div class="about-boxes">
                     <div class="ab">
@@ -359,7 +367,7 @@
                 </div>
             </div>
         </section>
- 
+
         <section class="visit-out-support">
             <div class="vv">
                 <h1>Visit our Support Center</h1>
@@ -391,4 +399,5 @@
         }
     </script>
 </body>
+
 </html>

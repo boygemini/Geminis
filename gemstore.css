@@ -172,12 +172,14 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-    border-radius: 30px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
     display: none;
     animation: fadein 20s ease-out;
     opacity: 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 /* #imm{
@@ -241,18 +243,45 @@ body{
     width: 100%;
     margin: auto;
     border-bottom: .7px solid whitesmoke;
-    padding: 10px;
+    padding:0px 10px;
 }
 
 nav, .login-cart{
     width: 30%;
 }
+
+.cart-box{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.cart-box p{
+    background-color:#a73ef8;
+    padding: 2px 5px;
+    color: white;
+    font-weight: 600;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
  
 .login-cart{
     display: flex;
     align-items: center;
-    justify-content: right;
-    column-gap: 20px;
+    justify-content: space-between;
+    column-gap: 0px;
+    background-color: #090a0a1b;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .login-cart img{
@@ -362,7 +391,8 @@ nav ul li{
 }
 
 .login{
-    width: 100px;
+    width: 50%;
+    min-width: 110px;
     height: 40px;
     border-radius: 5px;
     border: none;
@@ -857,7 +887,7 @@ nav ul li{
     align-items: center;
 }
 
-#add-to-cart-img{
+#addto-cart-img{
     width: 30px;
     height: 30px;
 }
@@ -924,7 +954,7 @@ nav ul li{
     height: 200px;
 }
 
-#wkly #add-to-cart-img{
+#wkly #addto-cart-img{
     width: 30px;
     height: 30px;
 }

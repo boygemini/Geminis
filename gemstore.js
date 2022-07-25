@@ -114,44 +114,62 @@ product_request.send();
 let itemsInStore = localStorage.getItem("StoreItems")
 let getItems = JSON.parse(itemsInStore)
 
-const createItem = (category, sub) => {
-  let itemCreated = " ";
-  for (let i in category) {
-    itemCreated += `<div class="sell-box sel-box">
-        <div class="img-con">
-            <img src=${category[i].itemInfo.itemImg} alt="">
-        </div>
-        <div class="sfu">
-            <p class="itemName2"">${category[i].itemInfo.name}</p>
-            <div class="description-box">
-                <p class="item-description">${category[i].itemInfo.description1}</p>
-                <p class="item-description">${category[i].itemInfo.description2}</p>
-            </div>
-            <div class="price-order">
-                <span class="price-box">
-                    <span class="price">${category[i].itemInfo.newItemPrice}</span>
-                    <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
-                </span>
-                <img id="addto-cart-img" data-id = "${category[i].id}" data-category = "${sub}" src="/IMAGES/add-to-cart.png" alt="" onclick = "addToCart()">
-            </div>
-        </div>
-    </div>`;
+class Storage{
+  getItemsInLocalStorage () {
+    return getItems
   }
-  Holder.innerHTML = itemCreated;
-};
-createItem(getItems.gaming, "gaming");
+
+
+}
+
+class displayProduct {
+  createItem (category, sub) {
+    let itemCreated = " ";
+    for (let i in category) {
+      itemCreated += `<div class="sell-box sel-box">
+          <div class="img-con">
+              <img src=${category[i].itemInfo.itemImg} alt="">
+          </div>
+          <div class="sfu">
+              <p class="itemName2"">${category[i].itemInfo.name}</p>
+              <div class="description-box">
+                  <p class="item-description">${category[i].itemInfo.description1}</p>
+                  <p class="item-description">${category[i].itemInfo.description2}</p>
+              </div>
+              <div class="price-order">
+                  <span class="price-box">
+                      <span class="price">${category[i].itemInfo.newItemPrice}</span>
+                      <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
+                  </span>
+                  <img id="addto-cart-img" data-id = "${category[i].id}" data-category = "${sub}" src="/IMAGES/add-to-cart.png" alt="" onclick = "addToCart()">
+              </div>
+          </div>
+      </div>`;
+    }
+    Holder.innerHTML = itemCreated;
+  };
+}
+
+
+
+
+//Display Products
+const display = new displayProduct()
+display.createItem(getItems.gaming, "gaming");
 
 let cart = [];
-
+let cartDom = document.getElementById("items-in-cart")
 const addToCart = () => {
   let cat = event.target.dataset.category
-  let check = Trr[`${cat}`].find(item => item.id === 2)
-  console.log(check); 
+  let getSelectedItem = getItems[`${cat}`].find(item => item.id === event.target.dataset.id);
+  let saveToCart = {...getSelectedItem, amount:1}
+  cart = [...cart, saveToCart]
+  localStorage.setItem("Cart", JSON.stringify(cart))
+  cartDom.innerText = cart.length
 }
 
-const grab = () => {
-  return "1"
-}
+
+
 
 //Add Item To Cart
 
