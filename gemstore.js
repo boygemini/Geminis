@@ -89,42 +89,72 @@ const shopNow = () => {
   window.location = "gemshop.html";
 };
 
-//End of Hero
+/*End of Hero*/
 
-//Selected For you
-
+/*Selected For you*/
 let itemName = document.querySelectorAll("#itemName"),
   mainDesc = document.querySelectorAll("#maindesc"),
   minDesc = document.querySelectorAll("#mindesc"),
   oldPrice = document.querySelectorAll("#oldprice"),
   newPrice = document.querySelectorAll("#newprice");
-let Holder = document.getElementById("sel-container");
-// let products;
 
-let product_request = new XMLHttpRequest();
-product_request.open("GET", "/JSON/product.json", false);
-product_request.onload = function () {
-  if (product_request.status === 200) {
-    // products = JSON.parse(this.responseText);
-    localStorage.setItem("StoreItems", this.responseText)
+/*Creating Storage Groups for Items*/
+localStorage.setItem("StoreItems", "");
+let cart = [];
+
+// localStorage.Cart = JSON.stringify(cart);
+// // function nn () {
+// //   return JSON.parse(localStorage.Cart);
+// // }
+// // let mm = nn();
+// mm.find(me => me.id === 1)
+// console.log(mm);
+// console.log(nn());
+
+class Products {
+  static selectedForYou() {
+    let product_request = new XMLHttpRequest();
+    product_request.open("GET", "/JSON/product.json", false);
+    product_request.onload = function () {
+      if (product_request.status === 200) {
+        localStorage.StoreItems = this.responseText;
+      }
+    };
+    product_request.send();
   }
-};
-product_request.send();
 
-let itemsInStore = localStorage.getItem("StoreItems")
-let getItems = JSON.parse(itemsInStore)
+  static getSelectedProducts() {
+    return JSON.parse(localStorage.StoreItems);
+  }
+}
 
-class Storage{
-  getItemsInLocalStorage () {
-    return getItems
+class Storage {
+  static getProductsSelectedForYou() {
+    return JSON.parse(localStorage.getItem(ItemsInStore()));
+
+    function ItemsInStore() {
+      return "StoreItems";
+    }
   }
 
+  static saveSelectedItemsToCart(cart) {
+    localStorage.Cart = JSON.stringify(cart);
+    localStorage.setItem("Cart", localStorage.Cart);
+  }
 
+  static getItemsInCart() {
+    return JSON.parse(localStorage.getItem("Cart"));
+  }
+
+  static numberOfItemsInCart() {
+    return JSON.parse(localStorage.getItem("Cart")).length;
+  }
 }
 
 class displayProduct {
-  createItem (category, sub) {
+  static createItem(category, sub) {
     let itemCreated = " ";
+    let Holder = document.getElementById("sel-container");
     for (let i in category) {
       itemCreated += `<div class="sell-box sel-box">
           <div class="img-con">
@@ -141,105 +171,20 @@ class displayProduct {
                       <span class="price">${category[i].itemInfo.newItemPrice}</span>
                       <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
                   </span>
-                  <img id="addto-cart-img" data-id = "${category[i].id}" data-category = "${sub}" src="/IMAGES/add-to-cart.png" alt="" onclick = "addToCart()">
+                  <button data-id = "${category[i].id}" data-category = "${sub}" id="cart-btn" class="cart-btn" onclick = "addToCart(event)"></button>
               </div>
           </div>
       </div>`;
     }
     Holder.innerHTML = itemCreated;
-  };
+  }
 }
 
+/*Display Selected Products*/
+Products.selectedForYou(); // Loads and Store Selected Items
+displayProduct.createItem(Products.getSelectedProducts().gaming, "gaming"); //Displays Gaming Items
 
-
-
-//Display Products
-const display = new displayProduct()
-display.createItem(getItems.gaming, "gaming");
-
-let cart = [];
-let cartDom = document.getElementById("items-in-cart")
-const addToCart = () => {
-  let cat = event.target.dataset.category
-  let getSelectedItem = getItems[`${cat}`].find(item => item.id === event.target.dataset.id);
-  let saveToCart = {...getSelectedItem, amount:1}
-  cart = [...cart, saveToCart]
-  localStorage.setItem("Cart", JSON.stringify(cart))
-  cartDom.innerText = cart.length
-}
-
-
-
-
-//Add Item To Cart
-
-let Trr = {
-  "gaming" : [
-    {
-      "id" : 1,
-        "itemInfo" :
-        {
-          "name": "XBOX 1",
-          "itemImg": "/IMAGES/frontIpad.png",
-          "description1": "Lorem ipsum dolor sit amet.",
-          "description2": "",
-          "newItemPrice": "$630",
-          "oldItemPrice": "$544"
-        }
-    },
-    {
-      "id" : 2,
-        "itemInfo" :
-        {
-          "name": "XBOX 1",
-          "itemImg": "/IMAGES/frontIpad.png",
-          "description1": "Lorem ipsum dolor sit amet.",
-          "description2": "",
-          "newItemPrice": "$630",
-          "oldItemPrice": "$544"
-        }
-    }
-  ],
-  "speaker" : [
-    {
-      "id" : 3,
-        "itemInfo" :
-        {
-          "name": "XBOX 1",
-          "itemImg": "/IMAGES/jblflip6.png",
-          "description1": "Lorem ipsum dolor sit amet.",
-          "description2": "",
-          "newItemPrice": "$630",
-          "oldItemPrice": "$544"
-        }
-    },
-    {
-      "id" : 4,
-        "itemInfo" :
-        {
-          "name": "XBOX 1",
-          "itemImg": "/IMAGES/jblflip6.png",
-          "description1": "Lorem ipsum dolor sit amet.",
-          "description2": "",
-          "newItemPrice": "$630",
-          "oldItemPrice": "$544"
-        }
-    }
-  ]
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Change Tabs Based On Item's Category*/
 let tab = [...document.querySelectorAll(".tab")];
 tab[0].className += " active-li";
 for (let x in tab) {
@@ -251,10 +196,8 @@ for (let x in tab) {
     event.target.className += " active-li";
   });
 }
-//end
 
-//Selected for You
-
+/*Selected for You Scroller*/
 let boxCounter = 0;
 let container = document.getElementById("sel-container");
 let holder = document.getElementById("sel-holder");
@@ -267,12 +210,38 @@ const moveRight = () => {
 const moveLeft = () => {
   holder.scrollLeft -= holder.clientWidth;
 };
-//end
+
+/*Add Selected Items To Cart*/
+let cartDom = document.getElementById("items-in-cart")
+try{
+  cartDom.innerText = Storage.numberOfItemsInCart()
+}catch(error){} // Displays number of Items in Cart
+
+const addToCart = (event) => {
+  let ItemCategory = event.target.dataset.category;
+  console.log( Storage.getProductsSelectedForYou()[`${ItemCategory}`]);
+  let pickItemFromStore = Storage.getProductsSelectedForYou()[`${ItemCategory}`].find((item) => item.id === event.target.dataset.id);
+  let pickedItem = {...pickItemFromStore, amount: 1};
+ 
+  if (pickItemFromStore) {
+    let Instore = cart.find((item) => item.id === pickItemFromStore.id);
+    if (Instore) {
+      alert("Item is already in cart you fucker!");
+      event.target.disabled = true
+    } else {
+      cart = [...cart, pickedItem];
+      Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
+      cartDom.innerText = Storage.numberOfItemsInCart() // Displays number of Items in Cart
+      event.target.disabled = true
+    }
+  }
+};
+
 
 //Menu
 
 let menu = document.getElementById("menu"),
-  mb = document.getElementById("mb");
+    mb = document.getElementById("mb");
 let close = document.querySelectorAll("#close");
 menu.style.display = "none";
 

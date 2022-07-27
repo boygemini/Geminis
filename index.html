@@ -133,7 +133,9 @@
                         <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
                         <div class="price-order">
                             <span class="itemPricing">$137</span>
-                            <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                            <button id="cart-btn" class="cart-btn">
+                                <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">  
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -144,11 +146,11 @@
                 <p class="sel">Selected Just For You</p>
                 <div class="sel-table">
                     <ul>
-                        <li class="tab inactive-li" onclick="display.createItem(getItems.gaming,'gaming')">Gaming</li>
-                        <li class="tab inactive-li" onclick="display.createItem(getItems.cellphones, 'cellphones')">Cell Phones</li>
-                        <li class="tab inactive-li" onclick="display.createItem(getItems.computers, 'computers')">Computers</li>
-                        <li class="tab inactive-li" onclick="display.createItem(getItems.speaker, 'speaker')">Speaker</li>
-                        <li class="tab inactive-li" onclick="display.createItem(getItems.tv, 'tv')">TV</li>
+                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().gaming,'gaming')">Gaming</li>
+                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().cellphones, 'cellphones')">Cell Phones</li>
+                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().computers, 'computers')">Computers</li>
+                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().speaker, 'speaker')">Speaker</li>
+                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().tv, 'tv')">TV</li>
                     </ul>
                 </div>
                 <p class="view-all" onclick="toShop()">View all</p>
