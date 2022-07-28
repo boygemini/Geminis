@@ -244,8 +244,8 @@ const addToCart = (event) => {
       } else {
         console.log(pickedItem);
         cart = [...cart, pickedItem];
-        Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
-        cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
+        Storage.saveSelectedItemsToCart(cart); 
+        cartDom.innerText = Storage.numberOfItemsInCart();
       }
     }
   }
