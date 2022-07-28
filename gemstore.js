@@ -212,36 +212,49 @@ const moveLeft = () => {
 };
 
 /*Add Selected Items To Cart*/
-let cartDom = document.getElementById("items-in-cart")
-try{
-  cartDom.innerText = Storage.numberOfItemsInCart()
-}catch(error){} // Displays number of Items in Cart
+let cartDom = document.getElementById("items-in-cart");
+try {
+  cartDom.innerText = Storage.numberOfItemsInCart();
+} catch (error) {} // Displays number of Items in Cart
+let pickedItem;
 
+let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
 const addToCart = (event) => {
   let ItemCategory = event.target.dataset.category;
-  console.log( Storage.getProductsSelectedForYou()[`${ItemCategory}`]);
-  let pickItemFromStore = Storage.getProductsSelectedForYou()[`${ItemCategory}`].find((item) => item.id === event.target.dataset.id);
-  let pickedItem = {...pickItemFromStore, amount: 1};
- 
+  let pickItemFromStore = Storage.getProductsSelectedForYou()[
+    `${ItemCategory}`
+  ].find((item) => item.id === event.target.dataset.id);
+  pickedItem = { ...pickItemFromStore, amount: 1 };
+
   if (pickItemFromStore) {
-    let Instore = cart.find((item) => item.id === pickItemFromStore.id);
+    let Instore;
+    try {
+      Instore = ItemsInCart.find((items) => items.id === pickItemFromStore.id);
+    } catch (error) {}
     if (Instore) {
       alert("Item is already in cart you fucker!");
-      event.target.disabled = true
     } else {
-      cart = [...cart, pickedItem];
-      Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
-      cartDom.innerText = Storage.numberOfItemsInCart() // Displays number of Items in Cart
-      event.target.disabled = true
+      let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+      if (cart !== null || cart.length !== 0) {
+        try {
+          cart = [...getbackcart, pickedItem];
+        } catch (error) {}
+        Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
+        cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
+      } else {
+        console.log(pickedItem);
+        cart = [...cart, pickedItem];
+        Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
+        cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
+      }
     }
   }
 };
 
-
 //Menu
 
 let menu = document.getElementById("menu"),
-    mb = document.getElementById("mb");
+  mb = document.getElementById("mb");
 let close = document.querySelectorAll("#close");
 menu.style.display = "none";
 
