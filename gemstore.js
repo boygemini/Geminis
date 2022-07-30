@@ -232,7 +232,7 @@ const addToCart = (event) => {
       Instore = ItemsInCart.find((items) => items.id === pickItemFromStore.id);
     } catch (error) {}
     if (Instore) {
-      alert("Item is already in cart you fucker!!");
+      alert("Bastard, Item is already in cart you fucker!!");
     } else {
       let getbackcart = JSON.parse(localStorage.getItem("Cart"));
       if (cart !== null || cart.length !== 0) {
