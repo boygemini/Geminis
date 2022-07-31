@@ -92,52 +92,19 @@
             <div class="mmm">
                 <p class="sel">Recently Added</p>
             </div>
-            <div class="recent-container">
-                <div class="recent">
-                    <img src="/IMAGES/bigmonitor.png" alt="">
-                    <div class="receInfo">
-                        <h1 class="itemName">Monitor</h1>
-                        <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
-                        <div class="price-order">
-                            <span class="itemPricing">$1,475</span>
-                            <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="recent">
-                    <img src="/IMAGES/frontIpad.png" alt="">
-                    <div class="receInfo">
-                        <h1 class="itemName">iPad</h1>
-                        <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
-                        <div class="price-order">
-                            <span class="itemPricing">$137</span>
-                            <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="recent">
-                    <img src="/IMAGES/ipad2.png" alt="">
-                    <div class="receInfo">
-                        <h1 class="itemName">iPad</h1>
-                        <p class="itemInfo">Lorem ipsum dolor sit amet. Dolor sit amet.</p>
-                        <div class="price-order">
-                            <span class="itemPricing">$137</span>
-                            <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="recent">
-                    <img src="/IMAGES/jblflip6.png" alt="">
-                    <div class="receInfo">
-                        <h1 class="itemName">Speaker</h1>
-                        <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
-                        <div class="price-order">
-                            <span class="itemPricing">$137</span>
-                            <button id="cart-btn" class="cart-btn">
-                                <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">  
-                            </button>
-                        </div>
-                    </div>
+            <div class="recent-container" id="recent-container">
+                <div id="holder-rec">
+                    <!-- <div class="recent">
+                        <img src="/IMAGES/bigmonitor.png" alt="">
+                        <div class="receInfo">
+                            <h1 class="itemName">Monitor</h1>
+                            <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
+                            <div class="price-order">
+                                <span class="itemPricing">$1,475</span>
+                                <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                            </div>
+                        </div> 
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -146,11 +113,11 @@
                 <p class="sel">Selected Just For You</p>
                 <div class="sel-table">
                     <ul>
-                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().gaming,'gaming')">Gaming</li>
-                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().cellphones, 'cellphones')">Cell Phones</li>
-                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().computers, 'computers')">Computers</li>
-                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().speaker, 'speaker')">Speaker</li>
-                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().tv, 'tv')">TV</li>
+                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().selectedProducts[0].gaming,'gaming')">Gaming</li>
+                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().selectedProducts[0].cellphones, 'cellphones')">Cell Phones</li>
+                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().selectedProducts[0].computers, 'computers')">Computers</li>
+                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().selectedProducts[0].speaker, 'speaker')">Speaker</li>
+                        <li class="tab inactive-li" onclick="displayProduct.createItem(Products.getSelectedProducts().selectedProducts[0].tv, 'tv')">TV</li>
                     </ul>
                 </div>
                 <p class="view-all" onclick="toShop()">View all</p>
