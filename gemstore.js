@@ -128,13 +128,19 @@ class Products {
   }
 }
 
+
+
 class Storage {
-  static getProductsSelectedForYou() {
+  static getAllProducts() {
     return JSON.parse(localStorage.getItem(ItemsInStore()));
 
     function ItemsInStore() {
       return "StoreItems";
     }
+  }
+
+  static getRecentItems () {
+    return Storage.getAllProducts().recentlyAdded
   }
 
   static saveSelectedItemsToCart(cart) {
@@ -150,6 +156,8 @@ class Storage {
     return JSON.parse(localStorage.getItem("Cart")).length;
   }
 }
+
+
 
 class displayProduct {
   static createItem(category, sub) {
@@ -178,11 +186,43 @@ class displayProduct {
     }
     Holder.innerHTML = itemCreated;
   }
+
+
+  static displayRecentItems(category, sub) {
+    let itemCreated = "";
+    let Holder = document.getElementById("holder-rec");
+    for (let i in category) {
+      itemCreated += `<div class="recent">
+      <img src=${category[i].itemInfo.itemImg} alt="">
+      <div class="receInfo">
+          <h1 class="itemName">${category[i].itemInfo.category}</h1>
+          <p class="itemName2">${category[i].itemInfo.name}</p>
+          <p class="itemInfo">${category[i].itemInfo.description1}</p>
+          <div class="price-order">
+              <span class="itemPricing">${category[i].itemInfo.newItemPrice}</span>
+              <button data-id = "${category[i].id}" data-category = "${sub}" id="cart-btn" class="cart-btn" onclick = "addToCart()"></button>
+          </div>
+      </div> 
+  </div>`;
+    }
+    Holder.innerHTML = itemCreated;
+  }
 }
+
+
 
 /*Display Selected Products*/
 Products.selectedForYou(); // Loads and Store Selected Items
-displayProduct.createItem(Products.getSelectedProducts().gaming, "gaming"); //Displays Gaming Items
+console.log(Storage.getRecentItems());
+
+displayProduct.createItem(
+  Products.getSelectedProducts().selectedProducts[0].gaming,
+  "gaming"
+); //Displays Gaming Items
+
+
+displayProduct.displayRecentItems(Storage.getRecentItems())
+
 
 /*Change Tabs Based On Item's Category*/
 let tab = [...document.querySelectorAll(".tab")];
@@ -221,7 +261,7 @@ let pickedItem;
 let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
 const addToCart = (event) => {
   let ItemCategory = event.target.dataset.category;
-  let pickItemFromStore = Storage.getProductsSelectedForYou()[
+  let pickItemFromStore = Storage.getAllProducts().selectedProducts[0][
     `${ItemCategory}`
   ].find((item) => item.id === event.target.dataset.id);
   pickedItem = { ...pickItemFromStore, amount: 1 };
@@ -232,7 +272,7 @@ const addToCart = (event) => {
       Instore = ItemsInCart.find((items) => items.id === pickItemFromStore.id);
     } catch (error) {}
     if (Instore) {
-      alert("Bastard, Item is already in cart you fucker!!");
+      alert("Item is already in cart you fucker!");
     } else {
       let getbackcart = JSON.parse(localStorage.getItem("Cart"));
       if (cart !== null || cart.length !== 0) {
@@ -244,12 +284,14 @@ const addToCart = (event) => {
       } else {
         console.log(pickedItem);
         cart = [...cart, pickedItem];
-        Storage.saveSelectedItemsToCart(cart); 
-        cartDom.innerText = Storage.numberOfItemsInCart();
+        Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
+        cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
       }
     }
   }
 };
+
+const showCart = () => {};
 
 //Menu
 
