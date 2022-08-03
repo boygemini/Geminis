@@ -39,13 +39,15 @@ const startSlide = () => {
   increSlide();
 };
 
+
 const disOther = () => {
   try {
     for (let i = 0; i <= images.length; i++) {
       images[i].style.display = "none";
     }
-  } catch (error) {}
+  } catch (error) { }
 };
+
 
 const increSlide = () => {
   disOther();
@@ -56,15 +58,6 @@ const increSlide = () => {
   placing();
 };
 
-// const decreSlide = () => {
-//     disOther();
-//     counter--;
-//     if (counter <= -1) {
-//       counter = 4;
-//     }
-//     console.log(counter);
-//     placing()
-//   };
 
 const placing = () => {
   images[counter].style.display = "block";
@@ -91,6 +84,7 @@ const shopNow = () => {
 
 /*End of Hero*/
 
+
 /*Selected For you*/
 let itemName = document.querySelectorAll("#itemName"),
   mainDesc = document.querySelectorAll("#maindesc"),
@@ -98,11 +92,14 @@ let itemName = document.querySelectorAll("#itemName"),
   oldPrice = document.querySelectorAll("#oldprice"),
   newPrice = document.querySelectorAll("#newprice");
 
+
 /*Creating Storage Groups for Items*/
 localStorage.setItem("StoreItems", "");
 let cart = [];
 
+
 class Products {
+   /*Load all Products and save them to the LocalStorage*/
   static selectedForYou() {
     let product_request = new XMLHttpRequest();
     product_request.open("GET", "/JSON/product.json", false);
@@ -114,6 +111,8 @@ class Products {
     product_request.send();
   }
 
+
+ /*Retrieve all Items from Local Storage*/
   static getSelectedProducts() {
     return JSON.parse(localStorage.StoreItems);
   }
@@ -122,6 +121,7 @@ class Products {
 
 
 class Storage {
+   /*Retrieve Retrieve All Items Total Products*/
   static getAllProducts() {
     return JSON.parse(localStorage.getItem(ItemsInStore()));
 
@@ -130,27 +130,70 @@ class Storage {
     }
   }
 
-  static getRecentItems () {
+ /*Retrieve Recently Added Items from Total Products*/
+  static getRecentItems() {
     return Storage.getAllProducts().recentlyAdded
   }
 
+
+    /*Retrieve Weekly Feature Items from Toal Products*/
+  static weeklyFeaturedItems() {
+    return Storage.getAllProducts().WeeklyFeatured
+  }
+
+
+    /*Save Items To Cart*/
   static saveSelectedItemsToCart(cart) {
     localStorage.Cart = JSON.stringify(cart);
     localStorage.setItem("Cart", localStorage.Cart);
   }
 
+
+    /*Retrieve All Items from Cart*/
   static getItemsInCart() {
     return JSON.parse(localStorage.getItem("Cart"));
   }
 
+
+    /*Get the number of Items In Cart*/
   static numberOfItemsInCart() {
     return JSON.parse(localStorage.getItem("Cart")).length;
+  }
+
+
+    /*Get and Save Picked Item to Cart*/
+  static getItemAndSaveToCart() {
+    let Instore;
+    try {
+      Instore = (JSON.parse(localStorage.getItem("Cart"))).find((items) => items.id === pickItemFromStore.id);
+      console.log(Instore);
+    } catch (error) { }
+    if (Instore) {
+      alert("Item is already in cart you fucker!");
+    } else {
+      let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+      if (cart !== null || cart.length !== 0) {
+        try {
+          try {
+            cart = [pickedItem]
+          } catch (error) { }
+          cart = [...getbackcart, pickedItem];
+        } catch (error) { }
+        Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
+        cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
+      } else {
+        cart = [...cart, pickedItem];
+        Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
+        cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
+      }
+    }
   }
 }
 
 
 
 class displayProduct {
+    /*Display Slected For YouItems*/
   static createItem(category, sub) {
     let itemCreated = " ";
     let Holder = document.getElementById("sel-container");
@@ -167,10 +210,10 @@ class displayProduct {
               </div>
               <div class="price-order">
                   <span class="price-box">
-                      <span class="price">${category[i].itemInfo.newItemPrice}</span>
+                      <span class="price"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
                       <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
                   </span>
-                  <button data-id = "${category[i].id}" data-category = "${sub}" id="cart-btn" class="cart-btn" onclick = "addToCart(event)"></button>
+                  <button data-id = "${category[i].id}" data-category = "${sub}" id="cart-btn" class="cart-btn" onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
               </div>
           </div>
       </div>`;
@@ -179,6 +222,7 @@ class displayProduct {
   }
 
 
+    /*Display Recently Added Items*/
   static displayRecentItems(category, sub) {
     let itemCreated = "";
     let Holder = document.getElementById("holder-rec");
@@ -190,29 +234,81 @@ class displayProduct {
           <p class="itemName2">${category[i].itemInfo.name}</p>
           <p class="itemInfo">${category[i].itemInfo.description1}</p>
           <div class="price-order">
-              <span class="itemPricing">${category[i].itemInfo.newItemPrice}</span>
-              <button data-id = "${category[i].id}" data-category = "${sub}" id="cart-btn" class="cart-btn" onclick = "addToCart()"></button>
+              <span class="itemPricing"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
+              <button data-id = "${category[i].id}" data-category = "${sub}" id="cart-btn" class="cart-btn" onclick = "addToCartt(event,Storage.getAllProducts().recentlyAdded)" ></button>
           </div>
       </div> 
   </div>`;
     }
     Holder.innerHTML = itemCreated;
   }
+
+
+  /*Display Weekly Geature Items*/
+  static displayWeeklyFeatured(category, sub) {
+    let itemCreated = "";
+    let Holder = document.querySelector(".Weekly-Container");
+    for (let i in category) {
+      itemCreated += `<div id="wkly">
+      <div class="img-con">
+          <p class="new">New</p>
+          <img src=${category[i].itemInfo.itemImg} alt="">
+      </div>
+      <div class="sfu">
+          <div>
+              <p class="itemName2">${category[i].itemInfo.name}</p>
+              <div class="description-box">
+                  <p class="item-description">${category[i].itemInfo.description1}</p>
+                  <p class="item-description">${category[i].itemInfo.description2}</p>
+              </div>
+          </div>
+          <div class="price-order">
+              <span class="price-box">
+                  <span class="price"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
+                  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
+              </span>
+              <button data-id = "${category[i].id}" data-category = "${sub}" id="cart-btn" class="cart-btn" onclick = "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)" ></button>
+          </div>
+      </div>
+  </div>`
+    } 
+    Holder.innerHTML = itemCreated;
+  }
 }
 
 
-
 /*Display Selected Products*/
-Products.selectedForYou(); // Loads and Store Selected Items
-console.log(Storage.getRecentItems());
-
+Products.selectedForYou();
 displayProduct.createItem(
   Products.getSelectedProducts().selectedProducts[0].gaming,
-  "gaming"
+  'gaming'
 ); //Displays Gaming Items
 
 
+/*Display Recent Products*/
 displayProduct.displayRecentItems(Storage.getRecentItems())
+
+
+/*Display Recent Products*/
+displayProduct.displayWeeklyFeatured(Storage.weeklyFeaturedItems())
+
+/*Add Recent Items To Cart*/
+const addToCartt = (event, ITT) => {
+  function Me() {
+    let pickItemFromStore = ITT.find((item) => item.id === event.target.dataset.id);
+    pickedItem = {
+      ...pickItemFromStore,
+      amount: 1
+    };
+    if (pickItemFromStore) {
+      try {
+        Storage.getItemAndSaveToCart()
+      } catch (error) { }
+    }
+  }
+
+  Me()
+}
 
 
 /*Change Tabs Based On Item's Category*/
@@ -228,7 +324,35 @@ for (let x in tab) {
   });
 }
 
-/*Selected for You Scroller*/
+
+/*Add Selected Items To Cart*/
+let cartDom = document.getElementById("items-in-cart");
+try {
+  cartDom.innerText = Storage.numberOfItemsInCart();
+} catch (error) { } // Displays number of Items in Cart
+let pickedItem;
+
+let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
+const addToCart = (event, ITT) => {
+  let ItemCategory = event.target.dataset.category;
+  let pickItemFromStore = ITT[`${ItemCategory}`].find((item) => item.id === event.target.dataset.id);
+  pickedItem = {
+    ...pickItemFromStore,
+    amount: 1
+  };
+  if (pickItemFromStore) {
+    try {
+      Storage.getItemAndSaveToCart()
+    } catch (error) {
+      console.log(error);
+    }
+  }
+};
+
+const showCart = () => { };
+
+
+/*Selected for You Slider*/
 let boxCounter = 0;
 let container = document.getElementById("sel-container");
 let holder = document.getElementById("sel-holder");
@@ -242,48 +366,6 @@ const moveLeft = () => {
   holder.scrollLeft -= holder.clientWidth;
 };
 
-/*Add Selected Items To Cart*/
-let cartDom = document.getElementById("items-in-cart");
-try {
-  cartDom.innerText = Storage.numberOfItemsInCart();
-} catch (error) {} // Displays number of Items in Cart
-let pickedItem;
-
-let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
-const addToCart = (event) => {
-  let ItemCategory = event.target.dataset.category;
-  let pickItemFromStore = Storage.getAllProducts().selectedProducts[0][
-    `${ItemCategory}`
-  ].find((item) => item.id === event.target.dataset.id);
-  pickedItem = { ...pickItemFromStore, amount: 1 };
-
-  if (pickItemFromStore) {
-    let Instore;
-    try {
-      Instore = ItemsInCart.find((items) => items.id === pickItemFromStore.id);
-    } catch (error) {}
-    if (Instore) {
-      alert("Item is already in cart you fucker!");
-    } else {
-      let getbackcart = JSON.parse(localStorage.getItem("Cart"));
-      if (cart !== null || cart.length !== 0) {
-        try {
-          cart = [...getbackcart, pickedItem];
-        } catch (error) {}
-        Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
-        cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
-      } else {
-        console.log(pickedItem);
-        cart = [...cart, pickedItem];
-        Storage.saveSelectedItemsToCart(cart);
-        cartDom.innerText = Storage.numberOfItemsInCart();
-      }
-    }
-  }
-};
-
-const showCart = () => {};
-
 //Menu
 
 let menu = document.getElementById("menu"),
@@ -291,10 +373,12 @@ let menu = document.getElementById("menu"),
 let close = document.querySelectorAll("#close");
 menu.style.display = "none";
 
+
 const removePadding = () => {
   menu.style.height = "0px";
   menu.style.padding = "0px";
 };
+
 
 const openMenu = (e) => {
   menu.style.display = "flex";
@@ -305,12 +389,14 @@ const openMenu = (e) => {
   }, 20);
 };
 
+
 const closeMenu = () => {
   removePadding();
   setTimeout(() => {
     menu.style.display = "none";
   }, 520);
 };
+
 
 document.addEventListener("click", (e) => {
   if (e.target !== menu && menu.clientHeight > 0) {

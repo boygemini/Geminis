@@ -3,65 +3,555 @@
     {
       "gaming": [
         {
-          "id": "1",
+          "id": "1914",
           "itemInfo": {
             "name": "XBOX 1",
             "itemImg": "/IMAGES/ipad2.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
-            "newItemPrice": "$630",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "1077",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/ipad2.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "1890",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/ipad2.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "1131",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/ipad2.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "1001",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/ipad2.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "1931",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/ipad2.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "7793",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/ipad2.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "0392",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/ipad2.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "7294",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/ipad2.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "1901",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/ipad2.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
             "oldItemPrice": "$544"
           }
         }
       ],
       "cellphones": [
         {
-          "id": "2",
+          "id": "1040",
           "itemInfo": {
             "name": "XBOX 1",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
-            "newItemPrice": "$630",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/frontIpad.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/frontIpad.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "2837",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/frontIpad.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "2187",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/frontIpad.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "2010",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/frontIpad.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "2883",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/frontIpad.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "2018",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/frontIpad.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "2831",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/frontIpad.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "2987",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/frontIpad.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
             "oldItemPrice": "$544"
           }
         }
       ],
       "speaker": [
         {
-          "id": "3",
+          "id": "0183",
           "itemInfo": {
             "name": "XBOX 1",
             "itemImg": "/IMAGES/jblflip6.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
-            "newItemPrice": "$630",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },{
+          "id": "8840",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/jblflip6.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "0384",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/jblflip6.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },{
+          "id": "9943",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/jblflip6.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "1453",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/jblflip6.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },{
+          "id": "1837",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/jblflip6.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "1003",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/jblflip6.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },{
+          "id": "1534",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/jblflip6.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "1493",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/jblflip6.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },{
+          "id": "1743",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/jblflip6.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
             "oldItemPrice": "$544"
           }
         }
       ],
       "computers": [
         {
-          "id": "4",
+          "id": "1264",
           "itemInfo": {
             "name": "XBOX 1",
             "itemImg": "/IMAGES/tv4.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
-            "newItemPrice": "$630",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "0943",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv4.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "8462",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv4.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "0004",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv4.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "8494",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv4.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "4724",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv4.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "9374",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv4.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "4824",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv4.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "0572",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv4.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "4752",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv4.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
             "oldItemPrice": "$544"
           }
         }
       ],
       "tv": [
         {
-          "id": "5",
+          "id": "5928",
           "itemInfo": {
             "name": "XBOX 1",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
-            "newItemPrice": "$630",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "4295",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv5.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "4945",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv5.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "5082",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv5.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "8425",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv5.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "0835",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv5.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "5942",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv5.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "5852",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv5.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "9724",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv5.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
+            "oldItemPrice": "$544"
+          }
+        },
+        {
+          "id": "0742",
+          "itemInfo": {
+            "name": "XBOX 1",
+            "itemImg": "/IMAGES/tv5.png",
+            "description1": "Lorem ipsum dolor sit amet.",
+            "description2": "",
+            "newItemPrice": "630",
             "oldItemPrice": "$544"
           }
         }
@@ -78,7 +568,7 @@
         "itemImg": "/IMAGES/ipad2.png",
         "description1": "Lorem ipsum dolor sit amet.",
         "description2": "",
-        "newItemPrice": "$630",
+        "newItemPrice": "630",
         "oldItemPrice": "$544"
       }
     },
@@ -90,7 +580,7 @@
         "itemImg": "/IMAGES/ipad2.png",
         "description1": "Lorem ipsum dolor sit amet.",
         "description2": "",
-        "newItemPrice": "$630",
+        "newItemPrice": "630",
         "oldItemPrice": "$544"
       }
     },
@@ -102,7 +592,7 @@
         "itemImg": "/IMAGES/frontIpad.png",
         "description1": "Lorem ipsum dolor sit amet.",
         "description2": "",
-        "newItemPrice": "$630",
+        "newItemPrice": "630",
         "oldItemPrice": "$544"
       }
     },
@@ -114,7 +604,7 @@
         "itemImg": "/IMAGES/jblflip6.png",
         "description1": "Lorem ipsum dolor sit amet.",
         "description2": "",
-        "newItemPrice": "$630",
+        "newItemPrice": "630",
         "oldItemPrice": "$544"
       }
     },
@@ -126,7 +616,7 @@
         "itemImg": "/IMAGES/tv4.png",
         "description1": "Lorem ipsum dolor sit amet.",
         "description2": "",
-        "newItemPrice": "$630",
+        "newItemPrice": "630",
         "oldItemPrice": "$544"
       }
     },
@@ -138,7 +628,71 @@
         "itemImg": "/IMAGES/tv5.png",
         "description1": "Lorem ipsum dolor sit amet.",
         "description2": "",
-        "newItemPrice": "$630",
+        "newItemPrice": "630",
+        "oldItemPrice": "$544"
+      }
+    }
+  ],
+
+
+  "WeeklyFeatured": [
+    {
+      "id": "3001",
+      "itemInfo": {
+        "category": "Gaming",
+        "name": "XBOX 1",
+        "itemImg": "/IMAGES/ipad2.png",
+        "description1": "Lorem ipsum dolor sit amet.",
+        "description2": "",
+        "newItemPrice": "630",
+        "oldItemPrice": "$544"
+      }
+    },
+    {
+      "id": "2302",
+      "itemInfo": {
+        "category": "Cellphone",
+        "name": "XBOX 1",
+        "itemImg": "/IMAGES/frontIpad.png",
+        "description1": "Lorem ipsum dolor sit amet.",
+        "description2": "",
+        "newItemPrice": "630",
+        "oldItemPrice": "$544"
+      }
+    },
+    {
+      "id": "3931",
+      "itemInfo": {
+        "category": "Speaker",
+        "name": "XBOX 1",
+        "itemImg": "/IMAGES/jblflip6.png",
+        "description1": "Lorem ipsum dolor sit amet.",
+        "description2": "",
+        "newItemPrice": "630",
+        "oldItemPrice": "$544"
+      }
+    },
+    {
+      "id": "0391",
+      "itemInfo": {
+        "category": "Computer",
+        "name": "XBOX 1",
+        "itemImg": "/IMAGES/tv4.png",
+        "description1": "Lorem ipsum dolor sit amet.",
+        "description2": "",
+        "newItemPrice": "630",
+        "oldItemPrice": "$544"
+      }
+    },
+    {
+      "id": "5931",
+      "itemInfo": {
+        "category": "TV",
+        "name": "XBOX 1",
+        "itemImg": "/IMAGES/tv5.png",
+        "description1": "Lorem ipsum dolor sit amet.",
+        "description2": "",
+        "newItemPrice": "630",
         "oldItemPrice": "$544"
       }
     }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="/CSS/cart.css">
 </head>
 
 <body>
@@ -50,13 +50,14 @@
                     <li>Contact</li>
                 </ul>
             </div>
-            <h1 class="logo" onclick="goHome()">Geministore.</h1>
+            <div class="logo-box">
+                <h1 class="logo" id="logo1" onclick="goHome()">Geministore.</h1>
+            </div>
             <div class="login-cart">
-                <div class="search-section">
-                    <input type="search" class="search" name="search" id="search" placeholder="Search a product">
-                    <input type="submit" class="go" value="GO">
+                <div class="cart-box" id="cart-box" onclick="toCart()">
+                    <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
+                    <p id="items-in-cart">0</p>
                 </div>
-                <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
                 <button type="button" class="login">Login</button>
             </div>
         </div>
@@ -72,8 +73,8 @@
             </div>
         </div>
         <section class="cart-full-details">
-            <div class="orders-in-cart">
-                <div class="order">
+            <div class="orders-in-cart" id="orders-in-cart">
+                <!-- <div class="order">
                     <img src="/IMAGES/frontIpad.png" alt="">
                     <div class="order-info">
                         <div class="info">
@@ -96,32 +97,7 @@
                     <div class="item-price">
                         <span class="currency">$</span><span class="price">1022.99</span>
                     </div>
-                </div>
-                <div class="order">
-                    <img src="/IMAGES/frontIpad.png" alt="">
-                    <div class="order-info">
-                        <div class="info">
-                            <h1 class="item-name">iPhone 13 Pro Max</h1>
-                            <h2 class="item-title">Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
-                            <h2>Color : <span> Space Grey</span></h2>
-                        </div>
-                        <div class="qty">
-                            <h2>Quantity</h2>
-                            <div class="quantity">
-                                <button>-</button><input type="text" value="1"><button>+</button>
-                            </div>
-                        </div>
-
-                        <div class="save-delete">
-                            <h2>Save for later</h2>
-                            <h2 class="delete">Delete</h2>
-                        </div>
-                    </div>
-                    <div class="item-price">
-                        <span class="currency">$</span><span class="price">937.99</span>
-                    </div>
-                </div>
-
+                </div> -->
             </div>
             <div class="breakdown">
                 <div class="delivery">
@@ -170,53 +146,6 @@
         </h1>
     </footer>
 
-    <script>
-        "use strict"
-
-        const toShop = () => {
-            window.location.href = ("/HTML/gemshop.html")
-        }
-
-        const toCheckOut = () => {
-            window.location.href = ("/HTML/checkout.html")
-        }
-
-        const goHome = () => {
-            window.location.href = "/HTML/gemstore.html";
-        }
-    
-        //Menu
-        let menu = document.getElementById("menu"),
-            mb = document.getElementById("mb")
-        let close = document.querySelectorAll("#close");
-        menu.style.display = "none"
-    
-        const removePadding = () => {
-            menu.style.height = "0px"
-            menu.style.padding = "0px";
-        }
-    
-        const openMenu = (e) => {
-            menu.style.display = "flex"
-            removePadding()
-            setTimeout(() => {
-                menu.style.paddingTop = "20px";
-                menu.style.height = "400px";
-            }, 20)
-        }
-    
-        const closeMenu = () => {
-            removePadding()
-            setTimeout(() => {
-                menu.style.display = "none"
-            }, 520);
-        }
-    
-        document.addEventListener("click", (e) => {
-            if (e.target !== menu && menu.clientHeight > 0) {
-                removePadding()
-            }
-        })
-    </script>
+    <script src="/JAVASCRIPT/cart.js"></script>
 </body>
 </html>
