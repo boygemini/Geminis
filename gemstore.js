@@ -102,15 +102,6 @@ let itemName = document.querySelectorAll("#itemName"),
 localStorage.setItem("StoreItems", "");
 let cart = [];
 
-// localStorage.Cart = JSON.stringify(cart);
-// // function nn () {
-// //   return JSON.parse(localStorage.Cart);
-// // }
-// // let mm = nn();
-// mm.find(me => me.id === 1)
-// console.log(mm);
-// console.log(nn());
-
 class Products {
   static selectedForYou() {
     let product_request = new XMLHttpRequest();
