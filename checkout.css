@@ -14,22 +14,26 @@
 
 body{
     background-color: white;
+    width: 100%;
+}
+
+#body{
     width: 90%;
     margin: auto;
 }
 
 .slimbanner{
-    /* background-color: #EDEDED; */
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .slimcontent{
-    display: flex;
+    display: none;
     justify-content: space-between;
     padding: 10px 10px 10px 10px;
-    width: 100%;
+    width: 90%;
 }
 
 .slimb-left, .slimb-right{
@@ -73,8 +77,8 @@ body{
     align-items: center;
     width: 100%;
     margin: auto;
-    border-top: .7px solid #090A0A;
-    border-bottom: .7px solid #090A0A;
+    /* border-top: .7px solid #090A0A; */
+    border-bottom: .7px solid #090a0a32;
     padding: 20px 10px;
 }
 
@@ -100,6 +104,42 @@ nav, .login-cart{
 
 .products{
     width: 100%;
+}
+
+.cart-box {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.cart-box:hover{
+    background-color: #090a0a1b;
+    cursor: pointer;
+}
+
+.cart-box p {
+    background-color: #a73ef8;
+    padding: 2px 5px;
+    color: white;
+    font-weight: 600;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .login-cart{
@@ -174,8 +214,8 @@ nav ul li{
     position: absolute;
     top: 27px;
     left: 15px;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
 
 #logo2{
@@ -336,16 +376,26 @@ nav ul li{
 }
 
 .continue{
-    background-color: white;
+    background-color: #090a0a1b;
     color: #090A0A;
     padding: 10px 30px;
-    border: 2px solid #090A0A;
+    border: 0px solid #090A0A;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     font-weight: 400;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.continue:hover{
+    background-color: #0869493a;
 }
 
 .cart-full-details{
@@ -366,6 +416,8 @@ nav ul li{
     height: auto;
     padding: 20px;
     background-color: whitesmoke;
+    /* background-color: #3c586b1f; */
+    /* background-color: #0a59541f; */
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -581,7 +633,7 @@ form input[type=submit]{
 .breakdown{
     width: 25%;
     height: auto;
-    /* border: 1px solid rgba(128, 128, 128, 0.174); */
+    border: 1px solid rgba(128, 128, 128, 0.174);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -615,14 +667,25 @@ form input[type=submit]{
 }
 
 .dels h2{
-    color: white;
-    background-color: #086948;
+    color: #090A0A;
+    background-color: #0869493a;
     padding: 3px 10px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.dels h2:hover{
+    background-color: #090A0A;
+    color: white;
 }
 
 .dels2{
@@ -799,11 +862,15 @@ form input[type=submit]{
 
 
 footer{
-    background-color: whitesmoke;
+    background-color: #3c586b1f;
     width: 100%;
     padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
