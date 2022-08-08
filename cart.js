@@ -80,6 +80,7 @@ class displayItems {
             <h2 class="item-title">${category[i].itemInfo.description1}</h2>
             <h2>Color : <span> Space Grey</span></h2>
         </div>
+
         <div class="qty">
             <h2>Quantity</h2>
             <div class="quantity">
@@ -95,12 +96,11 @@ class displayItems {
     <div class="item-price">
         <span class="currency">$ </span><span class="price">${category[i].itemInfo.newItemPrice}</span>
     </div>
-</div>`
+    </div>`
     }
     Holder.innerHTML = itemCreated;
     }
 }
 
 displayItems.CART(CartItems.getCartItems())
-
-console.log(CartItems.getCartItems());
+let itemsInCart = CartItems.getCartItems();
