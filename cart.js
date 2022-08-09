@@ -1,4 +1,6 @@
 "use strict";
+let Holder = document.getElementById("orders-in-cart");
+
 /*Button links*/
 const toShop = () => {
   window.location.href = "/HTML/gemshop.html";
@@ -55,23 +57,79 @@ document.addEventListener("click", (e) => {
 /*Get Cart Items*/
 let cartCounter = document.getElementById("items-in-cart")
 
-class CartItems {
-    static getCartItems() {
+class Storage {
+  /* RETRIEVE ITEMS IN CART */
+  static getItemsInCart() {
         return JSON.parse(localStorage.getItem("Cart"));
     }
 
-    static displayNumberOfItemsInCart() {
-        return CartItems.getCartItems().length
+  /* GET THE NUMBER OF ITEMS IN CART */
+  static numberOfItemsInCart() {
+    if(Storage.getItemsInCart() === null || undefined) {
+      return "0"
     }
+
+    else {
+      let mapCart = Storage.getItemsInCart().map(cI => cI.amount)
+      let reduceCart = mapCart.reduce((x,y) => x+y, 0)
+      return reduceCart;
+    }
+  }
 }
 
-cartCounter.innerText = CartItems.displayNumberOfItemsInCart();
+class CartItems {
+  static increaseItem (altheredItemID) {
+    let amt = document.querySelectorAll("#amount");
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+    let itemID = Number(altheredItemID);
+    for(let i in getbackcart){
+      if(itemID === Number(getbackcart[i].id)){
+        console.log("IDs match!");
+        getbackcart[i].amount += 1
+        amt[i].value = getbackcart[i].amount
+        localStorage.Cart = JSON.stringify(getbackcart)
+        cartCounter.innerText = Storage.numberOfItemsInCart()
+      }
+    }
+  }
+
+  static decreaseItem (altheredItemID) {
+    let amt = document.querySelectorAll("#amount");
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+    let itemID = Number(altheredItemID);
+    for(let i in getbackcart){
+      if(itemID === Number(getbackcart[i].id)){
+        getbackcart[i].amount -= 1
+        if(getbackcart[i].amount <= 2){
+          getbackcart[i].amount = 1
+        }
+        amt[i].value = getbackcart[i].amount
+        localStorage.Cart = JSON.stringify(getbackcart)
+        cartCounter.innerText = Storage.numberOfItemsInCart()
+      }
+    }
+  }
+
+  static removeItem (altheredItemID) {
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+    let itemID = Number(altheredItemID);
+    for(let i in getbackcart){
+      if(itemID === Number(getbackcart[i].id)){
+       console.log(getbackcart);
+      }
+    }
+  }
+}
 
 class displayItems {
     static CART (category) {
     let itemCreated = "";
-    let Holder = document.getElementById("orders-in-cart");
     for (let i in category) {
+
+    const getCount = () => {
+        return category[i].amount
+    }
+
     itemCreated += `<div class="order">
     <img src=${category[i].itemInfo.itemImg} alt="">
     <div class="order-info">
@@ -84,13 +142,13 @@ class displayItems {
         <div class="qty">
             <h2>Quantity</h2>
             <div class="quantity">
-                <button>-</button><input type="text" value="1"><button>+</button>
+                <button onclick = "CartItems.decreaseItem(${category[i].id})">-</button><input type="text" value="${getCount()}" id = "amount"><button onclick = "CartItems.increaseItem(${category[i].id}, ${i})">+</button>
             </div>
         </div>
 
         <div class="save-delete">
             <h2>Save for later</h2>
-            <h2 class="delete">Delete</h2>
+            <h2 class="delete" onclick = "CartItems.removeItem(${category[i].id})">Delete</h2>
         </div>
     </div>
     <div class="item-price">
@@ -99,8 +157,17 @@ class displayItems {
     </div>`
     }
     Holder.innerHTML = itemCreated;
-    }
+  }
 }
 
-displayItems.CART(CartItems.getCartItems())
-let itemsInCart = CartItems.getCartItems();
+cartCounter.innerText = Storage.numberOfItemsInCart();
+
+if(Number(Storage.numberOfItemsInCart()) === 0){
+  Holder.innerHTML = `<div class = "empty-cart"><p>Opps, your cart is empty 😒</p></div>`
+  Holder.style.justifyContent = "center" 
+  Holder.style.alignItems = "center" 
+}
+
+if(Number(Storage.numberOfItemsInCart()) !== 0){
+  displayItems.CART(Storage.getItemsInCart())
+}
