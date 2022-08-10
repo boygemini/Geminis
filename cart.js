@@ -113,11 +113,10 @@ class CartItems {
   static removeItem (altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = Number(altheredItemID);
-    for(let i in getbackcart){
-      if(itemID === Number(getbackcart[i].id)){
-       console.log(getbackcart);
-      }
-    }
+    let filterCart = getbackcart.filter((items) => {
+      return items.id !== itemID
+    })
+    console.log(filterCart);
   }
 }
 
