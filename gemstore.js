@@ -335,7 +335,7 @@ const addToCart = (event, ITT) => {
       console.log(error);
     }
   }
-};
+}; 
 
 /* SELECTED FOR YOU SLIDER */
 let boxCounter = 0;
