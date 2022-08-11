@@ -75,6 +75,15 @@ class Storage {
       return reduceCart;
     }
   }
+
+  /* EMPTY CART INDICATOR */
+  static indicateEmptyCart () {
+    if(Number(Storage.numberOfItemsInCart()) === 0){
+      Holder.innerHTML = `<div class = "empty-cart"><p>Opps, your cart is empty 😒</p></div>`
+      Holder.style.justifyContent = "center" 
+      Holder.style.alignItems = "center" 
+    }
+  }
 }
 
 class CartItems {
@@ -100,9 +109,18 @@ class CartItems {
     for(let i in getbackcart){
       if(itemID === Number(getbackcart[i].id)){
         getbackcart[i].amount -= 1
-        if(getbackcart[i].amount <= 2){
-          getbackcart[i].amount = 1
+        if(getbackcart[i].amount < 1){
+          let ask = confirm("Do you want to remove this item from Cart?")
+
+          if (ask) {
+            return CartItems.removeItem(altheredItemID)
+          }
+
+          if (!ask) {
+            getbackcart[i].amount = 1
+          }
         }
+
         amt[i].value = getbackcart[i].amount
         localStorage.Cart = JSON.stringify(getbackcart)
         cartCounter.innerText = Storage.numberOfItemsInCart()
@@ -113,8 +131,11 @@ class CartItems {
   static removeItem (altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = altheredItemID;
-    let filterCart = getbackcart.filter((items) => items.id !== itemID)
-    console.log(filterCart);
+    let filteredCart = getbackcart.filter((items) => items.id !== itemID.toString())
+    localStorage.Cart = JSON.stringify(filteredCart)
+    cartCounter.innerText = Storage.numberOfItemsInCart()
+    displayItems.CART(Storage.getItemsInCart())
+    Storage.indicateEmptyCart()
   }
 }
 
@@ -159,11 +180,7 @@ class displayItems {
 
 cartCounter.innerText = Storage.numberOfItemsInCart();
 
-if(Number(Storage.numberOfItemsInCart()) === 0){
-  Holder.innerHTML = `<div class = "empty-cart"><p>Opps, your cart is empty 😒</p></div>`
-  Holder.style.justifyContent = "center" 
-  Holder.style.alignItems = "center" 
-}
+Storage.indicateEmptyCart();
 
 if(Number(Storage.numberOfItemsInCart()) !== 0){
   displayItems.CART(Storage.getItemsInCart())
