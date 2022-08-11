@@ -54,7 +54,7 @@ document.addEventListener("click", (e) => {
 });
 
 
-/*Get Cart Items*/
+/* ITEM COUNTER*/
 let cartCounter = document.getElementById("items-in-cart")
 
 class Storage {
