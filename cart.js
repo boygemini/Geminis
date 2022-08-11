@@ -17,7 +17,7 @@ const goHome = () => {
 };
 
 
-//Menu
+//MENU
 let menu = document.getElementById("menu"), mb = document.getElementById("mb");
 let close = document.querySelectorAll("#close");
 menu.style.display = "none";
@@ -178,10 +178,13 @@ class displayItems {
   }
 }
 
+/* DISPLAY NUMBER OF ITEMS IN CART */
 cartCounter.innerText = Storage.numberOfItemsInCart();
 
+/* INDICATE IF CART IS EMPTY */
 Storage.indicateEmptyCart();
 
+/* DISPLAY ITEMS IN CART IF IT IS NOT EMPTY */
 if(Number(Storage.numberOfItemsInCart()) !== 0){
   displayItems.CART(Storage.getItemsInCart())
 }
