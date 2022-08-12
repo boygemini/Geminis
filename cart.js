@@ -57,7 +57,6 @@ document.addEventListener("click", (e) => {
 /* ITEM COUNTER*/
 let cartCounter = document.getElementById("items-in-cart")
 
-let getbackcart = JSON.parse(localStorage.getItem("Cart"));
 
 class Storage {
   /* RETRIEVE ITEMS IN CART */
@@ -90,6 +89,7 @@ class Storage {
 
 class CartItems {
   static increaseItem (altheredItemID) {
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let amt = document.querySelectorAll("#amount");
     let itemID = Number(altheredItemID);
     for(let i in getbackcart){
@@ -103,6 +103,7 @@ class CartItems {
   }
 
   static decreaseItem (altheredItemID) {
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let amt = document.querySelectorAll("#amount");
     let itemID = Number(altheredItemID);
     for(let i in getbackcart){
@@ -126,6 +127,7 @@ class CartItems {
   }
 
   static removeItem (altheredItemID) {
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = altheredItemID;
     let filteredCart = getbackcart.filter((items) => items.id !== itemID.toString())
     localStorage.Cart = JSON.stringify(filteredCart)
@@ -135,6 +137,7 @@ class CartItems {
   }
 
   static updateQuantity (altheredItemID) {
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let inputedAmount = Number(event.target.value)
     let itemID = Number(altheredItemID);
     for(let i in getbackcart){
