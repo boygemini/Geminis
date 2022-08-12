@@ -57,6 +57,8 @@ document.addEventListener("click", (e) => {
 /* ITEM COUNTER*/
 let cartCounter = document.getElementById("items-in-cart")
 
+let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+
 class Storage {
   /* RETRIEVE ITEMS IN CART */
   static getItemsInCart() {
@@ -89,11 +91,9 @@ class Storage {
 class CartItems {
   static increaseItem (altheredItemID) {
     let amt = document.querySelectorAll("#amount");
-    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = Number(altheredItemID);
     for(let i in getbackcart){
       if(itemID === Number(getbackcart[i].id)){
-        console.log("IDs match!");
         getbackcart[i].amount += 1
         amt[i].value = getbackcart[i].amount
         localStorage.Cart = JSON.stringify(getbackcart)
@@ -104,19 +104,16 @@ class CartItems {
 
   static decreaseItem (altheredItemID) {
     let amt = document.querySelectorAll("#amount");
-    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = Number(altheredItemID);
     for(let i in getbackcart){
       if(itemID === Number(getbackcart[i].id)){
         getbackcart[i].amount -= 1
         if(getbackcart[i].amount < 1){
           let ask = confirm("Do you want to remove this item from Cart?")
-
           if (ask) {
             return CartItems.removeItem(altheredItemID)
           }
-
-          if (!ask) {
+          else {
             getbackcart[i].amount = 1
           }
         }
@@ -129,7 +126,6 @@ class CartItems {
   }
 
   static removeItem (altheredItemID) {
-    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = altheredItemID;
     let filteredCart = getbackcart.filter((items) => items.id !== itemID.toString())
     localStorage.Cart = JSON.stringify(filteredCart)
@@ -139,7 +135,24 @@ class CartItems {
   }
 
   static updateQuantity (altheredItemID) {
-    
+    let inputedAmount = Number(event.target.value)
+    let itemID = Number(altheredItemID);
+    for(let i in getbackcart){
+      if(itemID === Number(getbackcart[i].id)){
+
+        if(inputedAmount === 0){
+          alert("Sorry, please enter a number > 0")
+          localStorage.Cart = JSON.stringify(getbackcart)
+          event.target.value = getbackcart[i].amount
+        }
+
+        if(inputedAmount > 0) {
+          getbackcart[i].amount = inputedAmount
+          localStorage.Cart = JSON.stringify(getbackcart)
+          cartCounter.innerText = Storage.numberOfItemsInCart()
+        }
+      }
+    }
   }
 }
 
