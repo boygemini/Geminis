@@ -137,6 +137,10 @@ class CartItems {
     displayItems.CART(Storage.getItemsInCart())
     Storage.indicateEmptyCart()
   }
+
+  static updateQuantity (altheredItemID) {
+    
+  }
 }
 
 class displayItems {
@@ -160,7 +164,7 @@ class displayItems {
         <div class="qty">
             <h2>Quantity</h2>
             <div class="quantity">
-                <button onclick = "CartItems.decreaseItem(${category[i].id})">-</button><input type="text" value="${getCount()}" id = "amount"><button onclick = "CartItems.increaseItem(${category[i].id}, ${i})">+</button>
+                <button onclick = "CartItems.decreaseItem(${category[i].id})">-</button><input type="text" value="${getCount()}" id = "amount" onblur = "CartItems.updateQuantity(${category[i].id})"><button onclick = "CartItems.increaseItem(${category[i].id})">+</button>
             </div>
         </div>
 
