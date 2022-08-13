@@ -44,7 +44,7 @@ const disOther = () => {
     for (let i = 0; i <= images.length; i++) {
       images[i].style.display = "none";
     }
-  } catch (error) {}
+  } catch (error) { }
 };
 
 const increSlide = () => {
@@ -79,21 +79,21 @@ const shopNow = () => {
   window.location = "gemshop.html";
 };
 
-/*End of Hero*/
+/* END OF HERO */
 
-/*Selected For you*/
+/* SELECTED FOR YOU */
 let itemName = document.querySelectorAll("#itemName"),
   mainDesc = document.querySelectorAll("#maindesc"),
   minDesc = document.querySelectorAll("#mindesc"),
   oldPrice = document.querySelectorAll("#oldprice"),
   newPrice = document.querySelectorAll("#newprice");
 
-/*Creating Storage Groups for Items*/
+/* CREATING STORAGE GROUPS FOR ITEMS */
 localStorage.setItem("StoreItems", "");
 let cart = [];
 
 class Products {
-  /*Load all Products and save them to the LocalStorage*/
+  /* LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE */
   static selectedForYou() {
     let product_request = new XMLHttpRequest();
     product_request.open("GET", "/JSON/product.json", false);
@@ -105,79 +105,86 @@ class Products {
     product_request.send();
   }
 
-  /*Retrieve all Items from Local Storage*/
+  /* RETRIEVE ALL ITEMS FROM LOCAL STORAGE */
   static getSelectedProducts() {
     return JSON.parse(localStorage.StoreItems);
   }
 }
 
 class Storage {
-  /*Retrieve Retrieve All Items Total Products*/
+  /* RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS */
   static getAllProducts() {
-    return JSON.parse(localStorage.getItem(ItemsInStore()));
-
-    function ItemsInStore() {
-      return "StoreItems";
-    }
+    return JSON.parse(localStorage.getItem("StoreItems"));
   }
 
-  /*Retrieve Recently Added Items from Total Products*/
+  /* RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS */
   static getRecentItems() {
     return Storage.getAllProducts().recentlyAdded;
   }
 
-  /*Retrieve Weekly Feature Items from Toal Products*/
+  /* RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS */
   static weeklyFeaturedItems() {
     return Storage.getAllProducts().WeeklyFeatured;
   }
 
-  /*Save Items To Cart*/
+  /* SAVE ITEMS TO CART */
   static saveSelectedItemsToCart(cart) {
     localStorage.Cart = JSON.stringify(cart);
     localStorage.setItem("Cart", localStorage.Cart);
   }
 
-  /*Retrieve All Items from Cart*/
+  /* RETRIEVE ALL ITEMS FROM CART */
   static getItemsInCart() {
     return JSON.parse(localStorage.getItem("Cart"));
   }
 
-  /*Get the number of Items In Cart*/
+  /* GET THE NUMBER OF ITEMS IN CART */
   static numberOfItemsInCart() {
-    return JSON.parse(localStorage.getItem("Cart")).length;
+    if(Storage.getItemsInCart() === null || undefined) {
+      return "0"
+    }
+
+    else {
+      let mapCart = Storage.getItemsInCart().map(cI => cI.amount)
+      let reduceCart = mapCart.reduce((x,y) => x+y, 0)
+      return reduceCart;
+    }
   }
 
-  /*Get and Save Picked Item to Cart*/
+  /* UPDATE CART */
+  static updateCart(cartName) {
+    Storage.saveSelectedItemsToCart(cartName);
+    cartDom.innerText = Storage.numberOfItemsInCart();
+  }
+
+  /* GET AND SAVE PICKED ITEM TO CART */
   static getItemAndSaveToCart() {
-    // let getbackcart = JSON.parse(localStorage.getItem("Cart"));
-    // if (cart !== null || cart.length !== 0) {
-    //   let getCart = localStorage.Cart;
-    //   localStorage.setItem("SecondArr", getCart)
-    //   let retrieve = JSON.parse(localStorage.SecondArr);
-    //   for (let k in retrieve){
-    //     if (event.target.id === retrieve[k].id){
-    //       console.log("Yesss");
-    //     }
-    //   }
-    //   console.log(retrieve);
-    //   try {
-    //     try {
-    //       cart = [pickedItem]
-    //     } catch (error) { }
-    //     cart = [...getbackcart, pickedItem];
-    //   } catch (error) { }
-    //   Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
-    //   cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
-    // } else {
-    //   cart = [...cart, pickedItem];
-    //   Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
-    //   cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
-    // }
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+
+    if (cart === null || cart.length === 0) {
+      cart = [pickedItem];
+      Storage.updateCart(cart)
+    }
+
+    if (cart !== null || cart.length !== 0) {
+      let pickedItemID = event.target.dataset.id;
+      let check = getbackcart.find(item => item.id === pickedItemID)
+
+      if(check) {
+        check.amount += 1;
+        Storage.updateCart(getbackcart)
+      }
+
+      if(!check) {
+        getbackcart = [...getbackcart, pickedItem]
+        Storage.updateCart(getbackcart)
+      }
+    };
   }
 }
 
 class displayProduct {
-  /*Display Slected For YouItems*/
+  /* DISPLAY SELECTED FOR YOU ITEMS */
   static createItem(category, sub) {
     let itemCreated = " ";
     let Holder = document.getElementById("sel-container");
@@ -205,7 +212,7 @@ class displayProduct {
     Holder.innerHTML = itemCreated;
   }
 
-  /*Display Recently Added Items*/
+  /* DISPLAY RECENTLY ADDED ITEMS */
   static displayRecentItems(category, sub) {
     let itemCreated = "";
     let Holder = document.getElementById("holder-rec");
@@ -226,7 +233,7 @@ class displayProduct {
     Holder.innerHTML = itemCreated;
   }
 
-  /*Display Weekly Geature Items*/
+  /* DISPLAY WEEKLY GEATURE ITEMS */
   static displayWeeklyFeatured(category, sub) {
     let itemCreated = "";
     let Holder = document.querySelector(".Weekly-Container");
@@ -258,20 +265,20 @@ class displayProduct {
   }
 }
 
-/*Display Selected Products*/
+/* DISPLAY SELECTED PRODUCTS */
 Products.selectedForYou();
 displayProduct.createItem(
   Products.getSelectedProducts().selectedProducts[0].gaming,
   "gaming"
-); //Displays Gaming Items
+); // DISPLAYS GAMING ITEMS BY DEFAULT
 
-/*Display Recent Products*/
+/* DISPLAY RECENT PRODUCTS */
 displayProduct.displayRecentItems(Storage.getRecentItems());
 
-/*Display Recent Products*/
+/* DISPLAY RECENT PRODUCTS */
 displayProduct.displayWeeklyFeatured(Storage.weeklyFeaturedItems());
 
-/*Add Recent Items To Cart*/
+/* ADD RECENT ITEMS TO CART */
 const addToCartt = (event, ITT) => {
   function Me() {
     let pickItemFromStore = ITT.find(
@@ -284,14 +291,14 @@ const addToCartt = (event, ITT) => {
     if (pickItemFromStore) {
       try {
         Storage.getItemAndSaveToCart();
-      } catch (error) {}
+      } catch (error) { }
     }
   }
 
   Me();
 };
 
-/*Change Tabs Based On Item's Category*/
+/* CHANGE TABS BASED ON ITEM'S CATEGORY */
 let tab = [...document.querySelectorAll(".tab")];
 tab[0].className += " active-li";
 for (let x in tab) {
@@ -304,13 +311,12 @@ for (let x in tab) {
   });
 }
 
-/*Add Selected Items To Cart*/
+/* ADD SELECTED ITEMS TO CART */
 let cartDom = document.getElementById("items-in-cart");
 try {
   cartDom.innerText = Storage.numberOfItemsInCart();
-} catch (error) {} // Displays number of Items in Cart
-let pickedItem,
-  itemCounter = 1;
+} catch (error) { } // Displays number of Items in Cart
+let pickedItem;
 
 let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
 const addToCart = (event, ITT) => {
@@ -323,40 +329,15 @@ const addToCart = (event, ITT) => {
     amount: 1,
   };
   if (pickItemFromStore) {
-    try {
-      let getbackcart = JSON.parse(localStorage.getItem("Cart"));
-      if (cart !== null || cart.length !== 0) {
-        let getCart = localStorage.Cart;
-        let createSecond = localStorage.setItem("SecondArr", getCart);
-        let retrieve = JSON.parse(localStorage.SecondArr);
-        for (let k in retrieve) {
-          if (event.target.id === retrieve[k].id) {
-            console.log("Yesss");
-          }
-        }
-        console.log(retrieve);
-        try {
-          try {
-            cart = [pickedItem];
-          } catch (error) {}
-          cart = [...getbackcart, pickedItem];
-        } catch (error) {}
-        Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
-        cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
-      } else {
-        cart = [...cart, pickedItem];
-        Storage.saveSelectedItemsToCart(cart); // Save Items To Cart
-        cartDom.innerText = Storage.numberOfItemsInCart(); // Displays number of Items in Cart
-      }
+      try {
+        Storage.getItemAndSaveToCart();
     } catch (error) {
       console.log(error);
     }
   }
 };
 
-const showCart = () => {};
-
-/*Selected for You Slider*/
+/* SELECTED FOR YOU SLIDER */
 let boxCounter = 0;
 let container = document.getElementById("sel-container");
 let holder = document.getElementById("sel-holder");
@@ -370,8 +351,7 @@ const moveLeft = () => {
   holder.scrollLeft -= holder.clientWidth;
 };
 
-//Menu
-
+//MENU
 let menu = document.getElementById("menu"),
   mb = document.getElementById("mb");
 let close = document.querySelectorAll("#close");
@@ -403,4 +383,7 @@ document.addEventListener("click", (e) => {
     removePadding();
   }
 });
-//end
+
+//END OF CODE
+//END OF CODE
+//END OF CODE
