@@ -244,13 +244,12 @@ class displayProduct {
           <img src=${category[i].itemInfo.itemImg} alt="">
       </div>
       <div class="sfu">
-          <div>
-              <p class="itemName2">${category[i].itemInfo.name}</p>
-              <div class="description-box">
+      <p class="itemName2">${category[i].itemInfo.name}</p>
+          
+              <div class="ssd description-box">
                   <p class="item-description">${category[i].itemInfo.description1}</p>
                   <p class="item-description">${category[i].itemInfo.description2}</p>
               </div>
-          </div>
           <div class="price-order">
               <span class="price-box">
                   <span class="price"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
