@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Bitter&family=Cabin&family=League+Spartan&family=Rubik&display=swap');
+
 *::-webkit-scrollbar{width: 0px;}
 *::-webkit-scrollbar-thumb{width: 0px;}
 *::-webkit-scrollbar-track{width: 0px;}
@@ -5,7 +7,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "open sans";
+    font-family: "Open Sans";
     color: #090A0A;
     font-weight: 400;
     font-size: 13px;
@@ -424,7 +426,11 @@ nav ul li{
 .empty-cart{
     top: 50%;
     bottom: 50%;
-    width: 300px;
+    width: 100%;
+    height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
     padding: 15px 30px;
     border: 2px dashed grey;
     border-radius: 10px;
@@ -490,20 +496,20 @@ nav ul li{
 .qty{
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
+    row-gap: 10px;
 }
 
 .quantity{
     width: auto;
     height: 40px;
     display: flex;
-    column-gap: 5px;
+    column-gap: 10px;
 }
 
 .quantity button, .quantity input{
     height: 100%;
     border-radius: 3px;
-    border: 1px solid #090a0a7a;
+    border: 1px solid #090a0a4b;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -512,13 +518,25 @@ nav ul li{
 
 .quantity button{
     background-color: transparent;
-    border: 1px solid grey;
+    border: 1px solid #090a0a4b;
     width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 800;
+    font-size: 20px;
+    color: #a73ef8;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+}
+
+.quantity button:hover{
+    background-color: #0869493a;
+    border: 1px solid transparent;
 }
 
 .quantity input{
@@ -550,11 +568,36 @@ nav ul li{
 }
 
 .item-price{
-    display: flex;
-    column-gap: 3px;
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top: 10px;
     right: 10px;
+}
+
+.item-price-total{
+    display: flex;
+    align-self: center;
+    column-gap: 1px;
+    width: auto;
+}
+
+.item-price-calc span{
+    color: #090a0a9c;
+    font-weight: 600;
+}
+
+.item-price-calc{
+    display: flex;
+    align-self: flex-end;
+    column-gap: 5px;
+    background-color: #0869490c;
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .price{

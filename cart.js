@@ -169,29 +169,34 @@ class displayItems {
     }
 
     itemCreated += `<div class="order">
-    <img src=${category[i].itemInfo.itemImg} alt="">
-    <div class="order-info">
-        <div class="info">
-            <h1 class="item-name">${category[i].itemInfo.name}</h1>
-            <h2 class="item-title">${category[i].itemInfo.description1}</h2>
-            <h2>Color : <span> Space Grey</span></h2>
-        </div>
+      <img src=${category[i].itemInfo.itemImg} alt="">
+      <div class="order-info">
+          <div class="info">
+              <h1 class="item-name">${category[i].itemInfo.name}</h1>
+              <h2 class="item-title">${category[i].itemInfo.description1}</h2>
+              <h2>Color : <span> Space Grey</span></h2>
+          </div>
 
-        <div class="qty">
-            <h2>Quantity</h2>
-            <div class="quantity">
-                <button onclick = "CartItems.decreaseItem(${category[i].id})">-</button><input type="text" value="${getCount()}" id = "amount" onblur = "CartItems.updateQuantity(${category[i].id})"><button onclick = "CartItems.increaseItem(${category[i].id})">+</button>
-            </div>
-        </div>
+          <div class="qty">
+              <h2>Quantity</h2>
+              <div class="quantity">
+                  <button onclick = "CartItems.decreaseItem(${category[i].id})">-</button><input type="text" value="${getCount()}" id = "amount" onblur = "CartItems.updateQuantity(${category[i].id})"><button onclick = "CartItems.increaseItem(${category[i].id})">+</button>
+              </div>
+          </div>
 
-        <div class="save-delete">
-            <h2>Save for later</h2>
-            <h2 class="delete" onclick = "CartItems.removeItem(${category[i].id})">Delete</h2>
+          <div class="save-delete">
+              <h2>Save for later</h2>
+              <h2 class="delete" onclick = "CartItems.removeItem(${category[i].id})">Delete</h2>
+          </div>
+      </div>
+        <div class="item-price">
+          <div class="item-price-total">
+              <span class="currency">$</span><span class="price">37</span>
+          </div>
+          <div class="item-price-calc">
+              <span>1</span><span>x</span><span><span>$</span>37</span>
         </div>
-    </div>
-    <div class="item-price">
-        <span class="currency">$ </span><span class="price">${category[i].itemInfo.newItemPrice}</span>
-    </div>
+      </div>
     </div>`
     }
     Holder.innerHTML = itemCreated;
