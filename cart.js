@@ -169,6 +169,7 @@ class CartItems {
     let filteredCart = getbackcart.filter((items) => items.id !== itemID.toString())
     if(filteredCart.length === 0){
       totalCar.innerText = "0"
+      totalCar2.innerText = "0"
       allTotal.innerText = (Number(Storage.getFees().taxesAndDeliveryFees[0].deliveryFee) + Number(Storage.getFees().taxesAndDeliveryFees[0].tax)).toFixed(2)
       document.getElementById("discount").innerText = Storage.getFees().taxesAndDeliveryFees[0].discount
       document.getElementById("deliveryfee").innerText = Storage.getFees().taxesAndDeliveryFees[0].deliveryFee
