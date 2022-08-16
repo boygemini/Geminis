@@ -22,7 +22,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: #0a595414;
     width: 100%;
 }
 
@@ -434,31 +434,40 @@ nav ul li {
 }
 
 .cart-btn {
-    width: 40px;
+    width: 45px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 30px;
     padding: 3px 5px;
     background-color: transparent;
-    background: url('/IMAGES/add-to-cart.png');
-    background-position: center;
+    /*background: url('/IMAGES/add-to-cart.png');
+    */background-position: center;
     background-size: 80%;
     background-repeat: no-repeat;
-    border: 1px solid rgba(112, 128, 144, 0.08);
+    border: 1px solid transparent;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     cursor: pointer;
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    padding: 0px;
 }
 
 .cart-btn:hover {
     background-color: #090a0a1b;
+}
+
+.cart-btn:active{
+    background-color: white;
+    transition-duration: .05s;
 }
 
 .login {
@@ -619,7 +628,7 @@ nav ul li {
     font-size: 15px;
 }
 
-.search:focus{
+.search:hover{
     background-color: white;
     border: 1px solid #090a0a59;
     outline: none;
@@ -703,7 +712,7 @@ nav ul li {
     font-size: 22px;
     font-weight: 900;
     width: 30%;
-    color: #090a0ac3;
+    color: #a73ef8;
     font-family: "lato";
 }
 
@@ -941,11 +950,11 @@ nav ul li {
 
 .sel-box:hover {
     /* border: 1px solid rgba(112, 128, 144, 0.552); */
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .img-con {
-    background-color: whitesmoke;
+    background-color: white;
     width: 100%;
     height: 70%;
     display: flex;
@@ -1043,7 +1052,10 @@ nav ul li {
 
 .weekly {
     /* background-color: #3c586b1f; */
-    background-color: #0a595414;
+    background-image: linear-gradient(10deg, #090A0A 30%, #a73ef8 30%);
+    background-image: -o-linear-gradient(10deg, #090A0A 30%, #a73ef8 30%);
+    background-image: -webkit-linear-gradient(10deg, #090A0A 30%, #a73ef8 30%);
+    background-image: -moz-linear-gradient(10deg, #090A0A 30%, #a73ef8 30%);
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -1064,12 +1076,12 @@ nav ul li {
     width: 100%;
 }
 
-#wkly:hover {
+#wkly {
     background-color: white;
 }
 
 #wkly .img-con {
-    background-color: transparent;
+    background-color: white;
 }
 
 #wkly {

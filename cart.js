@@ -1,5 +1,9 @@
 "use strict";
 let Holder = document.getElementById("orders-in-cart");
+let totalCar = document.getElementById("cartsum")
+let totalCar2 = document.getElementById("cartsum2")
+let totalQuantity = document.getElementById("totalquantity")
+let checkButton = document.getElementById("checkout")
 
 /*Button links*/
 const toShop = () => {
@@ -60,6 +64,11 @@ let cartCounter = document.getElementById("items-in-cart")
 
 class Storage {
   /* RETRIEVE ITEMS IN CART */
+  static getFees() {
+    return JSON.parse(localStorage.getItem("StoreItems"));
+}
+
+  /* RETRIEVE ITEMS IN CART */
   static getItemsInCart() {
         return JSON.parse(localStorage.getItem("Cart"));
     }
@@ -80,10 +89,33 @@ class Storage {
   /* EMPTY CART INDICATOR */
   static indicateEmptyCart () {
     if(Number(Storage.numberOfItemsInCart()) === 0){
-      Holder.innerHTML = `<div class = "empty-cart"><p>Opps, your cart is empty 😒</p></div>`
+      Holder.innerHTML = `<div class = "empty-cart"><p>Oopps, your cart is empty 😒</p></div>`
       Holder.style.justifyContent = "center" 
       Holder.style.alignItems = "center" 
     }
+  }
+}
+
+class _item {
+  static sumTotal () {
+    let Q2 = document.querySelectorAll("#q2")
+    let totalItemPrice = document.querySelectorAll("#price")
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+    let allTotal = document.getElementById("allTotal");
+    for(let i in getbackcart){
+      let sum = Number(getbackcart[i].amount) * Number(getbackcart[i].itemInfo.newItemPrice)
+      getbackcart[i].itemInfo.itemTotal = sum
+      localStorage.Cart = JSON.stringify(getbackcart)
+      totalItemPrice[i].innerText = getbackcart[i].itemInfo.itemTotal
+      Q2[i].innerText = getbackcart[i].amount
+      totalCar.innerText = CartItems.sumTotal()
+      totalCar2.innerText = CartItems.sumTotal()
+      allTotal.innerText = _item.allTotal()
+    }
+  }
+
+  static allTotal() {
+    return ((Number(CartItems.sumTotal()) + Number(Storage.getFees().taxesAndDeliveryFees[0].deliveryFee) + Number(Storage.getFees().taxesAndDeliveryFees[0].tax)) - ((Number(Storage.getFees().taxesAndDeliveryFees[0].discount)/100)*Number(CartItems.sumTotal()))).toFixed(2)
   }
 }
 
@@ -98,7 +130,10 @@ class CartItems {
         amt[i].value = getbackcart[i].amount
         localStorage.Cart = JSON.stringify(getbackcart)
         cartCounter.innerText = Storage.numberOfItemsInCart()
+        totalQuantity.innerText = Storage.numberOfItemsInCart()
+        totalCar2.innerText = CartItems.sumTotal()
       }
+      _item.sumTotal()
     }
   }
 
@@ -106,7 +141,7 @@ class CartItems {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let amt = document.querySelectorAll("#amount");
     let itemID = Number(altheredItemID);
-    for(let i in getbackcart){
+    for(let i in getbackcart){ 
       if(itemID === Number(getbackcart[i].id)){
         getbackcart[i].amount -= 1
         if(getbackcart[i].amount < 1){
@@ -117,12 +152,14 @@ class CartItems {
           else {
             getbackcart[i].amount = 1
           }
-        }
-
+        };
         amt[i].value = getbackcart[i].amount
         localStorage.Cart = JSON.stringify(getbackcart)
         cartCounter.innerText = Storage.numberOfItemsInCart()
+        totalQuantity.innerText = Storage.numberOfItemsInCart()
+        totalCar2.innerText = CartItems.sumTotal()
       }
+      _item.sumTotal()
     }
   }
 
@@ -130,10 +167,24 @@ class CartItems {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = altheredItemID;
     let filteredCart = getbackcart.filter((items) => items.id !== itemID.toString())
+    if(filteredCart.length === 0){
+      totalCar.innerText = "0"
+      allTotal.innerText = (Number(Storage.getFees().taxesAndDeliveryFees[0].deliveryFee) + Number(Storage.getFees().taxesAndDeliveryFees[0].tax)).toFixed(2)
+      document.getElementById("discount").innerText = Storage.getFees().taxesAndDeliveryFees[0].discount
+      document.getElementById("deliveryfee").innerText = Storage.getFees().taxesAndDeliveryFees[0].deliveryFee
+      document.getElementById("tax").innerText = Storage.getFees().taxesAndDeliveryFees[0].tax
+      checkButton.disabled = true
+      checkButton.style.opacity = "50%"
+    }else{
+      checkButton.disabled = false
+      checkButton.style.opacity = "100%"
+    }
     localStorage.Cart = JSON.stringify(filteredCart)
     cartCounter.innerText = Storage.numberOfItemsInCart()
+    totalQuantity.innerText = Storage.numberOfItemsInCart()
     displayItems.CART(Storage.getItemsInCart())
     Storage.indicateEmptyCart()
+    _item.sumTotal()
   }
 
   static updateQuantity (altheredItemID) {
@@ -153,8 +204,24 @@ class CartItems {
           getbackcart[i].amount = inputedAmount
           localStorage.Cart = JSON.stringify(getbackcart)
           cartCounter.innerText = Storage.numberOfItemsInCart()
+          totalQuantity.innerText = Storage.numberOfItemsInCart()
         }
       }
+    }
+    _item.sumTotal()
+  }
+
+  static sumTotal () {
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+    if(getbackcart.length === 0){
+      return "0"
+    }
+
+    if(getbackcart.length !== 0){
+      let filterCart = getbackcart.filter(it => {return it.itemInfo})
+      let mappedCart = filterCart.map(item => Number(item.itemInfo.itemTotal))
+      let reducedCart = mappedCart.reduce((x, y) => x + y)
+      return reducedCart;
     }
   }
 }
@@ -191,10 +258,10 @@ class displayItems {
       </div>
         <div class="item-price">
           <div class="item-price-total">
-              <span class="currency">$</span><span class="price">37</span>
+              <span class="currency">$</span><span class="price" id = "price">${category[i].itemInfo.itemTotal}</span>
           </div>
           <div class="item-price-calc">
-              <span>1</span><span>x</span><span><span>$</span>37</span>
+              <span id = "q2">${category[i].amount}</span><span>x</span><span><span>$</span>${category[i].itemInfo.newItemPrice}</span>
         </div>
       </div>
     </div>`
@@ -203,13 +270,46 @@ class displayItems {
   }
 }
 
+
 /* DISPLAY NUMBER OF ITEMS IN CART */
 cartCounter.innerText = Storage.numberOfItemsInCart();
+totalQuantity.innerText = Storage.numberOfItemsInCart()
+
+
+/* DISPLAY SUBTOTAL */
+totalCar2.innerText = CartItems.sumTotal()
+totalCar.innerText = CartItems.sumTotal()
+
+
+/* DISPLAY THE SERVICE FEES AND CHARGES */
+document.getElementById("discount").innerText = Storage.getFees().taxesAndDeliveryFees[0].discount
+document.getElementById("tax").innerText = Storage.getFees().taxesAndDeliveryFees[0].tax
+document.getElementById("deliveryfee").innerText = Storage.getFees().taxesAndDeliveryFees[0].deliveryFee
+
+/* DISPLAY ALL OVERALL TOTAL */
+allTotal.innerText = _item.allTotal()
+
 
 /* INDICATE IF CART IS EMPTY */
 Storage.indicateEmptyCart();
+
+
+/* DISABLE CHECKOUT BUTTON IF CART IS EMPTY */
+let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+if(getbackcart.length === 0){
+  checkButton.disabled = true
+  checkButton.style.opacity = "50%"
+}else{
+  checkButton.disabled = false
+  checkButton.style.opacity = "100%"
+}
+
 
 /* DISPLAY ITEMS IN CART IF IT IS NOT EMPTY */
 if(Number(Storage.numberOfItemsInCart()) !== 0){
   displayItems.CART(Storage.getItemsInCart())
 }
+
+
+/* DISPLAY SUM OF ONE ITEM */
+_item.sumTotal()
