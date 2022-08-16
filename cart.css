@@ -17,11 +17,11 @@
 body{
     background-color: #0a595414;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 #body{
-    width: 90%;
+    width: 100%;
     height: 100%;
     margin: auto;
 }   
@@ -66,7 +66,7 @@ body{
 
 .top-nav{
     width: 100%;
-    height: 10%;
+    height:80px;
     background-color:white;
     position: relative;
     border-radius: 10px;
@@ -80,10 +80,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
     margin: auto;
     /* border-top: .7px solid #090A0A; */
-    border-bottom: .7px solid #090a0a32;
+    /* border-bottom: .7px solid #090a0a32; */
     padding: 20px 10px;
 }
 
@@ -329,7 +329,7 @@ nav ul li{
 .cart-body{
     background-color: transparent;
     height: auto;
-    width: 100%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -819,8 +819,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
     border-radius: 0px;
+    margin-top: 100px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     -ms-border-radius: 0px;
