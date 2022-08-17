@@ -314,3 +314,5 @@ if(Number(Storage.numberOfItemsInCart()) !== 0){
 
 /* DISPLAY SUM OF ONE ITEM */
 _item.sumTotal()
+
+console.log("OK : code ran successfully!");

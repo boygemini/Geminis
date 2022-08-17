@@ -383,6 +383,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
+console.log("Test : code ran successfully [OK]");
 //END OF CODE
 //END OF CODE
 //END OF CODE
