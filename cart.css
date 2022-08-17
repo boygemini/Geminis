@@ -527,7 +527,7 @@ align-items: center;
     align-items: center;
     font-weight: 800;
     font-size: 20px;
-    color: #a73ef8;
+    color: #090A0A;
     cursor: pointer;
     transition: .2s ease-in-out;
     -webkit-transition: .2s ease-in-out;
@@ -535,6 +535,7 @@ align-items: center;
     -ms-transition: .2s ease-in-out;
     -o-transition: .2s ease-in-out;
 }
+
 
 .quantity button:hover{
     background-color: #0869493a;
