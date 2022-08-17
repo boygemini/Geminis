@@ -8,9 +8,41 @@
     <title>Gemini store | Home</title>
     <link rel="stylesheet" href="/CSS/gemstore.css">
     <script src="/JAVASCRIPT/gemstore.js" defer></script>
+
+    <style>
+        #clear{
+            width: 200px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: aliceblue;
+            color: #000006;
+            font-weight: 700;
+            position: fixed;
+            top: 10px;
+            right: 45%;
+            left: 45%;
+            z-index: 3492043290430298432;
+            transition: .2s ease-in-out;
+        }
+
+        #clear:hover{
+            cursor: pointer;
+            background-color: rgb(120, 188, 247);
+            color: #000006;
+        }
+    </style>
 </head>
 
 <body>
+    <button id="clear" onclick="localStorage.removeItem('Cart')">Clear Cart</button>
+    <script>
+        document.getElementById("clear").addEventListener("click", ()=>{
+            localStorage.removeItem('Cart')
+            alert("Cart is cleared!")
+            document.getElementById("items-in-cart").innerText = "0"
+        })
+    </script>
     <section class="slimbanner">
         <div class="slimcontent">
             <div class="slimb-left">
@@ -95,7 +127,7 @@
                     <p class="sel">Recently Added</p>
                 </div>
                 <div class="recent-container" id="recent-container">
-                    <div id="holder-rec">
+                    <div id="holder-rec"> 
                         <!-- <div class="recent">
                             <img src="/IMAGES/bigmonitor.png" alt="">
                             <div class="receInfo">
@@ -103,9 +135,9 @@
                                 <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
                                 <div class="price-order">
                                     <span class="itemPricing">$1,475</span>
-                                    <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
+                                    <button data-id = "${category[i].id}" data-category = "${sub}" id="cart-btn" class="cart-btn" onclick = "addToCartt(event,Storage.getAllProducts().recentlyAdded)" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt=""></button>
                                 </div>
-                            </div> 
+                            </div>
                         </div> -->
                     </div>
                 </div>
@@ -175,7 +207,7 @@
     
             <section class="weekly selected-for-you">
                 <div class="mmm">
-                    <p class="sel">Our Weekly Featured</p>
+                    <p class="sel" id = "sel3">Our Weekly Featured</p>
                 </div>
                 <div id="weekly-sell" class="sell">
                     <div class="sel-container">
@@ -187,7 +219,7 @@
                                         <img src="/IMAGES/frontIpad.png" alt="">
                                     </div>
                                     <div class="sfu">
-                                        <div>
+                                        <div class = "sfu-det">
                                             <p class="itemName2">Speaker</p>
                                             <div class="description-box">
                                                 <p class="item-description">Lorem ipsum dolor sit amet.</p>

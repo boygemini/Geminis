@@ -73,8 +73,8 @@
             <div class="cart-top">
                 <h1 class="head">Shopping Cart</h1>
                 <div class="total-checkout">
-                    <h1><span class="sub-total-head">Sub Total (2 Items) : </span> <span class="amount">$ </span><span
-                            class="amount">1,525.96</span></h1>
+                    <h1><span class="sub-total-head">Sub Total (<span id="totalquantity"></span> Items) : </span> <span class="amount">$ </span><span
+                            class="amount" id="cartsum">1,525.96</span></h1>
                     <!-- <button class="continue">Continue Shopping</button>
                     <button class="check-out">Check Out</button> -->
                 </div>
@@ -122,43 +122,46 @@
                     <div class="breaking">
                         <div class="sub-total">
                             <h1>Subtotal</h1>
-                            <h1><span>$</span><span>1,024.99</span></h1>
+                            <h1><span>$</span><span id="cartsum2">1,024.99</span></h1>
                         </div>
                         <div class="anyname">
                             <div class="dets discount">
                                 <h2>Discount</h2>
-                                <h2>0%</h2>
+                                <h2><span id="discount">0</span> <span>%</span></h2>
                             </div>
                             <div class="dets delivery-fee">
                                 <h2>Delivery</h2>
-                                <h2><span>$</span><span>1,024.99</span></h2>
+                                <h2><span>$</span><span id="deliveryfee">1,024.99</span></h2>
                             </div>
                             <div class="dets tax">
                                 <h2>Tax</h2>
-                                <h2><span>$</span><span>10.99</span></h2>
+                                <h2><span>$</span><span id="tax">10.99</span></h2>
                             </div>
                         </div>
                         <div class="total">
                             <h1>Total</h1>
-                            <h1><span>$</span><span>10.99</span></h1>
+                            <h1><span>$</span><span id="allTotal">10.99</span></h1>
                         </div>
                         <div class="checkout-proceed">
                             <button class="continue" onclick="toShop()">Continue Shopping</button>
-                            <button type="button" class="check-out" onclick="toCheckOut()">Proceed to Check Out</button>
+                            <button type="button" id="checkout" class="check-out" onclick="toCheckOut()">Proceed to Check Out</button>
                         </div>
                     </div>
                 </div>
             </section>
     
         </section>
+        <footer>
+            <h1>
+                Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
+            </h1>
+        </footer>
     </section>
 
-    <footer>
-        <h1>
-            Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
-        </h1>
-    </footer>
+    
 
     <script src="/JAVASCRIPT/cart.js"></script>
+    
 </body>
+
 </html>
