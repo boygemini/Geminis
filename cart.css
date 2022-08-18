@@ -485,6 +485,21 @@ align-items: center;
     row-gap: 10px;
 }
 
+.numbering{
+    background-color: #090A0A;
+    color: aliceblue;
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
 .item-name{
     font-size: 17px;
     font-weight: 600;

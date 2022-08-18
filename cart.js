@@ -214,6 +214,10 @@ class CartItems {
 
   static sumTotal () {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+    if(getbackcart === null){
+      return "0"
+    }
+
     if(getbackcart.length === 0){
       return "0"
     }
@@ -236,7 +240,18 @@ class displayItems {
         return category[i].amount
     }
 
+    const displayNumbering = () => {
+      if(i < 10){
+        return "0" + (Number(i)+ 1)
+      }
+
+      if(i >= 10){
+        return (Number(i))+ 1
+      }
+    }
+
     itemCreated += `<div class="order">
+    <h1 class = "numbering">${displayNumbering()}</h1>
       <img src=${category[i].itemInfo.itemImg} alt="">
       <div class="order-info">
           <div class="info">
@@ -297,13 +312,24 @@ Storage.indicateEmptyCart();
 
 /* DISABLE CHECKOUT BUTTON IF CART IS EMPTY */
 let getbackcart = JSON.parse(localStorage.getItem("Cart"));
-if(getbackcart.length === 0){
-  checkButton.disabled = true
-  checkButton.style.opacity = "50%"
-}else{
-  checkButton.disabled = false
-  checkButton.style.opacity = "100%"
+try {
+    if(getbackcart === null){
+      checkButton.disabled = true
+      checkButton.style.opacity = "50%"
+    }
+
+    if(getbackcart.length === 0){
+      checkButton.disabled = true
+      checkButton.style.opacity = "50%"
+    }
+
+    if(getbackcart.length > 0){
+      checkButton.disabled = false
+      checkButton.style.opacity = "100%"
+    }
+  } catch (error) {
 }
+
 
 
 /* DISPLAY ITEMS IN CART IF IT IS NOT EMPTY */
@@ -316,3 +342,6 @@ if(Number(Storage.numberOfItemsInCart()) !== 0){
 _item.sumTotal()
 
 console.log("OK : code ran successfully!");
+//EOC
+//EOC
+//EOC
