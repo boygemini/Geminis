@@ -519,23 +519,22 @@ align-items: center;
     width: auto;
     height: 40px;
     display: flex;
-    column-gap: 10px;
+    column-gap: 5px;
 }
 
 .quantity button, .quantity input{
     height: 100%;
-    border-radius: 3px;
-    border: 1px solid #090a0a4b;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
+    border-radius: 5px;
+    border: 1px solid #090a0a53;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     background-color: transparent;
 }
 
 .quantity button{
     background-color: transparent;
-    border: 1px solid #090a0a4b;
     width: 30px;
     display: flex;
     justify-content: center;
