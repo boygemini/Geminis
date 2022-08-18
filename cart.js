@@ -33,6 +33,7 @@ const removePadding = () => {
 };
 
 
+ /* OPEN MENU */
 const openMenu = (e) => {
   menu.style.display = "flex";
   removePadding();
@@ -43,6 +44,7 @@ const openMenu = (e) => {
 };
 
 
+ /* CLOSE MENU */
 const closeMenu = () => {
   removePadding();
   setTimeout(() => {
@@ -97,6 +99,7 @@ class Storage {
 }
 
 class _item {
+   /* DISPLAY SUM OF ALL ITEMS */
   static sumTotal () {
     let Q2 = document.querySelectorAll("#q2")
     let totalItemPrice = document.querySelectorAll("#price")
@@ -120,6 +123,7 @@ class _item {
 }
 
 class CartItems {
+ /* INCREASE QUNTITY OF AN ITEM */
   static increaseItem (altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let amt = document.querySelectorAll("#amount");
@@ -133,10 +137,11 @@ class CartItems {
         totalQuantity.innerText = Storage.numberOfItemsInCart()
         totalCar2.innerText = CartItems.sumTotal()
       }
-      _item.sumTotal()
+      _item.sumTotal() //
     }
   }
 
+  /* DECREASE QUNTITY OF AN ITEM */
   static decreaseItem (altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let amt = document.querySelectorAll("#amount");
@@ -163,6 +168,7 @@ class CartItems {
     }
   }
 
+  /* REMOVE ITEM FROM CART */
   static removeItem (altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = altheredItemID;
@@ -188,6 +194,7 @@ class CartItems {
     _item.sumTotal()
   }
 
+  /* CONTROLS THE TOTAL QUANTITY OF A SPECIFIC ITEM */
   static updateQuantity (altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let inputedAmount = Number(event.target.value)
@@ -236,51 +243,53 @@ class displayItems {
     let itemCreated = "";
     for (let i in category) {
 
-    const getCount = () => {
-        return category[i].amount
-    }
-
-    const displayNumbering = () => {
-      if(i < 10){
-        return "0" + (Number(i)+ 1)
+      /* ITEM QUANTITY */
+      const getCount = () => {
+          return category[i].amount
       }
 
-      if(i >= 10){
-        return (Number(i))+ 1
+      /* ITEM NUMBERING */
+      const displayNumbering = () => {
+        if(i < 10){
+          return "0" + (Number(i)+ 1)
+        }
+
+        if(i >= 10){
+          return (Number(i))+ 1
+        }
       }
-    }
 
-    itemCreated += `<div class="order">
-    <h1 class = "numbering">${displayNumbering()}</h1>
-      <img src=${category[i].itemInfo.itemImg} alt="">
-      <div class="order-info">
-          <div class="info">
-              <h1 class="item-name">${category[i].itemInfo.name}</h1>
-              <h2 class="item-title">${category[i].itemInfo.description1}</h2>
-              <h2>Color : <span> Space Grey</span></h2>
-          </div>
+      itemCreated += `<div class="order">
+      <h1 class = "numbering">${displayNumbering()}</h1>
+        <img src=${category[i].itemInfo.itemImg} alt="">
+        <div class="order-info">
+            <div class="info">
+                <h1 class="item-name">${category[i].itemInfo.name}</h1>
+                <h2 class="item-title">${category[i].itemInfo.description1}</h2>
+                <h2>Color : <span> Space Grey</span></h2>
+            </div>
 
-          <div class="qty">
-              <h2>Quantity</h2>
-              <div class="quantity">
-                  <button onclick = "CartItems.decreaseItem(${category[i].id})">-</button><input type="text" value="${getCount()}" id = "amount" onblur = "CartItems.updateQuantity(${category[i].id})"><button onclick = "CartItems.increaseItem(${category[i].id})">+</button>
-              </div>
-          </div>
+            <div class="qty">
+                <h2>Quantity</h2>
+                <div class="quantity">
+                    <button onclick = "CartItems.decreaseItem(${category[i].id})">-</button><input type="text" value="${getCount()}" id = "amount" onblur = "CartItems.updateQuantity(${category[i].id})"><button onclick = "CartItems.increaseItem(${category[i].id})">+</button>
+                </div>
+            </div>
 
-          <div class="save-delete">
-              <h2>Save for later</h2>
-              <h2 class="delete" onclick = "CartItems.removeItem(${category[i].id})">Delete</h2>
-          </div>
-      </div>
-        <div class="item-price">
-          <div class="item-price-total">
-              <span class="currency">$</span><span class="price" id = "price">${category[i].itemInfo.itemTotal}</span>
-          </div>
-          <div class="item-price-calc">
-              <span id = "q2">${category[i].amount}</span><span>x</span><span><span>$</span>${category[i].itemInfo.newItemPrice}</span>
+            <div class="save-delete">
+                <h2>Save for later</h2>
+                <h2 class="delete" onclick = "CartItems.removeItem(${category[i].id})">Delete</h2>
+            </div>
         </div>
-      </div>
-    </div>`
+          <div class="item-price">
+            <div class="item-price-total">
+                <span class="currency">$</span><span class="price" id = "price">${category[i].itemInfo.itemTotal}</span>
+            </div>
+            <div class="item-price-calc">
+                <span id = "q2">${category[i].amount}</span><span>x</span><span><span>$</span>${category[i].itemInfo.newItemPrice}</span>
+          </div>
+        </div>
+      </div>`
     }
     Holder.innerHTML = itemCreated;
   }
