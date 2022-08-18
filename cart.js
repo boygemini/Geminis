@@ -4,6 +4,9 @@ let totalCar = document.getElementById("cartsum")
 let totalCar2 = document.getElementById("cartsum2")
 let totalQuantity = document.getElementById("totalquantity")
 let checkButton = document.getElementById("checkout")
+let boxModal = document.getElementById("boxmodal")
+let yes = document.getElementById("yes")
+let no = document.getElementById("no")
 
 /*Button links*/
 const toShop = () => {
@@ -150,13 +153,15 @@ class CartItems {
       if(itemID === Number(getbackcart[i].id)){
         getbackcart[i].amount -= 1
         if(getbackcart[i].amount < 1){
-          let ask = confirm("Do you want to remove this item from Cart?")
-          if (ask) {
+          boxModal.style.display = "flex"
+          yes.addEventListener("click", () => {
+            boxModal.style.display = "none"
             return CartItems.removeItem(altheredItemID)
-          }
-          else {
-            getbackcart[i].amount = 1
-          }
+          })
+          no.addEventListener("click", () => {
+            boxModal.style.display = "none"
+          })
+          getbackcart[i].amount = 1
         };
         amt[i].value = getbackcart[i].amount
         localStorage.Cart = JSON.stringify(getbackcart)
