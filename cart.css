@@ -395,6 +395,61 @@ nav ul li{
     font-weight: 400;
 } 
 
+.boxmodal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #090a0a1b;
+    z-index: 94930949;
+}
+
+.askdiv {
+   background-color: white;
+   width: auto;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   column-gap: 30px;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+}
+
+.askbuttondiv{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.askbutton{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    outline: 1px solid transparent;
+}
+
+.askbutton:hover{
+    outline: 1px solid #090A0A;
+}
+
+.yes{
+    background-color: #090A0A;
+    color: aliceblue;
+}
+
 .cart-full-details{
     width: 100%;
     height: auto;
