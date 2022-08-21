@@ -31,10 +31,74 @@
             background-color: rgb(120, 188, 247);
             color: #000006;
         }
+
+.notification{
+    background-color: #cdffe2;
+    width: 100%;
+    min-height: 60px;
+    height: auto;
+    border: 1px solid rgba(112, 128, 144, 0.321);
+    box-shadow: 0px 10px 20px -10px #0a595414;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+    /* animation: fade 4s
+    tr ease-in-out; */
+}
+
+@keyframes fade {
+    0%{
+        opacity: .3;
+    }
+
+    20%{
+        opacity: 1;
+    }
+
+    70%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+.notification p, .notification strong{
+    color: #000006;
+    font-weight: 600;
+}
+
+.notification strong {
+    color: #a73ef8;
+}
+
+.notify-box{
+    width: 350px;
+    height: auto;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 10px;
+    right: 10px;
+    z-index: 9283920282;
+    row-gap: 10px;
+}
+
     </style>
 </head>
 
 <body>
+<div class="notify-box" id="notify-box">
+    <!-- <div class="notification" id="notify">
+        <p>You added <strong id="itemname">iPhone 13 Pro Max - 256gb</strong> to cart</p>
+    </div> -->
+</div>
     <button id="clear" onclick="localStorage.removeItem('Cart')">Clear Cart</button>
     <script>
         document.getElementById("clear").addEventListener("click", ()=>{
