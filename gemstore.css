@@ -8,8 +8,11 @@
 
 *::-webkit-scrollbar-track {
     width: 0px;
-}
+} 
 
+.off{
+    display: none;
+}
 * {
     box-sizing: border-box;
     margin: 0;
