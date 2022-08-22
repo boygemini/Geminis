@@ -110,7 +110,9 @@ class Products {
     return JSON.parse(localStorage.StoreItems);
   }
 }
-
+let x = ""
+let cc = 0
+let notArr = [];
 class Storage {
   /* RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS */
   static getAllProducts() {
@@ -155,6 +157,10 @@ class Storage {
   static updateCart(cartName) {
     Storage.saveSelectedItemsToCart(cartName);
     cartDom.innerText = Storage.numberOfItemsInCart();
+    // let not = [... document.querySelectorAll("#notify")]
+    // setInterval(() => {
+    //   console.log(not.shift());
+    // }, 3000);
   }
 
   /* GET AND SAVE PICKED ITEM TO CART */
@@ -173,6 +179,10 @@ class Storage {
       if(check) {
         check.amount += 1;
         Storage.updateCart(getbackcart)
+        x = `<div class="notification" id="notify">
+        <p>You added <strong id="itemname">iPhone ${cc += 1} Pro Max - 256gb</strong> to cart</p>
+        </div>`
+        notArr.push(x)
       }
 
       if(!check) {
@@ -182,6 +192,23 @@ class Storage {
     };
   }
 }
+
+
+let notification = document.getElementById("notify-box");
+setTimeout(() => {
+  let timeout = 2000
+  setInterval(() => {
+    if(notArr.length > 0){
+      notArr.shift(0, 1);
+      console.log(notArr);
+      for(let i in notArr){
+        notification.innerHTML += notArr[i]
+      }
+    }
+    if(notArr.length <= 0){}
+  }, timeout);
+}, 2000);
+
 
 class displayProduct {
   /* DISPLAY SELECTED FOR YOU ITEMS */
@@ -211,6 +238,7 @@ class displayProduct {
     }
     Holder.innerHTML = itemCreated;
   }
+
 
   /* DISPLAY RECENTLY ADDED ITEMS */
   static displayRecentItems(category, sub) {
@@ -245,7 +273,6 @@ class displayProduct {
       </div>
       <div class="sfu">
       <p class="itemName2">${category[i].itemInfo.name}</p>
-          
               <div class="ssd description-box">
                   <p class="item-description">${category[i].itemInfo.description1}</p>
                   <p class="item-description">${category[i].itemInfo.description2}</p>
