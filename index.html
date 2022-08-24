@@ -10,7 +10,7 @@
     <script src="/JAVASCRIPT/gemstore.js" defer></script>
 
     <style>
-        #clear{
+        /* #clear {
             width: 200px;
             padding: 15px 20px;
             border-radius: 5px;
@@ -26,82 +26,114 @@
             transition: .2s ease-in-out;
         }
 
-        #clear:hover{
+        #clear:hover {
             cursor: pointer;
             background-color: rgb(120, 188, 247);
             color: #000006;
         }
 
-.notification{
-    background-color: #cdffe2;
-    width: 100%;
-    min-height: 60px;
-    height: auto;
-    border: 1px solid rgba(112, 128, 144, 0.321);
-    box-shadow: 0px 10px 20px -10px #0a595414;
-    border-radius: 5px;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .2s ease-in-out;
-    /* animation: fade 4s
-    tr ease-in-out; */
-}
+        .notification {
+            background-color: #cdffe2;
+            width: 100%;
+            height: 60px;
+            border: 1px solid rgba(112, 128, 144, 0.321);
+            box-shadow: 0px 10px 20px -10px #0a595414;
+            border-radius: 5px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
 
-@keyframes fade {
-    0%{
-        opacity: .3;
-    }
+        .off {
+            animation: fadeout .7s ease-in-out;
+        }
 
-    20%{
-        opacity: 1;
-    }
+        .on {
+            animation: fadein .7s ease-in-out;
+        }
 
-    70%{
-        opacity: 1;
-    }
+        .complete-off {
+            display: none;
+        }
 
-    100%{
-        opacity: 0;
-    }
-}
+        @keyframes fadein {
+            0% {
+                opacity: .3;
+            }
 
-.notification p, .notification strong{
-    color: #000006;
-    font-weight: 600;
-}
+            100% {
+                opacity: 1;
+            }
+        }
 
-.notification strong {
-    color: #a73ef8;
-}
+        @keyframes fadeout {
+            0% {
+                opacity: 1;
+                height: 60px;
+            }
 
-.notify-box{
-    width: 350px;
-    height: auto;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    top: 10px;
-    right: 10px;
-    z-index: 9283920282;
-    row-gap: 10px;
-}
+            50% {
+                opacity: 0;
+            }
 
+            70% {
+                opacity: 0;
+                padding: 0;
+                height: 0px;
+            }
+
+            100% {
+                height: 0px;
+                opacity: 0;
+                padding: 0;
+            }
+        }
+
+        .notification p,
+        .notification strong {
+            color: #000006;
+            font-weight: 600;
+        }
+
+        .notification strong {
+            color: #a73ef8;
+        }
+
+        .notify-box {
+            width: 350px;
+            max-height: 350px;
+            overflow-y: hidden;
+            height: auto;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 9283920282;
+            border-radius: 7px;
+            box-shadow: 0px -20px 30px -20px whitesmoke inset;
+        }
+
+        #notify-box {
+            overflow-y: scroll;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 10px;
+        } */
     </style>
 </head>
 
 <body>
-<div class="notify-box" id="notify-box">
-    <!-- <div class="notification" id="notify">
-        <p>You added <strong id="itemname">iPhone 13 Pro Max - 256gb</strong> to cart</p>
-    </div> -->
-</div>
+    <div class="notify-box">
+        <div id="notify-box">
+
+        </div>
+    </div>
     <button id="clear" onclick="localStorage.removeItem('Cart')">Clear Cart</button>
     <script>
-        document.getElementById("clear").addEventListener("click", ()=>{
+        document.getElementById("clear").addEventListener("click", () => {
             localStorage.removeItem('Cart')
             alert("Cart is cleared!")
             document.getElementById("items-in-cart").innerText = "0"
@@ -121,77 +153,78 @@
         </div>
     </section>
     <section class="hero" id="background">
-            <div class="images" id="images">
-                <div class="shade2">
-                    <button type="button" class="tag" id="lm">New</button>
-                </div>
-                <div class="imgs" id="imm1"></div>
-                <div class="imgs" id="imm2"></div>
-                <div class="imgs" id="imm3"></div>
-                <div class="imgs" id="imm4"></div>
-                <div class="imgs" id="imm5"></div>
+        <div class="images" id="images">
+            <div class="shade2">
+                <button type="button" class="tag" id="lm">New</button>
             </div>
-            <div class="shade">
-                <div class="logo-nav">
-                    <nav>
-                        <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
-                    </nav>
-                    <div id="menu">
-                        <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
-                        <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
-                        <ul>
-                            <li>Home</li>
-                            <li>Shop</li>
-                            <li>Blog</li>
-                            <li>About</li>
-                            <li>Contact</li>
-                        </ul> 
+            <div class="imgs" id="imm1"></div>
+            <div class="imgs" id="imm2"></div>
+            <div class="imgs" id="imm3"></div>
+            <div class="imgs" id="imm4"></div>
+            <div class="imgs" id="imm5"></div>
+        </div>
+        <div class="shade">
+            <div class="logo-nav">
+                <nav>
+                    <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
+                </nav>
+                <div id="menu">
+                    <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
+                    <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
+                    <ul>
+                        <li>Home</li>
+                        <li>Shop</li>
+                        <li>Blog</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <h1 class="logo" onclick="goHome()">Geministore.</h1>
+                <div class="login-cart">
+                    <div class="cart-box" onclick="toCart()">
+                        <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
+                        <p id="items-in-cart">0</p>
                     </div>
-                    <h1 class="logo" onclick="goHome()">Geministore.</h1>
-                    <div class="login-cart">
-                        <div class="cart-box" onclick="toCart()">
-                            <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
-                            <p id="items-in-cart">0</p>
+                    <button type="button" class="login">Login</button>
+                </div>
+            </div>
+            <div class="intro-search">
+                <div class="intro-box">
+                    <div class="intro">
+                        <div class="introtext" id="introtext">
+                            <h1><span id="intro">Welcome to the world of</span> <span class="gradient"
+                                    id="gradient">Electronics</span> </h1>
+                            <p id="intro2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae!</p>
                         </div>
-                        <button type="button" class="login">Login</button>
+                        <div class="lm">
+                            <button type="button" class="learn-more" onclick="shopNow()">LET'S GO SHOPPING</button>
+                            <!-- <p>Learn more</p> -->
+                        </div>
                     </div>
                 </div>
-                <div class="intro-search">
-                    <div class="intro-box">
-                        <div class="intro">
-                            <div class="introtext" id="introtext">
-                                <h1><span id="intro">Welcome to the world of</span> <span class="gradient"
-                                        id="gradient">Electronics</span> </h1>
-                                <p id="intro2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae!</p>
-                            </div>
-                            <div class="lm">
-                                <button type="button" class="learn-more" onclick="shopNow()">LET'S GO SHOPPING</button>
-                                <!-- <p>Learn more</p> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="search-section">
-                        <input type="text" class="search" name="" id="" placeholder="Hey 👋🏾, Search for a product here...">
-                        <input type="submit" class="go" value="GO">
-                    </div>
+                <div class="search-section">
+                    <input type="text" class="search" name="" id=""
+                        placeholder="Hey 👋🏾, Search for a product here...">
+                    <input type="submit" class="go" value="GO">
                 </div>
-                <!-- <div class="radios">
+            </div>
+            <!-- <div class="radios">
                     <div class="radio"></div>
                     <div class="radio"></div>
                     <div class="radio"></div>
                     <div class="radio"></div>
                     <div class="radio"></div>
                 </div> -->
-            </div>
-        </section>
-        <section id="body">
+        </div>
+    </section>
+    <section id="body">
         <section class="major-container">
             <section class="recently-added">
                 <div class="mmm">
                     <p class="sel">Recently Added</p>
                 </div>
                 <div class="recent-container" id="recent-container">
-                    <div id="holder-rec"> 
+                    <div id="holder-rec">
                         <!-- <div class="recent">
                             <img src="/IMAGES/bigmonitor.png" alt="">
                             <div class="receInfo">
@@ -268,10 +301,10 @@
                     </div>
                 </div>
             </section>
-    
+
             <section class="weekly selected-for-you">
                 <div class="mmm">
-                    <p class="sel" id = "sel3">Our Weekly Featured</p>
+                    <p class="sel" id="sel3">Our Weekly Featured</p>
                 </div>
                 <div id="weekly-sell" class="sell">
                     <div class="sel-container">
@@ -304,7 +337,7 @@
                     </div>
                 </div>
             </section>
-    
+
             <section class="about">
                 <img src="/IMAGES/varad-murti-GxWwjOjJ5Ss-unsplash.jpg" alt="" class="about-img">
                 <div class="about-text-container">
@@ -363,7 +396,7 @@
                     </div>
                 </div>
             </section>
-    
+
             <section class="visit-out-support">
                 <div class="vv">
                     <h1>Visit our Support Center</h1>

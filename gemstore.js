@@ -92,6 +92,18 @@ let itemName = document.querySelectorAll("#itemName"),
 localStorage.setItem("StoreItems", "");
 let cart = [];
 
+/*POPUP NOTIFICATION*/
+const popupNotification = (itemName) => {
+  let notification = document.getElementById("notify-box");
+  let creatNotBox = document.createElement("div")
+  creatNotBox.classList = " notification on"
+  creatNotBox.innerHTML = `<p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
+  notification.appendChild(creatNotBox)
+  setTimeout(()=>{creatNotBox.classList = " notification off"},2500)
+  setTimeout(()=>{creatNotBox.classList = "complete-off"},3200)
+}
+
+
 class Products {
   /* LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE */
   static selectedForYou() {
@@ -110,9 +122,8 @@ class Products {
     return JSON.parse(localStorage.StoreItems);
   }
 }
-let x = ""
-let cc = 0
-let notArr = [];
+
+
 class Storage {
   /* RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS */
   static getAllProducts() {
@@ -179,10 +190,6 @@ class Storage {
       if(check) {
         check.amount += 1;
         Storage.updateCart(getbackcart)
-        x = `<div class="notification" id="notify">
-        <p>You added <strong id="itemname">iPhone ${cc += 1} Pro Max - 256gb</strong> to cart</p>
-        </div>`
-        notArr.push(x)
       }
 
       if(!check) {
@@ -192,22 +199,6 @@ class Storage {
     };
   }
 }
-
-
-let notification = document.getElementById("notify-box");
-setTimeout(() => {
-  let timeout = 2000
-  setInterval(() => {
-    if(notArr.length > 0){
-      notArr.shift(0, 1);
-      console.log(notArr);
-      for(let i in notArr){
-        notification.innerHTML += notArr[i]
-      }
-    }
-    if(notArr.length <= 0){}
-  }, timeout);
-}, 2000);
 
 
 class displayProduct {
@@ -310,6 +301,7 @@ const addToCartt = (event, ITT) => {
     let pickItemFromStore = ITT.find(
       (item) => item.id === event.target.dataset.id
     );
+    popupNotification(pickItemFromStore.itemInfo.name)
     pickedItem = {
       ...pickItemFromStore,
       amount: 1,
@@ -350,6 +342,7 @@ const addToCart = (event, ITT) => {
   let pickItemFromStore = ITT[`${ItemCategory}`].find(
     (item) => item.id === event.target.dataset.id
   );
+  popupNotification(pickItemFromStore.itemInfo.name)
   pickedItem = {
     ...pickItemFromStore,
     amount: 1,
