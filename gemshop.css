@@ -100,7 +100,6 @@ nav, .login-cart{
 
 .products ul li{
     font-weight: 600;
-    cursor: pointer;
 }
 
 .products{
@@ -335,8 +334,7 @@ nav ul li{
 .filters{
     background-color: whitesmoke;
     width: 25%;
-    max-height: 800px;
-    height: 90vh;
+    height: 800px;
     position: sticky;
     top: 30px;
     padding: 20px;
@@ -350,8 +348,7 @@ nav ul li{
 .fil-head{
     padding: 10px;
     border-bottom: 2px solid #090A0A;
-    height: 50px;
-    background-color: whitesmoke;
+    height: 7%;
 }
 
 .fil-box{
@@ -359,7 +356,7 @@ nav ul li{
     border-bottom: 1px solid #090a0a48;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 3px;
 }
 
 .fil-box h1{
@@ -375,19 +372,6 @@ nav ul li{
     display: flex;
     column-gap: 10px;
     align-items: center;
-}
-
-.minmax{
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border: 1px solid rgba(128, 128, 128, 0.552);
-    padding: 5px;
-    text-align: center;
 }
 
 .filterss{
@@ -537,7 +521,6 @@ strong{
     width: auto;
     position: absolute;
     display: flex;
-    column-gap: 5px;
     top: 0;
     right: 20px;
     /* padding: 15px; */
