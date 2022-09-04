@@ -2,24 +2,18 @@
 
 let filterBox = document.getElementById("filters")
 let showBox = document.getElementById("showbox")
+let gamingBox = document.getElementById("gaming"),
+cellPhoneBox = document.getElementById("cellphones"),
+computerBox = document.getElementById("computer"),
+speakersBox = document.getElementById("speakers"),
+tvsBox = document.getElementById("TV")
+
 
 /*
 
 START CODING HERE....
 
 */
-
-// const sendProductRequest = (url) => {
-//   let req = new XMLHttpRequest()
-//   req.open("GET", url , false)
-//   req.onload = function () {
-//     if(req.status === 200){
-//       return (this.responseText);
-//     }
-//   }
-//   req.send()
-//   return (req.onload());
-// }
 
 
 class Products {
@@ -92,17 +86,6 @@ class loadupItem {
     sendRequest.send();
   }
 
-  static allIpad () {
-    let sendRequest = new XMLHttpRequest();
-    sendRequest.open("GET", "/HTML/all-ipads.html" , false)
-    sendRequest.onreadystatechange = function () {
-      if(sendRequest.status === 200){
-        filterBox.innerHTML = this.response
-      }
-    }
-    sendRequest.send();
-  }
-
   static allSpeaker () {
     let sendRequest = new XMLHttpRequest();
     sendRequest.open("GET", "/HTML/all-speakers.html" , false)
@@ -126,11 +109,9 @@ class loadupItem {
   }
 }
 
-// let m = "gaming"
-// console.log(Products.getAllItems().selectedProducts[0][`${m}`]);
-
+ 
 class display {
-  static items (mRoute, target) {
+  static items (boxID ,mRoute, target) {
     let x = ``;
     for(let i in mRoute[`${target}`]){
       x += `<div class="item-box" onclick="toProduct()">
@@ -153,31 +134,59 @@ class display {
       </div>
   </div>`
     }
-    showBox.innerHTML = x
+
+    boxID.innerHTML =`<h1 class="cat-head">${target}</h1>` + x
+  }
+
+  static displayAll () {
+    loadupItem.allCellPhones()
+    display.items(cellPhoneBox, Products.getAllItems().selectedProducts[0], "cellphones")
+
+    loadupItem.allGaming()
+    display.items(gamingBox, Products.getAllItems().selectedProducts[0], "gaming")
+
+    loadupItem.allComputer()
+    display.items(computerBox, Products.getAllItems().selectedProducts[0], "computers")
+
+    loadupItem.allSpeaker()
+    display.items(speakersBox, Products.getAllItems().selectedProducts[0], "speaker")
+
+    loadupItem.allTv()
+    display.items(tvsBox, Products.getAllItems().selectedProducts[0], "tv")
   }
 }
 
+display.displayAll()
+
 const cellPhones = () => {
   loadupItem.allCellPhones()
-  display.items(Products.getAllItems().selectedProducts[0], "cellphones")
+  display.items(showBox, Products.getAllItems().selectedProducts[0], "cellphones")
 }
+
 
 const Gamings = () => {
   loadupItem.allGaming()
-  display.items(Products.getAllItems().selectedProducts[0], "gaming")
+  display.items(showBox, Products.getAllItems().selectedProducts[0], "gaming")
 }
 
 const Computers = () => {
   loadupItem.allComputer()
-  display.items(Products.getAllItems().selectedProducts[0], "computers")
+  display.items(showBox, Products.getAllItems().selectedProducts[0], "computers")
 }
 
 const Speakers = () => {
   loadupItem.allSpeaker()
-  display.items(Products.getAllItems().selectedProducts[0], "speaker")
+  display.items(showBox, Products.getAllItems().selectedProducts[0], "speaker")
 }
 
 const TVs = () => {
   loadupItem.allTv()
-  display.items(Products.getAllItems().selectedProducts[0], "tv")
+  display.items(showBox, Products.getAllItems().selectedProducts[0], "tv")
 }
+
+/*
+
+PRODUCT DISPLAY
+
+*/
+

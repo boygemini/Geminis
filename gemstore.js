@@ -456,7 +456,13 @@ const moveLeft = () => {
   holder.scrollLeft -= holder.clientWidth;
 };
 
-//MENU
+
+
+/*
+
+MENU
+
+*/
 let menu = document.getElementById("menu"),
   mb = document.getElementById("mb");
 let close = document.querySelectorAll("#close");
@@ -490,52 +496,11 @@ document.addEventListener("click", (e) => {
 });
 
 
-let hs = document.getElementById("hold");
-let search = document.getElementById("search");
-let dir = Storage.getAllProducts().selectedProducts[0]
-let displaybox = document.getElementById("suggestions")
-const showSuggesttions = (dirname, name) => {
-  let x = ""
-  let arr = dirname;
-  let mapp =arr.map(x => {
-    return x.itemInfo.name
-  })
-  let removeDuplicates = [... new Set(mapp)]
 
-  for(let i in removeDuplicates){
-    let list = removeDuplicates[i].toLowerCase();
-    let searchInput = search.value.toLowerCase();
 
-    if(list.includes(searchInput)){
-      x += `<div class="sug"><h1 class="main">${list}</h1><span class="dot"></span><h1 class="in">${name}</h1>
-      </div>`
-      hs.style.opacity = "1"
-      hs.style.transition = ".2s ease-in-out"
-      displaybox.innerHTML = x
-    }
 
-    if(searchInput == ""){
-      hs.style.opacity = "0"
-      hs.style.transition = ".2s ease-in-out"
-    }
-   }
-}
 
-search.addEventListener("input", ()=>{
-  showSuggesttions(dir.gaming, "Gaming")
-  showSuggesttions(dir.cellphones, "Cellphones")
-  showSuggesttions(dir.speaker, "Speakers")
-  showSuggesttions(dir.computers, "Computers")
-  showSuggesttions(dir.TV, "TV")
-})
 
-const mapFunc = (rt,pt) => {
-  let arr = rt[`${pt}`];
-  let filterArr = arr.filter(items => {
-    return items.itemInfo.name == "XBOX 4"
-  })
-  return filterArr
-}
 
 
 console.log("Test : code ran successfully [OK]");
