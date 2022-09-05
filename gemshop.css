@@ -423,6 +423,27 @@ nav ul li{
     row-gap: 20px;
 }
 
+.av-box, .full-cat{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.cat-head{
+    font-size: 20px;
+    font-weight: 600;
+    /* color: #a73ef8; */
+    /* background-color: whitesmoke; */
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-transform: capitalize;
+}
+
 .item-box{
     width: 100%;
     height: 350px;
