@@ -81,7 +81,11 @@ const shopNow = () => {
 
 /* END OF HERO */
 
-/* SELECTED FOR YOU */
+/*
+
+SELECTED FOR YOU
+
+*/
 let itemName = document.querySelectorAll("#itemName"),
   mainDesc = document.querySelectorAll("#maindesc"),
   minDesc = document.querySelectorAll("#mindesc"),
@@ -92,7 +96,12 @@ let itemName = document.querySelectorAll("#itemName"),
 localStorage.setItem("StoreItems", "");
 let cart = [];
 
-/*POPUP NOTIFICATION*/
+
+ /*
+
+  POPUP NOTIFICATION
+
+  */
 const popupNotification = (itemName) => {
   let notification = document.getElementById("notify-box");
   let creatNotBox = document.createElement("div")
@@ -101,11 +110,16 @@ const popupNotification = (itemName) => {
   notification.appendChild(creatNotBox)
   setTimeout(()=>{creatNotBox.classList = " notification off"},2500)
   setTimeout(()=>{creatNotBox.classList = "complete-off"},3200)
+  setTimeout(()=>{creatNotBox.classList = "die"},3200)
 }
 
 
 class Products {
-  /* LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE */
+  /*
+
+  LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
+
+  */
   static selectedForYou() {
     let product_request = new XMLHttpRequest();
     product_request.open("GET", "/JSON/product.json", false);
@@ -117,7 +131,11 @@ class Products {
     product_request.send();
   }
 
-  /* RETRIEVE ALL ITEMS FROM LOCAL STORAGE */
+  /*
+
+   RETRIEVE ALL ITEMS FROM LOCAL STORAGE
+
+   */
   static getSelectedProducts() {
     return JSON.parse(localStorage.StoreItems);
   }
@@ -130,28 +148,48 @@ class Storage {
     return JSON.parse(localStorage.getItem("StoreItems"));
   }
 
-  /* RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS */
+  /*
+
+   RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS
+
+   */
   static getRecentItems() {
     return Storage.getAllProducts().recentlyAdded;
   }
 
-  /* RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS */
+  /*
+
+   RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS
+
+   */
   static weeklyFeaturedItems() {
     return Storage.getAllProducts().WeeklyFeatured;
   }
 
-  /* SAVE ITEMS TO CART */
+  /*
+
+   SAVE ITEMS TO CART
+
+  */
   static saveSelectedItemsToCart(cart) {
     localStorage.Cart = JSON.stringify(cart);
     localStorage.setItem("Cart", localStorage.Cart);
   }
 
-  /* RETRIEVE ALL ITEMS FROM CART */
+   /*
+
+  RETRIEVE ALL ITEMS FROM CART
+
+  */
   static getItemsInCart() {
     return JSON.parse(localStorage.getItem("Cart"));
   }
 
-  /* GET THE NUMBER OF ITEMS IN CART */
+ /*
+
+  GET THE NUMBER OF ITEMS IN CART
+
+  */
   static numberOfItemsInCart() {
     if(Storage.getItemsInCart() === null || undefined) {
       return "0"
@@ -164,17 +202,21 @@ class Storage {
     }
   }
 
-  /* UPDATE CART */
+  /*
+
+  UPDATE CART
+
+  */
   static updateCart(cartName) {
     Storage.saveSelectedItemsToCart(cartName);
     cartDom.innerText = Storage.numberOfItemsInCart();
-    // let not = [... document.querySelectorAll("#notify")]
-    // setInterval(() => {
-    //   console.log(not.shift());
-    // }, 3000);
   }
 
-  /* GET AND SAVE PICKED ITEM TO CART */
+  /*
+
+  GET AND SAVE PICKED ITEM TO CART
+
+  */
   static getItemAndSaveToCart() {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
 
@@ -202,7 +244,11 @@ class Storage {
 
 
 class displayProduct {
-  /* DISPLAY SELECTED FOR YOU ITEMS */
+  /*
+
+  DISPLAY SELECTED FOR YOU ITEMS
+
+  */
   static createItem(category, sub) {
     let itemCreated = " ";
     let Holder = document.getElementById("sel-container");
@@ -231,7 +277,11 @@ class displayProduct {
   }
 
 
-  /* DISPLAY RECENTLY ADDED ITEMS */
+  /*
+
+  DISPLAY RECENTLY ADDED ITEMS
+
+  */
   static displayRecentItems(category, sub) {
     let itemCreated = "";
     let Holder = document.getElementById("holder-rec");
@@ -246,13 +296,17 @@ class displayProduct {
               <span class="itemPricing"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
               <button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
           </div>
-      </div> 
+      </div>
   </div>`;
     }
     Holder.innerHTML = itemCreated;
   }
 
-  /* DISPLAY WEEKLY GEATURE ITEMS */
+  /*
+
+  DISPLAY WEEKLY GEATURE ITEMS
+
+  */
   static displayWeeklyFeatured(category, sub) {
     let itemCreated = "";
     let Holder = document.querySelector(".Weekly-Container");
@@ -282,12 +336,24 @@ class displayProduct {
   }
 }
 
-/* DISPLAY SELECTED PRODUCTS */
+/*
+
+DISPLAY SELECTED PRODUCTS
+
+*/
 Products.selectedForYou();
+
+
+/*
+
+DISPLAYS GAMING ITEMS BY DEFAULT
+
+*/
 displayProduct.createItem(
   Products.getSelectedProducts().selectedProducts[0].gaming,
   "gaming"
-); // DISPLAYS GAMING ITEMS BY DEFAULT
+);
+
 
 /* DISPLAY RECENT PRODUCTS */
 displayProduct.displayRecentItems(Storage.getRecentItems());
@@ -295,7 +361,12 @@ displayProduct.displayRecentItems(Storage.getRecentItems());
 /* DISPLAY RECENT PRODUCTS */
 displayProduct.displayWeeklyFeatured(Storage.weeklyFeaturedItems());
 
-/* ADD RECENT ITEMS TO CART */
+
+/*
+
+ADD RECENT ITEMS TO CART
+
+*/
 const addToCartt = (event, ITT) => {
   function Me() {
     let pickItemFromStore = ITT.find(
@@ -316,7 +387,12 @@ const addToCartt = (event, ITT) => {
   Me();
 };
 
-/* CHANGE TABS BASED ON ITEM'S CATEGORY */
+
+/*
+
+CHANGE TABS BASED ON ITEM'S CATEGORY
+
+*/
 let tab = [...document.querySelectorAll(".tab")];
 tab[0].className += " active-li";
 for (let x in tab) {
@@ -329,7 +405,12 @@ for (let x in tab) {
   });
 }
 
-/* ADD SELECTED ITEMS TO CART */
+
+/*
+
+ADD SELECTED ITEMS TO CART
+
+*/
 let cartDom = document.getElementById("items-in-cart");
 try {
   cartDom.innerText = Storage.numberOfItemsInCart();
@@ -356,7 +437,12 @@ const addToCart = (event, ITT) => {
   }
 };
 
-/* SELECTED FOR YOU SLIDER */
+
+/*
+
+SELECTED FOR YOU SLIDER
+
+*/
 let boxCounter = 0;
 let container = document.getElementById("sel-container");
 let holder = document.getElementById("sel-holder");
@@ -402,6 +488,55 @@ document.addEventListener("click", (e) => {
     removePadding();
   }
 });
+
+
+let hs = document.getElementById("hold");
+let search = document.getElementById("search");
+let dir = Storage.getAllProducts().selectedProducts[0]
+let displaybox = document.getElementById("suggestions")
+const showSuggesttions = (dirname, name) => {
+  let x = ""
+  let arr = dirname;
+  let mapp =arr.map(x => {
+    return x.itemInfo.name
+  })
+  let removeDuplicates = [... new Set(mapp)]
+
+  for(let i in removeDuplicates){
+    let list = removeDuplicates[i].toLowerCase();
+    let searchInput = search.value.toLowerCase();
+
+    if(list.includes(searchInput)){
+      x += `<div class="sug"><h1 class="main">${list}</h1><span class="dot"></span><h1 class="in">${name}</h1>
+      </div>`
+      hs.style.opacity = "1"
+      hs.style.transition = ".2s ease-in-out"
+      displaybox.innerHTML = x
+    }
+
+    if(searchInput == ""){
+      hs.style.opacity = "0"
+      hs.style.transition = ".2s ease-in-out"
+    }
+   }
+}
+
+search.addEventListener("input", ()=>{
+  showSuggesttions(dir.gaming, "Gaming")
+  showSuggesttions(dir.cellphones, "Cellphones")
+  showSuggesttions(dir.speaker, "Speakers")
+  showSuggesttions(dir.computers, "Computers")
+  showSuggesttions(dir.TV, "TV")
+})
+
+const mapFunc = (rt,pt) => {
+  let arr = rt[`${pt}`];
+  let filterArr = arr.filter(items => {
+    return items.itemInfo.name == "XBOX 4"
+  })
+  return filterArr
+}
+
 
 console.log("Test : code ran successfully [OK]");
 //END OF CODE

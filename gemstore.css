@@ -734,17 +734,94 @@ nav ul li {
 .lm p {
     font-size: 12px;
     text-decoration: 2px solid #6507ac underline;
-    color: rgba(245, 245, 245, 0.768);
+    color: #f5f5f5c4;
 }
 
-.search-section {
+.search-section{
     width: 100%;
     margin-top: 50px;
     display: flex;
+    flex-direction: column;
     column-gap: 10px;
     bottom: 30px;
     padding: 0px 0px 0px 40px;
     position: absolute;
+}
+
+.hold{
+    width: 100%;
+    max-height:125px;
+    background-color: rgba(245, 245, 245, 0.332);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 20px 30px -30px whitesmoke;
+    /* border: 1px solid rgba(112, 128, 144, 0.366); */
+    opacity: 0;
+}
+
+.suggestions{
+    width: 100%;
+}
+
+.sug{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dot{
+    width:5px;
+    height:5px;
+    background-color:#aba8a8;
+    border-radius:100%;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    -ms-border-radius:100%;
+    -o-border-radius:100%;
+}
+
+.sug:hover .main{
+    border-bottom: 1px solid black;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.main{
+    border-bottom: 1px solid transparent;
+    padding: 3px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.search-box{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    column-gap: 20px;
+    bottom: 30px;
+}
+
+
+
+.main, .in{
+    font-weight: 600;
+}
+
+.in{
+    color: rgba(128, 128, 128, 0.677);
 }
 
 .search {
@@ -766,6 +843,7 @@ nav ul li {
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     font-size: 15px;
+    outline: none;
 }
 
 .search:hover {
