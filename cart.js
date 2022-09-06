@@ -69,6 +69,7 @@ let cartCounter = document.getElementById("items-in-cart")
 /* Clear Cart */
 const clearCart = () => {
 localStorage.removeItem("Cart")
+totalQuantity.innerHTML = "0"
 cartCounter.innerText = "0"
 totalCar.innerText = "0"
 totalCar2.innerText = "0"
