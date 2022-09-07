@@ -69,10 +69,6 @@ const sendQuery = (event) => {
   window.location.href = url;
 };
 
-// const displayResult = (dir) => {
-//     let x = ""
-//     for(let )
-// }
 
 const onLoad = () => {
   let url = document.URL;
