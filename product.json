@@ -24,7 +24,7 @@
         {
           "id": "1077",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "XBOX 4",
             "itemImg": "/IMAGES/ipad2.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -35,7 +35,7 @@
         {
           "id": "1890",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "PS 2",
             "itemImg": "/IMAGES/ipad2.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -46,7 +46,7 @@
         {
           "id": "1131",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "PS 3",
             "itemImg": "/IMAGES/ipad2.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -57,7 +57,7 @@
         {
           "id": "1001",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "PS 3",
             "itemImg": "/IMAGES/ipad2.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -68,7 +68,7 @@
         {
           "id": "1931",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "PS 4",
             "itemImg": "/IMAGES/ipad2.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -79,7 +79,7 @@
         {
           "id": "7793",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "PS 5",
             "itemImg": "/IMAGES/ipad2.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -90,7 +90,7 @@
         {
           "id": "3392",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "PS 3",
             "itemImg": "/IMAGES/ipad2.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -101,7 +101,7 @@
         {
           "id": "7294",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "PS 3",
             "itemImg": "/IMAGES/ipad2.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -112,7 +112,7 @@
         {
           "id": "1901",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "PS 3",
             "itemImg": "/IMAGES/ipad2.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -125,7 +125,7 @@
         {
           "id": "1040",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "iPhone 13 Pro Max",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -136,7 +136,7 @@
         {
           "id": "1032",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "iPhone 12 Pro Max",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -147,7 +147,7 @@
         {
           "id": "2012",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "iPhone 13 Mini",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -158,7 +158,7 @@
         {
           "id": "2837",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Samsung",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -169,7 +169,7 @@
         {
           "id": "2187",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "infinix",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -180,7 +180,7 @@
         {
           "id": "2010",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "iTel",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -191,7 +191,7 @@
         {
           "id": "2883",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "iTel",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -202,7 +202,7 @@
         {
           "id": "2018",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "iPhone 8 Plus",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -213,7 +213,7 @@
         {
           "id": "2831",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "iPhone 12 Pro Max",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -224,7 +224,7 @@
         {
           "id": "2987",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "iPhone 12",
             "itemImg": "/IMAGES/frontIpad.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -461,7 +461,7 @@
         {
           "id": "5928",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Hisense",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -472,7 +472,7 @@
         {
           "id": "4295",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "LG",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -483,7 +483,7 @@
         {
           "id": "4945",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Midea",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -494,7 +494,7 @@
         {
           "id": "5082",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Hisense",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -505,7 +505,7 @@
         {
           "id": "8425",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Hisense",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -516,7 +516,7 @@
         {
           "id": "1835",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Toshiba",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -527,7 +527,7 @@
         {
           "id": "5942",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Toshiba",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -538,7 +538,7 @@
         {
           "id": "5852",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Midea",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -549,7 +549,7 @@
         {
           "id": "9724",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "LG",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",
@@ -560,7 +560,7 @@
         {
           "id": "3742",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Samsung",
             "itemImg": "/IMAGES/tv5.png",
             "description1": "Lorem ipsum dolor sit amet.",
             "description2": "",

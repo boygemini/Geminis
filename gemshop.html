@@ -8,6 +8,7 @@
     <title>Shop</title>
     <link rel="stylesheet" href="/CSS/gemshop.css">
     <script src="/JAVASCRIPT/gemshop.js" defer></script>
+    <script src="/JAVASCRIPT/search.js" defer></script>
 </head>
 
 <body>
@@ -79,26 +80,51 @@
                     <button class="" type="submit">Apply</button>
                 </div>
             </div>
-            <div class="available-items" id="showbox">
-                <!-- <div class="item-box" onclick="toProduct()">
-                    <img src="/IMAGES/ipad2.png" alt="">
-                    <div class="item-details">
-                        <h1>iPhone 13 Pro Max</h1>
-                        <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
-                        <div class="specifications">
-                            <strong>Refurbished</strong>
-                            <p><strong>Model : </strong>MKLV3LL/A</p>
-                            <p><strong>SKU : </strong>87294820</p>
-                            <p><strong>Color : </strong>Sierra Blue</p>
+            <div class="available-items" id="showbox" onload="onLoad()">
+                <div class="full-cat">
+                    <div class="av-box" id="gaming">
+                        <div class="item-box" onclick="toProduct()">
+                            <img src="/IMAGES/ipad2.png" alt="">
+                            <div class="item-details">
+                                <h1>iPhone 13 Pro Max</h1>
+                                <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
+                                <div class="specifications">
+                                    <strong>Refurbished</strong>
+                                    <p><strong>Model : </strong>MKLV3LL/A</p>
+                                    <p><strong>SKU : </strong>87294820</p>
+                                    <p><strong>Color : </strong>Sierra Blue</p>
+                                </div>
+                            </div>
+                            <div class="buy">
+                                <div class="price-tag">
+                                    <span class="currency">$</span><span class="price">945.99</span>
+                                </div>
+                                <button>Add to Cart</button>
+                            </div>
                         </div>
+                        
                     </div>
-                    <div class="buy">
-                        <div class="price-tag">
-                            <span class="currency">$</span><span class="price">945.99</span>
-                        </div>
-                        <button>Add to Cart</button>
+                </div>
+                <div class="full-cat">
+                    <div class="av-box" id="searc">
                     </div>
-                </div> -->
+                </div>
+                <div class="full-cat">
+                    <div class="av-box" id="cellphones">
+                    </div>
+                </div>
+                <div class="full-cat">
+                    <div class="av-box" id="computer">
+                    </div>
+                </div>
+                <div class="full-cat">
+                    <div class="av-box" id="speakers">
+                    </div>
+                </div>
+                <div class="full-cat">
+                    <div class="av-box" id="TV">
+                    </div>
+                </div>
             </div>
             <section class="visit-our-support">
                 <div class="vv">
