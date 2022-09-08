@@ -358,6 +358,7 @@ displayProduct.createItem(
 /* DISPLAY RECENT PRODUCTS */
 displayProduct.displayRecentItems(Storage.getRecentItems());
 
+
 /* DISPLAY RECENT PRODUCTS */
 displayProduct.displayWeeklyFeatured(Storage.weeklyFeaturedItems());
 
@@ -396,7 +397,7 @@ CHANGE TABS BASED ON ITEM'S CATEGORY
 let tab = [...document.querySelectorAll(".tab")];
 tab[0].className += " active-li";
 for (let x in tab) {
-  tab[x].addEventListener("click", (e) => {
+  tab[x].addEventListener("click", (event) => {
     tab[0].className = tab[0].className.replace(" active-li", "");
     for (let y in tab) {
       tab[y].classList.remove("active-li");
@@ -494,11 +495,6 @@ document.addEventListener("click", (e) => {
     removePadding();
   }
 });
-
-
-
-
-
 
 
 
