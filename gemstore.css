@@ -215,6 +215,7 @@ body {
         margin-top: -10px;
         opacity: 1;
         padding: 0px;
+        height: 40px;
     }
 
     70% {
@@ -227,6 +228,7 @@ body {
         -moz-transform: scale(0);
         -ms-transform: scale(0);
         -o-transform: scale(0);
+        height: 20px;
     }
 
     100% {
@@ -234,6 +236,11 @@ body {
         opacity: 0;
         padding: 0px;
         margin-top: -10px;
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
     }
 }
 
