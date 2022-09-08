@@ -52,64 +52,41 @@ class Products {
 Products.saveItems() //Fetch All Items and store them
 
 
+const getItemsByCategory = (url) => {
+let sendRequest = new XMLHttpRequest();
+  sendRequest.open("GET", url , false)
+  sendRequest.onreadystatechange = function () {
+    if(sendRequest.status === 200){
+      filterBox.innerHTML = this.response
+    }
+  }
+  sendRequest.send();
+}
+
+
 class loadupItem {
   static allCellPhones () {
-    let sendRequest = new XMLHttpRequest();
-    sendRequest.open("GET", "/HTML/all-phones.html" , false)
-    sendRequest.onreadystatechange = function () {
-      if(sendRequest.status === 200){
-        filterBox.innerHTML = this.response
-      }
-    }
-    sendRequest.send();
+    getItemsByCategory("/HTML/all-phones.html")
   }
 
   static allGaming () {
-    let sendRequest = new XMLHttpRequest();
-    sendRequest.open("GET", "/HTML/all-games.html" , false)
-    sendRequest.onreadystatechange = function () {
-      if(sendRequest.status === 200){
-        filterBox.innerHTML = this.response
-      }
-    }
-    sendRequest.send();
+    getItemsByCategory("/HTML/all-games.html")
   }
 
   static allComputer () {
-    let sendRequest = new XMLHttpRequest();
-    sendRequest.open("GET", "/HTML/all-computers.html" , false)
-    sendRequest.onreadystatechange = function () {
-      if(sendRequest.status === 200){
-        filterBox.innerHTML = this.response
-      }
-    }
-    sendRequest.send();
+    getItemsByCategory("/HTML/all-computers.html")
   }
 
   static allSpeaker () {
-    let sendRequest = new XMLHttpRequest();
-    sendRequest.open("GET", "/HTML/all-speakers.html" , false)
-    sendRequest.onreadystatechange = function () {
-      if(sendRequest.status === 200){
-        filterBox.innerHTML = this.response
-      }
-    }
-    sendRequest.send();
+    getItemsByCategory("/HTML/all-speakers.html")
   }
 
   static allTv () {
-    let sendRequest = new XMLHttpRequest();
-    sendRequest.open("GET", "/HTML/all-tvs.html" , false)
-    sendRequest.onreadystatechange = function () {
-      if(sendRequest.status === 200){
-        filterBox.innerHTML = this.response
-      }
-    }
-    sendRequest.send();
+    getItemsByCategory("/HTML/all-tvs.html")
   }
 }
 
- 
+
 class display {
   static items (boxID ,mRoute, target) {
     let x = ``;
@@ -134,9 +111,9 @@ class display {
       </div>
   </div>`
     }
-
     boxID.innerHTML =`<h1 class="cat-head">${target}</h1>` + x
   }
+
 
   static displayAll () {
     loadupItem.allCellPhones()
@@ -156,7 +133,9 @@ class display {
   }
 }
 
+
 display.displayAll()
+
 
 const cellPhones = () => {
   loadupItem.allCellPhones()
@@ -169,15 +148,18 @@ const Gamings = () => {
   display.items(showBox, Products.getAllItems().selectedProducts[0], "gaming")
 }
 
+
 const Computers = () => {
   loadupItem.allComputer()
   display.items(showBox, Products.getAllItems().selectedProducts[0], "computers")
 }
 
+
 const Speakers = () => {
   loadupItem.allSpeaker()
   display.items(showBox, Products.getAllItems().selectedProducts[0], "speaker")
 }
+
 
 const TVs = () => {
   loadupItem.allTv()
