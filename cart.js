@@ -202,7 +202,7 @@ class CartItems {
       checkButton.disabled = true
       checkButton.style.opacity = "50%"
     }
-    
+
     else{
       checkButton.disabled = false
       checkButton.style.opacity = "100%"
@@ -243,11 +243,7 @@ class CartItems {
 
   static sumTotal () {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
-    if(getbackcart === null){
-      return "0"
-    }
-
-    if(getbackcart.length === 0){
+    if(getbackcart === null || getbackcart.length === 0){
       return "0"
     }
 
@@ -259,6 +255,7 @@ class CartItems {
     }
   }
 }
+
 
 class displayItems {
     static CART (category) {
