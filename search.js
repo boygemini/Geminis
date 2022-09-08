@@ -20,13 +20,11 @@ const showSuggesttions = (dirname, name) => {
   let mapp = arr.map((x) => {
     return x.itemInfo.name;
   });
-  console.log(mapp);
-//   let removeDuplicates = [...new Set(mapp)];
-
-  for (let i in mapp) {
-    let list = mapp[i].toLowerCase();
+  // console.log(mapp);
+  let removeDuplicates = [...new Set(mapp)];
+  for (let i in removeDuplicates) {
+    let list = removeDuplicates[i].toLowerCase();
     let searchInput = search.value.toLowerCase();
-
     //Show Suggestions
     if (list.includes(searchInput)) {
       x += `<div class="sug"><h1 class="main">${list}</h1><span class="dot"></span><h1 class="in">${name}</h1>
@@ -58,6 +56,7 @@ search.addEventListener("input", () => {
   showSuggesttions(dir.tv, "TV");
 });
 
+
 const sendQuery = (event) => {
   let query = event.target.firstChild.innerText;
   let queryCategory = event.target.children[2].innerText;
@@ -68,7 +67,6 @@ const sendQuery = (event) => {
     encodeURIComponent(queryCategory);
   window.location.href = url;
 };
-
 
 const onLoad = () => {
   let url = document.URL;
