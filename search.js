@@ -88,7 +88,11 @@ const onLoad = () => {
     Query = Query.replace(/%20/g, " ");
   }
 
+  displaySuggestion = (directory, Query)
+};
 
+
+const displaySuggestion = (directory, Query) => {
   let x = ""
   for(let k in directory){
       if(directory[k].itemInfo.name.toLowerCase().includes(Query)){
@@ -114,5 +118,6 @@ const onLoad = () => {
       }
   }
   showBox.innerHTML =`<h1 class="cat-head">Results for "${Query}"</h1>` + x
-};
+}
+
 window.onload = onLoad;
