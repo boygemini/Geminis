@@ -88,7 +88,7 @@ const onLoad = () => {
     Query = Query.replace(/%20/g, " ");
   }
 
-  displaySuggestion = (directory, Query)
+  displaySuggestion(directory, Query)
 };
 
 
