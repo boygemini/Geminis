@@ -25,7 +25,8 @@ const goHome = () => {
 
 
 //MENU
-let menu = document.getElementById("menu"), mb = document.getElementById("mb");
+let menu = document.getElementById("menu"),
+  mb = document.getElementById("mb");
 let close = document.querySelectorAll("#close");
 menu.style.display = "none";
 
@@ -36,7 +37,7 @@ const removePadding = () => {
 };
 
 
- /* OPEN MENU */
+/* OPEN MENU */
 const openMenu = (e) => {
   menu.style.display = "flex";
   removePadding();
@@ -47,7 +48,7 @@ const openMenu = (e) => {
 };
 
 
- /* CLOSE MENU */
+/* CLOSE MENU */
 const closeMenu = () => {
   removePadding();
   setTimeout(() => {
@@ -68,15 +69,15 @@ let cartCounter = document.getElementById("items-in-cart")
 
 /* Clear Cart */
 const clearCart = () => {
-localStorage.removeItem("Cart")
-totalQuantity.innerHTML = "0"
-cartCounter.innerText = "0"
-totalCar.innerText = "0"
-totalCar2.innerText = "0"
-checkButton.disabled = true
-checkButton.style.opacity = "50%"
-document.getElementById("allTotal").innerText = _item.allTotal()
-Storage.indicateEmptyCart()
+  localStorage.removeItem("Cart")
+  totalQuantity.innerHTML = "0"
+  cartCounter.innerText = "0"
+  totalCar.innerText = "0"
+  totalCar2.innerText = "0"
+  checkButton.disabled = true
+  checkButton.style.opacity = "50%"
+  document.getElementById("allTotal").innerText = _item.allTotal()
+  Storage.indicateEmptyCart()
 }
 
 
@@ -84,44 +85,42 @@ class Storage {
   /* RETRIEVE ITEMS IN CART */
   static getFees() {
     return JSON.parse(localStorage.getItem("StoreItems"));
-}
+  }
 
   /* RETRIEVE ITEMS IN CART */
   static getItemsInCart() {
-        return JSON.parse(localStorage.getItem("Cart"));
-    }
+    return JSON.parse(localStorage.getItem("Cart"));
+  }
 
   /* GET THE NUMBER OF ITEMS IN CART */
   static numberOfItemsInCart() {
-    if(Storage.getItemsInCart() === null || undefined) {
+    if (Storage.getItemsInCart() === null || undefined) {
       return "0"
-    }
-
-    else {
+    } else {
       let mapCart = Storage.getItemsInCart().map(cI => cI.amount)
-      let reduceCart = mapCart.reduce((x,y) => x+y, 0)
+      let reduceCart = mapCart.reduce((x, y) => x + y, 0)
       return reduceCart;
     }
   }
 
   /* EMPTY CART INDICATOR */
-  static indicateEmptyCart () {
-    if(Number(Storage.numberOfItemsInCart()) === 0){
+  static indicateEmptyCart() {
+    if (Number(Storage.numberOfItemsInCart()) === 0) {
       Holder.innerHTML = `<div class = "empty-cart"><p>Oopps, your cart is empty 😒</p></div>`
-      Holder.style.justifyContent = "center" 
-      Holder.style.alignItems = "center" 
+      Holder.style.justifyContent = "center"
+      Holder.style.alignItems = "center"
     }
   }
 }
 
 class _item {
-   /* DISPLAY SUM OF ALL ITEMS */
-  static sumTotal () {
+  /* DISPLAY SUM OF ALL ITEMS */
+  static sumTotal() {
     let Q2 = document.querySelectorAll("#q2")
     let totalItemPrice = document.querySelectorAll("#price")
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let allTotal = document.getElementById("allTotal");
-    for(let i in getbackcart){
+    for (let i in getbackcart) {
       let sum = Number(getbackcart[i].amount) * Number(getbackcart[i].itemInfo.newItemPrice)
       getbackcart[i].itemInfo.itemTotal = sum
       localStorage.Cart = JSON.stringify(getbackcart)
@@ -134,18 +133,18 @@ class _item {
   }
 
   static allTotal() {
-    return ((Number(CartItems.sumTotal()) + Number(Storage.getFees().taxesAndDeliveryFees[0].deliveryFee) + Number(Storage.getFees().taxesAndDeliveryFees[0].tax)) - ((Number(Storage.getFees().taxesAndDeliveryFees[0].discount)/100)*Number(CartItems.sumTotal()))).toFixed(2)
+    return ((Number(CartItems.sumTotal()) + Number(Storage.getFees().taxesAndDeliveryFees[0].deliveryFee) + Number(Storage.getFees().taxesAndDeliveryFees[0].tax)) - ((Number(Storage.getFees().taxesAndDeliveryFees[0].discount) / 100) * Number(CartItems.sumTotal()))).toFixed(2)
   }
 }
 
 class CartItems {
- /* INCREASE QUNTITY OF AN ITEM */
-  static increaseItem (altheredItemID) {
+  /* INCREASE QUNTITY OF AN ITEM */
+  static increaseItem(altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let amt = document.querySelectorAll("#amount");
     let itemID = Number(altheredItemID);
-    for(let i in getbackcart){
-      if(itemID === Number(getbackcart[i].id)){
+    for (let i in getbackcart) {
+      if (itemID === Number(getbackcart[i].id)) {
         getbackcart[i].amount += 1
         amt[i].value = getbackcart[i].amount
         localStorage.Cart = JSON.stringify(getbackcart)
@@ -158,14 +157,14 @@ class CartItems {
   }
 
   /* DECREASE QUNTITY OF AN ITEM */
-  static decreaseItem (altheredItemID) {
+  static decreaseItem(altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let amt = document.querySelectorAll("#amount");
     let itemID = Number(altheredItemID);
-    for(let i in getbackcart){ 
-      if(itemID === Number(getbackcart[i].id)){
+    for (let i in getbackcart) {
+      if (itemID === Number(getbackcart[i].id)) {
         getbackcart[i].amount -= 1
-        if(getbackcart[i].amount < 1){
+        if (getbackcart[i].amount < 1) {
           boxModal.style.display = "flex"
           yes.addEventListener("click", () => {
             boxModal.style.display = "none"
@@ -187,12 +186,12 @@ class CartItems {
   }
 
   /* REMOVE ITEM FROM CART */
-  static removeItem (altheredItemID) {
+  static removeItem(altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = altheredItemID;
     let filteredCart = getbackcart.filter((items) => items.id !== itemID.toString())
 
-    if(filteredCart.length === 0){
+    if (filteredCart.length === 0) {
       totalCar.innerText = "0"
       totalCar2.innerText = "0"
       allTotal.innerText = (Number(Storage.getFees().taxesAndDeliveryFees[0].deliveryFee) + Number(Storage.getFees().taxesAndDeliveryFees[0].tax)).toFixed(2)
@@ -201,9 +200,7 @@ class CartItems {
       document.getElementById("tax").innerText = Storage.getFees().taxesAndDeliveryFees[0].tax
       checkButton.disabled = true
       checkButton.style.opacity = "50%"
-    }
-
-    else{
+    } else {
       checkButton.disabled = false
       checkButton.style.opacity = "100%"
     }
@@ -217,20 +214,20 @@ class CartItems {
   }
 
   /* CONTROLS THE TOTAL QUANTITY OF A SPECIFIC ITEM */
-  static updateQuantity (altheredItemID) {
+  static updateQuantity(altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let inputedAmount = Number(event.target.value)
     let itemID = Number(altheredItemID);
-    for(let i in getbackcart){
-      if(itemID === Number(getbackcart[i].id)){
+    for (let i in getbackcart) {
+      if (itemID === Number(getbackcart[i].id)) {
 
-        if(inputedAmount === 0){
+        if (inputedAmount === 0) {
           alert("Sorry, please enter a number > 0")
           localStorage.Cart = JSON.stringify(getbackcart)
           event.target.value = getbackcart[i].amount
         }
 
-        if(inputedAmount > 0) {
+        if (inputedAmount > 0) {
           getbackcart[i].amount = inputedAmount
           localStorage.Cart = JSON.stringify(getbackcart)
           cartCounter.innerText = Storage.numberOfItemsInCart()
@@ -241,14 +238,16 @@ class CartItems {
     _item.sumTotal()
   }
 
-  static sumTotal () {
+  static sumTotal() {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
-    if(getbackcart === null || getbackcart.length === 0){
+    if (getbackcart === null || getbackcart.length === 0) {
       return "0"
     }
 
-    if(getbackcart.length !== 0){
-      let filterCart = getbackcart.filter(it => {return it.itemInfo})
+    if (getbackcart.length !== 0) {
+      let filterCart = getbackcart.filter(it => {
+        return it.itemInfo
+      })
       let mappedCart = filterCart.map(item => Number(item.itemInfo.itemTotal))
       let reducedCart = mappedCart.reduce((x, y) => x + y)
       return reducedCart;
@@ -258,23 +257,23 @@ class CartItems {
 
 
 class displayItems {
-    static CART (category) {
+  static CART(category) {
     let itemCreated = "";
     for (let i in category) {
 
       /* ITEM QUANTITY */
       const getCount = () => {
-          return category[i].amount
+        return category[i].amount
       }
 
       /* ITEM NUMBERING */
       const displayNumbering = () => {
-        if(i < 10){
-          return "0" + (Number(i)+ 1)
+        if (i < 10) {
+          return "0" + (Number(i) + 1)
         }
 
-        if(i >= 10){
-          return (Number(i))+ 1
+        if (i >= 10) {
+          return (Number(i)) + 1
         }
       }
 
@@ -341,27 +340,26 @@ Storage.indicateEmptyCart();
 /* DISABLE CHECKOUT BUTTON IF CART IS EMPTY */
 let getbackcart = JSON.parse(localStorage.getItem("Cart"));
 try {
-    if(getbackcart === null){
-      checkButton.disabled = true
-      checkButton.style.opacity = "50%"
-    }
+  if (getbackcart === null) {
+    checkButton.disabled = true
+    checkButton.style.opacity = "50%"
+  }
 
-    if(getbackcart.length === 0){
-      checkButton.disabled = true
-      checkButton.style.opacity = "50%"
-    }
+  if (getbackcart.length === 0) {
+    checkButton.disabled = true
+    checkButton.style.opacity = "50%"
+  }
 
-    if(getbackcart.length > 0){
-      checkButton.disabled = false
-      checkButton.style.opacity = "100%"
-    }
-  } catch (error) {
-}
+  if (getbackcart.length > 0) {
+    checkButton.disabled = false
+    checkButton.style.opacity = "100%"
+  }
+} catch (error) {}
 
 
 
 /* DISPLAY ITEMS IN CART IF IT IS NOT EMPTY */
-if(Number(Storage.numberOfItemsInCart()) !== 0){
+if (Number(Storage.numberOfItemsInCart()) !== 0) {
   displayItems.CART(Storage.getItemsInCart())
 }
 

@@ -84,7 +84,7 @@ const onLoad = () => {
   let directory = dir[`${Category}`]
 
 
-  if(Query.lastIndexOf("%20") > -1){
+  if (Query.lastIndexOf("%20") > -1) {
     Query = Query.replace(/%20/g, " ");
   }
 
@@ -94,9 +94,9 @@ const onLoad = () => {
 
 const displaySuggestion = (directory, Query) => {
   let x = ""
-  for(let k in directory){
-      if(directory[k].itemInfo.name.toLowerCase().includes(Query)){
-        x += `<div class="item-box" onclick="toProduct()">
+  for (let k in directory) {
+    if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
+      x += `<div class="item-box" onclick="toProduct()">
         <img src=${directory[k].itemInfo.itemImg} alt="">
         <div class="item-details">
             <h1>${directory[k].itemInfo.name}</h1>
@@ -115,9 +115,9 @@ const displaySuggestion = (directory, Query) => {
             <button>Add to Cart</button>
         </div>
     </div>`
-      }
+    }
   }
-  showBox.innerHTML =`<h1 class="cat-head">Results for "${Query}"</h1>` + x
+  showBox.innerHTML = `<h1 class="cat-head">Results for "${Query}"</h1>` + x
 }
 
 window.onload = onLoad;

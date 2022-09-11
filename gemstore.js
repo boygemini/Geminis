@@ -44,7 +44,7 @@ const disOther = () => {
     for (let i = 0; i <= images.length; i++) {
       images[i].style.display = "none";
     }
-  } catch (error) { }
+  } catch (error) {}
 };
 
 const increSlide = () => {
@@ -97,20 +97,26 @@ localStorage.setItem("StoreItems", "");
 let cart = [];
 
 
- /*
+/*
 
-  POPUP NOTIFICATION
+ POPUP NOTIFICATION
 
-  */
+ */
 const popupNotification = (itemName) => {
   let notification = document.getElementById("notify-box");
   let creatNotBox = document.createElement("div")
   creatNotBox.classList = " notification on"
   creatNotBox.innerHTML = `<p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
   notification.appendChild(creatNotBox)
-  setTimeout(()=>{creatNotBox.classList = " notification off"},2500)
-  setTimeout(()=>{creatNotBox.classList = "complete-off"},3200)
-  setTimeout(()=>{creatNotBox.classList = "die"},3200)
+  setTimeout(() => {
+    creatNotBox.classList = " notification off"
+  }, 2500)
+  setTimeout(() => {
+    creatNotBox.classList = "complete-off"
+  }, 3200)
+  setTimeout(() => {
+    creatNotBox.classList = "die"
+  }, 3200)
 }
 
 
@@ -176,7 +182,7 @@ class Storage {
     localStorage.setItem("Cart", localStorage.Cart);
   }
 
-   /*
+  /*
 
   RETRIEVE ALL ITEMS FROM CART
 
@@ -185,19 +191,17 @@ class Storage {
     return JSON.parse(localStorage.getItem("Cart"));
   }
 
- /*
+  /*
 
-  GET THE NUMBER OF ITEMS IN CART
+   GET THE NUMBER OF ITEMS IN CART
 
-  */
+   */
   static numberOfItemsInCart() {
-    if(Storage.getItemsInCart() === null || undefined) {
+    if (Storage.getItemsInCart() === null || undefined) {
       return "0"
-    }
-
-    else {
+    } else {
       let mapCart = Storage.getItemsInCart().map(cI => cI.amount)
-      let reduceCart = mapCart.reduce((x,y) => x+y, 0)
+      let reduceCart = mapCart.reduce((x, y) => x + y, 0)
       return reduceCart;
     }
   }
@@ -229,12 +233,12 @@ class Storage {
       let pickedItemID = event.target.dataset.id;
       let check = getbackcart.find(item => item.id === pickedItemID)
 
-      if(check) {
+      if (check) {
         check.amount += 1;
         Storage.updateCart(getbackcart)
       }
 
-      if(!check) {
+      if (!check) {
         getbackcart = [...getbackcart, pickedItem]
         Storage.updateCart(getbackcart)
       }
@@ -381,7 +385,7 @@ const addToCartt = (event, ITT) => {
     if (pickItemFromStore) {
       try {
         Storage.getItemAndSaveToCart();
-      } catch (error) { }
+      } catch (error) {}
     }
   }
 
@@ -415,7 +419,7 @@ ADD SELECTED ITEMS TO CART
 let cartDom = document.getElementById("items-in-cart");
 try {
   cartDom.innerText = Storage.numberOfItemsInCart();
-} catch (error) { } // Displays number of Items in Cart
+} catch (error) {} // Displays number of Items in Cart
 let pickedItem;
 
 let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
@@ -430,8 +434,8 @@ const addToCart = (event, ITT) => {
     amount: 1,
   };
   if (pickItemFromStore) {
-      try {
-        Storage.getItemAndSaveToCart();
+    try {
+      Storage.getItemAndSaveToCart();
     } catch (error) {
       console.log(error);
     }
