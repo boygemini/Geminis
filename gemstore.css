@@ -1,3 +1,40 @@
+@font-face {
+    font-display: block;
+    font-family: 'DSIndigo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Regular.woff2') format('woff2'),
+        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-display: block;
+    font-family: 'DSIndigo';
+    font-style: normal;
+    font-weight: 500;
+    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Medium.woff2') format('woff2'),
+        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-display: block;
+    font-family: 'DSIndigo';
+    font-style: normal;
+    font-weight: 600;
+    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Semibold.woff2') format('woff2'),
+        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Semibold.woff') format('woff');
+}
+
+@font-face {
+    font-display: block;
+    font-family: 'DSIndigo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Bold.woff2') format('woff2'),
+        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Bold.woff') format('woff');
+}
+
+
 *::-webkit-scrollbar {
     width: 0px;
 }
@@ -18,10 +55,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "open sans";
+    font-family: DSIndigo, Helvetica, Arial, sans-serif;
     color: #090A0A;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
     scroll-behavior: smooth;
 }
 
@@ -179,7 +216,7 @@ body {
         -ms-transform: scale(.3);
         -o-transform: scale(.3);
         margin-top: 0px;
-}
+    }
 
     70% {
         opacity: 1;
@@ -519,7 +556,7 @@ nav ul {
 
 nav ul li {
     color: #090A0A;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .menu {
@@ -592,7 +629,7 @@ nav ul li {
     cursor: pointer;
     border-radius: 10px;
     color: #090A0A;
-    font-family: "lato";
+    font-family: DSIndigo, Helvetica, Arial, sans-serif;
     height: 100%;
     display: flex;
     align-items: center;
@@ -712,9 +749,9 @@ nav ul li {
 
 
 .intro h1 span {
-    font-family: "open sans";
+    font-family: DSIndigo, Helvetica, Arial, sans-serif;
     color: #090A0A;
-    font-weight: 800;
+    font-weight: bold;
     font-size: 50px;
 }
 
@@ -748,7 +785,7 @@ nav ul li {
     margin-top: 30px;
     font-size: 17px;
     font-weight: 400;
-    font-family: "open sans";
+    font-family: DSIndigo, Helvetica, Arial, sans-serif;
 }
 
 .learn-more {
@@ -790,7 +827,7 @@ nav ul li {
 
 .hold {
     width: 100%;
-    max-height:125px;
+    max-height: 125px;
     background-color: rgba(245, 245, 245, 0.332);
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -971,7 +1008,7 @@ nav ul li {
     font-size: 22px;
     font-weight: 900;
     width: 30%;
-    font-family: "lato";
+    font-family: DSIndigo, Helvetica, Arial, sans-serif;
     color: #090A0A;
 }
 
@@ -1055,7 +1092,7 @@ nav ul li {
     padding: 3px 5px;
     align-self: flex-start;
     position: absolute;
-    font-family: 'Open Sans';
+    font-family: DSIndigo, Helvetica, Arial, sans-serif;
     font-weight: 600;
     top: 0;
     right: 0;
@@ -1124,7 +1161,7 @@ nav ul li {
     font-weight: 600;
     transition: .3s ease-in-out;
     cursor: pointer;
-    font-family: "lato";
+    font-family: DSIndigo, Helvetica, Arial, sans-serif;
     height: 100%;
     border-top: none;
     border-left: none;
@@ -1458,7 +1495,7 @@ nav ul li {
 .a-text h2 {
     font-size: 15px;
     font-weight: 700;
-    font-family: "lato";
+    font-family: DSIndigo, Helvetica, Arial, sans-serif;
 }
 
 .a-text p {
