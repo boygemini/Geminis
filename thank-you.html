@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="thank-you.css">
+    <link rel="stylesheet" href="/CSS/thank-you.css">
+    <link rel="stylesheet" href="/CSS/gemfonts.css">
 </head>
 
-<body> 
+<body>
     <section class="slimbanner">
         <div class="slimcontent">
             <div class="slimb-left">
@@ -103,16 +104,16 @@
                 </div>
             </div>
         </div>
-        
+
         <section class="cart-full-details">
             <div class="orders-in-cart">
                 <div class="confirmation-code">
                     <img src="/IMAGES/order.png" alt="">
                     <div class="confirm-note">
                         <h1>Thank you!</h1>
-                    <p>Your order has been placed. Your confirmation code is <strong>A25GJE200OD93J24</strong></p>
+                        <p>Your order has been placed. Your confirmation code is <strong>A25GJE200OD93J24</strong></p>
                     </div>
-                 </div>
+                </div>
             </div>
 
 
@@ -127,8 +128,14 @@
 
             <div class="breakdown">
                 <div class="delivery">
-                    <div class="dels"><p>Delivery : </p><h2>Free</h2></div>
-                    <div class="dels2"><p>Delivery by </p><h2>July 25th, 2022</h2></div>
+                    <div class="dels">
+                        <p>Delivery : </p>
+                        <h2>Free</h2>
+                    </div>
+                    <div class="dels2">
+                        <p>Delivery by </p>
+                        <h2>July 25th, 2022</h2>
+                    </div>
                 </div>
                 <div class="breaking">
                     <div class="sub-total">
@@ -161,58 +168,58 @@
         </section>
 
 
-    <footer>
-        <h1>
-            Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
-        </h1>
-    </footer>
+        <footer>
+            <h1>
+                Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
+            </h1>
+        </footer>
 
 
 
-    <script>
-        "use strict"
+        <script>
+            "use strict"
 
-        const toCart = () => {
-            window.location.href = ("/HTML/cart.html")
-        }
-
-        const goHome = () => {
-            window.location.href = "/HTML/gemstore.html";
-        }
-
-        //Menu
-        let menu = document.getElementById("menu"),
-            mb = document.getElementById("mb")
-        let close = document.querySelectorAll("#close");
-        menu.style.display = "none"
-
-        const removePadding = () => {
-            menu.style.height = "0px"
-            menu.style.padding = "0px";
-        }
-
-        const openMenu = (e) => {
-            menu.style.display = "flex"
-            removePadding()
-            setTimeout(() => {
-                menu.style.paddingTop = "20px";
-                menu.style.height = "400px";
-            }, 20)
-        }
-
-        const closeMenu = () => {
-            removePadding()
-            setTimeout(() => {
-                menu.style.display = "none"
-            }, 520);
-        }
-
-        document.addEventListener("click", (e) => {
-            if (e.target !== menu && menu.clientHeight > 0) {
-                removePadding()
+            const toCart = () => {
+                window.location.href = ("/HTML/cart.html")
             }
-        })
-    </script>
+
+            const goHome = () => {
+                window.location.href = "/HTML/gemstore.html";
+            }
+
+            //Menu
+            let menu = document.getElementById("menu"),
+                mb = document.getElementById("mb")
+            let close = document.querySelectorAll("#close");
+            menu.style.display = "none"
+
+            const removePadding = () => {
+                menu.style.height = "0px"
+                menu.style.padding = "0px";
+            }
+
+            const openMenu = (e) => {
+                menu.style.display = "flex"
+                removePadding()
+                setTimeout(() => {
+                    menu.style.paddingTop = "20px";
+                    menu.style.height = "400px";
+                }, 20)
+            }
+
+            const closeMenu = () => {
+                removePadding()
+                setTimeout(() => {
+                    menu.style.display = "none"
+                }, 520);
+            }
+
+            document.addEventListener("click", (e) => {
+                if (e.target !== menu && menu.clientHeight > 0) {
+                    removePadding()
+                }
+            })
+        </script>
 </body>
 
 </html>
