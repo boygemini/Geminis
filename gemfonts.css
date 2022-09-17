@@ -1,0 +1,59 @@
+@font-face {
+    font-display: block;
+    font-family: 'DSIndigo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Regular.woff2') format('woff2'),
+        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-display: block;
+    font-family: 'DSIndigo';
+    font-style: normal;
+    font-weight: 500;
+    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Medium.woff2') format('woff2'),
+        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-display: block;
+    font-family: 'DSIndigo';
+    font-style: normal;
+    font-weight: 600;
+    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Semibold.woff2') format('woff2'),
+        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Semibold.woff') format('woff');
+}
+
+@font-face {
+    font-display: block;
+    font-family: 'DSIndigo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Bold.woff2') format('woff2'),
+        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Bold.woff') format('woff');
+}
+
+
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+    width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    width: 0px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: DSIndigo,Helvetica,Arial,sans-serif;
+    color: #090A0A;
+    font-weight: 400;
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
