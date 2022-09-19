@@ -5,8 +5,9 @@ let totalCar2 = document.getElementById("cartsum2")
 let totalQuantity = document.getElementById("totalquantity")
 let checkButton = document.getElementById("checkout")
 let boxModal = document.getElementById("boxmodal")
-let yes = document.getElementById("yes")
-let no = document.getElementById("no")
+let AskbuttonDiv = document.getElementById("askbuttondiv")
+let Message = document.getElementById("message")
+
 
 /*Button links*/
 const toShop = () => {
@@ -73,7 +74,7 @@ const clearCart = () => {
   totalQuantity.innerHTML = "0"
   cartCounter.innerText = "0"
   totalCar.innerText = "0"
-  totalCar2.innerText = "0"
+  // totalCar2.innerText = "0"
   checkButton.disabled = true
   checkButton.style.opacity = "50%"
   document.getElementById("allTotal").innerText = _item.allTotal()
@@ -127,7 +128,7 @@ class _item {
       totalItemPrice[i].innerText = getbackcart[i].itemInfo.itemTotal
       Q2[i].innerText = getbackcart[i].amount
       totalCar.innerText = CartItems.sumTotal()
-      totalCar2.innerText = CartItems.sumTotal()
+      // totalCar2.innerText = CartItems.sumTotal()
       allTotal.innerText = _item.allTotal()
     }
   }
@@ -150,7 +151,7 @@ class CartItems {
         localStorage.Cart = JSON.stringify(getbackcart)
         cartCounter.innerText = Storage.numberOfItemsInCart()
         totalQuantity.innerText = Storage.numberOfItemsInCart()
-        totalCar2.innerText = CartItems.sumTotal()
+        // totalCar2.innerText = CartItems.sumTotal()
       }
       _item.sumTotal() //
     }
@@ -166,10 +167,15 @@ class CartItems {
         getbackcart[i].amount -= 1
         if (getbackcart[i].amount < 1) {
           boxModal.style.display = "flex"
+          AskbuttonDiv.innerHTML = `<button class="askbutton no" id="no">No</button><button
+                    class="askbutton yes" id="yes">Yes</button>`
+          Message.innerText = "Do you want to remove this item from cart?"
+
           yes.addEventListener("click", () => {
             boxModal.style.display = "none"
             return CartItems.removeItem(altheredItemID)
           })
+
           no.addEventListener("click", () => {
             boxModal.style.display = "none"
           })
@@ -179,7 +185,7 @@ class CartItems {
         localStorage.Cart = JSON.stringify(getbackcart)
         cartCounter.innerText = Storage.numberOfItemsInCart()
         totalQuantity.innerText = Storage.numberOfItemsInCart()
-        totalCar2.innerText = CartItems.sumTotal()
+        // totalCar2.innerText = CartItems.sumTotal()
       }
       _item.sumTotal()
     }
@@ -193,7 +199,7 @@ class CartItems {
 
     if (filteredCart.length === 0) {
       totalCar.innerText = "0"
-      totalCar2.innerText = "0"
+      // totalCar2.innerText = "0"
       allTotal.innerText = (Number(Storage.getFees().taxesAndDeliveryFees[0].deliveryFee) + Number(Storage.getFees().taxesAndDeliveryFees[0].tax)).toFixed(2)
       document.getElementById("discount").innerText = Storage.getFees().taxesAndDeliveryFees[0].discount
       document.getElementById("deliveryfee").innerText = Storage.getFees().taxesAndDeliveryFees[0].deliveryFee
@@ -221,8 +227,15 @@ class CartItems {
     for (let i in getbackcart) {
       if (itemID === Number(getbackcart[i].id)) {
 
-        if (inputedAmount === 0) {
-          alert("Sorry, please enter a number > 0")
+        if (inputedAmount === 0 || isNaN(inputedAmount)) {
+          boxModal.style.display = "flex"
+          Message.innerText = "Sorry, please enter a number greater than 0"
+          AskbuttonDiv.innerHTML = `<button class="askbutton yes" id="ok">Okay</button>`
+
+          ok.addEventListener("click", (e) => {
+            boxModal.style.display = "none"
+          })
+
           localStorage.Cart = JSON.stringify(getbackcart)
           event.target.value = getbackcart[i].amount
         }
@@ -238,6 +251,7 @@ class CartItems {
     _item.sumTotal()
   }
 
+  /* SUM TOTAL OF CART ITEMS */
   static sumTotal() {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     if (getbackcart === null || getbackcart.length === 0) {
@@ -268,11 +282,11 @@ class displayItems {
 
       /* ITEM NUMBERING */
       const displayNumbering = () => {
-        if (i < 10) {
+        if (i <= 8) {
           return "0" + (Number(i) + 1)
         }
 
-        if (i >= 10) {
+        if (i > 8) {
           return (Number(i)) + 1
         }
       }
@@ -320,7 +334,7 @@ totalQuantity.innerText = Storage.numberOfItemsInCart()
 
 
 /* DISPLAY SUBTOTAL */
-totalCar2.innerText = CartItems.sumTotal()
+// totalCar2.innerText = CartItems.sumTotal()
 totalCar.innerText = CartItems.sumTotal()
 
 
