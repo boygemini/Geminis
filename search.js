@@ -62,9 +62,19 @@ const sendQueryGO = (event) => {
   window.location.href = url;
 };
 try {
-  go.addEventListener("click", sendQueryGO)
+  go.addEventListener("click", (event) => {
+    if (search.value !== "") {
+      sendQueryGO()
+    }
+  })
 } catch (error) {}
 
+
+search.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && search.value !== "") {
+    sendQueryGO()
+  }
+})
 
 
 //DISPLAY SUGGESTIONS
@@ -147,9 +157,18 @@ window.onload = onLoad;
 
 const displayResults = (directory, Query) => {
   let x = ""
-  for (let k in directory) {
-    if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
-      x += `<div class="item-box" onclick="toProduct()">
+
+  if (directory.length === 0) {
+    showBox.innerHTML = `<div class="noresult">
+      <h1 class = "cat-head" > Oops, there are no results
+      for "${Query}" </h1>  <p>Try checking your spelling or use more general terms</p >
+    </div>`
+  }
+
+  if (directory.length > 0) {
+    for (let k in directory) {
+      if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
+        x += `<div class="item-box" onclick="toProduct()">
         <img src=${directory[k].itemInfo.itemImg} alt="">
         <div class="item-details">
             <h1>${directory[k].itemInfo.name}</h1>
@@ -168,7 +187,8 @@ const displayResults = (directory, Query) => {
             <button>Add to Cart</button>
         </div>
     </div>`
+      }
     }
+    showBox.innerHTML = `<h1 class="cat-head">Results for "${Query}"</h1>` + x
   }
-  showBox.innerHTML = `<h1 class="cat-head">Results for "${Query}"</h1>` + x
 }
