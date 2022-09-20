@@ -54,13 +54,33 @@ const showSuggesttions = (dirname, name) => {
 };
 
 
+//DISPLAY SUGGESTIONS
+search.addEventListener("input", () => {
+  showSuggesttions(dir.gaming, "Gaming");
+  showSuggesttions(dir.cellphones, "Cellphones");
+  showSuggesttions(dir.speaker, "Speakers");
+  showSuggesttions(dir.computers, "Computers");
+  showSuggesttions(dir.tv, "TV");
+});
+
+
 
 
 const sendQueryGO = (event) => {
   let query = search.value.toLowerCase();
-  let url = "http://127.0.0.1:5500/HTML/gemshop.html?q=" + encodeURIComponent(query)
+  let url = `gemshop.html?q=${encodeURIComponent(query)}`
   window.location.href = url;
 };
+
+
+const sendQuery = (event) => {
+  let query = event.target.firstChild.innerText;
+  let queryCategory = event.target.children[2].innerText;
+  let url = `gemshop.html?q=${encodeURIComponent(query)}&category=${encodeURIComponent(queryCategory)}`;
+  window.location.href = url;
+};
+
+
 try {
   go.addEventListener("click", (event) => {
     if (search.value !== "") {
@@ -77,32 +97,9 @@ search.addEventListener("keydown", (event) => {
 })
 
 
-//DISPLAY SUGGESTIONS
-search.addEventListener("input", () => {
-  showSuggesttions(dir.gaming, "Gaming");
-  showSuggesttions(dir.cellphones, "Cellphones");
-  showSuggesttions(dir.speaker, "Speakers");
-  showSuggesttions(dir.computers, "Computers");
-  showSuggesttions(dir.tv, "TV");
-});
 
 
-
-
-const sendQuery = (event) => {
-  let query = event.target.firstChild.innerText;
-  let queryCategory = event.target.children[2].innerText;
-  let url =
-    "http://127.0.0.1:5500/HTML/gemshop.html?q=" +
-    encodeURIComponent(query) +
-    "&category=" +
-    encodeURIComponent(queryCategory);
-  window.location.href = url;
-};
-
-
-
-class showResult {
+class getResults {
   static suggestionsResult(newArr, directory, Query, Category) {
     Category = newArr.category.toLowerCase()
     directory = dir[`${Category}`]
@@ -124,35 +121,6 @@ class showResult {
   }
 }
 
-
-
-const onLoad = () => {
-  let url = document.URL;
-  let splitUrl = url.split("?")[1];
-  let s2 = splitUrl.split("&");
-  let newArr = new Array();
-  let Query, Category, directory;
-
-  for (let i in s2) {
-    let n = s2[i].split("=");
-    newArr[n[0]] = n[1];
-  }
-
-  Query = newArr.q
-  if (Query.lastIndexOf("%20") > -1) {
-    Query = Query.replace(/%20/g, " ");
-  }
-
-  if (s2.length > 1) {
-    showResult.suggestionsResult(newArr, directory, Query, Category)
-  }
-
-  if (s2.length === 1) {
-    showResult.searchBarResult(Query, Category)
-  }
-
-};
-window.onload = onLoad;
 
 
 const displayResults = (directory, Query) => {
@@ -192,3 +160,37 @@ const displayResults = (directory, Query) => {
     showBox.innerHTML = `<h1 class="cat-head">Results for "${Query}"</h1>` + x
   }
 }
+
+
+const onLoad = () => {
+  let url = document.URL;
+  let splitUrl = url.split("?")[1];
+  let s2 = splitUrl.split("&");
+  let newArr = new Array();
+  let Query, Category, directory;
+
+  for (let i in s2) {
+    let n = s2[i].split("=");
+    newArr[n[0]] = n[1];
+  }
+
+  Query = newArr.q
+  if (Query.lastIndexOf("%20") > -1) {
+    Query = Query.replace(/%20/g, " ");
+  }
+
+  if (s2.length > 1) {
+    getResults.suggestionsResult(newArr, directory, Query, Category)
+  }
+
+  if (s2.length === 1) {
+    getResults.searchBarResult(Query, Category)
+  }
+
+};
+window.onload = onLoad;
+
+console.log("OK : code ran successfully!");
+//EOC
+//EOC
+//EOC
