@@ -257,7 +257,7 @@ class displayProduct {
     let itemCreated = " ";
     let Holder = document.getElementById("sel-container");
     for (let i in category) {
-      itemCreated += `<div class="sell-box sel-box">
+      itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
           <div class="img-con">
               <img src=${category[i].itemInfo.itemImg} alt="">
           </div>
@@ -290,7 +290,7 @@ class displayProduct {
     let itemCreated = "";
     let Holder = document.getElementById("holder-rec");
     for (let i in category) {
-      itemCreated += `<div class="recent">
+      itemCreated += `<div class="recent" data-id=${category[i].id} onclick = "viewProduct(event)">
       <img src=${category[i].itemInfo.itemImg} alt="">
       <div class="receInfo">
           <h1 class="itemName">${category[i].itemInfo.category}</h1>
@@ -315,7 +315,7 @@ class displayProduct {
     let itemCreated = "";
     let Holder = document.querySelector(".Weekly-Container");
     for (let i in category) {
-      itemCreated += `<div id="wkly">
+      itemCreated += `<div id="wkly" data-id=${category[i].id} onclick = "viewProduct(event)">
       <div class="img-con">
           <p class="new">New</p>
           <img src=${category[i].itemInfo.itemImg} alt="">
@@ -367,12 +367,20 @@ displayProduct.displayRecentItems(Storage.getRecentItems());
 displayProduct.displayWeeklyFeatured(Storage.weeklyFeaturedItems());
 
 
-/*
+/* VIEW CLICKED PRODUCT */
+const viewProduct = (event) => {
+  let itemID = event.target.dataset.id || event.target.parentNode.dataset.id || event.target.parentNode.parentNode.dataset.id || event.target.parentNode.parentNode.parentNode.dataset.id;
+  if (itemID) {
+    let url = `product.html?item=${encodeURIComponent(itemID)}`
+    window.location = url
+  }
+}
 
-ADD RECENT ITEMS TO CART
 
-*/
+/* ADD RECENT ITEMS TO CART */
 const addToCartt = (event, ITT) => {
+  event.stopPropagation()
+
   function Me() {
     let pickItemFromStore = ITT.find(
       (item) => item.id === event.target.dataset.id
@@ -424,6 +432,7 @@ let pickedItem;
 
 let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
 const addToCart = (event, ITT) => {
+  event.stopPropagation()
   let ItemCategory = event.target.dataset.category;
   let pickItemFromStore = ITT[`${ItemCategory}`].find(
     (item) => item.id === event.target.dataset.id
