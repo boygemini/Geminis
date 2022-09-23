@@ -107,6 +107,11 @@ body {
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .notification:first-child{
+            width: 90%;
         }
 
         .off {
@@ -120,6 +125,10 @@ body {
         }
 
         .complete-off {
+            opacity: 0;
+        }
+
+        .die{
             display: none;
         }
 
@@ -142,18 +151,21 @@ body {
             50% {
                 opacity: 0;
                 padding: 0px;
+                margin-top: 0px;
             }
 
             70% {
                 opacity: 0;
                 padding: 0px;
                 height: 0px;
+                margin-top: 0px;
             }
 
             100% {
                 height: 0px;
                 opacity: 0;
                 padding: 0px;
+                margin-top: 0px;
             }
         }
 
@@ -169,7 +181,7 @@ body {
 
         .notify-box {
             width: 350px;
-            max-height: 200px;
+            max-height: 150px;
             overflow-y: hidden;
             height: auto;
             position: fixed;
@@ -179,7 +191,7 @@ body {
             margin: auto;
             z-index: 9283920282;
             border-radius: 5px;
-            box-shadow: 0px -20px 30px -20px whitesmoke inset;
+            /* box-shadow: 0px -20px 30px -20px whitesmoke inset; */
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
             -ms-border-radius: 5px;
@@ -192,7 +204,6 @@ body {
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            row-gap: 10px;
         }
 
 /* Hero */

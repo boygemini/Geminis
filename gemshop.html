@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,13 @@
     <link rel="stylesheet" href="/CSS/gemshop.css">
     <script src="/JAVASCRIPT/gemshop.js" defer></script>
 </head>
-<body> 
+
+<body>
     <section class="slimbanner">
         <div class="slimcontent">
             <div class="slimb-left">
-                <p>Open doors to a world of Electronics</p> <hr class="vhr">
+                <p>Open doors to a world of Electronics</p>
+                <hr class="vhr">
                 <p class="dis-more">Discover More</p>
             </div>
             <div class="slimb-right">
@@ -28,16 +31,15 @@
                     <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
                     <div class="products">
                         <ul>
-                            <li>Gaming</li>
-                            <li>Cellphones</li>
-                            <li>Computer</li>
-                            <li>Ipads</li>
-                            <li>Speakers</li>
-                            <li>TVs</li>
+                            <li onclick="Gamings()">Gaming</li>
+                            <li onclick="cellPhones()">Cellphones</li>
+                            <li onclick="Computers()">Computer</li>
+                            <li onclick="Speakers()">Speakers</li>
+                            <li onclick="TVs()">TVs</li>
                         </ul>
                     </div>
                 </nav>
-    
+
                 <div id="menu">
                     <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
                     <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
@@ -63,123 +65,22 @@
                 </div>
             </div>
         </section>
-    
+
         <section class="shop-body">
             <div class="filters">
                 <div class="fil-head">
                     <h1>Filters</h1>
                 </div>
-                
-                <div class="filterss">
-                    <div class="fil-box">
-                        <h1>Ship to</h1><br>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                    </div>
-                    <div class="fil-box">
-                        <h1>Model</h1><br>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                    </div>
-                    <div class="fil-box">
-                        <h1>Model</h1><br>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                    </div>
-                    <div class="fil-box">
-                        <h1>Model</h1><br>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                    </div>
-                    <div class="fil-box">
-                        <h1>Model</h1><br>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                    </div>
-                    <div class="fil-box">
-                        <h1>Model</h1><br>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                    </div>
-                    <div class="fil-box">
-                        <h1>Model</h1><br>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                    </div>
-                    <div class="fil-box">
-                        <h1>Model</h1><br>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                    </div>
-                    <div class="fil-box">
-                        <h1>Model</h1><br>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                        <div class="option">
-                            <input type="checkbox" name="" id=""><p>My Location</p>
-                        </div>
-                    </div>
+
+                <div class="filterss" id="filters">
+
                 </div>
                 <div class="apply">
                     <button class="" type="submit">Apply</button>
                 </div>
             </div>
-            <div class="available-items">
-                <div class="item-box" onclick="toProduct()">
+            <div class="available-items" id="showbox">
+                <!-- <div class="item-box" onclick="toProduct()">
                     <img src="/IMAGES/ipad2.png" alt="">
                     <div class="item-details">
                         <h1>iPhone 13 Pro Max</h1>
@@ -197,83 +98,7 @@
                         </div>
                         <button>Add to Cart</button>
                     </div>
-                </div>
-                <div class="item-box" onclick="toProduct()">
-                    <img src="/IMAGES/ipad2.png" alt="">
-                    <div class="item-details">
-                        <h1>iPhone 13 Pro Max</h1>
-                        <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
-                        <div class="specifications">
-                            <strong>Brand New</strong>
-                            <p><strong>Model : </strong>MKLV3LL/A</p>
-                            <p><strong>SKU : </strong>87294820</p>
-                            <p><strong>Color : </strong>Sierra Blue</p>
-                        </div>
-                    </div>
-                    <div class="buy">
-                        <div class="price-tag">
-                            <span class="currency">$</span><span class="price">1,202.99</span>
-                        </div>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-                <div class="item-box" onclick="toProduct()">
-                    <img src="/IMAGES/ipad2.png" alt="">
-                    <div class="item-details">
-                        <h1>iPhone 13 Pro Max</h1>
-                        <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
-                        <div class="specifications">
-                            <strong>Brand New</strong>
-                            <p><strong>Model : </strong>MKLV3LL/A</p>
-                            <p><strong>SKU : </strong>87294820</p>
-                            <p><strong>Color : </strong>Sierra Blue</p>
-                        </div>
-                    </div>
-                    <div class="buy">
-                        <div class="price-tag">
-                            <span class="currency">$</span><span class="price">1,000.99</span>
-                        </div>
-                        <button>Add to Cart</button>
-                    </div>
-                </div> 
-                <div class="item-box" onclick="toProduct()">
-                    <img src="/IMAGES/frontIpad.png" alt="">
-                    <div class="item-details">
-                        <h1>iPhone 13 Pro Max</h1>
-                        <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
-                        <div class="specifications">
-                            <strong>Refurbished</strong>
-                            <p><strong>Model : </strong>MKLV3LL/A</p>
-                            <p><strong>SKU : </strong>87294820</p>
-                            <p><strong>Color : </strong>Blue</p>
-                        </div>
-                    </div>
-                    <div class="buy">
-                        <div class="price-tag">
-                            <span class="currency">$</span><span class="price">737.37</span>
-                        </div>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-                <div class="item-box" onclick="toProduct()">
-                    <img src="/IMAGES/ipad2.png" alt="">
-                    <div class="item-details">
-                        <h1>iPhone 13 Pro Max</h1>
-                        <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
-                        <div class="specifications">
-                            <strong>Brand New</strong>
-                            <p><strong>Model : </strong>MKLV3LL/A</p>
-                         <p><strong>SKU : </strong>87294820</p>
-                            <p><strong>Color : </strong>Sierra Blue</p>
-                        </div>
-                    </div>
-                    <div class="buy">
-                        <div class="price-tag">
-                            <span class="currency">$</span><span class="price">1,000.99</span>
-                        </div>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
+                </div> -->
             </div>
             <section class="visit-our-support">
                 <div class="vv">
@@ -282,7 +107,7 @@
                 </div>
                 <button class="visit" type="button">Visit</button>
             </section>
-    
+
         </section>
     </section>
 
@@ -301,6 +126,38 @@
         const toCart = () => {
             window.location.href = "/HTML/cart.html";
         }
+
+        let menu = document.getElementById("menu"),
+            mb = document.getElementById("mb")
+        let close = document.querySelectorAll("#close");
+        menu.style.display = "none"
+
+        const removePadding = () => {
+            menu.style.height = "0px"
+            menu.style.padding = "0px";
+        }
+
+        const openMenu = (e) => {
+            menu.style.display = "flex"
+            removePadding()
+            setTimeout(() => {
+                menu.style.paddingTop = "20px";
+                menu.style.height = "400px";
+            }, 20)
+        }
+
+        const closeMenu = () => {
+            removePadding()
+            setTimeout(() => {
+                menu.style.display = "none"
+            }, 520);
+        }
+
+        document.addEventListener("click", (e) => {
+            if (e.target !== menu && menu.clientHeight > 0) {
+                removePadding()
+            }
+        })
     </script>
 </body>
 <footer>
@@ -308,4 +165,5 @@
         Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
     </h1>
 </footer>
+
 </html>
