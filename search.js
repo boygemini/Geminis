@@ -136,7 +136,7 @@ const displayResults = (directory, Query) => {
   if (directory.length > 0) {
     for (let k in directory) {
       if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
-        x += `<div class="item-box" onclick="toProduct()">
+        x += `<div class="item-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
         <img src=${directory[k].itemInfo.itemImg} alt="">
         <div class="item-details">
             <h1>${directory[k].itemInfo.name}</h1>
@@ -189,7 +189,6 @@ const onLoad = () => {
 
 };
 window.onload = onLoad;
-
 console.log("OK : code ran successfully!");
 //EOC
 //EOC
