@@ -3,10 +3,10 @@
 let filterBox = document.getElementById("filters")
 let showBox = document.getElementById("showbox")
 let gamingBox = document.getElementById("gaming"),
-cellPhoneBox = document.getElementById("cellphones"),
-computerBox = document.getElementById("computer"),
-speakersBox = document.getElementById("speakers"),
-tvsBox = document.getElementById("TV")
+  cellPhoneBox = document.getElementById("cellphones"),
+  computerBox = document.getElementById("computer"),
+  speakersBox = document.getElementById("speakers"),
+  tvsBox = document.getElementById("TV")
 
 
 /*
@@ -27,10 +27,9 @@ class Products {
     req.open("GET", "/JSON/product.json", false);
     req.onload = function () {
       if (req.status === 200) {
-        if(localStorage.StoreItems){
+        if (localStorage.StoreItems) {
           localStorage.setItem("StoreItems", this.responseText)
-        }
-        else{
+        } else {
           localStorage.StoreItems = this.responseText;
         }
       }
@@ -53,10 +52,10 @@ Products.saveItems() //Fetch All Items and store them
 
 
 const getItemsByCategory = (url) => {
-let sendRequest = new XMLHttpRequest();
-  sendRequest.open("GET", url , false)
+  let sendRequest = new XMLHttpRequest();
+  sendRequest.open("GET", url, false)
   sendRequest.onreadystatechange = function () {
-    if(sendRequest.status === 200){
+    if (sendRequest.status === 200) {
       filterBox.innerHTML = this.response
     }
   }
@@ -65,33 +64,33 @@ let sendRequest = new XMLHttpRequest();
 
 
 class loadupItem {
-  static allCellPhones () {
+  static allCellPhones() {
     getItemsByCategory("/HTML/all-phones.html")
   }
 
-  static allGaming () {
+  static allGaming() {
     getItemsByCategory("/HTML/all-games.html")
   }
 
-  static allComputer () {
+  static allComputer() {
     getItemsByCategory("/HTML/all-computers.html")
   }
 
-  static allSpeaker () {
+  static allSpeaker() {
     getItemsByCategory("/HTML/all-speakers.html")
   }
 
-  static allTv () {
+  static allTv() {
     getItemsByCategory("/HTML/all-tvs.html")
   }
 }
 
 
 class display {
-  static items (boxID ,mRoute, target) {
+  static items(boxID, mRoute, target) {
     let x = ``;
-    for(let i in mRoute[`${target}`]){
-      x += `<div class="item-box" onclick="toProduct()">
+    for (let i in mRoute[`${target}`]) {
+      x += `<div class="item-box" data-id=${mRoute[`${target}`][i].id} onclick="viewProduct(event)">
       <img src=${mRoute[`${target}`][i].itemInfo.itemImg} alt="">
       <div class="item-details">
           <h1>${mRoute[`${target}`][i].itemInfo.name}</h1>
@@ -109,13 +108,13 @@ class display {
           </div>
           <button>Add to Cart</button>
       </div>
-  </div>`
+      </div>`
     }
-    boxID.innerHTML =`<h1 class="cat-head">${target}</h1>` + x
+    boxID.innerHTML = `<h1 class="cat-head">${target}</h1>` + x
   }
 
 
-  static displayAll () {
+  static displayAll() {
     loadupItem.allCellPhones()
     display.items(cellPhoneBox, Products.getAllItems().selectedProducts[0], "cellphones")
 
@@ -172,3 +171,10 @@ PRODUCT DISPLAY
 
 */
 
+const viewProduct = (event) => {
+  let itemID = event.target.dataset.id || event.target.parentNode.dataset.id || event.target.parentNode.parentNode.dataset.id || event.target.parentNode.parentNode.parentNode.dataset.id;
+  if (itemID) {
+    let url = `product.html?item=${encodeURIComponent(itemID)}`
+    window.location = url
+  }
+}
