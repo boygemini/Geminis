@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <link rel="stylesheet" href="/CSS/gemshop.css">
-    <script src="/JAVASCRIPT/gemshop.js" defer></script>
     <link rel="stylesheet" href="/CSS/gemfonts.css">
+    <script src="/JAVASCRIPT/gemshop.js" defer></script>
     <script src="/JAVASCRIPT/search.js" defer></script>
 </head>
 
@@ -56,8 +56,9 @@
                 <h1 class="logo" onclick="goHome()">Geministore.</h1>
                 <div class="login-cart">
                     <div class="search-section">
-                        <input type="search" class="search" name="search" id="search" placeholder="Search a product">
-                        <input type="submit" class="go" value="GO">
+                        <input type="search" class="search" name="search" id="search" placeholder="Search a product"
+                            autocomplete="off">
+                        <input type="submit" class="go" value="GO" id="GO">
                     </div>
                     <div class="cart-box" onclick="toCart()">
                         <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">

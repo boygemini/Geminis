@@ -8,6 +8,8 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="/CSS/cart.css">
     <link rel="stylesheet" href="/CSS/gemfonts.css">
+    <script src="/JAVASCRIPT/cart.js" defer></script>
+    <script src="/JAVASCRIPT/search.js" defer></script>
 </head>
 <header>
     <section class="slimbanner">
@@ -50,7 +52,7 @@
                 </nav>
 
                 <div id="menu">
-                    <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
+                    <h1 class="logo" id="logo2" onclick="goHome()">Geministore•</h1>
                     <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
                     <ul>
                         <li>Home</li>
@@ -61,12 +63,13 @@
                     </ul>
                 </div>
                 <div class="logo-box">
-                    <h1 class="logo" id="logo1" onclick="goHome()">Geministore.</h1>
+                    <h1 class="logo" id="logo1" onclick="goHome()">Geministore•</h1>
                 </div>
                 <div class="login-cart">
                     <div class="search-section">
-                        <input type="search" class="search" name="search" id="search" placeholder="Search a product">
-                        <input type="submit" class="go" value="GO">
+                        <input type="search" class="search" name="search" id="search" placeholder="Search a product"
+                            autocomplete="off">
+                        <input type="submit" class="go" value="GO" id="GO">
                     </div>
                     <div class="cart-box" id="cart-box" onclick="toCart()">
                         <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
@@ -175,11 +178,6 @@
             </h1>
         </footer>
     </section>
-
-
-
-    <script src="/JAVASCRIPT/cart.js"></script>
-
 </body>
 
 </html>
