@@ -1,5 +1,20 @@
 "use strict"
 
+const storeItemsIfNotAlreadyStored = () => {
+    if (localStorage.StoreItems === undefined) {
+        let product_request = new XMLHttpRequest();
+        product_request.open("GET", "/JSON/product.json", false);
+        product_request.onload = function () {
+            if (product_request.status === 200) {
+                localStorage.StoreItems = this.responseText;
+            }
+        };
+        product_request.send();
+    }
+}
+storeItemsIfNotAlreadyStored();
+
+
 const getItemID = () => {
     let url = document.URL.split("?")[1]
     let splitUrl = url.split("=")
@@ -41,10 +56,10 @@ const item = () => {
 
 
 
-let Item = item().itemInfo
+let Item = item()
 productDetails.innerHTML = `
-<h1>${Item.name}</h1>
-<h2>${Item.description1}</h2>
+<h1>${Item.itemInfo.name}</h1>
+<h2>${Item.itemInfo.description1}</h2>
 <div class="specifications">
 <div class="sep">
     <strong>Refurbished</strong>
@@ -83,5 +98,164 @@ productDetails.innerHTML = `
 </div>
 </div>`
 
-price.innerText = Item.newItemPrice
-largeImage.src = Item.itemImg
+price.innerText = Item.itemInfo.newItemPrice
+largeImage.src = Item.itemInfo.itemImg
+
+
+class Products {
+    /*
+
+    LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
+
+    */
+    static selectedForYou() {
+        let product_request = new XMLHttpRequest();
+        product_request.open("GET", "/JSON/product.json", false);
+        product_request.onload = function () {
+            if (product_request.status === 200) {
+                localStorage.StoreItems = this.responseText;
+            }
+        };
+        product_request.send();
+    }
+
+    /*
+
+     RETRIEVE ALL ITEMS FROM LOCAL STORAGE
+
+     */
+    static getSelectedProducts() {
+        return JSON.parse(localStorage.StoreItems);
+    }
+}
+
+let cart = []
+class Storage {
+    /* RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS */
+    static getAllProducts() {
+        return JSON.parse(localStorage.getItem("StoreItems"));
+    }
+
+    /*
+
+     SAVE ITEMS TO CART
+
+    */
+    static saveSelectedItemsToCart(cart) {
+        localStorage.Cart = JSON.stringify(cart);
+        localStorage.setItem("Cart", localStorage.Cart);
+    }
+
+    /*
+
+    RETRIEVE ALL ITEMS FROM CART
+
+    */
+    static getItemsInCart() {
+        return JSON.parse(localStorage.getItem("Cart"));
+    }
+
+    /*
+
+     GET THE NUMBER OF ITEMS IN CART
+
+     */
+    static numberOfItemsInCart() {
+        if (Storage.getItemsInCart() === null || undefined) {
+            return "0"
+        } else {
+            let mapCart = Storage.getItemsInCart().map(cI => cI.amount)
+            let reduceCart = mapCart.reduce((x, y) => x + y, 0)
+            return reduceCart;
+        }
+    }
+
+    /*
+
+    UPDATE CART
+
+    */
+    static updateCart(cartName) {
+        Storage.saveSelectedItemsToCart(cartName);
+        cartDom.innerText = Storage.numberOfItemsInCart();
+    }
+
+    /*
+
+    GET AND SAVE PICKED ITEM TO CART
+
+    */
+    static getItemAndSaveToCart() {
+        let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+
+        if (cart === null || cart.length === 0) {
+            cart = [pickedItem];
+            Storage.updateCart(cart)
+        }
+
+        if (cart !== null || cart.length !== 0) {
+            let pickedItemID = Item.id;
+            let check = getbackcart.find(item => item.id === pickedItemID)
+
+            if (check) {
+                check.amount += 1;
+                Storage.updateCart(getbackcart)
+            }
+
+            if (!check) {
+                getbackcart = [...getbackcart, pickedItem]
+                Storage.updateCart(getbackcart)
+            }
+        };
+    }
+}
+Products.selectedForYou();
+
+
+let cartDom = document.getElementById("items-in-cart");
+try {
+    cartDom.innerText = Storage.numberOfItemsInCart();
+} catch (error) {} // Displays number of Items in Cart
+
+let pickedItem;
+let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
+const addToCart = () => {
+    let pickItemFromStore = Item
+    // popupNotification(pickItemFromStore.itemInfo.name)
+    pickedItem = {
+        ...pickItemFromStore,
+        amount: 1,
+    };
+    if (pickItemFromStore) {
+        try {
+            Storage.getItemAndSaveToCart();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+
+
+
+
+/* SEARCH PRODUCT */
+const sendQueryGO = (event) => {
+    let query = search.value.toLowerCase();
+    let url = `gemshop.html?q=${encodeURIComponent(query)}`
+    window.location.href = url;
+};
+
+try {
+    GO.addEventListener("click", (event) => {
+        if (search.value !== "") {
+            sendQueryGO()
+        }
+    })
+} catch (error) {}
+
+
+search.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && search.value !== "") {
+        sendQueryGO()
+    }
+})
