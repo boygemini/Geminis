@@ -178,3 +178,26 @@ const viewProduct = (event) => {
     window.location = url
   }
 }
+
+
+/* SEARCH PRODUCT */
+const sendQueryGO = (event) => {
+  let query = search.value.toLowerCase();
+  let url = `gemshop.html?q=${encodeURIComponent(query)}`
+  window.location.href = url;
+};
+
+try {
+  GO.addEventListener("click", (event) => {
+    if (search.value !== "") {
+      sendQueryGO()
+    }
+  })
+} catch (error) {}
+
+
+search.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && search.value !== "") {
+    sendQueryGO()
+  }
+})
