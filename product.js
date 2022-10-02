@@ -212,6 +212,23 @@ class Storage {
 Products.selectedForYou();
 
 
+const popupNotification = (itemName) => {
+    let notification = document.getElementById("notify-box");
+    let creatNotBox = document.createElement("div")
+    creatNotBox.classList = " notification on"
+    creatNotBox.innerHTML = `<p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
+    notification.appendChild(creatNotBox)
+    setTimeout(() => {
+        creatNotBox.classList = " notification off"
+    }, 2500)
+    setTimeout(() => {
+        creatNotBox.classList = "complete-off"
+    }, 3200)
+    setTimeout(() => {
+        creatNotBox.classList = "die"
+    }, 3200)
+}
+
 let cartDom = document.getElementById("items-in-cart");
 try {
     cartDom.innerText = Storage.numberOfItemsInCart();
@@ -221,7 +238,7 @@ let pickedItem;
 let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
 const addToCart = () => {
     let pickItemFromStore = Item
-    // popupNotification(pickItemFromStore.itemInfo.name)
+    popupNotification(pickItemFromStore.itemInfo.name)
     pickedItem = {
         ...pickItemFromStore,
         amount: 1,

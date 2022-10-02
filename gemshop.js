@@ -106,7 +106,7 @@ class display {
           <div class="price-tag">
               <span class="currency">$ </span><span class="price">${mRoute[`${target}`][i].itemInfo.newItemPrice}</span>
           </div>
-          <button>Add to Cart</button>
+          <button onclick = "addToCart(event)"> Add to Cart </button>
       </div>
       </div>`
     }
@@ -180,24 +180,181 @@ const viewProduct = (event) => {
 }
 
 
-/* SEARCH PRODUCT */
-const sendQueryGO = (event) => {
-  let query = search.value.toLowerCase();
-  let url = `gemshop.html?q=${encodeURIComponent(query)}`
-  window.location.href = url;
-};
 
-try {
-  GO.addEventListener("click", (event) => {
-    if (search.value !== "") {
-      sendQueryGO()
-    }
-  })
-} catch (error) {}
-
-
-search.addEventListener("keydown", (event) => {
-  if (event.key === "Enter" && search.value !== "") {
-    sendQueryGO()
+/* ADD ITEMS TO CART */
+let cart = []
+class Storage {
+  /* RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS */
+  static getAllProducts() {
+    return JSON.parse(localStorage.getItem("StoreItems"));
   }
-})
+
+  /*
+
+   RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS
+
+   */
+  static getRecentItems() {
+    return Storage.getAllProducts().recentlyAdded;
+  }
+
+  /*
+
+   RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS
+
+   */
+  static weeklyFeaturedItems() {
+    return Storage.getAllProducts().WeeklyFeatured;
+  }
+
+  /*
+
+   SAVE ITEMS TO CART
+
+  */
+  static saveSelectedItemsToCart(cart) {
+    localStorage.Cart = JSON.stringify(cart);
+    localStorage.setItem("Cart", localStorage.Cart);
+  }
+
+  /*
+
+  RETRIEVE ALL ITEMS FROM CART
+
+  */
+  static getItemsInCart() {
+    return JSON.parse(localStorage.getItem("Cart"));
+  }
+
+  /*
+
+   GET THE NUMBER OF ITEMS IN CART
+
+   */
+  static numberOfItemsInCart() {
+    if (Storage.getItemsInCart() === null || undefined) {
+      return "0"
+    } else {
+      let mapCart = Storage.getItemsInCart().map(cI => cI.amount)
+      let reduceCart = mapCart.reduce((x, y) => x + y, 0)
+      return reduceCart;
+    }
+  }
+
+  /*
+
+  UPDATE CART
+
+  */
+  static updateCart(cartName) {
+    Storage.saveSelectedItemsToCart(cartName);
+    cartDom.innerText = Storage.numberOfItemsInCart();
+  }
+
+  /*
+
+  GET AND SAVE PICKED ITEM TO CART
+
+  */
+  static getItemAndSaveToCart() {
+    let getbackcart = JSON.parse(localStorage.getItem("Cart"));
+
+    if (cart === null || cart.length === 0) {
+      cart = [pickedItem];
+      Storage.updateCart(cart)
+    }
+
+    if (cart !== null || cart.length !== 0) {
+      let pickedItemID = event.target.parentNode.parentNode.dataset.id;
+      let check = getbackcart.find(item => item.id === pickedItemID)
+
+      if (check) {
+        check.amount += 1;
+        Storage.updateCart(getbackcart)
+      }
+
+      if (!check) {
+        getbackcart = [...getbackcart, pickedItem]
+        Storage.updateCart(getbackcart)
+      }
+    };
+  }
+}
+
+const getAllItems = () => {
+  let allItems = JSON.parse(localStorage.getItem("StoreItems"))
+  return allItems
+}
+
+const item = (ItemID) => {
+  let recentlyAdded = getAllItems().recentlyAdded
+  let WeeklyFeatured = getAllItems().WeeklyFeatured
+
+  for (let i in recentlyAdded) {
+    if (recentlyAdded[i].id === ItemID) {
+      return recentlyAdded[i]
+    }
+  }
+
+  for (let i in WeeklyFeatured) {
+    if (WeeklyFeatured[i].id === ItemID) {
+      return WeeklyFeatured[i]
+    }
+  }
+
+  let category = ["gaming", "cellphones", "speaker", "computers", "tv"]
+  let allItems = getAllItems().selectedProducts[0]
+  for (let i in category) {
+    let all = allItems[`${category[i]}`]
+    for (let j in all) {
+      if (all[j].id === ItemID) {
+        return all[j]
+      }
+    }
+  }
+}
+
+
+const popupNotification = (itemName) => {
+  let notification = document.getElementById("notify-box");
+  let creatNotBox = document.createElement("div")
+  creatNotBox.classList = " notification on"
+  creatNotBox.innerHTML = `<p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
+  notification.appendChild(creatNotBox)
+  setTimeout(() => {
+    creatNotBox.classList = " notification off"
+  }, 2500)
+  setTimeout(() => {
+    creatNotBox.classList = "complete-off"
+  }, 3200)
+  setTimeout(() => {
+    creatNotBox.classList = "die"
+  }, 3200)
+}
+
+
+let cartDom = document.getElementById("items-in-cart");
+try {
+  cartDom.innerText = Storage.numberOfItemsInCart();
+} catch (error) {} // Displays number of Items in Cart
+let pickedItem;
+
+let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
+const addToCart = (event) => {
+  event.stopPropagation()
+
+  let ItemID = event.target.parentNode.parentNode.dataset.id;
+  let pickItemFromStore = item(ItemID)
+  popupNotification(pickItemFromStore.itemInfo.name)
+  pickedItem = {
+    ...pickItemFromStore,
+    amount: 1,
+  };
+  if (pickItemFromStore) {
+    try {
+      Storage.getItemAndSaveToCart();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+};
