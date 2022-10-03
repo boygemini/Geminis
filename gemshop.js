@@ -15,13 +15,11 @@ START CODING HERE....
 
 */
 
+let currentItemsOnDisplay;
+
 
 class Products {
-  /*
-
-  LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
-
-  */
+  //LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
   static saveItems() {
     let req = new XMLHttpRequest();
     req.open("GET", "/JSON/product.json", false);
@@ -37,19 +35,17 @@ class Products {
     req.send();
   }
 
-  /*
-
-   RETRIEVE ALL ITEMS FROM LOCAL STORAGE
-
-   */
+  //RETRIEVE ALL ITEMS FROM LOCAL STORAGE
   static getAllItems() {
     return JSON.parse(localStorage.StoreItems);
   }
 }
 
 
-Products.saveItems() //Fetch All Items and store them
 
+//Fetch All Items and store them
+Products.saveItems()
+let productRoute = Products.getAllItems().selectedProducts[0]
 
 const getItemsByCategory = (url) => {
   let sendRequest = new XMLHttpRequest();
@@ -63,7 +59,7 @@ const getItemsByCategory = (url) => {
 }
 
 
-class loadupItem {
+class getFilter {
   static allCellPhones() {
     getItemsByCategory("/HTML/all-phones.html")
   }
@@ -115,62 +111,96 @@ class display {
 
 
   static displayAll() {
-    loadupItem.allCellPhones()
-    display.items(cellPhoneBox, Products.getAllItems().selectedProducts[0], "cellphones")
+    getFilter.allCellPhones()
+    display.items(cellPhoneBox, productRoute, "cellphones")
 
-    loadupItem.allGaming()
-    display.items(gamingBox, Products.getAllItems().selectedProducts[0], "gaming")
+    getFilter.allGaming()
+    display.items(gamingBox, productRoute, "gaming")
 
-    loadupItem.allComputer()
-    display.items(computerBox, Products.getAllItems().selectedProducts[0], "computers")
+    getFilter.allComputer()
+    display.items(computerBox, productRoute, "computers")
 
-    loadupItem.allSpeaker()
-    display.items(speakersBox, Products.getAllItems().selectedProducts[0], "speaker")
+    getFilter.allSpeaker()
+    display.items(speakersBox, productRoute, "speaker")
 
-    loadupItem.allTv()
-    display.items(tvsBox, Products.getAllItems().selectedProducts[0], "tv")
+    getFilter.allTv()
+    display.items(tvsBox, productRoute, "tv")
   }
 }
 
 
-display.displayAll()
+// display.displayAll()
 
 
+
+// PRODUCT DISPLAY (TAB CLICK)
 const cellPhones = () => {
-  loadupItem.allCellPhones()
-  display.items(showBox, Products.getAllItems().selectedProducts[0], "cellphones")
+  // Dislay Cellphones
+  getFilter.allCellPhones()
+  display.items(showBox, productRoute, "cellphones");
+
+
+  // Price filter
+  firstlevelprice.addEventListener('click', (event) => {
+    displayFilteredResults(filter.price(event, 300, 799))
+  });
+
+  secondlevelprice.addEventListener('click', (event) => {
+    displayFilteredResults(filter.price(event, 800, 1199))
+  });
+
+  thirdlevelprice.addEventListener('click', (event) => {
+    displayFilteredResults(filter.price(event, 1200, 2000))
+  });
+
+  applyminmax.addEventListener('click', (event) => {
+    displayFilteredResults(filter.priceMinMax(Number(min.value), Number(max.value)))
+  });
+
+
+  // Brand filter
+  apple.addEventListener('click', (event) => {
+    displayFilteredResults(filter.brand(event, "Apple"))
+  })
+
+  samsung.addEventListener('click', (event) => {
+    displayFilteredResults(filter.brand(event, "Samsung"))
+  })
+
+  itel.addEventListener('click', (event) => {
+    displayFilteredResults(filter.brand(event, "Itel"))
+  })
 }
 
 
 const Gamings = () => {
-  loadupItem.allGaming()
-  display.items(showBox, Products.getAllItems().selectedProducts[0], "gaming")
+  getFilter.allGaming()
+  display.items(showBox, productRoute, "gaming");
 }
 
 
 const Computers = () => {
-  loadupItem.allComputer()
-  display.items(showBox, Products.getAllItems().selectedProducts[0], "computers")
+  getFilter.allComputer()
+  display.items(showBox, productRoute, "computers");
 }
 
 
 const Speakers = () => {
-  loadupItem.allSpeaker()
-  display.items(showBox, Products.getAllItems().selectedProducts[0], "speaker")
+  getFilter.allSpeaker()
+  display.items(showBox, productRoute, "speaker");
 }
 
 
 const TVs = () => {
-  loadupItem.allTv()
-  display.items(showBox, Products.getAllItems().selectedProducts[0], "tv")
+  getFilter.allTv()
+  display.items(showBox, productRoute, "tv");
 }
 
-/*
 
-PRODUCT DISPLAY
+cellPhones()
 
-*/
 
+//PRODUCT DISPLAY (SEARCH)
 const viewProduct = (event) => {
   let itemID = event.target.dataset.id || event.target.parentNode.dataset.id || event.target.parentNode.parentNode.dataset.id || event.target.parentNode.parentNode.parentNode.dataset.id;
   if (itemID) {
@@ -181,56 +211,36 @@ const viewProduct = (event) => {
 
 
 
-/* ADD ITEMS TO CART */
+// ADD ITEMS TO CART
 let cart = []
 class Storage {
-  /* RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS */
+  // RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS
   static getAllProducts() {
     return JSON.parse(localStorage.getItem("StoreItems"));
   }
 
-  /*
-
-   RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS
-
-   */
+  // RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS
   static getRecentItems() {
     return Storage.getAllProducts().recentlyAdded;
   }
 
-  /*
-
-   RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS
-
-   */
+  // RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS
   static weeklyFeaturedItems() {
     return Storage.getAllProducts().WeeklyFeatured;
   }
 
-  /*
-
-   SAVE ITEMS TO CART
-
-  */
+  // SAVE ITEMS TO CART
   static saveSelectedItemsToCart(cart) {
     localStorage.Cart = JSON.stringify(cart);
     localStorage.setItem("Cart", localStorage.Cart);
   }
 
-  /*
-
-  RETRIEVE ALL ITEMS FROM CART
-
-  */
+  // RETRIEVE ALL ITEMS FROM CART
   static getItemsInCart() {
     return JSON.parse(localStorage.getItem("Cart"));
   }
 
-  /*
-
-   GET THE NUMBER OF ITEMS IN CART
-
-   */
+  // GET THE NUMBER OF ITEMS IN CART
   static numberOfItemsInCart() {
     if (Storage.getItemsInCart() === null || undefined) {
       return "0"
@@ -241,21 +251,13 @@ class Storage {
     }
   }
 
-  /*
-
-  UPDATE CART
-
-  */
+  // UPDATE CART
   static updateCart(cartName) {
     Storage.saveSelectedItemsToCart(cartName);
     cartDom.innerText = Storage.numberOfItemsInCart();
   }
 
-  /*
-
-  GET AND SAVE PICKED ITEM TO CART
-
-  */
+  // GET AND SAVE PICKED ITEM TO CART
   static getItemAndSaveToCart() {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
 
@@ -281,10 +283,14 @@ class Storage {
   }
 }
 
+
+
+// GET ITEMS AND SORT
 const getAllItems = () => {
   let allItems = JSON.parse(localStorage.getItem("StoreItems"))
   return allItems
 }
+
 
 const item = (ItemID) => {
   let recentlyAdded = getAllItems().recentlyAdded
@@ -315,11 +321,12 @@ const item = (ItemID) => {
 }
 
 
-const popupNotification = (itemName) => {
+// POP-UP NOTIFICATION
+const popupNotification = (itemName, itemImage) => {
   let notification = document.getElementById("notify-box");
   let creatNotBox = document.createElement("div")
   creatNotBox.classList = " notification on"
-  creatNotBox.innerHTML = `<p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
+  creatNotBox.innerHTML = `<img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
   notification.appendChild(creatNotBox)
   setTimeout(() => {
     creatNotBox.classList = " notification off"
@@ -333,19 +340,22 @@ const popupNotification = (itemName) => {
 }
 
 
+// DISPLAY NUMBER OF ITEMS IN CART
 let cartDom = document.getElementById("items-in-cart");
 try {
   cartDom.innerText = Storage.numberOfItemsInCart();
-} catch (error) {} // Displays number of Items in Cart
-let pickedItem;
+} catch (error) {}
 
-let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
+
+// ADD ITEM TO CART
+let ItemsInCart = JSON.parse(localStorage.getItem("Cart")),
+  pickedItem;
 const addToCart = (event) => {
   event.stopPropagation()
 
   let ItemID = event.target.parentNode.parentNode.dataset.id;
   let pickItemFromStore = item(ItemID)
-  popupNotification(pickItemFromStore.itemInfo.name)
+  popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg)
   pickedItem = {
     ...pickItemFromStore,
     amount: 1,
