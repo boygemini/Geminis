@@ -102,11 +102,11 @@ let cart = [];
  POPUP NOTIFICATION
 
  */
-const popupNotification = (itemName) => {
+const popupNotification = (itemName, itemImage) => {
   let notification = document.getElementById("notify-box");
   let creatNotBox = document.createElement("div")
   creatNotBox.classList = " notification on"
-  creatNotBox.innerHTML = `<p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
+  creatNotBox.innerHTML = `<img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
   notification.appendChild(creatNotBox)
   setTimeout(() => {
     creatNotBox.classList = " notification off"
@@ -160,7 +160,7 @@ class Storage {
 
    */
   static getRecentItems() {
-    return Storage.getAllProducts().recentlyAdded;
+    return this.getAllProducts().recentlyAdded;
   }
 
   /*
@@ -169,7 +169,7 @@ class Storage {
 
    */
   static weeklyFeaturedItems() {
-    return Storage.getAllProducts().WeeklyFeatured;
+    return this.getAllProducts().WeeklyFeatured;
   }
 
   /*
@@ -197,10 +197,10 @@ class Storage {
 
    */
   static numberOfItemsInCart() {
-    if (Storage.getItemsInCart() === null || undefined) {
+    if (this.getItemsInCart() === null || undefined) {
       return "0"
     } else {
-      let mapCart = Storage.getItemsInCart().map(cI => cI.amount)
+      let mapCart = this.getItemsInCart().map(cI => cI.amount)
       let reduceCart = mapCart.reduce((x, y) => x + y, 0)
       return reduceCart;
     }
@@ -212,8 +212,8 @@ class Storage {
 
   */
   static updateCart(cartName) {
-    Storage.saveSelectedItemsToCart(cartName);
-    cartDom.innerText = Storage.numberOfItemsInCart();
+    this.saveSelectedItemsToCart(cartName);
+    cartDom.innerText = this.numberOfItemsInCart();
   }
 
   /*
@@ -226,7 +226,7 @@ class Storage {
 
     if (cart === null || cart.length === 0) {
       cart = [pickedItem];
-      Storage.updateCart(cart)
+      this.updateCart(cart)
     }
 
     if (cart !== null || cart.length !== 0) {
@@ -235,12 +235,12 @@ class Storage {
 
       if (check) {
         check.amount += 1;
-        Storage.updateCart(getbackcart)
+        this.updateCart(getbackcart)
       }
 
       if (!check) {
         getbackcart = [...getbackcart, pickedItem]
-        Storage.updateCart(getbackcart)
+        this.updateCart(getbackcart)
       }
     };
   }
@@ -385,7 +385,7 @@ const addToCartt = (event, ITT) => {
     let pickItemFromStore = ITT.find(
       (item) => item.id === event.target.dataset.id
     );
-    popupNotification(pickItemFromStore.itemInfo.name)
+    popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg)
     pickedItem = {
       ...pickItemFromStore,
       amount: 1,
@@ -437,7 +437,7 @@ const addToCart = (event, ITT) => {
   let pickItemFromStore = ITT[`${ItemCategory}`].find(
     (item) => item.id === event.target.dataset.id
   );
-  popupNotification(pickItemFromStore.itemInfo.name)
+  popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg)
   pickedItem = {
     ...pickItemFromStore,
     amount: 1,
