@@ -95,10 +95,10 @@ class Storage {
 
   /* GET THE NUMBER OF ITEMS IN CART */
   static numberOfItemsInCart() {
-    if (Storage.getItemsInCart() === null || undefined) {
+    if (this.getItemsInCart() === null || undefined) {
       return "0"
     } else {
-      let mapCart = Storage.getItemsInCart().map(cI => cI.amount)
+      let mapCart = this.getItemsInCart().map(cI => cI.amount)
       let reduceCart = mapCart.reduce((x, y) => x + y, 0)
       return reduceCart;
     }
@@ -173,7 +173,7 @@ class CartItems {
 
           yes.addEventListener("click", () => {
             boxModal.style.display = "none"
-            return CartItems.removeItem(altheredItemID)
+            return this.removeItem(altheredItemID)
           })
 
           no.addEventListener("click", () => {
@@ -339,9 +339,9 @@ totalCar.innerText = CartItems.sumTotal()
 
 
 /* DISPLAY THE SERVICE FEES AND CHARGES */
-document.getElementById("discount").innerText = Storage.getFees().taxesAndDeliveryFees[0].discount
-document.getElementById("tax").innerText = Storage.getFees().taxesAndDeliveryFees[0].tax
-document.getElementById("deliveryfee").innerText = Storage.getFees().taxesAndDeliveryFees[0].deliveryFee
+discount.innerText = Storage.getFees().taxesAndDeliveryFees[0].discount
+tax.innerText = Storage.getFees().taxesAndDeliveryFees[0].tax
+deliveryfee.innerText = Storage.getFees().taxesAndDeliveryFees[0].deliveryFee
 
 /* DISPLAY ALL OVERALL TOTAL */
 allTotal.innerText = _item.allTotal()
