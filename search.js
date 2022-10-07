@@ -84,7 +84,7 @@ const sendQuery = (event) => {
 try {
   go.addEventListener("click", (event) => {
     if (search.value !== "") {
-      sendQueryGO()
+      sendQueryGO();
     }
   })
 } catch (error) {}
@@ -92,7 +92,7 @@ try {
 
 search.addEventListener("keydown", (event) => {
   if (event.key === "Enter" && search.value !== "") {
-    sendQueryGO()
+    sendQueryGO();
   }
 })
 
@@ -152,7 +152,7 @@ const displayResults = (directory, Query) => {
             <div class="price-tag">
                 <span class="currency">$ </span><span class="price">${directory[k].itemInfo.newItemPrice}</span>
             </div>
-            <button>Add to Cart</button>
+            <button onclick = "addToCart(event)">Add to Cart</button>
         </div>
     </div>`
       }
@@ -175,9 +175,11 @@ const onLoad = () => {
   }
 
   Query = newArr.q
-  if (Query.lastIndexOf("%20") > -1) {
-    Query = Query.replace(/%20/g, " ");
-  }
+  try {
+    if (Query.lastIndexOf("%20") > -1) {
+      Query = Query.replace(/%20/g, " ");
+    }
+  } catch (error) {}
 
   if (s2.length > 1) {
     getResults.suggestionsResult(newArr, directory, Query, Category)
