@@ -15,16 +15,19 @@ const storeItemsIfNotAlreadyStored = () => {
 storeItemsIfNotAlreadyStored();
 
 
+// SORTING ITEMS
 const getItemID = () => {
     let url = document.URL.split("?")[1]
     let splitUrl = url.split("=")
     return splitUrl[1]
 }
 
+
 const getAllItems = () => {
     let allItems = JSON.parse(localStorage.getItem("StoreItems"))
     return allItems
 }
+
 
 const item = () => {
     let recentlyAdded = getAllItems().recentlyAdded
@@ -55,7 +58,7 @@ const item = () => {
 }
 
 
-
+// ITEM DISPLAY
 let Item = item()
 productDetails.innerHTML = `
 <h1>${Item.itemInfo.name}</h1>
@@ -103,11 +106,7 @@ largeImage.src = Item.itemInfo.itemImg
 
 
 class Products {
-    /*
-
-    LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
-
-    */
+    // LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
     static selectedForYou() {
         let product_request = new XMLHttpRequest();
         product_request.open("GET", "/JSON/product.json", false);
@@ -119,47 +118,35 @@ class Products {
         product_request.send();
     }
 
-    /*
-
-     RETRIEVE ALL ITEMS FROM LOCAL STORAGE
-
-     */
+    // RETRIEVE ALL ITEMS FROM LOCAL STORAGE
     static getSelectedProducts() {
         return JSON.parse(localStorage.StoreItems);
     }
 }
 
-let cart = []
+
+let cart = [];
 class Storage {
-    /* RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS */
+    // RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS
     static getAllProducts() {
         return JSON.parse(localStorage.getItem("StoreItems"));
     }
 
-    /*
 
-     SAVE ITEMS TO CART
-
-    */
+    // SAVE ITEMS TO CART
     static saveSelectedItemsToCart(cart) {
         localStorage.Cart = JSON.stringify(cart);
         localStorage.setItem("Cart", localStorage.Cart);
     }
 
-    /*
 
-    RETRIEVE ALL ITEMS FROM CART
-
-    */
+    // RETRIEVE ALL ITEMS FROM CART
     static getItemsInCart() {
         return JSON.parse(localStorage.getItem("Cart"));
     }
 
-    /*
 
-     GET THE NUMBER OF ITEMS IN CART
-
-     */
+    // GET THE NUMBER OF ITEMS IN CART
     static numberOfItemsInCart() {
         if (Storage.getItemsInCart() === null || undefined) {
             return "0"
@@ -170,21 +157,15 @@ class Storage {
         }
     }
 
-    /*
 
-    UPDATE CART
-
-    */
+    // UPDATE CART
     static updateCart(cartName) {
         Storage.saveSelectedItemsToCart(cartName);
         cartDom.innerText = Storage.numberOfItemsInCart();
     }
 
-    /*
 
-    GET AND SAVE PICKED ITEM TO CART
-
-    */
+    // GET AND SAVE PICKED ITEM TO CART
     static getItemAndSaveToCart() {
         let getbackcart = JSON.parse(localStorage.getItem("Cart"));
 
@@ -212,11 +193,12 @@ class Storage {
 Products.selectedForYou();
 
 
-const popupNotification = (itemName) => {
-    let notification = document.getElementById("notify-box");
-    let creatNotBox = document.createElement("div")
+// POP-UP NOTIFICATION
+const popupNotification = (itemName, itemImage) => {
+    let notification = document.getElementById("notify-box"),
+        creatNotBox = document.createElement("div");
     creatNotBox.classList = " notification on"
-    creatNotBox.innerHTML = `<p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
+    creatNotBox.innerHTML = `<img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
     notification.appendChild(creatNotBox)
     setTimeout(() => {
         creatNotBox.classList = " notification off"
@@ -229,16 +211,20 @@ const popupNotification = (itemName) => {
     }, 3200)
 }
 
+
+// DISPLAY NUMBER OF ITEM IN CART
 let cartDom = document.getElementById("items-in-cart");
 try {
     cartDom.innerText = Storage.numberOfItemsInCart();
-} catch (error) {} // Displays number of Items in Cart
+} catch (error) {}
 
-let pickedItem;
-let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
+
+// ADD VIEWED ITEM TO CART
+let ItemsInCart = JSON.parse(localStorage.getItem("Cart")),
+    pickedItem;
 const addToCart = () => {
     let pickItemFromStore = Item
-    popupNotification(pickItemFromStore.itemInfo.name)
+    popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg)
     pickedItem = {
         ...pickItemFromStore,
         amount: 1,
@@ -253,22 +239,15 @@ const addToCart = () => {
 };
 
 
-
-
-/* SEARCH PRODUCT */
+// SEARCH PRODUCT
 const sendQueryGO = (event) => {
     let query = search.value.toLowerCase();
-    let url = `gemshop.html?q=${encodeURIComponent(query)}`
+    let url = `gemshop.html?q=${encodeURIComponent(query)}`;
     window.location.href = url;
 };
 
-try {
-    GO.addEventListener("click", (event) => {
-        if (search.value !== "") {
-            sendQueryGO()
-        }
-    })
-} catch (error) {}
+
+newFunction();
 
 
 search.addEventListener("keydown", (event) => {
@@ -276,3 +255,14 @@ search.addEventListener("keydown", (event) => {
         sendQueryGO()
     }
 })
+
+
+function newFunction() {
+    try {
+        GO.addEventListener("click", (event) => {
+            if (search.value !== "") {
+                sendQueryGO();
+            }
+        });
+    } catch (error) {};
+}
