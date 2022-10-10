@@ -35,6 +35,79 @@
 }
 
 
+/* @font-face {
+ font-weight:400;
+ font-style:normal;
+ src:url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_reg.woff2) format("woff2"),
+ url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_reg.woff) format("woff");
+ font-display:swap;
+ font-family:sofia
+}
+@font-face {
+ src:url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_reg_subset.woff2) format("woff2"),
+ url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_reg_subset.woff) format("woff");
+ font-weight:400;
+ font-style:normal;
+ font-display:swap;
+ font-family:sofia
+}
+@font-face {
+ font-weight:700;
+ font-style:normal;
+ src:url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_bold.woff2) format("woff2"),
+ url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_bold.woff) format("woff");
+ font-display:swap;
+ font-family:sofia
+}
+@font-face {
+ src:url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_bold_subset.woff2) format("woff2"),
+ url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_bold_subset.woff) format("woff");
+ font-weight:700;
+ font-style:normal;
+ font-display:swap;
+ font-family:sofia
+}
+@font-face {
+ font-weight:400;
+ font-style:italic;
+ src:url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_italic.woff2) format("woff2"),
+ url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_italic.woff) format("woff");
+ font-display:swap;
+ font-family:sofia
+}
+@font-face {
+ src:url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_italic_subset.woff2) format("woff2"),
+ url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_italic_subset.woff) format("woff");
+ font-weight:400;
+ font-style:italic;
+ font-display:swap;
+ font-family:sofia
+}
+@font-face {
+ font-weight:700;
+ font-style:italic;
+ src:url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_bold_italic.woff2) format("woff2"),
+ url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_bold_italic.woff) format("woff");
+ font-display:swap;
+ font-family:sofia
+}
+@font-face {
+ src:url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_bold_italic_subset.woff2) format("woff2"),
+ url(https://secure.img1-fg.wfcdn.com/st4/stores/common/fonts/sofia/sofia_bold_italic_subset.woff) format("woff");
+ font-weight:700;
+ font-style:italic;
+ font-display:swap;
+ font-family:sofia
+}
+@font-face {
+ src:local(Arial);
+ ascent-override:109.08203%;
+ descent-override:27.05078%;
+ line-gap-override:0;
+ font-family:sofiaFallback
+} */
+
+
 *::-webkit-scrollbar {
     width: 0px;
 }
@@ -51,7 +124,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: DSIndigo,Helvetica,Arial,sans-serif;
+    font-family: DSIndigo, Helvetica, Arial, sans-serif;
     color: #090A0A;
     font-weight: 400;
     font-size: 14px;
