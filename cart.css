@@ -14,11 +14,11 @@ body {
 }
 
 .slimbanner {
-    background-color: whitesmoke;
-    display: none;
+    background-color: #0b6631;
+    /* background-color:#81ffb5; */
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 .slimcontent {
@@ -32,20 +32,24 @@ body {
 .slimb-right {
     display: flex;
     column-gap: 20px;
+}
+
+.slimb-left p,
+.slimb-right p {
     font-size: 12px;
-    color: #bac0cab5;
+    color: white;
     text-transform: capitalize;
 }
 
 .vhr {
     width: 1px;
     height: 100%;
-    color: #bac0cab5;
+    color: white;
 }
 
 .dis-more {
     text-decoration: 1px solid underline;
-    color: #090A0A;
+    color: white;
     font-weight: bold;
 }
 
