@@ -70,14 +70,14 @@ class filter {
                     return pp
                 }
 
+                // If no boxes checked but min-max was set
                 if (box.length === 1 && pp.length > 0) {
-                    let newPP = []
-                    for (let i in pp) {
-                        if (Number(pp[i].itemInfo.newItemPrice) >= low && Number(pp[i].itemInfo.newItemPrice) <= high) {
-                            newPP.push(pp[i])
+                    let pp = []
+                    for (let i in allItemsInCategory) {
+                        if (Number(allItemsInCategory[i].itemInfo.newItemPrice) >= low && Number(allItemsInCategory[i].itemInfo.newItemPrice) <= high) {
+                            pp.push(allItemsInCategory[i])
                         };
                     }
-                    pp = newPP;
                     return pp
                 }
             }
