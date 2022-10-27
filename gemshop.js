@@ -170,6 +170,14 @@ const cellPhones = () => {
   itel.addEventListener('click', (event) => {
     displayFilteredResults(filter.brand(event, "Itel"))
   })
+
+  infinix.addEventListener('click', (event) => {
+    displayFilteredResults(filter.brand(event, "Infinix"))
+  })
+
+  lg.addEventListener('click', (event) => {
+    displayFilteredResults(filter.brand(event, "LG"))
+  })
 }
 
 
@@ -354,12 +362,14 @@ const addToCart = (event) => {
   event.stopPropagation()
 
   let ItemID = event.target.parentNode.parentNode.dataset.id;
-  let pickItemFromStore = item(ItemID)
+  let pickItemFromStore = item(ItemID);
+
   popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg)
   pickedItem = {
     ...pickItemFromStore,
     amount: 1,
   };
+
   if (pickItemFromStore) {
     try {
       Storage.getItemAndSaveToCart();
