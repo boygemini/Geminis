@@ -68,6 +68,7 @@ class filter {
                     return true
                 }
             })
+
             disMem()
             // If more than one brand is already selected
             if (ba.length > 0) {
