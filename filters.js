@@ -1,505 +1,289 @@
 "use strict"
 
 
+
 //FILTERS
 
-let pp = []
-let newPP = []
-let brandArray = ["Apple", "Samsung", "Itel", "Infinix", "LG"];
-let ba = []
-let sortedprice = []
-let myBox = []
-let mem = []
-let memB = []
-let items = []
 
-const filterMemory = (pp) => {
-    let n = []
-    for (let i in pp) {
-        for (let k in mem) {
-            if (pp[i].itemInfo.memory === mem[k]) {
-                n.push(pp[i])
-            }
-        }
-    }
-    pp = n;
-    return pp
-}
+let Parameters;
+let currentFilterUrl = document.URL,
+    priceFromUrl, brandFromUrl, filterFromUrl, ramFromUrl, romFromUrl, memoryFromUrl, screenFromUrl, sizeFromUrl, newUrlParamters;
 
-const disMem = () => {
-    console.log(myBox.length);
-    let memoryBoxes = [...document.querySelectorAll(".memorycheck")]
-    if (myBox.length === 0) {
-        memoryBoxes.filter(box => {
-            box.disabled = true
-        })
-    }
 
-    if (myBox.length > 0) {
-        memoryBoxes.filter(box => {
-            box.disabled = false
-        })
-    }
-
-    if (ba.length > 0) {
-        memoryBoxes.filter(box => {
-            box.disabled = false
-        })
+// PREPARING PARAMETERS FROM THE URL IF IT IS A COMPLETELY NEW SEARCH FROM A NEW BROWSER
+if (currentFilterUrl.split("?category").length > 1 && localStorage.getItem("Parameters") === null) {
+    let urlParameters = currentFilterUrl.split("?category").toString().split("&").filter(arr => !arr.includes("gemshop.html"));
+    newUrlParamters = new Array()
+    for (let i in urlParameters) {
+        let sp = urlParameters[i].split("=")
+        newUrlParamters[sp[0]] = sp[1]
     }
 }
 
+
+// SETTING PARAMETERS IF NO PRIOR PARAMETERS HAS BEEN SAVED
+if (localStorage.getItem("Parameters") === null) {
+    console.log("Yes, its null : You can now set it.");
+    try {
+        newUrlParamters.Price = newUrlParamters.Price.replace(/%20/g, "").split("-")
+        priceFromUrl = [{
+            high: newUrlParamters.Price[1],
+            low: newUrlParamters.Price[0]
+        }]
+        brandFromUrl = newUrlParamters.Brand.split(",")
+        filterFromUrl = newUrlParamters.Filters.split(",")
+        ramFromUrl = newUrlParamters.Ram.split(",")
+        romFromUrl = newUrlParamters.Rom.split(",")
+        memoryFromUrl = newUrlParamters.Memory.split(",")
+        screenFromUrl = newUrlParamters.Screen.split(",")
+        sizeFromUrl = newUrlParamters.Size.split(",")
+    } catch (error) {}
+
+    Parameters = {
+        Price: priceFromUrl || [],
+        Range: priceFromUrl || [],
+        Brand: brandFromUrl || [],
+        Memory: memoryFromUrl || [],
+        Ram: ramFromUrl || [],
+        Rom: romFromUrl || [],
+        Screen: screenFromUrl || [],
+        Size: sizeFromUrl || [],
+        Filters: filterFromUrl || []
+    }
+    let stringifyParameters = JSON.stringify(Parameters)
+    localStorage.setItem("Parameters", stringifyParameters)
+}
+
+
+// SETTING PARAMETERS IF THE WAS A PREVIOUSLY SAVED ONE
+if (localStorage.getItem("Parameters") !== null) {
+    console.log("No, it is not null : Now update it");
+    let parseParameters = JSON.parse(localStorage.getItem("Parameters"))
+    Parameters = parseParameters;
+}
+
+
+// KEEP RECORD OF THE CHECKED FILTER BOXES
+const registerBox = (boxChosen) => {
+    Parameters.Filters.push(boxChosen)
+    Parameters.Filters = [...new Set(Parameters.Filters)]
+}
+
+
+// DISPLAY CHECKED BOXES
+const returnCheckedBoxes = () => {
+    let currentUrl = document.URL;
+    try {
+        let getBoxesCheck = currentUrl.split("Filters=")[1].split(",")
+        getBoxesCheck.forEach(box => document.getElementById(box).checked = true);
+    } catch (error) {}
+}
+returnCheckedBoxes()
+
+
+// DISPLAY UNCHECKED BOXESS
+const returnUncheckedBoxes = (targetBox) => {
+    let currentUrl = document.URL;
+    let getBoxesCheck = currentUrl.split("Filters=")[1].split(",")
+    getBoxesCheck = getBoxesCheck.filter(box => box !== targetBox)
+    Parameters.Filters = getBoxesCheck
+    console.log(Parameters.Filters);
+}
+
+
+
+// CREATING THE FILTER URL
+const createUrl = (category) => {
+    let price = "",
+        Range = "",
+        brand = "",
+        memory = "",
+        ram = "",
+        rom = "",
+        screen = "",
+        size = "";
+    let currentUrl = "gemshop.html";
+    let url = `${currentUrl}?category=${category}`
+
+
+    if (Parameters.Price.length > 0) {
+        let getMins = Parameters.Price.map(min => min.low).sort((a, b) => a - b);
+        let getMaxs = Parameters.Price.map(max => max.high).sort((a, b) => b - a);
+        let maximumPrice = getMaxs[0]
+        let minimumPrice = getMins[0]
+        price = `${minimumPrice} - ${maximumPrice}`
+        url += `&Price=${price}`
+    }
+
+    if (Parameters.Range.length > 0) {
+        let maxiPrice = Parameters.Range[0].high
+        let miniPrice = Parameters.Range[0].low
+        Range = `${miniPrice} - ${maxiPrice}`
+        url += `&Price=${Range}`
+    }
+
+    if (Parameters.Brand.length > 0) {
+        brand = Parameters.Brand.toString()
+        url += `&Brand=${brand}`
+    }
+
+    if (Parameters.Memory.length > 0) {
+        let max = Parameters.Memory[Parameters.Memory.length - 1]
+        let min = Parameters.Memory[0]
+        memory = `${min} - ${max}`
+        url += `&Memory=${memory}`
+    }
+
+    if (Parameters.Ram.length > 0) {
+        let max = Parameters.Ram[Parameters.Ram.length - 1]
+        let min = Parameters.Ram[0]
+        ram = `${min} - ${max}`
+        url += `&Ram=${ram}`
+    }
+
+    if (Parameters.Rom.length > 0) {
+        let max = Parameters.Rom[Parameters.Rom.length - 1]
+        let min = Parameters.Rom[0]
+        rom = `${min} - ${max}`
+        url += `&Rom=${rom}`
+    }
+
+    if (Parameters.Screen.length > 0) {
+        let max = Parameters.Screen[Parameters.Screen.length - 1]
+        let min = Parameters.Screen[0]
+        screen = `${min} - ${max}`
+        url += `&Screen=${screen}`
+    }
+
+    if (Parameters.Size.length > 0) {
+        let max = Parameters.Size[Parameters.Size.length - 1]
+        let min = Parameters.Size[0]
+        size = `${min} - ${max}`
+        url += `&Size=${size}`
+    }
+
+    if (Parameters.Filters.length > 0) {
+        url += `&Filters=${Parameters.Filters.toString()}`
+    }
+
+    let stringifyNewParameters = JSON.stringify(Parameters)
+    localStorage.setItem("Parameters", stringifyNewParameters)
+    localStorage.setItem("Url", url)
+
+    window.location = url;
+}
+
+
+// FILTER CLASS
 class filter {
-    static price(event, low, high) {
 
+    // EVENT TRIGGERED IF PRICE WAS SET
+    static price(event, category, low, high) {
         // EVENT TRIGGERED WHEN A BOX IS CHECKED
         if (event.target.checked === true) {
-            let allItemsInCategory = productRoute.cellphones;
-
-            let clickedBox = {
-                "high": high,
-                "low": low
+            let chosenPrice = {
+                high: high,
+                low: low
             }
-            myBox.push(clickedBox)
 
-            let newSet = new Set();
-            myBox = myBox.filter(item => {
-                if (!newSet.has(item.high)) {
-                    newSet.add(item.high)
+            Parameters.Price.push(chosenPrice)
+
+            let newPriceSet = new Set()
+            Parameters.Price = Parameters.Price.filter(pr => {
+                if (!newPriceSet.has(pr.high)) {
+                    newPriceSet.add(pr.high);
                     return true
                 }
             })
-
-            disMem()
-            // If more than one brand is already selected
-            if (ba.length > 0) {
-                let getpriceditems = allItemsInCategory.filter(gp => Number(gp.itemInfo.newItemPrice) >= low && Number(gp.itemInfo.newItemPrice) <= high);
-                if (pp.length > 0 && myBox.length === 3) {
-                    let n = [];
-                    for (let i in allItemsInCategory) {
-                        for (let k in ba) {
-                            if (allItemsInCategory[i].itemInfo.brand === ba[k]) {
-                                n.push(allItemsInCategory[i])
-                            }
-                        }
-                    }
-                    pp = n;
-                    if (mem.length > 0) {
-                        return filterMemory(pp)
-                    }
-                    return pp
-                }
-
-                for (let i in ba) {
-                    for (let k in getpriceditems) {
-                        if (ba[i] === getpriceditems[k].itemInfo.brand) {
-                            newPP.push(getpriceditems[k])
-                        }
-                    }
-                }
-                newPP = [...new Set(newPP)]
-                if (mem.length > 0) {
-                    return filterMemory(newPP)
-                }
-                return newPP
-            }
-
-
-            // If only one brand is already selected
-            if (ba.length === 0) {
-
-                // If there are more than one price boxes checked
-                if (myBox.length > 1) {
-                    for (let i in allItemsInCategory) {
-                        if (Number(allItemsInCategory[i].itemInfo.newItemPrice) >= low && Number(allItemsInCategory[i].itemInfo.newItemPrice) <= high) {
-                            pp.push(allItemsInCategory[i])
-                        };
-                    }
-                    if (mem.length > 0) {
-                        return filterMemory(pp)
-                    }
-                    return pp
-                }
-
-                // If no price boxes checked
-                if (myBox.length === 1 && pp.length === 0) {
-                    pp = []
-                    for (let i in allItemsInCategory) {
-                        if (Number(allItemsInCategory[i].itemInfo.newItemPrice) >= low && Number(allItemsInCategory[i].itemInfo.newItemPrice) <= high) {
-                            pp.push(allItemsInCategory[i])
-                        };
-                    }
-                    if (mem.length > 0) {
-                        return filterMemory(pp)
-                    }
-                    return pp
-                }
-
-                // If no price boxes checked but min-max was set
-                if (myBox.length === 1 && pp.length > 0) {
-                    let pp = []
-                    for (let i in allItemsInCategory) {
-                        if (Number(allItemsInCategory[i].itemInfo.newItemPrice) >= low && Number(allItemsInCategory[i].itemInfo.newItemPrice) <= high) {
-                            pp.push(allItemsInCategory[i])
-                        };
-                    }
-                    if (mem.length > 0) {
-                        return filterMemory(pp)
-                    }
-                    return pp
-                }
-            }
+            Parameters.Range = {}
+            registerBox(event.target.id)
+            createUrl(category)
         }
 
         // EVENT TRIGGERED WHEN A BOX IS UN-CHECKED
         if (event.target.checked === false) {
-            let allItemsInCategory = productRoute.cellphones;
-            myBox = myBox.filter(mb => mb.low !== low && mb.high !== high)
-            console.log(myBox);
-            disMem()
-            // If all price boxes are unchecked and no brand boxes is checked
-            if (myBox.length === 0 && ba.length === 0) {
-                pp = productRoute.cellphones;
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
-
-
-
-            // If all price boxes are unchecked while brand boxes are jus being checked
-            if (myBox.length === 3 && ba.length > 0) {
-                let getthemfirst = []
-                for (let a in allItemsInCategory) {
-                    for (let c in ba) {
-                        if (allItemsInCategory[a].itemInfo.brand === ba[c]) {
-                            getthemfirst.push(allItemsInCategory[a])
-                        }
-                    }
-                }
-                getthemfirst = [...new Set(getthemfirst)]
-                pp = getthemfirst
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
-
-            // HERE NOW......
-            if (myBox.length < 3 && ba.length > 0) {
-                let restFilter = pp.filter(rest => Number(rest.itemInfo.newItemPrice) >= low && Number(rest.itemInfo.newItemPrice) <= high)
-                pp = pp.filter(item => !restFilter.includes(item))
-                let tp = []
-                for (let i in pp) {
-                    for (let k in ba) {
-                        if (pp[i].itemInfo.brand === ba[k]) {
-                            tp.push(pp[i])
-                        }
-                    }
-                }
-                pp = tp
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
-
-
-            if (myBox.length > 0 && ba.length === 0) {
-                let restFilter = pp.filter(rest => Number(rest.itemInfo.newItemPrice) >= low && Number(rest.itemInfo.newItemPrice) <= high)
-                pp = pp.filter(item => !restFilter.includes(item))
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
-
-
-            // let restFilter = pp.filter(rest => Number(rest.itemInfo.newItemPrice) >= low && Number(rest.itemInfo.newItemPrice) <= high)
-            // pp = pp.filter(item => !restFilter.includes(item))
-            // return pp
+            returnUncheckedBoxes(event.target.id)
+            createUrl(category)
         }
     }
 
-
-    static priceMinMax(low, high) {
+    // EVENT TRIGGERED IF RANGE WAS SET
+    static priceMinMax(event, category, low, high) {
 
         // EVENT TRIGGERED WHEN A MIN-MAX IS SET
-        let allItemsInCategory = productRoute.cellphones;
-        let checkboxes = [...document.querySelectorAll(".pricecheck")]
-        for (let i in checkboxes) {
-            if (checkboxes[i].checked === true) {
-                checkboxes[i].checked = false;
-            }
+        if (high < low) {
+            alert("Please check your input")
+        } else {
+            Parameters.Range = [{
+                high: high,
+                low: low
+            }]
+            Parameters.Price = []
+            registerBox(event.target.id)
+            createUrl(category)
         }
-
-        pp = [];
-        for (let i in allItemsInCategory) {
-            if (Number(allItemsInCategory[i].itemInfo.newItemPrice) >= low && Number(allItemsInCategory[i].itemInfo.newItemPrice) <= high) {
-                pp.push(allItemsInCategory[i])
-            };
-        }
-        return pp
     }
 
-
-    static brand(event, brand) {
-        let allItemsInCategory = productRoute.cellphones;
-        let pricebox = []
-
-        let pboxes = [...document.querySelectorAll(".pricecheck")]
-        for (let i in pboxes) {
-            if (pboxes[i].checked === true) {
-                pricebox.push(pboxes[i])
-            }
-        }
+    // EVENT TRIGGERED IF BRAND WAS SET
+    static brand(event, category, brand) {
 
         if (event.target.checked === true) {
-            disMem()
-            // Monitor the number of brand boxes selected
-            for (let i in brandArray) {
-                if (brandArray[i] === brand) {
-                    ba.push(brandArray[i])
-                    ba = [...new Set(ba)]
-                }
-            }
-
-            // If No price box or brand has been selected
-            if (pp.length === 0) {
-                for (let i in allItemsInCategory) {
-                    if (allItemsInCategory[i].itemInfo.brand === brand) {
-                        pp.push(allItemsInCategory[i])
-                    }
-                }
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
-
-            // If only brand boxes have been selected
-            if (pp.length > 0 & pricebox.length === 0) {
-                for (let i in allItemsInCategory) {
-                    if (allItemsInCategory[i].itemInfo.brand === brand) {
-                        pp.push(allItemsInCategory[i])
-                    }
-                }
-                pp = [...new Set(pp)]
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
-
-            // If More than one price boxes are already selcted
-            if (pp.length > 0 && pricebox.length <= 1) {
-                if (newPP.length === 0) {
-                    for (let i in pp) {
-                        if (pp[i].itemInfo.brand === brand) {
-                            newPP.push(pp[i])
-                        }
-                    }
-                    if (mem.length > 0) {
-                        return filterMemory(newPP)
-                    }
-                    return newPP
-                }
-
-                if (newPP.length > 0) {
-                    for (let i in pp) {
-                        if (pp[i].itemInfo.brand === brand) {
-                            newPP.push(pp[i])
-                        }
-                    }
-                    newPP = [...new Set(newPP)]
-                    if (mem.length > 0) {
-                        return filterMemory(newPP)
-                    }
-                    return newPP
-                }
-            }
-
-            // If More than one price boxes are already selcted and brand are selected after
-            if (pp.length > 0 && pricebox.length > 1) {
-                let minPrice = myBox[0].low,
-                    maxPrice = myBox[myBox.length - 1].high;
-
-                let getP = allItemsInCategory.filter(item => Number(item.itemInfo.newItemPrice) >= minPrice && Number(item.itemInfo.newItemPrice) <= maxPrice);
-                let gp = []
-
-                for (let k in getP) {
-                    for (let m in ba) {
-                        if (getP[k].itemInfo.brand === ba[m]) {
-                            gp.push(getP[k])
-                        }
-                    }
-                }
-                newPP = gp
-                if (mem.length > 0) {
-                    return filterMemory(newPP)
-                }
-                return newPP
-            }
+            Parameters.Brand.push(brand)
+            Parameters.Brand = [...new Set(Parameters.Brand)]
+            registerBox(event.target.id)
+            createUrl(category)
         }
 
         if (event.target.checked === false) {
-            let uncheckedBox = ba.filter(box => box !== brand)
-            let checkboxes = [...document.querySelectorAll(".brandcheck")]
-
-
-            if (uncheckedBox.length === 0 && myBox.length > 0 && myBox.length < 3) {
-                let itemsInPrice = allItemsInCategory.filter(item => Number(item.itemInfo.newItemPrice) >= myBox[0].low && Number(item.itemInfo.newItemPrice) <= myBox[myBox.length - 1].high);
-                pp = itemsInPrice;
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
-
-
-            // If more than one price boxes is checked and brand box is unchecked afresh
-            if (myBox.length > 0 && myBox.length < 3 && ba.length > 0) {
-                let itemsInPrice = allItemsInCategory.filter(item => Number(item.itemInfo.newItemPrice) >= myBox[0].low && Number(item.itemInfo.newItemPrice) <= myBox[myBox.length - 1].high);
-                ba = ba.filter(b => b !== brand)
-                let n = []
-                for (let i in itemsInPrice) {
-                    for (let k in ba) {
-                        if (itemsInPrice[i].itemInfo.brand === ba[k]) {
-                            n.push(itemsInPrice[i])
-                        }
-                    }
-                }
-                pp = n;
-
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
-
-
-
-            if (myBox.length === 3) {
-                let n = []
-                ba = ba.filter(b => b !== brand)
-                for (let i in allItemsInCategory) {
-                    for (let k in ba) {
-                        if (allItemsInCategory[i].itemInfo.brand === ba[k]) {
-                            n.push(allItemsInCategory[i])
-                        }
-                    }
-                }
-                pp = n;
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
-
-            // If a box is already checked but rest are unchecked
-            if (pp.length > 0 && uncheckedBox.length < checkboxes.length) {
-                pp = pp.filter(p => p.itemInfo.brand !== brand)
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
-
-            // If all boxes are unchecked
-            if (box.length === checkboxes.length) {
-                if (mem.length > 0) {
-                    return filterMemory(pp)
-                }
-                return pp
-            }
+            returnUncheckedBoxes(event.target.id)
+            createUrl(category)
         }
     }
 
-
-    static memory(event, space) {
-        let allItemsInCategory = productRoute.cellphones;
+    // EVENT TRIGGERED IF MEMORY WAS SET
+    static memory(event, category, space) {
         if (event.target.checked === true) {
-            mem.push(space)
-            let newSet = new Set()
-            mem = mem.filter(mm => {
-                if (!newSet.has(mm)) {
-                    newSet.add(mm)
-                    return true
-                }
-            })
-
-
-
-            if (ba.length > 0) {
-                let n = []
-                let t = []
-                for (let i in allItemsInCategory) {
-                    for (let k in ba) {
-                        if (allItemsInCategory[i].itemInfo.brand === ba[k]) {
-                            n.push(allItemsInCategory[i])
-                        }
-                    }
-                }
-                for (let k in n) {
-                    for (let y in mem) {
-                        if (n[k].itemInfo.memory === mem[y]) {
-                            t.push(n[k])
-                        }
-                    }
-                }
-                pp = t;
-                return pp
-            }
-
-
-            if (myBox.length > 0) {
-                let getpriceditems = allItemsInCategory.filter(gp => Number(gp.itemInfo.newItemPrice) >= myBox[0].low && Number(gp.itemInfo.newItemPrice) <= myBox[myBox.length - 1].high);
-                let n = [];
-                for (let i in getpriceditems) {
-                    for (let k in mem) {
-                        if (getpriceditems[i].itemInfo.memory === mem[k]) {
-                            n.push(getpriceditems[i])
-                        }
-                    }
-                }
-                pp = n;
-                return pp
-            }
+            Parameters.Memory.push(space)
+            Parameters.Memory = [...new Set(Parameters.Memory)]
+            registerBox(event.target.id)
+            createUrl(category)
         }
-
         if (event.target.checked === false) {
-            mem = mem.filter(box => box !== space)
-            let n = []
-            for (let i in pp) {
-                for (let j in mem) {
-                    if (pp[i].itemInfo.memory === mem[j]) {
-                        n.push(pp[i])
-                    }
-                }
-            }
-            pp = n
-            return pp
+            returnUncheckedBoxes(event.target.id)
+            createUrl(category)
         }
     }
 
-
-    static ram() {
-
+    // EVENT TRIGGERED IS RAM WAS SET
+    static ram(event, category, space) {
+        Parameters.Ram.push(space)
+        Parameters.Ram = [...new Set(Parameters.Ram)]
+        registerBox(event.target.id)
+        createUrl(category)
     }
 
-
-    static rom() {
-
+    // EVENT TRIGGERED IF ROM WAS SET
+    static rom(event, category, space) {
+        Parameters.Rom.push(space)
+        Parameters.Rom = [...new Set(Parameters.Rom)]
+        registerBox(event.target.id)
+        createUrl(category)
     }
 
-
-    static screen() {
-
+    // EVENT TRIGGERED IS SCREEN WAS SET
+    static screen(event, category, screen) {
+        Parameters.Screen.push(screen)
+        Parameters.Screen = [...new Set(Parameters.Screen)]
+        registerBox(event.target.id)
+        createUrl(category)
     }
 
-
-    static size() {
-
+    // EVENT TRIGGERED IF SIZE WAS SET
+    static size(event, category, size) {
+        Parameters.Size.push(size)
+        Parameters.Size = [...new Set(Parameters.Size)]
+        registerBox(event.target.id)
+        createUrl(category)
     }
 }
 
