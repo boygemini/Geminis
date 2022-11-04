@@ -7,37 +7,46 @@
 
 let Parameters;
 let currentFilterUrl = document.URL,
-    priceFromUrl, brandFromUrl, filterFromUrl, ramFromUrl, romFromUrl, memoryFromUrl, screenFromUrl, sizeFromUrl, newUrlParamters;
+    priceFromUrl, brandFromUrl, filterFromUrl, radioFromUrl, ramFromUrl, romFromUrl, memoryFromUrl, screenFromUrl, sizeFromUrl, newUrlParameters;
 
 
 // PREPARING PARAMETERS FROM THE URL IF IT IS A COMPLETELY NEW SEARCH FROM A NEW BROWSER
 if (currentFilterUrl.split("?category").length > 1 && localStorage.getItem("Parameters") === null) {
     let urlParameters = currentFilterUrl.split("?category").toString().split("&").filter(arr => !arr.includes("gemshop.html"));
-    newUrlParamters = new Array()
+    newUrlParameters = new Array()
     for (let i in urlParameters) {
         let sp = urlParameters[i].split("=")
-        newUrlParamters[sp[0]] = sp[1]
+        newUrlParameters[sp[0]] = sp[1]
     }
 }
 
 
+if (currentFilterUrl.split("?category").length === 1 && localStorage.getItem("Parameters")) {
+    localStorage.removeItem("Parameters")
+}
+
+
+// PARRAMTERS FROM THE URL
+try {
+    newUrlParameters.Price = newUrlParameters.Price.replace(/%20/g, "").split("-")
+    priceFromUrl = [{
+        high: newUrlParameters.Price[1],
+        low: newUrlParameters.Price[0]
+    }]
+    brandFromUrl = newUrlParameters.Brand.split(",")
+    filterFromUrl = newUrlParameters.Filters.split(",")
+    radioFromUrl = newUrlParameters.Radio.split(",")
+    ramFromUrl = newUrlParameters.Ram.split(",")
+    romFromUrl = newUrlParameters.Rom.split(",")
+    memoryFromUrl = newUrlParameters.Memory.split(",")
+    screenFromUrl = newUrlParameters.Screen.split(",")
+    sizeFromUrl = newUrlParameters.Size.split(",")
+} catch (error) {}
+console.log(memoryFromUrl);
+
 // SETTING PARAMETERS IF NO PRIOR PARAMETERS HAS BEEN SAVED
 if (localStorage.getItem("Parameters") === null) {
     console.log("Yes, its null : You can now set it.");
-    try {
-        newUrlParamters.Price = newUrlParamters.Price.replace(/%20/g, "").split("-")
-        priceFromUrl = [{
-            high: newUrlParamters.Price[1],
-            low: newUrlParamters.Price[0]
-        }]
-        brandFromUrl = newUrlParamters.Brand.split(",")
-        filterFromUrl = newUrlParamters.Filters.split(",")
-        ramFromUrl = newUrlParamters.Ram.split(",")
-        romFromUrl = newUrlParamters.Rom.split(",")
-        memoryFromUrl = newUrlParamters.Memory.split(",")
-        screenFromUrl = newUrlParamters.Screen.split(",")
-        sizeFromUrl = newUrlParamters.Size.split(",")
-    } catch (error) {}
 
     Parameters = {
         Price: priceFromUrl || [],
@@ -48,7 +57,8 @@ if (localStorage.getItem("Parameters") === null) {
         Rom: romFromUrl || [],
         Screen: screenFromUrl || [],
         Size: sizeFromUrl || [],
-        Filters: filterFromUrl || []
+        Filters: filterFromUrl || [],
+        Radio: radioFromUrl || []
     }
     let stringifyParameters = JSON.stringify(Parameters)
     localStorage.setItem("Parameters", stringifyParameters)
@@ -69,14 +79,26 @@ const registerBox = (boxChosen) => {
     Parameters.Filters = [...new Set(Parameters.Filters)]
 }
 
+const registerRadio = (boxChosen) => {
+    Parameters.Radio = boxChosen
+}
+
 
 // DISPLAY CHECKED BOXES
 const returnCheckedBoxes = () => {
     let currentUrl = document.URL;
     try {
-        let getBoxesCheck = currentUrl.split("Filters=")[1].split(",")
+        let getBoxesCheck = currentUrl.split("Filters=")[1].split("&")[0].split(",")
         getBoxesCheck.forEach(box => document.getElementById(box).checked = true);
     } catch (error) {}
+
+    try {
+        let getBoxesCheck2 = currentUrl.split("Radio=")[1]
+        console.log(getBoxesCheck2);
+        document.getElementById(getBoxesCheck2).checked = true
+    } catch (error) {
+
+    }
 }
 returnCheckedBoxes()
 
@@ -84,12 +106,23 @@ returnCheckedBoxes()
 // DISPLAY UNCHECKED BOXESS
 const returnUncheckedBoxes = (targetBox) => {
     let currentUrl = document.URL;
-    let getBoxesCheck = currentUrl.split("Filters=")[1].split(",")
-    getBoxesCheck = getBoxesCheck.filter(box => box !== targetBox)
-    Parameters.Filters = getBoxesCheck
-    console.log(Parameters.Filters);
+    try {
+        let getBoxesCheck = currentUrl.split("Filters=")[1].split("&")[0].split(",")
+        getBoxesCheck = getBoxesCheck.filter(box => box !== targetBox)
+        Parameters.Filters = getBoxesCheck
+    } catch (error) {
+
+    }
+
 }
 
+
+try {
+    max.value = Parameters.Range[0].high
+    min.value = Parameters.Range[0].low
+} catch (error) {
+
+}
 
 
 // CREATING THE FILTER URL
@@ -101,16 +134,17 @@ const createUrl = (category) => {
         ram = "",
         rom = "",
         screen = "",
-        size = "";
+        size = "",
+        radio = "";
     let currentUrl = "gemshop.html";
     let url = `${currentUrl}?category=${category}`
 
 
     if (Parameters.Price.length > 0) {
-        let getMins = Parameters.Price.map(min => min.low).sort((a, b) => a - b);
-        let getMaxs = Parameters.Price.map(max => max.high).sort((a, b) => b - a);
-        let maximumPrice = getMaxs[0]
-        let minimumPrice = getMins[0]
+        // let getMins = Parameters.Price.map(min => min.low).sort((a, b) => a - b);
+        // let getMaxs = Parameters.Price.map(max => max.high).sort((a, b) => b - a);
+        let maximumPrice = Parameters.Price[0].high
+        let minimumPrice = Parameters.Price[0].low
         price = `${minimumPrice} - ${maximumPrice}`
         url += `&Price=${price}`
     }
@@ -128,9 +162,7 @@ const createUrl = (category) => {
     }
 
     if (Parameters.Memory.length > 0) {
-        let max = Parameters.Memory[Parameters.Memory.length - 1]
-        let min = Parameters.Memory[0]
-        memory = `${min} - ${max}`
+        memory = Parameters.Memory.toString()
         url += `&Memory=${memory}`
     }
 
@@ -166,43 +198,37 @@ const createUrl = (category) => {
         url += `&Filters=${Parameters.Filters.toString()}`
     }
 
+    if (Parameters.Radio.length > 0) {
+        url += `&Radio=${Parameters.Radio.toString()}`
+    }
+
     let stringifyNewParameters = JSON.stringify(Parameters)
     localStorage.setItem("Parameters", stringifyNewParameters)
     localStorage.setItem("Url", url)
 
+    console.log(url);
     window.location = url;
 }
 
 
 // FILTER CLASS
+
 class filter {
 
     // EVENT TRIGGERED IF PRICE WAS SET
     static price(event, category, low, high) {
+
         // EVENT TRIGGERED WHEN A BOX IS CHECKED
         if (event.target.checked === true) {
-            let chosenPrice = {
+            let chosenPrice = [{
                 high: high,
                 low: low
-            }
+            }]
 
-            Parameters.Price.push(chosenPrice)
+            Parameters.Price = chosenPrice
 
-            let newPriceSet = new Set()
-            Parameters.Price = Parameters.Price.filter(pr => {
-                if (!newPriceSet.has(pr.high)) {
-                    newPriceSet.add(pr.high);
-                    return true
-                }
-            })
             Parameters.Range = {}
-            registerBox(event.target.id)
-            createUrl(category)
-        }
-
-        // EVENT TRIGGERED WHEN A BOX IS UN-CHECKED
-        if (event.target.checked === false) {
-            returnUncheckedBoxes(event.target.id)
+            registerRadio(event.target.id)
             createUrl(category)
         }
     }
@@ -219,6 +245,7 @@ class filter {
                 low: low
             }]
             Parameters.Price = []
+            Parameters.Radio = []
             registerBox(event.target.id)
             createUrl(category)
         }
@@ -235,6 +262,8 @@ class filter {
         }
 
         if (event.target.checked === false) {
+            Parameters.Brand = Parameters.Brand.filter(bb => bb !== brand)
+            localStorage.setItem("Parameters", Parameters)
             returnUncheckedBoxes(event.target.id)
             createUrl(category)
         }
@@ -249,6 +278,8 @@ class filter {
             createUrl(category)
         }
         if (event.target.checked === false) {
+            Parameters.Memory = Parameters.Memory.filter(m => m !== space)
+            localStorage.setItem("Parameters", Parameters)
             returnUncheckedBoxes(event.target.id)
             createUrl(category)
         }
@@ -256,34 +287,66 @@ class filter {
 
     // EVENT TRIGGERED IS RAM WAS SET
     static ram(event, category, space) {
-        Parameters.Ram.push(space)
-        Parameters.Ram = [...new Set(Parameters.Ram)]
-        registerBox(event.target.id)
-        createUrl(category)
+        if (event.target.checked === true) {
+            Parameters.Ram.push(space)
+            Parameters.Ram = [...new Set(Parameters.Ram)]
+            registerBox(event.target.id)
+            createUrl(category)
+        }
+        if (event.target.checked === false) {
+            Parameters.Ram = Parameters.Ram.filter(rr => rr !== space)
+            localStorage.setItem("Parameters", Parameters)
+            returnUncheckedBoxes(event.target.id)
+            createUrl(category)
+        }
     }
 
     // EVENT TRIGGERED IF ROM WAS SET
     static rom(event, category, space) {
-        Parameters.Rom.push(space)
-        Parameters.Rom = [...new Set(Parameters.Rom)]
-        registerBox(event.target.id)
-        createUrl(category)
+        if (event.target.checked == true) {
+            Parameters.Rom.push(space)
+            Parameters.Rom = [...new Set(Parameters.Rom)]
+            registerBox(event.target.id)
+            createUrl(category)
+        }
+        if (event.target.checked === false) {
+            Parameters.Rom = Parameters.Rom.filter(ro => ro !== space)
+            localStorage.setItem("Parameters", Parameters)
+            returnUncheckedBoxes(event.target.id)
+            createUrl(category)
+        }
     }
 
     // EVENT TRIGGERED IS SCREEN WAS SET
     static screen(event, category, screen) {
-        Parameters.Screen.push(screen)
-        Parameters.Screen = [...new Set(Parameters.Screen)]
-        registerBox(event.target.id)
-        createUrl(category)
+        if (event.target.checked == true) {
+            Parameters.Screen.push(screen)
+            Parameters.Screen = [...new Set(Parameters.Screen)]
+            registerBox(event.target.id)
+            createUrl(category)
+        }
+        if (event.target.checked === false) {
+            Parameters.Screen = Parameters.Screen.filter(sc => sc !== screen)
+            localStorage.setItem("Parameters", Parameters)
+            returnUncheckedBoxes(event.target.id)
+            createUrl(category)
+        }
     }
 
     // EVENT TRIGGERED IF SIZE WAS SET
     static size(event, category, size) {
-        Parameters.Size.push(size)
-        Parameters.Size = [...new Set(Parameters.Size)]
-        registerBox(event.target.id)
-        createUrl(category)
+        if (event.target.checked == true) {
+            Parameters.Size.push(size)
+            Parameters.Size = [...new Set(Parameters.Size)]
+            registerBox(event.target.id)
+            createUrl(category)
+        }
+        if (event.target.checked === false) {
+            Parameters.Size = Parameters.Size.filter(sz => sz !== size)
+            localStorage.setItem("Parameters", Parameters)
+            returnUncheckedBoxes(event.target.id)
+            createUrl(category)
+        }
     }
 }
 

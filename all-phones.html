@@ -17,18 +17,25 @@
         </div>
     </div>
     <div class="fil-box">
-        <h1>Price</h1><br>
-        <div class="option">
-            <input type="checkbox" class="pricecheck" name="" id="firstlevelprice">
-            <p>$300 to $800</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" class="pricecheck" name="" id="secondlevelprice">
-            <p>$900 to $1,500</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" class="pricecheck" name="" id="thirdlevelprice">
-            <p>$1,600 to $2,000</p>
+        <div class="wrapper">
+            <h1>Price</h1><br>
+            <div class="box">
+                <input type="radio" name="select" id="firstlevelprice">
+                <input type="radio" name="select" id="secondlevelprice">
+                <input type="radio" name="select" id="thirdlevelprice">
+                <label for="firstlevelprice" class="option-1">
+                    <div class="dot"></div>
+                    <div class="text">$300 to $800</div>
+                </label>
+                <label for="secondlevelprice" class="option-2">
+                    <div class="dot"></div>
+                    <div class="text">$900 to $1,500</div>
+                </label>
+                <label for="thirdlevelprice" class="option-3">
+                    <div class="dot"></div>
+                    <div class="text">$1,600 to $2,000</div>
+                </label>
+            </div>
         </div>
         <div class="option minn">
             <p class="applymm" id="applyminmax">APPLY</p>
@@ -40,39 +47,52 @@
     </div>
     <div class="fil-box">
         <h1>Brand</h1><br>
-        <div class="option">
+        <label class="option container">
             <input type="checkbox" class="brandcheck" name="" id="apple">
             <p>Apple</p>
-        </div>
-        <div class="option">
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
             <input type="checkbox" class="brandcheck" name="" id="itel">
             <p>Itel</p>
-        </div>
-        <div class="option">
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
             <input type="checkbox" class="brandcheck" name="" id="samsung">
             <p>Samsung</p>
-        </div>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="infinix">
+            <p>Infinix</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="lg">
+            <p>LG</p>
+            <span class="checkmark"></span>
+        </label>
     </div>
     <div class="fil-box">
         <h1>Memory</h1><br>
         <div class="option">
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" class="memorycheck" name="" id="m16">
             <p>16 GB</p>
         </div>
         <div class="option">
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" class="memorycheck" name="" id="m32">
             <p>32 GB</p>
         </div>
         <div class="option">
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" class="memorycheck" name="" id="m64">
             <p>64 GB</p>
         </div>
         <div class="option">
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" class="memorycheck" name="" id="m128">
             <p>128 GB</p>
         </div>
         <div class="option">
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" class="memorycheck" name="" id="m256">
             <p>256 GB</p>
         </div>
     </div>
