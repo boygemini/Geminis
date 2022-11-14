@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,87 +8,121 @@
     <title>Document</title>
     <link rel="stylesheet" href="/CSS/gemshop.css">
 </head>
+
 <body>
     <div class="fil-box">
         <h1>Shipping</h1><br>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>Free</p>
-        </div>
+        <label class="option container">
+            <input type="checkbox" name="" id="">
+            <p>Free</p>
+            <span class="checkmark"></span>
+        </label>
     </div>
     <div class="fil-box">
-        <h1>Price</h1><br>
-        <div class="option">
-            <input type="radio" name="" id=""><p>$300 to $800</p>
+        <div class="wrapper">
+            <h1>Price</h1><br>
+            <div class="box">
+                <input type="radio" name="select" id="firstlevelprice">
+                <input type="radio" name="select" id="secondlevelprice">
+                <input type="radio" name="select" id="thirdlevelprice">
+                <label for="firstlevelprice" class="option-1">
+                    <div class="dot"></div>
+                    <div class="text">$900 to $1,199</div>
+                </label>
+                <label for="secondlevelprice" class="option-2">
+                    <div class="dot"></div>
+                    <div class="text">$1,200 to $1,399</div>
+                </label>
+                <label for="thirdlevelprice" class="option-3">
+                    <div class="dot"></div>
+                    <div class="text">$1,400 to $2,000</div>
+                </label>
+            </div>
         </div>
-        <div class="option">
-            <input type="radio" name="" id=""><p>$900 to $1,500</p>
-        </div>
-        <div class="option">
-            <input type="radio" name="" id=""><p>$1,600 to $2,000</p>
-        </div>
-        <div class="option">
-            <input type="text" class="minmax" name="" id="" placeholder="Min"><input type="text" name="" class="minmax" id="" placeholder="Max">
+        <div class="option minn">
+            <p class="applymm" id="applyminmax">APPLY</p>
+            <div class="mmdiv">
+                <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+                <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+            </div>
         </div>
     </div>
     <div class="fil-box">
         <h1>Brand</h1><br>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>Apple</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>HP</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>ASUS</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>Other</p>
-        </div>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="mac">
+            <p>Mac</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="hp">
+            <p>HP</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="asus">
+            <p>ASUS</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="toshiba">
+            <p>Toshiba</p>
+            <span class="checkmark"></span>
+        </label>
     </div>
     <div class="fil-box">
         <h1>RAM</h1><br>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>4 GB</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>8 GB</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>16 GB</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>32 GB</p>
-        </div>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="ram4">
+            <p>4 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="ram8">
+            <p>8 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="ram16">
+            <p>16 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="ram32">
+            <p>32 GB</p><span class="checkmark"></span>
+        </label>
     </div>
     <div class="fil-box">
         <h1>ROM/STORAGE</h1><br>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>256 GB</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>512 GB</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>1 TB</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>2 TB</p>
-        </div>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="st256">
+            <p>256 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="st512">
+            <p>512 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="st1tb">
+            <p>1 TB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="st2tb">
+            <p>2 TB</p><span class="checkmark"></span>
+        </label>
     </div>
     <div class="fil-box">
         <h1>SCREEN</h1><br>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>9 INCH</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>13 INCHES</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>16 INCHES</p>
-        </div>
-        <div class="option">
-            <input type="checkbox" name="" id=""><p>OTHER</p>
-        </div>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="inch9">
+            <p>9 INCH</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="inch13">
+            <p>13 INCHES</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="inch16">
+            <p>16 INCHES</p><span class="checkmark"></span>
+        </label>
     </div>
 </body>
+
 </html>

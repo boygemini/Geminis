@@ -7,7 +7,7 @@
 
 let Parameters;
 let currentFilterUrl = document.URL,
-    priceFromUrl, brandFromUrl, filterFromUrl, radioFromUrl, ramFromUrl, romFromUrl, memoryFromUrl, screenFromUrl, sizeFromUrl, newUrlParameters;
+    priceFromUrl, brandFromUrl, filterFromUrl, radioFromUrl, ramFromUrl, romFromUrl, memoryFromUrl, screenFromUrl, sizeFromUrl, searchQueryFromUrl, newUrlParameters;
 
 
 // PREPARING PARAMETERS FROM THE URL IF IT IS A COMPLETELY NEW SEARCH FROM A NEW BROWSER
@@ -26,7 +26,7 @@ if (currentFilterUrl.split("?category").length === 1 && localStorage.getItem("Pa
 }
 
 
-// PARRAMTERS FROM THE URL
+// PARAMETERS FROM THE URL INTO ARRAYS
 try {
     newUrlParameters.Price = newUrlParameters.Price.replace(/%20/g, "").split("-")
     priceFromUrl = [{
@@ -41,12 +41,14 @@ try {
     memoryFromUrl = newUrlParameters.Memory.split(",")
     screenFromUrl = newUrlParameters.Screen.split(",")
     sizeFromUrl = newUrlParameters.Size.split(",")
-} catch (error) {}
-console.log(memoryFromUrl);
+    searchQueryFromUrl = newUrlParameters.SearchQuery
+} catch (error) {
+
+}
+
 
 // SETTING PARAMETERS IF NO PRIOR PARAMETERS HAS BEEN SAVED
 if (localStorage.getItem("Parameters") === null) {
-    console.log("Yes, its null : You can now set it.");
 
     Parameters = {
         Price: priceFromUrl || [],
@@ -58,7 +60,8 @@ if (localStorage.getItem("Parameters") === null) {
         Screen: screenFromUrl || [],
         Size: sizeFromUrl || [],
         Filters: filterFromUrl || [],
-        Radio: radioFromUrl || []
+        Radio: radioFromUrl || [],
+        SearchQuery: "",
     }
     let stringifyParameters = JSON.stringify(Parameters)
     localStorage.setItem("Parameters", stringifyParameters)
@@ -67,7 +70,6 @@ if (localStorage.getItem("Parameters") === null) {
 
 // SETTING PARAMETERS IF THE WAS A PREVIOUSLY SAVED ONE
 if (localStorage.getItem("Parameters") !== null) {
-    console.log("No, it is not null : Now update it");
     let parseParameters = JSON.parse(localStorage.getItem("Parameters"))
     Parameters = parseParameters;
 }
@@ -90,11 +92,12 @@ const returnCheckedBoxes = () => {
     try {
         let getBoxesCheck = currentUrl.split("Filters=")[1].split("&")[0].split(",")
         getBoxesCheck.forEach(box => document.getElementById(box).checked = true);
-    } catch (error) {}
+    } catch (error) {
+
+    }
 
     try {
         let getBoxesCheck2 = currentUrl.split("Radio=")[1]
-        console.log(getBoxesCheck2);
         document.getElementById(getBoxesCheck2).checked = true
     } catch (error) {
 
@@ -113,7 +116,6 @@ const returnUncheckedBoxes = (targetBox) => {
     } catch (error) {
 
     }
-
 }
 
 
@@ -135,14 +137,13 @@ const createUrl = (category) => {
         rom = "",
         screen = "",
         size = "",
-        radio = "";
+        radio = "",
+        searchQuery = "";
     let currentUrl = "gemshop.html";
     let url = `${currentUrl}?category=${category}`
 
 
     if (Parameters.Price.length > 0) {
-        // let getMins = Parameters.Price.map(min => min.low).sort((a, b) => a - b);
-        // let getMaxs = Parameters.Price.map(max => max.high).sort((a, b) => b - a);
         let maximumPrice = Parameters.Price[0].high
         let minimumPrice = Parameters.Price[0].low
         price = `${minimumPrice} - ${maximumPrice}`
@@ -167,31 +168,28 @@ const createUrl = (category) => {
     }
 
     if (Parameters.Ram.length > 0) {
-        let max = Parameters.Ram[Parameters.Ram.length - 1]
-        let min = Parameters.Ram[0]
-        ram = `${min} - ${max}`
+        ram = Parameters.Ram.toString()
         url += `&Ram=${ram}`
     }
 
     if (Parameters.Rom.length > 0) {
-        let max = Parameters.Rom[Parameters.Rom.length - 1]
-        let min = Parameters.Rom[0]
-        rom = `${min} - ${max}`
+        rom = Parameters.Rom.toString()
         url += `&Rom=${rom}`
     }
 
     if (Parameters.Screen.length > 0) {
-        let max = Parameters.Screen[Parameters.Screen.length - 1]
-        let min = Parameters.Screen[0]
-        screen = `${min} - ${max}`
+        screen = Parameters.Screen.toString()
         url += `&Screen=${screen}`
     }
 
     if (Parameters.Size.length > 0) {
-        let max = Parameters.Size[Parameters.Size.length - 1]
-        let min = Parameters.Size[0]
-        size = `${min} - ${max}`
+        size = Parameters.Size.toString()
         url += `&Size=${size}`
+    }
+
+    if (Parameters.SearchQuery.length > 0) {
+        searchQuery = Parameters.SearchQuery;
+        url += `&SearchQuery=${searchQuery}`
     }
 
     if (Parameters.Filters.length > 0) {
@@ -226,7 +224,6 @@ class filter {
             }]
 
             Parameters.Price = chosenPrice
-
             Parameters.Range = {}
             registerRadio(event.target.id)
             createUrl(category)
@@ -271,6 +268,7 @@ class filter {
 
     // EVENT TRIGGERED IF MEMORY WAS SET
     static memory(event, category, space) {
+
         if (event.target.checked === true) {
             Parameters.Memory.push(space)
             Parameters.Memory = [...new Set(Parameters.Memory)]
@@ -287,6 +285,7 @@ class filter {
 
     // EVENT TRIGGERED IS RAM WAS SET
     static ram(event, category, space) {
+
         if (event.target.checked === true) {
             Parameters.Ram.push(space)
             Parameters.Ram = [...new Set(Parameters.Ram)]
@@ -303,6 +302,7 @@ class filter {
 
     // EVENT TRIGGERED IF ROM WAS SET
     static rom(event, category, space) {
+
         if (event.target.checked == true) {
             Parameters.Rom.push(space)
             Parameters.Rom = [...new Set(Parameters.Rom)]
@@ -319,6 +319,7 @@ class filter {
 
     // EVENT TRIGGERED IS SCREEN WAS SET
     static screen(event, category, screen) {
+
         if (event.target.checked == true) {
             Parameters.Screen.push(screen)
             Parameters.Screen = [...new Set(Parameters.Screen)]
@@ -335,6 +336,7 @@ class filter {
 
     // EVENT TRIGGERED IF SIZE WAS SET
     static size(event, category, size) {
+
         if (event.target.checked == true) {
             Parameters.Size.push(size)
             Parameters.Size = [...new Set(Parameters.Size)]
@@ -360,24 +362,24 @@ const displayFilteredResults = (directory) => {
     let x = ""
     for (let k in directory) {
         x += `<div class="item-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
-            <img src=${directory[k].itemInfo.itemImg} alt="">
-            <div class="item-details">
-                <h1>${directory[k].itemInfo.name}</h1>
-                <h2>${directory[k].itemInfo.description1} ${directory[k].itemInfo.memory}GB</h2>
-                <div class="specifications">
-                    <strong>Refurbished</strong>
-                    <p><strong>Model : </strong>MKLV3LL/A</p>
-                    <p><strong>SKU : </strong>87294820</p>
-                    <p><strong>Color : </strong>Sierra Blue</p>
-                </div>
-            </div>
-            <div class="buy">
-                <div class="price-tag">
-                    <span class="currency">$ </span><span class="price">${directory[k].itemInfo.newItemPrice}</span>
-                </div>
-                <button onclick = "addToCart(event)">Add to Cart</button>
-            </div>
-        </div>`
+			<img src=${directory[k].itemInfo.itemImg} alt="">
+			<div class="item-details">
+				<h1>${directory[k].itemInfo.name}</h1>
+				<h2>${directory[k].itemInfo.description1} ${directory[k].itemInfo.memory}GB</h2>
+				<div class="specifications">
+					<strong>Refurbished</strong>
+					<p><strong>Model : </strong>MKLV3LL/A</p>
+					<p><strong>SKU : </strong>87294820</p>
+					<p><strong>Color : </strong>Sierra Blue</p>
+				</div>
+			</div>
+			<div class="buy">
+				<div class="price-tag">
+					<span class="currency">$ </span><span class="price">${directory[k].itemInfo.newItemPrice}</span>
+				</div>
+				<button onclick = "addToCart(event)">Add to Cart</button>
+			</div>
+		</div>`
     }
     showBox.innerHTML = `<h1 class="cat-head">Filtered Results</h1>` + x
 }
