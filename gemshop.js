@@ -91,46 +91,145 @@ class getFilter {
 class display {
   static items(boxID, mRoute, target) {
     let x = ``;
+    let y = ``
     for (let i in mRoute[`${target}`]) {
-      x += `<div class="item-box" data-id=${
-	   mRoute[`${target}`][i].id
-	 } onclick="viewProduct(event)">
-			   <img src=${mRoute[`${target}`][i].itemInfo.itemImg} alt="">
-			   <div class="item-details">
-					   <h1>${mRoute[`${target}`][i].itemInfo.name}</h1>
-					   <h2>${
-						mRoute[`${target}`][i].itemInfo.description1
-					   } ${mRoute[`${target}`][i].itemInfo.memory}GB</h2>
-					   <div class="specifications">
-							   <strong>Refurbished</strong>
-							   <p><strong>Model : </strong>MKLV3LL/A</p>
-							   <p><strong>SKU : </strong>87294820</p>
-							   <p><strong>Color : </strong>Sierra Blue</p>
-					   </div>
-			   </div>
-			   <div class="buy">
-					   <div class="price-tag">
-							   <span class="currency">$ </span><span class="price">${
-								mRoute[`${target}`][i].itemInfo
-								  .newItemPrice
-							   }</span>
-					   </div>
-					   <button onclick = "addToCart(event)"> Add to Cart </button>
-			   </div>
-			   </div>`;
+      // 		x += `<div class="item-box" data-id=${
+      //    mRoute[`${target}`][i].id
+      //  } onclick="viewProduct(event)">
+      // 		   <img src=${mRoute[`${target}`][i].itemInfo.itemImg} alt="">
+      // 		   <div class="item-details">
+      // 				   <h1>${mRoute[`${target}`][i].itemInfo.name}</h1>
+      // 				   <h2>${
+      // 					mRoute[`${target}`][i].itemInfo.description1
+      // 				   } ${mRoute[`${target}`][i].itemInfo.memory}GB</h2>
+      // 				   <div class="specifications">
+      // 						   <strong>Refurbished</strong>
+      // 						   <p><strong>Model : </strong>MKLV3LL/A</p>
+      // 						   <p><strong>SKU : </strong>87294820</p>
+      // 						   <p><strong>Color : </strong>Sierra Blue</p>
+      // 				   </div>
+      // 		   </div>
+      // 		   <div class="buy">
+      // 				   <div class="price-tag">
+      // 						   <span class="currency">$ </span><span class="price">${
+      // 							mRoute[`${target}`][i].itemInfo
+      // 							  .newItemPrice
+      // 						   }</span>
+      // 				   </div>
+      // 				   <button onclick = "addToCart(event)"> Add to Cart </button>
+      // 		   </div>
+      // 		   </div>`;
+      y += `
+			<div class = "sel-box">
+							<div class="img-con">
+								<img src="/IMAGES/frontIpad.png" src=${mRoute[`${target}`][i].itemInfo.itemImg} alt="">
+							</div>
+							<div class="sfu">
+								<div class="text-hold">
+									<p class="itemName2">${mRoute[`${target}`][i].itemInfo.name}</p>
+									<div div class = "description-box"
+									data-id = ${
+				mRoute[`${target}`][i].id
+			}
+			onclick = "viewProduct(event)">
+			<p class = "item-description" > ${
+				mRoute[`${target}`][i].itemInfo.description1
+			}
+			${
+				mRoute[`${target}`][i].itemInfo.memory
+			}
+			GB
+			</p>
+		</div>
+			</div>
+			<div class="price-order">
+				<span class="price-box">
+					<span class = "price" > <span class = "currency"
+					id = "currency" > $ </span> ${
+					mRoute[`${target}`][i].itemInfo
+						.newItemPrice
+					} </span>
+					<span class="old-price price">${
+			mRoute[`${target}`][i].itemInfo
+				.oldItemPrice
+			}</span>
+				</span>
+				<button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
+						alt="" onclick = "addToCart(event)">
+				</button>
+			</div>
+		</div>
+		</div>`
     }
-    boxID.innerHTML = `<h1 class="cat-head">${target}</h1>` + x;
+    boxID.innerHTML = `<h1 class="cat-head">${target}</h1>` + y;
+  }
+
+  static allUI(directory, category, boxID) {
+    let y = ""
+    if (directory.length === 0) {
+      showBox.innerHTML = `<div class="noresult">
+			<h1 class = "cat-head" > Oops, there are no results
+			for "${Query}" </h1>  <p>Try checking your spelling or use more general terms</p >
+		</div>`
+    }
+
+    if (directory.length > 0) {
+      for (let k = 0; k < 10; k++) {
+        y += `
+			<div div class = "sel-box" data-id = ${directory[k].id}>
+				<div class="img-con">
+					<img src=${directory[k].itemInfo.itemImg} alt="">
+				</div>
+				<div class="sfu">
+					<div class="text-hold">
+						<p class="itemName2">${directory[k].itemInfo.name}</p>
+						<div div class = "description-box"
+						data-id=${directory[k].id} onclick = "viewProduct(event)">
+						<p class = "item-description" > ${directory[k].itemInfo.description1}
+						</p>
+					</div>
+				</div>
+				<div class="price-order">
+					<span class="price-box">
+						<span class = "price" > <span class = "currency"
+						id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
+						<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice }</span>
+					</span>
+					<button id="cart-btn" data-id = ${directory[k].id} class="cart-btn">
+						<img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
+							alt="" onclick = "addToCart(event)">
+					</button>
+				</div>
+			</div>
+		</div>`
+      }
+      document.getElementById(category).innerText = boxID
+      document.getElementById(boxID).innerHTML = y
+    }
   }
 
   static displayAll() {
-    display.items(cellPhoneBox, productRoute, "cellphones");
-    display.items(gamingBox, productRoute, "gaming");
-    display.items(computerBox, productRoute, "computers");
-    display.items(speakersBox, productRoute, "speakers");
-    display.items(tvsBox, productRoute, "tv");
+    let dir2 = JSON.parse(localStorage.getItem("StoreItems"));
+    let dir = dir2.selectedProducts[0];
+    this.allUI(dir.cellphones, "sec-name-cellphones", "cellphones")
+    this.allUI(dir.gaming, "sec-name-gaming", "gamings")
+    this.allUI(dir.speakers, "sec-name-speakers", "speakers")
+    this.allUI(dir.computers, "sec-name-computer", "computers")
+    this.allUI(dir.tv, "sec-name-tv", "TV")
+
+    // let Category = ["gaming", "cellphones", "speakers", "computers", "tv"]
+    // let arr = []
+    // for (let i in Category) {
+    // 	let searchDirectory = dir[`${Category[i]}`];
+    // 	for (let j in searchDirectory) {
+    // 		arr.push(searchDirectory[j])
+    // 	}
+    // }
+    // arr = arr.sort((a, b) => Number(a.id) - Number(b.id))
+    // this.allUI(arr)
   }
 }
-// display.displayAll()
+display.displayAll()
 
 
 
@@ -146,7 +245,8 @@ const emptyParameters = () => {
     Size: [],
     Filters: [],
     Radio: [],
-    SearchQuery: ""
+    SearchQuery: "",
+    Page: ""
   };
   let stringifyParameters = JSON.stringify(Parameters);
   localStorage.setItem("Parameters", stringifyParameters);
@@ -191,7 +291,11 @@ const phoneFilters = () => {
 
   // Brand filter
   apple.addEventListener("click", (event) => {
-    displayFilteredResults(filter.brand(event, "cellphones", "Apple"));
+    displayFilteredResults(filter.brand(
+      event,
+      "cellphones",
+      "Apple"
+    ));
   });
 
   samsung.addEventListener("click", (event) => {
@@ -234,33 +338,7 @@ const phoneFilters = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-// PRODUCT DISPLAY (TAB CLICK)
-const cellPhones = () => {
-  // Dislay Cellphones
-  getFilter.allCellPhones();
-  display.items(showBox, productRoute, "cellphones");
-
-  // Phone Filters
-  phoneFilters()
-};
-
-
-
-
-const Gamings = () => {
-  getFilter.allGaming();
-  display.items(showBox, productRoute, "gaming");
-
+const gamingFilters = () => {
   // Price filter
   firstlevelprice.addEventListener("click", (event) => {
     displayFilteredResults(filter.price(event, "gaming", 300, 799));
@@ -287,15 +365,10 @@ const Gamings = () => {
   ps.addEventListener("click", (event) => {
     displayFilteredResults(filter.brand(event, "gaming", "Ps"));
   });
-};
+}
 
 
-
-
-const Computers = () => {
-  getFilter.allComputer();
-  display.items(showBox, productRoute, "computers");
-
+const comFilters = () => {
   // Price
   firstlevelprice.addEventListener("click", (event) => {
     displayFilteredResults(filter.price(event, "computers", 900, 1199));
@@ -369,15 +442,11 @@ const Computers = () => {
   inch16.addEventListener("click", (event) => {
     displayFilteredResults(filter.screen(event, "computers", 16));
   });
-};
+}
 
 
 
-
-const Speakers = () => {
-  getFilter.allSpeaker();
-  display.items(showBox, productRoute, "speakers");
-
+const speakerFilters = () => {
   // Price filter
   firstlevelprice.addEventListener("click", (event) => {
     displayFilteredResults(filter.price(event, "speakers", 300, 799));
@@ -407,15 +476,10 @@ const Speakers = () => {
   jbl.addEventListener("click", (event) => {
     displayFilteredResults(filter.brand(event, "speakers", "jbl"));
   });
-};
+}
 
 
-
-
-const TVs = () => {
-  getFilter.allTv();
-  display.items(showBox, productRoute, "tv");
-
+const tvFilters = () => {
   // Price filter
   firstlevelprice.addEventListener("click", (event) => {
     displayFilteredResults(filter.price(event, "tv", 300, 799));
@@ -453,6 +517,62 @@ const TVs = () => {
   });
 
   // Size Filter
+}
+
+
+
+// PRODUCT DISPLAY (TAB CLICK)
+const cellPhones = () => {
+  // Dislay Cellphones
+  getFilter.allCellPhones();
+  display.items(showBox, productRoute, "cellphones");
+
+  // Phone Filters
+  phoneFilters()
+};
+
+
+
+
+const Gamings = () => {
+  getFilter.allGaming();
+  display.items(showBox, productRoute, "gaming");
+
+  // Gaming Filters
+  gamingFilters()
+};
+
+
+
+
+const Computers = () => {
+  getFilter.allComputer();
+  display.items(showBox, productRoute, "computers");
+
+  // Computers Filters
+  comFilters()
+};
+
+
+
+
+const Speakers = () => {
+  getFilter.allSpeaker();
+  display.items(showBox, productRoute, "speakers");
+
+  // Computers Filters
+  speakerFilters()
+};
+
+
+
+
+const TVs = () => {
+  getFilter.allTv();
+  display.items(showBox, productRoute, "tv");
+
+  // Computers Filters
+  tvFilters()
 };
 
 
@@ -461,26 +581,30 @@ const TVs = () => {
 let urlCategory = document.URL;
 try {
   urlCategory = urlCategory.split("?")[1].split("=")[1].split("&")[0];
+  console.log(urlCategory);
 } catch (error) {}
 
-if (urlCategory === "cellphones") {
-  cellPhones();
+switch (urlCategory) {
+  case "cellphones":
+    cellPhones();
+    break;
+  case "computers":
+    Computers();
+    break;
+  case "speakers":
+    Speakers();
+    break;
+  case "tv":
+    TVs();
+    break;
+  case "gaming":
+    Gamings();
+    break;
 }
 
-if (urlCategory === "computers") {
-  Computers();
-}
-
-if (urlCategory === "speakers") {
-  Speakers();
-}
-
-if (urlCategory === "tv") {
-  TVs();
-}
-
-if (urlCategory === "gaming") {
-  Gamings();
+if (document.URL.split("?").length === 1) {
+  display.displayAll();
+  document.querySelector(".filters").style.display = "none"
 }
 
 games.addEventListener("click", (e) => {
@@ -529,7 +653,6 @@ const viewProduct = (event) => {
     window.location = url;
   }
 };
-
 
 
 
@@ -681,10 +804,9 @@ let ItemsInCart = JSON.parse(localStorage.getItem("Cart")),
   pickedItem;
 const addToCart = (event) => {
   event.stopPropagation();
-
-  let ItemID = event.target.parentNode.parentNode.dataset.id;
+  let ItemID = event.target.parentNode.dataset.id;
   let pickItemFromStore = item(ItemID);
-
+  console.log(ItemID);
   popupNotification(
     pickItemFromStore.itemInfo.name,
     pickItemFromStore.itemInfo.itemImg

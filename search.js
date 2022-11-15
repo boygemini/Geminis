@@ -37,7 +37,6 @@ const showSuggesttions = (dirname, name) => {
       x += `<div class="sug">
 			<h1 class="main">${list}</h1>
 			<span class="dot"></span>
-
 			<h1 class="in">${name}</h1>
 			</div>`;
       hs.style.opacity = "1";
@@ -79,7 +78,7 @@ const sendQueryGO = (event) => {
 
 
 const sendQuery = (event) => {
-  let query = event.target.firstChild.innerText;
+  let query = event.target.firstElementChild.innerText;
   let queryCategory = event.target.children[2].innerText.toLowerCase();
   let url = `gemshop.html?category=${encodeURIComponent(queryCategory)}&SearchQuery=${encodeURIComponent(query)}`;
   window.location.href = url;
@@ -115,7 +114,8 @@ class getResults {
         arr.push(searchDirectory[j])
       }
     }
-    displayResults(arr, Query)
+    console.log(arr, Category);
+    displayFiltereddResults(arr, Query)
   }
 
   static searchBarResult(Query) {
@@ -137,7 +137,7 @@ class getResults {
 
 const displayResults = (directory, Query) => {
   let x = ""
-
+  let y = ""
   if (directory.length === 0) {
     showBox.innerHTML = `<div class="noresult">
 			<h1 class = "cat-head" > Oops, there are no results
@@ -148,34 +148,64 @@ const displayResults = (directory, Query) => {
   if (directory.length > 0) {
     for (let k in directory) {
       if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
-        x += `<div class="item-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
-				<img src=${directory[k].itemInfo.itemImg} alt="">
-				<div class="item-details">
-						<h1>${directory[k].itemInfo.name}</h1>
-						<h2>${directory[k].itemInfo.description1}</h2>
-						<div class="specifications">
-								<strong>Refurbished</strong>
-								<p><strong>Model : </strong>MKLV3LL/A</p>
-								<p><strong>SKU : </strong>87294820</p>
-								<p><strong>Color : </strong>Sierra Blue</p>
-						</div>
+        // 		x += `<div class="item-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
+        // 		<img src=${directory[k].itemInfo.itemImg} alt="">
+        // 		<div class="item-details">
+        // 				<h1>${directory[k].itemInfo.name}</h1>
+        // 				<h2>${directory[k].itemInfo.description1}</h2>
+        // 				<div class="specifications">
+        // 						<strong>Refurbished</strong>
+        // 						<p><strong>Model : </strong>MKLV3LL/A</p>
+        // 						<p><strong>SKU : </strong>87294820</p>
+        // 						<p><strong>Color : </strong>Sierra Blue</p>
+        // 				</div>
+        // 		</div>
+        // 		<div class="buy">
+        // 				<div class="price-tag">
+        // 						<span class="currency">$ </span><span class="price">${directory[k].itemInfo.newItemPrice}</span>
+        // 				</div>
+        // 				<button onclick = "addToCart(event)">Add to Cart</button>
+        // 		</div>
+        // </div>`
+        y += `
+			<div div class = "sel-box" data-id = ${directory[k].id}>
+				<div class="img-con">
+					<img src=${directory[k].itemInfo.itemImg} alt="">
 				</div>
-				<div class="buy">
-						<div class="price-tag">
-								<span class="currency">$ </span><span class="price">${directory[k].itemInfo.newItemPrice}</span>
-						</div>
-						<button onclick = "addToCart(event)">Add to Cart</button>
-				</div>
+				<div class="sfu">
+					<div class="text-hold">
+						<p class="itemName2">${directory[k].itemInfo.name}</p>
+						<div div class = "description-box"
+						data-id=${directory[k].id} onclick = "viewProduct(event)">
+			<p class = "item-description" > ${directory[k].itemInfo.description1}
+			</p>
+		</div>
+			</div>
+			<div class="price-order">
+				<span class="price-box">
+					<span class = "price" > <span class = "currency"
+					id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
+					<span class = "old-price price" > ${
+							directory[k].itemInfo.oldItemPrice
+			}</span>
+				</span>
+				<button id="cart-btn" data-id = ${directory[k].id} class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
+						alt="" onclick = "addToCart(event)">
+				</button>
+			</div>
+		</div>
 		</div>`
       }
     }
-    showBox.innerHTML = `<h1 class="cat-head">Results for "${Query}"</h1>` + x
+    document.getElementById("result-title").innerText = `Results for "${Query}"`
+    showBox.innerHTML = y
   }
 }
 
 
 const displayFiltereddResults = (results, category) => {
   let x = ``;
+  let y = ""
   if (results.length === 0) {
     showBox.innerHTML = `<div class="noresult">
 			<h1 class = "cat-head" > Oops, there are no results
@@ -185,27 +215,56 @@ const displayFiltereddResults = (results, category) => {
 
   if (results.length > 0) {
     for (let k in results) {
-      x += `<div class="item-box" data-id=${results[k].id} onclick = "viewProduct(event)">
-				<img src=${results[k].itemInfo.itemImg} alt="">
-				<div class="item-details">
-						<h1>${results[k].itemInfo.name}</h1>
-						<h2>${results[k].itemInfo.description1} ${results[k].itemInfo.rom}GB</h2>
-						<div class="specifications">
-								<strong>Refurbished</strong>
-								<p><strong>Model : </strong>MKLV3LL/A</p>
-								<p><strong>SKU : </strong>87294820</p>
-								<p><strong>Color : </strong>Sierra Blue</p>
-						</div>
+      // 	x += `<div class="item-box" data-id=${results[k].id} onclick = "viewProduct(event)">
+      // 		<img src=${results[k].itemInfo.itemImg} alt="">
+      // 		<div class="item-details">
+      // 				<h1>${results[k].itemInfo.name}</h1>
+      // 				<h2>${results[k].itemInfo.description1} ${results[k].itemInfo.rom}GB</h2>
+      // 				<div class="specifications">
+      // 						<strong>Refurbished</strong>
+      // 						<p><strong>Model : </strong>MKLV3LL/A</p>
+      // 						<p><strong>SKU : </strong>87294820</p>
+      // 						<p><strong>Color : </strong>Sierra Blue</p>
+      // 				</div>
+      // 		</div>
+      // 		<div class="buy">
+      // 				<div class="price-tag">
+      // 						<span class="currency">$ </span><span class="price">${results[k].itemInfo.newItemPrice}</span>
+      // 				</div>
+      // 				<button onclick = "addToCart(event)">Add to Cart</button>
+      // 		</div>
+      // </div>`
+      y += `
+			<div div class = "sel-box" data-id = ${results[k].id}>
+				<div class="img-con">
+					<img src=${results[k].itemInfo.itemImg} alt="">
 				</div>
-				<div class="buy">
-						<div class="price-tag">
-								<span class="currency">$ </span><span class="price">${results[k].itemInfo.newItemPrice}</span>
-						</div>
-						<button onclick = "addToCart(event)">Add to Cart</button>
-				</div>
+				<div class="sfu">
+					<div class="text-hold">
+						<p class="itemName2">${results[k].itemInfo.name}</p>
+						<div div class = "description-box"
+						data-id=${results[k].id} onclick = "viewProduct(event)">
+			<p class = "item-description" > ${results[k].itemInfo.description1}
+			</p>
+		</div>
+			</div>
+			<div class="price-order">
+				<span class="price-box">
+					<span class = "price" > <span class = "currency"
+					id = "currency" > $ </span> ${results[k].itemInfo.newItemPrice} </span>
+					<span class = "old-price price" > ${
+							results[k].itemInfo.oldItemPrice
+			}</span>
+				</span>
+				<button id="cart-btn" data-id = ${results[k].id} class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
+						alt="" onclick = "addToCart(event)">
+				</button>
+			</div>
+		</div>
 		</div>`
     }
-    showBox.innerHTML = `<h1 class="cat-head">Results for "${category}"</h1>` + x
+    document.getElementById("result-title").innerText = `Results for "${category}"`
+    showBox.innerHTML = y
   }
 }
 
@@ -214,66 +273,52 @@ const displayFiltereddResults = (results, category) => {
 
 const getCatFilters = (Query, Category) => {
   let gamekey = ["xbox", "box", "play", "station"]
-  let phonekey = ["iph", "iphone", "13", "samsung", "itel", "infinix", "lg"]
+  let phonekey = ["iph", "iphone", "iphones", "13", "samsung", "itel", "infinix", "lg"]
   let tvkey = ["samsung", "midea", "lg"]
   let speakerkey = ["jbl", "flip", "ora", "beat"]
   let comkey = ["mac", "hp", "asus", "toshiba"]
+
+  function Call(Query, Category) {
+    if (Category) {
+      return getResults.suggestionsResult(Query, Category)
+    }
+    if (!Category) {
+      return getResults.searchBarResult(Query)
+    }
+  }
+
   for (let i in gamekey) {
     if (gamekey[i].includes(Query)) {
       Gamings()
-      if (Category) {
-        return getResults.suggestionsResult(Query, Category)
-      }
-      if (!Category) {
-        return getResults.searchBarResult(Query)
-      }
+      Call(Query, Category)
     }
   }
+
   for (let i in phonekey) {
     if (phonekey[i].includes(Query)) {
       cellPhones()
-      if (Category) {
-        return getResults.suggestionsResult(Query, Category)
-      }
-      if (!Category) {
-        return getResults.searchBarResult(Query)
-      }
+      Call(Query, Category)
     }
   }
 
   for (let i in tvkey) {
     if (tvkey[i].includes(Query)) {
       TVs()
-      if (Category) {
-        return getResults.suggestionsResult(Query, Category)
-      }
-      if (!Category) {
-        return getResults.searchBarResult(Query)
-      }
+      Call(Query, Category)
     }
   }
 
   for (let i in speakerkey) {
     if (speakerkey[i].includes(Query)) {
       Speakers()
-      if (Category) {
-        return getResults.suggestionsResult(Query, Category)
-      }
-      if (!Category) {
-        return getResults.searchBarResult(Query)
-      }
+      Call(Query, Category)
     }
   }
 
   for (let i in comkey) {
     if (comkey[i].includes(Query)) {
       Computers()
-      if (Category) {
-        return getResults.suggestionsResult(Query, Category)
-      }
-      if (!Category) {
-        return getResults.searchBarResult(Query)
-      }
+      Call(Query, Category)
     }
   }
 }
@@ -283,7 +328,9 @@ const getCatFilters = (Query, Category) => {
 const removeThe20Nonsense = (Query) => {
   if (Query.lastIndexOf("%20") > -1) {
     Query = Query.replace(/%20/g, " ");
+    return Query
   }
+  return Query
 }
 
 
@@ -295,15 +342,16 @@ const onLoad = () => {
   if (urlWithQuery.split("&SearchQuery=").length > 1 && urlWithQuery.split("category=").length > 1) {
     let Query = urlWithQuery.split("SearchQuery=")[1];
     let Category = urlWithQuery.split("category=")[1].toString().split("&")[0]
-    removeThe20Nonsense(Query)
+    Query = removeThe20Nonsense(Query)
     getCatFilters(Query, Category)
+    return getResults.suggestionsResult(Query, Category)
   }
 
 
   if (urlWithQuery.split("?SearchQuery=").length > 1 && urlWithQuery.split("category=").length === 1) {
     let Query = urlWithQuery.split("?SearchQuery=")[1]
-    removeThe20Nonsense(Query)
-    getCatFilters(Query)
+    Query = removeThe20Nonsense(Query)
+    return getCatFilters(Query)
   }
 
 
@@ -372,6 +420,12 @@ const onLoad = () => {
     }
     try {
       sizeFromUrl = newUrlParameters.Size.split(",").replace(/%20/g, "").split("-")
+
+    } catch (error) {
+
+    }
+    try {
+      pageFromUrl = newUrlParameters.Page
 
     } catch (error) {
 
@@ -509,6 +563,52 @@ const onLoad = () => {
         results = sz
       }
     }
+
+
+    // // Page
+    // if (!pageFromUrl) {
+    // 	results = createPagination(results, 10, 1)
+    // }
+
+    // if (pageFromUrl) {
+    // 	results = createPagination(results, 10, Number(pageFromUrl))
+    // }
+
+    // function createPagination(results, numberOnEachPage, pageNumber) {
+    // 	let arrayGroupTotal = results.length / numberOnEachPage;
+    // 	let arrayRemainder = results.length % numberOnEachPage;
+    // 	let itemsLeftInArray = results.slice(results.length - arrayRemainder, results.length)
+    // 	let paginatedResult = new Array()
+    // 	let lastSet;
+    // 	for (let i = 0; i <= Math.floor(arrayGroupTotal); i++) {
+    // 		if (i === 0) {
+    // 			lastSet = 0;
+    // 			i = 1
+    // 		}
+    // 		paginatedResult.push(results.slice(lastSet, numberOnEachPage * i));
+    // 		lastSet = numberOnEachPage * i
+    // 	}
+    // 	paginatedResult.push(itemsLeftInArray)
+
+    // 	/*
+    // 		CREATE PAGINATION UI
+    // 	*/
+
+
+    // 	// Just in case someone altered the page number from the url
+    // 	if (!paginatedResult[pageNumber]) {
+    // 		alert("This Page Is Null")
+    // 	} else {
+    // 		let n = ""
+    // 		for (let i in paginatedResult) {
+    // 			n += `<button class="pagin">${Number(i) + 1}</button>`
+    // 		}
+    // 		document.getElementById("pagindiv").innerHTML = n
+    // 		console.log(paginatedResult[pageNumber]);
+    // 		return paginatedResult[pageNumber]
+    // 	}
+    // }
+
     displayFiltereddResults(results, parameterCategory)
   }
 };

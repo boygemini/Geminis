@@ -253,31 +253,35 @@ class displayProduct {
   DISPLAY SELECTED FOR YOU ITEMS
 
   */
-  static createItem(category, sub) {
+  static createItem(event, holderClass, category, sub) {
     let itemCreated = " ";
-    let Holder = document.getElementById("sel-container");
+    let Holder = document.querySelector(holderClass);
     for (let i in category) {
       itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
-          <div class="img-con">
-              <img src=${category[i].itemInfo.itemImg} alt="">
-          </div>
-          <div class="sfu">
-              <p class="itemName2"">${category[i].itemInfo.name}</p>
-              <div class="description-box">
-                  <p class="item-description">${category[i].itemInfo.description1}</p>
-                  <p class="item-description">${category[i].itemInfo.description2}</p>
-              </div>
-              <div class="price-order">
-                  <span class="price-box">
-                      <span class="price"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
-                      <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
-                  </span>
-                  <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
-              </div>
-          </div>
-      </div>`;
+		<div class="img-con">
+		    <img src=${category[i].itemInfo.itemImg} alt="">
+		</div>
+		<div class="sfu">
+		    <p class="itemName2"">${category[i].itemInfo.name}</p>
+		    <div class="description-box">
+			   <p class="item-description">${category[i].itemInfo.description1}</p>
+			   <p class="item-description">${category[i].itemInfo.description2}</p>
+		    </div>
+		    <div class="price-order">
+			   <span class="price-box">
+				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
+				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
+			   </span>
+			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
+		    </div>
+		</div>
+	 </div>`;
     }
     Holder.innerHTML = itemCreated;
+    let viewAll = document.querySelector(".view-all")
+    try {
+      viewAll.id = event.target.id
+    } catch (error) {}
   }
 
 
@@ -291,83 +295,48 @@ class displayProduct {
     let Holder = document.getElementById("holder-rec");
     for (let i in category) {
       itemCreated += `<div class="recent" data-id=${category[i].id} onclick = "viewProduct(event)">
-      <img src=${category[i].itemInfo.itemImg} alt="">
-      <div class="receInfo">
-          <h1 class="itemName">${category[i].itemInfo.category}</h1>
-          <p class="itemName2">${category[i].itemInfo.name}</p>
-          <p class="itemInfo">${category[i].itemInfo.description1}</p>
-          <div class="price-order">
-              <span class="itemPricing"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
-              <button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
-          </div>
-      </div>
-  </div>`;
-    }
-    Holder.innerHTML = itemCreated;
-  }
-
-  /*
-
-  DISPLAY WEEKLY GEATURE ITEMS
-
-  */
-  static displayWeeklyFeatured(category, sub) {
-    let itemCreated = "";
-    let Holder = document.querySelector(".Weekly-Container");
-    for (let i in category) {
-      itemCreated += `<div id="wkly" data-id=${category[i].id} onclick = "viewProduct(event)">
-      <div class="img-con">
-          <p class="new">New</p>
-          <img src=${category[i].itemInfo.itemImg} alt="">
-      </div>
-      <div class="sfu">
-      <p class="itemName2">${category[i].itemInfo.name}</p>
-              <div class="ssd description-box">
-                  <p class="item-description">${category[i].itemInfo.description1}</p>
-                  <p class="item-description">${category[i].itemInfo.description2}</p>
-              </div>
-          <div class="price-order">
-              <span class="price-box">
-                  <span class="price"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
-                  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
-              </span>
-              <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"></button>
-          </div>
-      </div>
+	 <img src=${category[i].itemInfo.itemImg} alt="">
+	 <div class="receInfo">
+		<h1 class="itemName">${category[i].itemInfo.category}</h1>
+		<p class="itemName2">${category[i].itemInfo.name}</p>
+		<p class="itemInfo">${category[i].itemInfo.description1}</p>
+		<div class="price-order">
+		    <span class="itemPricing"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
+		    <button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
+		</div>
+	 </div>
   </div>`;
     }
     Holder.innerHTML = itemCreated;
   }
 }
 
-/*
 
-DISPLAY SELECTED PRODUCTS
 
-*/
+// DISPLAY SELECTED PRODUCTS
 Products.selectedForYou();
 
 
-/*
+// DISPLAY RECENT PRODUCTS
+displayProduct.displayRecentItems(Storage.getRecentItems());
 
-DISPLAYS GAMING ITEMS BY DEFAULT
 
-*/
-displayProduct.createItem(
+
+// DISPLAYS GAMING ITEMS BY DEFAULT
+displayProduct.createItem(event, "#sel-container",
   Products.getSelectedProducts().selectedProducts[0].gaming,
   "gaming"
 );
 
 
-/* DISPLAY RECENT PRODUCTS */
-displayProduct.displayRecentItems(Storage.getRecentItems());
+// DISPLAY WEEKLY PRODUCTS
+displayProduct.createItem(event, ".Weekly-Container",
+  Storage.weeklyFeaturedItems()
+);
 
 
-/* DISPLAY RECENT PRODUCTS */
-displayProduct.displayWeeklyFeatured(Storage.weeklyFeaturedItems());
 
-
-/* VIEW CLICKED PRODUCT */
+// VIEW CLICKED PRODUCT
 const viewProduct = (event) => {
   let itemID = event.target.dataset.id || event.target.parentNode.dataset.id || event.target.parentNode.parentNode.dataset.id || event.target.parentNode.parentNode.parentNode.dataset.id;
   if (itemID) {
@@ -377,7 +346,8 @@ const viewProduct = (event) => {
 }
 
 
-/* ADD RECENT ITEMS TO CART */
+
+// ADD RECENT ITEMS TO CART
 const addToCartt = (event, ITT) => {
   event.stopPropagation()
 
@@ -396,16 +366,12 @@ const addToCartt = (event, ITT) => {
       } catch (error) {}
     }
   }
-
   Me();
 };
 
 
-/*
 
-CHANGE TABS BASED ON ITEM'S CATEGORY
-
-*/
+// CHANGE TABS BASED ON ITEM'S CATEGORY
 let tab = [...document.querySelectorAll(".tab")];
 tab[0].className += " active-li";
 for (let x in tab) {
@@ -415,15 +381,13 @@ for (let x in tab) {
       tab[y].classList.remove("active-li");
     }
     event.target.className += " active-li";
+
   });
 }
 
 
-/*
 
-ADD SELECTED ITEMS TO CART
-
-*/
+// ADD SELECTED ITEMS TO CART
 let cartDom = document.getElementById("items-in-cart");
 try {
   cartDom.innerText = Storage.numberOfItemsInCart();
@@ -452,11 +416,8 @@ const addToCart = (event, ITT) => {
 };
 
 
-/*
 
-SELECTED FOR YOU SLIDER
-
-*/
+// SELECTED FOR YOU SLIDER
 let boxCounter = 0;
 let container = document.getElementById("sel-container");
 let holder = document.getElementById("sel-holder");
@@ -472,11 +433,7 @@ const moveLeft = () => {
 
 
 
-/*
-
-MENU
-
-*/
+// MENU
 let menu = document.getElementById("menu"),
   mb = document.getElementById("mb");
 let close = document.querySelectorAll("#close");

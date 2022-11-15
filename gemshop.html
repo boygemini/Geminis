@@ -76,6 +76,14 @@
             </div>
         </section>
 
+        <section class="banner-container">
+            <div class="banner-text">
+                <h1>BLACK FRIDAY DEALS</h1>
+                <p><span>50%</span> OFF</p>
+                <button>Shop Now</button>
+            </div>
+        </section>
+
         <section class="shop-body">
             <div class="filters">
                 <div class="fil-head">
@@ -83,16 +91,76 @@
                 </div>
 
                 <div class="filterss" id="filters">
-
+                    <div class="wrapper">
+                        <h1>Price</h1><br>
+                        <div class="box">
+                            <input type="radio" name="select" id="firstlevelprice">
+                            <input type="radio" name="select" id="secondlevelprice">
+                            <input type="radio" name="select" id="thirdlevelprice">
+                            <label for="firstlevelprice" class="option-1">
+                                <div class="dot"></div>
+                                <div class="text">$300 to $800</div>
+                            </label>
+                            <label for="secondlevelprice" class="option-2">
+                                <div class="dot"></div>
+                                <div class="text">$900 to $1,500</div>
+                            </label>
+                            <label for="thirdlevelprice" class="option-3">
+                                <div class="dot"></div>
+                                <div class="text">$1,600 to $2,000</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option minn">
+                        <p class="applymm" id="applyminmax">APPLY</p>
+                        <div class="mmdiv">
+                            <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+                            <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+                        </div>
+                    </div>
                 </div>
-                <div class="apply">
-                    <button class="" type="submit">Apply</button>
-                </div>
+                <!-- <div class="apply">
+					<button class="" type="submit">Apply</button>
+				</div> -->
             </div>
-            <div class="available-items" id="showbox" onload="onLoad()">
-                <div class="full-cat">
-                    <div class="av-box" id="gaming">
-                        <!-- <div class="item-box">
+            <div class="available-items">
+                <div class="littlebans">
+                    <div class="b-holder hol1">
+                        <div class="shade" onclick="window.location='gemshop.html?category=gaming'">
+                            <p>Gaming</p>
+                        </div>
+                    </div>
+                    <div class="b-holder hol2">
+                        <div class="shade" onclick="window.location='gemshop.html?category=cellphones'">
+                            <p>Cell Phones</p>
+                        </div>
+                    </div>
+                    <div class="b-holder hol3">
+                        <div class="shade" onclick="window.location='gemshop.html?category=computers'">
+                            <p>Computers & Laptops</p>
+                        </div>
+                    </div>
+                    <div class="b-holder hol4">
+                        <div class="shade" onclick="window.location='gemshop.html?category=speakers'">
+                            <p>Speakers</p>
+                        </div>
+                    </div>
+                    <div class="b-holder hol5">
+                        <div class="shade" onclick="window.location='gemshop.html?category=tv'">
+                            <p>Television</p>
+                        </div>
+                    </div>
+                </div>
+                <h1 id="result-title" class="cat-head"></h1>
+                <div id="showbox" onload="onLoad()">
+                    <div class="full-cat">
+                        <div class="section-title">
+                            <h1 id="sec-name-gaming"></h1>
+                            <button class="all-category" onclick="window.location='gemshop.html?category=gaming'">See
+                                All Gamings</button>
+                        </div>
+                        <div class="av-box" id="gamings">
+                            <!-- <div class="item-box">
 							<img src="/IMAGES/ipad2.png" alt="">
 							<div class="item-details">
 								<h1>iPhone 13 Pro Max</h1>
@@ -111,36 +179,91 @@
 								<button>Add to Cart</button>
 							</div>
 						</div> -->
+                            <!-- <div class="sel-box">
+							<div class="img-con">
+								<img src="/IMAGES/frontIpad.png" alt="">
+							</div>
+							<div class="sfu">
+								<div class="text-hold">
+									<p class="itemName2">iPhone 13 Pro Max</p>
+									<div class="description-box">
+										<p class="item-description">Apple IPhone 13 Pro Max 6.7" Super
+											Retina XDR
+											Display With ProMotion, (6GB RAM + 128GB ROM) IOS 15, 5G,
+										</p>
+									</div>
+								</div>
+								<div class="price-order">
+									<span class="price-box">
+										<span class="price"><span class="currency" id="currency">$</span> 637.23</span>
+										<span class="old-price price">$765</span>
+									</span>
+									<button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
+											alt="" data-id="1914" data-category="gaming"
+											onclick="addToCart(event,Storage.getAllProducts().selectedProducts[0])">
+									</button>
+								</div>
+							</div>
+						</div> -->
+                        </div>
+                    </div>
+                    <!-- <div class="full-cat">
+						<div class="section-title">
+							<h1 id="sec-name-gaming"></h1>
+							<button class="all-category">See All</button>
+						</div>
+						<div class="av-box" id="searc">
+						</div>
+					</div> -->
+                    <div class="full-cat">
+                        <div class="section-title">
+                            <h1 id="sec-name-cellphones"></h1>
+                            <button class="all-category"
+                                onclick="window.location='gemshop.html?category=cellphones'">See All Cell
+                                Phones</button>
+                        </div>
+                        <div class="av-box" id="cellphones">
+                        </div>
+                    </div>
+                    <div class="full-cat">
+                        <div class="section-title">
+                            <h1 id="sec-name-computer"></h1>
+                            <button class="all-category" onclick="window.location='gemshop.html?category=computers'">See
+                                All Computers</button>
+                        </div>
+                        <div class="av-box" id="computers">
+                        </div>
+                    </div>
+                    <div class="full-cat">
+                        <div class="section-title">
+                            <h1 id="sec-name-speakers"></h1>
+                            <button class="all-category" onclick="window.location='gemshop.html?category=speakers'">See
+                                All Speakers</button>
+                        </div>
+                        <div class="av-box" id="speakers">
+                        </div>
+                    </div>
+                    <div class="full-cat">
+                        <div class="section-title">
+                            <h1 id="sec-name-tv"></h1>
+                            <button class="all-category" onclick="window.location='gemshop.html?category=tv'">See All
+                                TVs</button>
+                        </div>
+                        <div class="av-box" id="TV">
+                        </div>
                     </div>
                 </div>
-                <div class="full-cat">
-                    <div class="av-box" id="searc">
-                    </div>
-                </div>
-                <div class="full-cat">
-                    <div class="av-box" id="cellphones">
-                    </div>
-                </div>
-                <div class="full-cat">
-                    <div class="av-box" id="computer">
-                    </div>
-                </div>
-                <div class="full-cat">
-                    <div class="av-box" id="speakers">
-                    </div>
-                </div>
-                <div class="full-cat">
-                    <div class="av-box" id="TV">
-                    </div>
+                <div class="pagindiv" id="pagindiv">
+                    <button class="pagin">1</button>
                 </div>
             </div>
-            <section class="visit-our-support">
-                <div class="vv">
-                    <h1>Visit our Support Center</h1>
-                    <img src="/IMAGES/customer-support.png" alt="">
-                </div>
-                <button class="visit" type="button">Visit</button>
-            </section>
+            <!-- <section class="visit-our-support">
+				<div class="vv">
+					<h1>Visit our Support Center</h1>
+					<img src="/IMAGES/customer-support.png" alt="">
+				</div>
+				<button class="visit" type="button">Visit</button>
+			</section> -->
 
         </section>
     </section>

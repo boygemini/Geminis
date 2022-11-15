@@ -7,7 +7,7 @@
 
 let Parameters;
 let currentFilterUrl = document.URL,
-    priceFromUrl, brandFromUrl, filterFromUrl, radioFromUrl, ramFromUrl, romFromUrl, memoryFromUrl, screenFromUrl, sizeFromUrl, searchQueryFromUrl, newUrlParameters;
+    priceFromUrl, brandFromUrl, filterFromUrl, radioFromUrl, ramFromUrl, romFromUrl, memoryFromUrl, screenFromUrl, sizeFromUrl, pageFromUrl, searchQueryFromUrl, newUrlParameters;
 
 
 // PREPARING PARAMETERS FROM THE URL IF IT IS A COMPLETELY NEW SEARCH FROM A NEW BROWSER
@@ -42,6 +42,7 @@ try {
     screenFromUrl = newUrlParameters.Screen.split(",")
     sizeFromUrl = newUrlParameters.Size.split(",")
     searchQueryFromUrl = newUrlParameters.SearchQuery
+    pageFromUrl = newUrlParameters.Page
 } catch (error) {
 
 }
@@ -62,6 +63,7 @@ if (localStorage.getItem("Parameters") === null) {
         Filters: filterFromUrl || [],
         Radio: radioFromUrl || [],
         SearchQuery: "",
+        Page: ""
     }
     let stringifyParameters = JSON.stringify(Parameters)
     localStorage.setItem("Parameters", stringifyParameters)
@@ -138,7 +140,8 @@ const createUrl = (category) => {
         screen = "",
         size = "",
         radio = "",
-        searchQuery = "";
+        searchQuery = "",
+        page = "";
     let currentUrl = "gemshop.html";
     let url = `${currentUrl}?category=${category}`
 
@@ -198,6 +201,10 @@ const createUrl = (category) => {
 
     if (Parameters.Radio.length > 0) {
         url += `&Radio=${Parameters.Radio.toString()}`
+    }
+
+    if (Parameters.Page.length > 0) {
+        url += `&Page=${Parameters.Page.toString()}`
     }
 
     let stringifyNewParameters = JSON.stringify(Parameters)
@@ -360,26 +367,57 @@ class filter {
 // DISPLAY FILTERED RESULTS
 const displayFilteredResults = (directory) => {
     let x = ""
+    let y = ""
     for (let k in directory) {
-        x += `<div class="item-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
-			<img src=${directory[k].itemInfo.itemImg} alt="">
-			<div class="item-details">
-				<h1>${directory[k].itemInfo.name}</h1>
-				<h2>${directory[k].itemInfo.description1} ${directory[k].itemInfo.memory}GB</h2>
-				<div class="specifications">
-					<strong>Refurbished</strong>
-					<p><strong>Model : </strong>MKLV3LL/A</p>
-					<p><strong>SKU : </strong>87294820</p>
-					<p><strong>Color : </strong>Sierra Blue</p>
+        // x += `<div class="item-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
+        // 	<img src=${directory[k].itemInfo.itemImg} alt="">
+        // 	<div class="item-details">
+        // 		<h1>${directory[k].itemInfo.name}</h1>
+        // 		<h2>${directory[k].itemInfo.description1} ${directory[k].itemInfo.memory}GB</h2>
+        // 		<div class="specifications">
+        // 			<strong>Refurbished</strong>
+        // 			<p><strong>Model : </strong>MKLV3LL/A</p>
+        // 			<p><strong>SKU : </strong>87294820</p>
+        // 			<p><strong>Color : </strong>Sierra Blue</p>
+        // 		</div>
+        // 	</div>
+        // 	<div class="buy">
+        // 		<div class="price-tag">
+        // 			<span class="currency">$ </span><span class="price">${directory[k].itemInfo.newItemPrice}</span>
+        // 		</div>
+        // 		<button onclick = "addToCart(event)">Add to Cart</button>
+        // 	</div>
+        // </div>`
+        y += `
+			<div div class = "sel-box" data-id = ${directory[k].id}>
+				<div class="img-con">
+					<img src=${directory[k].itemInfo.itemImg} alt="">
 				</div>
+				<div class="sfu">
+					<div class="text-hold">
+						<p class="itemName2">${directory[k].itemInfo.name}</p>
+						<div div class = "description-box"
+						data-id=${directory[k].id} onclick = "viewProduct(event)">
+			<p class = "item-description" > ${directory[k].itemInfo.description1}
+			</p>
+		</div>
 			</div>
-			<div class="buy">
-				<div class="price-tag">
-					<span class="currency">$ </span><span class="price">${directory[k].itemInfo.newItemPrice}</span>
-				</div>
-				<button onclick = "addToCart(event)">Add to Cart</button>
+			<div class="price-order">
+				<span class="price-box">
+					<span class = "price" > <span class = "currency"
+					id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
+					<span class = "old-price price" > ${
+							directory[k].itemInfo.oldItemPrice
+			}</span>
+				</span>
+				<button id="cart-btn" data-id = ${directory[k].id} class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
+						alt="" onclick = "addToCart(event)">
+				</button>
 			</div>
+		</div>
 		</div>`
     }
-    showBox.innerHTML = `<h1 class="cat-head">Filtered Results</h1>` + x
+    // showBox.innerHTML = `<h1 class="cat-head">Filtered Results</h1>` + x
+    document.getElementById("result-title").innerText = `Results for "${category}"`
+    showBox.innerHTML = y
 }
