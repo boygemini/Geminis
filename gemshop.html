@@ -2,25 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gemini store | Home</title>
-    <link rel="stylesheet" href="/CSS/gemstore.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/CSS/gemshop.css">
     <link rel="stylesheet" href="/CSS/gemfonts.css">
-    <script src="/JAVASCRIPT/gemstore.js" defer></script>
+    <script src="/JAVASCRIPT/gemshop.js" defer></script>
     <script src="/JAVASCRIPT/search.js" defer></script>
+    <script src="/JAVASCRIPT/filters.js" defer></script>
 </head>
 
 <body>
     <div class="notify-box">
-        <div id="notify-box"></div>
+        <div id="notify-box">
+            <!-- <img src="/IMAGES/tv4.png" alt="" srcset="" class="noti-img">
+			<p>You added <strong id="itemname">${itemName}</strong> to cart</p> -->
+        </div>
     </div>
     <section class="slimbanner">
         <div class="slimcontent">
             <div class="slimb-left">
                 <p>Open doors to a world of Electronics</p>
-                <hr class="vhr" />
+                <hr class="vhr">
                 <p class="dis-more">Discover More</p>
             </div>
             <div class="slimb-right">
@@ -29,25 +33,25 @@
             </div>
         </div>
     </section>
-    <section class="hero" id="background">
-        <div class="images" id="images">
-            <div class="shade2">
-                <button type="button" class="tag" id="lm">New</button>
-            </div>
-            <div class="imgs" id="imm1"></div>
-            <div class="imgs" id="imm2"></div>
-            <div class="imgs" id="imm3"></div>
-            <div class="imgs" id="imm4"></div>
-            <div class="imgs" id="imm5"></div>
-        </div>
-        <div class="shade">
+    <section id="body">
+        <section class="top-nav">
             <div class="logo-nav">
-                <nav>
-                    <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()" />
+                <nav id="nav-and-products">
+                    <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
+                    <div class="products">
+                        <ul>
+                            <li id="games">Gaming</li>
+                            <li id="phones">Cellphones</li>
+                            <li id="coms">Computer</li>
+                            <li id="spks">Speakers</li>
+                            <li id="tele">TVs</li>
+                        </ul>
+                    </div>
                 </nav>
+
                 <div id="menu">
                     <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
-                    <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()" />
+                    <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
                     <ul>
                         <li>Home</li>
                         <li>Shop</li>
@@ -58,288 +62,268 @@
                 </div>
                 <h1 class="logo" onclick="goHome()">Geministore.</h1>
                 <div class="login-cart">
+                    <div class="search-section">
+                        <input type="search" class="search" name="search" id="search" placeholder="Search a product"
+                            autocomplete="off">
+                        <input type="submit" class="go" value="GO" id="GO">
+                    </div>
                     <div class="cart-box" onclick="toCart()">
-                        <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()" />
+                        <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
                         <p id="items-in-cart">0</p>
                     </div>
                     <button type="button" class="login">Login</button>
                 </div>
             </div>
-            <div class="intro-search">
-                <div class="intro-box">
-                    <div class="intro">
-                        <div class="introtext" id="introtext">
-                            <h1>
-                                <span id="intro">Welcome to the world of</span>
-                                <span class="gradient" id="gradient">Electronics</span>
-                            </h1>
-                            <p id="intro2">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                Repudiandae!
-                            </p>
-                        </div>
-                        <div class="lm">
-                            <button type="button" class="learn-more" onclick="shopNow()">
-                                LET'S GO SHOPPING
-                            </button>
-                            <!-- <p>Learn more</p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="search-section">
-                    <div class="hold" id="hold">
-                        <div class="suggestions" id="suggestions">
-                            <!-- <div class="sug">
-                                <h1 class="main">Iphone 13</h1><h1 class="in">in Cellphones</h1>
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class="search-box">
-                        <input type="text" class="search" name="" id="search" autocomplete="off"
-                            placeholder="Hey 👋🏾, Search for a product here..." />
-                        <input type="submit" id="GO" class="go" value="GO" />
-                    </div>
-                </div>
+        </section>
+
+        <section class="banner-container">
+            <div class="banner-text">
+                <h1>BLACK FRIDAY DEALS</h1>
+                <p><span>50%</span> OFF</p>
+                <button>Shop Now</button>
             </div>
-            <!-- <div class="radios">
-                    <div class="radio"></div>
-                    <div class="radio"></div>
-                    <div class="radio"></div>
-                    <div class="radio"></div>
-                    <div class="radio"></div>
-                </div> -->
-        </div>
-    </section>
-    <section id="body">
-        <section class="major-container">
-            <section class="recently-added">
-                <div class="mmm">
-                    <p class="sel">Recently Added</p>
+        </section>
+
+        <section class="shop-body">
+            <div class="filters">
+                <div class="fil-head">
+                    <h1>Filters</h1>
                 </div>
-                <div class="recent-container" id="recent-container">
-                    <div id="holder-rec">
-                        <!-- <div class="recent">
-                            <img src="/IMAGES/bigmonitor.png" alt="">
-                            <div class="receInfo">
-                                <h1 class="itemName">Monitor</h1>
-                                <p class="itemInfo">Lorem ipsum dolor sit amet.</p>
-                                <div class="price-order">
-                                    <span class="itemPricing">$1,475</span>
-                                    <button data-id = "${category[i].id}" data-category = "${sub}" id="cart-btn" class="cart-btn" onclick = "addToCartt(event,Storage.getAllProducts().recentlyAdded)" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt=""></button>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
-            </section>
-            <section class="selected-for-you">
-                <div class="mmm">
-                    <p class="sel">Selected Just For You</p>
-                    <div class="sel-table">
-                        <ul>
-                            <li class="tab inactive-li" id="gaming" onclick="displayProduct.createItem(event,'#sel-container',
-                                Products.getSelectedProducts().selectedProducts[0].gaming,
-                                'gaming'
-                              )">
-                                Gaming
-                            </li>
-                            <li class="tab inactive-li" id="cellphones" onclick="displayProduct.createItem(event,'#sel-container',
-                                Products.getSelectedProducts().selectedProducts[0].cellphones,
-                                'cellphones'
-                              )">
-                                Cell Phones
-                            </li>
-                            <li class="tab inactive-li" id="computers" onclick="displayProduct.createItem(event,'#sel-container',
-                                Products.getSelectedProducts().selectedProducts[0].computers,
-                                'computers'
-                              )">
-                                Computers
-                            </li>
-                            <li class="tab inactive-li" id="speakers" onclick="displayProduct.createItem(event,'#sel-container',
-                                Products.getSelectedProducts().selectedProducts[0].speakers,
-                                'speakers'
-                              )">
-                                Speaker
-                            </li>
-                            <li class="tab inactive-li" id="tv" onclick="displayProduct.createItem(event,'#sel-container',
-                                Products.getSelectedProducts().selectedProducts[0].tv,
-                                'tv'
-                              )">
-                                TV
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="view-all" id="" onclick="toShop(event)">View all</p>
-                </div>
-                <div class="sell">
-                    <div class="arrows">
-                        <div class="arr arr1" onclick="moveLeft()">
-                            <img src="/IMAGES/left-arrow.png" alt="" />
-                        </div>
-                        <div class="arr arr2" onclick="moveRight()">
-                            <img src="/IMAGES/right-arrow.png" alt="" />
+
+                <div class="filterss" id="filters">
+                    <div class="wrapper">
+                        <h1>Price</h1><br>
+                        <div class="box">
+                            <input type="radio" name="select" id="firstlevelprice">
+                            <input type="radio" name="select" id="secondlevelprice">
+                            <input type="radio" name="select" id="thirdlevelprice">
+                            <label for="firstlevelprice" class="option-1">
+                                <div class="dot"></div>
+                                <div class="text">$300 to $800</div>
+                            </label>
+                            <label for="secondlevelprice" class="option-2">
+                                <div class="dot"></div>
+                                <div class="text">$900 to $1,500</div>
+                            </label>
+                            <label for="thirdlevelprice" class="option-3">
+                                <div class="dot"></div>
+                                <div class="text">$1,600 to $2,000</div>
+                            </label>
                         </div>
                     </div>
-                    <div class="sel-container" id="sel-holder">
-                        <div class="" id="sel-container">
+                    <div class="option minn">
+                        <p class="applymm" id="applyminmax">APPLY</p>
+                        <div class="mmdiv">
+                            <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+                            <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="apply">
+					<button class="" type="submit">Apply</button>
+				</div> -->
+            </div>
+            <div class="available-items">
+                <div class="littlebans">
+                    <div class="b-holder hol1">
+                        <div class="shade" id="games">
+                            <p>Gaming</p>
+                        </div>
+                    </div>
+                    <div class="b-holder hol2">
+                        <div class="shade" id="phones">
+                            <p>Cell Phones</p>
+                        </div>
+                    </div>
+                    <div class="b-holder hol3">
+                        <div class="shade" id="coms">
+                            <p>Computers & Laptops</p>
+                        </div>
+                    </div>
+                    <div class="b-holder hol4">
+                        <div class="shade" id="spks">
+                            <p>Speakers</p>
+                        </div>
+                    </div>
+                    <div class="b-holder hol5">
+                        <div class="shade" id="tele">
+                            <p>Television</p>
+                        </div>
+                    </div>
+                </div>
+                <h1 id="result-title" class="cat-head"></h1>
+                <div id="showbox" onload="onLoad()">
+                    <div class="full-cat">
+                        <div class="section-title">
+                            <h1 id="sec-name-gaming"></h1>
+                            <button class="all-category"
+                                onclick="window.location='gemshop.html?category=gaming&Page=0'">See
+                                All Gamings</button>
+                        </div>
+                        <div class="av-box" id="gamings">
+                            <!-- <div class="item-box">
+							<img src="/IMAGES/ipad2.png" alt="">
+							<div class="item-details">
+								<h1>iPhone 13 Pro Max</h1>
+								<h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
+								<div class="specifications">
+									<strong>Refurbished</strong>
+									<p><strong>Model : </strong>MKLV3LL/A</p>
+									<p><strong>SKU : </strong>87294820</p>
+									<p><strong>Color : </strong>Sierra Blue</p>
+								</div>
+							</div>
+							<div class="buy">
+								<div class="price-tag">
+									<span class="currency">$</span><span class="price">945.99</span>
+								</div>
+								<button>Add to Cart</button>
+							</div>
+						</div> -->
                             <!-- <div class="sel-box">
-                                <div class="img-con">
-                                    <p class="new">New</p>
-                                    <img src="/IMAGES/frontIpad.png" alt="">
-                                </div>
-                                <div class="sfu">
-                                    <div>
-                                        <p class="itemName2">Speaker</p>
-                                    <div class="description-box">
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                        <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                    </div>
-                                    <div class="price-order">
-                                        <span class="price-box">
-                                            <span class="price">$637.23</span>
-                                            <span class="old-price price">$765</span>
-                                        </span>
-                                        <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
-                                    </div>
-                                </div>
-                            </div> -->
+							<div class="img-con">
+								<img src="/IMAGES/frontIpad.png" alt="">
+							</div>
+							<div class="sfu">
+								<div class="text-hold">
+									<p class="itemName2">iPhone 13 Pro Max</p>
+									<div class="description-box">
+										<p class="item-description">Apple IPhone 13 Pro Max 6.7" Super
+											Retina XDR
+											Display With ProMotion, (6GB RAM + 128GB ROM) IOS 15, 5G,
+										</p>
+									</div>
+								</div>
+								<div class="price-order">
+									<span class="price-box">
+										<span class="price"><span class="currency" id="currency">$</span> 637.23</span>
+										<span class="old-price price">$765</span>
+									</span>
+									<button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
+											alt="" data-id="1914" data-category="gaming"
+											onclick="addToCart(event,Storage.getAllProducts().selectedProducts[0])">
+									</button>
+								</div>
+							</div>
+						</div> -->
+                        </div>
+                    </div>
+                    <!-- <div class="full-cat">
+						<div class="section-title">
+							<h1 id="sec-name-gaming"></h1>
+							<button class="all-category">See All</button>
+						</div>
+						<div class="av-box" id="searc">
+						</div>
+					</div> -->
+                    <div class="full-cat">
+                        <div class="section-title">
+                            <h1 id="sec-name-cellphones"></h1>
+                            <button class="all-category"
+                                onclick="window.location='gemshop.html?category=cellphones&Page=0'">See All Cell
+                                Phones</button>
+                        </div>
+                        <div class="av-box" id="cellphones">
+                        </div>
+                    </div>
+                    <div class="full-cat">
+                        <div class="section-title">
+                            <h1 id="sec-name-computer"></h1>
+                            <button class="all-category"
+                                onclick="window.location='gemshop.html?category=computers&Page=0'">See
+                                All Computers</button>
+                        </div>
+                        <div class="av-box" id="computers">
+                        </div>
+                    </div>
+                    <div class="full-cat">
+                        <div class="section-title">
+                            <h1 id="sec-name-speakers"></h1>
+                            <button class="all-category"
+                                onclick="window.location='gemshop.html?category=speakers&Page=0'">See
+                                All Speakers</button>
+                        </div>
+                        <div class="av-box" id="speakers">
+                        </div>
+                    </div>
+                    <div class="full-cat">
+                        <div class="section-title">
+                            <h1 id="sec-name-tv"></h1>
+                            <button class="all-category" onclick="window.location='gemshop.html?category=tv&Page=0'">See
+                                All
+                                TVs</button>
+                        </div>
+                        <div class="av-box" id="TV">
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="weekly selected-for-you">
-                <div class="mmm">
-                    <p class="sel" id="sel3">Our Weekly Featured</p>
+                <div class="pagindiv">
+                    <button class="prev-next">
+                        < </button> <div class="pagindiv" id="pagindiv">
                 </div>
-                <div id="weekly-sell" class="sell">
-                    <div class="sel-container">
-                        <div class="" id="weekly-feature">
-                            <div class="Weekly-Container" id="sel-container">
-                                <!-- <div id="wkly">
-                                    <div class="img-con">
-                                        <p class="new">New</p>
-                                        <img src="/IMAGES/frontIpad.png" alt="">
-                                    </div>
-                                    <div class="sfu">
-                                        <div class = "sfu-det">
-                                            <p class="itemName2">Speaker</p>
-                                            <div class="description-box">
-                                                <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                                <p class="item-description">Lorem ipsum dolor sit amet.</p>
-                                            </div>
-                                        </div>
-                                        <div class="price-order">
-                                            <span class="price-box">
-                                                <span class="price">$637.23</span>
-                                                <span class="old-price price">$765</span>
-                                            </span>
-                                            <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="">
-                                        </div>
-                                    </div>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                <button class="prev-next">></button>
+            </div>
+            </div>
+            <!-- <section class="visit-our-support">
+				<div class="vv">
+					<h1>Visit our Support Center</h1>
+					<img src="/IMAGES/customer-support.png" alt="">
+				</div>
+				<button class="visit" type="button">Visit</button>
+			</section> -->
 
-            <section class="about">
-                <img src="/IMAGES/varad-murti-GxWwjOjJ5Ss-unsplash.jpg" alt="" class="about-img" />
-                <div class="about-text-container">
-                    <div class="aat">
-                        <h1>We Serve You The Best Product At Best Prices</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                            voluptatem minus officia quas reiciendis excepturi nostrum esse
-                            itaque nesciunt.
-                        </p>
-                    </div>
-                    <div class="about-boxes">
-                        <div class="ab">
-                            <div class="about-box">
-                                <img src="/IMAGES/shipped.png" alt="" id="a-icon" class="a-icon" />
-                                <div class="a-text">
-                                    <h2>Free Shipping</h2>
-                                    <p>Lorem ipsum dolor sit amet.</p>
-                                </div>
-                            </div>
-                            <div class="about-box">
-                                <img src="/IMAGES/credit-card(1).png" alt="" class="a-icon" />
-                                <div class="a-text">
-                                    <h2>Secured Payments</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                                </div>
-                            </div>
-                            <div class="about-box">
-                                <img src="/IMAGES/24-hours-support.png" alt="" class="a-icon" />
-                                <div class="a-text">
-                                    <h2>24/7 Online Support</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ab">
-                            <div class="about-box">
-                                <img src="/IMAGES/exchange.png" alt="" class="a-icon" />
-                                <div class="a-text">
-                                    <h2>Free Returns</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                </div>
-                            </div>
-                            <div class="about-box">
-                                <img src="/IMAGES/customer-support.png" alt="" class="a-icon" />
-                                <div class="a-text">
-                                    <h2>Customer Service</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                                </div>
-                            </div>
-                            <div class="about-box">
-                                <img src="/IMAGES/cashback.png" alt="" class="a-icon" />
-                                <div class="a-text">
-                                    <h2>Instant Refund</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="visit-out-support">
-                <div class="vv">
-                    <h1>Visit our Support Center</h1>
-                    <img src="/IMAGES/customer-support(1).png" alt="" />
-                </div>
-                <button class="visit" type="button">Visit</button>
-            </section>
         </section>
     </section>
-    <footer>
-        <h1>
-            Shop by
-            <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
-        </h1>
-    </footer>
+
 
     <script>
-        "use strict";
+        "use strict"
 
         const goHome = () => {
             window.location.href = "/HTML/gemstore.html";
-        };
-
-        const toShop = (event) => {
-            if ((event.target.id).length > 0) {
-                return window.location.href = `/HTML/gemshop.html?category=${event.target.id}&Page=0`;
-            }
-            window.location.href = `/HTML/gemshop.html?category=gaming&Page=0`;
-        };
+        }
 
         const toCart = () => {
             window.location.href = "/HTML/cart.html";
-        };
+        }
+
+        let menu = document.getElementById("menu"),
+            mb = document.getElementById("mb")
+        let close = document.querySelectorAll("#close");
+        menu.style.display = "none"
+
+        const removePadding = () => {
+            menu.style.height = "0px"
+            menu.style.padding = "0px";
+        }
+
+        const openMenu = (e) => {
+            menu.style.display = "flex"
+            removePadding()
+            setTimeout(() => {
+                menu.style.paddingTop = "20px";
+                menu.style.height = "400px";
+            }, 20)
+        }
+
+        const closeMenu = () => {
+            removePadding()
+            setTimeout(() => {
+                menu.style.display = "none"
+            }, 520);
+        }
+
+        document.addEventListener("click", (e) => {
+            if (e.target !== menu && menu.clientHeight > 0) {
+                removePadding();
+            }
+        })
     </script>
 </body>
+<footer>
+    <h1>
+        Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
+    </h1>
+</footer>
 
 </html>
