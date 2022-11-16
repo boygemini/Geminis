@@ -21,6 +21,7 @@ if (currentFilterUrl.split("?category").length > 1 && localStorage.getItem("Para
 }
 
 
+
 if (currentFilterUrl.split("?category").length === 1 && localStorage.getItem("Parameters")) {
     localStorage.removeItem("Parameters")
 }
@@ -63,7 +64,7 @@ if (localStorage.getItem("Parameters") === null) {
         Filters: filterFromUrl || [],
         Radio: radioFromUrl || [],
         SearchQuery: "",
-        Page: ""
+        Page: pageFromUrl || "0"
     }
     let stringifyParameters = JSON.stringify(Parameters)
     localStorage.setItem("Parameters", stringifyParameters)
@@ -81,6 +82,7 @@ if (localStorage.getItem("Parameters") !== null) {
 const registerBox = (boxChosen) => {
     Parameters.Filters.push(boxChosen)
     Parameters.Filters = [...new Set(Parameters.Filters)]
+    Parameters.Page = "0"
 }
 
 const registerRadio = (boxChosen) => {
@@ -143,7 +145,7 @@ const createUrl = (category) => {
         searchQuery = "",
         page = "";
     let currentUrl = "gemshop.html";
-    let url = `${currentUrl}?category=${category}`
+    let url = `${currentUrl}?category=${category}&Page=${Parameters.Page.toString()}`
 
 
     if (Parameters.Price.length > 0) {
@@ -203,9 +205,7 @@ const createUrl = (category) => {
         url += `&Radio=${Parameters.Radio.toString()}`
     }
 
-    if (Parameters.Page.length > 0) {
-        url += `&Page=${Parameters.Page.toString()}`
-    }
+    // url += `&Page=${Parameters.Page.toString()}`
 
     let stringifyNewParameters = JSON.stringify(Parameters)
     localStorage.setItem("Parameters", stringifyNewParameters)
@@ -229,6 +229,7 @@ class filter {
                 high: high,
                 low: low
             }]
+
 
             Parameters.Price = chosenPrice
             Parameters.Range = {}
@@ -356,6 +357,14 @@ class filter {
             returnUncheckedBoxes(event.target.id)
             createUrl(category)
         }
+    }
+
+    // EVENT TRIGGERED WHEN PAGE NUMBER IS SELECTED(PAGINATION)
+    static page(event) {
+        let itemCategory = document.URL.split("category=")[1].split("=")[0].split("&")[0]
+        let pgNum = event.target.id
+        Parameters.Page = pgNum
+        createUrl(itemCategory)
     }
 }
 

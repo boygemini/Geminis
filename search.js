@@ -565,49 +565,68 @@ const onLoad = () => {
     }
 
 
-    // // Page
-    // if (!pageFromUrl) {
-    // 	results = createPagination(results, 10, 1)
-    // }
+    // Page
+    if (!pageFromUrl) {
+      results = createPagination(results, 10, 0)
+    }
 
-    // if (pageFromUrl) {
-    // 	results = createPagination(results, 10, Number(pageFromUrl))
-    // }
+    if (pageFromUrl) {
+      results = createPagination(results, 10, Number(pageFromUrl))
+    }
 
-    // function createPagination(results, numberOnEachPage, pageNumber) {
-    // 	let arrayGroupTotal = results.length / numberOnEachPage;
-    // 	let arrayRemainder = results.length % numberOnEachPage;
-    // 	let itemsLeftInArray = results.slice(results.length - arrayRemainder, results.length)
-    // 	let paginatedResult = new Array()
-    // 	let lastSet;
-    // 	for (let i = 0; i <= Math.floor(arrayGroupTotal); i++) {
-    // 		if (i === 0) {
-    // 			lastSet = 0;
-    // 			i = 1
-    // 		}
-    // 		paginatedResult.push(results.slice(lastSet, numberOnEachPage * i));
-    // 		lastSet = numberOnEachPage * i
-    // 	}
-    // 	paginatedResult.push(itemsLeftInArray)
+    const markPagination = () => {
+      let page = document.URL.split("Page=")[1].split("&")[0]
+      document.getElementById(page).className += " active"
+    }
 
-    // 	/*
-    // 		CREATE PAGINATION UI
-    // 	*/
+    markPagination()
 
 
-    // 	// Just in case someone altered the page number from the url
-    // 	if (!paginatedResult[pageNumber]) {
-    // 		alert("This Page Is Null")
-    // 	} else {
-    // 		let n = ""
-    // 		for (let i in paginatedResult) {
-    // 			n += `<button class="pagin">${Number(i) + 1}</button>`
-    // 		}
-    // 		document.getElementById("pagindiv").innerHTML = n
-    // 		console.log(paginatedResult[pageNumber]);
-    // 		return paginatedResult[pageNumber]
-    // 	}
-    // }
+    function createPagination(results, numberOnEachPage, pageNumber) {
+      let arrayGroupTotal = results.length / numberOnEachPage;
+      let arrayRemainder = results.length % numberOnEachPage;
+      let itemsLeftInArray = results.slice(results.length - arrayRemainder, results.length)
+      let paginatedResult = new Array()
+      let lastSet;
+      for (let i = 0; i <= Math.floor(arrayGroupTotal); i++) {
+        if (i === 0) {
+          lastSet = 0;
+          i = 1
+        }
+        paginatedResult.push(results.slice(lastSet, numberOnEachPage * i));
+        lastSet = numberOnEachPage * i
+      }
+
+      if (paginatedResult[paginatedResult.length - 1].length > itemsLeftInArray.length) {
+        paginatedResult.push(itemsLeftInArray)
+      }
+
+
+
+
+      // Just in case someone altered the page number from the url
+      if (!paginatedResult[pageNumber]) {
+        document.getElementById("showbox").innerHTML = `<div class="noresult">
+					<h1 class = "cat-head" > This page is empty </h1>  <p>Try checking your spelling or use more general terms</p >
+					</div>`
+      }
+
+
+      // Pagination UI
+      if (paginatedResult[pageNumber]) {
+        let n = ""
+        if (paginatedResult[paginatedResult.length - 1].length === 0) {
+          paginatedResult.pop()
+        }
+
+        for (let i in paginatedResult) {
+          n += `<button class="pagin" onclick="filter.page(event)" id='${Number(i)}'>${Number(i) + 1}</button>`
+        }
+
+        document.getElementById("pagindiv").innerHTML = n
+        return paginatedResult[pageNumber]
+      }
+    }
 
     displayFiltereddResults(results, parameterCategory)
   }

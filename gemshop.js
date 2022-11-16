@@ -246,7 +246,7 @@ const emptyParameters = () => {
     Filters: [],
     Radio: [],
     SearchQuery: "",
-    Page: ""
+    Page: "0"
   };
   let stringifyParameters = JSON.stringify(Parameters);
   localStorage.setItem("Parameters", stringifyParameters);
@@ -607,37 +607,42 @@ if (document.URL.split("?").length === 1) {
   document.querySelector(".filters").style.display = "none"
 }
 
-games.addEventListener("click", (e) => {
+
+[...document.querySelectorAll("#games")].forEach(btn => btn.addEventListener("click", (e) => {
   Gamings();
   emptyParameters();
-  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=gaming";
-});
+  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=gaming&Page=0";
+}));
 
-phones.addEventListener("click", (e) => {
+
+[...document.querySelectorAll("#phones")].forEach(btn => btn.addEventListener("click", (e) => {
   cellPhones();
   emptyParameters();
   window.location =
-    "http://127.0.0.1:5500/HTML/gemshop.html?category=cellphones";
-});
+    "http://127.0.0.1:5500/HTML/gemshop.html?category=cellphones&Page=0";
+}));
 
-coms.addEventListener("click", (e) => {
+
+[...document.querySelectorAll("#coms")].forEach(btn => btn.addEventListener("click", (e) => {
   Computers();
   emptyParameters();
   window.location =
-    "http://127.0.0.1:5500/HTML/gemshop.html?category=computers";
-});
+    "http://127.0.0.1:5500/HTML/gemshop.html?category=computers&Page=0";
+}));
 
-spks.addEventListener("click", (e) => {
+
+[...document.querySelectorAll("#spks")].forEach(btn => btn.addEventListener("click", (e) => {
   Speakers();
   emptyParameters();
-  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=speakers";
-});
+  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=speakers&Page=0";
+}));
 
-tele.addEventListener("click", (e) => {
+
+[...document.querySelectorAll("#tele")].forEach(btn => btn.addEventListener("click", (e) => {
   TVs();
   emptyParameters();
-  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=tv";
-});
+  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=tv&Page=0";
+}));
 
 
 
