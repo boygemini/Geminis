@@ -263,7 +263,7 @@ const displayFiltereddResults = (results, category) => {
 		</div>
 		</div>`
     }
-    document.getElementById("result-title").innerText = `Results for "${category}"`
+    document.getElementById("result-title").innerText = `${category}`
     showBox.innerHTML = y
   }
 }

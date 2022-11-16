@@ -126,27 +126,27 @@
             <div class="available-items">
                 <div class="littlebans">
                     <div class="b-holder hol1">
-                        <div class="shade" onclick="window.location='gemshop.html?category=gaming'">
+                        <div class="shade" id="games">
                             <p>Gaming</p>
                         </div>
                     </div>
                     <div class="b-holder hol2">
-                        <div class="shade" onclick="window.location='gemshop.html?category=cellphones'">
+                        <div class="shade" id="phones">
                             <p>Cell Phones</p>
                         </div>
                     </div>
                     <div class="b-holder hol3">
-                        <div class="shade" onclick="window.location='gemshop.html?category=computers'">
+                        <div class="shade" id="coms">
                             <p>Computers & Laptops</p>
                         </div>
                     </div>
                     <div class="b-holder hol4">
-                        <div class="shade" onclick="window.location='gemshop.html?category=speakers'">
+                        <div class="shade" id="spks">
                             <p>Speakers</p>
                         </div>
                     </div>
                     <div class="b-holder hol5">
-                        <div class="shade" onclick="window.location='gemshop.html?category=tv'">
+                        <div class="shade" id="tele">
                             <p>Television</p>
                         </div>
                     </div>
@@ -156,7 +156,8 @@
                     <div class="full-cat">
                         <div class="section-title">
                             <h1 id="sec-name-gaming"></h1>
-                            <button class="all-category" onclick="window.location='gemshop.html?category=gaming'">See
+                            <button class="all-category"
+                                onclick="window.location='gemshop.html?category=gaming&Page=0'">See
                                 All Gamings</button>
                         </div>
                         <div class="av-box" id="gamings">
@@ -219,7 +220,7 @@
                         <div class="section-title">
                             <h1 id="sec-name-cellphones"></h1>
                             <button class="all-category"
-                                onclick="window.location='gemshop.html?category=cellphones'">See All Cell
+                                onclick="window.location='gemshop.html?category=cellphones&Page=0'">See All Cell
                                 Phones</button>
                         </div>
                         <div class="av-box" id="cellphones">
@@ -228,7 +229,8 @@
                     <div class="full-cat">
                         <div class="section-title">
                             <h1 id="sec-name-computer"></h1>
-                            <button class="all-category" onclick="window.location='gemshop.html?category=computers'">See
+                            <button class="all-category"
+                                onclick="window.location='gemshop.html?category=computers&Page=0'">See
                                 All Computers</button>
                         </div>
                         <div class="av-box" id="computers">
@@ -237,7 +239,8 @@
                     <div class="full-cat">
                         <div class="section-title">
                             <h1 id="sec-name-speakers"></h1>
-                            <button class="all-category" onclick="window.location='gemshop.html?category=speakers'">See
+                            <button class="all-category"
+                                onclick="window.location='gemshop.html?category=speakers&Page=0'">See
                                 All Speakers</button>
                         </div>
                         <div class="av-box" id="speakers">
@@ -246,16 +249,20 @@
                     <div class="full-cat">
                         <div class="section-title">
                             <h1 id="sec-name-tv"></h1>
-                            <button class="all-category" onclick="window.location='gemshop.html?category=tv'">See All
+                            <button class="all-category" onclick="window.location='gemshop.html?category=tv&Page=0'">See
+                                All
                                 TVs</button>
                         </div>
                         <div class="av-box" id="TV">
                         </div>
                     </div>
                 </div>
-                <div class="pagindiv" id="pagindiv">
-                    <button class="pagin">1</button>
+                <div class="pagindiv">
+                    <button class="prev-next">
+                        < </button> <div class="pagindiv" id="pagindiv">
                 </div>
+                <button class="prev-next">></button>
+            </div>
             </div>
             <!-- <section class="visit-our-support">
 				<div class="vv">

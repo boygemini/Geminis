@@ -427,6 +427,6 @@ const displayFilteredResults = (directory) => {
 		</div>`
     }
     // showBox.innerHTML = `<h1 class="cat-head">Filtered Results</h1>` + x
-    document.getElementById("result-title").innerText = `Results for "${category}"`
+    document.getElementById("result-title").innerText = `${category}`
     showBox.innerHTML = y
 }
