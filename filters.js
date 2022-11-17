@@ -22,6 +22,7 @@ if (currentFilterUrl.split("?category").length === 1 && localStorage.getItem("Pa
 }
 
 
+
 // PARAMETERS FROM THE URL INTO ARRAYS
 try {
     newUrlParameters.Price = newUrlParameters.Price.replace(/%20/g, "").split("-")
@@ -43,6 +44,7 @@ try {
 } catch (error) {
 
 }
+
 
 
 // SETTING PARAMETERS IF NO PRIOR PARAMETERS HAS BEEN SAVED
@@ -68,6 +70,7 @@ if (localStorage.getItem("Parameters") === null) {
 }
 
 
+
 // SETTING PARAMETERS IF THE WAS A PREVIOUSLY SAVED ONE
 if (localStorage.getItem("Parameters") !== null) {
     let parseParameters = JSON.parse(localStorage.getItem("Parameters"))
@@ -83,9 +86,12 @@ const registerBox = (boxChosen) => {
     Parameters.Page = "0"
 }
 
+
+
 const registerRadio = (boxChosen) => {
     Parameters.Radio = boxChosen
 }
+
 
 
 // DISPLAY CHECKED BOXES
@@ -108,6 +114,7 @@ const returnCheckedBoxes = () => {
 returnCheckedBoxes()
 
 
+
 // DISPLAY UNCHECKED BOXESS
 const returnUncheckedBoxes = (targetBox) => {
     let currentUrl = document.URL;
@@ -121,6 +128,7 @@ const returnUncheckedBoxes = (targetBox) => {
 }
 
 
+
 try {
     max.value = Parameters.Range[0].high
     min.value = Parameters.Range[0].low
@@ -128,9 +136,13 @@ try {
 
 }
 
+
+
 if (orderFromUrl === undefined) {
     Parameters.Order = document.URL.split("Order=")[1].split("&")[0]
 }
+
+
 
 // CREATING THE FILTER URL
 const createUrl = (category) => {
@@ -214,9 +226,7 @@ const createUrl = (category) => {
 
 
 
-
 // FILTER CLASS
-
 class filter {
 
     // EVENT TRIGGERED IF PRICE WAS SET
@@ -393,9 +403,6 @@ class filter {
         return results
     }
 }
-
-
-
 
 
 

@@ -33,11 +33,15 @@ let gradientContent = [
   "Oraimo Airpod",
 ];
 
+
+
 images[0].style.display = "block";
 const startSlide = () => {
   disOther();
   increSlide();
 };
+
+
 
 const disOther = () => {
   try {
@@ -47,6 +51,8 @@ const disOther = () => {
   } catch (error) {}
 };
 
+
+
 const increSlide = () => {
   disOther();
   counter++;
@@ -55,6 +61,8 @@ const increSlide = () => {
   }
   placing();
 };
+
+
 
 const placing = () => {
   images[counter].style.display = "block";
@@ -72,20 +80,20 @@ const placing = () => {
   }, 8500);
 };
 
+
+
 startSlide();
 setInterval(startSlide, 9000);
+
+
 
 const shopNow = () => {
   window.location = "gemshop.html";
 };
 
-/* END OF HERO */
 
-/*
 
-SELECTED FOR YOU
-
-*/
+// SELECTED FOR YOU
 let itemName = document.querySelectorAll("#itemName"),
   mainDesc = document.querySelectorAll("#maindesc"),
   minDesc = document.querySelectorAll("#mindesc"),
@@ -97,11 +105,8 @@ localStorage.setItem("StoreItems", "");
 let cart = [];
 
 
-/*
 
- POPUP NOTIFICATION
-
- */
+// POPUP NOTIFICATION
 const popupNotification = (itemName, itemImage) => {
   let notification = document.getElementById("notify-box");
   let creatNotBox = document.createElement("div")
@@ -120,12 +125,9 @@ const popupNotification = (itemName, itemImage) => {
 }
 
 
+
 class Products {
-  /*
-
-  LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
-
-  */
+  // LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
   static selectedForYou() {
     let product_request = new XMLHttpRequest();
     product_request.open("GET", "/JSON/product.json", false);
@@ -137,65 +139,48 @@ class Products {
     product_request.send();
   }
 
-  /*
 
-   RETRIEVE ALL ITEMS FROM LOCAL STORAGE
-
-   */
+  // RETRIEVE ALL ITEMS FROM LOCAL STORAGE
   static getSelectedProducts() {
     return JSON.parse(localStorage.StoreItems);
   }
 }
 
 
+
 class Storage {
-  /* RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS */
+  // RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS
   static getAllProducts() {
     return JSON.parse(localStorage.getItem("StoreItems"));
   }
 
-  /*
 
-   RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS
-
-   */
+  // RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS
   static getRecentItems() {
     return this.getAllProducts().recentlyAdded;
   }
 
-  /*
 
-   RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS
-
-   */
+  // RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS
   static weeklyFeaturedItems() {
     return this.getAllProducts().WeeklyFeatured;
   }
 
-  /*
 
-   SAVE ITEMS TO CART
-
-  */
+  // SAVE ITEMS TO CART
   static saveSelectedItemsToCart(cart) {
     localStorage.Cart = JSON.stringify(cart);
     localStorage.setItem("Cart", localStorage.Cart);
   }
 
-  /*
 
-  RETRIEVE ALL ITEMS FROM CART
-
-  */
+  // RETRIEVE ALL ITEMS FROM CART
   static getItemsInCart() {
     return JSON.parse(localStorage.getItem("Cart"));
   }
 
-  /*
 
-   GET THE NUMBER OF ITEMS IN CART
-
-   */
+  // GET THE NUMBER OF ITEMS IN CART
   static numberOfItemsInCart() {
     if (this.getItemsInCart() === null || undefined) {
       return "0"
@@ -206,21 +191,15 @@ class Storage {
     }
   }
 
-  /*
 
-  UPDATE CART
-
-  */
+  // UPDATE CART
   static updateCart(cartName) {
     this.saveSelectedItemsToCart(cartName);
     cartDom.innerText = this.numberOfItemsInCart();
   }
 
-  /*
 
-  GET AND SAVE PICKED ITEM TO CART
-
-  */
+  // GET AND SAVE PICKED ITEM TO CART
   static getItemAndSaveToCart() {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
 
@@ -245,6 +224,7 @@ class Storage {
     };
   }
 }
+
 
 
 class displayProduct {
@@ -339,6 +319,7 @@ class displayProduct {
 Products.selectedForYou();
 
 
+
 // DISPLAY RECENT PRODUCTS
 displayProduct.displayRecentItems(Storage.getRecentItems());
 
@@ -349,6 +330,7 @@ displayProduct.createItem(event, "#sel-container",
   Products.getSelectedProducts().selectedProducts[0].gaming,
   "gaming"
 );
+
 
 
 // DISPLAY WEEKLY PRODUCTS
@@ -459,10 +441,12 @@ let menu = document.getElementById("menu"),
 let close = document.querySelectorAll("#close");
 menu.style.display = "none";
 
+
 const removePadding = () => {
   menu.style.height = "0px";
   menu.style.padding = "0px";
 };
+
 
 const openMenu = (e) => {
   menu.style.display = "flex";
@@ -473,12 +457,14 @@ const openMenu = (e) => {
   }, 20);
 };
 
+
 const closeMenu = () => {
   removePadding();
   setTimeout(() => {
     menu.style.display = "none";
   }, 520);
 };
+
 
 document.addEventListener("click", (e) => {
   if (e.target !== menu && menu.clientHeight > 0) {

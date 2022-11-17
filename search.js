@@ -18,7 +18,6 @@ let displaybox = document.getElementById("suggestions");
 
 
 
-
 //Function
 const showSuggesttions = (dirname, name) => {
   let x = "";
@@ -59,6 +58,7 @@ const showSuggesttions = (dirname, name) => {
 };
 
 
+
 //DISPLAY SUGGESTIONS
 search.addEventListener("input", () => {
   showSuggesttions(dir.gaming, "Gaming");
@@ -70,12 +70,12 @@ search.addEventListener("input", () => {
 
 
 
-
 const sendQueryGO = (event) => {
   let query = search.value.toLowerCase();
   let url = `gemshop.html?SearchQuery=${encodeURIComponent(query)}&Order=Random&Page=0`
   window.location.href = url;
 };
+
 
 
 const sendQuery = (event) => {
@@ -84,6 +84,7 @@ const sendQuery = (event) => {
   let url = `gemshop.html?category=${encodeURIComponent(queryCategory)}&SearchQuery=${encodeURIComponent(query)}&Order=Random&Page=0`;
   window.location.href = url;
 };
+
 
 
 try {
@@ -97,11 +98,13 @@ try {
 }
 
 
+
 search.addEventListener("keydown", (event) => {
   if (event.key === "Enter" && search.value !== "") {
     sendQueryGO();
   }
 })
+
 
 
 const markAndCreatePagination = (results) => {
@@ -110,6 +113,7 @@ const markAndCreatePagination = (results) => {
 
   markPagination()
 }
+
 
 
 const sorting = (event) => {
@@ -126,6 +130,7 @@ const sorting = (event) => {
   let changeSorting = `${pageUrl}Order=${sort}&Page=${Parameters.Page}${remainingUrlParaString}`
   window.location = changeSorting
 }
+
 
 
 const controlSort = (arr) => {
@@ -250,6 +255,7 @@ const displayResults = (directory, Query) => {
 }
 
 
+
 const displayFiltereddResults = (results, category) => {
   let x = ``;
   let y = ""
@@ -314,7 +320,6 @@ const displayFiltereddResults = (results, category) => {
     showBox.innerHTML = y
   }
 }
-
 
 
 
@@ -389,6 +394,8 @@ try {
 
 }
 
+
+
 function Next(event, paginatedResult) {
   pageCount = (Number(page)) + 1
   if (pageCount !== Number(paginatedResult.length)) {
@@ -396,6 +403,7 @@ function Next(event, paginatedResult) {
     filter.page(event, pageCount.toString())
   }
 }
+
 
 
 function Prev(event) {
@@ -407,11 +415,13 @@ function Prev(event) {
 }
 
 
+
 const markPagination = () => {
   let page = document.URL.split("Page=")[1].split("&")[0]
   if (page.length === 0) page = "0"
   document.getElementById(page).className += " active"
 }
+
 
 
 function createPagination(results, numberOnEachPage, pageNumber) {
@@ -487,7 +497,6 @@ function createPagination(results, numberOnEachPage, pageNumber) {
 
 
 
-
 const convertUrlParametersIntoObject = (urlWithQuery) => {
   let urlParameters = urlWithQuery.split("?category").toString().split("&").filter(arr => !arr.includes("gemshop.html"));
   let newUrlParameters = new Array()
@@ -497,7 +506,6 @@ const convertUrlParametersIntoObject = (urlWithQuery) => {
   }
   return newUrlParameters
 }
-
 
 
 

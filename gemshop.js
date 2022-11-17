@@ -7,14 +7,9 @@ let gamingBox = document.getElementById("gaming"),
   computerBox = document.getElementById("computer"),
   speakersBox = document.getElementById("speakers"),
   tvsBox = document.getElementById("TV");
-
-/*
-
-START CODING HERE....
-
-*/
-
 let currentItemsOnDisplay;
+
+
 
 class Products {
   //LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
@@ -41,11 +36,9 @@ class Products {
 
 
 
-
 //Fetch All Items and store them
 Products.saveItems();
 let productRoute = Products.getAllItems().selectedProducts[0];
-
 
 
 
@@ -59,7 +52,6 @@ const getItemsByCategory = (url) => {
   };
   sendRequest.send();
 };
-
 
 
 
@@ -251,13 +243,11 @@ const emptyParameters = () => {
 
 
 
-
 const phonesBrandCheck = (apple, brand) => {
   apple.addEventListener("click", (event) => {
     displayFilteredResults(filter.brand(event, "cellphones", brand));
   });
 }
-
 
 
 
@@ -363,6 +353,7 @@ const gamingFilters = () => {
     displayFilteredResults(filter.brand(event, "gaming", "Ps"));
   });
 }
+
 
 
 const comFilters = () => {
@@ -476,6 +467,7 @@ const speakerFilters = () => {
 }
 
 
+
 const tvFilters = () => {
   // Price filter
   firstlevelprice.addEventListener("click", (event) => {
@@ -522,7 +514,6 @@ const tvFilters = () => {
 const cellPhones = () => {
   // Dislay Cellphones
   getFilter.allCellPhones();
-  // display.items(showBox, productRoute, "cellphones");
 
   // Phone Filters
   phoneFilters()
@@ -530,10 +521,8 @@ const cellPhones = () => {
 
 
 
-
 const Gamings = () => {
   getFilter.allGaming();
-  // display.items(showBox, productRoute, "gaming");
 
   // Gaming Filters
   gamingFilters()
@@ -541,10 +530,8 @@ const Gamings = () => {
 
 
 
-
 const Computers = () => {
   getFilter.allComputer();
-  // display.items(showBox, productRoute, "computers");
 
   // Computers Filters
   comFilters()
@@ -552,10 +539,8 @@ const Computers = () => {
 
 
 
-
 const Speakers = () => {
   getFilter.allSpeaker();
-  // display.items(showBox, productRoute, "speakers");
 
   // Computers Filters
   speakerFilters()
@@ -563,10 +548,8 @@ const Speakers = () => {
 
 
 
-
 const TVs = () => {
   getFilter.allTv();
-  // display.items(showBox, productRoute, "tv");
 
   // Computers Filters
   tvFilters()
@@ -579,6 +562,8 @@ let urlCategory = document.URL;
 try {
   urlCategory = urlCategory.split("?")[1].split("=")[1].split("&")[0];
 } catch (error) {}
+
+
 
 switch (urlCategory) {
   case "cellphones":
@@ -599,10 +584,12 @@ switch (urlCategory) {
 }
 
 
+
 if (document.URL.split("?").length === 1) {
   display.displayAll();
   document.querySelector(".filters").style.display = "none"
 }
+
 
 
 [...document.querySelectorAll("#games")].forEach(btn => btn.addEventListener("click", (e) => {
@@ -610,6 +597,7 @@ if (document.URL.split("?").length === 1) {
   emptyParameters();
   window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=gaming&Order=Random&Page=0";
 }));
+
 
 
 [...document.querySelectorAll("#phones")].forEach(btn => btn.addEventListener("click", (e) => {
@@ -620,6 +608,7 @@ if (document.URL.split("?").length === 1) {
 }));
 
 
+
 [...document.querySelectorAll("#coms")].forEach(btn => btn.addEventListener("click", (e) => {
   Computers();
   emptyParameters();
@@ -628,11 +617,13 @@ if (document.URL.split("?").length === 1) {
 }));
 
 
+
 [...document.querySelectorAll("#spks")].forEach(btn => btn.addEventListener("click", (e) => {
   Speakers();
   emptyParameters();
   window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=speakers&Order=Random&Page=0";
 }));
+
 
 
 [...document.querySelectorAll("#tele")].forEach(btn => btn.addEventListener("click", (e) => {
@@ -787,7 +778,6 @@ const popupNotification = (itemName, itemImage) => {
     creatNotBox.classList = "die";
   }, 3200);
 };
-
 
 
 

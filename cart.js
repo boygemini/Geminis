@@ -9,10 +9,11 @@ let AskbuttonDiv = document.getElementById("askbuttondiv")
 let Message = document.getElementById("message")
 
 
-/*Button links*/
+// Button links
 const toShop = () => {
   window.location.href = "/HTML/gemshop.html";
 };
+
 
 
 const toCheckOut = () => {
@@ -20,16 +21,19 @@ const toCheckOut = () => {
 };
 
 
+
 const goHome = () => {
   window.location.href = "/HTML/gemstore.html";
 };
 
 
-//MENU
+
+// MENU
 let menu = document.getElementById("menu"),
   mb = document.getElementById("mb");
 let close = document.querySelectorAll("#close");
 menu.style.display = "none";
+
 
 
 const removePadding = () => {
@@ -38,7 +42,8 @@ const removePadding = () => {
 };
 
 
-/* OPEN MENU */
+
+// OPEN MENU
 const openMenu = (e) => {
   menu.style.display = "flex";
   removePadding();
@@ -49,13 +54,15 @@ const openMenu = (e) => {
 };
 
 
-/* CLOSE MENU */
+
+// CLOSE MENU
 const closeMenu = () => {
   removePadding();
   setTimeout(() => {
     menu.style.display = "none";
   }, 520);
 };
+
 
 
 document.addEventListener("click", (e) => {
@@ -65,10 +72,13 @@ document.addEventListener("click", (e) => {
 });
 
 
-/* ITEM COUNTER*/
+
+// ITEM COUNTER
 let cartCounter = document.getElementById("items-in-cart")
 
-/* Clear Cart */
+
+
+// CLEAR CART
 const clearCart = () => {
   localStorage.removeItem("Cart")
   totalQuantity.innerHTML = "0"
@@ -82,18 +92,21 @@ const clearCart = () => {
 }
 
 
+
 class Storage {
-  /* RETRIEVE ITEMS IN CART */
+  // RETRIEVE ITEMS IN CART
   static getFees() {
     return JSON.parse(localStorage.getItem("StoreItems"));
   }
 
-  /* RETRIEVE ITEMS IN CART */
+
+  // RETRIEVE ITEMS IN CART
   static getItemsInCart() {
     return JSON.parse(localStorage.getItem("Cart"));
   }
 
-  /* GET THE NUMBER OF ITEMS IN CART */
+
+  // GET THE NUMBER OF ITEMS IN CART
   static numberOfItemsInCart() {
     if (this.getItemsInCart() === null || undefined) {
       return "0"
@@ -104,7 +117,8 @@ class Storage {
     }
   }
 
-  /* EMPTY CART INDICATOR */
+
+  // EMPTY CART INDICATOR
   static indicateEmptyCart() {
     if (Number(Storage.numberOfItemsInCart()) === 0) {
       Holder.innerHTML = `<div class = "empty-cart"><p>Oopps, your cart is empty 😒</p></div>`
@@ -114,8 +128,10 @@ class Storage {
   }
 }
 
+
+
 class _item {
-  /* DISPLAY SUM OF ALL ITEMS */
+  // DISPLAY SUM OF ALL ITEMS
   static sumTotal() {
     let Q2 = document.querySelectorAll("#q2")
     let totalItemPrice = document.querySelectorAll("#price")
@@ -133,13 +149,16 @@ class _item {
     }
   }
 
+
   static allTotal() {
     return ((Number(CartItems.sumTotal()) + Number(Storage.getFees().taxesAndDeliveryFees[0].deliveryFee) + Number(Storage.getFees().taxesAndDeliveryFees[0].tax)) - ((Number(Storage.getFees().taxesAndDeliveryFees[0].discount) / 100) * Number(CartItems.sumTotal()))).toFixed(2)
   }
 }
 
+
+
 class CartItems {
-  /* INCREASE QUNTITY OF AN ITEM */
+  // INCREASE QUNTITY OF AN ITEM
   static increaseItem(altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let amt = document.querySelectorAll("#amount");
@@ -157,7 +176,9 @@ class CartItems {
     }
   }
 
-  /* DECREASE QUNTITY OF AN ITEM */
+
+
+  // DECREASE QUNTITY OF AN ITEM
   static decreaseItem(altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let amt = document.querySelectorAll("#amount");
@@ -191,7 +212,9 @@ class CartItems {
     }
   }
 
-  /* REMOVE ITEM FROM CART */
+
+
+  // REMOVE ITEM FROM CART
   static removeItem(altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let itemID = altheredItemID;
@@ -219,7 +242,9 @@ class CartItems {
     _item.sumTotal()
   }
 
-  /* CONTROLS THE TOTAL QUANTITY OF A SPECIFIC ITEM */
+
+
+  // CONTROLS THE TOTAL QUANTITY OF A SPECIFIC ITEM
   static updateQuantity(altheredItemID) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     let inputedAmount = Number(event.target.value)
@@ -229,7 +254,7 @@ class CartItems {
 
         if (inputedAmount === 0 || isNaN(inputedAmount)) {
           boxModal.style.display = "flex"
-          Message.innerText = "Sorry, please enter a number greater than 0"
+          Message.innerText = "Bobo, enter a number greater than 0"
           AskbuttonDiv.innerHTML = `<button class="askbutton yes" id="ok">Okay</button>`
 
           ok.addEventListener("click", (e) => {
@@ -251,7 +276,9 @@ class CartItems {
     _item.sumTotal()
   }
 
-  /* SUM TOTAL OF CART ITEMS */
+
+
+  // SUM TOTAL OF CART ITEMS
   static sumTotal() {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
     if (getbackcart === null || getbackcart.length === 0) {
@@ -268,6 +295,7 @@ class CartItems {
     }
   }
 }
+
 
 
 class displayItems {
@@ -328,30 +356,37 @@ class displayItems {
 }
 
 
-/* DISPLAY NUMBER OF ITEMS IN CART */
+
+// DISPLAY NUMBER OF ITEMS IN CART
 cartCounter.innerText = Storage.numberOfItemsInCart();
 totalQuantity.innerText = Storage.numberOfItemsInCart()
 
 
-/* DISPLAY SUBTOTAL */
+
+// DISPLAY SUBTOTAL
 // totalCar2.innerText = CartItems.sumTotal()
 totalCar.innerText = CartItems.sumTotal()
 
 
-/* DISPLAY THE SERVICE FEES AND CHARGES */
+
+// DISPLAY THE SERVICE FEES AND CHARGES
 discount.innerText = Storage.getFees().taxesAndDeliveryFees[0].discount
 tax.innerText = Storage.getFees().taxesAndDeliveryFees[0].tax
 deliveryfee.innerText = Storage.getFees().taxesAndDeliveryFees[0].deliveryFee
 
-/* DISPLAY ALL OVERALL TOTAL */
+
+
+// DISPLAY ALL OVERALL TOTAL
 allTotal.innerText = _item.allTotal()
 
 
-/* INDICATE IF CART IS EMPTY */
+
+// INDICATE IF CART IS EMPTY
 Storage.indicateEmptyCart();
 
 
-/* DISABLE CHECKOUT BUTTON IF CART IS EMPTY */
+
+// DISABLE CHECKOUT BUTTON IF CART IS EMPTY
 let getbackcart = JSON.parse(localStorage.getItem("Cart"));
 try {
   if (getbackcart === null) {
@@ -372,22 +407,26 @@ try {
 
 
 
-/* DISPLAY ITEMS IN CART IF IT IS NOT EMPTY */
+// DISPLAY ITEMS IN CART IF IT IS NOT EMPTY
 if (Number(Storage.numberOfItemsInCart()) !== 0) {
   displayItems.CART(Storage.getItemsInCart())
 }
 
 
-/* DISPLAY SUM OF ONE ITEM */
+
+// DISPLAY SUM OF ONE ITEM
 _item.sumTotal()
 
 
-/* SEARCH PRODUCT */
+
+// SEARCH PRODUCT
 const sendQueryGO = (event) => {
   let query = search.value.toLowerCase();
   let url = `gemshop.html?q=${encodeURIComponent(query)}`
   window.location.href = url;
 };
+
+
 
 try {
   GO.addEventListener("click", (event) => {
@@ -396,6 +435,7 @@ try {
     }
   })
 } catch (error) {}
+
 
 
 search.addEventListener("keydown", (event) => {

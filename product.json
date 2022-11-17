@@ -1,9 +1,9 @@
 {
-  "taxesAndDeliveryFees" : [
+  "taxesAndDeliveryFees": [
     {
-      "tax":"3.45",
-      "deliveryFee":"3",
-      "discount" : "10"
+      "tax": "3.45",
+      "deliveryFee": "3",
+      "discount": "10"
     }
   ],
   "selectedProducts": [
@@ -12,24 +12,27 @@
         {
           "id": "1914",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Xbox 3",
             "itemImg": "/IMAGES/ipad2.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "630",
             "oldItemPrice": "$544",
-            "itemTotal" : "630"
+            "itemTotal": "630",
+            "brand": "Xbox"
           }
         },
         {
           "id": "1077",
           "itemInfo": {
-            "name": "XBOX 4",
+            "name": "Xbox 4",
             "itemImg": "/IMAGES/ipad2.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "400",
-            "oldItemPrice": "$544","itemTotal" : "400"
+            "oldItemPrice": "$544",
+            "itemTotal": "400",
+            "brand": "Xbox"
           }
         },
         {
@@ -37,10 +40,12 @@
           "itemInfo": {
             "name": "PS 2",
             "itemImg": "/IMAGES/ipad2.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "540",
-            "oldItemPrice": "$544","itemTotal" : "540"
+            "oldItemPrice": "$544",
+            "itemTotal": "540",
+            "brand": "Ps"
           }
         },
         {
@@ -48,10 +53,12 @@
           "itemInfo": {
             "name": "PS 3",
             "itemImg": "/IMAGES/ipad2.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "620",
-            "oldItemPrice": "$544","itemTotal" : "620"
+            "oldItemPrice": "$544",
+            "itemTotal": "620",
+            "brand": "Ps"
           }
         },
         {
@@ -59,10 +66,12 @@
           "itemInfo": {
             "name": "PS 3",
             "itemImg": "/IMAGES/ipad2.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "600",
-            "oldItemPrice": "$544","itemTotal" : "600"
+            "oldItemPrice": "$544",
+            "itemTotal": "600",
+            "brand": "Ps"
           }
         },
         {
@@ -70,10 +79,12 @@
           "itemInfo": {
             "name": "PS 4",
             "itemImg": "/IMAGES/ipad2.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "330",
-            "oldItemPrice": "$544","itemTotal" : "330"
+            "oldItemPrice": "$544",
+            "itemTotal": "330",
+            "brand": "Ps"
           }
         },
         {
@@ -81,10 +92,12 @@
           "itemInfo": {
             "name": "PS 5",
             "itemImg": "/IMAGES/ipad2.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "850",
-            "oldItemPrice": "$544","itemTotal" : "850"
+            "oldItemPrice": "$544",
+            "itemTotal": "850",
+            "brand": "Ps"
           }
         },
         {
@@ -92,32 +105,37 @@
           "itemInfo": {
             "name": "PS 3",
             "itemImg": "/IMAGES/ipad2.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "900",
-            "oldItemPrice": "$544","itemTotal" : ""
+            "oldItemPrice": "$544",
+            "itemTotal": ""
           }
         },
         {
           "id": "7294",
           "itemInfo": {
-            "name": "PS 3",
+            "name": "Xbox",
             "itemImg": "/IMAGES/ipad2.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1200",
-            "oldItemPrice": "$544","itemTotal" : "1000"
+            "oldItemPrice": "$544",
+            "itemTotal": "1000",
+            "brand": "Xbox"
           }
         },
         {
           "id": "1901",
           "itemInfo": {
-            "name": "PS 3",
+            "name": "Xbox",
             "itemImg": "/IMAGES/ipad2.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1112",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Xbox"
           }
         }
       ],
@@ -127,221 +145,761 @@
           "itemInfo": {
             "name": "LG",
             "itemImg": "/IMAGES/frontIpad.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "LG X16",
             "description2": "",
             "newItemPrice": "1200",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "LG",
+            "memory": "16"
           }
         },
         {
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/frontIpad.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
           }
         },
         {
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/frontIpad.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": "/IMAGES/iphone2.webp",
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
+          }
+        },
+        {
+          "id": "2012",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128"
           }
         },
         {
           "id": "2837",
           "itemInfo": {
             "name": "Samsung",
-            "itemImg": "/IMAGES/frontIpad.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/iphone4.webp",
+            "description1": "Samsung S16",
             "description2": "",
             "newItemPrice": "750",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Samsung",
+            "memory": "32"
           }
         },
         {
           "id": "2187",
           "itemInfo": {
-            "name": "infinix",
-            "itemImg": "/IMAGES/frontIpad.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Infinix",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "Infinix Hot 10",
             "description2": "",
             "newItemPrice": "1000",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Infinix",
+            "memory": "16"
           }
         },
         {
           "id": "2010",
           "itemInfo": {
-            "name": "iTel",
-            "itemImg": "/IMAGES/frontIpad.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Itel",
+            "itemImg": "/IMAGES/iphone5.webp",
+            "description1": "Itel Hot 9",
             "description2": "",
             "newItemPrice": "910",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Itel",
+            "memory": "16"
           }
         },
         {
           "id": "2883",
           "itemInfo": {
             "name": "iTel",
-            "itemImg": "/IMAGES/frontIpad.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/iphone6.jpg",
+            "description1": "Itel Hot 10",
             "description2": "",
             "newItemPrice": "830",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Itel",
+            "memory": "16"
           }
         },
         {
           "id": "2018",
           "itemInfo": {
             "name": "iPhone 8 Plus",
-            "itemImg": "/IMAGES/frontIpad.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/iphone3.webp",
+            "description1": "iPhone 8 Plus Red",
             "description2": "",
             "newItemPrice": "350",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "16"
           }
         },
         {
           "id": "2831",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/frontIpad.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/iphone4.webp",
+            "description1": "iPhone 12 Pro Max Black",
             "description2": "",
             "newItemPrice": "932",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "64"
           }
         },
         {
           "id": "2987",
           "itemInfo": {
             "name": "iPhone 12",
-            "itemImg": "/IMAGES/frontIpad.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/ipad1.jpg",
+            "description1": "iPhone 12 White",
             "description2": "",
             "newItemPrice": "400",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "64"
+          }
+        },
+        {
+          "id": "2989",
+          "itemInfo": {
+            "name": "Samsung s6",
+            "itemImg": "/IMAGES/ipad2.jpg",
+            "description1": "Samsung S6 Blue",
+            "description2": "",
+            "newItemPrice": "400",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Samsung",
+            "memory": "64"
           }
         }
       ],
-      "speaker": [
+      "speakers": [
         {
           "id": "9183",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "JBL Flip 3",
             "itemImg": "/IMAGES/jblflip6.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "2300",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "jbl"
           }
         },
         {
           "id": "8840",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/jblflip6.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "JBL Flip 3",
+            "itemImg": "/IMAGES/jbl.png",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "2100",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "jbl"
           }
         },
         {
           "id": "9384",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/jblflip6.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "JBL Flip 3",
+            "itemImg": "/IMAGES/jbl.png",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "2220",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "jbl"
           }
         },
         {
           "id": "9943",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/jblflip6.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Oraimo",
+            "itemImg": "/IMAGES/headphone.png",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1150",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "oraimo"
           }
         },
         {
           "id": "1453",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/jblflip6.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Oraimo",
+            "itemImg": "/IMAGES/speaker.png",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "480",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "oraimo"
           }
         },
         {
           "id": "1837",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/jblflip6.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Oraimo",
+            "itemImg": "/IMAGES/jbl.png",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "920",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "oraimo"
           }
         },
         {
           "id": "1003",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Beatz",
             "itemImg": "/IMAGES/jblflip6.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "630",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "beatz"
           }
         },
         {
           "id": "1534",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Beatz",
             "itemImg": "/IMAGES/jblflip6.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "550",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "beatz"
           }
         },
         {
           "id": "1493",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "Beatz",
             "itemImg": "/IMAGES/jblflip6.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "800",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "beatz"
           }
         },
         {
           "id": "1743",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/jblflip6.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Beatz",
+            "itemImg": "/IMAGES/headphone.png",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "600",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "beatz"
           }
         }
       ],
@@ -349,111 +907,161 @@
         {
           "id": "1264",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/tv4.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Apple MacBook Pro 2021",
+            "itemImg": "/IMAGES/tv3.png",
+            "description1": "Apple MacBook Pro 13 inches",
             "description2": "",
-            "newItemPrice": "900",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "newItemPrice": "1200",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "ram": 4,
+            "rom": 256,
+            "screen": 16,
+            "brand": "Mac"
           }
         },
         {
           "id": "2943",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/tv4.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Apple MacBook Air 2020",
+            "itemImg": "/IMAGES/tv5.jpg",
+            "description1": "Apple MacBook Air 2020 16 inches - Gold",
             "description2": "",
-            "newItemPrice": "500",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "newItemPrice": "1100",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "ram": 4,
+            "rom": 256,
+            "screen": 16,
+            "brand": "Mac"
           }
         },
         {
           "id": "8462",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "HP Pavailon",
             "itemImg": "/IMAGES/tv4.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "HP Pavailon X16",
             "description2": "",
-            "newItemPrice": "800",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "newItemPrice": "1250",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "ram": 8,
+            "rom": 512,
+            "screen": 13,
+            "brand": "HP"
           }
         },
         {
           "id": "9384",
           "itemInfo": {
-            "name": "XBOX 1",
+            "name": "ASUS",
             "itemImg": "/IMAGES/tv4.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "ASUS",
             "description2": "",
-            "newItemPrice": "393",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "newItemPrice": "1500",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "ram": 16,
+            "rom": 1000,
+            "screen": 16,
+            "brand": "ASUS"
           }
         },
         {
           "id": "8494",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/tv4.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Toshiba",
+            "itemImg": "/IMAGES/tv5.jpg",
+            "description1": "Toshiba 2020",
             "description2": "",
-            "newItemPrice": "890",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "newItemPrice": "1000",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "ram": 8,
+            "rom": 512,
+            "screen": 16,
+            "brand": "Toshiba"
           }
         },
         {
           "id": "4724",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/tv4.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "HP Elite Pro Z20",
+            "itemImg": "/IMAGES/tv5.jpg",
+            "description1": "HP Elite Pro Z20",
             "description2": "",
             "newItemPrice": "980",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "ram": 4,
+            "rom": 256,
+            "screen": 13,
+            "brand": "HP"
           }
         },
         {
           "id": "9374",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/tv4.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Apple MacBook Pro",
+            "itemImg": "/IMAGES/tv3.png",
+            "description1": "Apple MacBook Pro 2021",
             "description2": "",
-            "newItemPrice": "650",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "newItemPrice": "1300",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "ram": 8,
+            "rom": 1000,
+            "screen": 16,
+            "brand": "Mac"
           }
         },
         {
           "id": "4824",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/tv4.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Apple MacBook Pro",
+            "itemImg": "/IMAGES/tv3.png",
+            "description1": "Apple MacBook Pro 2021",
             "description2": "",
-            "newItemPrice": "659",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "newItemPrice": "1300",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "ram": 8,
+            "rom": 1000,
+            "screen": 16,
+            "brand": "Mac"
           }
         },
         {
           "id": "3572",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/tv4.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "HP Elite Pro V20",
+            "itemImg": "/IMAGES/tv5.jpg",
+            "description1": "HP Elite Pro V20",
             "description2": "",
-            "newItemPrice": "530",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "newItemPrice": "980",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "ram": 8,
+            "rom": 256,
+            "screen": 13,
+            "brand": "HP"
           }
         },
         {
           "id": "4752",
           "itemInfo": {
-            "name": "XBOX 1",
-            "itemImg": "/IMAGES/tv4.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "name": "Toshiba",
+            "itemImg": "/IMAGES/tv5.jpg",
+            "description1": "Toshiba 2020",
             "description2": "",
-            "newItemPrice": "980",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "newItemPrice": "1100",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "ram": 8,
+            "rom": 512,
+            "screen": 16,
+            "brand": "Toshiba"
           }
         }
       ],
@@ -462,22 +1070,26 @@
           "id": "5928",
           "itemInfo": {
             "name": "Hisense",
-            "itemImg": "/IMAGES/tv5.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/tv1.jpg",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "928",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "hisense"
           }
         },
         {
           "id": "4295",
           "itemInfo": {
             "name": "LG",
-            "itemImg": "/IMAGES/tv5.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/tv2.jpg",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "999",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "lg"
           }
         },
         {
@@ -485,10 +1097,12 @@
           "itemInfo": {
             "name": "Midea",
             "itemImg": "/IMAGES/tv5.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1600",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "midea"
           }
         },
         {
@@ -496,54 +1110,64 @@
           "itemInfo": {
             "name": "Hisense",
             "itemImg": "/IMAGES/tv5.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1400",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "hisense"
           }
         },
         {
           "id": "8425",
           "itemInfo": {
             "name": "Hisense",
-            "itemImg": "/IMAGES/tv5.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/tv3.jpg",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1300",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "hisense"
           }
         },
         {
           "id": "1835",
           "itemInfo": {
             "name": "Toshiba",
-            "itemImg": "/IMAGES/tv5.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/tv3.jpg",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1250",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "toshiba"
           }
         },
         {
           "id": "5942",
           "itemInfo": {
             "name": "Toshiba",
-            "itemImg": "/IMAGES/tv5.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/tv2.jpg",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1100",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "toshiba"
           }
         },
         {
           "id": "5852",
           "itemInfo": {
             "name": "Midea",
-            "itemImg": "/IMAGES/tv5.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/tv2.jpg",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1850",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "midea"
           }
         },
         {
@@ -551,21 +1175,25 @@
           "itemInfo": {
             "name": "LG",
             "itemImg": "/IMAGES/tv5.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "300",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "lg"
           }
         },
         {
           "id": "3742",
           "itemInfo": {
             "name": "Samsung",
-            "itemImg": "/IMAGES/tv5.png",
-            "description1": "Lorem ipsum dolor sit amet.",
+            "itemImg": "/IMAGES/tv1.jpg",
+            "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1200",
-            "oldItemPrice": "$544","itemTotal" : "630"
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "samsung"
           }
         }
       ]
@@ -579,10 +1207,11 @@
         "category": "Gaming",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/ipad2.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "880",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     },
     {
@@ -591,10 +1220,11 @@
         "category": "Gaming",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/ipad2.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "920",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     },
     {
@@ -603,10 +1233,11 @@
         "category": "Cellphone",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/frontIpad.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "500",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     },
     {
@@ -615,10 +1246,11 @@
         "category": "Speaker",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/jblflip6.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "600",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     },
     {
@@ -627,10 +1259,11 @@
         "category": "Computer",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/tv4.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "630",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     },
     {
@@ -639,10 +1272,11 @@
         "category": "TV",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/tv5.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "650",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     }
   ],
@@ -654,10 +1288,11 @@
         "category": "Gaming",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/ipad2.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "425",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     },
     {
@@ -666,10 +1301,11 @@
         "category": "Cellphone",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/frontIpad.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "950",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     },
     {
@@ -678,10 +1314,11 @@
         "category": "Speaker",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/jblflip6.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "995",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     },
     {
@@ -690,10 +1327,11 @@
         "category": "Computer",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/tv4.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "870",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     },
     {
@@ -702,10 +1340,11 @@
         "category": "TV",
         "name": "XBOX 1",
         "itemImg": "/IMAGES/tv5.png",
-        "description1": "Lorem ipsum dolor sit amet.",
+        "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "670",
-        "oldItemPrice": "$544","itemTotal" : "630"
+        "oldItemPrice": "$544",
+        "itemTotal": "630"
       }
     }
   ]
