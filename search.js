@@ -588,7 +588,7 @@ const onLoad = () => {
 
     }
     try {
-      sizeFromUrl = newUrlParameters.Size.split(",").replace(/%20/g, "").split("-")
+      sizeFromUrl = newUrlParameters.Size.split(",")
 
     } catch (error) {
 

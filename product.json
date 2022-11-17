@@ -1076,7 +1076,8 @@
             "newItemPrice": "928",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "hisense"
+            "brand": "hisense",
+            "size": 32
           }
         },
         {
@@ -1089,7 +1090,8 @@
             "newItemPrice": "999",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "lg"
+            "brand": "lg",
+            "size": 32
           }
         },
         {
@@ -1102,7 +1104,8 @@
             "newItemPrice": "1600",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "midea"
+            "brand": "midea",
+            "size": 43
           }
         },
         {
@@ -1115,7 +1118,8 @@
             "newItemPrice": "1400",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "hisense"
+            "brand": "hisense",
+            "size": 43
           }
         },
         {
@@ -1128,7 +1132,8 @@
             "newItemPrice": "1300",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "hisense"
+            "brand": "hisense",
+            "size": 43
           }
         },
         {
@@ -1141,7 +1146,8 @@
             "newItemPrice": "1250",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "toshiba"
+            "brand": "toshiba",
+            "size": 55
           }
         },
         {
@@ -1154,7 +1160,8 @@
             "newItemPrice": "1100",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "toshiba"
+            "brand": "toshiba",
+            "size": 55
           }
         },
         {
@@ -1167,7 +1174,8 @@
             "newItemPrice": "1850",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "midea"
+            "brand": "midea",
+            "size": 43
           }
         },
         {
@@ -1180,7 +1188,8 @@
             "newItemPrice": "300",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "lg"
+            "brand": "lg",
+            "size": 43
           }
         },
         {
@@ -1193,7 +1202,8 @@
             "newItemPrice": "1200",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "samsung"
+            "brand": "samsung",
+            "size": 32
           }
         }
       ]

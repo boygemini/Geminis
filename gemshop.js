@@ -506,6 +506,15 @@ const tvFilters = () => {
   });
 
   // Size Filter
+  sz32.addEventListener("click", (event) => {
+    displayFilteredResults(filter.size(event, "tv", 32))
+  })
+  sz43.addEventListener("click", (event) => {
+    displayFilteredResults(filter.size(event, "tv", 43))
+  })
+  sz55.addEventListener("click", (event) => {
+    displayFilteredResults(filter.size(event, "tv", 55))
+  })
 }
 
 
