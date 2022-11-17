@@ -588,6 +588,7 @@ switch (urlCategory) {
 if (document.URL.split("?").length === 1) {
   display.displayAll();
   document.querySelector(".filters").style.display = "none"
+  document.querySelector(".sort-hol").style.display = "none"
 }
 
 

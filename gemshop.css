@@ -330,7 +330,7 @@ nav ul li {
     width: 150px;
     height: 150px;
     outline: 2px dashed transparent;
-    outline-offset: 2px;
+    outline-offset: 0px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -355,31 +355,31 @@ nav ul li {
 }
 
 .hol1 {
-    /* background: url('/IMAGES/game.jpg'); */
+    background: url('/IMAGES/game.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .hol2 {
-    /* background: url('/IMAGES/cell.jpg'); */
+    background: url('/IMAGES/cell.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .hol3 {
-    /* background: url('/IMAGES/wiin.jpg'); */
+    background: url('/IMAGES/wiin.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .hol4 {
-    /* background: url('/IMAGES/speak.jpg'); */
+    background: url('/IMAGES/speak.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .hol5 {
-    /* background: url('/IMAGES/tele.jpg'); */
+    background: url('/IMAGES/tele.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -1212,7 +1212,7 @@ select:hover {
     /* border: 1px solid rgba(112, 128, 144, 0.552); */
     /* background-color: #F6F6F6; */
     cursor: pointer;
-    box-shadow: 0px 15px 25px -10px rgba(112, 128, 144, 0.232);
+    box-shadow: 0px 15px 25px -10px #7080903b;
 }
 
 .img-con {
