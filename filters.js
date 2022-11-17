@@ -7,7 +7,7 @@
 
 let Parameters;
 let currentFilterUrl = document.URL,
-    priceFromUrl, brandFromUrl, filterFromUrl, radioFromUrl, ramFromUrl, romFromUrl, memoryFromUrl, screenFromUrl, sizeFromUrl, pageFromUrl, searchQueryFromUrl, newUrlParameters;
+    priceFromUrl, brandFromUrl, filterFromUrl, radioFromUrl, ramFromUrl, romFromUrl, memoryFromUrl, screenFromUrl, sizeFromUrl, pageFromUrl, orderFromUrl, searchQueryFromUrl, newUrlParameters;
 
 
 // PREPARING PARAMETERS FROM THE URL IF IT IS A COMPLETELY NEW SEARCH FROM A NEW BROWSER
@@ -39,6 +39,7 @@ try {
     sizeFromUrl = newUrlParameters.Size.split(",")
     searchQueryFromUrl = newUrlParameters.SearchQuery
     pageFromUrl = newUrlParameters.Page
+    orderFromUrl = newUrlParameters.Order
 } catch (error) {
 
 }
@@ -59,7 +60,8 @@ if (localStorage.getItem("Parameters") === null) {
         Filters: filterFromUrl || [],
         Radio: radioFromUrl || [],
         SearchQuery: "",
-        Page: pageFromUrl || "0"
+        Page: pageFromUrl || "0",
+        Order: orderFromUrl || "Random"
     }
     let stringifyParameters = JSON.stringify(Parameters)
     localStorage.setItem("Parameters", stringifyParameters)
@@ -71,6 +73,7 @@ if (localStorage.getItem("Parameters") !== null) {
     let parseParameters = JSON.parse(localStorage.getItem("Parameters"))
     Parameters = parseParameters;
 }
+
 
 
 // KEEP RECORD OF THE CHECKED FILTER BOXES
@@ -125,6 +128,9 @@ try {
 
 }
 
+if (orderFromUrl === undefined) {
+    Parameters.Order = document.URL.split("Order=")[1].split("&")[0]
+}
 
 // CREATING THE FILTER URL
 const createUrl = (category) => {
@@ -140,7 +146,7 @@ const createUrl = (category) => {
         searchQuery = "",
         page = "";
     let currentUrl = "gemshop.html";
-    let url = `${currentUrl}?category=${category}&Page=${Parameters.Page.toString()}`
+    let url = `${currentUrl}?category=${category}&Order=${Parameters.Order}&Page=${Parameters.Page.toString()}`
 
 
     if (Parameters.Price.length > 0) {
@@ -205,6 +211,8 @@ const createUrl = (category) => {
     localStorage.setItem("Url", url)
     window.location = url;
 }
+
+
 
 
 // FILTER CLASS
@@ -366,6 +374,23 @@ class filter {
         } else {
             createUrl(itemCategory)
         }
+    }
+
+    static sort(currentSort, results) {
+
+        currentSort = currentSort.toLowerCase()
+        switch (currentSort) {
+            case "random":
+                results = results.sort((a, b) => Number(a.id) < Number(b.id));
+                break;
+            case "ascending":
+                results = results.sort((a, b) => Number(a.itemInfo.newItemPrice) - Number(b.itemInfo.newItemPrice));
+                break;
+            case "descending":
+                results = results.sort((a, b) => Number(b.itemInfo.newItemPrice) - Number(a.itemInfo.newItemPrice));
+                break;
+        }
+        return results
     }
 }
 

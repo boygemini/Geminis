@@ -165,6 +165,7 @@ class display {
 
   static allUI(directory, category, boxID) {
     let y = ""
+
     if (directory.length === 0) {
       showBox.innerHTML = `<div class="noresult">
 			<h1 class = "cat-head" > Oops, there are no results
@@ -241,7 +242,8 @@ const emptyParameters = () => {
     Filters: [],
     Radio: [],
     SearchQuery: "",
-    Page: "0"
+    Page: "0",
+    Order: "Random"
   };
   let stringifyParameters = JSON.stringify(Parameters);
   localStorage.setItem("Parameters", stringifyParameters);
@@ -576,7 +578,6 @@ const TVs = () => {
 let urlCategory = document.URL;
 try {
   urlCategory = urlCategory.split("?")[1].split("=")[1].split("&")[0];
-  console.log(urlCategory);
 } catch (error) {}
 
 switch (urlCategory) {
@@ -597,6 +598,7 @@ switch (urlCategory) {
     break;
 }
 
+
 if (document.URL.split("?").length === 1) {
   display.displayAll();
   document.querySelector(".filters").style.display = "none"
@@ -606,7 +608,7 @@ if (document.URL.split("?").length === 1) {
 [...document.querySelectorAll("#games")].forEach(btn => btn.addEventListener("click", (e) => {
   Gamings();
   emptyParameters();
-  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=gaming&Page=0";
+  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=gaming&Order=Random&Page=0";
 }));
 
 
@@ -614,7 +616,7 @@ if (document.URL.split("?").length === 1) {
   cellPhones();
   emptyParameters();
   window.location =
-    "http://127.0.0.1:5500/HTML/gemshop.html?category=cellphones&Page=0";
+    "http://127.0.0.1:5500/HTML/gemshop.html?category=cellphones&Order=Random&Page=0";
 }));
 
 
@@ -622,21 +624,21 @@ if (document.URL.split("?").length === 1) {
   Computers();
   emptyParameters();
   window.location =
-    "http://127.0.0.1:5500/HTML/gemshop.html?category=computers&Page=0";
+    "http://127.0.0.1:5500/HTML/gemshop.html?category=computers&Order=Random&Page=0";
 }));
 
 
 [...document.querySelectorAll("#spks")].forEach(btn => btn.addEventListener("click", (e) => {
   Speakers();
   emptyParameters();
-  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=speakers&Page=0";
+  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=speakers&Order=Random&Page=0";
 }));
 
 
 [...document.querySelectorAll("#tele")].forEach(btn => btn.addEventListener("click", (e) => {
   TVs();
   emptyParameters();
-  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=tv&Page=0";
+  window.location = "http://127.0.0.1:5500/HTML/gemshop.html?category=tv&Order=Random&Page=0";
 }));
 
 

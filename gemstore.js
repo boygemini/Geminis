@@ -248,11 +248,8 @@ class Storage {
 
 
 class displayProduct {
-  /*
 
-  DISPLAY SELECTED FOR YOU ITEMS
-
-  */
+  // DISPLAY SELECTED FOR YOU ITEMS
   static createItem(event, holderClass, category, sub) {
     let itemCreated = " ";
     let Holder = document.querySelector(holderClass);
@@ -285,11 +282,7 @@ class displayProduct {
   }
 
 
-  /*
-
-  DISPLAY RECENTLY ADDED ITEMS
-
-  */
+  // DISPLAY RECENTLY ADDED ITEMS
   static displayRecentItems(category, sub) {
     let itemCreated = "";
     let Holder = document.getElementById("holder-rec");
@@ -305,6 +298,35 @@ class displayProduct {
 		    <button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
 		</div>
 	 </div>
+  </div>`;
+    }
+    Holder.innerHTML = itemCreated;
+  }
+
+
+  // DISPLAY WEEKLY FEATURED ITEM
+  static displayWeeklyFeatured(category, sub) {
+    let itemCreated = "";
+    let Holder = document.querySelector(".Weekly-Container");
+    for (let i in category) {
+      itemCreated += `<div id="wkly" data-id=${category[i].id} onclick = "viewProduct(event)">
+      <div class="img-con">
+          <img src=${category[i].itemInfo.itemImg} alt="">
+      </div>
+      <div class="sfu">
+      <p class="itemName2">${category[i].itemInfo.name}</p>
+              <div class="ssd description-box">
+                  <p class="item-description">${category[i].itemInfo.description1}</p>
+                  <p class="item-description">${category[i].itemInfo.description2}</p>
+              </div>
+          <div class="price-order">
+              <span class="price-box">
+                  <span class="price"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
+                  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
+              </span>
+              <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"></button>
+          </div>
+      </div>
   </div>`;
     }
     Holder.innerHTML = itemCreated;
@@ -330,9 +352,7 @@ displayProduct.createItem(event, "#sel-container",
 
 
 // DISPLAY WEEKLY PRODUCTS
-displayProduct.createItem(event, ".Weekly-Container",
-  Storage.weeklyFeaturedItems()
-);
+displayProduct.displayWeeklyFeatured(Storage.weeklyFeaturedItems());
 
 
 

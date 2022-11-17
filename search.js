@@ -73,7 +73,7 @@ search.addEventListener("input", () => {
 
 const sendQueryGO = (event) => {
   let query = search.value.toLowerCase();
-  let url = `gemshop.html?SearchQuery=${encodeURIComponent(query)}&Page=0`
+  let url = `gemshop.html?SearchQuery=${encodeURIComponent(query)}&Order=Random&Page=0`
   window.location.href = url;
 };
 
@@ -81,7 +81,7 @@ const sendQueryGO = (event) => {
 const sendQuery = (event) => {
   let query = event.target.firstElementChild.innerText;
   let queryCategory = event.target.children[2].innerText.toLowerCase();
-  let url = `gemshop.html?category=${encodeURIComponent(queryCategory)}&SearchQuery=${encodeURIComponent(query)}&Page=0`;
+  let url = `gemshop.html?category=${encodeURIComponent(queryCategory)}&SearchQuery=${encodeURIComponent(query)}&Order=Random&Page=0`;
   window.location.href = url;
 };
 
@@ -111,6 +111,36 @@ const markAndCreatePagination = (results) => {
   markPagination()
 }
 
+
+const sorting = (event) => {
+  let sort = event.target.value
+  let pageUrl = document.URL.split("Order=")[0]
+  let remainingUrlParaArray = document.URL.split("&Page=")[1].split("&")
+  remainingUrlParaArray.shift()
+
+  let remainingUrlParaString = "";
+  for (let i in remainingUrlParaArray) {
+    remainingUrlParaString += `&${remainingUrlParaArray[i]}`
+  }
+
+  let changeSorting = `${pageUrl}Order=${sort}&Page=${Parameters.Page}${remainingUrlParaString}`
+  window.location = changeSorting
+}
+
+
+const controlSort = (arr) => {
+  let orderFromUrl = document.URL.split("Order=")[1].split("&")[0]
+  filter.sort(orderFromUrl, arr)
+  document.getElementById("select").value = document.URL.split("Order=")[1].split("&")[0]
+
+  // Save last Sort set
+  let getSavedOrder = JSON.parse(localStorage.getItem("Parameters"))
+  getSavedOrder.Order = orderFromUrl;
+  localStorage.setItem("Parameters", JSON.stringify(getSavedOrder))
+}
+
+
+
 class getResults {
   static suggestionsResult(Query, Category) {
     let arr = []
@@ -124,6 +154,8 @@ class getResults {
     let pageNumber = document.URL.split("Page=")[1]
     if (pageNumber) arr = createPagination(arr, 10, Number(pageNumber))
 
+
+    controlSort(arr)
     markPagination()
     displayFiltereddResults(arr, Query)
   }
@@ -143,6 +175,7 @@ class getResults {
     if (pageNumber) arr = createPagination(arr, 10, Number(pageNumber))
 
     markPagination()
+    controlSort(arr)
     displayResults(arr, Query)
   }
 }
@@ -220,8 +253,6 @@ const displayResults = (directory, Query) => {
 const displayFiltereddResults = (results, category) => {
   let x = ``;
   let y = ""
-  results = results.sort((a, b) => Number(b.itemInfo.newItemPrice) - Number(a.itemInfo.newItemPrice))
-  console.log(results);
   if (results.length === 0) {
     showBox.innerHTML = `<div class="noresult">
 			<h1 class = "cat-head" > Oops, there are no results
@@ -351,8 +382,12 @@ const removeThe20Nonsense = (Query) => {
 
 
 
-let page = document.URL.split("Page=")[1].split("&")[0]
-let pageCount;
+let page, pageCount;
+try {
+  page = document.URL.split("Page=")[1].split("&")[0]
+} catch (error) {
+
+}
 
 function Next(event, paginatedResult) {
   pageCount = (Number(page)) + 1
@@ -557,6 +592,13 @@ const onLoad = () => {
 
     }
 
+    try {
+      orderFromUrl = newUrlParameters.Order
+
+    } catch (error) {
+
+    }
+
 
     // FILTERING / Price
 
@@ -691,7 +733,7 @@ const onLoad = () => {
     }
 
 
-    // Page
+    // Page & Pagination
     if (!pageFromUrl) {
       results = createPagination(results, 10, 0)
     }
@@ -699,10 +741,14 @@ const onLoad = () => {
     if (pageFromUrl) {
       results = createPagination(results, 10, Number(pageFromUrl))
     }
-
     markPagination()
 
 
+    // Result Sorting
+    controlSort(results)
+
+
+    // PASSING RESULTS TO UI FUNCTION
     displayFiltereddResults(results, parameterCategory)
   }
 };
