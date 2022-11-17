@@ -151,7 +151,17 @@
                         </div>
                     </div>
                 </div>
-                <h1 id="result-title" class="cat-head"></h1>
+                <div class="res-sort">
+                    <h1 id="result-title" class="cat-head"></h1>
+                    <div class="sort-hol">
+                        <p>Sort</p>
+                        <select name="sort" id="">
+                            <option value="Random">Random</option>
+                            <option value="Ascending">Ascending</option>
+                            <option value="Decending">Decending</option>
+                        </select>
+                    </div>
+                </div>
                 <div id="showbox" onload="onLoad()">
                     <div class="full-cat">
                         <div class="section-title">
@@ -257,12 +267,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="pagindiv">
-                    <button class="prev-next">
-                        < </button> <div class="pagindiv" id="pagindiv">
+                <div class="pagindiv pgd">
+                    <button class="prev-next" id="prevPage"> Prev </button>
+                    <div class="pagindiv" id="pagindiv"></div>
+                    <button class="prev-next" id="nextPage">Next</button>
                 </div>
-                <button class="prev-next">></button>
-            </div>
             </div>
             <!-- <section class="visit-our-support">
 				<div class="vv">
