@@ -220,6 +220,8 @@ const displayResults = (directory, Query) => {
 const displayFiltereddResults = (results, category) => {
   let x = ``;
   let y = ""
+  results = results.sort((a, b) => Number(b.itemInfo.newItemPrice) - Number(a.itemInfo.newItemPrice))
+  console.log(results);
   if (results.length === 0) {
     showBox.innerHTML = `<div class="noresult">
 			<h1 class = "cat-head" > Oops, there are no results
@@ -448,10 +450,6 @@ function createPagination(results, numberOnEachPage, pageNumber) {
   }
 }
 
-// prevPage.addEventListener("click", (event) => {
-// 	Prev(event)
-// 	console.log("Hh");
-// })
 
 
 

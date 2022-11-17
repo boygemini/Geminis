@@ -997,6 +997,10 @@ p span {
     column-gap: 5px;
 }
 
+.pgd {
+    padding: 20px;
+}
+
 .pagin {
     width: 35px;
     height: 35px;
@@ -1136,12 +1140,44 @@ p span {
     font-weight: 600;
     /* color: #a73ef8; */
     /* background-color: whitesmoke; */
-    padding: 20px 0px 20px 20px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+
+.res-sort {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort-hol {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.sort-hol p {
+    font-weight: 500;
+}
+
+select {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.688);
+    outline: none;
+    cursor: pointer;
+}
+
+select:hover {
+    border: 1px solid #808080;
 }
 
 
