@@ -12,12 +12,7 @@ let currentFilterUrl = document.URL,
 
 // PREPARING PARAMETERS FROM THE URL IF IT IS A COMPLETELY NEW SEARCH FROM A NEW BROWSER
 if (currentFilterUrl.split("?category").length > 1 && localStorage.getItem("Parameters") === null) {
-    let urlParameters = currentFilterUrl.split("?category").toString().split("&").filter(arr => !arr.includes("gemshop.html"));
-    newUrlParameters = new Array()
-    for (let i in urlParameters) {
-        let sp = urlParameters[i].split("=")
-        newUrlParameters[sp[0]] = sp[1]
-    }
+    newUrlParameters = convertUrlParametersIntoObject(currentFilterUrl)
 }
 
 
@@ -205,8 +200,6 @@ const createUrl = (category) => {
         url += `&Radio=${Parameters.Radio.toString()}`
     }
 
-    // url += `&Page=${Parameters.Page.toString()}`
-
     let stringifyNewParameters = JSON.stringify(Parameters)
     localStorage.setItem("Parameters", stringifyNewParameters)
     localStorage.setItem("Url", url)
@@ -360,11 +353,11 @@ class filter {
     // EVENT TRIGGERED WHEN PAGE NUMBER IS SELECTED(PAGINATION)
     static page(event, counter) {
         let itemCategory;
+        let pgNum = event.target.id
         try {
             itemCategory = document.URL.split("category=")[1].split("=")[0].split("&")[0]
         } catch (error) {};
 
-        let pgNum = event.target.id
         Parameters.Page = counter || pgNum
         if (document.URL.split("SearchQuery").length > 1) {
             let pageUrl = document.URL.split("Page=")[0]

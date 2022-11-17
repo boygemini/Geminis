@@ -329,7 +329,8 @@ nav ul li {
 .b-holder {
     width: 150px;
     height: 150px;
-    border: 1px solid whitesmoke;
+    outline: 2px dashed transparent;
+    outline-offset: 2px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -338,6 +339,19 @@ nav ul li {
     background: url('/IMAGES/stackphone.png');
     background-size: cover;
     background-position: center;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    /*box-shadow: 0px 20px 40px -10px rgba(112, 128, 144, 0.796);
+    */
+    ;
+}
+
+.b-holder:hover {
+    outline-offset: 2px;
+    outline: 2px dashed #090A0A;
 }
 
 .hol1 {
@@ -372,7 +386,7 @@ nav ul li {
 
 .shade:hover p {
     background-color: white;
-    color: #090A0A;
+    color: #a73ef8;
     padding: 5px 10px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -438,7 +452,9 @@ nav ul li {
 
 .banner-text h1 {
     color: white;
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: 1000;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .banner-text p,
@@ -984,7 +1000,7 @@ p span {
 .pagin {
     width: 35px;
     height: 35px;
-    border: 1px solid rgba(112, 128, 144, 0.589);
+    border: 1px solid #70809096;
     background-color: white;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -996,24 +1012,29 @@ p span {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: .3s ease-in-out;
-    -webkit-transition: .3s ease-in-out;
-    -moz-transition: .3s ease-in-out;
-    -ms-transition: .3s ease-in-out;
-    -o-transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
 }
 
-.active,
-.pagin:hover {
+.active {
     border: 2px solid #a73ef8;
     color: #a73ef8;
     background-color: whitesmoke;
     box-shadow: 0px 10px 25px -10px #a73ef8;
 }
 
+.pagin:hover {
+    border: 2px solid #70809096;
+    color: #a73ef8;
+}
+
 .prev-next {
     width: 35px;
     height: 35px;
+    padding: 5px 30px;
     border: 1px solid rgba(112, 128, 144, 0.589);
     background-color: white;
     border-radius: 5px;
@@ -1086,6 +1107,10 @@ p span {
     -o-transition: all .3s ease-in-out;
 }
 
+#result-title {
+    text-transform: capitalize;
+}
+
 .section-title button:hover {
     background-color: whitesmoke;
     letter-spacing: .5px;
@@ -1127,7 +1152,7 @@ p span {
 .sel-box {
     width: 270px;
     min-width: 270px;
-    height: 500px;
+    height: 470px;
     /*max-height: 400px;
     */
     padding-bottom: 10px;

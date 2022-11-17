@@ -228,7 +228,10 @@ display.displayAll()
 const emptyParameters = () => {
   let Parameters = {
     Price: [],
-    Range: [],
+    Range: [{
+      high: 5000,
+      low: 300
+    }],
     Brand: [],
     Memory: [],
     Ram: [],

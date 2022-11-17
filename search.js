@@ -106,13 +106,7 @@ search.addEventListener("keydown", (event) => {
 
 const markAndCreatePagination = (results) => {
   let pageNumber = document.URL.split("Page=")[1]
-  if (!pageNumber) {
-    results = createPagination(results, 10, 0)
-  }
-
-  if (pageNumber) {
-    results = createPagination(results, 10, Number(pageNumber))
-  }
+  if (pageNumber) results = createPagination(results, 10, Number(pageNumber))
 
   markPagination()
 }
@@ -128,13 +122,7 @@ class getResults {
       }
     }
     let pageNumber = document.URL.split("Page=")[1]
-    if (!pageNumber) {
-      arr = createPagination(arr, 10, 0)
-    }
-
-    if (pageNumber) {
-      arr = createPagination(arr, 10, Number(pageNumber))
-    }
+    if (pageNumber) arr = createPagination(arr, 10, Number(pageNumber))
 
     markPagination()
     displayFiltereddResults(arr, Query)
@@ -152,13 +140,7 @@ class getResults {
       }
     }
     let pageNumber = document.URL.split("Page=")[1]
-    if (!pageNumber) {
-      arr = createPagination(arr, 10, 0)
-    }
-
-    if (pageNumber) {
-      arr = createPagination(arr, 10, Number(pageNumber))
-    }
+    if (pageNumber) arr = createPagination(arr, 10, Number(pageNumber))
 
     markPagination()
     displayResults(arr, Query)
@@ -368,10 +350,10 @@ const removeThe20Nonsense = (Query) => {
 
 
 let page = document.URL.split("Page=")[1].split("&")[0]
-let pageCount = Number(page) || 0
+let pageCount;
 
 function Next(event, paginatedResult) {
-  pageCount++
+  pageCount = (Number(page)) + 1
   if (pageCount !== Number(paginatedResult.length)) {
     event.target.disabled = false
     filter.page(event, pageCount.toString())
@@ -380,7 +362,7 @@ function Next(event, paginatedResult) {
 
 
 function Prev(event) {
-  pageCount--
+  pageCount = (Number(page)) - 1
   if (pageCount <= 0) {
     pageCount = 0
   }
@@ -390,6 +372,7 @@ function Prev(event) {
 
 const markPagination = () => {
   let page = document.URL.split("Page=")[1].split("&")[0]
+  if (page.length === 0) page = "0"
   document.getElementById(page).className += " active"
 }
 
@@ -457,12 +440,18 @@ function createPagination(results, numberOnEachPage, pageNumber) {
 
     prevPage.addEventListener("click", (event) => {
       Prev(event)
+      console.log("Hh");
     })
 
     document.getElementById("pagindiv").innerHTML = n
     return paginatedResult[pageNumber]
   }
 }
+
+// prevPage.addEventListener("click", (event) => {
+// 	Prev(event)
+// 	console.log("Hh");
+// })
 
 
 
