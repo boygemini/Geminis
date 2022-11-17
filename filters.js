@@ -210,8 +210,6 @@ const createUrl = (category) => {
     let stringifyNewParameters = JSON.stringify(Parameters)
     localStorage.setItem("Parameters", stringifyNewParameters)
     localStorage.setItem("Url", url)
-
-    console.log(url);
     window.location = url;
 }
 
@@ -360,11 +358,21 @@ class filter {
     }
 
     // EVENT TRIGGERED WHEN PAGE NUMBER IS SELECTED(PAGINATION)
-    static page(event) {
-        let itemCategory = document.URL.split("category=")[1].split("=")[0].split("&")[0]
+    static page(event, counter) {
+        let itemCategory;
+        try {
+            itemCategory = document.URL.split("category=")[1].split("=")[0].split("&")[0]
+        } catch (error) {};
+
         let pgNum = event.target.id
-        Parameters.Page = pgNum
-        createUrl(itemCategory)
+        Parameters.Page = counter || pgNum
+        if (document.URL.split("SearchQuery").length > 1) {
+            let pageUrl = document.URL.split("Page=")[0]
+            let changePageNumber = `${pageUrl}Page=${Parameters.Page}`
+            return window.location = changePageNumber
+        } else {
+            createUrl(itemCategory)
+        }
     }
 }
 
@@ -399,7 +407,11 @@ const displayFilteredResults = (directory) => {
         // </div>`
         y += `
 			<div div class = "sel-box" data-id = ${directory[k].id}>
-				<div class="img-con">
+				<div div class = "img-con"
+				data-id = ${
+					directory[k].id
+				}
+				onclick = "viewProduct(event)">
 					<img src=${directory[k].itemInfo.itemImg} alt="">
 				</div>
 				<div class="sfu">

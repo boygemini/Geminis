@@ -1,6 +1,7 @@
 "use strict";
 
 
+
 /*
 
 SEARCH AND SEARCH SUGGESTIONS
@@ -72,7 +73,7 @@ search.addEventListener("input", () => {
 
 const sendQueryGO = (event) => {
   let query = search.value.toLowerCase();
-  let url = `gemshop.html?SearchQuery=${encodeURIComponent(query)}`
+  let url = `gemshop.html?SearchQuery=${encodeURIComponent(query)}&Page=0`
   window.location.href = url;
 };
 
@@ -80,7 +81,7 @@ const sendQueryGO = (event) => {
 const sendQuery = (event) => {
   let query = event.target.firstElementChild.innerText;
   let queryCategory = event.target.children[2].innerText.toLowerCase();
-  let url = `gemshop.html?category=${encodeURIComponent(queryCategory)}&SearchQuery=${encodeURIComponent(query)}`;
+  let url = `gemshop.html?category=${encodeURIComponent(queryCategory)}&SearchQuery=${encodeURIComponent(query)}&Page=0`;
   window.location.href = url;
 };
 
@@ -103,18 +104,39 @@ search.addEventListener("keydown", (event) => {
 })
 
 
+const markAndCreatePagination = (results) => {
+  let pageNumber = document.URL.split("Page=")[1]
+  if (!pageNumber) {
+    results = createPagination(results, 10, 0)
+  }
 
+  if (pageNumber) {
+    results = createPagination(results, 10, Number(pageNumber))
+  }
+
+  markPagination()
+}
 
 class getResults {
   static suggestionsResult(Query, Category) {
     let arr = []
     let searchDirectory = dir[`${Category}`];
+
     for (let j in searchDirectory) {
       if (searchDirectory[j].itemInfo.name.toLowerCase().includes(Query)) {
         arr.push(searchDirectory[j])
       }
     }
-    console.log(arr, Category);
+    let pageNumber = document.URL.split("Page=")[1]
+    if (!pageNumber) {
+      arr = createPagination(arr, 10, 0)
+    }
+
+    if (pageNumber) {
+      arr = createPagination(arr, 10, Number(pageNumber))
+    }
+
+    markPagination()
     displayFiltereddResults(arr, Query)
   }
 
@@ -129,6 +151,16 @@ class getResults {
         }
       }
     }
+    let pageNumber = document.URL.split("Page=")[1]
+    if (!pageNumber) {
+      arr = createPagination(arr, 10, 0)
+    }
+
+    if (pageNumber) {
+      arr = createPagination(arr, 10, Number(pageNumber))
+    }
+
+    markPagination()
     displayResults(arr, Query)
   }
 }
@@ -170,7 +202,7 @@ const displayResults = (directory, Query) => {
         y += `
 			<div div class = "sel-box" data-id = ${directory[k].id}>
 				<div class="img-con">
-					<img src=${directory[k].itemInfo.itemImg} alt="">
+					<img src=${directory[k].itemInfo.itemImg} alt="" data-id=${directory[k].id} onclick = "viewProduct(event)">
 				</div>
 				<div class="sfu">
 					<div class="text-hold">
@@ -237,7 +269,7 @@ const displayFiltereddResults = (results, category) => {
       y += `
 			<div div class = "sel-box" data-id = ${results[k].id}>
 				<div class="img-con">
-					<img src=${results[k].itemInfo.itemImg} alt="">
+					<img src=${results[k].itemInfo.itemImg} alt="" data-id=${results[k].id} onclick = "viewProduct(event)">
 				</div>
 				<div class="sfu">
 					<div class="text-hold">
@@ -335,12 +367,124 @@ const removeThe20Nonsense = (Query) => {
 
 
 
+let page = document.URL.split("Page=")[1].split("&")[0]
+let pageCount = Number(page) || 0
+
+function Next(event, paginatedResult) {
+  pageCount++
+  if (pageCount !== Number(paginatedResult.length)) {
+    event.target.disabled = false
+    filter.page(event, pageCount.toString())
+  }
+}
+
+
+function Prev(event) {
+  pageCount--
+  if (pageCount <= 0) {
+    pageCount = 0
+  }
+  filter.page(event, pageCount.toString())
+}
+
+
+const markPagination = () => {
+  let page = document.URL.split("Page=")[1].split("&")[0]
+  document.getElementById(page).className += " active"
+}
+
+
+function createPagination(results, numberOnEachPage, pageNumber) {
+  let arrayGroupTotal = results.length / numberOnEachPage;
+  let arrayRemainder = results.length % numberOnEachPage;
+  let itemsLeftInArray = results.slice(results.length - arrayRemainder, results.length)
+  let paginatedResult = new Array()
+  let lastSet;
+  for (let i = 0; i <= Math.floor(arrayGroupTotal); i++) {
+    if (i === 0) {
+      lastSet = 0;
+      i = 1
+    }
+    paginatedResult.push(results.slice(lastSet, numberOnEachPage * i));
+    lastSet = numberOnEachPage * i
+  }
+
+
+  if (paginatedResult[paginatedResult.length - 1].length > itemsLeftInArray.length) {
+    paginatedResult.push(itemsLeftInArray)
+  }
+
+
+  // Just in case someone altered the page number from the url
+  if (!paginatedResult[pageNumber]) {
+    document.getElementById("showbox").innerHTML = `<div class="noresult">
+					<h1 class = "cat-head" > This page is empty </h1>  <p>Try checking your spelling or use more general terms</p >
+					</div>`
+  }
+
+
+  // Pagination UI
+  if (paginatedResult[pageNumber]) {
+    let n = ""
+    if (paginatedResult[paginatedResult.length - 1].length === 0) {
+      paginatedResult.pop()
+    }
+
+    for (let i in paginatedResult) {
+      n += `<button class="pagin" onclick="filter.page(event)" id='${Number(i)}'>${Number(i) + 1}</button>`
+    }
+
+    if (paginatedResult.length === 1) {
+      prevPage.disabled = true;
+      prevPage.style.opacity = "0.5"
+      nextPage.disabled = true;
+      nextPage.style.opacity = "0.5"
+    }
+
+    if (pageNumber === 0) {
+      prevPage.disabled = true;
+      prevPage.style.opacity = "0.5"
+    }
+
+    if ((pageNumber + 1) === paginatedResult.length) {
+      nextPage.disabled = true;
+      nextPage.style.opacity = "0.5"
+    }
+
+    nextPage.addEventListener("click", (event) => {
+      Next(event, paginatedResult)
+    })
+
+    prevPage.addEventListener("click", (event) => {
+      Prev(event)
+    })
+
+    document.getElementById("pagindiv").innerHTML = n
+    return paginatedResult[pageNumber]
+  }
+}
+
+
+
+const convertUrlParametersIntoObject = (urlWithQuery) => {
+  let urlParameters = urlWithQuery.split("?category").toString().split("&").filter(arr => !arr.includes("gemshop.html"));
+  let newUrlParameters = new Array()
+  for (let i in urlParameters) {
+    let sp = urlParameters[i].split("=")
+    newUrlParameters[sp[0]] = sp[1]
+  }
+  return newUrlParameters
+}
+
+
+
+
 const onLoad = () => {
   let urlWithQuery = document.URL
 
-
+  // LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR SUGGESTION
   if (urlWithQuery.split("&SearchQuery=").length > 1 && urlWithQuery.split("category=").length > 1) {
-    let Query = urlWithQuery.split("SearchQuery=")[1];
+    let Query = urlWithQuery.split("SearchQuery=")[1].split("&")[0];
     let Category = urlWithQuery.split("category=")[1].toString().split("&")[0]
     Query = removeThe20Nonsense(Query)
     getCatFilters(Query, Category)
@@ -348,16 +492,16 @@ const onLoad = () => {
   }
 
 
+  // LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR
   if (urlWithQuery.split("?SearchQuery=").length > 1 && urlWithQuery.split("category=").length === 1) {
-    let Query = urlWithQuery.split("?SearchQuery=")[1]
+    let Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0]
     Query = removeThe20Nonsense(Query)
     return getCatFilters(Query)
   }
 
 
-
+  // LOAD FILTER RESULTS FROM URL
   if (urlWithQuery.split("?category").length > 1) {
-    let urlParameters = urlWithQuery.split("?category").toString().split("&").filter(arr => !arr.includes("gemshop.html"));
     let parameterCategory = urlWithQuery.split("?category=")[1].toString().split("&")[0]
     let allItems = JSON.parse(localStorage.getItem("StoreItems"))
     let allItemsInCategory = allItems.selectedProducts[0][`${parameterCategory}`]
@@ -367,14 +511,9 @@ const onLoad = () => {
       results = allItemsInCategory
     }
 
-    let newUrlParameters = new Array()
-    for (let i in urlParameters) {
-      let sp = urlParameters[i].split("=")
-      newUrlParameters[sp[0]] = sp[1]
-    }
 
-
-    // PARRAMTERS FROM THE URL
+    // PARAMETERS FROM THE URL
+    let newUrlParameters = convertUrlParametersIntoObject(urlWithQuery)
     try {
       newUrlParameters.Price = newUrlParameters.Price.replace(/%20/g, "").split("-")
       priceFromUrl = [{
@@ -574,59 +713,8 @@ const onLoad = () => {
       results = createPagination(results, 10, Number(pageFromUrl))
     }
 
-    const markPagination = () => {
-      let page = document.URL.split("Page=")[1].split("&")[0]
-      document.getElementById(page).className += " active"
-    }
-
     markPagination()
 
-
-    function createPagination(results, numberOnEachPage, pageNumber) {
-      let arrayGroupTotal = results.length / numberOnEachPage;
-      let arrayRemainder = results.length % numberOnEachPage;
-      let itemsLeftInArray = results.slice(results.length - arrayRemainder, results.length)
-      let paginatedResult = new Array()
-      let lastSet;
-      for (let i = 0; i <= Math.floor(arrayGroupTotal); i++) {
-        if (i === 0) {
-          lastSet = 0;
-          i = 1
-        }
-        paginatedResult.push(results.slice(lastSet, numberOnEachPage * i));
-        lastSet = numberOnEachPage * i
-      }
-
-      if (paginatedResult[paginatedResult.length - 1].length > itemsLeftInArray.length) {
-        paginatedResult.push(itemsLeftInArray)
-      }
-
-
-
-
-      // Just in case someone altered the page number from the url
-      if (!paginatedResult[pageNumber]) {
-        document.getElementById("showbox").innerHTML = `<div class="noresult">
-					<h1 class = "cat-head" > This page is empty </h1>  <p>Try checking your spelling or use more general terms</p >
-					</div>`
-      }
-
-
-      // Pagination UI
-      if (paginatedResult[pageNumber]) {
-        let n = ""
-        if (paginatedResult[paginatedResult.length - 1].length === 0) {
-          paginatedResult.pop()
-        }
-
-        for (let i in paginatedResult) {
-          n += `<button class="pagin" onclick="filter.page(event)" id='${Number(i)}'>${Number(i) + 1}</button>`
-        }
-
-        document.getElementById("pagindiv").innerHTML = n
-        return paginatedResult[pageNumber]
-      }
-    }
 
     displayFiltereddResults(results, parameterCategory)
   }

@@ -176,7 +176,11 @@ class display {
       for (let k = 0; k < 10; k++) {
         y += `
 			<div div class = "sel-box" data-id = ${directory[k].id}>
-				<div class="img-con">
+				<div class = "img-con"
+				data-id = ${
+					directory[k].id
+				}
+				onclick = "viewProduct(event)" >
 					<img src=${directory[k].itemInfo.itemImg} alt="">
 				</div>
 				<div class="sfu">
@@ -215,17 +219,6 @@ class display {
     this.allUI(dir.speakers, "sec-name-speakers", "speakers")
     this.allUI(dir.computers, "sec-name-computer", "computers")
     this.allUI(dir.tv, "sec-name-tv", "TV")
-
-    // let Category = ["gaming", "cellphones", "speakers", "computers", "tv"]
-    // let arr = []
-    // for (let i in Category) {
-    // 	let searchDirectory = dir[`${Category[i]}`];
-    // 	for (let j in searchDirectory) {
-    // 		arr.push(searchDirectory[j])
-    // 	}
-    // }
-    // arr = arr.sort((a, b) => Number(a.id) - Number(b.id))
-    // this.allUI(arr)
   }
 }
 display.displayAll()
