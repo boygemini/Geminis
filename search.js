@@ -192,17 +192,25 @@ class getResults {
     document.querySelector(".filters").style.display = "none"
     document.querySelector(".sort-hol").style.display = "none"
     document.querySelector(".pgd").style.display = "none"
+    document.querySelector(".littlebans").style.display = "none"
+    document.getElementById("footer").style.position = "absolute"
+    document.getElementById("footer").style.bottom = "0"
   }
 
   static positiveResults() {
     document.querySelector(".filters").style.display = ""
     document.querySelector(".sort-hol").style.display = ""
     document.querySelector(".pgd").style.display = ""
+    document.querySelector(".littlebans").style.display = ""
+    document.getElementById("footer").style.position = ""
+    document.getElementById("footer").style.bottom = "0"
   }
 
   static pageNotFound() {
     document.querySelector(".banner-container").style.display = "none"
     document.getElementById("bodyy").style.backgroundColor = "whitesmoke"
+    document.getElementById("footer").style.position = "absolute"
+    document.getElementById("footer").style.bottom = "0"
     document.querySelector(".shop-body").innerHTML = `<div class="noresult notfound">
 			<div class ="noresulttext"><h1 class = "cat-head" > Page not found</h1><p>We couldn’t find the page you are looking for</p></div>
 			<span>Go back to</span>

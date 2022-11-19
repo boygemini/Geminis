@@ -267,18 +267,25 @@ class displayProduct {
     let itemCreated = "";
     let Holder = document.getElementById("holder-rec");
     for (let i in category) {
-      itemCreated += `<div class="recent" data-id=${category[i].id} onclick = "viewProduct(event)">
-	 <img src=${category[i].itemInfo.itemImg} alt="">
-	 <div class="receInfo">
-		<h1 class="itemName">${category[i].itemInfo.category}</h1>
-		<p class="itemName2">${category[i].itemInfo.name}</p>
-		<p class="itemInfo">${category[i].itemInfo.description1}</p>
-		<div class="price-order">
-		    <span class="itemPricing"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
-		    <button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
+      itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
+		<div class="img-con">
+		    <img src=${category[i].itemInfo.itemImg} alt="">
 		</div>
-	 </div>
-  </div>`;
+		<div class="sfu">
+		    <p class="itemName2"">${category[i].itemInfo.name}</p>
+		    <div class="description-box">
+			   <p class="item-description">${category[i].itemInfo.description1}</p>
+			   <p class="item-description">${category[i].itemInfo.description2}</p>
+		    </div>
+		    <div class="price-order">
+			   <span class="price-box">
+				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
+				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
+			   </span>
+			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
+		    </div>
+		</div>
+	 </div>`;
     }
     Holder.innerHTML = itemCreated;
   }
@@ -289,25 +296,25 @@ class displayProduct {
     let itemCreated = "";
     let Holder = document.querySelector(".Weekly-Container");
     for (let i in category) {
-      itemCreated += `<div id="wkly" data-id=${category[i].id} onclick = "viewProduct(event)">
-      <div class="img-con">
-          <img src=${category[i].itemInfo.itemImg} alt="">
-      </div>
-      <div class="sfu">
-      <p class="itemName2">${category[i].itemInfo.name}</p>
-              <div class="ssd description-box">
-                  <p class="item-description">${category[i].itemInfo.description1}</p>
-                  <p class="item-description">${category[i].itemInfo.description2}</p>
-              </div>
-          <div class="price-order">
-              <span class="price-box">
-                  <span class="price"><span class="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
-                  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
-              </span>
-              <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"></button>
-          </div>
-      </div>
-  </div>`;
+      itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
+		<div class="img-con">
+		    <img src=${category[i].itemInfo.itemImg} alt="">
+		</div>
+		<div class="sfu">
+		    <p class="itemName2"">${category[i].itemInfo.name}</p>
+		    <div class="description-box">
+			   <p class="item-description">${category[i].itemInfo.description1}</p>
+			   <p class="item-description">${category[i].itemInfo.description2}</p>
+		    </div>
+		    <div class="price-order">
+			   <span class="price-box">
+				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
+				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
+			   </span>
+			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"></button>
+		    </div>
+		</div>
+	 </div>`;
     }
     Holder.innerHTML = itemCreated;
   }
@@ -425,10 +432,10 @@ let container = document.getElementById("sel-container");
 let holder = document.getElementById("sel-holder");
 let box = [...document.querySelectorAll(".sell-box")];
 
+
 const moveRight = () => {
   holder.scrollLeft += holder.clientWidth;
 };
-
 
 const moveLeft = () => {
   holder.scrollLeft -= holder.clientWidth;
