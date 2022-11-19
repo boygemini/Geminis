@@ -1,5 +1,6 @@
 "use strict";
 
+
 let filterBox = document.getElementById("filters");
 let showBox = document.getElementById("showbox");
 let gamingBox = document.getElementById("gaming"),
@@ -509,7 +510,8 @@ switch (urlCategory) {
 
 
 
-if (document.URL.split("?").length === 1) {
+let newUrl = new URL(document.URL)
+if (newUrl.search.length === 0) {
   display.displayAll();
   document.querySelector(".filters").style.display = "none"
   document.querySelector(".sort-hol").style.display = "none"

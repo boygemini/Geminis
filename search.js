@@ -199,6 +199,16 @@ class getResults {
     document.querySelector(".sort-hol").style.display = ""
     document.querySelector(".pgd").style.display = ""
   }
+
+  static pageNotFound() {
+    document.querySelector(".banner-container").style.display = "none"
+    document.getElementById("bodyy").style.backgroundColor = "whitesmoke"
+    document.querySelector(".shop-body").innerHTML = `<div class="noresult notfound">
+			<div class ="noresulttext"><h1 class = "cat-head" > Page not found</h1><p>We couldn’t find the page you are looking for</p></div>
+			<span>Go back to</span>
+			<div class="noresultbuttons"><a href="gemstore.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtohome'>Market Area</a></div>
+		</div>`
+  }
 }
 
 
@@ -515,6 +525,13 @@ const onLoad = () => {
     let Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0]
     Query = removeThe20Nonsense(Query)
     return getCatFiltersAndSearchResults(Query)
+  }
+
+
+  // IF THE URL IS BADLY ALTERED IT SHOUL RETURN A NOT FOUND PAGE
+  let QueryName = urlWithQuery.split("?")[1].split("=")[0]
+  if (QueryName !== "SearchQuery" && QueryName !== "category" && QueryName !== null) {
+    getResults.pageNotFound()
   }
 
 

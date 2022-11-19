@@ -1217,6 +1217,11 @@ p span {
     color: #090A0A;
 }
 
+.notfound {
+    height: 100%;
+    padding: 50px;
+}
+
 .cat-head {
     font-size: 20px;
     font-weight: 600;
@@ -1618,4 +1623,5 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    bottom: 0;
 }
