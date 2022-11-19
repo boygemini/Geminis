@@ -429,6 +429,7 @@ const moveRight = () => {
   holder.scrollLeft += holder.clientWidth;
 };
 
+
 const moveLeft = () => {
   holder.scrollLeft -= holder.clientWidth;
 };

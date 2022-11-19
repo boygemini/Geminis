@@ -1091,6 +1091,24 @@ p span {
     row-gap: 10px;
 }
 
+/* #sec-name-cellphones,
+#sec-name-gaming,
+#sec-name-computer,
+#sec-name-speakers ,
+#sec-name-tv {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #000006ab;
+    font-family: 'Trebuchet MS',
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
+} */
+
+
 .section-title button {
     cursor: pointer;
     background-color: whitesmoke;
@@ -1121,18 +1139,28 @@ p span {
     font-weight: 600;
 }
 
-.full-cat h1 {
-    font-size: 20px;
+.full-cat h1,
+#result-title {
+    font-size: 25px;
     font-weight: 700;
-
     text-transform: capitalize;
-
     color: #090A0A;
-
 }
 
 .noresult p {
-    padding: 0px 20px 20px 20px;
+    font-weight: 500;
+}
+
+.noresult h1 {
+    font-size: 30px;
+}
+
+.noresult {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .cat-head {

@@ -159,7 +159,6 @@ class getResults {
     let pageNumber = document.URL.split("Page=")[1]
     if (pageNumber) arr = createPagination(arr, 10, Number(pageNumber))
 
-
     controlSort(arr)
     markPagination()
     displayFiltereddResults(arr, Query)
@@ -183,6 +182,21 @@ class getResults {
     controlSort(arr)
     displayResults(arr, Query)
   }
+
+  static negativeResults(Query) {
+    showBox.innerHTML = `<div class="noresult">
+			<h1 class = "cat-head" > Oops, there are no results for "${Query}" </h1><p>Try checking your spelling or use more general terms</p >
+		</div>`
+    document.querySelector(".filters").style.display = "none"
+    document.querySelector(".sort-hol").style.display = "none"
+    document.querySelector(".pgd").style.display = "none"
+  }
+
+  static positiveResults() {
+    document.querySelector(".filters").style.display = ""
+    document.querySelector(".sort-hol").style.display = ""
+    document.querySelector(".pgd").style.display = ""
+  }
 }
 
 
@@ -191,13 +205,11 @@ const displayResults = (directory, Query) => {
   let x = ""
   let y = ""
   if (directory.length === 0) {
-    showBox.innerHTML = `<div class="noresult">
-			<h1 class = "cat-head" > Oops, there are no results
-			for "${Query}" </h1>  <p>Try checking your spelling or use more general terms</p >
-		</div>`
+    getResults.negativeResults(Query)
   }
 
   if (directory.length > 0) {
+    getResults.positiveResults()
     for (let k in directory) {
       if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
         // 		x += `<div class="item-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
@@ -249,6 +261,7 @@ const displayResults = (directory, Query) => {
 		</div>`
       }
     }
+
     document.getElementById("result-title").innerText = `Results for "${Query}"`
     showBox.innerHTML = y
   }
@@ -260,13 +273,11 @@ const displayFiltereddResults = (results, category) => {
   let x = ``;
   let y = ""
   if (results.length === 0) {
-    showBox.innerHTML = `<div class="noresult">
-			<h1 class = "cat-head" > Oops, there are no results
-			for "${Query}" </h1>  <p>Try checking your spelling or use more general terms</p >
-		</div>`
+    getResults.negativeResults(Query)
   }
 
   if (results.length > 0) {
+    getResults.positiveResults()
     for (let k in results) {
       // 	x += `<div class="item-box" data-id=${results[k].id} onclick = "viewProduct(event)">
       // 		<img src=${results[k].itemInfo.itemImg} alt="">
@@ -323,12 +334,26 @@ const displayFiltereddResults = (results, category) => {
 
 
 
-const getCatFilters = (Query, Category) => {
+const getCatFiltersAndSearchResults = (Query, Category) => {
   let gamekey = ["xbox", "box", "play", "station"]
-  let phonekey = ["iph", "iphone", "iphones", "13", "samsung", "itel", "infinix", "lg"]
+  let phonekey = ["iph", "Iphone", "iphones", "13", "samsung", "itel", "infinix", "lg"]
   let tvkey = ["samsung", "midea", "lg"]
   let speakerkey = ["jbl", "flip", "ora", "beat"]
   let comkey = ["mac", "hp", "asus", "toshiba"]
+  let general = [gamekey, phonekey, tvkey, speakerkey, comkey]
+  let generalKeyWords = new Array()
+
+  for (let i in general) {
+    for (let j in general[i]) {
+      generalKeyWords.push(general[i][j])
+    }
+  }
+
+  for (let i in generalKeyWords) {
+    if (generalKeyWords[i] !== Query) {
+      getResults.negativeResults(Query)
+    }
+  }
 
   function Call(Query, Category) {
     if (Category) {
@@ -517,7 +542,7 @@ const onLoad = () => {
     let Query = urlWithQuery.split("SearchQuery=")[1].split("&")[0];
     let Category = urlWithQuery.split("category=")[1].toString().split("&")[0]
     Query = removeThe20Nonsense(Query)
-    getCatFilters(Query, Category)
+    getCatFiltersAndSearchResults(Query, Category)
     return getResults.suggestionsResult(Query, Category)
   }
 
@@ -526,7 +551,7 @@ const onLoad = () => {
   if (urlWithQuery.split("?SearchQuery=").length > 1 && urlWithQuery.split("category=").length === 1) {
     let Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0]
     Query = removeThe20Nonsense(Query)
-    return getCatFilters(Query)
+    return getCatFiltersAndSearchResults(Query)
   }
 
 

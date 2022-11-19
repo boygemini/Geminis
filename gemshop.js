@@ -158,12 +158,12 @@ class display {
   static allUI(directory, category, boxID) {
     let y = ""
 
-    if (directory.length === 0) {
-      showBox.innerHTML = `<div class="noresult">
-			<h1 class = "cat-head" > Oops, there are no results
-			for "${Query}" </h1>  <p>Try checking your spelling or use more general terms</p >
-		</div>`
-    }
+    // if (directory.length === 0) {
+    // 	showBox.innerHTML = `<div class="noresult">
+    // 	<h1 class = "cat-head" > Oops, there are no results
+    // 	for "${Query}" </h1>  <p>Try checking your spelling or use more general terms</p >
+    // </div>`
+    // }
 
     if (directory.length > 0) {
       for (let k = 0; k < 10; k++) {
@@ -571,9 +571,6 @@ let urlCategory = document.URL;
 try {
   urlCategory = urlCategory.split("?")[1].split("=")[1].split("&")[0];
 } catch (error) {}
-
-
-
 switch (urlCategory) {
   case "cellphones":
     cellPhones();
@@ -598,6 +595,7 @@ if (document.URL.split("?").length === 1) {
   display.displayAll();
   document.querySelector(".filters").style.display = "none"
   document.querySelector(".sort-hol").style.display = "none"
+  document.querySelector(".pgd").style.display = "none"
 }
 
 
