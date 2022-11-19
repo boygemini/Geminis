@@ -1155,12 +1155,66 @@ p span {
     font-size: 30px;
 }
 
+.noresult span {
+    font-weight: 500;
+    color: #090a0aa1;
+    text-transform: capitalize;
+}
+
 .noresult {
+    width: 100%;
+    row-gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.noresulttext {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.noresultbuttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.noresultbuttons a {
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #090A0A;
+    color: white;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.noresultbuttons a:hover {
+    background-color: white;
+    border: 2px solid #090A0A;
+    color: #090A0A;
 }
 
 .cat-head {

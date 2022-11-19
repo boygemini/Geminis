@@ -185,7 +185,9 @@ class getResults {
 
   static negativeResults(Query) {
     showBox.innerHTML = `<div class="noresult">
-			<h1 class = "cat-head" > Oops, there are no results for "${Query}" </h1><p>Try checking your spelling or use more general terms</p >
+			<div class ="noresulttext"><h1 class = "cat-head" > Oops, there are no results for "${Query}" </h1><p>Try checking your spelling or use more general terms</p></div>
+			<span>Go back to</span>
+			<div class="noresultbuttons"><a href="gemstore.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtohome'>Market Area</a></div>
 		</div>`
     document.querySelector(".filters").style.display = "none"
     document.querySelector(".sort-hol").style.display = "none"
