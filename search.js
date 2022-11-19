@@ -193,7 +193,7 @@ class getResults {
     document.querySelector(".sort-hol").style.display = "none"
     document.querySelector(".pgd").style.display = "none"
     document.querySelector(".littlebans").style.display = "none"
-    document.getElementById("footer").style.position = "absolute"
+    document.getElementById("footer").style.position = "relative"
     document.getElementById("footer").style.bottom = "0"
   }
 
@@ -235,7 +235,7 @@ const displayResults = (directory, Query) => {
         y += `
 			<div div class = "sel-box" data-id = ${directory[k].id}>
 				<div class="img-con">
-					<img src=${directory[k].itemInfo.itemImg} alt="" data-id=${directory[k].id} onclick = "viewProduct(event)">
+					<img src=${directory[k].itemInfo.itemImg[0]} alt="" data-id=${directory[k].id} onclick = "viewProduct(event)">
 				</div>
 				<div class="sfu">
 					<div class="text-hold">
@@ -283,7 +283,7 @@ const displayFiltereddResults = (results, category) => {
       y += `
 			<div div class = "sel-box" data-id = ${results[k].id}>
 				<div class="img-con">
-					<img src=${results[k].itemInfo.itemImg} alt="" data-id=${results[k].id} onclick = "viewProduct(event)">
+					<img src=${results[k].itemInfo.itemImg[0]} alt="" data-id=${results[k].id} onclick = "viewProduct(event)">
 				</div>
 				<div class="sfu">
 					<div class="text-hold">

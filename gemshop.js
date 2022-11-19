@@ -93,7 +93,7 @@ class display {
 					directory[k].id
 				}
 				onclick = "viewProduct(event)" >
-					<img src=${directory[k].itemInfo.itemImg} alt="">
+					<img src=${directory[k].itemInfo.itemImg[0]} alt="">
 				</div>
 				<div class="sfu">
 					<div class="text-hold">
@@ -726,7 +726,7 @@ const addToCart = (event) => {
   let pickItemFromStore = item(ItemID);
   popupNotification(
     pickItemFromStore.itemInfo.name,
-    pickItemFromStore.itemInfo.itemImg
+    pickItemFromStore.itemInfo.itemImg[0]
   );
   pickedItem = {
     ...pickItemFromStore,

@@ -321,7 +321,7 @@ class displayItems {
 
       itemCreated += `<div class="order">
       <h1 class = "numbering">${displayNumbering()}</h1>
-        <img src=${category[i].itemInfo.itemImg} alt="">
+        <img src=${category[i].itemInfo.itemImg[0]} alt="">
         <div class="order-info">
             <div class="info">
                 <h1 class="item-name">${category[i].itemInfo.name}</h1>

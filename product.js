@@ -22,6 +22,8 @@ const getItemID = () => {
     return splitUrl[1]
 }
 
+console.log(getItemID());
+
 
 const getAllItems = () => {
     let allItems = JSON.parse(localStorage.getItem("StoreItems"))
@@ -45,7 +47,7 @@ const item = () => {
         }
     }
 
-    let category = ["gaming", "cellphones", "speaker", "computers", "tv"]
+    let category = ["gaming", "cellphones", "speakers", "computers", "tv"]
     let allItems = getAllItems().selectedProducts[0]
     for (let i in category) {
         let all = allItems[`${category[i]}`]
@@ -56,6 +58,7 @@ const item = () => {
         }
     }
 }
+
 
 
 // ITEM DISPLAY
@@ -97,12 +100,12 @@ productDetails.innerHTML = `
 </div>
 <div class="Shipping">
     <h1>Shipping</h1><span>Unavailable in your area This item is only available in certain
-        markets.</span>
+	   markets.</span>
 </div>
 </div>`
 
 price.innerText = Item.itemInfo.newItemPrice
-largeImage.src = Item.itemInfo.itemImg
+largeImage.src = Item.itemInfo.itemImg[0]
 
 
 class Products {
@@ -224,7 +227,7 @@ let ItemsInCart = JSON.parse(localStorage.getItem("Cart")),
     pickedItem;
 const addToCart = () => {
     let pickItemFromStore = Item
-    popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg)
+    popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg[0])
     pickedItem = {
         ...pickItemFromStore,
         amount: 1,

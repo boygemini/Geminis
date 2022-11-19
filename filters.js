@@ -418,7 +418,7 @@ const displayFilteredResults = (directory) => {
 					directory[k].id
 				}
 				onclick = "viewProduct(event)">
-					<img src=${directory[k].itemInfo.itemImg} alt="">
+					<img src=${directory[k].itemInfo.itemImg[0]} alt="">
 				</div>
 				<div class="sfu">
 					<div class="text-hold">

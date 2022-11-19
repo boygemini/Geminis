@@ -13,7 +13,13 @@
           "id": "1914",
           "itemInfo": {
             "name": "Xbox 3",
-            "itemImg": "/IMAGES/ipad2.png",
+            "itemImg": [
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "630",
@@ -26,7 +32,13 @@
           "id": "1077",
           "itemInfo": {
             "name": "Xbox 4",
-            "itemImg": "/IMAGES/ipad2.png",
+            "itemImg": [
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "400",
@@ -39,7 +51,13 @@
           "id": "1890",
           "itemInfo": {
             "name": "PS 2",
-            "itemImg": "/IMAGES/ipad2.png",
+            "itemImg": [
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "540",
@@ -52,7 +70,13 @@
           "id": "1131",
           "itemInfo": {
             "name": "PS 3",
-            "itemImg": "/IMAGES/ipad2.png",
+            "itemImg": [
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "620",
@@ -65,7 +89,13 @@
           "id": "1001",
           "itemInfo": {
             "name": "PS 3",
-            "itemImg": "/IMAGES/ipad2.png",
+            "itemImg": [
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "600",
@@ -78,7 +108,13 @@
           "id": "1931",
           "itemInfo": {
             "name": "PS 4",
-            "itemImg": "/IMAGES/ipad2.png",
+            "itemImg": [
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "330",
@@ -91,7 +127,13 @@
           "id": "7793",
           "itemInfo": {
             "name": "PS 5",
-            "itemImg": "/IMAGES/ipad2.png",
+            "itemImg": [
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "850",
@@ -104,7 +146,13 @@
           "id": "3392",
           "itemInfo": {
             "name": "PS 3",
-            "itemImg": "/IMAGES/ipad2.png",
+            "itemImg": [
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "900",
@@ -116,7 +164,13 @@
           "id": "7294",
           "itemInfo": {
             "name": "Xbox",
-            "itemImg": "/IMAGES/ipad2.png",
+            "itemImg": [
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1200",
@@ -129,7 +183,13 @@
           "id": "1901",
           "itemInfo": {
             "name": "Xbox",
-            "itemImg": "/IMAGES/ipad2.png",
+            "itemImg": [
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/ipad2.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1112",
@@ -144,7 +204,13 @@
           "id": "1040",
           "itemInfo": {
             "name": "LG",
-            "itemImg": "/IMAGES/frontIpad.png",
+            "itemImg": [
+              "/IMAGES/frontIpad.png",
+              "/IMAGES/frontIpad.png",
+              "/IMAGES/frontIpad.png",
+              "/IMAGES/frontIpad.png",
+              "/IMAGES/frontIpad.png"
+            ],
             "description1": "LG X16",
             "description2": "",
             "newItemPrice": "1200",
@@ -158,7 +224,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -172,7 +244,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -186,7 +264,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -200,7 +284,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -214,7 +304,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -228,7 +324,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -242,7 +344,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -256,7 +364,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -270,7 +384,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -284,7 +404,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -298,7 +424,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -312,7 +444,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -326,7 +464,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -340,7 +484,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -354,7 +504,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -368,7 +524,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -382,7 +544,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -396,7 +564,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -410,7 +584,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -424,7 +604,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -438,7 +624,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -452,7 +644,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -466,7 +664,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -480,7 +684,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -494,7 +704,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -508,7 +724,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -522,7 +744,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -536,7 +764,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -550,7 +784,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -564,7 +804,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -578,7 +824,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -592,7 +844,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -606,7 +864,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -620,7 +884,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -634,7 +904,13 @@
           "id": "1032",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone2.webp",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
             "newItemPrice": "950",
@@ -648,7 +924,13 @@
           "id": "2012",
           "itemInfo": {
             "name": "iPhone 13 Mini",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
@@ -662,7 +944,13 @@
           "id": "2837",
           "itemInfo": {
             "name": "Samsung",
-            "itemImg": "/IMAGES/iphone4.webp",
+            "itemImg": [
+              "/IMAGES/iphone4.webp",
+              "/IMAGES/iphone4.webp",
+              "/IMAGES/iphone4.webp",
+              "/IMAGES/iphone4.webp",
+              "/IMAGES/iphone4.webp"
+            ],
             "description1": "Samsung S16",
             "description2": "",
             "newItemPrice": "750",
@@ -676,7 +964,13 @@
           "id": "2187",
           "itemInfo": {
             "name": "Infinix",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "Infinix Hot 10",
             "description2": "",
             "newItemPrice": "1000",
@@ -690,7 +984,13 @@
           "id": "2010",
           "itemInfo": {
             "name": "Itel",
-            "itemImg": "/IMAGES/iphone5.webp",
+            "itemImg": [
+              "/IMAGES/iphone5.webp",
+              "/IMAGES/iphone5.webp",
+              "/IMAGES/iphone5.webp",
+              "/IMAGES/iphone5.webp",
+              "/IMAGES/iphone5.webp"
+            ],
             "description1": "Itel Hot 9",
             "description2": "",
             "newItemPrice": "910",
@@ -704,7 +1004,13 @@
           "id": "2883",
           "itemInfo": {
             "name": "iTel",
-            "itemImg": "/IMAGES/iphone6.jpg",
+            "itemImg": [
+              "/IMAGES/iphone6.jpg",
+              "/IMAGES/iphone6.jpg",
+              "/IMAGES/iphone6.jpg",
+              "/IMAGES/iphone6.jpg",
+              "/IMAGES/iphone6.jpg"
+            ],
             "description1": "Itel Hot 10",
             "description2": "",
             "newItemPrice": "830",
@@ -718,7 +1024,13 @@
           "id": "2018",
           "itemInfo": {
             "name": "iPhone 8 Plus",
-            "itemImg": "/IMAGES/iphone3.webp",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
             "description1": "iPhone 8 Plus Red",
             "description2": "",
             "newItemPrice": "350",
@@ -732,7 +1044,13 @@
           "id": "2831",
           "itemInfo": {
             "name": "iPhone 12 Pro Max",
-            "itemImg": "/IMAGES/iphone4.webp",
+            "itemImg": [
+              "/IMAGES/iphone4.webp",
+              "/IMAGES/iphone4.webp",
+              "/IMAGES/iphone4.webp",
+              "/IMAGES/iphone4.webp",
+              "/IMAGES/iphone4.webp"
+            ],
             "description1": "iPhone 12 Pro Max Black",
             "description2": "",
             "newItemPrice": "932",
@@ -746,7 +1064,13 @@
           "id": "2987",
           "itemInfo": {
             "name": "iPhone 12",
-            "itemImg": "/IMAGES/ipad1.jpg",
+            "itemImg": [
+              "/IMAGES/ipad1.jpg",
+              "/IMAGES/ipad1.jpg",
+              "/IMAGES/ipad1.jpg",
+              "/IMAGES/ipad1.jpg",
+              "/IMAGES/ipad1.jpg"
+            ],
             "description1": "iPhone 12 White",
             "description2": "",
             "newItemPrice": "400",
@@ -760,7 +1084,13 @@
           "id": "2989",
           "itemInfo": {
             "name": "Samsung s6",
-            "itemImg": "/IMAGES/ipad2.jpg",
+            "itemImg": [
+              "/IMAGES/ipad2.jpg",
+              "/IMAGES/ipad2.jpg",
+              "/IMAGES/ipad2.jpg",
+              "/IMAGES/ipad2.jpg",
+              "/IMAGES/ipad2.jpg"
+            ],
             "description1": "Samsung S6 Blue",
             "description2": "",
             "newItemPrice": "400",
@@ -776,7 +1106,13 @@
           "id": "9183",
           "itemInfo": {
             "name": "JBL Flip 3",
-            "itemImg": "/IMAGES/jblflip6.png",
+            "itemImg": [
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "2300",
@@ -789,7 +1125,13 @@
           "id": "8840",
           "itemInfo": {
             "name": "JBL Flip 3",
-            "itemImg": "/IMAGES/jbl.png",
+            "itemImg": [
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "2100",
@@ -802,7 +1144,13 @@
           "id": "9384",
           "itemInfo": {
             "name": "JBL Flip 3",
-            "itemImg": "/IMAGES/jbl.png",
+            "itemImg": [
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "2220",
@@ -815,7 +1163,13 @@
           "id": "9943",
           "itemInfo": {
             "name": "Oraimo",
-            "itemImg": "/IMAGES/headphone.png",
+            "itemImg": [
+              "/IMAGES/headphone.png",
+              "/IMAGES/headphone.png",
+              "/IMAGES/headphone.png",
+              "/IMAGES/headphone.png",
+              "/IMAGES/headphone.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1150",
@@ -828,7 +1182,13 @@
           "id": "1453",
           "itemInfo": {
             "name": "Oraimo",
-            "itemImg": "/IMAGES/speaker.png",
+            "itemImg": [
+              "/IMAGES/speaker.png",
+              "/IMAGES/speaker.png",
+              "/IMAGES/speaker.png",
+              "/IMAGES/speaker.png",
+              "/IMAGES/speaker.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "480",
@@ -841,7 +1201,13 @@
           "id": "1837",
           "itemInfo": {
             "name": "Oraimo",
-            "itemImg": "/IMAGES/jbl.png",
+            "itemImg": [
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png",
+              "/IMAGES/jbl.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "920",
@@ -854,7 +1220,13 @@
           "id": "1003",
           "itemInfo": {
             "name": "Beatz",
-            "itemImg": "/IMAGES/jblflip6.png",
+            "itemImg": [
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "630",
@@ -867,7 +1239,13 @@
           "id": "1534",
           "itemInfo": {
             "name": "Beatz",
-            "itemImg": "/IMAGES/jblflip6.png",
+            "itemImg": [
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "550",
@@ -880,7 +1258,13 @@
           "id": "1493",
           "itemInfo": {
             "name": "Beatz",
-            "itemImg": "/IMAGES/jblflip6.png",
+            "itemImg": [
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png",
+              "/IMAGES/jblflip6.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "800",
@@ -893,7 +1277,13 @@
           "id": "1743",
           "itemInfo": {
             "name": "Beatz",
-            "itemImg": "/IMAGES/headphone.png",
+            "itemImg": [
+              "/IMAGES/headphone.png",
+              "/IMAGES/headphone.png",
+              "/IMAGES/headphone.png",
+              "/IMAGES/headphone.png",
+              "/IMAGES/headphone.png"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "600",
@@ -908,7 +1298,13 @@
           "id": "1264",
           "itemInfo": {
             "name": "Apple MacBook Pro 2021",
-            "itemImg": "/IMAGES/tv3.png",
+            "itemImg": [
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png"
+            ],
             "description1": "Apple MacBook Pro 13 inches",
             "description2": "",
             "newItemPrice": "1200",
@@ -924,7 +1320,13 @@
           "id": "2943",
           "itemInfo": {
             "name": "Apple MacBook Air 2020",
-            "itemImg": "/IMAGES/tv5.jpg",
+            "itemImg": [
+              "/IMAGES/tv5.png",
+              "/IMAGES/tv5.png",
+              "/IMAGES/tv5.png",
+              "/IMAGES/tv5.png",
+              "/IMAGES/tv5.png"
+            ],
             "description1": "Apple MacBook Air 2020 16 inches - Gold",
             "description2": "",
             "newItemPrice": "1100",
@@ -940,7 +1342,13 @@
           "id": "8462",
           "itemInfo": {
             "name": "HP Pavailon",
-            "itemImg": "/IMAGES/tv4.png",
+            "itemImg": [
+              "/IMAGES/tv4.png",
+              "/IMAGES/tv4.png",
+              "/IMAGES/tv4.png",
+              "/IMAGES/tv4.png",
+              "/IMAGES/tv4.png"
+            ],
             "description1": "HP Pavailon X16",
             "description2": "",
             "newItemPrice": "1250",
@@ -956,7 +1364,13 @@
           "id": "9384",
           "itemInfo": {
             "name": "ASUS",
-            "itemImg": "/IMAGES/tv4.png",
+            "itemImg": [
+              "/IMAGES/tv4.png",
+              "/IMAGES/tv4.png",
+              "/IMAGES/tv4.png",
+              "/IMAGES/tv4.png",
+              "/IMAGES/tv4.png"
+            ],
             "description1": "ASUS",
             "description2": "",
             "newItemPrice": "1500",
@@ -972,7 +1386,13 @@
           "id": "8494",
           "itemInfo": {
             "name": "Toshiba",
-            "itemImg": "/IMAGES/tv5.jpg",
+            "itemImg": [
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg"
+            ],
             "description1": "Toshiba 2020",
             "description2": "",
             "newItemPrice": "1000",
@@ -988,7 +1408,13 @@
           "id": "4724",
           "itemInfo": {
             "name": "HP Elite Pro Z20",
-            "itemImg": "/IMAGES/tv5.jpg",
+            "itemImg": [
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg"
+            ],
             "description1": "HP Elite Pro Z20",
             "description2": "",
             "newItemPrice": "980",
@@ -1004,7 +1430,13 @@
           "id": "9374",
           "itemInfo": {
             "name": "Apple MacBook Pro",
-            "itemImg": "/IMAGES/tv3.png",
+            "itemImg": [
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png"
+            ],
             "description1": "Apple MacBook Pro 2021",
             "description2": "",
             "newItemPrice": "1300",
@@ -1020,7 +1452,13 @@
           "id": "4824",
           "itemInfo": {
             "name": "Apple MacBook Pro",
-            "itemImg": "/IMAGES/tv3.png",
+            "itemImg": [
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png",
+              "/IMAGES/tv3.png"
+            ],
             "description1": "Apple MacBook Pro 2021",
             "description2": "",
             "newItemPrice": "1300",
@@ -1036,7 +1474,13 @@
           "id": "3572",
           "itemInfo": {
             "name": "HP Elite Pro V20",
-            "itemImg": "/IMAGES/tv5.jpg",
+            "itemImg": [
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg"
+            ],
             "description1": "HP Elite Pro V20",
             "description2": "",
             "newItemPrice": "980",
@@ -1052,7 +1496,13 @@
           "id": "4752",
           "itemInfo": {
             "name": "Toshiba",
-            "itemImg": "/IMAGES/tv5.jpg",
+            "itemImg": [
+              "/IMAGES/tv5.png",
+              "/IMAGES/tv5.png",
+              "/IMAGES/tv5.png",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.png"
+            ],
             "description1": "Toshiba 2020",
             "description2": "",
             "newItemPrice": "1100",
@@ -1070,7 +1520,13 @@
           "id": "5928",
           "itemInfo": {
             "name": "Hisense",
-            "itemImg": "/IMAGES/tv1.jpg",
+            "itemImg": [
+              "/IMAGES/tv1.jpg",
+              "/IMAGES/tv1.jpg",
+              "/IMAGES/tv1.jpg",
+              "/IMAGES/tv1.jpg",
+              "/IMAGES/tv1.jpg"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "928",
@@ -1084,7 +1540,13 @@
           "id": "4295",
           "itemInfo": {
             "name": "LG",
-            "itemImg": "/IMAGES/tv2.jpg",
+            "itemImg": [
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "999",
@@ -1098,7 +1560,13 @@
           "id": "4945",
           "itemInfo": {
             "name": "Midea",
-            "itemImg": "/IMAGES/tv5.png",
+            "itemImg": [
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1600",
@@ -1112,7 +1580,13 @@
           "id": "5082",
           "itemInfo": {
             "name": "Hisense",
-            "itemImg": "/IMAGES/tv5.png",
+            "itemImg": [
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1400",
@@ -1126,7 +1600,13 @@
           "id": "8425",
           "itemInfo": {
             "name": "Hisense",
-            "itemImg": "/IMAGES/tv3.jpg",
+            "itemImg": [
+              "/IMAGES/tv3.jpg",
+              "/IMAGES/tv3.jpg",
+              "/IMAGES/tv3.jpg",
+              "/IMAGES/tv3.jpg",
+              "/IMAGES/tv3.jpg"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1300",
@@ -1140,7 +1620,13 @@
           "id": "1835",
           "itemInfo": {
             "name": "Toshiba",
-            "itemImg": "/IMAGES/tv3.jpg",
+            "itemImg": [
+              "/IMAGES/tv3.jpg",
+              "/IMAGES/tv3.jpg",
+              "/IMAGES/tv3.jpg",
+              "/IMAGES/tv3.jpg",
+              "/IMAGES/tv3.jpg"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1250",
@@ -1154,7 +1640,13 @@
           "id": "5942",
           "itemInfo": {
             "name": "Toshiba",
-            "itemImg": "/IMAGES/tv2.jpg",
+            "itemImg": [
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1100",
@@ -1168,7 +1660,13 @@
           "id": "5852",
           "itemInfo": {
             "name": "Midea",
-            "itemImg": "/IMAGES/tv2.jpg",
+            "itemImg": [
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg",
+              "/IMAGES/tv2.jpg"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1850",
@@ -1182,7 +1680,13 @@
           "id": "9724",
           "itemInfo": {
             "name": "LG",
-            "itemImg": "/IMAGES/tv5.png",
+            "itemImg": [
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg",
+              "/IMAGES/tv5.jpg"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "300",
@@ -1196,7 +1700,13 @@
           "id": "3742",
           "itemInfo": {
             "name": "Samsung",
-            "itemImg": "/IMAGES/tv1.jpg",
+            "itemImg": [
+              "/IMAGES/tv1.jpg",
+              "/IMAGES/tv1.jpg",
+              "/IMAGES/tv1.jpg",
+              "/IMAGES/tv1.jpg",
+              "/IMAGES/tv1.jpg"
+            ],
             "description1": "Lorem ipsum dolor sit amet",
             "description2": "",
             "newItemPrice": "1200",
@@ -1216,7 +1726,13 @@
       "itemInfo": {
         "category": "Gaming",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/ipad2.png",
+        "itemImg": [
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "880",
@@ -1229,7 +1745,13 @@
       "itemInfo": {
         "category": "Gaming",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/ipad2.png",
+        "itemImg": [
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "920",
@@ -1242,7 +1764,13 @@
       "itemInfo": {
         "category": "Cellphone",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/frontIpad.png",
+        "itemImg": [
+          "/IMAGES/frontIpad.png",
+          "/IMAGES/frontIpad.png",
+          "/IMAGES/frontIpad.png",
+          "/IMAGES/frontIpad.png",
+          "/IMAGES/frontIpad.png"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "500",
@@ -1255,7 +1783,13 @@
       "itemInfo": {
         "category": "Speaker",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/jblflip6.png",
+        "itemImg": [
+          "/IMAGES/jblflip6.png",
+          "/IMAGES/jblflip6.png",
+          "/IMAGES/jblflip6.png",
+          "/IMAGES/jblflip6.png",
+          "/IMAGES/jblflip6.png"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "600",
@@ -1268,7 +1802,13 @@
       "itemInfo": {
         "category": "Computer",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/tv4.png",
+        "itemImg": [
+          "/IMAGES/tv4.png",
+          "/IMAGES/tv4.png",
+          "/IMAGES/tv4.png",
+          "/IMAGES/tv4.png",
+          "/IMAGES/tv4.png"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "630",
@@ -1281,7 +1821,13 @@
       "itemInfo": {
         "category": "TV",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/tv5.png",
+        "itemImg": [
+          "/IMAGES/tv5.jpg",
+          "/IMAGES/tv5.jpg",
+          "/IMAGES/tv5.jpg",
+          "/IMAGES/tv5.jpg",
+          "/IMAGES/tv5.jpg"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "650",
@@ -1297,7 +1843,13 @@
       "itemInfo": {
         "category": "Gaming",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/ipad2.png",
+        "itemImg": [
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png",
+          "/IMAGES/ipad2.png"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "425",
@@ -1310,7 +1862,13 @@
       "itemInfo": {
         "category": "Cellphone",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/frontIpad.png",
+        "itemImg": [
+          "/IMAGES/frontIpad.png",
+          "/IMAGES/frontIpad.png",
+          "/IMAGES/frontIpad.png",
+          "/IMAGES/frontIpad.png",
+          "/IMAGES/frontIpad.png"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "950",
@@ -1323,7 +1881,13 @@
       "itemInfo": {
         "category": "Speaker",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/jblflip6.png",
+        "itemImg": [
+          "/IMAGES/jblflip6.png",
+          "/IMAGES/jblflip6.png",
+          "/IMAGES/jblflip6.png",
+          "/IMAGES/jblflip6.png",
+          "/IMAGES/jblflip6.png"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "995",
@@ -1336,7 +1900,13 @@
       "itemInfo": {
         "category": "Computer",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/tv4.png",
+        "itemImg": [
+          "/IMAGES/tv4.png",
+          "/IMAGES/tv4.png",
+          "/IMAGES/tv4.png",
+          "/IMAGES/tv4.png",
+          "/IMAGES/tv4.png"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "870",
@@ -1349,7 +1919,13 @@
       "itemInfo": {
         "category": "TV",
         "name": "XBOX 1",
-        "itemImg": "/IMAGES/tv5.png",
+        "itemImg": [
+          "/IMAGES/tv5.jpg",
+          "/IMAGES/tv5.jpg",
+          "/IMAGES/tv5.jpg",
+          "/IMAGES/tv5.jpg",
+          "/IMAGES/tv5.jpg"
+        ],
         "description1": "Lorem ipsum dolor sit amet",
         "description2": "",
         "newItemPrice": "670",

@@ -236,7 +236,7 @@ class displayProduct {
     for (let i in category) {
       itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
 		<div class="img-con">
-		    <img src=${category[i].itemInfo.itemImg} alt="">
+		    <img src=${category[i].itemInfo.itemImg[0]} alt="">
 		</div>
 		<div class="sfu">
 		    <p class="itemName2"">${category[i].itemInfo.name}</p>
@@ -269,7 +269,7 @@ class displayProduct {
     for (let i in category) {
       itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
 		<div class="img-con">
-		    <img src=${category[i].itemInfo.itemImg} alt="">
+		    <img src=${category[i].itemInfo.itemImg[0]} alt="">
 		</div>
 		<div class="sfu">
 		    <p class="itemName2"">${category[i].itemInfo.name}</p>
@@ -298,7 +298,7 @@ class displayProduct {
     for (let i in category) {
       itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
 		<div class="img-con">
-		    <img src=${category[i].itemInfo.itemImg} alt="">
+		    <img src=${category[i].itemInfo.itemImg[0]} alt="">
 		</div>
 		<div class="sfu">
 		    <p class="itemName2"">${category[i].itemInfo.name}</p>
@@ -364,7 +364,7 @@ const addToCartt = (event, ITT) => {
     let pickItemFromStore = ITT.find(
       (item) => item.id === event.target.dataset.id
     );
-    popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg)
+    popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg[0])
     pickedItem = {
       ...pickItemFromStore,
       amount: 1,
@@ -410,7 +410,7 @@ const addToCart = (event, ITT) => {
   let pickItemFromStore = ITT[`${ItemCategory}`].find(
     (item) => item.id === event.target.dataset.id
   );
-  popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg)
+  popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg[0])
   pickedItem = {
     ...pickItemFromStore,
     amount: 1,
