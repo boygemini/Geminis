@@ -212,25 +212,6 @@ const displayResults = (directory, Query) => {
     getResults.positiveResults()
     for (let k in directory) {
       if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
-        // 		x += `<div class="item-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
-        // 		<img src=${directory[k].itemInfo.itemImg} alt="">
-        // 		<div class="item-details">
-        // 				<h1>${directory[k].itemInfo.name}</h1>
-        // 				<h2>${directory[k].itemInfo.description1}</h2>
-        // 				<div class="specifications">
-        // 						<strong>Refurbished</strong>
-        // 						<p><strong>Model : </strong>MKLV3LL/A</p>
-        // 						<p><strong>SKU : </strong>87294820</p>
-        // 						<p><strong>Color : </strong>Sierra Blue</p>
-        // 				</div>
-        // 		</div>
-        // 		<div class="buy">
-        // 				<div class="price-tag">
-        // 						<span class="currency">$ </span><span class="price">${directory[k].itemInfo.newItemPrice}</span>
-        // 				</div>
-        // 				<button onclick = "addToCart(event)">Add to Cart</button>
-        // 		</div>
-        // </div>`
         y += `
 			<div div class = "sel-box" data-id = ${directory[k].id}>
 				<div class="img-con">
@@ -279,25 +260,6 @@ const displayFiltereddResults = (results, category) => {
   if (results.length > 0) {
     getResults.positiveResults()
     for (let k in results) {
-      // 	x += `<div class="item-box" data-id=${results[k].id} onclick = "viewProduct(event)">
-      // 		<img src=${results[k].itemInfo.itemImg} alt="">
-      // 		<div class="item-details">
-      // 				<h1>${results[k].itemInfo.name}</h1>
-      // 				<h2>${results[k].itemInfo.description1} ${results[k].itemInfo.rom}GB</h2>
-      // 				<div class="specifications">
-      // 						<strong>Refurbished</strong>
-      // 						<p><strong>Model : </strong>MKLV3LL/A</p>
-      // 						<p><strong>SKU : </strong>87294820</p>
-      // 						<p><strong>Color : </strong>Sierra Blue</p>
-      // 				</div>
-      // 		</div>
-      // 		<div class="buy">
-      // 				<div class="price-tag">
-      // 						<span class="currency">$ </span><span class="price">${results[k].itemInfo.newItemPrice}</span>
-      // 				</div>
-      // 				<button onclick = "addToCart(event)">Add to Cart</button>
-      // 		</div>
-      // </div>`
       y += `
 			<div div class = "sel-box" data-id = ${results[k].id}>
 				<div class="img-con">
@@ -512,7 +474,6 @@ function createPagination(results, numberOnEachPage, pageNumber) {
 
     prevPage.addEventListener("click", (event) => {
       Prev(event)
-      console.log("Hh");
     })
 
     document.getElementById("pagindiv").innerHTML = n
@@ -590,19 +551,16 @@ const onLoad = () => {
     }
     try {
       memoryFromUrl = newUrlParameters.Memory.toString().split(",")
-      console.log(memoryFromUrl);
     } catch (error) {
 
     }
     try {
       ramFromUrl = newUrlParameters.Ram.toString().split(",")
-      console.log(ramFromUrl);
     } catch (error) {
 
     }
     try {
       romFromUrl = newUrlParameters.Rom.split(",")
-      console.log(romFromUrl);
     } catch (error) {
 
     }
@@ -672,7 +630,6 @@ const onLoad = () => {
 
     // Memory
     if (memoryFromUrl && memoryFromUrl.length > 0) {
-      console.log(memoryFromUrl);
       let ma = [];
       for (let m in results) {
         for (let mi in memoryFromUrl) {

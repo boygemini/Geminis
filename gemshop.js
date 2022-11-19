@@ -80,91 +80,9 @@ class getFilter {
 
 
 class display {
-  // static items(boxID, mRoute, target) {
-  // 	let x = ``;
-  // 	let y = ``
-  // 	for (let i in mRoute[`${target}`]) {
-  // 		// 		x += `<div class="item-box" data-id=${
-  // 		//    mRoute[`${target}`][i].id
-  // 		//  } onclick="viewProduct(event)">
-  // 		// 		   <img src=${mRoute[`${target}`][i].itemInfo.itemImg} alt="">
-  // 		// 		   <div class="item-details">
-  // 		// 				   <h1>${mRoute[`${target}`][i].itemInfo.name}</h1>
-  // 		// 				   <h2>${
-  // 		// 					mRoute[`${target}`][i].itemInfo.description1
-  // 		// 				   } ${mRoute[`${target}`][i].itemInfo.memory}GB</h2>
-  // 		// 				   <div class="specifications">
-  // 		// 						   <strong>Refurbished</strong>
-  // 		// 						   <p><strong>Model : </strong>MKLV3LL/A</p>
-  // 		// 						   <p><strong>SKU : </strong>87294820</p>
-  // 		// 						   <p><strong>Color : </strong>Sierra Blue</p>
-  // 		// 				   </div>
-  // 		// 		   </div>
-  // 		// 		   <div class="buy">
-  // 		// 				   <div class="price-tag">
-  // 		// 						   <span class="currency">$ </span><span class="price">${
-  // 		// 							mRoute[`${target}`][i].itemInfo
-  // 		// 							  .newItemPrice
-  // 		// 						   }</span>
-  // 		// 				   </div>
-  // 		// 				   <button onclick = "addToCart(event)"> Add to Cart </button>
-  // 		// 		   </div>
-  // 		// 		   </div>`;
-  // 		y += `
-  // 		<div class = "sel-box">
-  // 						<div class="img-con">
-  // 							<img src="/IMAGES/frontIpad.png" src=${mRoute[`${target}`][i].itemInfo.itemImg} alt="">
-  // 						</div>
-  // 						<div class="sfu">
-  // 							<div class="text-hold">
-  // 								<p class="itemName2">${mRoute[`${target}`][i].itemInfo.name}</p>
-  // 								<div div class = "description-box"
-  // 								data-id = ${
-  // 			mRoute[`${target}`][i].id
-  // 		}
-  // 		onclick = "viewProduct(event)">
-  // 		<p class = "item-description" > ${
-  // 			mRoute[`${target}`][i].itemInfo.description1
-  // 		}
-  // 		${
-  // 			mRoute[`${target}`][i].itemInfo.memory
-  // 		}
-  // 		GB
-  // 		</p>
-  // 	</div>
-  // 		</div>
-  // 		<div class="price-order">
-  // 			<span class="price-box">
-  // 				<span class = "price" > <span class = "currency"
-  // 				id = "currency" > $ </span> ${
-  // 				mRoute[`${target}`][i].itemInfo
-  // 					.newItemPrice
-  // 				} </span>
-  // 				<span class="old-price price">${
-  // 		mRoute[`${target}`][i].itemInfo
-  // 			.oldItemPrice
-  // 		}</span>
-  // 			</span>
-  // 			<button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
-  // 					alt="" onclick = "addToCart(event)">
-  // 			</button>
-  // 		</div>
-  // 	</div>
-  // 	</div>`
-  // 	}
-  // 	boxID.innerHTML = `<h1 class="cat-head">${target}</h1>` + y;
-  // }
 
   static allUI(directory, category, boxID) {
     let y = ""
-
-    // if (directory.length === 0) {
-    // 	showBox.innerHTML = `<div class="noresult">
-    // 	<h1 class = "cat-head" > Oops, there are no results
-    // 	for "${Query}" </h1>  <p>Try checking your spelling or use more general terms</p >
-    // </div>`
-    // }
-
     if (directory.length > 0) {
       for (let k = 0; k < 10; k++) {
         y += `
@@ -214,7 +132,7 @@ class display {
     this.allUI(dir.tv, "sec-name-tv", "TV")
   }
 }
-display.displayAll()
+// display.displayAll()
 
 
 
@@ -793,9 +711,7 @@ const popupNotification = (itemName, itemImage) => {
 let cartDom = document.getElementById("items-in-cart");
 try {
   cartDom.innerText = Storage.numberOfItemsInCart();
-} catch (error) {
-  console.log(error.message);
-}
+} catch (error) {}
 
 
 
@@ -806,7 +722,6 @@ const addToCart = (event) => {
   event.stopPropagation();
   let ItemID = event.target.parentNode.dataset.id;
   let pickItemFromStore = item(ItemID);
-  console.log(ItemID);
   popupNotification(
     pickItemFromStore.itemInfo.name,
     pickItemFromStore.itemInfo.itemImg
@@ -819,8 +734,6 @@ const addToCart = (event) => {
   if (pickItemFromStore) {
     try {
       Storage.getItemAndSaveToCart();
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   }
 };

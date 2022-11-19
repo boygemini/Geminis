@@ -411,25 +411,6 @@ const displayFilteredResults = (directory) => {
     let x = ""
     let y = ""
     for (let k in directory) {
-        // x += `<div class="item-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
-        // 	<img src=${directory[k].itemInfo.itemImg} alt="">
-        // 	<div class="item-details">
-        // 		<h1>${directory[k].itemInfo.name}</h1>
-        // 		<h2>${directory[k].itemInfo.description1} ${directory[k].itemInfo.memory}GB</h2>
-        // 		<div class="specifications">
-        // 			<strong>Refurbished</strong>
-        // 			<p><strong>Model : </strong>MKLV3LL/A</p>
-        // 			<p><strong>SKU : </strong>87294820</p>
-        // 			<p><strong>Color : </strong>Sierra Blue</p>
-        // 		</div>
-        // 	</div>
-        // 	<div class="buy">
-        // 		<div class="price-tag">
-        // 			<span class="currency">$ </span><span class="price">${directory[k].itemInfo.newItemPrice}</span>
-        // 		</div>
-        // 		<button onclick = "addToCart(event)">Add to Cart</button>
-        // 	</div>
-        // </div>`
         y += `
 			<div div class = "sel-box" data-id = ${directory[k].id}>
 				<div div class = "img-con"
@@ -463,7 +444,6 @@ const displayFilteredResults = (directory) => {
 		</div>
 		</div>`
     }
-    // showBox.innerHTML = `<h1 class="cat-head">Filtered Results</h1>` + x
     document.getElementById("result-title").innerText = `${category}`
     showBox.innerHTML = y
 }
