@@ -22,8 +22,6 @@ const getItemID = () => {
     return splitUrl[1]
 }
 
-console.log(getItemID());
-
 
 const getAllItems = () => {
     let allItems = JSON.parse(localStorage.getItem("StoreItems"))
@@ -63,49 +61,281 @@ const item = () => {
 
 // ITEM DISPLAY
 let Item = item()
-productDetails.innerHTML = `
-<h1>${Item.itemInfo.name}</h1>
-<h2>${Item.itemInfo.description1}</h2>
-<div class="specifications">
-<div class="sep">
-    <strong>Refurbished</strong>
-    <p><strong>Model : </strong>MKLV3LL/A</p>
-</div>
-<div class="sep">
-    <p><strong>SKU : </strong>87294820</p>
-    <p><strong>Color : </strong>Sierra Blue</p>
-</div>
-</div>
-<div class="other-colors">
-<h1>Other available colors</h1>
-<div class="circles">
-    <div class="circle" id="circle1"></div>
-    <div class="circle" id="circle2"></div>
-    <div class="circle" id="circle3"></div>
-    <div class="circle" id="circle4"></div>
-</div>
-<div class="color-picked">
-    <h2>Picked : </h2><span>Space gray</span>
-</div>
-</div>
-<div class="qty">
-<h2>Quantity</h2>
-<div class="quantity">
-    <button>-</button><input type="text" value="1"><button>+</button>
-</div>
-</div>
-<div class="shipping-pickup">
-<div class="Pickup">
-    <h1>Pickup</h1><span>Unavailable within 250 miles of Hato Rey</span>
-</div>
-<div class="Shipping">
-    <h1>Shipping</h1><span>Unavailable in your area This item is only available in certain
-	   markets.</span>
-</div>
-</div>`
+Item.amount = 1
+let itemCategory = Item.itemInfo.category
+console.log(Item.itemInfo.category);
 
-price.innerText = Item.itemInfo.newItemPrice
-largeImage.src = Item.itemInfo.itemImg[0]
+if (itemCategory === "Cellphones") {
+    productDetails.innerHTML = `
+	<h1>${Item.itemInfo.name}</h1>
+	<h2>${Item.itemInfo.description1}</h2>
+	<div class="specifications">
+	<strong>Brand New</strong>
+	<p><strong>Model Name  </strong><span>${Item.itemInfo.name}<span></p>
+	<p><strong>Brand  </strong><span>${Item.itemInfo.brand}</span></p>
+	<p><strong>Memory Storage Capacity  </strong><span>${Item.itemInfo.memory} GB</span></p>
+	<p><strong>Color  </strong><span id="chosenColor">${Item.itemInfo.color}</span></p>
+	<p><strong>Operating System  </strong><span>${Item.itemInfo.OS}</span></p>
+	<p><strong>Wireless Carrier </strong><span id="chosenColor">Unlocked for All Carriers</span></p>
+	</div>
+	<div class="other-colors">
+	<h1>Other available colors</h1>
+	<div class="circles">
+	<div class="circle" id="circle1" onclick="changeColor('Graphite')"></div>
+	<div class="circle" id="circle2" onclick="changeColor('Space Gray')"></div>
+	<div class="circle" id="circle3" onclick="changeColor('Silver')"></div>
+	<div class="circle" id="circle4" onclick="changeColor('Gold')"></div>
+	<div class="circle" id="circle4" onclick="changeColor('Sierra Blue')"></div>
+	</div>
+	<div class="color-picked">
+	<h2>Picked : </h2><span id="chosenColor">Graphite</span>
+	</div>
+	</div>
+	<div class="qty">
+	<h2>Quantity</h2>
+	<div class="quantity">
+	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" value="1"><button onclick="cartItems.increase()">+</button>
+	</div>
+	</div>
+	<div class="shipping-pickup">
+	<div class="Pickup">
+		<h1>About this item</h1>
+		<ul>
+			<li>Unlocked</li>
+			<li>Tested for battery health and guaranteed to come with a battery that exceeds 90% of original capacity.</li>
+			<li>Inspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arm’s length. Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information.</li>
+			<li>Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.</li>
+			<li>Backed by the same one-year satisfaction guarantee as brand new Apple products.</li>
+		</ul>
+	</div> `
+
+    let thumbnails = Item.itemInfo.itemImg
+    price.innerText = Item.itemInfo.newItemPrice
+    largeImage.src = Item.itemInfo.itemImg[0]
+    thumbnails.forEach((tb) => document.getElementById("thumbnailPanel").innerHTML += `<div class="tbcon"><img class="tbnail" src=${tb} alt="" onclick='changeMainThumbNail(event)'></div>`)
+}
+
+
+
+if (itemCategory === "Computers") {
+    productDetails.innerHTML = `
+	<h1>${Item.itemInfo.name}</h1>
+	<h2>${Item.itemInfo.description1}</h2>
+	<div class="specifications">
+	<strong>Brand New</strong>
+	<p><strong>Model Name  </strong><span>${Item.itemInfo.name}<span></p>
+	<p><strong>Brand  </strong><span>${Item.itemInfo.brand}</span></p>
+	<p><strong>Hard Disk Size </strong><span>${Item.itemInfo.rom} GB</span></p>
+	<p><strong>Ram Memory Installed  </strong><span>${Item.itemInfo.ram} GB</span></p>
+	<p><strong>Color  </strong><span id="chosenColor">${Item.itemInfo.color}</span></p>
+	<p><strong>Operating System  </strong><span>${Item.itemInfo.OS}</span></p>
+	<p><strong>CPU Model </strong><span id="chosenColor">${Item.itemInfo.CPU}</span></p>
+	</div>
+	<div class="other-colors">
+	<h1>Other available colors</h1>
+	<div class="circles">
+	<div class="circle" id="circle1" onclick="changeColor('Graphite')"></div>
+	<div class="circle" id="circle2" onclick="changeColor('Space Gray')"></div>
+	<div class="circle" id="circle3" onclick="changeColor('Silver')"></div>
+	<div class="circle" id="circle4" onclick="changeColor('Gold')"></div>
+	<div class="circle" id="circle4" onclick="changeColor('Sierra Blue')"></div>
+	</div>
+	<div class="color-picked">
+	<h2>Picked : </h2><span id="chosenColor">Graphite</span>
+	</div>
+	</div>
+	<div class="qty">
+	<h2>Quantity</h2>
+	<div class="quantity">
+	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" value="1"><button onclick="cartItems.increase()">+</button>
+	</div>
+	</div>
+	<div class="shipping-pickup">
+	<div class="Pickup">
+		<h1>About this item</h1>
+		<ul>
+			<li>Unlocked</li>
+			<li>All-Day Battery Life – Go longer than ever with up to 18 hours of battery life.</li>
+			<li>Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power.</li>
+			<li>Superfast Memory– 8 GB of unified memory makes your entire system speedy and responsive.That way it can support tasks like memory - hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
+			<li>Stunning Display – With a 13.3” Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
+		</ul>
+	</div> `
+
+    let thumbnails = Item.itemInfo.itemImg
+    price.innerText = Item.itemInfo.newItemPrice
+    largeImage.src = Item.itemInfo.itemImg[0]
+    thumbnails.forEach((tb) => document.getElementById("thumbnailPanel").innerHTML += `<div class="tbcon"><img class="tbnail" src=${tb} alt="" onclick='changeMainThumbNail(event)'></div>`)
+}
+
+
+
+if (itemCategory === "Speakers") {
+    productDetails.innerHTML = `
+	<h1>${Item.itemInfo.name}</h1>
+	<h2>${Item.itemInfo.description1}</h2>
+	<div class="specifications">
+	<strong>Brand New</strong>
+	<p><strong>Model Name  </strong><span>${Item.itemInfo.name}<span></p>
+	<p><strong>Brand  </strong><span>${Item.itemInfo.brand}</span></p>
+	<p><strong>Speaker Maximum Output Power </strong><span>${Item.itemInfo.smop}</span></p>
+	<p><strong>Connectivity Technology  </strong><span>${Item.itemInfo.ct}</span></p>
+	<p><strong>Color  </strong><span id="chosenColor">${Item.itemInfo.color}</span></p>
+	<p><strong>Audio Output Mode </strong><span>${Item.itemInfo.aom}</span></p>
+	</div>
+	<div class="qty">
+	<h2>Quantity</h2>
+	<div class="quantity">
+	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" value="1"><button onclick="cartItems.increase()">+</button>
+	</div>
+	</div>
+	<div class="shipping-pickup">
+	<div class="Pickup">
+		<h1>About this item</h1>
+		<ul>
+			<li>Unlocked</li>
+			<li>All-Day Battery Life – Go longer than ever with up to 18 hours of battery life.</li>
+			<li>Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power.</li>
+			<li>Superfast Memory– 8 GB of unified memory makes your entire system speedy and responsive.That way it can support tasks like memory - hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
+			<li>Stunning Display – With a 13.3” Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
+		</ul>
+	</div> `
+
+    let thumbnails = Item.itemInfo.itemImg
+    price.innerText = Item.itemInfo.newItemPrice
+    largeImage.src = Item.itemInfo.itemImg[0]
+    thumbnails.forEach((tb) => document.getElementById("thumbnailPanel").innerHTML += `<div class="tbcon"><img class="tbnail" src=${tb} alt="" onclick='changeMainThumbNail(event)'></div>`)
+}
+
+
+
+if (itemCategory === "Gaming") {
+    productDetails.innerHTML = `
+	<h1>${Item.itemInfo.name}</h1>
+	<h2>${Item.itemInfo.description1}</h2>
+	<div class="qty">
+	<h2>Quantity</h2>
+	<div class="quantity">
+	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" value="1"><button onclick="cartItems.increase()">+</button>
+	</div>
+	</div>
+	<div class="shipping-pickup">
+	<div class="Pickup">
+		<h1>About this item</h1>
+		<ul>
+			<li> Next wave of invites will be sent on 11 / 18 / 2022 to qualifying customers.While supplies last</li>
+			<li> Model Number CFI - 1215 A01X</li>
+			<li>Stunning Games - Marvel at incredible graphics and experience new PS5 features.</li>
+			<li>Breathtaking Immersion - Discover a deeper gaming experience with support for haptic feedback, adaptive triggers, and 3D Audio technology.</li>
+			<li>Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do.</li>
+		</ul>
+	</div> `
+
+    let thumbnails = Item.itemInfo.itemImg
+    price.innerText = Item.itemInfo.newItemPrice
+    largeImage.src = Item.itemInfo.itemImg[0]
+    thumbnails.forEach((tb) => document.getElementById("thumbnailPanel").innerHTML += `<div class="tbcon"><img class="tbnail" src=${tb} alt="" onclick='changeMainThumbNail(event)'></div>`)
+}
+
+
+
+if (itemCategory === "TV") {
+    productDetails.innerHTML = `
+	<h1>${Item.itemInfo.name}</h1>
+	<h2>${Item.itemInfo.description1}</h2>
+	<div class="qty">
+	<h2>Quantity</h2>
+	<div class="quantity">
+	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" value="1"><button onclick="cartItems.increase()">+</button>
+	</div>
+	</div>
+	<div class="specifications">
+	<p><strong>Size  </strong><span>${Item.itemInfo.size} inches<span></p>
+	</div>
+	<div class="shipping-pickup">
+	<div class="Pickup">
+		<h1>About this item</h1>
+		<ul>
+			<li> Next wave of invites will be sent on 11 / 18 / 2022 to qualifying customers.While supplies last</li>
+			<li> Model Number CFI - 1215 A01X</li>
+			<li>Stunning Games - Marvel at incredible graphics and experience new PS5 features.</li>
+			<li>Breathtaking Immersion - Discover a deeper gaming experience with support for haptic feedback, adaptive triggers, and 3D Audio technology.</li>
+			<li>Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do.</li>
+		</ul>
+	</div> `
+
+    let thumbnails = Item.itemInfo.itemImg
+    price.innerText = Item.itemInfo.newItemPrice
+    largeImage.src = Item.itemInfo.itemImg[0]
+    thumbnails.forEach((tb) => document.getElementById("thumbnailPanel").innerHTML += `<div class="tbcon"><img class="tbnail" src=${tb} alt="" onclick='changeMainThumbNail(event)'></div>`)
+}
+
+
+
+try {
+    circle1.className += " active2"
+} catch (error) {
+
+}
+let amountDOM = document.getElementById("amount")
+const changeColor = (color) => {
+    let chosenColorElements = document.querySelectorAll("#chosenColor")
+    let colors = document.querySelectorAll(".circle")
+
+    chosenColorElements.forEach((clr) => clr.innerText = color)
+    colors.forEach((cl) => cl.classList.remove("active2"))
+    event.target.classList += " active2"
+}
+
+
+
+const changeMainThumbNail = (event) => {
+    largeImage.src = event.target.src
+    indicateActiveThumbNail()
+}
+
+
+
+let counter = 0
+let thumbNails = document.querySelectorAll(".tbnail")
+thumbNails[0].className += " tbnactive"
+
+
+const indicateActiveThumbNail = () => {
+    thumbNails.forEach((tb) => tb.classList.remove("tbnactive"))
+    thumbNails[counter].classList.add("tbnactive")
+}
+
+
+
+const fwd = () => {
+    let imageArray = Item.itemInfo.itemImg
+
+    if (counter >= imageArray.length - 1) {
+        counter = -1
+    }
+
+    counter++
+    largeImage.src = imageArray[counter]
+    thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter
+    indicateActiveThumbNail()
+}
+
+
+
+const bwd = () => {
+    let imageArray = Item.itemInfo.itemImg
+
+    if (counter <= 0) {
+        counter = imageArray.length
+    }
+
+    counter--
+    largeImage.src = imageArray[counter]
+    thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter
+    indicateActiveThumbNail()
+}
+
 
 
 class Products {
@@ -182,7 +412,7 @@ class Storage {
             let check = getbackcart.find(item => item.id === pickedItemID)
 
             if (check) {
-                check.amount += 1;
+                check.amount = parseInt(amountDOM.value);
                 Storage.updateCart(getbackcart)
             }
 
@@ -194,6 +424,77 @@ class Storage {
     }
 }
 Products.selectedForYou();
+
+
+
+let itemCount = 1;
+let findItem;
+let getbackcart = JSON.parse(localStorage.getItem("Cart"))
+
+
+try {
+    findItem = getbackcart.find((item) => item.id === Item.id)
+} catch (error) {}
+
+
+amountDOM.addEventListener("input", (event) => {
+    if (parseInt(event.target.value) <= 1) {
+        event.target.value = 1
+    }
+
+    itemCount = event.target.value;
+
+    try {
+        findItem.amount = parseInt(event.target.value)
+    } catch (error) {
+
+    }
+
+    if (!findItem) {
+        Item.amount = parseInt(event.target.value)
+    }
+})
+
+
+if (findItem) {
+    amountDOM.value = findItem.amount
+    itemCount = parseInt(amountDOM.value)
+}
+
+
+
+
+class cartItems {
+
+    static increase() {
+        itemCount++
+
+        let pkdItem = {
+            ...Item,
+            amount: itemCount
+        }
+        amountDOM.value = itemCount
+
+
+        Item = pkdItem
+        return Item
+    }
+
+    static decrease() {
+        itemCount--
+
+        if (itemCount <= 1) itemCount = 1
+
+        amountDOM.value = itemCount
+        let pkdItem = {
+            ...Item,
+            amount: itemCount
+        }
+        Item = pkdItem
+        return Item
+    }
+}
+
 
 
 // POP-UP NOTIFICATION
@@ -228,10 +529,7 @@ let ItemsInCart = JSON.parse(localStorage.getItem("Cart")),
 const addToCart = () => {
     let pickItemFromStore = Item
     popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg[0])
-    pickedItem = {
-        ...pickItemFromStore,
-        amount: 1,
-    };
+    pickedItem = Item
     if (pickItemFromStore) {
         try {
             Storage.getItemAndSaveToCart();
@@ -240,32 +538,3 @@ const addToCart = () => {
         }
     }
 };
-
-
-// SEARCH PRODUCT
-const sendQueryGO = (event) => {
-    let query = search.value.toLowerCase();
-    let url = `gemshop.html?q=${encodeURIComponent(query)}`;
-    window.location.href = url;
-};
-
-
-newFunction();
-
-
-search.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" && search.value !== "") {
-        sendQueryGO()
-    }
-})
-
-
-function newFunction() {
-    try {
-        GO.addEventListener("click", (event) => {
-            if (search.value !== "") {
-                sendQueryGO();
-            }
-        });
-    } catch (error) {};
-}

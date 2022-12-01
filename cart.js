@@ -190,7 +190,7 @@ class CartItems {
           boxModal.style.display = "flex"
           AskbuttonDiv.innerHTML = `<button class="askbutton no" id="no">No</button><button
                     class="askbutton yes" id="yes">Yes</button>`
-          Message.innerText = "Do you want to remove this item from cart?"
+          Message.innerText = "🛒 Cart\nDo you want to remove this item from cart?"
 
           yes.addEventListener("click", () => {
             boxModal.style.display = "none"
@@ -252,9 +252,9 @@ class CartItems {
     for (let i in getbackcart) {
       if (itemID === Number(getbackcart[i].id)) {
 
-        if (inputedAmount === 0 || isNaN(inputedAmount)) {
+        if (inputedAmount < 1 || isNaN(inputedAmount)) {
           boxModal.style.display = "flex"
-          Message.innerText = "Bobo, enter a number greater than 0"
+          Message.innerText = "🛒 Cart\nBobo, enter a number greater than 0"
           AskbuttonDiv.innerHTML = `<button class="askbutton yes" id="ok">Okay</button>`
 
           ok.addEventListener("click", (e) => {
@@ -298,6 +298,16 @@ class CartItems {
 
 
 
+function viewProduct(event) {
+  let itemID = event.target.dataset.id || event.target.parentNode.dataset.id || event.target.parentNode.parentNode.dataset.id || event.target.parentNode.parentNode.parentNode.dataset.id;
+  if (itemID) {
+    let url = `product.html?item=${encodeURIComponent(itemID)}`
+    window.location = url
+  }
+}
+
+
+
 class displayItems {
   static CART(category) {
     let itemCreated = "";
@@ -321,7 +331,7 @@ class displayItems {
 
       itemCreated += `<div class="order">
       <h1 class = "numbering">${displayNumbering()}</h1>
-        <img src=${category[i].itemInfo.itemImg[0]} alt="">
+        <img src=${category[i].itemInfo.itemImg[0]} alt="" data-id=${category[i].id} onclick="viewProduct(event)">
         <div class="order-info">
             <div class="info">
                 <h1 class="item-name">${category[i].itemInfo.name}</h1>
@@ -418,31 +428,6 @@ if (Number(Storage.numberOfItemsInCart()) !== 0) {
 _item.sumTotal()
 
 
-
-// SEARCH PRODUCT
-const sendQueryGO = (event) => {
-  let query = search.value.toLowerCase();
-  let url = `gemshop.html?q=${encodeURIComponent(query)}`
-  window.location.href = url;
-};
-
-
-
-try {
-  GO.addEventListener("click", (event) => {
-    if (search.value !== "") {
-      sendQueryGO()
-    }
-  })
-} catch (error) {}
-
-
-
-search.addEventListener("keydown", (event) => {
-  if (event.key === "Enter" && search.value !== "") {
-    sendQueryGO()
-  }
-})
 
 console.log("OK : code ran successfully!");
 //EOC

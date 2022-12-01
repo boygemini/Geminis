@@ -127,6 +127,20 @@
     font-family: DSIndigo, Helvetica, Arial, sans-serif;
     color: #090A0A;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     scroll-behavior: smooth;
+}
+
+.slimbanner {
+    background-color: #0b6631;
+    /* background-color:#81ffb5; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    /* background-color: white; */
+    background-color: #F9FAFC;
+    width: 100%;
 }

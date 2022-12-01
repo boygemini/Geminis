@@ -110,9 +110,9 @@ class display {
 						id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
 						<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice }</span>
 					</span>
-					<button id="cart-btn" data-id = ${directory[k].id} class="cart-btn">
+					<button id="cart-btn" data-id= ${directory[k].id} class="cart-btn">
 						<img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
-							alt="" onclick = "addToCart(event)">
+							alt="" data-id= ${directory[k].id}  onclick = "addToCart(event)">
 					</button>
 				</div>
 			</div>
@@ -516,6 +516,13 @@ if (newUrl.search.length === 0) {
   document.querySelector(".filters").style.display = "none"
   document.querySelector(".sort-hol").style.display = "none"
   document.querySelector(".pgd").style.display = "none"
+  document.querySelector("#showbox").classList = "showboxflex"
+}
+
+
+
+if (newUrl.search.length > 0) {
+  document.querySelector("#showbox").classList = "showboxgrid"
 }
 
 
@@ -562,7 +569,7 @@ if (newUrl.search.length === 0) {
 
 
 
-//PRODUCT DISPLAY (SEARCH)
+// PRODUCT DISPLAY (SEARCH)
 const viewProduct = (event) => {
   let itemID =
     event.target.dataset.id ||
@@ -624,7 +631,7 @@ class Storage {
   }
 
   // GET AND SAVE PICKED ITEM TO CART
-  static getItemAndSaveToCart() {
+  static getItemAndSaveToCart(event) {
     let getbackcart = JSON.parse(localStorage.getItem("Cart"));
 
     if (cart === null || cart.length === 0) {
@@ -633,8 +640,9 @@ class Storage {
     }
 
     if (cart !== null || cart.length !== 0) {
-      let pickedItemID = event.target.parentNode.parentNode.dataset.id;
-      let check = getbackcart.find((item) => item.id === pickedItemID);
+      let pickedItemID = event.target.dataset.id
+      let check = getbackcart.find((item) => Number(item.id) === Number(pickedItemID));
+      console.log(pickedItemID);
 
       if (check) {
         check.amount += 1;
@@ -722,7 +730,7 @@ let ItemsInCart = JSON.parse(localStorage.getItem("Cart")),
   pickedItem;
 const addToCart = (event) => {
   event.stopPropagation();
-  let ItemID = event.target.parentNode.dataset.id;
+  let ItemID = event.target.dataset.id;
   let pickItemFromStore = item(ItemID);
   popupNotification(
     pickItemFromStore.itemInfo.name,
@@ -735,7 +743,7 @@ const addToCart = (event) => {
 
   if (pickItemFromStore) {
     try {
-      Storage.getItemAndSaveToCart();
+      Storage.getItemAndSaveToCart(event);
     } catch (error) {}
   }
 };

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/CSS/product.css">
     <link rel="stylesheet" href="/CSS/gemfonts.css">
     <script src="/JAVASCRIPT/product.js" defer></script>
-    <!-- <script src="/JAVASCRIPT/search.js" defer></script> -->
+    <script src="/JAVASCRIPT/search.js" defer></script>
 </head>
 
 <body>
@@ -76,11 +76,12 @@
             <div class="image">
                 <img src="/IMAGES/frontIpad.png" alt="" id="largeImage">
                 <div class="image-thumbnail">
-                    <img src="/IMAGES/frontIpad.png" alt="">
-                    <img src="/IMAGES/frontIpad.png" alt="">
-                    <img src="/IMAGES/frontIpad.png" alt="">
-                    <img src="/IMAGES/frontIpad.png" alt="">
+                    <button onclick="bwd()">
+                        <</button> <div class="tbs" id="thumbnailPanel">
+
                 </div>
+                <button onclick="fwd()">></button>
+            </div>
             </div>
             <div class="product-details" id="productDetails">
                 <!-- <h1>iPhone 13 Pro Max</h1>
@@ -133,7 +134,7 @@
                                 mins</span></p>
                     </div>
                     <div class="to-cart-buy">
-                        <button class="add-to-cart" id="addItemToCart" onclick="addToCart()">Add to Cart</button>
+                        <button class="add-to-cart" id="addItemToCart" onclick="addToCart()">🛒 Add to Cart</button>
                         <button class="buy-now" onclick="toCheckOut()">Buy Now</button>
                     </div>
                 </div>

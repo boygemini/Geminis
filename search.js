@@ -109,7 +109,7 @@ search.addEventListener("keydown", (event) => {
 
 const markAndCreatePagination = (results) => {
   let pageNumber = document.URL.split("Page=")[1]
-  if (pageNumber) results = createPagination(results, 10, Number(pageNumber))
+  if (pageNumber) results = createPagination(results, 12, Number(pageNumber))
 
   markPagination()
 }
@@ -157,7 +157,7 @@ class getResults {
       }
     }
     let pageNumber = document.URL.split("Page=")[1]
-    if (pageNumber) arr = createPagination(arr, 10, Number(pageNumber))
+    if (pageNumber) arr = createPagination(arr, 12, Number(pageNumber))
 
     controlSort(arr)
     markPagination()
@@ -176,7 +176,7 @@ class getResults {
       }
     }
     let pageNumber = document.URL.split("Page=")[1]
-    if (pageNumber) arr = createPagination(arr, 10, Number(pageNumber))
+    if (pageNumber) arr = createPagination(arr, 12, Number(pageNumber))
 
     markPagination()
     controlSort(arr)
@@ -195,6 +195,7 @@ class getResults {
     document.querySelector(".littlebans").style.display = "none"
     document.getElementById("footer").style.position = "relative"
     document.getElementById("footer").style.bottom = "0"
+    showBox.classList.remove("showboxgrid")
   }
 
   static positiveResults() {
@@ -204,6 +205,7 @@ class getResults {
     document.querySelector(".littlebans").style.display = ""
     document.getElementById("footer").style.position = ""
     document.getElementById("footer").style.bottom = "0"
+    showBox.classList += " showboxgrid"
   }
 
   static pageNotFound() {
@@ -229,11 +231,12 @@ const displayResults = (directory, Query) => {
   }
 
   if (directory.length > 0) {
+
     getResults.positiveResults()
     for (let k in directory) {
       if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
         y += `
-			<div div class = "sel-box" data-id = ${directory[k].id}>
+			<div div class = "sel-box" id= ${directory[k].id}>
 				<div class="img-con">
 					<img src=${directory[k].itemInfo.itemImg[0]} alt="" data-id=${directory[k].id} onclick = "viewProduct(event)">
 				</div>
@@ -254,8 +257,8 @@ const displayResults = (directory, Query) => {
 							directory[k].itemInfo.oldItemPrice
 			}</span>
 				</span>
-				<button id="cart-btn" data-id = ${directory[k].id} class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
-						alt="" onclick = "addToCart(event)">
+				<button id="cart-btn"  class="cart-btn"><img id="addto-cart-img" data-id=${directory[k].id} src="/IMAGES/add-to-cart.png"
+						alt="" onclick="addToCart(event)">
 				</button>
 			</div>
 		</div>
@@ -281,7 +284,7 @@ const displayFiltereddResults = (results, category) => {
     getResults.positiveResults()
     for (let k in results) {
       y += `
-			<div div class = "sel-box" data-id = ${results[k].id}>
+			<div div class = "sel-box" id = ${results[k].id}>
 				<div class="img-con">
 					<img src=${results[k].itemInfo.itemImg[0]} alt="" data-id=${results[k].id} onclick = "viewProduct(event)">
 				</div>
@@ -302,8 +305,8 @@ const displayFiltereddResults = (results, category) => {
 							results[k].itemInfo.oldItemPrice
 			}</span>
 				</span>
-				<button id="cart-btn" data-id = ${results[k].id} class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
-						alt="" onclick = "addToCart(event)">
+				<button id="cart-btn" data-id = ${results[k].id} class="cart-btn"><img id="addto-cart-img" data-id=${results[k].id} src="/IMAGES/add-to-cart.png"
+						alt="" onclick="addToCart(event)">
 				</button>
 			</div>
 		</div>
@@ -317,11 +320,11 @@ const displayFiltereddResults = (results, category) => {
 
 
 const getCatFiltersAndSearchResults = (Query, Category) => {
-  let gamekey = ["xbox", "box", "play", "station"]
-  let phonekey = ["iph", "Iphone", "iphones", "13", "samsung", "itel", "infinix", "lg"]
-  let tvkey = ["samsung", "midea", "lg"]
-  let speakerkey = ["jbl", "flip", "ora", "beat"]
-  let comkey = ["mac", "hp", "asus", "toshiba"]
+  let gamekey = [...new Set(dir["gaming"].map(itemName => itemName.itemInfo.name))]
+  let phonekey = [...new Set(dir["cellphones"].map(itemName => itemName.itemInfo.name))]
+  let tvkey = [...new Set(dir["tv"].map(itemName => itemName.itemInfo.name))]
+  let speakerkey = [...new Set(dir["speakers"].map(itemName => itemName.itemInfo.name))]
+  let comkey = [...new Set(dir["computers"].map(itemName => itemName.itemInfo.name))]
   let general = [gamekey, phonekey, tvkey, speakerkey, comkey]
   let generalKeyWords = new Array()
 
@@ -332,7 +335,7 @@ const getCatFiltersAndSearchResults = (Query, Category) => {
   }
 
   for (let i in generalKeyWords) {
-    if (generalKeyWords[i] !== Query) {
+    if (generalKeyWords[i].toLowerCase() !== Query) {
       getResults.negativeResults(Query)
     }
   }
@@ -347,35 +350,35 @@ const getCatFiltersAndSearchResults = (Query, Category) => {
   }
 
   for (let i in gamekey) {
-    if (gamekey[i].includes(Query)) {
+    if (gamekey[i].toLowerCase().includes(Query)) {
       Gamings()
       Call(Query, Category)
     }
   }
 
   for (let i in phonekey) {
-    if (phonekey[i].includes(Query)) {
+    if (phonekey[i].toLowerCase().includes(Query)) {
       cellPhones()
       Call(Query, Category)
     }
   }
 
   for (let i in tvkey) {
-    if (tvkey[i].includes(Query)) {
+    if (tvkey[i].toLowerCase().includes(Query)) {
       TVs()
       Call(Query, Category)
     }
   }
 
   for (let i in speakerkey) {
-    if (speakerkey[i].includes(Query)) {
+    if (speakerkey[i].toLowerCase().includes(Query)) {
       Speakers()
       Call(Query, Category)
     }
   }
 
   for (let i in comkey) {
-    if (comkey[i].includes(Query)) {
+    if (comkey[i].toLowerCase().includes(Query)) {
       Computers()
       Call(Query, Category)
     }
@@ -752,11 +755,11 @@ const onLoad = () => {
 
     // Page & Pagination
     if (!pageFromUrl) {
-      results = createPagination(results, 10, 0)
+      results = createPagination(results, 12, 0)
     }
 
     if (pageFromUrl) {
-      results = createPagination(results, 10, Number(pageFromUrl))
+      results = createPagination(results, 12, Number(pageFromUrl))
     }
     markPagination()
 

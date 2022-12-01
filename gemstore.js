@@ -249,7 +249,7 @@ class displayProduct {
 				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
+			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
 		    </div>
 		</div>
 	 </div>`;
@@ -258,6 +258,7 @@ class displayProduct {
     let viewAll = document.querySelector(".view-all")
     try {
       viewAll.id = event.target.id
+      viewAll.innerText = `View All ${sub}`
     } catch (error) {}
   }
 
@@ -267,7 +268,7 @@ class displayProduct {
     let itemCreated = "";
     let Holder = document.getElementById("holder-rec");
     for (let i in category) {
-      itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
+      itemCreated += `<div class="sell-box sel-box" id="recbox" data-id=${category[i].id} onclick = "viewProduct(event)">
 		<div class="img-con">
 		    <img src=${category[i].itemInfo.itemImg[0]} alt="">
 		</div>
@@ -282,7 +283,7 @@ class displayProduct {
 				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
+			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
 		    </div>
 		</div>
 	 </div>`;
@@ -311,7 +312,7 @@ class displayProduct {
 				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id = "${category[i].id}" data-category = "${sub}" onclick = "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"></button>
+			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"></button>
 		    </div>
 		</div>
 	 </div>`;
