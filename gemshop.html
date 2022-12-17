@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop</title>
-    <link rel="stylesheet" href="/CSS/gemshop.css">
-    <link rel="stylesheet" href="/CSS/gemfonts.css">
+    <link rel="stylesheet" href="/CSS/gemshop.css" />
+    <link rel="stylesheet" href="/CSS/gemfonts.css" />
     <script src="/JAVASCRIPT/gemshop.js" defer></script>
     <script src="/JAVASCRIPT/search.js" defer></script>
     <script src="/JAVASCRIPT/filters.js" defer></script>
@@ -24,7 +24,7 @@
         <div class="slimcontent">
             <div class="slimb-left">
                 <p>Open doors to a world of Electronics</p>
-                <hr class="vhr">
+                <hr class="vhr" />
                 <p class="dis-more">Discover More</p>
             </div>
             <div class="slimb-right">
@@ -37,7 +37,7 @@
         <section class="top-nav">
             <div class="logo-nav">
                 <nav id="nav-and-products">
-                    <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
+                    <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()" />
                     <div class="products">
                         <ul>
                             <li id="games">Gaming</li>
@@ -51,7 +51,7 @@
 
                 <div id="menu">
                     <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
-                    <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
+                    <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()" />
                     <ul>
                         <li>Home</li>
                         <li>Shop</li>
@@ -64,11 +64,11 @@
                 <div class="login-cart">
                     <div class="search-section">
                         <input type="search" class="search" name="search" id="search" placeholder="Search a product"
-                            autocomplete="off">
-                        <input type="submit" class="go" value="GO" id="GO">
+                            autocomplete="off" />
+                        <input type="submit" class="go" value="GO" id="GO" />
                     </div>
                     <div class="cart-box" onclick="toCart()">
-                        <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
+                        <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()" />
                         <p id="items-in-cart">0</p>
                     </div>
                     <button type="button" class="login">Login</button>
@@ -92,11 +92,12 @@
 
                 <div class="filterss" id="filters">
                     <div class="wrapper">
-                        <h1>Price</h1><br>
+                        <h1>Price</h1>
+                        <br />
                         <div class="box">
-                            <input type="radio" name="select" id="firstlevelprice">
-                            <input type="radio" name="select" id="secondlevelprice">
-                            <input type="radio" name="select" id="thirdlevelprice">
+                            <input type="radio" name="select" id="firstlevelprice" />
+                            <input type="radio" name="select" id="secondlevelprice" />
+                            <input type="radio" name="select" id="thirdlevelprice" />
                             <label for="firstlevelprice" class="option-1">
                                 <div class="dot"></div>
                                 <div class="text">$300 to $800</div>
@@ -114,8 +115,8 @@
                     <div class="option minn">
                         <p class="applymm" id="applyminmax">APPLY</p>
                         <div class="mmdiv">
-                            <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
-                            <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+                            <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min" />
+                            <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max" />
                         </div>
                     </div>
                 </div>
@@ -167,8 +168,9 @@
                         <div class="section-title">
                             <h1 id="sec-name-gaming"></h1>
                             <button class="all-category" id="all-category"
-                                onclick="window.location='gemshop.html?category=gaming&Order=Random&Page=0'">See
-                                All Gamings</button>
+                                onclick="window.location='gemshop.html?category=gaming&Order=Random&Page=0'">
+                                See All Gamings
+                            </button>
                         </div>
                         <div class="av-box" id="gamings">
                             <!-- <div class="item-box">
@@ -230,47 +232,45 @@
                         <div class="section-title">
                             <h1 id="sec-name-cellphones"></h1>
                             <button class="all-category" id="all-category"
-                                onclick="window.location='gemshop.html?category=cellphones&Order=Random&Page=0'">See All
-                                Cell
-                                Phones</button>
+                                onclick="window.location='gemshop.html?category=cellphones&Order=Random&Page=0'">
+                                See All Cell Phones
+                            </button>
                         </div>
-                        <div class="av-box" id="cellphones">
-                        </div>
+                        <div class="av-box" id="cellphones"></div>
                     </div>
                     <div class="full-cat">
                         <div class="section-title">
                             <h1 id="sec-name-computer"></h1>
                             <button class="all-category" id="all-category"
-                                onclick="window.location='gemshop.html?category=computers&Order=Random&Page=0'">See
-                                All Computers</button>
+                                onclick="window.location='gemshop.html?category=computers&Order=Random&Page=0'">
+                                See All Computers
+                            </button>
                         </div>
-                        <div class="av-box" id="computers">
-                        </div>
+                        <div class="av-box" id="computers"></div>
                     </div>
                     <div class="full-cat">
                         <div class="section-title">
                             <h1 id="sec-name-speakers"></h1>
                             <button class="all-category" id="all-category"
-                                onclick="window.location='gemshop.html?category=speakers&Order=Random&Page=0'">See
-                                All Speakers</button>
+                                onclick="window.location='gemshop.html?category=speakers&Order=Random&Page=0'">
+                                See All Speakers
+                            </button>
                         </div>
-                        <div class="av-box" id="speakers">
-                        </div>
+                        <div class="av-box" id="speakers"></div>
                     </div>
                     <div class="full-cat">
                         <div class="section-title">
                             <h1 id="sec-name-tv"></h1>
                             <button class="all-category" id="all-category"
-                                onclick="window.location='gemshop.html?category=tv&Order=Random&Page=0'">See
-                                All
-                                TVs</button>
+                                onclick="window.location='gemshop.html?category=tv&Order=Random&Page=0'">
+                                See All TVs
+                            </button>
                         </div>
-                        <div class="av-box" id="TV">
-                        </div>
+                        <div class="av-box" id="TV"></div>
                     </div>
                 </div>
                 <div class="pagindiv pgd">
-                    <button class="prev-next" id="prevPage"> Prev </button>
+                    <button class="prev-next" id="prevPage">Prev</button>
                     <div class="pagindiv" id="pagindiv"></div>
                     <button class="prev-next" id="nextPage">Next</button>
                 </div>
@@ -282,57 +282,56 @@
 				</div>
 				<button class="visit" type="button">Visit</button>
 			</section> -->
-
         </section>
     </section>
 
-
     <script>
-        "use strict"
+        "use strict";
 
         const goHome = () => {
             window.location.href = "/HTML/gemstore.html";
-        }
+        };
 
         const toCart = () => {
             window.location.href = "/HTML/cart.html";
-        }
+        };
 
         let menu = document.getElementById("menu"),
-            mb = document.getElementById("mb")
+            mb = document.getElementById("mb");
         let close = document.querySelectorAll("#close");
-        menu.style.display = "none"
+        menu.style.display = "none";
 
         const removePadding = () => {
-            menu.style.height = "0px"
+            menu.style.height = "0px";
             menu.style.padding = "0px";
-        }
+        };
 
         const openMenu = (e) => {
-            menu.style.display = "flex"
-            removePadding()
+            menu.style.display = "flex";
+            removePadding();
             setTimeout(() => {
                 menu.style.paddingTop = "20px";
                 menu.style.height = "400px";
-            }, 20)
-        }
+            }, 20);
+        };
 
         const closeMenu = () => {
-            removePadding()
+            removePadding();
             setTimeout(() => {
-                menu.style.display = "none"
+                menu.style.display = "none";
             }, 520);
-        }
+        };
 
         document.addEventListener("click", (e) => {
             if (e.target !== menu && menu.clientHeight > 0) {
                 removePadding();
             }
-        })
+        });
     </script>
     <footer id="footer">
         <h1>
-            Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
+            Shop by
+            <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
         </h1>
     </footer>
 </body>

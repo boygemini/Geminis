@@ -190,7 +190,7 @@ class CartItems {
           boxModal.style.display = "flex"
           AskbuttonDiv.innerHTML = `<button class="askbutton no" id="no">No</button><button
                     class="askbutton yes" id="yes">Yes</button>`
-          Message.innerText = "🛒 Cart\nDo you want to remove this item from cart?"
+          Message.innerText = "🛒 Cart\n\nDo you want to remove this item from cart?"
 
           yes.addEventListener("click", () => {
             boxModal.style.display = "none"
@@ -254,7 +254,7 @@ class CartItems {
 
         if (inputedAmount < 1 || isNaN(inputedAmount)) {
           boxModal.style.display = "flex"
-          Message.innerText = "🛒 Cart\nBobo, enter a number greater than 0"
+          Message.innerText = "🛒 Cart\n\nBobo, enter a number greater than 0"
           AskbuttonDiv.innerHTML = `<button class="askbutton yes" id="ok">Okay</button>`
 
           ok.addEventListener("click", (e) => {

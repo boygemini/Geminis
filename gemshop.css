@@ -184,8 +184,8 @@ nav ul li {
     align-items: center;
     z-index: 2;
     border-top-left-radius: 0px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     overflow: hidden;
     transition: .5s ease-in-out;
     -webkit-transition: .5s ease-in-out;
@@ -1073,7 +1073,6 @@ p span {
     width: 100%;
     align-self: center;
     flex-wrap: wrap;
-    background-color: white;
     box-shadow: 0px 15px 25px -10px #021e541a;
 }
 
@@ -1281,7 +1280,7 @@ select:hover {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    border-radius: 0px;
+    /* border-radius: 0px; */
     transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -1311,8 +1310,8 @@ select:hover {
     align-items: center;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     position: relative;
 }
 
