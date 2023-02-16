@@ -65,8 +65,8 @@ search.addEventListener("input", () => {
 const sendQueryGO = (event) => {
   let query = search.value.toLowerCase();
   let url = `gemshop.html?SearchQuery=${encodeURIComponent(
-		query
-	)}&Order=Random&Page=0`;
+    query
+  )}&Order=Random&Page=0`;
   window.location.href = url;
 };
 
@@ -74,8 +74,8 @@ const sendQuery = (event) => {
   let query = event.target.firstElementChild.innerText;
   let queryCategory = event.target.children[2].innerText.toLowerCase();
   let url = `gemshop.html?category=${encodeURIComponent(
-		queryCategory
-	)}&SearchQuery=${encodeURIComponent(query)}&Order=Random&Page=0`;
+    queryCategory
+  )}&SearchQuery=${encodeURIComponent(query)}&Order=Random&Page=0`;
   window.location.href = url;
 };
 
@@ -96,7 +96,6 @@ search.addEventListener("keydown", (event) => {
 const markAndCreatePagination = (results) => {
   let pageNumber = document.URL.split("Page=")[1];
   if (pageNumber) results = createPagination(results, 12, Number(pageNumber));
-
   markPagination();
 };
 
@@ -168,7 +167,7 @@ class getResults {
     showBox.innerHTML = `<div class="noresult">
 			<div class ="noresulttext"><h1 class = "cat-head" > Oops, there are no results for "${Query}" </h1><p>Try checking your spelling or use more general terms</p></div>
 			<span>Go back to</span>
-			<div class="noresultbuttons"><a href="gemstore.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtohome'>Market Area</a></div>
+			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtohome'>Market Area</a></div>
 		</div>`;
     document.querySelector(".filters").style.display = "none";
     document.querySelector(".sort-hol").style.display = "none";
@@ -199,7 +198,7 @@ class getResults {
     ).innerHTML = `<div class="noresult notfound">
 			<div class ="noresulttext"><h1 class = "cat-head" > Page not found</h1><p>We couldn’t find the page you are looking for</p></div>
 			<span>Go back to</span>
-			<div class="noresultbuttons"><a href="gemstore.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtohome'>Market Area</a></div>
+			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtohome'>Market Area</a></div>
 		</div>`;
   }
 }
@@ -447,8 +446,8 @@ function createPagination(results, numberOnEachPage, pageNumber) {
 
     for (let i in paginatedResult) {
       n += `<button class="pagin" onclick="filter.page(event)" id='${Number(
-				i
-			)}'>${Number(i) + 1}</button>`;
+        i
+      )}'>${Number(i) + 1}</button>`;
     }
 
     if (paginatedResult.length === 1) {
@@ -520,7 +519,7 @@ const onLoad = () => {
     return getCatFiltersAndSearchResults(Query);
   }
 
-  // IF THE URL IS BADLY ALTERED IT SHOUL RETURN A NOT FOUND PAGE
+  // IF THE URL IS BADLY ALTERED IT SHOULD RETURN A NOT FOUND PAGE
   let QueryName = urlWithQuery.split("?")[1].split("=")[0];
   if (
     QueryName !== "SearchQuery" &&
@@ -548,16 +547,21 @@ const onLoad = () => {
       results = allItemsInCategory;
     }
 
+    /*
+     * USE PROPER ERROR HANDLING HERE
+     */
     // PARAMETERS FROM THE URL
     let newUrlParameters = convertUrlParametersIntoObject(urlWithQuery);
     try {
       newUrlParameters.Price = newUrlParameters.Price.replace(/%20/g, "").split(
         "-"
       );
-      priceFromUrl = [{
-        high: Number(newUrlParameters.Price[1]),
-        low: Number(newUrlParameters.Price[0]),
-      }, ];
+      priceFromUrl = [
+        {
+          high: Number(newUrlParameters.Price[1]),
+          low: Number(newUrlParameters.Price[0]),
+        },
+      ];
     } catch (error) {}
     try {
       brandFromUrl = newUrlParameters.Brand.split(",");
@@ -588,8 +592,7 @@ const onLoad = () => {
       orderFromUrl = newUrlParameters.Order;
     } catch (error) {}
 
-    // FILTERING / Price
-
+    // Filtering / Price
     if (priceFromUrl && priceFromUrl.length > 0) {
       let pr = [];
       for (let a in results) {

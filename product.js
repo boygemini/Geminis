@@ -1,72 +1,75 @@
-"use strict"
+"use strict";
 
-const storeItemsIfNotAlreadyStored = () => {
-    if (localStorage.StoreItems === undefined) {
-        let product_request = new XMLHttpRequest();
-        product_request.open("GET", "/JSON/product.json", false);
-        product_request.onload = function () {
-            if (product_request.status === 200) {
-                localStorage.StoreItems = this.responseText;
-            }
-        };
-        product_request.send();
-    }
+
+function storeItemsIfNotAlreadyStored() {
+	if (localStorage.StoreItems === undefined) {
+		let product_request = new XMLHttpRequest();
+		product_request.open("GET", "product.json", false);
+		product_request.onload = function () {
+			if (product_request.status === 200) {
+				localStorage.StoreItems = this.responseText;
+			}
+		};
+		product_request.send();
+	}
 }
 storeItemsIfNotAlreadyStored();
 
-
 // SORTING ITEMS
 const getItemID = () => {
-    let url = document.URL.split("?")[1]
-    let splitUrl = url.split("=")
-    return splitUrl[1]
-}
-
+	let url = new URL(document.URL);
+	return url.search.split("=")[1];
+};
 
 const getAllItems = () => {
-    let allItems = JSON.parse(localStorage.getItem("StoreItems"))
-    return allItems
-}
-
+	let allItems = JSON.parse(localStorage.getItem("StoreItems"));
+	return allItems;
+};
 
 const item = () => {
-    let recentlyAdded = getAllItems().recentlyAdded
-    let WeeklyFeatured = getAllItems().WeeklyFeatured
+	let recentlyAdded = getAllItems().recentlyAdded;
+	let WeeklyFeatured = getAllItems().WeeklyFeatured;
 
-    for (let i in recentlyAdded) {
-        if (recentlyAdded[i].id === getItemID()) {
-            return recentlyAdded[i]
-        }
-    }
+	for (let i in recentlyAdded) {
+		if (recentlyAdded[i].id === getItemID()) {
+			return recentlyAdded[i];
+		}
+	}
 
-    for (let i in WeeklyFeatured) {
-        if (WeeklyFeatured[i].id === getItemID()) {
-            return WeeklyFeatured[i]
-        }
-    }
+	for (let i in WeeklyFeatured) {
+		if (WeeklyFeatured[i].id === getItemID()) {
+			return WeeklyFeatured[i];
+		}
+	}
 
-    let category = ["gaming", "cellphones", "speakers", "computers", "tv"]
-    let allItems = getAllItems().selectedProducts[0]
-    for (let i in category) {
-        let all = allItems[`${category[i]}`]
-        for (let j in all) {
-            if (all[j].id === getItemID()) {
-                return all[j]
-            }
-        }
-    }
-}
-
-
+	let category = ["gaming", "cellphones", "speakers", "computers", "tv"];
+	let allItems = getAllItems().selectedProducts[0];
+	for (let i in category) {
+		let all = allItems[`${category[i]}`];
+		for (let j in all) {
+			if (all[j].id === getItemID()) {
+				return all[j];
+			}
+		}
+	}
+};
 
 // ITEM DISPLAY
-let Item = item()
-Item.amount = 1
-let itemCategory = Item.itemInfo.category
-console.log(Item.itemInfo.category);
-
+let Item = item();
+Item.amount = 1;
+let itemCategory = Item.itemInfo.category;
+const loadThumbnails = () => {
+	let thumbnails = Item.itemInfo.itemImg;
+	price.innerText = Item.itemInfo.newItemPrice;
+	largeImage.src = Item.itemInfo.itemImg[0];
+	for (let i in thumbnails) {
+		document.getElementById(
+			"thumbnailPanel"
+		).innerHTML += `<div class="tbcon"><img class="tbnail" data-id="${i}" src=${thumbnails[i]} alt="" onclick='changeMainThumbNail(event)'></div>`;
+	}
+};
 if (itemCategory === "Cellphones") {
-    productDetails.innerHTML = `
+	productDetails.innerHTML = `
 	<h1>${Item.itemInfo.name}</h1>
 	<h2>${Item.itemInfo.description1}</h2>
 	<div class="specifications">
@@ -107,18 +110,13 @@ if (itemCategory === "Cellphones") {
 			<li>Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.</li>
 			<li>Backed by the same one-year satisfaction guarantee as brand new Apple products.</li>
 		</ul>
-	</div> `
+	</div> `;
 
-    let thumbnails = Item.itemInfo.itemImg
-    price.innerText = Item.itemInfo.newItemPrice
-    largeImage.src = Item.itemInfo.itemImg[0]
-    thumbnails.forEach((tb) => document.getElementById("thumbnailPanel").innerHTML += `<div class="tbcon"><img class="tbnail" src=${tb} alt="" onclick='changeMainThumbNail(event)'></div>`)
+	loadThumbnails();
 }
 
-
-
 if (itemCategory === "Computers") {
-    productDetails.innerHTML = `
+	productDetails.innerHTML = `
 	<h1>${Item.itemInfo.name}</h1>
 	<h2>${Item.itemInfo.description1}</h2>
 	<div class="specifications">
@@ -160,18 +158,13 @@ if (itemCategory === "Computers") {
 			<li>Superfast Memory– 8 GB of unified memory makes your entire system speedy and responsive.That way it can support tasks like memory - hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
 			<li>Stunning Display – With a 13.3” Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
 		</ul>
-	</div> `
+	</div> `;
 
-    let thumbnails = Item.itemInfo.itemImg
-    price.innerText = Item.itemInfo.newItemPrice
-    largeImage.src = Item.itemInfo.itemImg[0]
-    thumbnails.forEach((tb) => document.getElementById("thumbnailPanel").innerHTML += `<div class="tbcon"><img class="tbnail" src=${tb} alt="" onclick='changeMainThumbNail(event)'></div>`)
+	loadThumbnails();
 }
 
-
-
 if (itemCategory === "Speakers") {
-    productDetails.innerHTML = `
+	productDetails.innerHTML = `
 	<h1>${Item.itemInfo.name}</h1>
 	<h2>${Item.itemInfo.description1}</h2>
 	<div class="specifications">
@@ -199,18 +192,13 @@ if (itemCategory === "Speakers") {
 			<li>Superfast Memory– 8 GB of unified memory makes your entire system speedy and responsive.That way it can support tasks like memory - hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
 			<li>Stunning Display – With a 13.3” Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
 		</ul>
-	</div> `
+	</div> `;
 
-    let thumbnails = Item.itemInfo.itemImg
-    price.innerText = Item.itemInfo.newItemPrice
-    largeImage.src = Item.itemInfo.itemImg[0]
-    thumbnails.forEach((tb) => document.getElementById("thumbnailPanel").innerHTML += `<div class="tbcon"><img class="tbnail" src=${tb} alt="" onclick='changeMainThumbNail(event)'></div>`)
+	loadThumbnails();
 }
 
-
-
 if (itemCategory === "Gaming") {
-    productDetails.innerHTML = `
+	productDetails.innerHTML = `
 	<h1>${Item.itemInfo.name}</h1>
 	<h2>${Item.itemInfo.description1}</h2>
 	<div class="qty">
@@ -229,18 +217,13 @@ if (itemCategory === "Gaming") {
 			<li>Breathtaking Immersion - Discover a deeper gaming experience with support for haptic feedback, adaptive triggers, and 3D Audio technology.</li>
 			<li>Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do.</li>
 		</ul>
-	</div> `
+	</div> `;
 
-    let thumbnails = Item.itemInfo.itemImg
-    price.innerText = Item.itemInfo.newItemPrice
-    largeImage.src = Item.itemInfo.itemImg[0]
-    thumbnails.forEach((tb) => document.getElementById("thumbnailPanel").innerHTML += `<div class="tbcon"><img class="tbnail" src=${tb} alt="" onclick='changeMainThumbNail(event)'></div>`)
+	loadThumbnails();
 }
 
-
-
 if (itemCategory === "TV") {
-    productDetails.innerHTML = `
+	productDetails.innerHTML = `
 	<h1>${Item.itemInfo.name}</h1>
 	<h2>${Item.itemInfo.description1}</h2>
 	<div class="qty">
@@ -262,279 +245,325 @@ if (itemCategory === "TV") {
 			<li>Breathtaking Immersion - Discover a deeper gaming experience with support for haptic feedback, adaptive triggers, and 3D Audio technology.</li>
 			<li>Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do.</li>
 		</ul>
-	</div> `
+	</div> `;
 
-    let thumbnails = Item.itemInfo.itemImg
-    price.innerText = Item.itemInfo.newItemPrice
-    largeImage.src = Item.itemInfo.itemImg[0]
-    thumbnails.forEach((tb) => document.getElementById("thumbnailPanel").innerHTML += `<div class="tbcon"><img class="tbnail" src=${tb} alt="" onclick='changeMainThumbNail(event)'></div>`)
+	loadThumbnails();
 }
-
-
 
 try {
-    circle1.className += " active2"
-} catch (error) {
-
-}
-let amountDOM = document.getElementById("amount")
+	circle1.className += " active2";
+} catch (error) {}
+let amountDOM = document.getElementById("amount");
 const changeColor = (color) => {
-    let chosenColorElements = document.querySelectorAll("#chosenColor")
-    let colors = document.querySelectorAll(".circle")
+	let chosenColorElements = document.querySelectorAll("#chosenColor");
+	let colors = document.querySelectorAll(".circle");
 
-    chosenColorElements.forEach((clr) => clr.innerText = color)
-    colors.forEach((cl) => cl.classList.remove("active2"))
-    event.target.classList += " active2"
-}
-
-
+	chosenColorElements.forEach((clr) => (clr.innerText = color));
+	colors.forEach((cl) => cl.classList.remove("active2"));
+	event.target.classList += " active2";
+};
 
 const changeMainThumbNail = (event) => {
-    largeImage.src = event.target.src
-    indicateActiveThumbNail()
-}
+	largeImage.src = event.target.src;
+	indicateActiveThumbNail();
+};
 
-
-
-let counter = 0
-let thumbNails = document.querySelectorAll(".tbnail")
-thumbNails[0].className += " tbnactive"
-
+let counter = 0;
+let thumbNails = document.querySelectorAll(".tbnail");
+thumbNails[0].className += " tbnactive";
 
 const indicateActiveThumbNail = () => {
-    thumbNails.forEach((tb) => tb.classList.remove("tbnactive"))
-    thumbNails[counter].classList.add("tbnactive")
-}
-
-
+	let clickedThumbnailId = event.target.dataset.id;
+	thumbNails.forEach((tb) => tb.classList.remove("tbnactive"));
+	if (event.target.nodeName === "IMG") {
+		event.target.classList.add("tbnactive");
+		counter = clickedThumbnailId;
+	} else {
+		thumbNails[counter].classList.add("tbnactive");
+	}
+};
 
 const fwd = () => {
-    let imageArray = Item.itemInfo.itemImg
+	let imageArray = Item.itemInfo.itemImg;
 
-    if (counter >= imageArray.length - 1) {
-        counter = -1
-    }
+	if (counter >= imageArray.length - 1) {
+		counter = -1;
+	}
 
-    counter++
-    largeImage.src = imageArray[counter]
-    thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter
-    indicateActiveThumbNail()
-}
-
-
+	counter++;
+	largeImage.src = imageArray[counter];
+	thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter;
+	indicateActiveThumbNail();
+};
 
 const bwd = () => {
-    let imageArray = Item.itemInfo.itemImg
+	let imageArray = Item.itemInfo.itemImg;
 
-    if (counter <= 0) {
-        counter = imageArray.length
-    }
+	if (counter <= 0) {
+		counter = imageArray.length;
+	}
 
-    counter--
-    largeImage.src = imageArray[counter]
-    thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter
-    indicateActiveThumbNail()
-}
-
-
+	counter--;
+	largeImage.src = imageArray[counter];
+	thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter;
+	indicateActiveThumbNail();
+};
 
 class Products {
-    // LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
-    static selectedForYou() {
-        let product_request = new XMLHttpRequest();
-        product_request.open("GET", "/JSON/product.json", false);
-        product_request.onload = function () {
-            if (product_request.status === 200) {
-                localStorage.StoreItems = this.responseText;
-            }
-        };
-        product_request.send();
-    }
+	// LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
+	static selectedForYou() {
+		let product_request = new XMLHttpRequest();
+		product_request.open("GET", "product.json", false);
+		product_request.onload = function () {
+			if (product_request.status === 200) {
+				localStorage.StoreItems = this.responseText;
+			}
+		};
+		product_request.send();
+	}
 
-    // RETRIEVE ALL ITEMS FROM LOCAL STORAGE
-    static getSelectedProducts() {
-        return JSON.parse(localStorage.StoreItems);
-    }
+	// RETRIEVE ALL ITEMS FROM LOCAL STORAGE
+	static getSelectedProducts() {
+		return JSON.parse(localStorage.StoreItems);
+	}
 }
-
 
 let cart = [];
 class Storage {
-    // RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS
-    static getAllProducts() {
-        return JSON.parse(localStorage.getItem("StoreItems"));
-    }
+	// RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS
+	static getAllProducts() {
+		return JSON.parse(localStorage.getItem("StoreItems"));
+	}
 
+	// SAVE ITEMS TO CART
+	static saveSelectedItemsToCart(cart) {
+		localStorage.Cart = JSON.stringify(cart);
+		localStorage.setItem("Cart", localStorage.Cart);
+	}
 
-    // SAVE ITEMS TO CART
-    static saveSelectedItemsToCart(cart) {
-        localStorage.Cart = JSON.stringify(cart);
-        localStorage.setItem("Cart", localStorage.Cart);
-    }
+	// RETRIEVE ALL ITEMS FROM CART
+	static getItemsInCart() {
+		return JSON.parse(localStorage.getItem("Cart"));
+	}
 
+	// GET THE NUMBER OF ITEMS IN CART
+	static numberOfItemsInCart() {
+		if (Storage.getItemsInCart() === null || undefined) {
+			return "0";
+		} else {
+			let mapCart = Storage.getItemsInCart().map((cI) => cI.amount);
+			let reduceCart = mapCart.reduce((x, y) => x + y, 0);
+			return reduceCart;
+		}
+	}
 
-    // RETRIEVE ALL ITEMS FROM CART
-    static getItemsInCart() {
-        return JSON.parse(localStorage.getItem("Cart"));
-    }
+	// UPDATE CART
+	static updateCart(cartName) {
+		Storage.saveSelectedItemsToCart(cartName);
+		cartDom.innerText = Storage.numberOfItemsInCart();
+	}
 
+	// GET AND SAVE PICKED ITEM TO CART
+	static getItemAndSaveToCart() {
+		let getbackcart = JSON.parse(localStorage.getItem("Cart"));
 
-    // GET THE NUMBER OF ITEMS IN CART
-    static numberOfItemsInCart() {
-        if (Storage.getItemsInCart() === null || undefined) {
-            return "0"
-        } else {
-            let mapCart = Storage.getItemsInCart().map(cI => cI.amount)
-            let reduceCart = mapCart.reduce((x, y) => x + y, 0)
-            return reduceCart;
-        }
-    }
+		if (cart === null || cart.length === 0) {
+			cart = [pickedItem];
+			Storage.updateCart(cart);
+		}
 
+		if (cart !== null || cart.length !== 0) {
+			let pickedItemID = Item.id;
+			let check = getbackcart.find((item) => item.id === pickedItemID);
 
-    // UPDATE CART
-    static updateCart(cartName) {
-        Storage.saveSelectedItemsToCart(cartName);
-        cartDom.innerText = Storage.numberOfItemsInCart();
-    }
+			if (check) {
+				check.amount = parseInt(amountDOM.value);
+				Storage.updateCart(getbackcart);
+			}
 
-
-    // GET AND SAVE PICKED ITEM TO CART
-    static getItemAndSaveToCart() {
-        let getbackcart = JSON.parse(localStorage.getItem("Cart"));
-
-        if (cart === null || cart.length === 0) {
-            cart = [pickedItem];
-            Storage.updateCart(cart)
-        }
-
-        if (cart !== null || cart.length !== 0) {
-            let pickedItemID = Item.id;
-            let check = getbackcart.find(item => item.id === pickedItemID)
-
-            if (check) {
-                check.amount = parseInt(amountDOM.value);
-                Storage.updateCart(getbackcart)
-            }
-
-            if (!check) {
-                getbackcart = [...getbackcart, pickedItem]
-                Storage.updateCart(getbackcart)
-            }
-        };
-    }
+			if (!check) {
+				getbackcart = [...getbackcart, pickedItem];
+				Storage.updateCart(getbackcart);
+			}
+		}
+	}
 }
 Products.selectedForYou();
 
-
-
 let itemCount = 1;
 let findItem;
-let getbackcart = JSON.parse(localStorage.getItem("Cart"))
-
+let getbackcart = JSON.parse(localStorage.getItem("Cart"));
 
 try {
-    findItem = getbackcart.find((item) => item.id === Item.id)
+	findItem = getbackcart.find((item) => item.id === Item.id);
 } catch (error) {}
 
-
 amountDOM.addEventListener("input", (event) => {
-    if (parseInt(event.target.value) <= 1) {
-        event.target.value = 1
-    }
+	if (parseInt(event.target.value) <= 1) {
+		event.target.value = 1;
+	}
 
-    itemCount = event.target.value;
+	itemCount = event.target.value;
 
-    try {
-        findItem.amount = parseInt(event.target.value)
-    } catch (error) {
+	try {
+		findItem.amount = parseInt(event.target.value);
+	} catch (error) {}
 
-    }
-
-    if (!findItem) {
-        Item.amount = parseInt(event.target.value)
-    }
-})
-
+	if (!findItem) {
+		Item.amount = parseInt(event.target.value);
+	}
+});
 
 if (findItem) {
-    amountDOM.value = findItem.amount
-    itemCount = parseInt(amountDOM.value)
+	amountDOM.value = findItem.amount;
+	itemCount = parseInt(amountDOM.value);
 }
-
-
-
 
 class cartItems {
+	static increase() {
+		itemCount++;
 
-    static increase() {
-        itemCount++
+		let pkdItem = {
+			...Item,
+			amount: itemCount,
+		};
+		amountDOM.value = itemCount;
 
-        let pkdItem = {
-            ...Item,
-            amount: itemCount
-        }
-        amountDOM.value = itemCount
+		Item = pkdItem;
+		return Item;
+	}
 
+	static decrease() {
+		itemCount--;
 
-        Item = pkdItem
-        return Item
-    }
+		if (itemCount <= 1) itemCount = 1;
 
-    static decrease() {
-        itemCount--
-
-        if (itemCount <= 1) itemCount = 1
-
-        amountDOM.value = itemCount
-        let pkdItem = {
-            ...Item,
-            amount: itemCount
-        }
-        Item = pkdItem
-        return Item
-    }
+		amountDOM.value = itemCount;
+		let pkdItem = {
+			...Item,
+			amount: itemCount,
+		};
+		Item = pkdItem;
+		return Item;
+	}
 }
-
-
 
 // POP-UP NOTIFICATION
 const popupNotification = (itemName, itemImage) => {
-    let notification = document.getElementById("notify-box"),
-        creatNotBox = document.createElement("div");
-    creatNotBox.classList = " notification on"
-    creatNotBox.innerHTML = `<img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to cart</p>`
-    notification.appendChild(creatNotBox)
-    setTimeout(() => {
-        creatNotBox.classList = " notification off"
-    }, 2500)
-    setTimeout(() => {
-        creatNotBox.classList = "complete-off"
-    }, 3200)
-    setTimeout(() => {
-        creatNotBox.classList = "die"
-    }, 3200)
-}
-
+	let notification = document.getElementById("notify-box"),
+		creatNotBox = document.createElement("div");
+	creatNotBox.classList = " notification on";
+	creatNotBox.innerHTML = `<img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to cart</p>`;
+	notification.appendChild(creatNotBox);
+	setTimeout(() => {
+		creatNotBox.classList = " notification off";
+	}, 2500);
+	setTimeout(() => {
+		creatNotBox.classList = "complete-off";
+	}, 3200);
+	setTimeout(() => {
+		creatNotBox.classList = "die";
+	}, 3200);
+};
 
 // DISPLAY NUMBER OF ITEM IN CART
 let cartDom = document.getElementById("items-in-cart");
 try {
-    cartDom.innerText = Storage.numberOfItemsInCart();
+	cartDom.innerText = Storage.numberOfItemsInCart();
 } catch (error) {}
-
 
 // ADD VIEWED ITEM TO CART
 let ItemsInCart = JSON.parse(localStorage.getItem("Cart")),
-    pickedItem;
+	pickedItem;
 const addToCart = () => {
-    let pickItemFromStore = Item
-    popupNotification(pickItemFromStore.itemInfo.name, pickItemFromStore.itemInfo.itemImg[0])
-    pickedItem = Item
-    if (pickItemFromStore) {
-        try {
-            Storage.getItemAndSaveToCart();
-        } catch (error) {
-            console.log(error);
-        }
-    }
+	let pickItemFromStore = Item;
+	pickedItem = Item;
+	if (pickItemFromStore) {
+		try {
+			Storage.getItemAndSaveToCart();
+			popupNotification(
+				pickItemFromStore.itemInfo.name,
+				pickItemFromStore.itemInfo.itemImg[0]
+			);
+		} catch (error) {
+			console.log(error);
+		}
+	}
 };
+
+const buyItem = () => {
+	Item.amount = Number(amountDOM.value);
+	let cartSummary = {
+		subtotal: Item.amount * Number(Item.itemInfo.newItemPrice),
+		deliveryfee: 3,
+		tax: 3.45,
+		total: (
+			Item.amount * Number(Item.itemInfo.newItemPrice) +
+			3 +
+			3.45 -
+			(Item.amount * Number(Item.itemInfo.newItemPrice) + 3 + 3.45) * (10 / 100)
+		).toFixed(2),
+	};
+	localStorage.setItem("cartSummary", JSON.stringify(cartSummary));
+	localStorage.setItem("buy", JSON.stringify(Item));
+	window.location.href = "checkout.html";
+};
+
+const toCart = () => {
+	window.location.href = "cart.html";
+};
+
+const goHome = () => {
+	window.location.href = "index.html";
+};
+
+//Menu
+let menu = document.getElementById("menu"),
+	mb = document.getElementById("mb");
+let close = document.querySelectorAll("#close");
+menu.style.display = "none";
+
+const removePadding = () => {
+	menu.style.height = "0px";
+	menu.style.padding = "0px";
+};
+
+const openMenu = (e) => {
+	menu.style.display = "flex";
+	removePadding();
+	setTimeout(() => {
+		menu.style.paddingTop = "20px";
+		menu.style.height = "400px";
+	}, 20);
+};
+
+const closeMenu = () => {
+	removePadding();
+	setTimeout(() => {
+		menu.style.display = "none";
+	}, 520);
+};
+
+document.addEventListener("click", (e) => {
+	if (e.target !== menu && menu.clientHeight > 0) {
+		removePadding();
+	}
+});
+
+//Accordions
+let accordions = document.querySelectorAll(".table");
+try {
+	for (let i in accordions) {
+		accordions[i].style.height = "0px";
+	}
+} catch (error) {}
+
+const openAccordion = (accor) => {
+	let accordion = document.getElementById(accor);
+	if (accordion.style.height === `${accordion.scrollHeight}px`) {
+		accordion.style.height = "0px";
+	} else {
+		accordion.style.height = accordion.scrollHeight + "px";
+	}
+};
+openAccordion("description");

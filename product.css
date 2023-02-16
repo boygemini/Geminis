@@ -40,11 +40,7 @@
     width: 100%;
     height: 10%;
     position: relative;
-    border-radius: 0px;
-    -webkit-border-radius: ;
-    -moz-border-radius: ;
-    -ms-border-radius: ;
-    -o-border-radius: ;
+    border-radius: 3px;
 }
 
 .logo-nav {
@@ -86,16 +82,16 @@ nav,
 
 .cart-box {
     width: 100px;
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 5px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -113,11 +109,11 @@ nav,
     padding: 2px 5px;
     color: white;
     font-weight: 600;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .login-cart {
@@ -177,9 +173,9 @@ nav ul li {
     flex-direction: column;
     align-items: center;
     z-index: 2;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     overflow: hidden;
     transition: .5s ease-in-out;
     -webkit-transition: .5s ease-in-out;
@@ -223,17 +219,17 @@ nav ul li {
     padding: 5px;
     outline: 2px solid #090A0A;
     outline-offset: 2px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .login {
     width: 100px;
-    height: 40px;
-    border-radius: 0px;
+    height: 50px;
+    border-radius: 3px;
     border: none;
     background-color: white;
     border: 2px solid #090A0A;
@@ -244,16 +240,16 @@ nav ul li {
 
 .search-section {
     width: auto;
-    height: 40px;
+    height: 50px;
     display: flex;
     column-gap: 10px;
     bottom: 30px;
     background-color: white;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     padding: 2px;
 }
 
@@ -262,11 +258,11 @@ nav ul li {
     height: 100%;
     padding: 5px 5px 5px 10px;
     border: 1px solid white;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     /*background-color: transparent;
     */
     background-color: white;
@@ -289,11 +285,11 @@ nav ul li {
     background-color: #090A0A;
     color: white;
     border: none;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 /*Product Body*/
@@ -312,7 +308,7 @@ nav ul li {
     height: 60px;
     /* border: 1px solid #368e5b9c; */
     box-shadow: 0px 10px 20px -10px #0a59545d;
-    border-radius: 0px;
+    border-radius: 3px;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
@@ -342,12 +338,12 @@ nav ul li {
     right: 0;
     margin: auto;
     z-index: 9283920282;
-    border-radius: 0px;
+    border-radius: 3px;
     /* box-shadow: 0px -20px 30px -20px whitesmoke inset; */
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 #notify-box {
@@ -425,7 +421,7 @@ nav ul li {
         margin-top: -10px;
         opacity: 1;
         padding: 0px;
-        height: 40px;
+        height: 50px;
     }
 
     70% {
@@ -472,11 +468,11 @@ nav ul li {
     position: sticky;
     top: 10px;
     row-gap: 30px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .image img {
@@ -526,7 +522,7 @@ nav ul li {
     outline-offset: 5px;
 }
 
-.tbcon {
+.tbcon{
     height: 50px;
     display: flex;
     justify-content: center;
@@ -561,13 +557,13 @@ nav ul li {
 }
 
 
-.specifications p {
+.specifications p{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.specifications span {
+.specifications span{
     text-align: left;
     width: 40%;
     font-weight: 500;
@@ -621,8 +617,7 @@ strong {
     -o-transition: all .3s ease-in-out;
 }
 
-.circle:hover,
-.active2 {
+.circle:hover, .active2 {
     outline: 2px dashed #090A0A;
     cursor: pointer;
 }
@@ -669,7 +664,7 @@ strong {
 
 .quantity {
     width: auto;
-    height: 40px;
+    height: 50px;
     display: flex;
     column-gap: 5px;
 }
@@ -677,12 +672,12 @@ strong {
 .quantity button,
 .quantity input {
     height: 100%;
-    border-radius: 0px;
+    border-radius: 3px;
     border: 1px solid #090a0a7a;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .quantity button {
@@ -727,16 +722,16 @@ strong {
 }
 
 .add-buy {
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     border: 1px solid rgba(112, 128, 144, 0.31);
     border-top: none;
     border-right: none;
     border-bottom: none;
-    border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 3px;
     height: auto;
     padding: 20px;
     position: relative;
@@ -752,8 +747,8 @@ strong {
     top: 0;
     left: 0;
     padding: 5px 10px;
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 .price {
@@ -789,15 +784,15 @@ strong {
 .add-to-cart,
 .buy-now {
     width: 100%;
-    height: 40px;
+    height: 50px;
     border: 2px solid #090A0A;
     background-color: white;
     font-weight: 600;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .buy-now {
@@ -827,11 +822,11 @@ strong {
     align-items: center;
     height: 80px;
     background-color: whitesmoke;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     padding: 20px;
 }
 
@@ -900,11 +895,11 @@ strong {
     */
     background-color: #090a0a09;
     padding: 10px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .tab h2,
@@ -923,8 +918,8 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }

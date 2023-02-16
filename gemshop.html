@@ -1,179 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop</title>
-    <link rel="stylesheet" href="/CSS/gemshop.css" />
-    <link rel="stylesheet" href="/CSS/gemfonts.css" />
-    <script src="/JAVASCRIPT/gemshop.js" defer></script>
-    <script src="/JAVASCRIPT/search.js" defer></script>
-    <script src="/JAVASCRIPT/filters.js" defer></script>
-</head>
+    <link rel="stylesheet" href="gemshop.css" />
+    <link rel="stylesheet" href="gemfonts.css" />
+    <script src="gemshop.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="filters.js" defer></script>
+  </head>
 
-<body id="bodyy">
+  <body id="bodyy">
     <div class="notify-box">
-        <div id="notify-box">
-            <!-- <img src="/IMAGES/tv4.png" alt="" srcset="" class="noti-img">
+      <div id="notify-box">
+        <!-- <img src="/IMAGES/tv4.png" alt="" srcset="" class="noti-img">
 			<p>You added <strong id="itemname">${itemName}</strong> to cart</p> -->
-        </div>
+      </div>
     </div>
     <section class="slimbanner">
-        <div class="slimcontent">
-            <div class="slimb-left">
-                <p>Open doors to a world of Electronics</p>
-                <hr class="vhr" />
-                <p class="dis-more">Discover More</p>
-            </div>
-            <div class="slimb-right">
-                <p>English</p>
-                <p>USD</p>
-            </div>
+      <div class="slimcontent">
+        <div class="slimb-left">
+          <p>Open doors to a world of Electronics</p>
+          <hr class="vhr" />
+          <p class="dis-more">Discover More</p>
         </div>
+        <div class="slimb-right">
+          <p>English</p>
+          <p>USD</p>
+        </div>
+      </div>
     </section>
     <section id="body">
-        <section class="top-nav">
-            <div class="logo-nav">
-                <nav id="nav-and-products">
-                    <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()" />
-                    <div class="products">
-                        <ul>
-                            <li id="games">Gaming</li>
-                            <li id="phones">Cellphones</li>
-                            <li id="coms">Computer</li>
-                            <li id="spks">Speakers</li>
-                            <li id="tele">TVs</li>
-                        </ul>
-                    </div>
-                </nav>
-
-                <div id="menu">
-                    <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
-                    <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()" />
-                    <ul>
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>Blog</li>
-                        <li>About</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-                <h1 class="logo" onclick="goHome()">Geministore.</h1>
-                <div class="login-cart">
-                    <div class="search-section">
-                        <input type="search" class="search" name="search" id="search" placeholder="Search a product"
-                            autocomplete="off" />
-                        <input type="submit" class="go" value="GO" id="GO" />
-                    </div>
-                    <div class="cart-box" onclick="toCart()">
-                        <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()" />
-                        <p id="items-in-cart">0</p>
-                    </div>
-                    <button type="button" class="login">Login</button>
-                </div>
+      <section class="top-nav">
+        <div class="logo-nav">
+          <nav id="nav-and-products">
+            <img
+              src="/IMAGES/menu.png"
+              alt=""
+              id="mb"
+              class="menu"
+              onclick="openMenu()"
+            />
+            <div class="products">
+              <ul>
+                <li id="games">Gaming</li>
+                <li id="phones">Cellphones</li>
+                <li id="coms">Computer</li>
+                <li id="spks">Speakers</li>
+                <li id="tele">TVs</li>
+              </ul>
             </div>
-        </section>
+          </nav>
 
-        <section class="banner-container">
-            <div class="banner-text">
-                <h1>BLACK FRIDAY DEALS</h1>
-                <p><span>50%</span> OFF</p>
-                <button>Shop Now</button>
+          <div id="menu">
+            <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
+            <img
+              src="/IMAGES/close.png"
+              alt=""
+              class="menu"
+              id="close"
+              onclick="closeMenu()"
+            />
+            <ul>
+              <li>Home</li>
+              <li>Shop</li>
+              <li>Blog</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <h1 class="logo" onclick="goHome()">Geministore.</h1>
+          <div class="login-cart">
+            <div class="search-section">
+              <input
+                type="search"
+                class="search"
+                name="search"
+                id="search"
+                placeholder="Search a product"
+                autocomplete="off"
+              />
+              <input type="submit" class="go" value="GO" id="GO" />
             </div>
-        </section>
+            <div class="cart-box" onclick="toCart()">
+              <img
+                src="/IMAGES/add-to-cart(2).png"
+                alt=""
+                srcset=""
+                onclick="toCart()"
+              />
+              <p id="items-in-cart">0</p>
+            </div>
+            <button type="button" class="login">Login</button>
+          </div>
+        </div>
+      </section>
 
-        <section class="shop-body">
-            <div class="filters">
-                <div class="fil-head">
-                    <h1>Filters</h1>
-                </div>
+      <section class="banner-container">
+        <div class="banner-text">
+          <h1>BLACK FRIDAY DEALS</h1>
+          <p><span>50%</span> OFF</p>
+          <button>Shop Now</button>
+        </div>
+      </section>
 
-                <div class="filterss" id="filters">
-                    <div class="wrapper">
-                        <h1>Price</h1>
-                        <br />
-                        <div class="box">
-                            <input type="radio" name="select" id="firstlevelprice" />
-                            <input type="radio" name="select" id="secondlevelprice" />
-                            <input type="radio" name="select" id="thirdlevelprice" />
-                            <label for="firstlevelprice" class="option-1">
-                                <div class="dot"></div>
-                                <div class="text">$300 to $800</div>
-                            </label>
-                            <label for="secondlevelprice" class="option-2">
-                                <div class="dot"></div>
-                                <div class="text">$900 to $1,500</div>
-                            </label>
-                            <label for="thirdlevelprice" class="option-3">
-                                <div class="dot"></div>
-                                <div class="text">$1,600 to $2,000</div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="option minn">
-                        <p class="applymm" id="applyminmax">APPLY</p>
-                        <div class="mmdiv">
-                            <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min" />
-                            <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max" />
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="apply">
+      <section class="shop-body">
+        <div class="filters">
+          <div class="fil-head">
+            <h1>Filters</h1>
+          </div>
+
+          <div class="filterss" id="filters">
+            <div class="wrapper">
+              <h1>Price</h1>
+              <br />
+              <div class="box">
+                <input type="radio" name="select" id="firstlevelprice" />
+                <input type="radio" name="select" id="secondlevelprice" />
+                <input type="radio" name="select" id="thirdlevelprice" />
+                <label for="firstlevelprice" class="option-1">
+                  <div class="dot"></div>
+                  <div class="text">$300 to $800</div>
+                </label>
+                <label for="secondlevelprice" class="option-2">
+                  <div class="dot"></div>
+                  <div class="text">$900 to $1,500</div>
+                </label>
+                <label for="thirdlevelprice" class="option-3">
+                  <div class="dot"></div>
+                  <div class="text">$1,600 to $2,000</div>
+                </label>
+              </div>
+            </div>
+            <div class="option minn">
+              <p class="applymm" id="applyminmax">APPLY</p>
+              <div class="mmdiv">
+                <input
+                  type="text"
+                  class="minmax"
+                  name=""
+                  id="min"
+                  value="300"
+                  placeholder="Min"
+                />
+                <input
+                  type="text"
+                  name=""
+                  class="minmax"
+                  id="max"
+                  value="5000"
+                  placeholder="Max"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- <div class="apply">
 					<button class="" type="submit">Apply</button>
 				</div> -->
+        </div>
+        <div class="available-items">
+          <div class="littlebans">
+            <div class="b-holder hol1">
+              <div class="shade" id="games">
+                <p>Gaming</p>
+              </div>
             </div>
-            <div class="available-items">
-                <div class="littlebans">
-                    <div class="b-holder hol1">
-                        <div class="shade" id="games">
-                            <p>Gaming</p>
-                        </div>
-                    </div>
-                    <div class="b-holder hol2">
-                        <div class="shade" id="phones">
-                            <p>Cell Phones</p>
-                        </div>
-                    </div>
-                    <div class="b-holder hol3">
-                        <div class="shade" id="coms">
-                            <p>Computers & Laptops</p>
-                        </div>
-                    </div>
-                    <div class="b-holder hol4">
-                        <div class="shade" id="spks">
-                            <p>Speakers</p>
-                        </div>
-                    </div>
-                    <div class="b-holder hol5">
-                        <div class="shade" id="tele">
-                            <p>Television</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="res-sort">
-                    <h1 id="result-title" class="cat-head"></h1>
-                    <div class="sort-hol">
-                        <p>Sort</p>
-                        <select name="sort" id="select" onchange="sorting(event)">
-                            <option value="Random">Random</option>
-                            <option value="Ascending">Ascending price</option>
-                            <option value="Descending">Descending price</option>
-                        </select>
-                    </div>
-                </div>
-                <div id="showbox" onload="onLoad()">
-                    <div class="full-cat">
-                        <div class="section-title">
-                            <h1 id="sec-name-gaming"></h1>
-                            <button class="all-category" id="all-category"
-                                onclick="window.location='gemshop.html?category=gaming&Order=Random&Page=0'">
-                                See All Gamings
-                            </button>
-                        </div>
-                        <div class="av-box" id="gamings">
-                            <!-- <div class="item-box">
+            <div class="b-holder hol2">
+              <div class="shade" id="phones">
+                <p>Cell Phones</p>
+              </div>
+            </div>
+            <div class="b-holder hol3">
+              <div class="shade" id="coms">
+                <p>Computers & Laptops</p>
+              </div>
+            </div>
+            <div class="b-holder hol4">
+              <div class="shade" id="spks">
+                <p>Speakers</p>
+              </div>
+            </div>
+            <div class="b-holder hol5">
+              <div class="shade" id="tele">
+                <p>Television</p>
+              </div>
+            </div>
+          </div>
+          <div class="res-sort">
+            <h1 id="result-title" class="cat-head"></h1>
+            <div class="sort-hol">
+              <p>Sort</p>
+              <select name="sort" id="select" onchange="sorting(event)">
+                <option value="Random">Random</option>
+                <option value="Ascending">Ascending price</option>
+                <option value="Descending">Descending price</option>
+              </select>
+            </div>
+          </div>
+          <div id="showbox" onload="onLoad()">
+            <div class="full-cat">
+              <div class="section-title">
+                <h1 id="sec-name-gaming"></h1>
+                <button
+                  class="all-category"
+                  id="all-category"
+                  onclick="window.location='gemshop.html?category=gaming&Order=Random&Page=0'"
+                >
+                  See All Gamings
+                </button>
+              </div>
+              <div class="av-box" id="gamings">
+                <!-- <div class="item-box">
 							<img src="/IMAGES/ipad2.png" alt="">
 							<div class="item-details">
 								<h1>iPhone 13 Pro Max</h1>
@@ -192,7 +231,7 @@
 								<button>Add to Cart</button>
 							</div>
 						</div> -->
-                            <!-- <div class="sel-box">
+                <!-- <div class="sel-box">
 							<div class="img-con">
 								<img src="/IMAGES/frontIpad.png" alt="">
 							</div>
@@ -218,9 +257,9 @@
 								</div>
 							</div>
 						</div> -->
-                        </div>
-                    </div>
-                    <!-- <div class="full-cat">
+              </div>
+            </div>
+            <!-- <div class="full-cat">
 						<div class="section-title">
 							<h1 id="sec-name-gaming"></h1>
 							<button class="all-category" id="all-category">See All</button>
@@ -228,112 +267,125 @@
 						<div class="av-box" id="searc">
 						</div>
 					</div> -->
-                    <div class="full-cat">
-                        <div class="section-title">
-                            <h1 id="sec-name-cellphones"></h1>
-                            <button class="all-category" id="all-category"
-                                onclick="window.location='gemshop.html?category=cellphones&Order=Random&Page=0'">
-                                See All Cell Phones
-                            </button>
-                        </div>
-                        <div class="av-box" id="cellphones"></div>
-                    </div>
-                    <div class="full-cat">
-                        <div class="section-title">
-                            <h1 id="sec-name-computer"></h1>
-                            <button class="all-category" id="all-category"
-                                onclick="window.location='gemshop.html?category=computers&Order=Random&Page=0'">
-                                See All Computers
-                            </button>
-                        </div>
-                        <div class="av-box" id="computers"></div>
-                    </div>
-                    <div class="full-cat">
-                        <div class="section-title">
-                            <h1 id="sec-name-speakers"></h1>
-                            <button class="all-category" id="all-category"
-                                onclick="window.location='gemshop.html?category=speakers&Order=Random&Page=0'">
-                                See All Speakers
-                            </button>
-                        </div>
-                        <div class="av-box" id="speakers"></div>
-                    </div>
-                    <div class="full-cat">
-                        <div class="section-title">
-                            <h1 id="sec-name-tv"></h1>
-                            <button class="all-category" id="all-category"
-                                onclick="window.location='gemshop.html?category=tv&Order=Random&Page=0'">
-                                See All TVs
-                            </button>
-                        </div>
-                        <div class="av-box" id="TV"></div>
-                    </div>
-                </div>
-                <div class="pagindiv pgd">
-                    <button class="prev-next" id="prevPage">Prev</button>
-                    <div class="pagindiv" id="pagindiv"></div>
-                    <button class="prev-next" id="nextPage">Next</button>
-                </div>
+            <div class="full-cat">
+              <div class="section-title">
+                <h1 id="sec-name-cellphones"></h1>
+                <button
+                  class="all-category"
+                  id="all-category"
+                  onclick="window.location='gemshop.html?category=cellphones&Order=Random&Page=0'"
+                >
+                  See All Cell Phones
+                </button>
+              </div>
+              <div class="av-box" id="cellphones"></div>
             </div>
-            <!-- <section class="visit-our-support">
+            <div class="full-cat">
+              <div class="section-title">
+                <h1 id="sec-name-computer"></h1>
+                <button
+                  class="all-category"
+                  id="all-category"
+                  onclick="window.location='gemshop.html?category=computers&Order=Random&Page=0'"
+                >
+                  See All Computers
+                </button>
+              </div>
+              <div class="av-box" id="computers"></div>
+            </div>
+            <div class="full-cat">
+              <div class="section-title">
+                <h1 id="sec-name-speakers"></h1>
+                <button
+                  class="all-category"
+                  id="all-category"
+                  onclick="window.location='gemshop.html?category=speakers&Order=Random&Page=0'"
+                >
+                  See All Speakers
+                </button>
+              </div>
+              <div class="av-box" id="speakers"></div>
+            </div>
+            <div class="full-cat">
+              <div class="section-title">
+                <h1 id="sec-name-tv"></h1>
+                <button
+                  class="all-category"
+                  id="all-category"
+                  onclick="window.location='gemshop.html?category=tv&Order=Random&Page=0'"
+                >
+                  See All TVs
+                </button>
+              </div>
+              <div class="av-box" id="TV"></div>
+            </div>
+          </div>
+          <div class="pagindiv pgd">
+            <button class="prev-next" id="prevPage">Prev</button>
+            <div class="pagindiv" id="pagindiv"></div>
+            <button class="prev-next" id="nextPage">Next</button>
+          </div>
+        </div>
+        <!-- <section class="visit-our-support">
 				<div class="vv">
 					<h1>Visit our Support Center</h1>
 					<img src="/IMAGES/customer-support.png" alt="">
 				</div>
 				<button class="visit" type="button">Visit</button>
 			</section> -->
-        </section>
+      </section>
     </section>
 
     <script>
-        "use strict";
+      "use strict";
 
-        const goHome = () => {
-            window.location.href = "/HTML/gemstore.html";
-        };
+      const goHome = () => {
+        window.location.href = "index.html";
+      };
 
-        const toCart = () => {
-            window.location.href = "/HTML/cart.html";
-        };
+      const toCart = () => {
+        window.location.href = "cart.html";
+      };
 
-        let menu = document.getElementById("menu"),
-            mb = document.getElementById("mb");
-        let close = document.querySelectorAll("#close");
-        menu.style.display = "none";
+      let menu = document.getElementById("menu"),
+        mb = document.getElementById("mb");
+      let close = document.querySelectorAll("#close");
+      menu.style.display = "none";
 
-        const removePadding = () => {
-            menu.style.height = "0px";
-            menu.style.padding = "0px";
-        };
+      const removePadding = () => {
+        menu.style.height = "0px";
+        menu.style.padding = "0px";
+      };
 
-        const openMenu = (e) => {
-            menu.style.display = "flex";
-            removePadding();
-            setTimeout(() => {
-                menu.style.paddingTop = "20px";
-                menu.style.height = "400px";
-            }, 20);
-        };
+      const openMenu = (e) => {
+        menu.style.display = "flex";
+        removePadding();
+        setTimeout(() => {
+          menu.style.paddingTop = "20px";
+          menu.style.height = "400px";
+        }, 20);
+      };
 
-        const closeMenu = () => {
-            removePadding();
-            setTimeout(() => {
-                menu.style.display = "none";
-            }, 520);
-        };
+      const closeMenu = () => {
+        removePadding();
+        setTimeout(() => {
+          menu.style.display = "none";
+        }, 520);
+      };
 
-        document.addEventListener("click", (e) => {
-            if (e.target !== menu && menu.clientHeight > 0) {
-                removePadding();
-            }
-        });
+      document.addEventListener("click", (e) => {
+        if (e.target !== menu && menu.clientHeight > 0) {
+          removePadding();
+        }
+      });
     </script>
     <footer id="footer">
-        <h1>
-            Shop by
-            <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
-        </h1>
+      <h1>
+        Shop by
+        <a href="http://" target="_blank" rel="noopener noreferrer"
+          >jubril bolajoko</a
+        >
+      </h1>
     </footer>
-</body>
-
+  </body>
 </html>

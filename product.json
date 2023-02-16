@@ -25,7 +25,8 @@
             "newItemPrice": "630",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "Xbox"
+            "brand": "Xbox",
+            "category": "Gaming"
           }
         },
         {
@@ -44,7 +45,8 @@
             "newItemPrice": "400",
             "oldItemPrice": "$544",
             "itemTotal": "400",
-            "brand": "Xbox"
+            "brand": "Xbox",
+            "category": "Gaming"
           }
         },
         {
@@ -63,7 +65,8 @@
             "newItemPrice": "540",
             "oldItemPrice": "$544",
             "itemTotal": "540",
-            "brand": "Ps"
+            "brand": "Ps",
+            "category": "Gaming"
           }
         },
         {
@@ -82,7 +85,8 @@
             "newItemPrice": "620",
             "oldItemPrice": "$544",
             "itemTotal": "620",
-            "brand": "Ps"
+            "brand": "Ps",
+            "category": "Gaming"
           }
         },
         {
@@ -101,7 +105,8 @@
             "newItemPrice": "600",
             "oldItemPrice": "$544",
             "itemTotal": "600",
-            "brand": "Ps"
+            "brand": "Ps",
+            "category": "Gaming"
           }
         },
         {
@@ -120,7 +125,8 @@
             "newItemPrice": "330",
             "oldItemPrice": "$544",
             "itemTotal": "330",
-            "brand": "Ps"
+            "brand": "Ps",
+            "category": "Gaming"
           }
         },
         {
@@ -139,7 +145,8 @@
             "newItemPrice": "850",
             "oldItemPrice": "$544",
             "itemTotal": "850",
-            "brand": "Ps"
+            "brand": "Ps",
+            "category": "Gaming"
           }
         },
         {
@@ -157,7 +164,9 @@
             "description2": "",
             "newItemPrice": "900",
             "oldItemPrice": "$544",
-            "itemTotal": ""
+            "itemTotal": "900",
+            "brand": "PS",
+            "category": "Gaming"
           }
         },
         {
@@ -176,7 +185,8 @@
             "newItemPrice": "1200",
             "oldItemPrice": "$544",
             "itemTotal": "1000",
-            "brand": "Xbox"
+            "brand": "Xbox",
+            "category": "Gaming"
           }
         },
         {
@@ -195,7 +205,8 @@
             "newItemPrice": "1112",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "Xbox"
+            "brand": "Xbox",
+            "category": "Gaming"
           }
         }
       ],
@@ -206,10 +217,10 @@
             "name": "LG",
             "itemImg": [
               "/IMAGES/frontIpad.png",
-              "/IMAGES/frontIpad.png",
-              "/IMAGES/frontIpad.png",
-              "/IMAGES/frontIpad.png",
-              "/IMAGES/frontIpad.png"
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/ipad2.png",
+              "/IMAGES/jbl.png"
             ],
             "description1": "LG X16",
             "description2": "",
@@ -217,7 +228,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "LG",
-            "memory": "16"
+            "memory": "16",
+            "category": "Cellphones"
           }
         },
         {
@@ -237,13 +249,14 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "Apple",
-            "memory": "128"
+            "memory": "128",
+            "category": "Cellphones"
           }
         },
         {
-          "id": "2012",
+          "id": "4219",
           "itemInfo": {
-            "name": "iPhone 13 Mini",
+            "name": "Samsung S9 Plus",
             "itemImg": [
               "/IMAGES/iphone3.webp",
               "/IMAGES/iphone3.webp",
@@ -254,716 +267,38 @@
             "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
             "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "1032",
-          "itemInfo": {
-            "name": "iPhone 12 Pro Max",
-            "itemImg": [
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp",
-              "/IMAGES/iphone2.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Space Grey",
-            "description2": "",
-            "newItemPrice": "950",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2012",
-          "itemInfo": {
-            "name": "iPhone 13 Mini",
-            "itemImg": [
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp",
-              "/IMAGES/iphone3.webp"
-            ],
-            "description1": "iPhone 12 Pro Max - Gold",
-            "description2": "",
-            "newItemPrice": "520",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Apple",
-            "memory": "128"
-          }
-        },
-        {
-          "id": "2837",
-          "itemInfo": {
-            "name": "Samsung",
-            "itemImg": [
-              "/IMAGES/iphone4.webp",
-              "/IMAGES/iphone4.webp",
-              "/IMAGES/iphone4.webp",
-              "/IMAGES/iphone4.webp",
-              "/IMAGES/iphone4.webp"
-            ],
-            "description1": "Samsung S16",
-            "description2": "",
-            "newItemPrice": "750",
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "Samsung",
-            "memory": "32"
+            "memory": "128",
+            "category": "Cellphones"
           }
         },
         {
-          "id": "2187",
+          "id": "1032",
           "itemInfo": {
-            "name": "Infinix",
+            "name": "Samsung S8 Plus",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Samsung",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "9284",
+          "itemInfo": {
+            "name": "Itel A33",
             "itemImg": [
               "/IMAGES/iphone3.webp",
               "/IMAGES/iphone3.webp",
@@ -971,59 +306,41 @@
               "/IMAGES/iphone3.webp",
               "/IMAGES/iphone3.webp"
             ],
-            "description1": "Infinix Hot 10",
+            "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
-            "newItemPrice": "1000",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Itel",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "Infinix HOT20",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "Infinix",
-            "memory": "16"
+            "memory": "128",
+            "category": "Cellphones"
           }
         },
         {
-          "id": "2010",
+          "id": "8283",
           "itemInfo": {
-            "name": "Itel",
-            "itemImg": [
-              "/IMAGES/iphone5.webp",
-              "/IMAGES/iphone5.webp",
-              "/IMAGES/iphone5.webp",
-              "/IMAGES/iphone5.webp",
-              "/IMAGES/iphone5.webp"
-            ],
-            "description1": "Itel Hot 9",
-            "description2": "",
-            "newItemPrice": "910",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Itel",
-            "memory": "16"
-          }
-        },
-        {
-          "id": "2883",
-          "itemInfo": {
-            "name": "iTel",
-            "itemImg": [
-              "/IMAGES/iphone6.jpg",
-              "/IMAGES/iphone6.jpg",
-              "/IMAGES/iphone6.jpg",
-              "/IMAGES/iphone6.jpg",
-              "/IMAGES/iphone6.jpg"
-            ],
-            "description1": "Itel Hot 10",
-            "description2": "",
-            "newItemPrice": "830",
-            "oldItemPrice": "$544",
-            "itemTotal": "630",
-            "brand": "Itel",
-            "memory": "16"
-          }
-        },
-        {
-          "id": "2018",
-          "itemInfo": {
-            "name": "iPhone 8 Plus",
+            "name": "iPhone 14 Pro Max",
             "itemImg": [
               "/IMAGES/iphone3.webp",
               "/IMAGES/iphone3.webp",
@@ -1031,73 +348,602 @@
               "/IMAGES/iphone3.webp",
               "/IMAGES/iphone3.webp"
             ],
-            "description1": "iPhone 8 Plus Red",
+            "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
-            "newItemPrice": "350",
+            "newItemPrice": "520",
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "Apple",
-            "memory": "16"
+            "memory": "128",
+            "category": "Cellphones"
           }
         },
         {
-          "id": "2831",
+          "id": "1032",
           "itemInfo": {
-            "name": "iPhone 12 Pro Max",
+            "name": "iPhone 11 ",
             "itemImg": [
-              "/IMAGES/iphone4.webp",
-              "/IMAGES/iphone4.webp",
-              "/IMAGES/iphone4.webp",
-              "/IMAGES/iphone4.webp",
-              "/IMAGES/iphone4.webp"
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
             ],
-            "description1": "iPhone 12 Pro Max Black",
+            "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
-            "newItemPrice": "932",
+            "newItemPrice": "950",
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "Apple",
-            "memory": "64"
+            "memory": "128",
+            "category": "Cellphones"
           }
         },
         {
-          "id": "2987",
+          "id": "9127",
           "itemInfo": {
-            "name": "iPhone 12",
+            "name": "iPhone 13 Mini",
             "itemImg": [
-              "/IMAGES/ipad1.jpg",
-              "/IMAGES/ipad1.jpg",
-              "/IMAGES/ipad1.jpg",
-              "/IMAGES/ipad1.jpg",
-              "/IMAGES/ipad1.jpg"
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
             ],
-            "description1": "iPhone 12 White",
+            "description1": "iPhone 12 Pro Max - Gold",
             "description2": "",
-            "newItemPrice": "400",
+            "newItemPrice": "520",
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "Apple",
-            "memory": "64"
+            "memory": "128",
+            "category": "Cellphones"
           }
         },
         {
-          "id": "2989",
+          "id": "1032",
           "itemInfo": {
-            "name": "Samsung s6",
+            "name": "Samsung S10",
             "itemImg": [
-              "/IMAGES/ipad2.jpg",
-              "/IMAGES/ipad2.jpg",
-              "/IMAGES/ipad2.jpg",
-              "/IMAGES/ipad2.jpg",
-              "/IMAGES/ipad2.jpg"
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
             ],
-            "description1": "Samsung S6 Blue",
+            "description1": "iPhone 12 Pro Max - Space Grey",
             "description2": "",
-            "newItemPrice": "400",
+            "newItemPrice": "950",
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "Samsung",
-            "memory": "64"
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "5284",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "Infinix HOT 65",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Infinix",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "2193",
+          "itemInfo": {
+            "name": "LG X9",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "LG",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "LG AS8",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "LG",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "6489",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "6193",
+          "itemInfo": {
+            "name": "Infinix J9",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Infinix",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "Itel R10",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Itel",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "5629",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "9180",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "7481",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "7389",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1830",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "128",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "256",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "4729",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "256",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "256",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1992",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "64",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "64",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "3131",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "64",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "1032",
+          "itemInfo": {
+            "name": "iPhone 12 Pro Max",
+            "itemImg": [
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp",
+              "/IMAGES/iphone2.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Space Grey",
+            "description2": "",
+            "newItemPrice": "950",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "32",
+            "category": "Cellphones"
+          }
+        },
+        {
+          "id": "4211",
+          "itemInfo": {
+            "name": "iPhone 13 Mini",
+            "itemImg": [
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp",
+              "/IMAGES/iphone3.webp"
+            ],
+            "description1": "iPhone 12 Pro Max - Gold",
+            "description2": "",
+            "newItemPrice": "520",
+            "oldItemPrice": "$544",
+            "itemTotal": "630",
+            "brand": "Apple",
+            "memory": "32",
+            "category": "Cellphones"
           }
         }
       ],
@@ -1118,7 +964,8 @@
             "newItemPrice": "2300",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "jbl"
+            "brand": "jbl",
+            "category": "Speakers"
           }
         },
         {
@@ -1137,7 +984,8 @@
             "newItemPrice": "2100",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "jbl"
+            "brand": "jbl",
+            "category": "Speakers"
           }
         },
         {
@@ -1156,7 +1004,8 @@
             "newItemPrice": "2220",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "jbl"
+            "brand": "jbl",
+            "category": "Speakers"
           }
         },
         {
@@ -1175,7 +1024,8 @@
             "newItemPrice": "1150",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "oraimo"
+            "brand": "oraimo",
+            "category": "Speakers"
           }
         },
         {
@@ -1194,7 +1044,8 @@
             "newItemPrice": "480",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "oraimo"
+            "brand": "oraimo",
+            "category": "Speakers"
           }
         },
         {
@@ -1213,7 +1064,8 @@
             "newItemPrice": "920",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "oraimo"
+            "brand": "oraimo",
+            "category": "Speakers"
           }
         },
         {
@@ -1232,7 +1084,8 @@
             "newItemPrice": "630",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "beatz"
+            "brand": "beatz",
+            "category": "Speakers"
           }
         },
         {
@@ -1251,7 +1104,8 @@
             "newItemPrice": "550",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "beatz"
+            "brand": "beatz",
+            "category": "Speakers"
           }
         },
         {
@@ -1270,7 +1124,8 @@
             "newItemPrice": "800",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "beatz"
+            "brand": "beatz",
+            "category": "Speakers"
           }
         },
         {
@@ -1289,7 +1144,8 @@
             "newItemPrice": "600",
             "oldItemPrice": "$544",
             "itemTotal": "630",
-            "brand": "beatz"
+            "brand": "beatz",
+            "category": "Speakers"
           }
         }
       ],
@@ -1313,7 +1169,8 @@
             "ram": 4,
             "rom": 256,
             "screen": 16,
-            "brand": "Mac"
+            "brand": "Mac",
+            "category": "Computers"
           }
         },
         {
@@ -1335,7 +1192,8 @@
             "ram": 4,
             "rom": 256,
             "screen": 16,
-            "brand": "Mac"
+            "brand": "Mac",
+            "category": "Computers"
           }
         },
         {
@@ -1357,7 +1215,8 @@
             "ram": 8,
             "rom": 512,
             "screen": 13,
-            "brand": "HP"
+            "brand": "HP",
+            "category": "Computers"
           }
         },
         {
@@ -1379,7 +1238,8 @@
             "ram": 16,
             "rom": 1000,
             "screen": 16,
-            "brand": "ASUS"
+            "brand": "ASUS",
+            "category": "Computers"
           }
         },
         {
@@ -1401,7 +1261,8 @@
             "ram": 8,
             "rom": 512,
             "screen": 16,
-            "brand": "Toshiba"
+            "brand": "Toshiba",
+            "category": "Computers"
           }
         },
         {
@@ -1423,7 +1284,8 @@
             "ram": 4,
             "rom": 256,
             "screen": 13,
-            "brand": "HP"
+            "brand": "HP",
+            "category": "Computers"
           }
         },
         {
@@ -1445,7 +1307,8 @@
             "ram": 8,
             "rom": 1000,
             "screen": 16,
-            "brand": "Mac"
+            "brand": "Mac",
+            "category": "Computers"
           }
         },
         {
@@ -1467,7 +1330,8 @@
             "ram": 8,
             "rom": 1000,
             "screen": 16,
-            "brand": "Mac"
+            "brand": "Mac",
+            "category": "Computers"
           }
         },
         {
@@ -1489,7 +1353,8 @@
             "ram": 8,
             "rom": 256,
             "screen": 13,
-            "brand": "HP"
+            "brand": "HP",
+            "category": "Computers"
           }
         },
         {
@@ -1511,7 +1376,8 @@
             "ram": 8,
             "rom": 512,
             "screen": 16,
-            "brand": "Toshiba"
+            "brand": "Toshiba",
+            "category": "Computers"
           }
         }
       ],
@@ -1533,7 +1399,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "hisense",
-            "size": 32
+            "size": 32,
+            "category": "TV"
           }
         },
         {
@@ -1553,7 +1420,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "lg",
-            "size": 32
+            "size": 32,
+            "category": "TV"
           }
         },
         {
@@ -1573,7 +1441,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "midea",
-            "size": 43
+            "size": 43,
+            "category": "TV"
           }
         },
         {
@@ -1593,7 +1462,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "hisense",
-            "size": 43
+            "size": 43,
+            "category": "TV"
           }
         },
         {
@@ -1613,7 +1483,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "hisense",
-            "size": 43
+            "size": 43,
+            "category": "TV"
           }
         },
         {
@@ -1633,7 +1504,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "toshiba",
-            "size": 55
+            "size": 55,
+            "category": "TV"
           }
         },
         {
@@ -1653,7 +1525,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "toshiba",
-            "size": 55
+            "size": 55,
+            "category": "TV"
           }
         },
         {
@@ -1673,7 +1546,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "midea",
-            "size": 43
+            "size": 43,
+            "category": "TV"
           }
         },
         {
@@ -1693,7 +1567,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "lg",
-            "size": 43
+            "size": 43,
+            "category": "TV"
           }
         },
         {
@@ -1713,7 +1588,8 @@
             "oldItemPrice": "$544",
             "itemTotal": "630",
             "brand": "samsung",
-            "size": 32
+            "size": 32,
+            "category": "TV"
           }
         }
       ]
@@ -1762,7 +1638,7 @@
     {
       "id": "2",
       "itemInfo": {
-        "category": "Cellphone",
+        "category": "Cellphones",
         "name": "XBOX 1",
         "itemImg": [
           "/IMAGES/frontIpad.png",
@@ -1781,7 +1657,7 @@
     {
       "id": "3",
       "itemInfo": {
-        "category": "Speaker",
+        "category": "Speakers",
         "name": "XBOX 1",
         "itemImg": [
           "/IMAGES/jblflip6.png",
@@ -1800,7 +1676,7 @@
     {
       "id": "4",
       "itemInfo": {
-        "category": "Computer",
+        "category": "Computers",
         "name": "XBOX 1",
         "itemImg": [
           "/IMAGES/tv4.png",
@@ -1860,7 +1736,7 @@
     {
       "id": "2302",
       "itemInfo": {
-        "category": "Cellphone",
+        "category": "Cellphones",
         "name": "XBOX 1",
         "itemImg": [
           "/IMAGES/frontIpad.png",
@@ -1879,7 +1755,7 @@
     {
       "id": "3931",
       "itemInfo": {
-        "category": "Speaker",
+        "category": "Speakers",
         "name": "XBOX 1",
         "itemImg": [
           "/IMAGES/jblflip6.png",
@@ -1898,7 +1774,7 @@
     {
       "id": "3391",
       "itemInfo": {
-        "category": "Computer",
+        "category": "Computers",
         "name": "XBOX 1",
         "itemImg": [
           "/IMAGES/tv4.png",

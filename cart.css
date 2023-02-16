@@ -3,10 +3,8 @@
 
 #body {
     width: 100%;
-    height: 100%;
     margin: auto;
 }
-
 
 
 .slimcontent {
@@ -48,11 +46,11 @@
     width: 100%;
     height: 80px;
     position: relative;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .logo-nav {
@@ -94,16 +92,16 @@ nav,
 
 .cart-box {
     width: 100px;
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 5px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -121,11 +119,11 @@ nav,
     padding: 2px 5px;
     color: white;
     font-weight: 600;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .login-cart {
@@ -185,9 +183,9 @@ nav ul li {
     flex-direction: column;
     align-items: center;
     z-index: 2;
-    border-top-left-radius: 0px;
+    border-top-left-radius: 3px;
     border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 3px;
     overflow: hidden;
     transition: .5s ease-in-out;
     -webkit-transition: .5s ease-in-out;
@@ -235,17 +233,17 @@ nav ul li {
     padding: 5px;
     outline: 2px solid #090A0A;
     outline-offset: 2px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .login {
     width: 100px;
-    height: 40px;
-    border-radius: 0px;
+    height: 50px;
+    border-radius: 3px;
     border: none;
     background-color: white;
     border: 2px solid #090A0A;
@@ -256,16 +254,16 @@ nav ul li {
 
 .search-section {
     width: auto;
-    height: 40px;
+    height: 50px;
     display: flex;
     column-gap: 10px;
     bottom: 30px;
     background-color: white;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     padding: 2px;
 }
 
@@ -274,11 +272,11 @@ nav ul li {
     height: 100%;
     padding: 5px 5px 5px 10px;
     border: 1px solid white;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     /*background-color: transparent;
     */
     background-color: white;
@@ -302,11 +300,11 @@ nav ul li {
     background-color: #090A0A;
     color: white;
     border: none;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 
@@ -360,11 +358,11 @@ nav ul li {
     color: #090A0A;
     /* padding: 10px 30px; */
     border: 2px solid transparent;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     font-weight: 600;
     position: sticky;
     margin-right: 20px;
@@ -380,12 +378,13 @@ nav ul li {
     background-color: #090A0A;
     color: white;
     padding: 10px 30px;
+    height: 50px;
     border: 2px solid transparent;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     font-weight: 600;
 }
 
@@ -393,12 +392,13 @@ nav ul li {
     background-color: white;
     color: #090A0A;
     padding: 10px 30px;
+    height: 50px;
     border: 2px solid #090A0A;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     font-weight: 400;
 }
 
@@ -422,11 +422,11 @@ nav ul li {
     row-gap: 10px;
     align-items: center;
     column-gap: 30px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .askbuttondiv {
@@ -442,8 +442,8 @@ nav ul li {
 
 .askbutton {
     width: 50%;
-    height: 40px;
-    border-radius: 0px;
+    height: 50px;
+    border-radius: 3px;
     border: 1px solid transparent;
     cursor: pointer;
     font-weight: 600;
@@ -486,11 +486,11 @@ nav ul li {
     height: 100%;
     padding: 20px;
     /* border: 1px solid rgba(128, 128, 128, 0.365); */
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     /* background-color: white; */
     /* box-shadow: 0px 15px 25px -10px #021e541a; */
 }
@@ -509,11 +509,11 @@ nav ul li {
     align-items: center;
     padding: 15px 30px;
     border: 2px dashed grey;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .empty-cart p {
@@ -531,13 +531,13 @@ nav ul li {
     border-left: 3px solid #090A0A;
     /*border-right: 3px solid rgba(93, 82, 197, 0.843);*/
     padding: 25px 25px 25px 25px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -569,11 +569,11 @@ nav ul li {
     align-items: center;
     width: auto;
     padding: 5px 10px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .item-name {
@@ -593,7 +593,7 @@ nav ul li {
 
 .quantity {
     width: auto;
-    height: 40px;
+    height: 50px;
     display: flex;
     column-gap: 5px;
 }
@@ -601,12 +601,12 @@ nav ul li {
 .quantity button,
 .quantity input {
     height: 100%;
-    border-radius: 0px;
+    border-radius: 3px;
     border: 1px solid #090a0a53;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     background-color: transparent;
 }
 
@@ -692,11 +692,11 @@ nav ul li {
     column-gap: 5px;
     background-color: #0869490c;
     padding: 5px 10px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .price {
@@ -718,11 +718,11 @@ nav ul li {
     height: auto;
     border: 1px solid rgba(128, 128, 128, 0.174);
     box-shadow: 0px 15px 25px -10px #021e541a;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -756,11 +756,11 @@ nav ul li {
     color: #090A0A;
     background-color: #0869493a;
     padding: 3px 10px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     cursor: pointer;
     transition: .3s ease-in-out;
     -webkit-transition: .3s ease-in-out;
@@ -788,26 +788,26 @@ nav ul li {
 .promo-code {
     display: flex;
     column-gap: 5px;
-    height: 40px;
+    height: 50px;
     width: 100%;
     border: 1px solid slategray;
-    border-radius: 0px;
+    border-radius: 3px;
     padding: 2px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .promo-code input {
     width: 70%;
     height: 100%;
     border: none;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     color: #086948;
     font-weight: 600;
     outline: none;
@@ -845,11 +845,11 @@ nav ul li {
     padding-bottom: 5px;
     background-color: whitesmoke;
     padding:10px 10px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px; */
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px; */
 }
 
 .dets h2 {
@@ -880,11 +880,11 @@ nav ul li {
     row-gap: 20px;
     background-color: whitesmoke;
     padding: 10px;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .total h1 span {
@@ -919,10 +919,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0px;
+    border-radius: 3px;
     margin-top: 100px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
