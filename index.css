@@ -1000,35 +1000,35 @@ nav ul li {
 }
 
 .bimg1 {
-	background-image: url("images/apple-logo.png");
+	background-image: url("IMAGES/apple-logo.png");
 }
 
 .bimg2 {
-	background-image: url("images/samsung-logo.png");
+	background-image: url("IMAGES/samsung-logo.png");
 }
 
 .bimg3 {
-	background-image: url("images/hp-logo.png");
+	background-image: url("IMAGES/hp-logo.png");
 }
 
 .bimg4 {
-	background-image: url("images/midea-logo.png");
+	background-image: url("IMAGES/midea-logo.png");
 }
 
 .bimg5 {
-	background-image: url("images/lg-logo.png");
+	background-image: url("IMAGES/lg-logo.png");
 }
 
 .bimg6 {
-	background-image: url("images/hisense-logo.png");
+	background-image: url("IMAGES/hisense-logo.png");
 }
 
 .bimg7 {
-	background-image: url("images/toshiba-logo.png");
+	background-image: url("IMAGES/toshiba-logo.png");
 }
 
 .bimg8 {
-	background-image: url("images/xbox-logo.png");
+	background-image: url("IMAGES/xbox-logo.png");
 }
 
 .extra-brand {
@@ -2599,7 +2599,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(images/search.png);
+		/* background-image: url(IMAGES/search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */
@@ -3087,7 +3087,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(images/search.png);
+		/* background-image: url(IMAGES/search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */

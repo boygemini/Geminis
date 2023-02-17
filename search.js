@@ -7,6 +7,15 @@ SEARCH AND SEARCH SUGGESTIONS
 */
 
 //Variables
+const allAnchorTags = [...document.querySelectorAll("a")];
+allAnchorTags.forEach((tag) => {
+	tag.addEventListener("click", (event) => {
+		event.preventDefault();
+		console.log(event.currentTarget);
+		// window.location.href = tag.href;
+	});
+});
+
 let dir2 = JSON.parse(localStorage.getItem("StoreItems"));
 let hs = document.getElementById("hold");
 let search = document.getElementById("search");
@@ -89,7 +98,7 @@ search.addEventListener("input", (event) => {
 		x += `
 		<div class="sug" onclick="sendQuery(event)">
 			<h1 id="sug-h1" onclick="sugClicked(event)">${suggestion[0]}</h1>
-			<img src="images/thinarrow.png"/>
+			<img src="IMAGES/thinarrow.png"/>
 			<h1 class="category" id="sug-cat" disabled>${suggestion[1]}</h1>
 		</div>
 		`;
@@ -802,6 +811,7 @@ const viewProduct = (event) => {
 };
 
 window.onload = onLoad;
+
 //EOC
 //EOC
 //EOC

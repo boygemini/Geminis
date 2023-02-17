@@ -160,7 +160,7 @@ if (itemCategory === "Computers") {
 			<li><span></span>All-Day Battery Life – Go longer than ever with up to 18 hours of battery life.</li>
 			<li><span></span>Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power.</li>
 			<li><span></span>Superfast Memory– 8 GB of unified memory makes your entire system speedy and responsive.That way it can support tasks like memory - hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
-			<li><span></span>Stunning Display – With a 13.3” Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
+			<li><span></span>Stunning Display – With a 13.3” Retina display, IMAGES come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
 		</ul>
 	</div> `;
 
@@ -194,7 +194,7 @@ if (itemCategory === "Speakers") {
 			<li><span></span>All-Day Battery Life – Go longer than ever with up to 18 hours of battery life.</li>
 			<li><span></span>Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power.</li>
 			<li><span></span>Superfast Memory– 8 GB of unified memory makes your entire system speedy and responsive.That way it can support tasks like memory - hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
-			<li><span></span>Stunning Display – With a 13.3” Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
+			<li><span></span>Stunning Display – With a 13.3” Retina display, IMAGES come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
 		</ul>
 	</div> `;
 
