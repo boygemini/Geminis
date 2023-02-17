@@ -1,5 +1,9 @@
 "use strict";
-
+(() => {
+	let webPage = document.querySelector("html");
+	webPage.style.opacity = "1";
+	webPage.style.transition = "1s ease-in-out";
+})();
 
 function storeItemsIfNotAlreadyStored() {
 	if (localStorage.StoreItems === undefined) {
@@ -65,7 +69,7 @@ const loadThumbnails = () => {
 	for (let i in thumbnails) {
 		document.getElementById(
 			"thumbnailPanel"
-		).innerHTML += `<div class="tbcon"><img class="tbnail" data-id="${i}" src=${thumbnails[i]} alt="" onclick='changeMainThumbNail(event)'></div>`;
+		).innerHTML += `<div class="tbcon" onclick='changeMainThumbNail(event)' data-id="${i}" data-name=${thumbnails[i]} style='background-image:url(${thumbnails[i]})'></div>`;
 	}
 };
 if (itemCategory === "Cellphones") {
@@ -102,13 +106,13 @@ if (itemCategory === "Cellphones") {
 	</div>
 	<div class="shipping-pickup">
 	<div class="Pickup">
-		<h1>About this item</h1>
+		<h1 id="abt">About this item</h1>
 		<ul>
-			<li>Unlocked</li>
-			<li>Tested for battery health and guaranteed to come with a battery that exceeds 90% of original capacity.</li>
-			<li>Inspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arm’s length. Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information.</li>
-			<li>Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.</li>
-			<li>Backed by the same one-year satisfaction guarantee as brand new Apple products.</li>
+			<li><span></span>Unlocked</li>
+			<li><span></span>Tested for battery health and guaranteed to come with a battery that exceeds 90% of original capacity.</li>
+			<li><span></span>Inspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arm’s length. Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information.</li>
+			<li><span></span>Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.</li>
+			<li><span></span>Backed by the same one-year satisfaction guarantee as brand new Apple products.</li>
 		</ul>
 	</div> `;
 
@@ -150,13 +154,13 @@ if (itemCategory === "Computers") {
 	</div>
 	<div class="shipping-pickup">
 	<div class="Pickup">
-		<h1>About this item</h1>
+		<h1 id="abt">About this item</h1>
 		<ul>
-			<li>Unlocked</li>
-			<li>All-Day Battery Life – Go longer than ever with up to 18 hours of battery life.</li>
-			<li>Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power.</li>
-			<li>Superfast Memory– 8 GB of unified memory makes your entire system speedy and responsive.That way it can support tasks like memory - hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
-			<li>Stunning Display – With a 13.3” Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
+			<li><span></span>Unlocked</li>
+			<li><span></span>All-Day Battery Life – Go longer than ever with up to 18 hours of battery life.</li>
+			<li><span></span>Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power.</li>
+			<li><span></span>Superfast Memory– 8 GB of unified memory makes your entire system speedy and responsive.That way it can support tasks like memory - hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
+			<li><span></span>Stunning Display – With a 13.3” Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
 		</ul>
 	</div> `;
 
@@ -184,13 +188,13 @@ if (itemCategory === "Speakers") {
 	</div>
 	<div class="shipping-pickup">
 	<div class="Pickup">
-		<h1>About this item</h1>
+		<h1 id="abt">About this item</h1>
 		<ul>
-			<li>Unlocked</li>
-			<li>All-Day Battery Life – Go longer than ever with up to 18 hours of battery life.</li>
-			<li>Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power.</li>
-			<li>Superfast Memory– 8 GB of unified memory makes your entire system speedy and responsive.That way it can support tasks like memory - hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
-			<li>Stunning Display – With a 13.3” Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
+			<li><span></span>Unlocked</li>
+			<li><span></span>All-Day Battery Life – Go longer than ever with up to 18 hours of battery life.</li>
+			<li><span></span>Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power.</li>
+			<li><span></span>Superfast Memory– 8 GB of unified memory makes your entire system speedy and responsive.That way it can support tasks like memory - hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
+			<li><span></span>Stunning Display – With a 13.3” Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
 		</ul>
 	</div> `;
 
@@ -209,13 +213,13 @@ if (itemCategory === "Gaming") {
 	</div>
 	<div class="shipping-pickup">
 	<div class="Pickup">
-		<h1>About this item</h1>
+		<h1 id="abt">About this item</h1>
 		<ul>
-			<li> Next wave of invites will be sent on 11 / 18 / 2022 to qualifying customers.While supplies last</li>
-			<li> Model Number CFI - 1215 A01X</li>
-			<li>Stunning Games - Marvel at incredible graphics and experience new PS5 features.</li>
-			<li>Breathtaking Immersion - Discover a deeper gaming experience with support for haptic feedback, adaptive triggers, and 3D Audio technology.</li>
-			<li>Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do.</li>
+			<li><span></span>Next wave of invites will be sent on 11 / 18 / 2022 to qualifying customers.While supplies last</li>
+			<li><span></span>Model Number CFI - 1215 A01X</li>
+			<li><span></span>Stunning Games - Marvel at incredible graphics and experience new PS5 features.</li>
+			<li><span></span>Breathtaking Immersion - Discover a deeper gaming experience with support for haptic feedback, adaptive triggers, and 3D Audio technology.</li>
+			<li><span></span>Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do.</li>
 		</ul>
 	</div> `;
 
@@ -237,13 +241,13 @@ if (itemCategory === "TV") {
 	</div>
 	<div class="shipping-pickup">
 	<div class="Pickup">
-		<h1>About this item</h1>
+		<h1 id="abt">About this item</h1>
 		<ul>
-			<li> Next wave of invites will be sent on 11 / 18 / 2022 to qualifying customers.While supplies last</li>
-			<li> Model Number CFI - 1215 A01X</li>
-			<li>Stunning Games - Marvel at incredible graphics and experience new PS5 features.</li>
-			<li>Breathtaking Immersion - Discover a deeper gaming experience with support for haptic feedback, adaptive triggers, and 3D Audio technology.</li>
-			<li>Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do.</li>
+			<li><span></span>Next wave of invites will be sent on 11 / 18 / 2022 to qualifying customers.While supplies last</li>
+			<li><span></span>Model Number CFI - 1215 A01X</li>
+			<li><span></span>Stunning Games - Marvel at incredible graphics and experience new PS5 features.</li>
+			<li><span></span>Breathtaking Immersion - Discover a deeper gaming experience with support for haptic feedback, adaptive triggers, and 3D Audio technology.</li>
+			<li><span></span>Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do.</li>
 		</ul>
 	</div> `;
 
@@ -255,32 +259,29 @@ try {
 } catch (error) {}
 let amountDOM = document.getElementById("amount");
 const changeColor = (color) => {
-	let chosenColorElements = document.querySelectorAll("#chosenColor");
 	let colors = document.querySelectorAll(".circle");
-
-	chosenColorElements.forEach((clr) => (clr.innerText = color));
 	colors.forEach((cl) => cl.classList.remove("active2"));
 	event.target.classList += " active2";
 };
 
-const changeMainThumbNail = (event) => {
-	largeImage.src = event.target.src;
-	indicateActiveThumbNail();
-};
-
 let counter = 0;
-let thumbNails = document.querySelectorAll(".tbnail");
+let thumbNails = document.querySelectorAll(".tbcon");
 thumbNails[0].className += " tbnactive";
 
-const indicateActiveThumbNail = () => {
+const indicateActiveThumbNail = (event) => {
 	let clickedThumbnailId = event.target.dataset.id;
 	thumbNails.forEach((tb) => tb.classList.remove("tbnactive"));
-	if (event.target.nodeName === "IMG") {
+	if (event.target.className === "tbcon") {
 		event.target.classList.add("tbnactive");
 		counter = clickedThumbnailId;
 	} else {
 		thumbNails[counter].classList.add("tbnactive");
 	}
+};
+
+const changeMainThumbNail = (event) => {
+	largeImage.src = event.target.dataset.name;
+	indicateActiveThumbNail(event);
 };
 
 const fwd = () => {
@@ -293,7 +294,7 @@ const fwd = () => {
 	counter++;
 	largeImage.src = imageArray[counter];
 	thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter;
-	indicateActiveThumbNail();
+	indicateActiveThumbNail(event);
 };
 
 const bwd = () => {
@@ -306,7 +307,7 @@ const bwd = () => {
 	counter--;
 	largeImage.src = imageArray[counter];
 	thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter;
-	indicateActiveThumbNail();
+	indicateActiveThumbNail(event);
 };
 
 class Products {
@@ -517,53 +518,91 @@ const goHome = () => {
 	window.location.href = "index.html";
 };
 
-//Menu
-let menu = document.getElementById("menu"),
-	mb = document.getElementById("mb");
-let close = document.querySelectorAll("#close");
-menu.style.display = "none";
+// OPEN MENU
+const menuDOM = document.getElementById("menu");
+const menuBtn = document.getElementById("mb");
+menuDOM.style.display = "none";
 
-const removePadding = () => {
-	menu.style.height = "0px";
-	menu.style.padding = "0px";
+const openMenu = () => {
+	menuDOM.style.display = "block";
+
+	if (menuDOM.className.includes("menuout")) {
+		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
+	} else {
+		menuDOM.className += " menuin";
+	}
+	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
 };
 
-const openMenu = (e) => {
-	menu.style.display = "flex";
-	removePadding();
-	setTimeout(() => {
-		menu.style.paddingTop = "20px";
-		menu.style.height = "400px";
-	}, 20);
-};
-
+// CLOSE MENU
 const closeMenu = () => {
-	removePadding();
-	setTimeout(() => {
-		menu.style.display = "none";
-	}, 520);
+	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
+	setTimeout(() => (menuDOM.style.display = "none"), 450);
+	document.lastChild.style.overflow = "scroll"; // Enables the window scrolling
 };
 
-document.addEventListener("click", (e) => {
-	if (e.target !== menu && menu.clientHeight > 0) {
-		removePadding();
+// CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
+window.addEventListener("click", (e) => {
+	if (menuDOM.style.display === "block") {
+		let parent =
+			e.target.parentNode.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode === menuDOM ||
+			e.target.parentNode === menuDOM;
+
+		if (!parent && e.target !== menuBtn) {
+			closeMenu();
+		}
 	}
 });
 
 //Accordions
 let accordions = document.querySelectorAll(".table");
+let accorHeader = document.querySelectorAll(".group-head");
+
 try {
 	for (let i in accordions) {
 		accordions[i].style.height = "0px";
+		accorHeader[i].style.zIndex = i + 1;
 	}
 } catch (error) {}
 
 const openAccordion = (accor) => {
+	let Accordions = document.querySelectorAll(".table");
 	let accordion = document.getElementById(accor);
+	let clickedAccordion = document.querySelector(`[data-id=${accor}]`);
+
+	accorHeader.forEach((a) => {
+		a.className = a.className.replace("activegrouphead", "");
+		a.children[1].style.transform = "rotate(0deg)";
+	});
+
+	clickedAccordion.className += " activegrouphead";
+	clickedAccordion.children[1].style.transform = "rotate(0deg)";
+
 	if (accordion.style.height === `${accordion.scrollHeight}px`) {
 		accordion.style.height = "0px";
+		clickedAccordion.className = clickedAccordion.className.replace(
+			"activegrouphead",
+			""
+		);
+		setTimeout(() => {
+			accordion.style.opacity = "0";
+		}, 100);
 	} else {
-		accordion.style.height = accordion.scrollHeight + "px";
+		Accordions.forEach((acc) => {
+			if (acc.style.height === `${acc.scrollHeight}px`) {
+				acc.style.height = "0px";
+				setTimeout(() => {
+					acc.style.opacity = "0";
+				}, 100);
+			}
+			accordion.style.height = `${accordion.scrollHeight}px`;
+			clickedAccordion.children[1].style.transform = "rotate(180deg)";
+			setTimeout(() => {
+				accordion.style.opacity = "1";
+			}, 300);
+		});
 	}
 };
 openAccordion("description");

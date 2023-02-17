@@ -1,39 +1,48 @@
 @font-face {
-    font-display: block;
-    font-family: 'DSIndigo';
-    font-style: normal;
-    font-weight: 400;
-    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Regular.woff2') format('woff2'),
-        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Regular.woff') format('woff');
+	font-display: block;
+	font-family: "DSIndigo";
+	font-style: normal;
+	font-weight: 400;
+	src: url("https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Regular.woff2")
+			format("woff2"),
+		url("https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Regular.woff")
+			format("woff");
 }
 
 @font-face {
-    font-display: block;
-    font-family: 'DSIndigo';
-    font-style: normal;
-    font-weight: 500;
-    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Medium.woff2') format('woff2'),
-        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Medium.woff') format('woff');
+	font-display: block;
+	font-family: "DSIndigo";
+	font-style: normal;
+	font-weight: 500;
+	src: url("https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Medium.woff2")
+			format("woff2"),
+		url("https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Medium.woff")
+			format("woff");
 }
 
 @font-face {
-    font-display: block;
-    font-family: 'DSIndigo';
-    font-style: normal;
-    font-weight: 600;
-    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Semibold.woff2') format('woff2'),
-        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Semibold.woff') format('woff');
+	font-display: block;
+	font-family: "DSIndigo";
+	font-style: normal;
+	font-weight: 600;
+	src: url("https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Semibold.woff2")
+			format("woff2"),
+		url("https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Semibold.woff")
+			format("woff");
 }
 
 @font-face {
-    font-display: block;
-    font-family: 'DSIndigo';
-    font-style: normal;
-    font-weight: 700;
-    src: url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Bold.woff2') format('woff2'),
-        url('https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Bold.woff') format('woff');
+	font-display: block;
+	font-family: "DSIndigo";
+	font-style: normal;
+	font-weight: 700;
+	src: url("https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Bold.woff2")
+			format("woff2"),
+		url("https://docucdn-a.akamaihd.net/olive/fonts/2.8.0/DSIndigo-Bold.woff")
+			format("woff");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
 /* @font-face {
  font-weight:400;
@@ -107,45 +116,219 @@
  font-family:sofiaFallback
 } */
 
-
 *::-webkit-scrollbar {
-    width: 0px;
+	height: 100%;
+	width: 4px;
+	background-color: #f5f5f5;
 }
 
 *::-webkit-scrollbar-thumb {
-    width: 0px;
+	width: 4px;
+	background-color: #0b6631;
 }
 
 *::-webkit-scrollbar-track {
-    width: 0px;
+	width: 4px;
+}
+
+/* #slimbanner {
+	display: flex;
+	background-color: black;
+	z-index: 5670968574656475869708657465342647586970685746524647586970685746542647586970685746532347586970698574654758697068574653475869706857465;
+	justify-content: center;
+	align-items: center;
+}
+
+.slimcontent {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0px;
+	width: 95%;
+}
+
+.slimb-left,
+.slimb-right {
+	display: flex;
+	column-gap: 10px;
+}
+
+.slimb-left p,
+.slimb-right p {
+	font-size: 12px;
+	color: white;
+	text-transform: capitalize;
+}
+
+.vhr {
+	width: 1px;
+	height: 100%;
+	color: white;
+}
+
+.dis-more {
+	text-decoration: 1px solid underline;
+	color: white;
+	font-weight: bold;
+} */
+
+a {
+	text-decoration: none;
+}
+
+.cart-box {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 295px) {
+	/* .slimb-right {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.top-nav {
+		top: 0px;
+	} */
+
+	.logo-nav {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.login-cart {
+		width: 100%;
+	}
+
+	/* .slimcontent {
+		column-gap: 10px;
+	}
+
+	.slimb-left {
+		column-gap: 1px;
+	} */
+
+	#nav-and-products {
+		justify-self: flex-start;
+		align-self: flex-start;
+		margin-top: 0px;
+	}
+
+	.banner-container {
+	}
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: DSIndigo,Helvetica,Arial,sans-serif;
-    color: #090A0A;
-    font-weight: 400;
-    font-size: 15px;
-    scroll-behavior: smooth;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: DSIndigo;
+	color: #090a0a;
+	font-weight: 400;
+	font-size: 0.95rem;
+	scroll-behavior: smooth;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	outline: none;
+}
+
+html {
+	opacity: 0;
+	height: 100vh;
+}
+
+.gotocart {
+	color: white;
+	background-color: #111111;
+	border: none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	width: auto;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.gotocart:hover {
+	background-color: #111111dc;
+}
+#cart-btn {
+	width: 80%;
+	height: 60px;
+	display: flex;
+	padding: 10px 20px;
+}
+@keyframes pagefadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 .slimbanner {
-    background-color: #0b6631;
-    /* background-color:#81ffb5; */
-    display: none;
-    justify-content: center;
-    align-items: center;
+	background-color: #0b6631;
+	/* background-color:#81ffb5; */
+	display: none;
+	justify-content: center;
+	align-items: center;
 }
 
 body {
-    /* background-color: white; */
-    background-color: #F9FAFC;
-    width: 100%;
+	background-color: white;
+	/* background-color: #f9fafc; */
+	width: 100%;
+}
+
+#body {
+	max-width: 2000px;
+	margin: auto;
+}
+
+.sel-box:hover {
+	/* border: 1px solid rgba(112, 128, 144, 0.552); */
+	background-color: #f6f6f6;
+	cursor: pointer;
+	/* box-shadow: 0px 0px 25px -10px #11111174; */
+	/* box-shadow: 0px 15px 25px -10px #7080903b; */
+	/* background-color: white; */
+}
+
+.sel-box:hover .img-con {
+	border-top: 2px solid #111111;
+	background-color: transparent;
+}
+
+.fadein {
+	animation: fadein 0.5s ease-in-out;
+	-webkit-animation: fadein 0.5s ease-in-out;
+}
+
+.fadeout {
+	animation: fadeout 0.5s ease-in-out;
+	-webkit-animation: fadeout 0.5s ease-in-out;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeout {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }

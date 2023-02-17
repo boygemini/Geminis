@@ -1,10 +1,18 @@
+(() => {
+	let webPage = document.querySelector("html");
+	webPage.style.opacity = "1";
+	webPage.style.transition = "1s ease-in-out";
+})();
+
 const originalCart = JSON.parse(localStorage.getItem("Cart"));
 let itemsInCart = JSON.parse(localStorage.getItem("Cart"));
 
-const lastPage = new URL(document.referrer);
-if (lastPage.pathname === "/product.html") {
-	itemsInCart = [JSON.parse(localStorage.getItem("buy"))];
-}
+try {
+	const lastPage = new URL(document.referrer);
+	if (lastPage.pathname === "/product.html") {
+		itemsInCart = [JSON.parse(localStorage.getItem("buy"))];
+	}
+} catch (error) {}
 
 const shippingName = document.getElementById("ship-name");
 const shippingStreetAddress = document.getElementById("ship-add1");
@@ -33,10 +41,19 @@ const prevFormButton = document.getElementById("prev");
 const continueShoppingBtn = document.getElementById("continue");
 const formContainer = document.querySelector(".orders-in-cart");
 const formSlide = document.getElementById("formslide");
-const form = document.querySelectorAll(".fs");
+const form = [...document.querySelectorAll(".fs")];
 const errorMessage = document.getElementById("error-message");
 const thankYouPage = document.querySelector(".orders-in-cart");
 const thankYouPageOriginalHeight = thankYouPage.clientHeight;
+const formStage = [
+	"Shipping Information",
+	"Billing Infomation",
+	"Review",
+	"Payment",
+	"Confirmation",
+];
+
+const formStateDOM = document.querySelector(".form-stage");
 
 const cartSummary = JSON.parse(localStorage.getItem("cartSummary"));
 const shoppingDetailsDOM = document.getElementById("shopping-details");
@@ -47,35 +64,117 @@ const numberOfItemsInCart = document.getElementById("items-in-cart");
 
 // Steps indicator
 const completionCircles = [...document.querySelectorAll(".circle")];
+let progressBar = document.getElementById("progress-bar");
 const markComplete = (step) => {
+	if (step < 4) {
+		progressBar.style.width = `${(step + 1) * 25}%`;
+	}
+	// formStateDOM.innerText = formStage[step + 2];
+	// formStateDOM.innerText = formStage[step];
+	completionCircles[step].classList.remove("next-stage");
 	completionCircles[step].className += " completed";
+	completionCircles[step + 1].className += " next-stage";
 	completionCircles[step].innerHTML =
 		"<img class='check-image' src='IMAGES/check-mark.png'></img>";
-	comText[step].className += " comtext";
 };
 
 const unMarkComplete = (step) => {
-	completionCircles[step].className = completionCircles[step].className.replace(
-		"completed",
-		""
-	);
-	comText[step].className = comText[step].className.replace("comtext", "");
+	progressBar.style.width = `${step * 25}%`;
+	completionCircles[step + 1].classList.remove("next-stage");
+	completionCircles[step].className = "circle";
 	completionCircles[step].innerHTML = `<h1>${step + 1}</h1>`;
+	setTimeout(() => {
+		completionCircles[step].className += " next-stage";
+	}, 0);
+	// formStateDOM.innerText = formStage[step - 1];
 };
 
-// validate for and proceed
-const proceed = (e) => {
-	checkFields(e);
+const animatFormForward = () => {
+	formSlide.className += " formfadout";
+
+	setTimeout(() => {
+		formSlide.className = formSlide.className.replace(
+			"formfadout",
+			"formfadin"
+		);
+	}, 400);
+
+	setTimeout(() => {
+		formSlide.classList.remove("formfadout", "formfadin");
+	}, 900);
+};
+
+const animateFormBackword = () => {
+	formSlide.className += " reverseformout";
+
+	setTimeout(() => {
+		formSlide.className = formSlide.className.replace(
+			"reverseformout",
+			"reverseformin"
+		);
+	}, 400);
+
+	setTimeout(() => {
+		formSlide.classList.remove("reverseformout", "reverseformin");
+	}, 900);
+};
+
+// set form width to the parent container width
+let complete = 0;
+const displayForm = (counter) => {
+	let lastFormHeight = formContainer.scrollHeight;
+	setTimeout(() => {
+		complete = counter;
+		form.forEach((form) => {
+			form.style.display = "none";
+		});
+
+		form[counter].style.display = "flex";
+		formContainer.style.height = lastFormHeight + "px";
+		setTimeout(() => {
+			formContainer.style.height = form[counter].scrollHeight + "px";
+		}, 1);
+	}, 400);
 };
 
 const back = () => {
-	let complete = formContainer.scrollLeft / formContainer.clientWidth;
-	count <= 0 ? (count = 0) : (count -= 1);
-	complete <= 0 ? (complete = 1) : null;
-	unMarkComplete(complete);
-	formContainer.scrollLeft -= formContainer.clientWidth;
+	if (complete <= 0) {
+		complete = 0;
+	} else {
+		animateFormBackword();
+		complete -= 1;
+	}
+
+	if (complete <= count) {
+		count = complete;
+	}
+
+	unMarkComplete(complete + 1);
+	displayForm(complete);
 	continueButton.innerText = "Continue";
 };
+
+const displayError = (message) => {
+	errorMessage.innerText = message;
+	errorMessage.style.display = "block";
+	setTimeout(() => {
+		errorMessage.style.opacity = "1";
+	}, 200);
+	errorMessage.parentElement.style.height = "auto";
+};
+
+const removeError = () => {
+	errorMessage.style.opacity = "0";
+	setTimeout(() => {
+		errorMessage.style.display = "none";
+	}, 200);
+	errorMessage.parentElement.style.height = "auto";
+};
+
+form.forEach((form) => {
+	form.style.display = "none";
+});
+form[0].style.display = "flex";
 
 // Match shipping information with billing information
 const matchButton = document.getElementById("matchaddress");
@@ -101,16 +200,6 @@ matchButton.addEventListener("click", (e) => {
 	}
 });
 
-// set form width to the parent container width
-const animateForm = (counter) => {
-	formSlide.style.height = form[counter].scrollHeight + "px";
-};
-
-form.forEach((f) => {
-	f.style.width = formContainer.clientWidth + "px";
-});
-formSlide.style.height = form[0].scrollHeight + "px";
-
 // Load stripe payment element and make payment
 
 const confirmPayment = async (elements, _stripe) => {
@@ -124,17 +213,18 @@ const confirmPayment = async (elements, _stripe) => {
 	});
 
 	if (error) {
-		errorMessage.innerText = error.message;
-		errorMessage.style.opacity = "1";
+		displayError(error.message);
 	} else {
 		// thankYouPage.style.height = thankYouPageOriginalHeight + "px";
-		formContainer.scrollLeft += formContainer.clientWidth * 4;
+		displayForm(4);
+		markComplete(4);
 		continueButton.innerText = "Continue Shopping";
-		// prevFormButton.style.display = "none";
+		continueButton.style.width = "100%";
+		prevFormButton.style.display = "none";
+
 		continueButton.addEventListener("click", (e) => {
 			window.location.href = "gemshop.html";
 		});
-		markComplete(4);
 
 		if (lastPage.pathname === "/product.html") {
 			localStorage.removeItem("buy");
@@ -165,6 +255,7 @@ const loadPaymentElement = async (e) => {
 	const elements = await stripe.elements({ clientSecret });
 	const paymentElement = elements.create("payment");
 	paymentElement.mount("#payment-element");
+	formContainer.style.height = "auto";
 	continueButton.innerText = "Make Payment";
 	continueButton.addEventListener("click", () => {
 		continueButton.innerText = "Processing...";
@@ -204,6 +295,7 @@ const customerInformationReview = (customerInfo) => {
 };
 
 let count = 0;
+
 const checkFields = (e) => {
 	const customerInfo = {
 		shippingInformation: {
@@ -228,14 +320,20 @@ const checkFields = (e) => {
 		},
 	};
 
+	console.log(customerInfo.shippingInformation);
+
 	const inputGood = (filterFilledFields) => {
-		filterFilledFields.forEach(
-			(box) => (box.style.border = ".5px solid #090a0a5f")
-		);
+		filterFilledFields.forEach((box) => {
+			box.style.border = ".5px solid #090a0a5f";
+			box.previousElementSibling.style.color = "";
+		});
 	};
 
 	const inputEmpty = (filterEmptyFields) => {
-		filterEmptyFields.forEach((box) => (box.style.border = ".5px solid red"));
+		filterEmptyFields.forEach((box) => {
+			box.style.border = ".5px solid red";
+			box.previousElementSibling.style.color = "red";
+		});
 	};
 
 	const validateForm = (fields) => {
@@ -252,43 +350,49 @@ const checkFields = (e) => {
 		currentFields.forEach((f) => {
 			f.addEventListener("input", (e) => {
 				f.style.border = ".5px solid #090a0a5f";
-				errorMessage.style.opacity = "0";
+				f.previousElementSibling.style.color = "";
+				removeError();
 			});
 		});
 
 		if (filterEmptyFields.length === 0) {
 			inputGood(filterFilledFields);
-			errorMessage.style.opacity = "0";
+			removeError();
 			formContainer.scrollLeft += formContainer.clientWidth;
 
 			count++;
 			markComplete(count);
+			displayForm(count);
+			animatFormForward();
 			if (count === 2) {
+				displayForm(2);
 				customerInformationReview(customerInfo);
-				animateForm(2);
 			}
 		}
 
 		if (filterEmptyFields.length > 0) {
-			errorMessage.style.opacity = "1";
-			errorMessage.innerText = "Error : one or more field(s) is empty";
+			displayError("Error : one or more field(s) is empty");
 			inputEmpty(filterEmptyFields);
 		}
 	};
 
-	if (formContainer.scrollLeft === 0) {
+	if (form[0].style.display === "flex") {
 		validateForm(".address1");
-		animateForm(1);
+		return;
 	}
 
-	if (formContainer.scrollLeft === formContainer.clientWidth) {
+	if (form[1].style.display === "flex") {
 		validateForm(".address2");
+		return;
 	}
 
-	if (formContainer.scrollLeft === formContainer.clientWidth * 2) {
-		formSlide.style.height = " auto";
+	if (form[2].style.display === "flex") {
+		animatFormForward();
+		displayForm(3);
+		markComplete(3);
 		loadPaymentElement();
-		validateForm()
+		validateForm();
+		return;
 	}
 };
 
@@ -335,6 +439,44 @@ if (itemsInCart !== null) {
 }
 
 shoppingDetailsDOM.innerHTML = x;
-continueButton.addEventListener("click", proceed);
+continueButton.addEventListener("click", checkFields);
 prevFormButton.addEventListener("click", back);
 markComplete(0);
+
+// OPEN MENU
+const menuDOM = document.getElementById("menu");
+const menuBtn = document.getElementById("mb");
+menuDOM.style.display = "none";
+
+const openMenu = () => {
+	menuDOM.style.display = "block";
+
+	if (menuDOM.className.includes("menuout")) {
+		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
+	} else {
+		menuDOM.className += " menuin";
+	}
+	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
+};
+
+// CLOSE MENU
+const closeMenu = () => {
+	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
+	setTimeout(() => (menuDOM.style.display = "none"), 450);
+	document.lastChild.style.overflow = "scroll"; // Enables the window scrolling
+};
+
+// CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
+window.addEventListener("click", (e) => {
+	if (menuDOM.style.display === "block") {
+		let parent =
+			e.target.parentNode.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode === menuDOM ||
+			e.target.parentNode === menuDOM;
+
+		if (!parent && e.target !== menuBtn) {
+			closeMenu();
+		}
+	}
+});

@@ -1,4 +1,11 @@
 "use strict";
+
+(() => {
+	let webPage = document.querySelector("html");
+	webPage.style.opacity = "1";
+	webPage.style.transition = "1s ease-in-out";
+})();
+
 let Holder = document.getElementById("orders-in-cart");
 let totalCar = document.getElementById("cartsum");
 let totalCar2 = document.getElementById("cartsum2");
@@ -17,38 +24,41 @@ const goHome = () => {
 	window.location.href = "index.html";
 };
 
-// MENU
-let menu = document.getElementById("menu"),
-	mb = document.getElementById("mb");
-let close = document.querySelectorAll("#close");
-menu.style.display = "none";
+//MENU
+const menuDOM = document.getElementById("menu");
+const menuBtn = document.getElementById("mb");
+menuDOM.style.display = "none";
 
-const removePadding = () => {
-	menu.style.height = "0px";
-	menu.style.padding = "0px";
-};
+const openMenu = () => {
+	menuDOM.style.display = "block";
 
-// OPEN MENU
-const openMenu = (e) => {
-	menu.style.display = "flex";
-	removePadding();
-	setTimeout(() => {
-		menu.style.paddingTop = "20px";
-		menu.style.height = "400px";
-	}, 20);
+	if (menuDOM.className.includes("menuout")) {
+		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
+	} else {
+		menuDOM.className += " menuin";
+	}
+	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
 };
 
 // CLOSE MENU
 const closeMenu = () => {
-	removePadding();
-	setTimeout(() => {
-		menu.style.display = "none";
-	}, 520);
+	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
+	setTimeout(() => (menuDOM.style.display = "none"), 450);
+	document.lastChild.style.overflow = "scroll"; // Enables the window scrolling
 };
 
-document.addEventListener("click", (e) => {
-	if (e.target !== menu && menu.clientHeight > 0) {
-		removePadding();
+// CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
+window.addEventListener("click", (e) => {
+	if (menuDOM.style.display === "block") {
+		let parent =
+			e.target.parentNode.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode === menuDOM ||
+			e.target.parentNode === menuDOM;
+
+		if (!parent && e.target !== menuBtn) {
+			closeMenu();
+		}
 	}
 });
 
@@ -201,12 +211,16 @@ class CartItems {
 				Number(Storage.getFees().taxesAndDeliveryFees[0].deliveryFee) +
 				Number(Storage.getFees().taxesAndDeliveryFees[0].tax)
 			).toFixed(2);
+
 			document.getElementById("discount").innerText =
 				Storage.getFees().taxesAndDeliveryFees[0].discount;
+
 			document.getElementById("deliveryfee").innerText =
 				Storage.getFees().taxesAndDeliveryFees[0].deliveryFee;
+
 			document.getElementById("tax").innerText =
 				Storage.getFees().taxesAndDeliveryFees[0].tax;
+
 			checkButton.disabled = true;
 			checkButton.style.opacity = "50%";
 		} else {
@@ -273,17 +287,17 @@ class CartItems {
 	}
 }
 
-function viewProduct(event) {
-	let itemID =
-		event.target.dataset.id ||
-		event.target.parentNode.dataset.id ||
-		event.target.parentNode.parentNode.dataset.id ||
-		event.target.parentNode.parentNode.parentNode.dataset.id;
-	if (itemID) {
-		let url = `product.html?item=${encodeURIComponent(itemID)}`;
-		window.location = url;
-	}
-}
+// function viewProduct(event) {
+// 	let itemID =
+// 		event.target.dataset.id ||
+// 		event.target.parentNode.dataset.id ||
+// 		event.target.parentNode.parentNode.dataset.id ||
+// 		event.target.parentNode.parentNode.parentNode.dataset.id;
+// 	if (itemID) {
+// 		let url = `product.html?item=${encodeURIComponent(itemID)}`;
+// 		window.location = url;
+// 	}
+// }
 
 class displayItems {
 	static CART(category) {
@@ -307,15 +321,38 @@ class displayItems {
 
 			itemCreated += `<div class="order">
       <h1 class = "numbering">${displayNumbering()}</h1>
-        <img src=${category[i].itemInfo.itemImg[0]} alt="" data-id=${
-				category[i].id
-			} onclick="viewProduct(event)">
+
+
+		<a href="product.html?item=${
+			category[i].id
+		}" id="img-con" onclick="viewProduct(event)" data-id=${category[i].id}>
+			<div id="img-cont"
+			style='background-image:url(${category[i].itemInfo.itemImg[0]})' alt=""  >
+			</div>
+		</a>
+
+
         <div class="order-info">
             <div class="info">
                 <h1 class="item-name">${category[i].itemInfo.name}</h1>
                 <h2 class="item-title">${category[i].itemInfo.description1}</h2>
                 <h2>Color : <span> Space Grey</span></h2>
             </div>
+
+			<div class="item-price">
+            <div class="item-price-total">
+                <span class="currency">$</span><span class="price" id = "price">${
+									category[i].itemInfo.itemTotal
+								}</span>
+            </div>
+            <div class="item-price-calc">
+                <span id = "q2">${
+									category[i].amount
+								}</span><span>x</span><span><span>$</span>${
+				category[i].itemInfo.newItemPrice
+			}</span>
+          </div>
+        </div>
 
             <div class="qty">
                 <h2>Quantity</h2>
@@ -330,27 +367,14 @@ class displayItems {
                 </div>
             </div>
 
-            <div class="save-delete">
+
+        </div>
+			<div class="save-delete">
                 <h2>Save for later</h2>
                 <h2 class="delete" onclick = "CartItems.removeItem(${
 									category[i].id
 								})">Delete</h2>
             </div>
-        </div>
-          <div class="item-price">
-            <div class="item-price-total">
-                <span class="currency">$</span><span class="price" id = "price">${
-									category[i].itemInfo.itemTotal
-								}</span>
-            </div>
-            <div class="item-price-calc">
-                <span id = "q2">${
-									category[i].amount
-								}</span><span>x</span><span><span>$</span>${
-				category[i].itemInfo.newItemPrice
-			}</span>
-          </div>
-        </div>
       </div>`;
 		}
 		Holder.innerHTML = itemCreated;

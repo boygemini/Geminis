@@ -31,58 +31,143 @@
     </section>
     <section id="body">
         <section class="top-nav">
-            <div class="logo-nav">
-                <nav id="nav-and-products">
-                    <img src="/IMAGES/menu.png" alt="" id="mb" class="menu" onclick="openMenu()">
-                    <div class="products">
-                        <ul>
-                            <li>Gaming</li>
-                            <li>Cellphones</li>
-                            <li>Computer</li>
-                            <li>Ipads</li>
-                            <li>Speakers</li>
-                            <li>TVs</li>
-                        </ul>
-                    </div>
-                </nav>
+				<div class="logo-nav" id="logo-nav">
+					<nav id="nav-and-products">
+						<img
+							src="images/menu.png"
+							alt=""
+							id="mb"
+							class="menu"
+							onclick="openMenu()"
+						/>
+						<h1 class="logo" id="mob-logo" onclick="goHome()">Geminis.</h1>
+						<div class="products">
+							<ul>
+								<li id="games">Shop</li>
+								<li id="phones">Products</li>
+								<li id="coms">About Us</li>
+								<li id="spks">Contact Us</li>
+							</ul>
+						</div>
+					</nav>
+					<div class="justme">
+						<h1 class="logo" id="web-logo" onclick="goHome()">Geminis.</h1>
+					</div>
+					<div class="login-cart">
+						<div class="search-section search-web" onclick="openSearch()">
+							<input
+								type="search"
+								class="search"
+								name="search"
+								placeholder="Search..."
+								autocomplete="off"
+								disabled
+							/>
+							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
+							<div class="serc-img">
+								<img src="images/search.png" alt="" srcset="" />
+							</div>
+						</div>
+						<div class="cart-box" id="searc-cart" onclick="openSearch()">
+							<img
+								src="images/search.png"
+								id="mob-search-icon"
+								alt=""
+								srcset=""
+							/>
+						</div>
+						<div class="cart-box" onclick="toCart()">
+							<img
+								src="images/shopping-cart.png"
+								alt=""
+								srcset=""
+								onclick="toCart()"
+							/>
+							<p id="items-in-cart">0</p>
+						</div>
+						<button type="button" class="login">Login</button>
+						<div class="account cart-box">
+							<img src="/images/user.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="menu-box" id="menu">
+					<div class="menu-heading">
+						<h1>Menu</h1>
+						<img
+							class="cancel"
+							onclick="closeMenu()"
+							src="images/close.png"
+						/>
+					</div>
+					<div class="main-menu">
+						<div class="menu-cat">
+							<h1>Shop By Department</h1>
+							<ul id="kk">
+								<li>Cell Phones</li>
+								<li>Televisions</li>
+								<li>Laptops & Computers</li>
+								<li>Speakers</li>
+								<li>Video Games</li>
+							</ul>
+						</div>
+						<div class="menu-cat">
+							<h1>Support</h1>
+							<ul id="kk">
+								<li>Visit Our Support</li>
+								<li>Online Support</li>
+							</ul>
+						</div>
+						<div class="menu-cat">
+							<ul>
+								<li style="border: none; color: red">Logout</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
 
-                <div id="menu">
-                    <h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
-                    <img src="/IMAGES/close.png" alt="" class="menu" id="close" onclick="closeMenu()">
-                    <ul>
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>Blog</li>
-                        <li>About</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-                <h1 class="logo" onclick="goHome()">Geministore.</h1>
-                <div class="login-cart">
-                    <div class="search-section">
-                        <input type="search" class="search" name="search" id="search" placeholder="Search a product" autocomplete="off">
-                        <input type="submit" class="go" value="GO" id="GO">
-                    </div>
-                    <div class="cart-box" onclick="toCart()">
-                        <img src="/IMAGES/add-to-cart(2).png" alt="" srcset="" onclick="toCart()">
-                        <p id="items-in-cart">0</p>
-                    </div>
-                    <button type="button" class="login">Login</button>
-                </div>
-            </div>
-        </section>
+			<div class="searchcontainer">
+				<div class="search-mainbox">
+					<div class="searchbox">
+						<div class="search-cancel">
+							<h1>Hello 👋🏻, what are you looking for?</h1>
+							<img src="images/close(1).png" alt="" onclick="closeSearch()" />
+						</div>
+						<input
+							type=""
+							class="sb-search"
+							name="search"
+							id="search"
+							placeholder="Search a Product"
+							autocomplete="off"
+							autofocus
+						/>
+						<input type="submit" class="go" value="Search" id="GO" />
+					</div>
+					<div class="suggestion">
+						<div class="sug-holder"></div>
+					</div>
+				</div>
+			</div>
+
         <section class="body">
             <div class="image">
-                <img src="/IMAGES/frontIpad.png" alt="" id="largeImage">
+                <div id="img-con">
+                    <div id="img-cont"></div>
+                </div>
+                <img src="" alt="" id="largeImage">
                 <div class="image-thumbnail">
-                    <button onclick="bwd()"><</button>
+                    <button id="lbtn" onclick="bwd()">
+                    </button>
                     <div class="tbs" id="thumbnailPanel">
 
                     </div>
-                    <button onclick="fwd()">></button>
+                    <button id="rbtn" onclick="fwd()"></button>
                 </div>
             </div>
-            <div class="product-details" id="productDetails">
+            <div class="product-details-container">
+                <div class="product-details" id="productDetails">
                 <!-- <h1>iPhone 13 Pro Max</h1>
                 <h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
                 <div class="specifications">
@@ -92,7 +177,7 @@
                     </div>
                     <div class="sep">
                         <p><strong>SKU : </strong>87294820</p>
-                        <p><strong>Color : </strong>Sierra Blue</p>
+                         <p><strong>Color : </strong>Sierra Blue</p>
                     </div>
                 </div>
                 <div class="other-colors">
@@ -138,11 +223,13 @@
                     </div>
                 </div>
             </div>
+            </div>
         </section>
+
         <section class="descriptions">
             <div class="drop-box">
-                <div class="group-head" onclick="openAccordion('description')">
-                    <h1>Overview</h1><img src="/IMAGES/arrow.png" alt="" srcset="">
+                <div class="group-head" data-id="description" onclick="openAccordion('description')">
+                    <h1>Overview</h1><img src="IMAGES/arrow.png" alt="" srcset="">
                 </div>
                 <div class="group-content">
                     <div class="table" id="description">
@@ -210,8 +297,8 @@
                 </div>
             </div><br>
             <div class="drop-box">
-                <div class="group-head" onclick="openAccordion('specifications')">
-                    <h1>Specifications</h1><img src="/IMAGES/arrow.png" alt="" srcset="">
+                <div class="group-head" data-id="specifications" onclick="openAccordion('specifications')">
+                    <h1>Specifications</h1><img src="IMAGES/arrow.png" alt="" srcset="">
                 </div>
                 <div class="group-content">
                     <div class="table" id="specifications">
@@ -314,8 +401,8 @@
                 </div>
             </div><br>
             <div class="drop-box">
-                <div class="group-head" onclick="openAccordion('reviews')">
-                    <h1>Reviews</h1><img src="/IMAGES/arrow.png" alt="" srcset="">
+                <div class="group-head" data-id="reviews" onclick="openAccordion('reviews')">
+                    <h1>Reviews</h1><img src="IMAGES/arrow.png" alt="" srcset="">
                 </div>
                 <div class="group-content">
                     <div class="table" id="reviews">
@@ -332,53 +419,15 @@
                 </div>
             </div><br>
             <div class="drop-box">
-                <div class="group-head" onclick="openAccordion('qa')">
-                    <h1>Q/A</h1><img src="/IMAGES/arrow.png" alt="" srcset="">
+                <div class="group-head"  data-id="qa" onclick="openAccordion('qa')">
+                    <h1>Q/A</h1><img src="IMAGES/arrow.png" alt="" srcset="">
                 </div>
                 <div class="group-content">
                     <div class="table" id="qa">
                         <div class="levels">
-                            <div class="row-title">Description</div>
-                            <div class="row-content">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Tempore repellat tenetur dicta reiciendis quas sequi ducimus repellendus temporibus,
-                                    eos, aspernatur, quasi veniam et. Harum similique ipsum deleniti maiores. Soluta, illo!
-                                </p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Tempore repellat tenetur dicta reiciendis quas sequi ducimus repellendus temporibus,
-                                    eos, aspernatur, quasi veniam et. Harum similique ipsum deleniti maiores. Soluta, illo!
-                                </p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Tempore repellat tenetur dicta reiciendis quas sequi ducimus repellendus temporibus,
-                                    eos, aspernatur, quasi veniam et. Harum similique ipsum deleniti maiores. Soluta, illo!
-                                </p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Tempore repellat tenetur dicta reiciendis quas sequi ducimus repellendus temporibus,
-                                    eos, aspernatur, quasi veniam et. Harum similique ipsum deleniti maiores. Soluta, illo!
-                                </p>
-                            </div>
+                            <h1 style="font-size:25px">Feature Coming Soon</h1>
                         </div>
-                        <div class="levels">
-                            <div class="row-title">Features</div>
-                            <div class="row-content">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Tempore repellat tenetur dicta reiciendis quas sequi ducimus repellendus temporibus,
-                                    eos, aspernatur, quasi veniam et. Harum similique ipsum deleniti maiores. Soluta, illo!
-                                </p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Tempore repellat tenetur dicta reiciendis quas sequi ducimus repellendus temporibus,
-                                    eos, aspernatur, quasi veniam et. Harum similique ipsum deleniti maiores. Soluta, illo!
-                                </p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Tempore repellat tenetur dicta reiciendis quas sequi ducimus repellendus temporibus,
-                                    eos, aspernatur, quasi veniam et. Harum similique ipsum deleniti maiores. Soluta, illo!
-                                </p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Tempore repellat tenetur dicta reiciendis quas sequi ducimus repellendus temporibus,
-                                    eos, aspernatur, quasi veniam et. Harum similique ipsum deleniti maiores. Soluta, illo!
-                                </p>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>

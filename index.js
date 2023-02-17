@@ -1,71 +1,81 @@
 "use strict";
 
-const heroImageDOM = document.getElementById("hero-img");
-const heroTextDOM = document.getElementById("hero-text");
-const dot = document.querySelectorAll(".slide-circle");
-const forwardSlideButton = document.getElementById("sl-fwd");
-const backwardSlideButton = document.getElementById("sl-bwd");
-let fadeInTime = 5000;
-let fadeOutTime = fadeInTime - 300;
-const heroText = [
-	"THE WORLD OF GADGETS",
-	"CHECK OUT THE LATEST iPHONE 14",
-	"SAMSUNG 72 INCH SMART TV AT LOVELY PRICE",
-	"CHECK OUT THE NEW SAMSUNG S9",
-	"SAMSUNG 72 INCH SMART TV AT LOVELY PRICE",
-	"SAMSUNG 72 INCH SMART TV AT LOVELY PRICE",
-];
-
-const heroImg = [
-	"images/ntv.png",
-	"images/ngame.png",
-	"images/sa-tv.png",
-	"images/asus-sys.png",
-	"images/s9.png",
-	"images/headset.png",
-];
-
-let counter = 0;
-heroImageDOM.src = heroImg[0];
-dot[0].className += " active-dot";
-const changeSlide = (chosenSlide) => {
-	fadeInTime = 5000;
-
-	if (chosenSlide) {
-		counter = chosenSlide - 1;
-	} else {
-		counter >= heroImg.length - 1 ? (counter = 0) : counter++;
-	}
-	heroImageDOM.src = heroImg[counter];
-	heroTextDOM.innerText = heroText[counter];
-	heroImageDOM.className += " fadein";
-	heroTextDOM.className += " fadein";
-	dot.forEach((d) => (d.className = d.className.replace("active-dot", "")));
-	dot[counter].className += " active-dot";
-
-	setTimeout(() => {
-		heroImageDOM.className = heroImageDOM.className.replace(
-			"fadein",
-			" fadeout"
-		);
-		heroTextDOM.className = heroTextDOM.className.replace("fadein", " fadeout");
-	}, fadeOutTime);
-};
-
-setInterval(() => {
-	changeSlide();
-}, fadeInTime);
-
-// forwardSlideButton.addEventListener("click", (e) => {
-// 	counter++
-// 	changeSlide(counter)
-// });
+(() => {
+	let webPage = document.querySelector("html");
+	webPage.style.opacity = "1";
+	webPage.style.transition = "1s ease-in-out";
+})();
 
 const shopNow = () => {
 	window.location = "gemshop.html";
 };
 
-// SELECTED FOR YOU
+// OPEN MENU
+const menuDOM = document.getElementById("menu");
+const menuBtn = document.getElementById("mb");
+menuDOM.style.display = "none";
+
+const openMenu = () => {
+	menuDOM.style.display = "block";
+	if (menuDOM.className.includes("menuout")) {
+		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
+	} else {
+		menuDOM.className += " menuin";
+	}
+	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
+};
+
+// CLOSE MENU
+const closeMenu = () => {
+	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
+	setTimeout(() => (menuDOM.style.display = "none"), 450);
+	document.lastChild.style.overflow = "scroll"; // Enables the window scrolling
+};
+
+// CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
+window.addEventListener("click", (e) => {
+	if (menuDOM.style.display === "block") {
+		let parent =
+			e.target.parentNode.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode === menuDOM ||
+			e.target.parentNode === menuDOM;
+
+		if (!parent && e.target !== menuBtn) {
+			closeMenu();
+		}
+	}
+});
+
+// GRIDS
+const grids = [...document.querySelectorAll(".shade")];
+const gridTextDOM = document.querySelectorAll(".cat-text");
+let headerTextHeight;
+gridTextDOM.forEach((grid) => {
+	headerTextHeight = grid.childNodes[1].scrollHeight;
+	grid.style.height = headerTextHeight + "px";
+});
+
+for (let i in grids) {
+	grids[i].addEventListener(
+		"mousemove",
+		(e) => {
+			gridTextDOM[i].style.height = `${gridTextDOM[i].scrollHeight}px`;
+		},
+		false
+	);
+
+	grids[i].addEventListener(
+		"mouseout",
+		(e) => {
+			gridTextDOM[i].style.height =
+				grids[i].childNodes[1].childNodes[1].scrollHeight + "px";
+		},
+		false
+	);
+}
+
+// ITEMS STORAGE AND DISPLAY
 let itemName = document.querySelectorAll("#itemName"),
 	mainDesc = document.querySelectorAll("#maindesc"),
 	minDesc = document.querySelectorAll("#mindesc"),
@@ -81,7 +91,7 @@ const popupNotification = (itemName, itemImage) => {
 	let notification = document.getElementById("notify-box");
 	let creatNotBox = document.createElement("div");
 	creatNotBox.classList = " notification on";
-	creatNotBox.innerHTML = `<img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to cart</p>`;
+	creatNotBox.innerHTML = `<div><img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to Cart</p></div> <button class="gotocart">Cart</button>`;
 	notification.appendChild(creatNotBox);
 	setTimeout(() => {
 		creatNotBox.classList = " notification off";
@@ -188,11 +198,14 @@ class displayProduct {
 	static createItem(event, holderClass, category, sub) {
 		let itemCreated = " ";
 		let Holder = document.querySelector(holderClass);
-		for (let i in category) {
-			itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
-		<div class="img-con">
-		    <img src=${category[i].itemInfo.itemImg[0]} alt="">
-		</div>
+		for (let i = 0; i <= 9; i++) {
+			itemCreated += `<a href="product.html?item=${category[i].id}" class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
+
+		<div class="img-con" id="main-con">
+				<div class="img-cont" style='background-image:url(${category[i].itemInfo.itemImg[0]})'>
+
+				</div>
+				</div>
 		<div class="sfu">
 		    <p class="itemName2"">${category[i].itemInfo.name}</p>
 		    <div class="description-box">
@@ -201,20 +214,35 @@ class displayProduct {
 		    </div>
 		    <div class="price-order">
 			   <span class="price-box">
-				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
+				  <span class="price">$${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
+			<button id="cart-btn" class="cart-btn" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
+			<img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
+			<p>Add to Cart<p></button>
 		    </div>
 		</div>
-	 </div>`;
+	 </a>`;
 		}
-		Holder.innerHTML = itemCreated;
-		let viewAll = document.querySelector(".view-all");
-		try {
-			viewAll.id = event.target.id;
-			viewAll.innerText = `View All ${sub}`;
-		} catch (error) {}
+
+		if (Holder.className.includes("fadein")) {
+			Holder.className = Holder.className.replace("fadein", "fadeout");
+		} else {
+			Holder.classList.add("fadeout");
+		}
+
+		setTimeout(() => {
+			setTimeout(() => {
+				Holder.innerHTML = itemCreated;
+				let viewAll = document.querySelector(".view-all");
+				try {
+					viewAll.id = event.target.id;
+					viewAll.innerText = `View All ${sub}`;
+				} catch (error) {}
+			}, 0);
+			Holder.className = Holder.className.replace("fadeout", "fadein");
+			Holder.parentNode.scrollLeft = 0;
+		}, 400);
 	}
 
 	// DISPLAY RECENTLY ADDED ITEMS
@@ -222,25 +250,41 @@ class displayProduct {
 		let itemCreated = "";
 		let Holder = document.getElementById("holder-rec");
 		for (let i in category) {
-			itemCreated += `<div class="sell-box sel-box" id="recbox" data-id=${category[i].id} onclick = "viewProduct(event)">
-		<div class="img-con">
-		    <img src=${category[i].itemInfo.itemImg[0]} alt="">
-		</div>
-		<div class="sfu">
-		    <p class="itemName2"">${category[i].itemInfo.name}</p>
-		    <div class="description-box">
-			   <p class="item-description">${category[i].itemInfo.description1}</p>
-			   <p class="item-description">${category[i].itemInfo.description2}</p>
-		    </div>
-		    <div class="price-order">
-			   <span class="price-box">
-				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
-				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
-			   </span>
-			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
-		    </div>
-		</div>
-	 </div>`;
+			itemCreated += `<a href="product.html?item=${category[i].id}" class="sell-box sel-box" id="recbox" data-id=${category[i].id} onclick = "viewProduct(event)">
+				<div class="img-con" id="rec-con">
+				<div class="img-cont" style='background-image:url(${category[i].itemInfo.itemImg[0]})'>
+
+				</div>
+				</div>
+				<div class="sfu">
+				    <p class="itemName2"">${category[i].itemInfo.name}</p>
+				    <div class="description-box">
+					   <p class="item-description">${category[i].itemInfo.description1}</p>
+					   <p class="item-description">${category[i].itemInfo.description2}</p>
+				    </div>
+				    <div class="price-order">
+					   <span class="price-box">
+						  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
+						  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
+					   </span>
+					   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
+				    </div>
+				</div>
+			 </a>`;
+
+			// itemCreated += `<div class="recent">
+			// 					<img src=${category[i].itemInfo.itemImg[0]} alt="" />
+			// 					<div class="receInfo">
+			// 						<div class="rec-det">
+			// 							<h1 class="itemName">${category[i].itemInfo.name}</h1>
+			// 							<p class="itemInfo">${category[i].itemInfo.description1}</p>
+			// 						</div>
+			// 						<div class="price-order">
+			// 							<span class="recentPrice">$${category[i].itemInfo.newItemPrice}</span>
+			// 							<button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
+			// 						</div>
+			// 					</div>
+			// 				</div>`;
 		}
 		Holder.innerHTML = itemCreated;
 	}
@@ -250,9 +294,10 @@ class displayProduct {
 		let itemCreated = "";
 		let Holder = document.querySelector(".Weekly-Container");
 		for (let i in category) {
-			itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
-		<div class="img-con">
-		    <img src=${category[i].itemInfo.itemImg[0]} alt="">
+			itemCreated += `<a href="product.html?item=${category[i].id}" class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
+		<div class="img-con" id="wk-con">
+				<div class="img-cont" style='background-image:url(${category[i].itemInfo.itemImg[0]})'></div>
+
 		</div>
 		<div class="sfu">
 		    <p class="itemName2"">${category[i].itemInfo.name}</p>
@@ -262,13 +307,13 @@ class displayProduct {
 		    </div>
 		    <div class="price-order">
 			   <span class="price-box">
-				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
+				  <span class="price">$${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
 			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"></button>
 		    </div>
 		</div>
-	 </div>`;
+	 </a>`;
 		}
 		Holder.innerHTML = itemCreated;
 	}
@@ -291,22 +336,39 @@ displayProduct.createItem(
 // DISPLAY WEEKLY PRODUCTS
 displayProduct.displayWeeklyFeatured(Storage.weeklyFeaturedItems());
 
-// VIEW CLICKED PRODUCT
-const viewProduct = (event) => {
-	let itemID =
-		event.target.dataset.id ||
-		event.target.parentNode.dataset.id ||
-		event.target.parentNode.parentNode.dataset.id ||
-		event.target.parentNode.parentNode.parentNode.dataset.id;
-	if (itemID) {
-		let url = `product.html?item=${encodeURIComponent(itemID)}`;
-		window.location = url;
+// SELECTED FOR YOU SLIDER
+let holder = document.getElementById("sel-holder");
+let leftArrow = document.getElementById("leftArrow");
+let rightArrow = document.getElementById("rightArrow");
+
+const slideControls = () => {
+	if (holder.offsetWidth + holder.scrollLeft >= holder.scrollWidth) {
+		rightArrow.style.display = "none";
+	} else {
+		rightArrow.style.display = "flex";
 	}
+
+	if (holder.scrollLeft <= 0) {
+		leftArrow.style.display = "none";
+	} else {
+		leftArrow.style.display = "flex";
+	}
+};
+
+slideControls();
+holder.addEventListener("scroll", slideControls);
+
+const moveRight = () => {
+	holder.scrollLeft += holder.clientWidth;
+};
+
+const moveLeft = () => {
+	holder.scrollLeft -= holder.clientWidth;
 };
 
 // ADD RECENT ITEMS TO CART
 const addToCartt = (event, ITT) => {
-	event.stopPropagation();
+	// event.stopPropagation();
 
 	function Me() {
 		let pickItemFromStore = ITT.find(
@@ -351,19 +413,23 @@ let pickedItem;
 
 let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
 const addToCart = (event, ITT) => {
-	event.stopPropagation();
+	// event.stopPropagation();
+
 	let ItemCategory = event.target.dataset.category;
 	let pickItemFromStore = ITT[`${ItemCategory}`].find(
 		(item) => item.id === event.target.dataset.id
 	);
+
 	popupNotification(
 		pickItemFromStore.itemInfo.name,
 		pickItemFromStore.itemInfo.itemImg[0]
 	);
+
 	pickedItem = {
 		...pickItemFromStore,
 		amount: 1,
 	};
+
 	if (pickItemFromStore) {
 		try {
 			Storage.getItemAndSaveToCart();
@@ -372,55 +438,6 @@ const addToCart = (event, ITT) => {
 		}
 	}
 };
-
-// SELECTED FOR YOU SLIDER
-let boxCounter = 0;
-let container = document.getElementById("sel-container");
-let holder = document.getElementById("sel-holder");
-let box = [...document.querySelectorAll(".sell-box")];
-
-const moveRight = () => {
-	holder.scrollLeft += holder.clientWidth;
-};
-
-const moveLeft = () => {
-	holder.scrollLeft -= holder.clientWidth;
-};
-
-// MENU
-let menu = document.getElementById("menu"),
-	mb = document.getElementById("mb");
-let close = document.querySelectorAll("#close");
-menu.style.display = "none";
-
-const removePadding = () => {
-	menu.style.height = "0px";
-	menu.style.padding = "0px";
-};
-
-// OPEN MENU
-const openMenu = (e) => {
-	menu.style.display = "flex";
-	removePadding();
-	setTimeout(() => {
-		menu.style.paddingTop = "20px";
-		menu.style.height = "400px";
-	}, 20);
-};
-
-// CLOSE MENU
-const closeMenu = () => {
-	removePadding();
-	setTimeout(() => {
-		menu.style.display = "none";
-	}, 520);
-};
-
-document.addEventListener("click", (e) => {
-	if (e.target !== menu && menu.clientHeight > 0) {
-		removePadding();
-	}
-});
 
 console.log("Test : code ran successfully [OK]");
 //END OF CODE

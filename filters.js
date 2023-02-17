@@ -117,13 +117,14 @@ returnCheckedBoxes();
 
 // DISPLAY UNCHECKED BOXESS
 const returnUncheckedBoxes = (targetBox) => {
-	let currentUrl = document.URL;
+	let currentUrl = localStorage.getItem("Url");
 	try {
 		let getBoxesCheck = currentUrl
 			.split("Filters=")[1]
 			.split("&")[0]
 			.split(",");
 		getBoxesCheck = getBoxesCheck.filter((box) => box !== targetBox);
+		console.log(getBoxesCheck);
 		Parameters.Filters = getBoxesCheck;
 	} catch (error) {}
 };
@@ -215,7 +216,9 @@ const createUrl = (category) => {
 	let stringifyNewParameters = JSON.stringify(Parameters);
 	localStorage.setItem("Parameters", stringifyNewParameters);
 	localStorage.setItem("Url", url);
-	window.location = url;
+	if (document.lastChild.offsetWidth > 1024) {
+		window.location = url;
+	}
 };
 
 // FILTER CLASS
@@ -255,6 +258,40 @@ class filter {
 			registerBox(event.target.id);
 			createUrl(category);
 		}
+	}
+
+	static priceMin(event, category, low, high) {
+		if (low < 0 || low >= high) {
+			alert("Please check your input");
+		} else {
+			Parameters.Range = [
+				{
+					low: low,
+					high: high,
+				},
+			];
+			Parameters.Price = [];
+			Parameters.Radio = [];
+			registerBox(event.target.id);
+			createUrl(category);
+		}
+	}
+
+	static priceMax(event, category, low, high) {
+		if (high <= low || high <= 0)
+			return alert(
+				"Please check your input.\nMaximum Price has to be greater than Minimum Price"
+			);
+		Parameters.Range = [
+			{
+				low: low,
+				high: high,
+			},
+		];
+		Parameters.Price = [];
+		Parameters.Radio = [];
+		registerBox(event.target.id);
+		createUrl(category);
 	}
 
 	// EVENT TRIGGERED IF BRAND WAS SET
@@ -368,9 +405,10 @@ class filter {
 		if (document.URL.split("SearchQuery").length > 1) {
 			let pageUrl = document.URL.split("Page=")[0];
 			let changePageNumber = `${pageUrl}Page=${Parameters.Page}`;
-			return (window.location = changePageNumber);
+			return (window.location.href = changePageNumber);
 		} else {
 			createUrl(itemCategory);
+			window.location.href = localStorage.getItem("Url");
 		}
 	}
 
@@ -403,11 +441,12 @@ const displayFilteredResults = (directory) => {
 	let y = "";
 	for (let k in directory) {
 		y += `
-			<div div class = "sel-box" data-id=${directory[k].id}>
-				<div div class = "img-con"
-				data-id = ${directory[k].id}
-				onclick = "viewProduct(event)">
-					<img src=${directory[k].itemInfo.itemImg[0]} alt="">
+			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
+
+		<div class="img-con" id="main-con">
+				<div class="img-cont" style='background-image:url(${directory[k].itemInfo.itemImg[0]})'>
+
+				</div>
 				</div>
 				<div class="sfu">
 					<div class="text-hold">
@@ -424,12 +463,12 @@ const displayFilteredResults = (directory) => {
 					id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" data-id=${directory[k].id} class="cart-btn"><img id="addto-cart-img" data-id=${directory[k].id} src="/IMAGES/add-to-cart.png"
+				<button id="cart-btn" data-id=${directory[k].id} class="cart-btn"><img id="addto-cart-img" data-id=${directory[k].id} src="IMAGES/add-to-cart.png"
 						alt="" onclick = "addToCart(event)">
 				</button>
 			</div>
 		</div>
-		</div>`;
+		</a>`;
 	}
 	document.getElementById("result-title").innerText = `${category}`;
 	showBox.innerHTML = y;

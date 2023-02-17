@@ -13,7 +13,7 @@
 	</head>
 
 	<body>
-		<section class="slimbanner">
+		<section class="slimbanner" id="slimbanner">
 			<div class="slimcontent">
 				<div class="slimb-left">
 					<p>Open doors to a world of Electronics</p>
@@ -28,60 +28,54 @@
 		</section>
 		<section id="body">
 			<section class="top-nav">
-				<div class="logo-nav">
+				<div class="logo-nav" id="logo-nav">
 					<nav id="nav-and-products">
 						<img
-							src="/IMAGES/menu.png"
+							src="images/menu.png"
 							alt=""
 							id="mb"
 							class="menu"
 							onclick="openMenu()"
 						/>
+						<h1 class="logo" id="mob-logo" onclick="goHome()">Geminis.</h1>
 						<div class="products">
 							<ul>
-								<li>Gaming</li>
-								<li>Cellphones</li>
-								<li>Computer</li>
-								<li>Ipads</li>
-								<li>Speakers</li>
-								<li>TVs</li>
+								<li id="games">Shop</li>
+								<li id="phones">Products</li>
+								<li id="coms">About Us</li>
+								<li id="spks">Contact Us</li>
 							</ul>
 						</div>
 					</nav>
-
-					<div id="menu">
-						<h1 class="logo" id="logo2" onclick="goHome()">Geministore.</h1>
-						<img
-							src="/IMAGES/close.png"
-							alt=""
-							class="menu"
-							id="close"
-							onclick="closeMenu()"
-						/>
-						<ul>
-							<li>Home</li>
-							<li>Shop</li>
-							<li>Blog</li>
-							<li>About</li>
-							<li>Contact</li>
-						</ul>
+					<div class="justme">
+						<h1 class="logo" id="web-logo" onclick="goHome()">Geminis.</h1>
 					</div>
-					<h1 class="logo" onclick="goHome()">Geministore.</h1>
 					<div class="login-cart">
-						<div class="search-section">
+						<div class="search-section search-web" onclick="openSearch()">
 							<input
 								type="search"
 								class="search"
 								name="search"
-								id="search"
-								placeholder="Search a product"
+								placeholder="Search..."
 								autocomplete="off"
+								disabled
 							/>
-							<input type="submit" class="go" value="GO" id="GO" />
+							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
+							<div class="serc-img">
+								<img src="images/search.png" alt="" srcset="" />
+							</div>
+						</div>
+						<div class="cart-box" id="searc-cart" onclick="openSearch()">
+							<img
+								src="images/search.png"
+								id="mob-search-icon"
+								alt=""
+								srcset=""
+							/>
 						</div>
 						<div class="cart-box" onclick="toCart()">
 							<img
-								src="/IMAGES/add-to-cart(2).png"
+								src="images/shopping-cart.png"
 								alt=""
 								srcset=""
 								onclick="toCart()"
@@ -89,9 +83,66 @@
 							<p id="items-in-cart">0</p>
 						</div>
 						<button type="button" class="login">Login</button>
+						<div class="account cart-box">
+							<img src="/images/user.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="menu-box" id="menu">
+					<div class="menu-heading">
+						<h1>Menu</h1>
+						<img class="cancel" onclick="closeMenu()" src="images/close.png" />
+					</div>
+					<div class="main-menu">
+						<div class="menu-cat">
+							<h1>Shop By Department</h1>
+							<ul id="kk">
+								<li>Cell Phones</li>
+								<li>Televisions</li>
+								<li>Laptops & Computers</li>
+								<li>Speakers</li>
+								<li>Video Games</li>
+							</ul>
+						</div>
+						<div class="menu-cat">
+							<h1>Support</h1>
+							<ul id="kk">
+								<li>Visit Our Support</li>
+								<li>Online Support</li>
+							</ul>
+						</div>
+						<div class="menu-cat">
+							<ul>
+								<li style="border: none; color: red">Logout</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
+
+			<div class="searchcontainer">
+				<div class="search-mainbox">
+					<div class="searchbox">
+						<div class="search-cancel">
+							<h1>Hello 👋🏻, what are you looking for?</h1>
+							<img src="images/close(1).png" alt="" onclick="closeSearch()" />
+						</div>
+						<input
+							type=""
+							class="sb-search"
+							name="search"
+							id="search"
+							placeholder="Search a Product"
+							autocomplete="off"
+							autofocus
+						/>
+						<input type="submit" class="go" value="Search" id="GO" />
+					</div>
+					<div class="suggestion">
+						<div class="sug-holder"></div>
+					</div>
+				</div>
+			</div>
 
 			<section class="cart-body">
 				<div class="cart-top">
@@ -101,208 +152,255 @@
 					</div>
 				</div>
 				<div class="progress">
-					<div class="stages">
-						<div class="circle-box">
-							<div class="circle">
-								<h1>1</h1>
+					<div id="progress-bar"></div>
+					<div class="stage-container">
+						<div class="stages one">
+							<div class="circle-box">
+								<div class="circle">
+									<h1>1</h1>
+								</div>
 							</div>
-							<h2 class="com-text">Signin</h2>
 						</div>
-					</div>
-					<hr />
-					<div class="stages">
-						<div class="circle-box">
-							<div class="circle">
-								<h1>2</h1>
+						<div class="stages two">
+							<div class="circle-box">
+								<div class="circle">
+									<h1>2</h1>
+								</div>
 							</div>
-							<h2 class="com-text">Shipping Info</h2>
 						</div>
-					</div>
-					<hr />
-					<div class="stages">
-						<div class="circle-box">
-							<div class="circle">
-								<h1>3</h1>
+						<div class="stages three">
+							<div class="circle-box">
+								<div class="circle">
+									<h1>3</h1>
+								</div>
 							</div>
-							<h2 class="com-text">Billing Info</h2>
 						</div>
-					</div>
-					<hr />
-					<div class="stages">
-						<div class="circle-box">
-							<div class="circle">
-								<h1>4</h1>
+						<div class="stages four">
+							<div class="circle-box">
+								<div class="circle">
+									<h1>4</h1>
+								</div>
 							</div>
-							<h2 class="com-text">Review</h2>
 						</div>
-					</div>
-					<hr />
-					<div class="stages">
-						<div class="circle-box">
-							<div class="circle">
-								<h1>5</h1>
+						<div class="stages five">
+							<div class="circle-box">
+								<div class="circle">
+									<h1>5</h1>
+								</div>
 							</div>
-							<h2 class="com-text">Payment</h2>
 						</div>
 					</div>
 				</div>
 
+				<!-- <div class="form-stage">Shipping Information</div> -->
+
 				<section class="cart-full-details">
-					<p id="error-message">one or more field is empty</p>
 					<div class="orders-in-cart">
+						<p id="error-message">one or more field is empty</p>
 						<div class="formslide" id="formslide" method="get">
 							<div id="shipping" class="fs sec stepps shipping-info">
 								<h1>Shipping Information</h1>
-								<div class="inputed-info"></div>
+								<span class="inputed-info"
+									>Please enter your shipping information</span
+								>
 								<div class="flex-form">
 									<div class="form-group">
-										<input
-											type="text"
-											name=""
-											id="ship-name"
-											placeholder="Contact Name"
-											class="address1"
-											value="Jubril Bolajoko"
-										/>
-										<input
-											class="address1"
-											type="text"
-											name=""
-											id="ship-add1"
-											value="13 Forty St"
-											placeholder="Street Address"
-										/>
-										<input
-											type="text"
-											class="address1"
-											name=""
-											id="ship-city"
-											value="Dallas"
-											placeholder="City"
-										/>
-										<input
-											type="text"
-											class="address1"
-											name=""
-											id="ship-country"
-											value="USA"
-											placeholder="Country"
-										/>
+										<div class="form-field">
+											<label for="">Contact Name</label>
+											<input
+												type="text"
+												name=""
+												id="ship-name"
+												placeholder="Contact Name"
+												class="address1"
+												value="Jubril Bolajoko"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="">Street Address</label>
+											<input
+												class="address1"
+												type="text"
+												name=""
+												id="ship-add1"
+												value="1304 Martin Luther King Dr"
+												placeholder=""
+											/>
+										</div>
+										<div class="form-field">
+											<label for="">Street Address 2</label>
+											<input
+												type="text"
+												class=""
+												name=""
+												id="ship-add2"
+												value=""
+												placeholder="Address 2"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="City">City</label>
+											<input
+												type="text"
+												class="address1"
+												name=""
+												id="ship-city"
+												value="Baton Rouge"
+												placeholder="City"
+											/>
+										</div>
 									</div>
 									<div class="form-group">
-										<input
-											type="text"
-											class=""
-											name=""
-											id="ship-add2"
-											value="Apt 2"
-											placeholder="Address 2"
-										/>
-										<input
-											type="text"
-											class="address1"
-											name=""
-											id="ship-state"
-											value="TX"
-											placeholder="State"
-										/>
-										<input
-											type="text"
-											class="address1"
-											name=""
-											id="ship-zipcode"
-											value="12456"
-											placeholder="Zipode"
-										/>
-										<input
-											class="address1"
-											type="text"
-											name=""
-											id="ship-phone"
-											value="1234567890"
-											placeholder="Mobile Number"
-										/>
+										<div class="form-field">
+											<label for="">State</label>
+											<input
+												type="text"
+												class="address1"
+												name=""
+												id="ship-state"
+												value="Colorado"
+												placeholder="State"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="">Zipcode</label>
+											<input
+												type="text"
+												class="address1"
+												name=""
+												id="ship-zipcode"
+												value="11002"
+												placeholder="Zipode"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="">Country</label>
+											<input
+												type="text"
+												class="address1"
+												name=""
+												id="ship-country"
+												value="USA"
+												placeholder="Country"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="">Mobile Number</label>
+											<input
+												class="address1"
+												type="text"
+												name=""
+												id="ship-phone"
+												value="8188828891"
+												placeholder="Mobile Number"
+											/>
+										</div>
 									</div>
 								</div>
-								<!-- <div class="check-b">
-									<input type="checkbox" name="" id="makedefault" /> Make default
-									Address
-								</div> -->
-
+								<div class="check-b">
+									<label class="option container">
+										<input type="checkbox" name="" id="matchaddress" />
+										<span class="checkmark"></span>
+										<p class="checck">Same as Billing Address</p>
+									</label>
+								</div>
 							</div>
 
 							<div id="billing" class="fs sec stepps shipping-info">
 								<h1>Billing Information</h1>
-								<div class="inputed-info"></div>
+								<span class="inputed-info"
+									>Please enter your billing information</span
+								>
+
 								<div class="flex-form">
 									<div class="form-group">
-										<input
-											type="text"
-											class="address2"
-											name=""
-											id="bill-name"
-											placeholder="Contact Name"
-										/>
-										<input
-											type="text"
-											class="address2"
-											name=""
-											id="bill-add1"
-											placeholder="Street Address"
-										/>
-										<input
-											type="text"
-											class="address2"
-											name=""
-											id="bill-city"
-											placeholder="City"
-										/>
-										<input
-											type="text"
-											class="address2"
-											name=""
-											id="bill-country"
-											placeholder="Country"
-										/>
+										<div class="form-field">
+											<label for="">Contact Name</label>
+											<input
+												type="text"
+												name=""
+												id="bill-name"
+												placeholder="Contact Name"
+												class="address2"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="">Street Address</label>
+											<input
+												class="address2"
+												type="text"
+												name=""
+												id="bill-add1"
+												placeholder="Street Address"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="">Street Address 2</label>
+											<input
+												type="text"
+												class=""
+												name=""
+												id="bill-add2"
+												placeholder="Address 2"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="City">City</label>
+											<input
+												type="text"
+												class="address2"
+												name=""
+												id="bill-city"
+												placeholder="City"
+											/>
+										</div>
 									</div>
 									<div class="form-group">
-										<input
-											type="text"
-											class=""
-											name=""
-											id="bill-add2"
-											placeholder="Address 2"
-										/>
-										<input
-											type="text"
-											class="address2"
-											name=""
-											id="bill-state"
-											placeholder="State"
-										/>
-										<input
-											type="text"
-											class="address2"
-											name=""
-											id="bill-zipcode"
-											placeholder="Zipcode"
-										/>
-										<input
-											type="text"
-											class="address2"
-											name=""
-											id="bill-phone"
-											placeholder="Mobile Number"
-										/>
+										<div class="form-field">
+											<label for="">State</label>
+											<input
+												type="text"
+												class="address2"
+												name=""
+												id="bill-state"
+												placeholder="State"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="">Zipcode</label>
+											<input
+												type="text"
+												class="address2"
+												name=""
+												id="bill-zipcode"
+												placeholder="Zipode"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="">Country</label>
+											<input
+												type="text"
+												class="address2"
+												name=""
+												id="bill-country"
+												placeholder="Country"
+											/>
+										</div>
+										<div class="form-field">
+											<label for="">Mobile Number</label>
+											<input
+												class="address2"
+												type="text"
+												name=""
+												id="bill-phone"
+												placeholder="Mobile Number"
+											/>
+										</div>
 									</div>
-								</div>
-								<div class="check-b">
-									<input type="checkbox" name="" id="matchaddress" /> Same as
-									Shipping Address
 								</div>
 							</div>
 
-							<div id="payment" class="fs stepps payment-info">
+							<div id="review" class="fs stepps payment-info">
 								<div class="inputed-info"></div>
 								<div class="form-section">
 									<div class="sec credit-card psec">
@@ -467,21 +565,19 @@
 						</div>
 					</div> -->
 					<div class="control">
-						<button class="prev" id="prev"><img class="back-arrow" src="IMAGES/thinarrow.png" alt="" srcset="">Back</button>
+						<button class="prev" id="prev">
+							<img
+								class="back-arrow"
+								src="IMAGES/thinarrow2.png"
+								alt=""
+								srcset=""
+							/>Back
+						</button>
 						<button class="next check-out" id="next">Continue</button>
 					</div>
 				</section>
 			</section>
 		</section>
-
-		<footer>
-			<h1>
-				Shop by
-				<a href="http://" target="_blank" rel="noopener noreferrer"
-					>jubril bolajoko</a
-				>
-			</h1>
-		</footer>
 
 		<script>
 			"use strict";
@@ -497,39 +593,14 @@
 			const goHome = () => {
 				window.location.href = "index.html";
 			};
-
-			//Menu
-			let menu = document.getElementById("menu"),
-				mb = document.getElementById("mb");
-			let close = document.querySelectorAll("#close");
-			menu.style.display = "none";
-
-			const removePadding = () => {
-				menu.style.height = "0px";
-				menu.style.padding = "0px";
-			};
-
-			const openMenu = (e) => {
-				menu.style.display = "flex";
-				removePadding();
-				setTimeout(() => {
-					menu.style.paddingTop = "20px";
-					menu.style.height = "100vh";
-				}, 20);
-			};
-
-			const closeMenu = () => {
-				removePadding();
-				setTimeout(() => {
-					menu.style.display = "none";
-				}, 520);
-			};
-
-			document.addEventListener("click", (e) => {
-				if (e.target !== menu && menu.clientHeight > 0) {
-					removePadding();
-				}
-			});
 		</script>
 	</body>
+	<footer>
+		<h1>
+			Shop by
+			<a href="http://" target="_blank" rel="noopener noreferrer"
+				>jubril bolajoko</a
+			>
+		</h1>
+	</footer>
 </html>

@@ -11,7 +11,7 @@
 		<script src="search.js" defer></script>
 	</head>
 	<header>
-		<section class="slimbanner">
+		<section class="slimbanner" id="slimbanner">
 			<div class="slimcontent">
 				<div class="slimb-left">
 					<p>Open doors to a world of Electronics</p>
@@ -34,62 +34,54 @@
 		</div>
 		<section id="body">
 			<section class="top-nav">
-				<div class="logo-nav">
+				<div class="logo-nav" id="logo-nav">
 					<nav id="nav-and-products">
 						<img
-							src="/IMAGES/menu.png"
+							src="images/menu.png"
 							alt=""
 							id="mb"
 							class="menu"
 							onclick="openMenu()"
 						/>
+						<h1 class="logo" id="mob-logo" onclick="goHome()">Geminis.</h1>
 						<div class="products">
 							<ul>
-								<li>Gaming</li>
-								<li>Cellphones</li>
-								<li>Computer</li>
-								<li>Ipads</li>
-								<li>Speakers</li>
-								<li>TVs</li>
+								<li id="games">Shop</li>
+								<li id="phones">Products</li>
+								<li id="coms">About Us</li>
+								<li id="spks">Contact Us</li>
 							</ul>
 						</div>
 					</nav>
-
-					<div id="menu">
-						<h1 class="logo" id="logo2" onclick="goHome()">•Geministore•</h1>
-						<img
-							src="/IMAGES/close.png"
-							alt=""
-							class="menu"
-							id="close"
-							onclick="closeMenu()"
-						/>
-						<ul>
-							<li>Home</li>
-							<li>Shop</li>
-							<li>Blog</li>
-							<li>About</li>
-							<li>Contact</li>
-						</ul>
-					</div>
-					<div class="logo-box">
-						<h1 class="logo" id="logo1" onclick="goHome()">•Geministore•</h1>
+					<div class="justme">
+						<h1 class="logo" id="web-logo" onclick="goHome()">Geminis.</h1>
 					</div>
 					<div class="login-cart">
-						<div class="search-section">
+						<div class="search-section search-web" onclick="openSearch()">
 							<input
 								type="search"
 								class="search"
 								name="search"
-								id="search"
-								placeholder="Search a product"
+								placeholder="Search..."
 								autocomplete="off"
+								disabled
 							/>
-							<input type="submit" class="go" value="GO" id="GO" />
+							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
+							<div class="serc-img">
+								<img src="images/search.png" alt="" srcset="" />
+							</div>
 						</div>
-						<div class="cart-box" id="cart-box" onclick="toCart()">
+						<div class="cart-box" id="searc-cart" onclick="openSearch()">
 							<img
-								src="/IMAGES/add-to-cart(2).png"
+								src="images/search.png"
+								id="mob-search-icon"
+								alt=""
+								srcset=""
+							/>
+						</div>
+						<div class="cart-box" onclick="toCart()">
+							<img
+								src="images/shopping-cart.png"
 								alt=""
 								srcset=""
 								onclick="toCart()"
@@ -97,19 +89,78 @@
 							<p id="items-in-cart">0</p>
 						</div>
 						<button type="button" class="login">Login</button>
+						<div class="account cart-box">
+							<img src="/images/user.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="menu-box" id="menu">
+					<div class="menu-heading">
+						<h1>Menu</h1>
+						<img class="cancel" onclick="closeMenu()" src="images/close.png" />
+					</div>
+					<div class="main-menu">
+						<div class="menu-cat">
+							<h1>Shop By Department</h1>
+							<ul id="kk">
+								<li>Cell Phones</li>
+								<li>Televisions</li>
+								<li>Laptops & Computers</li>
+								<li>Speakers</li>
+								<li>Video Games</li>
+							</ul>
+						</div>
+						<div class="menu-cat">
+							<h1>Support</h1>
+							<ul id="kk">
+								<li>Visit Our Support</li>
+								<li>Online Support</li>
+							</ul>
+						</div>
+						<div class="menu-cat">
+							<ul>
+								<li style="border: none; color: red">Logout</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
+
+			<div class="searchcontainer">
+				<div class="search-mainbox">
+					<div class="searchbox">
+						<div class="search-cancel">
+							<h1>Hello 👋🏻, what are you looking for?</h1>
+							<img src="images/close(1).png" alt="" onclick="closeSearch()" />
+						</div>
+						<input
+							type=""
+							class="sb-search"
+							name="search"
+							id="search"
+							placeholder="Search a Product"
+							autocomplete="off"
+							autofocus
+						/>
+						<input type="submit" class="go" value="Search" id="GO" />
+					</div>
+					<div class="suggestion">
+						<div class="sug-holder"></div>
+					</div>
+				</div>
+			</div>
 			<section class="cart-body">
 				<div class="cart-top">
 					<h1 class="head">Shopping Cart</h1>
 					<div class="total-checkout">
 						<h1>
 							<span class="sub-total-head"
-								>Sub Total (<span id="totalquantity"></span> Items) :
+								>Sub Total (<span id="totalquantity"></span> Items)
 							</span>
-							<span class="amount">$ </span
-							><span class="amount" id="cartsum">1,525.96 </span>
+							<span>
+								<span class="amount">$ </span
+								><span class="amount" id="cartsum">1,525.96 </span>
+							</span>
 						</h1>
 					</div>
 				</div>

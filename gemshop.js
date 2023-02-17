@@ -1,6 +1,414 @@
 "use strict";
 
-let filterBox = document.getElementById("filters");
+let webPage = document.querySelector("html");
+webPage.style.opacity = "1";
+webPage.style.transition = "1s ease-in-out";
+
+let filterBox = document.querySelectorAll("#filters");
+let filterUIObjects = {
+	gaming() {
+		return ` <div class="fil-box">
+        <h1>Shipping</h1><br>
+        <label class="option container">
+            <input type="checkbox" name="" id="">
+            <p>Free</p>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="fil-box">
+        <div class="wrapper">
+            <h1>Price</h1><br>
+            <div class="box">
+                <input type="radio" name="select" id="firstlevelprice">
+                <input type="radio" name="select" id="secondlevelprice">
+                <input type="radio" name="select" id="thirdlevelprice">
+                <label for="firstlevelprice" class="option-1">
+                    <div class="dot"></div>
+                    <div class="text">$300 to $799</div>
+                </label>
+                <label for="secondlevelprice" class="option-2">
+                    <div class="dot"></div>
+                    <div class="text">$800 to $1,199</div>
+                </label>
+                <label for="thirdlevelprice" class="option-3">
+                    <div class="dot"></div>
+                    <div class="text">$1,300 to 2,000</div>
+                </label>
+            </div>
+        </div>
+        <div class="option minn">
+			<p class="applymm" id="applyminmax">APPLY</p>
+            <div class="mmdiv">
+			<div class="inputContainer">
+				<span class="label">Min</span>
+				<input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+			</div>
+			<div class="inputContainer">
+				<span class="label">Max</span>
+				<input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			</div>
+            </div>
+        </div>
+    </div>
+    <div class="fil-box">
+        <h1>Brand</h1><br>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="xbox">
+            <p>XBOX</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="ps">
+            <p>Play Station</p>
+            <span class="checkmark"></span>
+        </label>
+    </div>`;
+	},
+
+	cellphones() {
+		return `<div class="fil-box">
+        <h1>Shipping</h1><br>
+        <label class="option container">
+            <input type="checkbox" name="" id="">
+            <p>Free</p>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="fil-box">
+       <div class="wrapper">
+           <h1>Price</h1><br>
+           <div class="box">
+               <input type="radio" name="select" id="firstlevelprice">
+               <input type="radio" name="select" id="secondlevelprice">
+               <input type="radio" name="select" id="thirdlevelprice">
+               <label for="firstlevelprice" class="option-1">
+                   <div class="dot"></div>
+                   <div class="text">$300 to $800</div>
+               </label>
+               <label for="secondlevelprice" class="option-2">
+                   <div class="dot"></div>
+                   <div class="text">$900 to $1,500</div>
+               </label>
+               <label for="thirdlevelprice" class="option-3">
+                   <div class="dot"></div>
+                   <div class="text">$1,600 to $2,000</div>
+               </label>
+           </div>
+       </div>
+       <div class="option minn">
+			<p class="applymm" id="applyminmax">APPLY</p>
+           <div class="mmdiv">
+               <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+               <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+           </div>
+       </div>
+    </div>
+    <div class="fil-box">
+        <h1>Brand</h1><br>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="apple">
+             <p>Apple</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="itel">
+            <p>Itel</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="samsung">
+            <p>Samsung</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="infinix">
+            <p>Infinix</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="lg">
+            <p>LG</p>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="fil-box">
+        <h1>Memory</h1><br>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="m16">
+            <p>16 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="m32">
+            <p>32 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="m64">
+            <p>64 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="m128">
+            <p>128 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="m256">
+            <p>256 GB</p><span class="checkmark"></span>
+        </label>
+    </div>`;
+	},
+
+	computers() {
+		return `<div class="fil-box">
+        <h1>Shipping</h1><br>
+        <label class="option container">
+            <input type="checkbox" name="" id="">
+            <p>Free</p>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="fil-box">
+        <div class="wrapper">
+            <h1>Price</h1><br>
+            <div class="box">
+                <input type="radio" name="select" id="firstlevelprice">
+                <input type="radio" name="select" id="secondlevelprice">
+                <input type="radio" name="select" id="thirdlevelprice">
+                <label for="firstlevelprice" class="option-1">
+                    <div class="dot"></div>
+                    <div class="text">$900 to $1,199</div>
+                </label>
+                <label for="secondlevelprice" class="option-2">
+                    <div class="dot"></div>
+                    <div class="text">$1,200 to $1,399</div>
+                </label>
+                <label for="thirdlevelprice" class="option-3">
+                    <div class="dot"></div>
+                    <div class="text">$1,400 to $2,000</div>
+                </label>
+            </div>
+        </div>
+        <div class="option minn">
+			<p class="applymm" id="applyminmax">APPLY</p>
+            <div class="mmdiv">
+                <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+                <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+            </div>
+        </div>
+    </div>
+    <div class="fil-box">
+        <h1>Brand</h1><br>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="mac">
+            <p>Mac</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="hp">
+            <p>HP</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="asus">
+            <p>ASUS</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="toshiba">
+            <p>Toshiba</p>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="fil-box">
+        <h1>RAM</h1><br>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="ram4">
+            <p>4 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="ram8">
+            <p>8 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="ram16">
+            <p>16 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="ram32">
+            <p>32 GB</p><span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="fil-box">
+        <h1>ROM/STORAGE</h1><br>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="st256">
+            <p>256 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="st512">
+            <p>512 GB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="st1tb">
+            <p>1 TB</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="st2tb">
+            <p>2 TB</p><span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="fil-box">
+        <h1>SCREEN</h1><br>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="inch9">
+            <p>9 INCH</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="inch13">
+            <p>13 INCHES</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="inch16">
+            <p>16 INCHES</p><span class="checkmark"></span>
+        </label>
+    </div>`;
+	},
+
+	speakers() {
+		return `<div class="fil-box">
+        <h1>Shipping</h1><br>
+        <label class="option container">
+            <input type="checkbox" name="" id="">
+            <p>Free</p>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="fil-box">
+        <div class="wrapper">
+            <h1>Price</h1><br>
+            <div class="box">
+                <input type="radio" name="select" id="firstlevelprice">
+                <input type="radio" name="select" id="secondlevelprice">
+                <input type="radio" name="select" id="thirdlevelprice">
+                <label for="firstlevelprice" class="option-1">
+                    <div class="dot"></div>
+                    <div class="text">$300 to $799</div>
+                </label>
+                <label for="secondlevelprice" class="option-2">
+                    <div class="dot"></div>
+                    <div class="text">$800 to $1,199</div>
+                </label>
+                <label for="thirdlevelprice" class="option-3">
+                    <div class="dot"></div>
+                    <div class="text">$1,200 to $2,000</div>
+                </label>
+            </div>
+        </div>
+        <div class="option minn">
+			<p class="applymm" id="applyminmax">APPLY</p>
+            <div class="mmdiv">
+                <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+                <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+            </div>
+        </div>
+    </div>
+    <div class="fil-box">
+        <h1>Brand</h1><br>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="jbl">
+            <p>JBL</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="oraimo">
+            <p>ORAIMO</p>
+            <span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="beatz">
+            <p>BEATZ</p>
+            <span class="checkmark"></span>
+        </label>
+    </div>`;
+	},
+
+	tv() {
+		return `<div class="fil-box">
+        <h1>Shipping</h1><br>
+        <label class="option container">
+            <input type="checkbox" name="" id="">
+            <p>Free</p>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="fil-box">
+        <div class="wrapper">
+            <h1>Price</h1><br>
+            <div class="box">
+                <input type="radio" name="select" id="firstlevelprice">
+                <input type="radio" name="select" id="secondlevelprice">
+                <input type="radio" name="select" id="thirdlevelprice">
+                <label for="firstlevelprice" class="option-1">
+                    <div class="dot"></div>
+                    <div class="text">$300 to $799</div>
+                </label>
+                <label for="secondlevelprice" class="option-2">
+                    <div class="dot"></div>
+                    <div class="text">$800 to $1,199</div>
+                </label>
+                <label for="thirdlevelprice" class="option-3">
+                    <div class="dot"></div>
+                    <div class="text">$1,200 to $2,000</div>
+                </label>
+            </div>
+        </div>
+        <div class="option minn">
+			<p class="applymm" id="applyminmax">APPLY</p>
+            <div class="mmdiv">
+                <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+                <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+            </div>
+        </div>
+    </div>
+    <div class="fil-box">
+        <h1>Brand</h1><br>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="hisense">
+            <p>HISENSE</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="samsung">
+            <p>SAMSUNG</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="lg">
+            <p>LG</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="midea">
+            <p>MIDEA</p><span class="checkmark"></span>
+        </label>
+         <label class="option container">
+             <input type="checkbox" class="memorycheck" name="" id="toshiba">
+             <p>TOSHIBA</p><span class="checkmark"></span>
+         </label>
+    </div>
+    <div class="fil-box">
+        <h1>Screen Size(inches)</h1><br>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="sz32">
+            <p>32 ''</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="sz43">
+            <p>43 ''</p><span class="checkmark"></span>
+        </label>
+        <label class="option container">
+            <input type="checkbox" class="memorycheck" name="" id="sz55">
+            <p>55 ''</p><span class="checkmark"></span>
+        </label>
+    </div>`;
+	},
+};
+
 let showBox = document.getElementById("showbox");
 let gamingBox = document.getElementById("gaming"),
 	cellPhoneBox = document.getElementById("cellphones"),
@@ -36,36 +444,40 @@ class Products {
 Products.saveItems();
 let productRoute = Products.getAllItems().selectedProducts[0];
 
-const getItemsByCategory = (url) => {
-	let sendRequest = new XMLHttpRequest();
-	sendRequest.open("GET", url, false);
-	sendRequest.onreadystatechange = function () {
-		if (sendRequest.status === 200) {
-			filterBox.innerHTML = this.response;
-		}
-	};
-	sendRequest.send();
+const placeFilterUI = (filterNode1, filterNode2, filterUI) => {
+	if (
+		document.lastChild.offsetWidth > 768 &&
+		document.lastChild.offsetWidth <= 1200
+	) {
+		filterNode2.innerHTML = filterUI;
+	}
+	if (
+		document.lastChild.offsetWidth > 1200 ||
+		document.lastChild.offsetWidth <= 768
+	) {
+		filterNode1.innerHTML = filterUI;
+	}
 };
 
 class getFilter {
 	static allCellPhones() {
-		getItemsByCategory("all-phones.html");
+		placeFilterUI(filterBox[0], filterBox[1], filterUIObjects.cellphones());
 	}
 
 	static allGaming() {
-		getItemsByCategory("all-games.html");
+		placeFilterUI(filterBox[0], filterBox[1], filterUIObjects.gaming());
 	}
 
 	static allComputer() {
-		getItemsByCategory("all-computers.html");
+		placeFilterUI(filterBox[0], filterBox[1], filterUIObjects.computers());
 	}
 
 	static allSpeaker() {
-		getItemsByCategory("all-speakers.html");
+		placeFilterUI(filterBox[0], filterBox[1], filterUIObjects.speakers());
 	}
 
 	static allTv() {
-		getItemsByCategory("all-tvs.html");
+		placeFilterUI(filterBox[0], filterBox[1], filterUIObjects.tv());
 	}
 }
 
@@ -75,11 +487,12 @@ class display {
 		if (directory.length > 0) {
 			for (let k = 0; k < 10; k++) {
 				y += `
-			<div div class = "sel-box" data-id = ${directory[k].id}>
-				<div class = "img-con"
-				data-id = ${directory[k].id}
-				onclick = "viewProduct(event)" >
-					<img src=${directory[k].itemInfo.itemImg[0]} alt="">
+			<div class="sell-box sel-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
+
+		<div class="img-con" id="main-con">
+				<div class="img-cont" style='background-image:url(${directory[k].itemInfo.itemImg[0]})'>
+
+				</div>
 				</div>
 				<div class="sfu">
 					<div class="text-hold">
@@ -97,7 +510,7 @@ class display {
 						<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 					</span>
 					<button id="cart-btn" data-id= ${directory[k].id} class="cart-btn">
-						<img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
+						<img id="addto-cart-img" src="IMAGES/add-to-cart.png"
 							alt="" data-id= ${directory[k].id}  onclick = "addToCart(event)">
 					</button>
 				</div>
@@ -146,15 +559,152 @@ const emptyParameters = () => {
 	localStorage.setItem("Parameters", stringifyParameters);
 };
 
-const phonesBrandCheck = (apple, brand) => {
-	apple.addEventListener("click", (event) => {
-		displayFilteredResults(filter.brand(event, "cellphones", brand));
-	});
+// OPEN FILTER
+const filterContainer1 = document.querySelector(".filters1");
+const filterContainer2 = document.querySelector(".filters2");
+let filterBoxHeight = 400;
+
+if (
+	document.lastChild.offsetWidth > 768 &&
+	document.lastChild.offsetWidth <= 1200
+) {
+	filterContainer2.style.display = "flex";
+	filterContainer2.style.height = "0px";
+	filterContainer2.style.opacity = "0";
+	filterBox[0].style.display = "none";
+}
+
+if (document.lastChild.offsetWidth <= 768) {
+	filterContainer2.style.display = "none";
+}
+
+// window.addEventListener("resize", (e) => {
+// 	if (
+// 		document.lastChild.offsetWidth > 600 &&
+// 		document.lastChild.offsetWidth <= 1024
+// 	) {
+// 		filterContainer2.style.display = "flex";
+// 		filterContainer2.style.height = "0px";
+// 		filterContainer2.style.opacity = "0";
+// 		filterContainer1.style.display = "none";
+
+// 		//GET THE CURRENT CATEGORY TO MAKE THE FILTER MORE RESPONSE
+// 		let currentCategory = document.URL.split("category=")[1].split("&")[0];
+
+// 		if (currentCategory === "tv") {
+// 			getFilter.allTv();
+// 		}
+// 		if (currentCategory === "gaming") {
+// 			getFilter.allGaming();
+// 		}
+// 		if (currentCategory === "cellphones") {
+// 			getFilter.allCellPhones();
+// 		}
+// 		if (currentCategory === "computers") {
+// 			getFilter.allComputer();
+// 		}
+// 		if (currentCategory === "speakers") {
+// 			getFilter.allSpeaker();
+// 		}
+
+// 		// As thr window is being resized we keep filter checked boxes intact
+// 		returnCheckedBoxes();
+// 	}
+
+// 	if (document.lastChild.offsetWidth <= 600) {
+// 		filterContainer1.style.display = "none";
+// 		filterContainer2.style.height = "0px";
+// 		filterContainer2.style.opacity = "0";
+// 		filterContainer2.style.visibility = "hidden";
+// 	}
+
+// 	if (document.lastChild.offsetWidth >= 1024) {
+// 		filterContainer1.style.display = "block";
+// 		filterContainer2.style.height = "0px";
+// 		filterContainer2.style.opacity = "0";
+// 		if (filterBox[0].style.display === "none") {
+// 			filterBox[0].style.display = "block";
+// 		}
+// 	}
+// });
+
+const openFilter = () => {
+	// Ipads
+	if (
+		document.lastChild.offsetWidth > 768 &&
+		document.lastChild.offsetWidth <= 1200 &&
+		filterContainer2.style.height === "0px"
+	) {
+		filterContainer2.style.height = filterBoxHeight + "px";
+		filterContainer2.style.transition = ".5s";
+		setTimeout(() => {
+			filterContainer2.style.opacity = "1";
+		}, 300);
+		return;
+	}
+
+	if (filterContainer2.style.height === `${filterBoxHeight}px`) {
+		filterContainer2.style.opacity = "0";
+		filterContainer2.style.height = "0px";
+		return;
+	}
+
+	// Desktop anf Cellphone
+	if (
+		document.lastChild.offsetWidth <= 768 ||
+		document.lastChild.offsetWidth > 1200
+	) {
+		filterBox[0].style.display = "block";
+		filterContainer1.style.display = "flex";
+	}
+
+	if (document.lastChild.offsetWidth <= 768) {
+		document.lastChild.style.overflow = "hidden";
+	}
 };
+
+const closeFilter = () => {
+	filterContainer1.style.display = "none";
+	document.lastChild.style.overflow = "scroll";
+};
+
+const applyFilter = document.querySelectorAll("#apply");
+applyFilter.forEach((applyBtn) => {
+	applyBtn.onclick = function () {
+		let queryUrlFromLocalStorage = localStorage.getItem("Url");
+		window.location.href = queryUrlFromLocalStorage;
+		if (document.lastChild.offsetWidth <= 768) {
+			filterContainer1.style.display = "none";
+		}
+	};
+});
+
+// const phonesBrandCheck = (apple, brand) => {
+// 	apple.addEventListener("click", (event) => {
+// 		displayFilteredResults(filter.brand(event, "cellphones", brand));
+// 	});
+// };
+
+const debounce = (fn, delay) => {
+	let timer;
+	return function () {
+		clearTimeout(timer);
+		timer = setTimeout(fn, delay);
+	};
+};
+
+window.onresize = debounce(function () {
+	window.location.reload();
+}, 50);
+
+// window.addEventListener("resize", (e) => {
+// 	debounce(console.log("Something has changed"), 200);
+// });
 
 const phoneFilters = () => {
 	// Price filter
 	firstlevelprice.addEventListener("click", (event) => {
+		console.log("CLicke");
 		displayFilteredResults(filter.price(event, "cellphones", 300, 799));
 	});
 
@@ -164,6 +714,18 @@ const phoneFilters = () => {
 
 	thirdlevelprice.addEventListener("click", (event) => {
 		displayFilteredResults(filter.price(event, "cellphones", 1200, 2000));
+	});
+
+	min.addEventListener("change", (event) => {
+		displayFilteredResults(
+			filter.priceMin(event, "cellphones", Number(min.value), Number(max.value))
+		);
+	});
+
+	max.addEventListener("change", (event) => {
+		displayFilteredResults(
+			filter.priceMax(event, "cellphones", Number(min.value), Number(max.value))
+		);
 	});
 
 	applyminmax.addEventListener("click", (event) => {
@@ -234,6 +796,18 @@ const gamingFilters = () => {
 		displayFilteredResults(filter.price(event, "gaming", 1200, 2000));
 	});
 
+	min.addEventListener("change", (event) => {
+		displayFilteredResults(
+			filter.priceMin(event, "gaming", Number(min.value), Number(max.value))
+		);
+	});
+
+	max.addEventListener("change", (event) => {
+		displayFilteredResults(
+			filter.priceMax(event, "gaming", Number(min.value), Number(max.value))
+		);
+	});
+
 	applyminmax.addEventListener("click", (event) => {
 		displayFilteredResults(
 			filter.priceMinMax(event, "gaming", Number(min.value), Number(max.value))
@@ -260,6 +834,18 @@ const comFilters = () => {
 	thirdlevelprice.addEventListener("click", (event) => {
 		displayFilteredResults(filter.price(event, "computers", 1400, 2000));
 	});
+	min.addEventListener("change", (event) => {
+		displayFilteredResults(
+			filter.priceMin(event, "computers", Number(min.value), Number(max.value))
+		);
+	});
+
+	max.addEventListener("change", (event) => {
+		displayFilteredResults(
+			filter.priceMax(event, "computers", Number(min.value), Number(max.value))
+		);
+	});
+
 	applyminmax.addEventListener("click", (event) => {
 		displayFilteredResults(
 			filter.priceMinMax(
@@ -339,6 +925,18 @@ const speakerFilters = () => {
 		displayFilteredResults(filter.price(event, "speakers", 1200, 2000));
 	});
 
+	min.addEventListener("change", (event) => {
+		displayFilteredResults(
+			filter.priceMin(event, "speakers", Number(min.value), Number(max.value))
+		);
+	});
+
+	max.addEventListener("change", (event) => {
+		displayFilteredResults(
+			filter.priceMax(event, "speakers", Number(min.value), Number(max.value))
+		);
+	});
+
 	applyminmax.addEventListener("click", (event) => {
 		displayFilteredResults(
 			filter.priceMinMax(
@@ -374,6 +972,18 @@ const tvFilters = () => {
 
 	thirdlevelprice.addEventListener("click", (event) => {
 		displayFilteredResults(filter.price(event, "tv", 1200, 2000));
+	});
+
+	min.addEventListener("tv", (event) => {
+		displayFilteredResults(
+			filter.priceMin(event, "tv", Number(min.value), Number(max.value))
+		);
+	});
+
+	max.addEventListener("tv", (event) => {
+		displayFilteredResults(
+			filter.priceMax(event, "tv", Number(min.value), Number(max.value))
+		);
 	});
 
 	applyminmax.addEventListener("click", (event) => {
@@ -471,13 +1081,32 @@ switch (urlCategory) {
 		break;
 }
 
+let allDefaultCategories = document.querySelectorAll(".full-cat");
+const indicateLoadingWhileAwaitingResults = (awaiting) => {
+	if (awaiting) {
+		allDefaultCategories.forEach((category) => {
+			category.style.display = "none";
+		});
+	} else {
+		allDefaultCategories.forEach((category) => {
+			category.style.display = "flex";
+		});
+	}
+};
+
 let newUrl = new URL(document.URL);
+console.log(newUrl.search.length);
 if (newUrl.search.length === 0) {
+	indicateLoadingWhileAwaitingResults(false);
 	display.displayAll();
 	document.querySelector(".filters").style.display = "none";
 	document.querySelector(".sort-hol").style.display = "none";
 	document.querySelector(".pgd").style.display = "none";
 	document.querySelector("#showbox").classList = "showboxflex";
+}
+
+if (newUrl.search.length > 0) {
+	indicateLoadingWhileAwaitingResults(true);
 }
 
 if (newUrl.search.length > 0) {
@@ -488,8 +1117,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		Gamings();
 		emptyParameters();
-		window.location =
-			"gemshop.html?category=gaming&Order=Random&Page=0";
+		window.location = "gemshop.html?category=gaming&Order=Random&Page=0";
 	})
 );
 
@@ -497,8 +1125,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		cellPhones();
 		emptyParameters();
-		window.location =
-			"gemshop.html?category=cellphones&Order=Random&Page=0";
+		window.location = "gemshop.html?category=cellphones&Order=Random&Page=0";
 	})
 );
 
@@ -506,8 +1133,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		Computers();
 		emptyParameters();
-		window.location =
-			"gemshop.html?category=computers&Order=Random&Page=0";
+		window.location = "gemshop.html?category=computers&Order=Random&Page=0";
 	})
 );
 
@@ -515,8 +1141,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		Speakers();
 		emptyParameters();
-		window.location =
-			"gemshop.html?category=speakers&Order=Random&Page=0";
+		window.location = "gemshop.html?category=speakers&Order=Random&Page=0";
 	})
 );
 
@@ -524,23 +1149,9 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		TVs();
 		emptyParameters();
-		window.location =
-			"gemshop.html?category=tv&Order=Random&Page=0";
+		window.location = "gemshop.html?category=tv&Order=Random&Page=0";
 	})
 );
-
-// PRODUCT DISPLAY (SEARCH)
-const viewProduct = (event) => {
-	let itemID =
-		event.target.dataset.id ||
-		event.target.parentNode.dataset.id ||
-		event.target.parentNode.parentNode.dataset.id ||
-		event.target.parentNode.parentNode.parentNode.dataset.id;
-	if (itemID) {
-		let url = `product.html?item=${encodeURIComponent(itemID)}`;
-		window.location = url;
-	}
-};
 
 // ADD ITEMS TO CART
 let cart = [];
@@ -697,3 +1308,41 @@ const addToCart = (event) => {
 		} catch (error) {}
 	}
 };
+
+// OPEN MENU
+const menuDOM = document.getElementById("menu");
+const menuBtn = document.getElementById("mb");
+menuDOM.style.display = "none";
+
+const openMenu = () => {
+	menuDOM.style.display = "block";
+
+	if (menuDOM.className.includes("menuout")) {
+		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
+	} else {
+		menuDOM.className += " menuin";
+	}
+	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
+};
+
+// CLOSE MENU
+const closeMenu = () => {
+	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
+	setTimeout(() => (menuDOM.style.display = "none"), 450);
+	document.lastChild.style.overflow = "scroll"; // Enables the window scrolling
+};
+
+// CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
+window.addEventListener("click", (e) => {
+	if (menuDOM.style.display === "block") {
+		let parent =
+			e.target.parentNode.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode === menuDOM ||
+			e.target.parentNode === menuDOM;
+
+		if (!parent && e.target !== menuBtn) {
+			closeMenu();
+		}
+	}
+});

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100vw;
+				height: 100vh;
+			}
+
+			.line {
+				height: 2px;
+				width: 400px;
+				background-color: grey;
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				align-self: center;
+				transform: rotate(90deg);
+			}
+
+			.line::before {
+				content: "";
+				height: 2px;
+				width: 25%;
+				background-color: green;
+			}
+
+			.dot {
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background-color: blueviolet;
+				position: absolute;
+				top: 50%;
+			}
+
+			.zero {
+				left: 0%;
+				transform: translate(-10%, -50%);
+			}
+
+			.one {
+				left: 22%;
+				transform: translate(25%, -50%);
+			}
+
+			.two {
+				left: 42%;
+				transform: translate(50%, -50%);
+			}
+
+			.three {
+				left: 62%;
+				transform: translate(75%, -50%);
+			}
+
+			.four {
+				right: 0%;
+				transform: translate(10%, -50%);
+			}
+
+			.dotname {
+				transform: rotateX(90deg);
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="line">
+			<div class="dot zero"><span class="dotname">Billing</span></div>
+			<div class="dot one"><span class="dotname">Billing</span></div>
+			<div class="dot two"><span class="dotname">Billing</span></div>
+			<div class="dot three"><span class="dotname">Billing</span></div>
+			<div class="dot four"><span class="dotname">Billing</span></div>
+		</div>
+	</body>
+</html>
