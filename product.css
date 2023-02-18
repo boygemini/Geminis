@@ -97,7 +97,8 @@ nav,
 }
 
 .cart-box:hover {
-	background-color: whitesmoke;
+	background-color: #1111111b;
+	cursor: pointer;
 }
 
 .cart-box p {
@@ -512,7 +513,7 @@ nav ul li {
 	overflow-y: hidden;
 	height: auto;
 	position: fixed;
-	bottom: 20px;
+	bottom: 0;
 	right: 0;
 	margin: auto;
 	z-index: 9283920282;
@@ -525,7 +526,7 @@ nav ul li {
 }
 
 #notify-box {
-	overflow-y: hidden;
+	overflow-y: scroll;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -686,14 +687,14 @@ nav ul li {
 }
 
 #lbtn {
-	background-image: url(IMAGES/goleft.png);
+	background-image: url(images/goleft.png);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 #rbtn {
-	background-image: url(IMAGES/goright.png);
+	background-image: url(images/goright.png);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -736,7 +737,7 @@ nav ul li {
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 100px;
-	/* background-image: url(IMAGES/ipad1.jpg); */
+	/* background-image: url(images/ipad1.jpg); */
 }
 
 .tbs::-webkit-scrollbar {
@@ -1178,19 +1179,6 @@ footer {
 	*::-webkit-scrollbar {
 		display: none;
 	}
-	.menu-box {
-		width: 100%;
-	}
-
-	.notify-box {
-		left: 50%;
-		transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
-		-moz-transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		-o-transform: translateX(-50%);
-	}
-
 	.shop-body {
 		padding: 0;
 	}
@@ -1213,7 +1201,7 @@ footer {
 	}
 
 	.cart-box:hover {
-		background-color: whitesmoke;
+		background-color: transparent;
 	}
 
 	.search:focus,
@@ -1494,7 +1482,7 @@ footer {
 	}
 
 	.cart-box:hover {
-		background-color: whitesmoke;
+		background-color: transparent;
 	}
 
 	.search:focus,
@@ -1615,7 +1603,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(IMAGES/search.png);
+		/* background-image: url(images/search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */
@@ -1803,7 +1791,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(IMAGES/search.png);
+		/* background-image: url(images/search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */

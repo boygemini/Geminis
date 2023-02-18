@@ -101,7 +101,8 @@ nav,
 }
 
 .cart-box:hover {
-	background-color: whitesmoke;
+	background-color: #1111111b;
+	cursor: pointer;
 }
 
 .cart-box p {
@@ -493,7 +494,7 @@ nav ul li {
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
-	background: url("IMAGES../stackphone.png");
+	background: url("images../stackphone.png");
 	background-size: cover;
 	background-position: center;
 	transition: all 0.3s ease-in-out;
@@ -506,31 +507,31 @@ nav ul li {
 }
 
 .hol1 {
-	background: url("IMAGES../game.jpg");
+	background: url("images../game.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 .hol2 {
-	background: url("IMAGES../cell.jpg");
+	background: url("images../cell.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 .hol3 {
-	background: url("IMAGES../wiin.jpg");
+	background: url("images../wiin.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 .hol4 {
-	background: url("IMAGES../speak.jpg");
+	background: url("images../speak.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 .hol5 {
-	background: url("IMAGES../tele.jpg");
+	background: url("images../tele.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -577,7 +578,7 @@ nav ul li {
 .banner-container {
 	width: 100%;
 	height: 400px;
-	background: url("IMAGES../stackphone.png"), #090a0a;
+	background: url("images../stackphone.png"), #090a0a;
 	background-size: 800px;
 	background-repeat: no-repeat;
 	background-position: right 30px;
@@ -671,7 +672,7 @@ p span {
 	overflow-y: hidden;
 	height: auto;
 	position: fixed;
-	bottom: 20px;
+	bottom: 0;
 	right: 0;
 	margin: auto;
 	z-index: 9283920282;
@@ -684,7 +685,7 @@ p span {
 }
 
 #notify-box {
-	overflow-y: hidden;
+	overflow-y: scroll;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1274,7 +1275,6 @@ p span {
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
-	text-transform: uppercase;
 }
 
 #result-title {
@@ -1795,10 +1795,6 @@ footer {
 }
 
 @media screen and (max-width: 401px) {
-	.menu-box {
-		width: 100%;
-	}
-
 	#red-header {
 		width: 100%;
 		display: flex;
@@ -1832,20 +1828,6 @@ footer {
 	*::-webkit-scrollbar {
 		display: none;
 	}
-
-	.notify-box {
-		left: 50%;
-		transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
-		-moz-transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		-o-transform: translateX(-50%);
-	}
-
-	.menu-box {
-		width: 100%;
-	}
-
 	.shop-body {
 		padding: 0;
 	}
@@ -1868,7 +1850,7 @@ footer {
 	}
 
 	.cart-box:hover {
-		background-color: whitesmoke;
+		background-color: transparent;
 	}
 
 	.search:focus,
@@ -2136,7 +2118,7 @@ footer {
 	.view-all {
 		text-align: center;
 		font-family: "Open Sans", Helvetica;
-		text-transform: uppercase;
+		text-transform: capitalize;
 	}
 
 	.price-box {
@@ -2378,7 +2360,7 @@ footer {
 	}
 
 	.cart-box:hover {
-		background-color: whitesmoke;
+		background-color: transparent;
 	}
 
 	.search:focus,
@@ -2499,7 +2481,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(IMAGES../search.png);
+		/* background-image: url(images../search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */
@@ -2702,7 +2684,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(IMAGES../search.png);
+		/* background-image: url(images../search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */

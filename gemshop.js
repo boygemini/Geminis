@@ -487,7 +487,7 @@ class display {
 		if (directory.length > 0) {
 			for (let k = 0; k < 10; k++) {
 				y += `
-			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id}>
+			<div class="sell-box sel-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
 
 		<div class="img-con" id="main-con">
 				<div class="img-cont" style='background-image:url(${directory[k].itemInfo.itemImg[0]})'>
@@ -509,13 +509,13 @@ class display {
 						id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
 						<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 					</span>
-					<button id="cart-btn" data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-						<img id="addto-cart-img" src="IMAGES/add-to-cart.png" data-id= ${directory[k].id} onclick = "addToCart(event)"
-							alt="" data-id= ${directory[k].id}  >
+					<button id="cart-btn" data-id= ${directory[k].id} class="cart-btn">
+						<img id="addto-cart-img" src="IMAGES/add-to-cart.png"
+							alt="" data-id= ${directory[k].id}  onclick = "addToCart(event)">
 					</button>
 				</div>
 			</div>
-		</a>`;
+		</div>`;
 			}
 			document.getElementById(category).innerText = boxID;
 			document.getElementById(boxID).innerHTML = y;
@@ -1291,7 +1291,6 @@ let ItemsInCart = JSON.parse(localStorage.getItem("Cart")),
 	pickedItem;
 const addToCart = (event) => {
 	event.stopPropagation();
-	event.preventDefault();
 	let ItemID = event.target.dataset.id;
 	let pickItemFromStore = item(ItemID);
 	popupNotification(

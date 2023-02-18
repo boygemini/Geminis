@@ -219,8 +219,7 @@ const confirmPayment = async (elements, _stripe) => {
 		displayForm(4);
 		markComplete(4);
 		continueButton.innerText = "Continue Shopping";
-		continueButton.style.width = "100%";
-		prevFormButton.style.display = "none";
+		// prevFormButton.style.display = "none";
 
 		continueButton.addEventListener("click", (e) => {
 			window.location.href = "gemshop.html";
@@ -323,17 +322,13 @@ const checkFields = (e) => {
 	console.log(customerInfo.shippingInformation);
 
 	const inputGood = (filterFilledFields) => {
-		filterFilledFields.forEach((box) => {
-			box.style.border = ".5px solid #090a0a5f";
-			box.previousElementSibling.style.color = "";
-		});
+		filterFilledFields.forEach(
+			(box) => (box.style.border = ".5px solid #090a0a5f")
+		);
 	};
 
 	const inputEmpty = (filterEmptyFields) => {
-		filterEmptyFields.forEach((box) => {
-			box.style.border = ".5px solid red";
-			box.previousElementSibling.style.color = "red";
-		});
+		filterEmptyFields.forEach((box) => (box.style.border = ".5px solid red"));
 	};
 
 	const validateForm = (fields) => {
@@ -350,7 +345,6 @@ const checkFields = (e) => {
 		currentFields.forEach((f) => {
 			f.addEventListener("input", (e) => {
 				f.style.border = ".5px solid #090a0a5f";
-				f.previousElementSibling.style.color = "";
 				removeError();
 			});
 		});
