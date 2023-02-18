@@ -81,6 +81,7 @@
 						</div>
 						<div class="cart-box" onclick="toCart()">
 							<img
+								id="cart-img"
 								src="IMAGES/shopping-cart.png"
 								alt=""
 								srcset=""
@@ -90,7 +91,7 @@
 						</div>
 						<button type="button" class="login">Login</button>
 						<div class="account cart-box">
-							<img src="IMAGES/user.png" alt="" />
+							<img src="IMAGES/user.png" id="user-img" alt="" />
 						</div>
 					</div>
 				</div>
@@ -108,6 +109,15 @@
 								<li>Laptops & Computers</li>
 								<li>Speakers</li>
 								<li>Video Games</li>
+							</ul>
+						</div>
+						<div class="menu-cat">
+							<h1>Sections</h1>
+							<ul id="kk">
+								<li>Shop</li>
+								<li>Products</li>
+								<li>About Us</li>
+								<li>Contact Us</li>
 							</ul>
 						</div>
 						<div class="menu-cat">
@@ -306,7 +316,7 @@
 					<div class="mmm">
 						<div class="sel-up">
 							<p class="sec-heading mainsel" id="ms">Selected Just For You</p>
-							<p class="view-all" id="" onclick="toShop(event)">See all</p>
+							<a href="/gemshop.html" class="view-all" id="">See more</a>
 						</div>
 						<div class="sel-table">
 							<ul>
@@ -463,9 +473,9 @@
 											id="a-icon"
 											class="a-icon"
 										/>
+										<h2>Free Shipping</h2>
 									</div>
 									<div class="a-text">
-										<h2>Free Shipping</h2>
 										<p>Lorem ipsum dolor sit amet.</p>
 									</div>
 								</div>
@@ -476,9 +486,9 @@
 											alt=""
 											class="a-icon"
 										/>
+										<h2>Secured Payments</h2>
 									</div>
 									<div class="a-text">
-										<h2>Secured Payments</h2>
 										<p>Lorem ipsum dolor sit amet consectetur.</p>
 									</div>
 								</div>
@@ -489,9 +499,9 @@
 											alt=""
 											class="a-icon"
 										/>
+										<h2>24/7 Online Support</h2>
 									</div>
 									<div class="a-text">
-										<h2>24/7 Online Support</h2>
 										<p>Lorem ipsum dolor sit amet consectetur.</p>
 									</div>
 								</div>
@@ -499,9 +509,9 @@
 								<div class="about-box">
 									<div class="abimg">
 										<img src="IMAGES/exchange.png" alt="" class="a-icon" />
+										<h2>Free Returns</h2>
 									</div>
 									<div class="a-text">
-										<h2>Free Returns</h2>
 										<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
 									</div>
 								</div>

@@ -70,23 +70,23 @@ const showSuggesttions = (event) => {
 let suggestionBox = document.querySelector(".searchcontainer");
 
 const openSearch = () => {
-	suggestionBox.classList.add("fadein");
+	suggestionBox.classList.add("searchfadein");
 	suggestionBox.style.display = "flex";
 	document.lastChild.style.overflow = "hidden";
 	let searchBox = document.getElementById("search");
 	searchBox.focus();
 
 	setTimeout(() => {
-		suggestionBox.classList.remove("fadein");
-	}, 500);
+		suggestionBox.classList.remove("searchfadein");
+	}, 300);
 };
 
 const closeSearch = () => {
-	suggestionBox.classList.add("fadeout");
+	suggestionBox.classList.add("searchfadeout");
 	setTimeout(() => {
 		suggestionBox.style.display = "none";
-		suggestionBox.classList.remove("fadeout");
-	}, 400);
+		suggestionBox.classList.remove("searchfadeout");
+	}, 300);
 	document.lastChild.style.overflow = "";
 };
 

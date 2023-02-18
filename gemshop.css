@@ -1274,6 +1274,7 @@ p span {
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
+	text-transform: uppercase;
 }
 
 #result-title {
@@ -2135,7 +2136,7 @@ footer {
 	.view-all {
 		text-align: center;
 		font-family: "Open Sans", Helvetica;
-		text-transform: capitalize;
+		text-transform: uppercase;
 	}
 
 	.price-box {

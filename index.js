@@ -218,8 +218,8 @@ class displayProduct {
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
 			<button id="cart-btn" class="cart-btn" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
-			<img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
-			<p data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"> Add to Cart<p></button>
+			<img id="addto-cart-img" src="/IMAGES/add-cart-white.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
+			<p data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])" id="cart-text"> Add to Cart<p></button>
 		    </div>
 		</div>
 	 </a>`;
@@ -236,8 +236,6 @@ class displayProduct {
 				Holder.innerHTML = itemCreated;
 				let viewAll = document.querySelector(".view-all");
 				try {
-					viewAll.id = event.target.id;
-					viewAll.innerText = `View All ${sub}`;
 				} catch (error) {}
 			}, 0);
 			Holder.className = Holder.className.replace("fadeout", "fadein");
@@ -268,8 +266,8 @@ class displayProduct {
 						  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 					   </span>
 					   <button id="cart-btn" class="cart-btn" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)">
-					   <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)">
-					 	<p data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"> Add to Cart<p></button>
+					   <img id="addto-cart-img" src="/IMAGES/add-cart-white.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)">
+					 	<p id="cart-text" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"> Add to Cart<p></button>
 					   </button>
 				    </div>
 				</div>
@@ -314,8 +312,8 @@ class displayProduct {
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
 			   <button id="cart-btn" class="cart-btn" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)">
-			   <img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)">
-			 	<p data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"> Add to Cart<p></button>
+			   <img id="addto-cart-img" src="/IMAGES/add-cart-white.png" alt="" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)">
+			 	<p id="cart-text" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"> Add to Cart<p></button>
 			   </button>
 		    </div>
 		</div>
