@@ -2029,7 +2029,6 @@ footer {
 		top: 0;
 		z-index: 67542890;
 		height: auto;
-		background-color: wheat;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -2070,7 +2069,6 @@ footer {
 
 	.logo-nav {
 		width: 95%;
-		background-color: slategray;
 	}
 
 	.login-cart {
