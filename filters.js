@@ -441,7 +441,7 @@ const displayFilteredResults = (directory) => {
 	let y = "";
 	for (let k in directory) {
 		y += `
-			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
+			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" >
 
 		<div class="img-con" id="main-con">
 				<div class="img-cont" style='background-image:url(${directory[k].itemInfo.itemImg[0]})'>
@@ -463,8 +463,8 @@ const displayFilteredResults = (directory) => {
 					id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" data-id=${directory[k].id} class="cart-btn"><img id="addto-cart-img" data-id=${directory[k].id} src="IMAGES/add-to-cart.png"
-						alt="" onclick = "addToCart(event)">
+				<button id="cart-btn" onclick = "addToCart(event)" data-id=${directory[k].id} class="cart-btn"><img onclick = "addToCart(event)" data-id=${directory[k].id} id="addto-cart-img" src="IMAGES/add-to-cart.png"
+						alt="" >
 				</button>
 			</div>
 		</div>

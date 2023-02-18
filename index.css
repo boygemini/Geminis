@@ -1800,7 +1800,7 @@ nav ul li {
 }
 
 .cart-btn {
-	opacity: 0;
+	opacity: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -2060,13 +2060,17 @@ footer {
 		border: 1px solid #111111;
 	}
 
+	.logo-nav {
+		width: 95%;
+	}
+
 	.login-cart {
-		column-gap: 0px;
+		column-gap: 10px;
 	}
 
 	.login-cart img {
-		width: 20px;
-		height: 20px;
+		width: 23px;
+		height: 23px;
 	}
 
 	.login {
@@ -2077,6 +2081,7 @@ footer {
 		width: auto;
 		height: auto;
 		padding: 10px;
+		background-color: whitesmoke;
 	}
 
 	.cart-box:hover {

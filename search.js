@@ -7,14 +7,14 @@ SEARCH AND SEARCH SUGGESTIONS
 */
 
 //Variables
-const allAnchorTags = [...document.querySelectorAll("a")];
-allAnchorTags.forEach((tag) => {
-	tag.addEventListener("click", (event) => {
-		event.preventDefault();
-		console.log(event.currentTarget);
-		// window.location.href = tag.href;
-	});
-});
+// const allAnchorTags = [...document.querySelectorAll("a")];
+// allAnchorTags.forEach((tag) => {
+// 	tag.addEventListener("click", (event) => {
+// 		event.preventDefault();
+// 		event.stopImmediatePropagation();
+// 		// window.location.href = tag.href;
+// 	});
+// });
 
 let dir2 = JSON.parse(localStorage.getItem("StoreItems"));
 let hs = document.getElementById("hold");
@@ -277,7 +277,7 @@ const displayResults = (directory, Query) => {
 		for (let k in directory) {
 			if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
 				y += `
-			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
+			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id} >
 
 		<div class="img-con" id="main-con">
 				<div class="img-cont" style='background-image:url(${directory[k].itemInfo.itemImg[0]})'>
@@ -299,8 +299,8 @@ const displayResults = (directory, Query) => {
 					id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn"  class="cart-btn"><img id="addto-cart-img" data-id=${directory[k].id} src="IMAGES/add-to-cart.png"
-						alt="" onclick="addToCart(event)">
+				<button id="cart-btn" onclick="addToCart(event)" data-id=${directory[k].id}  class="cart-btn"><img id="addto-cart-img" onclick="addToCart(event)" data-id=${directory[k].id}  src="IMAGES/add-to-cart.png"
+						alt="" >
 				</button>
 			</div>
 		</div>
@@ -326,7 +326,7 @@ const displayFiltereddResults = (results, category) => {
 		getResults.positiveResults();
 		for (let k in results) {
 			y += `
-			<a href="product.html?item=${results[k].id}" class="sell-box sel-box" data-id=${results[k].id} onclick = "viewProduct(event)">
+			<a href="product.html?item=${results[k].id}" class="sell-box sel-box" data-id=${results[k].id} >
 
 		<div class="img-con" id="main-con">
 				<div class="img-cont" style='background-image:url(${results[k].itemInfo.itemImg[0]})'>
@@ -348,8 +348,8 @@ const displayFiltereddResults = (results, category) => {
 					id = "currency" > $ </span> ${results[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${results[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" data-id = ${results[k].id} class="cart-btn"><img id="addto-cart-img" data-id=${results[k].id} src="IMAGES/add-to-cart.png"
-						alt="" onclick="addToCart(event)">
+				<button id="cart-btn" data-id = ${results[k].id} onclick="addToCart(event)" class="cart-btn"><img id="addto-cart-img" data-id = ${results[k].id} onclick="addToCart(event)" src="IMAGES/add-to-cart.png"
+						alt="" >
 				</button>
 			</div>
 		</div>
