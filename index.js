@@ -91,7 +91,7 @@ const popupNotification = (itemName, itemImage) => {
 	let notification = document.getElementById("notify-box");
 	let creatNotBox = document.createElement("div");
 	creatNotBox.classList = " notification on";
-	creatNotBox.innerHTML = `<img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to cart</p>`;
+	creatNotBox.innerHTML = `<div><img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to Cart</p></div> <button class="gotocart">Cart</button>`;
 	notification.appendChild(creatNotBox);
 	setTimeout(() => {
 		creatNotBox.classList = " notification off";
@@ -199,7 +199,7 @@ class displayProduct {
 		let itemCreated = " ";
 		let Holder = document.querySelector(holderClass);
 		for (let i = 0; i <= 9; i++) {
-			itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
+			itemCreated += `<a href="product.html?item=${category[i].id}" class="sell-box sel-box" data-id=${category[i].id}>
 
 		<div class="img-con" id="main-con">
 				<div class="img-cont" style='background-image:url(${category[i].itemInfo.itemImg[0]})'>
@@ -217,17 +217,30 @@ class displayProduct {
 				  <span class="price">$${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
+			<button id="cart-btn" class="cart-btn" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
+			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
+			<p data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])" id="cart-text"> Add to Cart<p></button>
 		    </div>
 		</div>
-	 </div>`;
+	 </a>`;
 		}
-		Holder.innerHTML = itemCreated;
-		let viewAll = document.querySelector(".view-all");
-		try {
-			viewAll.id = event.target.id;
-			viewAll.innerText = `View All ${sub}`;
-		} catch (error) {}
+
+		if (Holder.className.includes("fadein")) {
+			Holder.className = Holder.className.replace("fadein", "fadeout");
+		} else {
+			Holder.classList.add("fadeout");
+		}
+
+		setTimeout(() => {
+			setTimeout(() => {
+				Holder.innerHTML = itemCreated;
+				let viewAll = document.querySelector(".view-all");
+				try {
+				} catch (error) {}
+			}, 0);
+			Holder.className = Holder.className.replace("fadeout", "fadein");
+			Holder.parentNode.scrollLeft = 0;
+		}, 400);
 	}
 
 	// DISPLAY RECENTLY ADDED ITEMS
@@ -235,7 +248,7 @@ class displayProduct {
 		let itemCreated = "";
 		let Holder = document.getElementById("holder-rec");
 		for (let i in category) {
-			itemCreated += `<div class="sell-box sel-box" id="recbox" data-id=${category[i].id} onclick = "viewProduct(event)">
+			itemCreated += `<a href="product.html?item=${category[i].id}" class="sell-box sel-box" id="recbox" data-id=${category[i].id} onclick = "viewProduct(event)">
 				<div class="img-con" id="rec-con">
 				<div class="img-cont" style='background-image:url(${category[i].itemInfo.itemImg[0]})'>
 
@@ -252,10 +265,13 @@ class displayProduct {
 						  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
 						  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 					   </span>
-					   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
+					   <button id="cart-btn" class="cart-btn" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)">
+					   <img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)">
+					 	<p id="cart-text" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"> Add to Cart<p></button>
+					   </button>
 				    </div>
 				</div>
-			 </div>`;
+			 </a>`;
 
 			// itemCreated += `<div class="recent">
 			// 					<img src=${category[i].itemInfo.itemImg[0]} alt="" />
@@ -279,7 +295,7 @@ class displayProduct {
 		let itemCreated = "";
 		let Holder = document.querySelector(".Weekly-Container");
 		for (let i in category) {
-			itemCreated += `<div class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
+			itemCreated += `<a href="product.html?item=${category[i].id}" class="sell-box sel-box" data-id=${category[i].id} onclick = "viewProduct(event)">
 		<div class="img-con" id="wk-con">
 				<div class="img-cont" style='background-image:url(${category[i].itemInfo.itemImg[0]})'></div>
 
@@ -295,10 +311,13 @@ class displayProduct {
 				  <span class="price">$${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"></button>
+			   <button id="cart-btn" class="cart-btn" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)">
+			   <img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt="" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)">
+			 	<p id="cart-text" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"> Add to Cart<p></button>
+			   </button>
 		    </div>
 		</div>
-	 </div>`;
+	 </a>`;
 		}
 		Holder.innerHTML = itemCreated;
 	}
@@ -354,6 +373,7 @@ const moveLeft = () => {
 // ADD RECENT ITEMS TO CART
 const addToCartt = (event, ITT) => {
 	event.stopPropagation();
+	event.preventDefault();
 
 	function Me() {
 		let pickItemFromStore = ITT.find(
@@ -399,6 +419,7 @@ let pickedItem;
 let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
 const addToCart = (event, ITT) => {
 	event.stopPropagation();
+	event.preventDefault();
 
 	let ItemCategory = event.target.dataset.category;
 	let pickItemFromStore = ITT[`${ItemCategory}`].find(

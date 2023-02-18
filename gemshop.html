@@ -15,11 +15,11 @@
 	<body id="bodyy">
 		<div class="notify-box">
 			<div id="notify-box">
-				<!-- <img src="/images../tv4.png" alt="" srcset="" class="noti-img">
+				<!-- <img src="/IMAGES/tv4.png" alt="" srcset="" class="noti-img">
 			<p>You added <strong id="itemname">${itemName}</strong> to cart</p> -->
 			</div>
 		</div>
-		<section class="slimbanner">
+		<section class="slimbanner" id="slimbanner">
 			<div class="slimcontent">
 				<div class="slimb-left">
 					<p>Open doors to a world of Electronics</p>
@@ -37,13 +37,13 @@
 				<div class="logo-nav">
 					<nav id="nav-and-products">
 						<img
-							src="images../menu.png"
+							src="IMAGES/menu.png"
 							alt=""
 							id="mb"
 							class="menu"
 							onclick="openMenu()"
 						/>
-						<h1 class="logo" id="mob-logo" onclick="goHome()">Geminis.</h1>
+						<a href="/index.html" class="logo" id="mob-logo">Geminis.</a>
 						<div class="products">
 							<ul>
 								<li id="games">Shop</li>
@@ -54,7 +54,7 @@
 						</div>
 					</nav>
 					<div class="justme">
-						<h1 class="logo" id="web-logo" onclick="goHome()">Geminis.</h1>
+						<a href="/index.html" class="logo" id="web-logo">Geminis.</a>
 					</div>
 					<div class="login-cart">
 						<div class="search-section search-web" onclick="openSearch()">
@@ -68,12 +68,12 @@
 							/>
 							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
 							<div class="serc-img">
-								<img src="images../search.png" alt="" srcset="" />
+								<img src="IMAGES/search.png" alt="" srcset="" />
 							</div>
 						</div>
 						<div class="cart-box" id="searc-cart" onclick="openSearch()">
 							<img
-								src="images../search.png"
+								src="IMAGES/search.png"
 								id="mob-search-icon"
 								alt=""
 								srcset=""
@@ -81,7 +81,7 @@
 						</div>
 						<div class="cart-box" onclick="toCart()">
 							<img
-								src="images../shopping-cart.png"
+								src="IMAGES/shopping-cart.png"
 								alt=""
 								srcset=""
 								onclick="toCart()"
@@ -90,18 +90,14 @@
 						</div>
 						<button type="button" class="login">Login</button>
 						<div class="account cart-box">
-							<img src="/images../user.png" alt="" />
+							<img src="/IMAGES/user.png" alt="" />
 						</div>
 					</div>
 				</div>
 				<div class="menu-box" id="menu">
 					<div class="menu-heading">
 						<h1>Menu</h1>
-						<img
-							class="cancel"
-							onclick="closeMenu()"
-							src="images../close.png"
-						/>
+						<img class="cancel" onclick="closeMenu()" src="IMAGES/close.png" />
 					</div>
 					<div class="main-menu">
 						<div class="menu-cat">
@@ -135,7 +131,7 @@
 					<div class="searchbox">
 						<div class="search-cancel">
 							<h1>Hello 👋🏻, what are you looking for?</h1>
-							<img src="images../close(1).png" alt="" onclick="closeSearch()" />
+							<img src="IMAGES/close(1).png" alt="" onclick="closeSearch()" />
 						</div>
 						<input
 							type=""
@@ -166,7 +162,7 @@
 				<div class="filters filters1" id="filter">
 					<div class="filter-cancel">
 						<button onclick="closeFilter()">
-							<img src="images../close(1).png" alt="" /> Close
+							<img src="IMAGES/close(1).png" alt="" /> Close
 						</button>
 					</div>
 					<div class="fil-head">
@@ -217,14 +213,14 @@
 									<option value="Descending">Descending price</option>
 								</select>
 								<button onclick="openFilter()" id="fbtn">
-									<img src="images../filter.png" alt="" />
+									<img src="IMAGES/filter.png" alt="" />
 								</button>
 							</div>
 						</div>
 						<div class="filters filters2" id="filter">
 							<div class="filter-cancel">
 								<button onclick="closeFilter()">
-									<img src="images../close(1).png" alt="" /> Close
+									<img src="IMAGES/close(1).png" alt="" /> Close
 								</button>
 							</div>
 							<div class="fil-head">
@@ -251,7 +247,7 @@
 							</div>
 							<div class="av-box" id="gamings">
 								<!-- <div class="item-box">
-							<img src="/images../ipad2.png" alt="">
+							<img src="/IMAGES/ipad2.png" alt="">
 							<div class="item-details">
 								<h1>iPhone 13 Pro Max</h1>
 								<h2>Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
@@ -271,7 +267,7 @@
 						</div> -->
 								<!-- <div class="sel-box">
 							<div class="img-con">
-								<img src="/images../frontIpad.png" alt="">
+								<img src="/IMAGES/frontIpad.png" alt="">
 							</div>
 							<div class="sfu">
 								<div class="text-hold">
@@ -288,7 +284,7 @@
 										<span class="price"><span class="currency" id="currency">$</span> 637.23</span>
 										<span class="old-price price">$765</span>
 									</span>
-									<button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/images../add-to-cart.png"
+									<button id="cart-btn" class="cart-btn"><img id="addto-cart-img" src="/IMAGES/add-to-cart.png"
 											alt="" data-id="1914" data-category="gaming"
 											onclick="addToCart(event,Storage.getAllProducts().selectedProducts[0])">
 									</button>
@@ -367,7 +363,7 @@
 				<!-- <section class="visit-our-support">
 				<div class="vv">
 					<h1>Visit our Support Center</h1>
-					<img src="/images../customer-support.png" alt="">
+					<img src="/IMAGES/customer-support.png" alt="">
 				</div>
 				<button class="visit" type="button">Visit</button>
 			</section> -->

@@ -323,11 +323,13 @@ class displayItems {
       <h1 class = "numbering">${displayNumbering()}</h1>
 
 
-		<div id="img-con" onclick="viewProduct(event)" data-id=${category[i].id}>
+		<a href="product.html?item=${
+			category[i].id
+		}" id="img-con" onclick="viewProduct(event)" data-id=${category[i].id}>
 			<div id="img-cont"
 			style='background-image:url(${category[i].itemInfo.itemImg[0]})' alt=""  >
 			</div>
-		</div>
+		</a>
 
 
         <div class="order-info">

@@ -114,8 +114,7 @@ nav,
 }
 
 .cart-box:hover {
-	background-color: #1111111b;
-	cursor: pointer;
+	background-color: whitesmoke;
 }
 
 .cart-box p {
@@ -832,7 +831,7 @@ hr {
 	flex-direction: column;
 	row-gap: 20px;
 	background-color: white;
-	box-shadow: 0px 15px 25px -10px #021e541a;
+	/* box-shadow: 0px 15px 25px -10px #021e541a; */
 }
 
 .stepps h1,
@@ -862,6 +861,37 @@ form,
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
+	outline: none;
+}
+
+.form-group input:focus {
+	border: 1px solid #111111;
+}
+
+.form-field {
+	display: flex;
+	flex-direction: column;
+}
+
+.inputed-info {
+	font-weight: 500;
+}
+
+.checck {
+	top: 50%;
+	transform: translateY(-25%);
+	position: absolute;
+	width: 200px;
+	-webkit-transform: translateY(-25%);
+	-moz-transform: translateY(-25%);
+	-ms-transform: translateY(-25%);
+	-o-transform: translateY(-25%);
+}
+
+label {
+	padding: 5px 10px;
+	font-weight: 500;
+	color: #111111c1;
 }
 
 .flex-form {
@@ -875,6 +905,7 @@ form,
 	display: flex;
 	align-items: center;
 	column-gap: 10px;
+	margin-top: 20px;
 }
 
 .select-option {
@@ -997,6 +1028,89 @@ form input[type="submit"] {
 	align-self: flex-end;
 }
 
+/* The container */
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: -4px;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	border-radius: 3px;
+	background: white;
+	border: 2px solid #090a0a;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+	background-color: #11111160;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+	background-color: #090a0a;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+	left: 7px;
+	top: 2px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.option {
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+	justify-items: center;
+}
+
 .ordercom {
 	align-self: baseline;
 	position: absolute;
@@ -1017,6 +1131,7 @@ form input[type="submit"] {
 .confirmation-code {
 	position: relative;
 	width: 100%;
+	min-height: 50vh;
 	height: 100%;
 	background-color: white;
 	border-radius: 3px;
@@ -1399,7 +1514,6 @@ footer {
 	overflow: hidden;
 	animation: formout 1s ease-in-out;
 	-webkit-animation: formout 1s ease-in-out;
-	box-shadow: 0px 0px 10px -4px #11111164;
 }
 
 .formslide {
@@ -1498,7 +1612,7 @@ footer {
 }
 
 #payment {
-	min-height: 300px;
+	min-height: 50vh;
 }
 
 @media screen and (max-width: 414px) {
@@ -1547,11 +1661,27 @@ footer {
 	#review {
 		box-shadow: none;
 	}
+
+	.menu-box {
+		width: 100%;
+	}
+
+	.login-cart {
+		column-gap: 0px;
+	}
 }
 
 @media screen and (min-width: 415px) and (max-width: 768px) {
 	#progress-bar {
 		height: 4px;
+	}
+
+	.menu-box {
+		width: 100%;
+	}
+
+	.login-cart {
+		column-gap: 10px;
 	}
 
 	.progress {
@@ -1575,8 +1705,12 @@ footer {
 	*::-webkit-scrollbar {
 		display: none;
 	}
+
+	#body {
+		width: 95%;
+	}
 	.cart-body {
-		padding: 0;
+		padding: 0px 10px;
 		width: 100%;
 		margin-top: 4vh;
 	}
@@ -1599,7 +1733,7 @@ footer {
 	}
 
 	.cart-box:hover {
-		background-color: transparent;
+		background-color: whitesmoke;
 	}
 
 	.search:focus,
@@ -1626,6 +1760,7 @@ footer {
 
 	.logo-nav {
 		padding: 15px 0px;
+		width: 100%;
 	}
 
 	#nav-and-products {
@@ -1643,10 +1778,6 @@ footer {
 	.search-mobile {
 		height: 45px;
 		border: 1px solid #111111;
-	}
-
-	.login-cart {
-		column-gap: 0px;
 	}
 
 	.login-cart img {
@@ -1768,17 +1899,23 @@ footer {
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
 	#body {
-		width: 95%;
+		width: 100%;
 	}
 
 	.cart-body {
 		margin-top: 15vh;
 		width: 100%;
+		padding: 0px;
 	}
 
 	.cart-top {
 		width: 95%;
 		padding-left: 0px;
+	}
+
+	.logo-nav {
+		width: 95%;
+		padding: 0px;
 	}
 
 	#mob-logo {
@@ -1817,7 +1954,7 @@ footer {
 	}
 
 	.cart-box:hover {
-		background-color: transparent;
+		background-color: whitesmoke;
 	}
 
 	.search:focus,
@@ -1938,7 +2075,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(images/search.png);
+		/* background-image: url(IMAGES/search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */
@@ -1989,21 +2126,16 @@ footer {
 		padding: 0px;
 	}
 
-	.logo-nav {
-		width: 90%;
-		padding: 0px;
-	}
-
 	/*SHOW BOX*/
 
 	.cart-full-details {
 		width: 95%;
-		padding: 0px;
+		padding: 10px;
 		border: none;
 	}
 
 	.progress {
-		width: 93%;
+		width: 95%;
 		top: 110px;
 	}
 
@@ -2013,6 +2145,10 @@ footer {
 
 	.orders-in-cart {
 		box-shadow: none;
+		padding: 0px;
+	}
+
+	.control {
 	}
 }
 
@@ -2022,7 +2158,7 @@ footer {
 	}
 
 	.cart-body {
-		margin-top: 13vh;
+		margin-top: 14vh;
 		width: 100%;
 	}
 
@@ -2095,7 +2231,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(images/search.png);
+		/* background-image: url(IMAGES/search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */

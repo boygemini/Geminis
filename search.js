@@ -7,6 +7,15 @@ SEARCH AND SEARCH SUGGESTIONS
 */
 
 //Variables
+// const allAnchorTags = [...document.querySelectorAll("a")];
+// allAnchorTags.forEach((tag) => {
+// 	tag.addEventListener("click", (event) => {
+// 		event.preventDefault();
+// 		event.stopImmediatePropagation();
+// 		// window.location.href = tag.href;
+// 	});
+// });
+
 let dir2 = JSON.parse(localStorage.getItem("StoreItems"));
 let hs = document.getElementById("hold");
 let search = document.getElementById("search");
@@ -61,15 +70,23 @@ const showSuggesttions = (event) => {
 let suggestionBox = document.querySelector(".searchcontainer");
 
 const openSearch = () => {
+	suggestionBox.classList.add("searchfadein");
 	suggestionBox.style.display = "flex";
 	document.lastChild.style.overflow = "hidden";
-
 	let searchBox = document.getElementById("search");
 	searchBox.focus();
+
+	setTimeout(() => {
+		suggestionBox.classList.remove("searchfadein");
+	}, 300);
 };
 
 const closeSearch = () => {
-	suggestionBox.style.display = "none";
+	suggestionBox.classList.add("searchfadeout");
+	setTimeout(() => {
+		suggestionBox.style.display = "none";
+		suggestionBox.classList.remove("searchfadeout");
+	}, 300);
 	document.lastChild.style.overflow = "";
 };
 
@@ -81,7 +98,7 @@ search.addEventListener("input", (event) => {
 		x += `
 		<div class="sug" onclick="sendQuery(event)">
 			<h1 id="sug-h1" onclick="sugClicked(event)">${suggestion[0]}</h1>
-			<img src="images/thinarrow.png"/>
+			<img src="IMAGES/thinarrow.png"/>
 			<h1 class="category" id="sug-cat" disabled>${suggestion[1]}</h1>
 		</div>
 		`;
@@ -260,7 +277,7 @@ const displayResults = (directory, Query) => {
 		for (let k in directory) {
 			if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
 				y += `
-			<div class="sell-box sel-box" data-id=${directory[k].id} onclick = "viewProduct(event)">
+			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id} >
 
 		<div class="img-con" id="main-con">
 				<div class="img-cont" style='background-image:url(${directory[k].itemInfo.itemImg[0]})'>
@@ -282,12 +299,12 @@ const displayResults = (directory, Query) => {
 					id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn"  class="cart-btn"><img id="addto-cart-img" data-id=${directory[k].id} src="IMAGES/add-to-cart.png"
-						alt="" onclick="addToCart(event)">
+				<button id="cart-btn" onclick="addToCart(event)" data-id=${directory[k].id}  class="cart-btn"><img id="addto-cart-img" onclick="addToCart(event)" data-id=${directory[k].id}  src="IMAGES/add-to-cart.png"
+						alt="" >
 				</button>
 			</div>
 		</div>
-		</div>`;
+		</a>`;
 			}
 		}
 
@@ -309,7 +326,7 @@ const displayFiltereddResults = (results, category) => {
 		getResults.positiveResults();
 		for (let k in results) {
 			y += `
-			<div class="sell-box sel-box" data-id=${results[k].id} onclick = "viewProduct(event)">
+			<a href="product.html?item=${results[k].id}" class="sell-box sel-box" data-id=${results[k].id} >
 
 		<div class="img-con" id="main-con">
 				<div class="img-cont" style='background-image:url(${results[k].itemInfo.itemImg[0]})'>
@@ -331,12 +348,12 @@ const displayFiltereddResults = (results, category) => {
 					id = "currency" > $ </span> ${results[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${results[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" data-id = ${results[k].id} class="cart-btn"><img id="addto-cart-img" data-id=${results[k].id} src="IMAGES/add-to-cart.png"
-						alt="" onclick="addToCart(event)">
+				<button id="cart-btn" data-id = ${results[k].id} onclick="addToCart(event)" class="cart-btn"><img id="addto-cart-img" data-id = ${results[k].id} onclick="addToCart(event)" src="IMAGES/add-to-cart.png"
+						alt="" >
 				</button>
 			</div>
 		</div>
-		</div>`;
+		</a>`;
 		}
 		document.getElementById("result-title").innerText = `${category}`;
 		showBox.innerHTML = y;
@@ -794,6 +811,7 @@ const viewProduct = (event) => {
 };
 
 window.onload = onLoad;
+
 //EOC
 //EOC
 //EOC
