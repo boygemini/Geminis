@@ -211,6 +211,24 @@ a {
 	padding-bottom: 60px;
 	overflow-y: scroll;
 }
+.menu-heading {
+	background-color: #0e3530;
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+}
+
+.menu-heading h1 {
+	color: #ffffff;
+	font-size: 20px;
+}
 
 html {
 	opacity: 0;

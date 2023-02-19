@@ -370,20 +370,6 @@ nav ul li {
 	opacity: 1;
 }
 
-.menu-heading {
-	background-color: #111111;
-	width: 100%;
-	padding: 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.menu-heading h1 {
-	color: #fbe053;
-	font-size: 20px;
-}
-
 .main-menu {
 	display: flex;
 	flex-direction: column;

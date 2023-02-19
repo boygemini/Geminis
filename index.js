@@ -12,13 +12,14 @@ const shopNow = () => {
 
 // OPEN MENU
 const menuDOM = document.getElementById("menu");
-const menuBtn = document.getElementById("mainBtn");
+const menuBtn = document.getElementById("mb");
 menuDOM.style.display = "none";
 
 const openMenu = () => {
 	menuDOM.style.display = "block";
 	if (menuDOM.className.includes("menuout")) {
 		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
+		console.log(menuDOM.className);
 	} else {
 		menuDOM.className += " menuin";
 	}
@@ -41,9 +42,11 @@ window.addEventListener("click", (e) => {
 			e.target.parentNode.parentNode === menuDOM ||
 			e.target.parentNode === menuDOM;
 
-		if (!parent && e.target !== menuBtn) {
+		if (!parent !== menuBtn && e.target !== menuBtn) {
 			closeMenu();
 		}
+
+		console.log(menuBtn);
 	}
 });
 
@@ -394,6 +397,13 @@ const addToCartt = (event, ITT) => {
 		}
 	}
 	Me();
+	let cartButtonText = event.target.children[1] || event.target;
+	cartButtonText.style.opacity = "0";
+	cartButtonText.style.transition = ".2s";
+	setTimeout(() => {
+		cartButtonText.innerText = "In cart";
+		cartButtonText.style.opacity = "1";
+	}, 200);
 };
 
 // CHANGE TABS BASED ON ITEM'S CATEGORY
@@ -445,7 +455,6 @@ const addToCart = (event, ITT) => {
 	}
 
 	let cartButtonText = event.target.children[1] || event.target;
-	let mainBtn = event.target.parentNode || event.target;
 	cartButtonText.style.opacity = "0";
 	cartButtonText.style.transition = ".2s";
 	setTimeout(() => {
@@ -453,14 +462,31 @@ const addToCart = (event, ITT) => {
 		cartButtonText.style.opacity = "1";
 	}, 200);
 
-	if (mainBtn.nodeName === "BUTTON") {
-		mainBtn.onmouseout = function () {
-			setTimeout(() => {
-				cartButtonText.innerText = "Add to cart";
-			}, 200);
-		};
-	}
+	// if (
+	// 	event.target.nodeNode === "BUTTON" ||
+	// 	event.target.parentNode.nodeName === "BUTTON"
+	// ) {
+	// 	event.target.addEventListener("mouseout", (event) => {
+	// 		event.target.innerText = "add to cart";
+	// 		setTimeout(() => {
+	// 			event.target.innerText = "add to cart";
+	// 		}, 300);
+	// 	});
+	// }
 };
+
+// let allCartBtn = document.querySelectorAll("#cart-btn");
+// setTimeout(() => {
+// 	console.log(allCartBtn);
+// }, 2000);
+// allCartBtn.forEach((btnn) => {
+// 	btnn.addEventListener("mouseout", (e) => {
+// 		let cartText = btnn.children[1];
+// 		setTimeout(() => {
+// 			cartText.innerText = "add to cart";
+// 		}, 300);
+// 	});
+// });
 
 console.log("Test : code ran successfully [OK]");
 //END OF CODE
