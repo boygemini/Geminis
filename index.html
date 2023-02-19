@@ -57,18 +57,23 @@
 						>
 					</div>
 					<div class="login-cart">
-						<div class="search-section search-web" onclick="openSearch()">
+						<div class="search-section search-web">
 							<input
 								type="search"
 								class="search"
 								name="search"
 								placeholder="Search..."
 								autocomplete="off"
-								disabled
+								onclick="openSearch()"
 							/>
 							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
 							<div class="serc-img">
-								<img src="IMAGES/search.png" alt="" srcset="" />
+								<img
+									src="IMAGES/search.png"
+									alt=""
+									srcset=""
+									onclick="openSearch()"
+								/>
 							</div>
 						</div>
 						<div class="cart-box" id="searc-cart" onclick="openSearch()">
@@ -77,6 +82,7 @@
 								id="mob-search-icon"
 								alt=""
 								srcset=""
+								onclick="openSearch()"
 							/>
 						</div>
 						<div class="cart-box" onclick="toCart()">
@@ -150,7 +156,6 @@
 							id="search"
 							placeholder="Search a Product"
 							autocomplete="off"
-							autofocus
 						/>
 						<input type="submit" class="go" value="Search" id="GO" />
 					</div>

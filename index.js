@@ -12,7 +12,7 @@ const shopNow = () => {
 
 // OPEN MENU
 const menuDOM = document.getElementById("menu");
-const menuBtn = document.getElementById("mb");
+const menuBtn = document.getElementById("mainBtn");
 menuDOM.style.display = "none";
 
 const openMenu = () => {
@@ -151,7 +151,7 @@ class Storage {
 	}
 
 	// GET THE NUMBER OF ITEMS IN CART
-	static numberOfItemsInCart() {
+	static numainBtnerOfItemsInCart() {
 		if (this.getItemsInCart() === null || undefined) {
 			return "0";
 		} else {
@@ -164,7 +164,7 @@ class Storage {
 	// UPDATE CART
 	static updateCart(cartName) {
 		this.saveSelectedItemsToCart(cartName);
-		cartDom.innerText = this.numberOfItemsInCart();
+		cartDom.innerText = this.numainBtnerOfItemsInCart();
 	}
 
 	// GET AND SAVE PICKED ITEM TO CART
@@ -412,8 +412,8 @@ for (let x in tab) {
 // ADD SELECTED ITEMS TO CART
 let cartDom = document.getElementById("items-in-cart");
 try {
-	cartDom.innerText = Storage.numberOfItemsInCart();
-} catch (error) {} // Displays number of Items in Cart
+	cartDom.innerText = Storage.numainBtnerOfItemsInCart();
+} catch (error) {} // Displays numainBtner of Items in Cart
 let pickedItem;
 
 let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
@@ -442,6 +442,23 @@ const addToCart = (event, ITT) => {
 		} catch (error) {
 			console.log(error);
 		}
+	}
+
+	let cartButtonText = event.target.children[1] || event.target;
+	let mainBtn = event.target.parentNode || event.target;
+	cartButtonText.style.opacity = "0";
+	cartButtonText.style.transition = ".2s";
+	setTimeout(() => {
+		cartButtonText.innerText = "In cart";
+		cartButtonText.style.opacity = "1";
+	}, 200);
+
+	if (mainBtn.nodeName === "BUTTON") {
+		mainBtn.onmouseout = function () {
+			setTimeout(() => {
+				cartButtonText.innerText = "Add to cart";
+			}, 200);
+		};
 	}
 };
 

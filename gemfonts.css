@@ -292,18 +292,18 @@ body {
 }
 
 .searchfadein {
-	animation: sfadein 0.3s ease-in-out;
-	-webkit-animation: sfadein 0.3s ease-in-out;
+	animation: sfadein 0.3s ease-out;
+	-webkit-animation: sfadein 0.3s ease-out;
 }
 
 .searchfadeout {
-	animation: sfadeout 0.3s ease-in-out;
-	-webkit-animation: sfadeout 0.3s ease-in-out;
+	animation: sfadeout 0.3s ease-out;
+	-webkit-animation: sfadeout 0.3s ease-out;
 }
 
 @keyframes sfadein {
 	from {
-		opacity: 0.5;
+		opacity: 0;
 	}
 	to {
 		opacity: 1;
@@ -360,7 +360,6 @@ body {
 .cart-btn {
 	opacity: 0;
 	position: relative;
-	overflow: hidden;
 }
 
 .cart-btn:hover #addto-cart-img {
@@ -381,15 +380,24 @@ body {
 	position: absolute;
 }
 
-.cart-btn p {
+#cart-btn p {
 	font-size: 14px;
-	top: -100%;
-	transform: translateY(-150%);
-	-webkit-transform: translateY(-150%);
-	-moz-transform: translateY(-150%);
-	-ms-transform: translateY(-150%);
-	-o-transform: translateY(-150%);
+	top: -30%;
+	transform: translateY(-20%);
+	-webkit-transform: translateY(-20%);
+	-moz-transform: translateY(-20%);
+	-ms-transform: translateY(-20%);
+	-o-transform: translateY(-20%);
 	position: absolute;
+	color: whitesmoke;
+	padding: 0;
+	margin: auto;
+	min-width: 100%;
+}
+
+#cart-btn {
+	margin: 0px;
+	overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {

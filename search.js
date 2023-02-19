@@ -68,17 +68,16 @@ const showSuggesttions = (event) => {
 
 // SEARCH & SUGGESTION
 let suggestionBox = document.querySelector(".searchcontainer");
-
 const openSearch = () => {
+	event.stopPropagation();
 	suggestionBox.classList.add("searchfadein");
 	suggestionBox.style.display = "flex";
-	document.lastChild.style.overflow = "hidden";
 	let searchBox = document.getElementById("search");
 	searchBox.focus();
-
 	setTimeout(() => {
 		suggestionBox.classList.remove("searchfadein");
-	}, 300);
+		document.lastChild.style.overflow = "hidden";
+	}, 100);
 };
 
 const closeSearch = () => {
