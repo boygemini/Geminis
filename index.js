@@ -458,8 +458,8 @@ const addToCart = (event, ITT) => {
 	cartButtonText.style.opacity = "0";
 	cartButtonText.style.transition = ".2s";
 	setTimeout(() => {
-		cartButtonText.innerText = "In cart";
-		cartButtonText.style.opacity = "1";
+		event.target.innerHTML = "<p>Add to cart</p>";
+		event.target.style.opacity = "1";
 	}, 200);
 
 	// if (
@@ -475,18 +475,18 @@ const addToCart = (event, ITT) => {
 	// }
 };
 
-// let allCartBtn = document.querySelectorAll("#cart-btn");
-// setTimeout(() => {
-// 	console.log(allCartBtn);
-// }, 2000);
-// allCartBtn.forEach((btnn) => {
-// 	btnn.addEventListener("mouseout", (e) => {
-// 		let cartText = btnn.children[1];
-// 		setTimeout(() => {
-// 			cartText.innerText = "add to cart";
-// 		}, 300);
-// 	});
-// });
+let allCartBtn = document.querySelectorAll("#cart-btn");
+setTimeout(() => {
+	console.log(allCartBtn);
+}, 2000);
+allCartBtn.forEach((btnn) => {
+	btnn.addEventListener("mouseout", (e) => {
+		let cartText = btnn.children[1];
+		setTimeout(() => {
+			cartText.innerText = "add to cart";
+		}, 300);
+	});
+});
 
 console.log("Test : code ran successfully [OK]");
 //END OF CODE

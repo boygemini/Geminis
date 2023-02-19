@@ -2396,35 +2396,6 @@ footer {
 		position: relative;
 	}
 
-	.cart-btn:hover #addto-cart-img {
-		transform: translateY(150%);
-		-webkit-transform: translateY(150%);
-		-moz-transform: translateY(150%);
-		-ms-transform: translateY(150%);
-		-o-transform: translateY(150%);
-	}
-
-	.cart-btn:hover #cart-text {
-		top: 50%;
-		transform: translateY(-50%);
-		-webkit-transform: translateY(-50%);
-		-moz-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		-o-transform: translateY(-50%);
-		position: absolute;
-	}
-
-	.cart-btn p {
-		font-size: 14px;
-		top: -100%;
-		transform: translateY(-150%);
-		-webkit-transform: translateY(-150%);
-		-moz-transform: translateY(-150%);
-		-ms-transform: translateY(-150%);
-		-o-transform: translateY(-150%);
-		position: absolute;
-	}
-
 	.price-order {
 		flex-direction: column;
 		row-gap: 10px;
