@@ -207,7 +207,7 @@ a {
 }
 
 .main-menu {
-	max-height: 95vh;
+	max-height: 90vh;
 	padding-bottom: 60px;
 	overflow-y: scroll;
 }
