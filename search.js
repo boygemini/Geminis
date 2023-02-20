@@ -73,7 +73,6 @@ const openSearch = () => {
 	suggestionBox.classList.add("searchfadein");
 	suggestionBox.style.display = "flex";
 	let searchBox = document.getElementById("search");
-	searchBox.focus();
 	setTimeout(() => {
 		suggestionBox.classList.remove("searchfadein");
 		document.lastChild.style.overflow = "hidden";
@@ -298,9 +297,9 @@ const displayResults = (directory, Query) => {
 					id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" onclick="addToCart(event)" data-id=${directory[k].id}  class="cart-btn"><img id="addto-cart-img" onclick="addToCart(event)" data-id=${directory[k].id}  src="IMAGES/add-to-cart.png"
-						alt="" >
-				</button>
+				<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<p data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)"> Add to Cart<p></button>
 			</div>
 		</div>
 		</a>`;
@@ -347,9 +346,9 @@ const displayFiltereddResults = (results, category) => {
 					id = "currency" > $ </span> ${results[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${results[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" data-id = ${results[k].id} onclick="addToCart(event)" class="cart-btn"><img id="addto-cart-img" data-id = ${results[k].id} onclick="addToCart(event)" src="IMAGES/add-to-cart.png"
-						alt="" >
-				</button>
+				<button id="cart-btn" class="cart-btn"  data-id= ${results[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${results[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<p data-id= ${results[k].id} class="cart-btn" onclick = "addToCart(event)"> Add to Cart<p></button>
 			</div>
 		</div>
 		</a>`;
@@ -594,11 +593,15 @@ const onLoad = () => {
 	}
 
 	// IF THE URL IS BADLY ALTERED IT SHOULD RETURN A NOT FOUND PAGE
-	let QueryName = urlWithQuery.split("?")[1].split("=")[0];
+	let QueryName;
+	try {
+		QueryName = urlWithQuery.split("?")[1].split("=")[0];
+	} catch (error) {}
+
 	if (
 		QueryName !== "SearchQuery" &&
 		QueryName !== "category" &&
-		QueryName !== null
+		QueryName.length > 1
 	) {
 		getResults.pageNotFound();
 	}

@@ -509,10 +509,9 @@ class display {
 						id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
 						<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 					</span>
-					<button id="cart-btn" data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-						<img id="addto-cart-img" src="IMAGES/add-to-cart.png" data-id= ${directory[k].id} onclick = "addToCart(event)"
-							alt="" data-id= ${directory[k].id}  >
-					</button>
+					<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<p data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)"> Add to Cart<p></button>
 				</div>
 			</div>
 		</a>`;

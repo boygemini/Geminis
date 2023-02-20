@@ -134,9 +134,11 @@ try {
 	min.value = Parameters.Range[0].low;
 } catch (error) {}
 
-if (orderFromUrl === undefined) {
-	Parameters.Order = document.URL.split("Order=")[1].split("&")[0];
-}
+try {
+	if (orderFromUrl === undefined) {
+		Parameters.Order = document.URL.split("Order=")[1].split("&")[0];
+	}
+} catch (error) {}
 
 // CREATING THE FILTER URL
 const createUrl = (category) => {
@@ -463,9 +465,9 @@ const displayFilteredResults = (directory) => {
 					id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" onclick = "addToCart(event)" data-id=${directory[k].id} class="cart-btn"><img onclick = "addToCart(event)" data-id=${directory[k].id} id="addto-cart-img" src="IMAGES/add-to-cart.png"
-						alt="" >
-				</button>
+				<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<p data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)"> Add to Cart<p></button>
 			</div>
 		</div>
 		</a>`;
