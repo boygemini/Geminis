@@ -2293,18 +2293,40 @@ footer {
 	}
 
 	.sel-box {
-		width: 45vw;
-		min-height: 370px;
+		min-width: 45vw;
+		max-width: 45vw;
+		min-height: 400px;
+		max-height: 400px;
+		row-gap: 0px;
+		padding: 5px;
+		/* background-color: #f4f4f6; */
+	}
+
+	.sel-container,
+	.recent-container {
+		padding-bottom: 0px;
+	}
+
+	.item-description {
+		white-space: wrap;
+		max-height: 34px;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	.sfu {
-		height: auto;
+		height: 100%;
+		padding: 10px 0px 0px 0px;
 	}
 
 	.img-con {
 		/* background-color: #00a1911b; */
 		height: 65%;
 		min-height: 180px;
+		max-height: 190px;
 		width: 100%;
 		padding: 20px;
 	}

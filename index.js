@@ -19,11 +19,12 @@ const openMenu = () => {
 	menuDOM.style.display = "block";
 	if (menuDOM.className.includes("menuout")) {
 		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
-		console.log(menuDOM.className);
 	} else {
 		menuDOM.className += " menuin";
 	}
-	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
+	setTimeout(() => {
+		document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
+	}, 600);
 };
 
 // CLOSE MENU
@@ -213,7 +214,6 @@ class displayProduct {
 		    <p class="itemName2"">${category[i].itemInfo.name}</p>
 		    <div class="description-box">
 			   <p class="item-description">${category[i].itemInfo.description1}</p>
-			   <p class="item-description">${category[i].itemInfo.description2}</p>
 		    </div>
 		    <div class="price-order">
 			   <span class="price-box">
@@ -261,7 +261,6 @@ class displayProduct {
 				    <p class="itemName2"">${category[i].itemInfo.name}</p>
 				    <div class="description-box">
 					   <p class="item-description">${category[i].itemInfo.description1}</p>
-					   <p class="item-description">${category[i].itemInfo.description2}</p>
 				    </div>
 				    <div class="price-order">
 					   <span class="price-box">
@@ -307,7 +306,6 @@ class displayProduct {
 		    <p class="itemName2"">${category[i].itemInfo.name}</p>
 		    <div class="description-box">
 			   <p class="item-description">${category[i].itemInfo.description1}</p>
-			   <p class="item-description">${category[i].itemInfo.description2}</p>
 		    </div>
 		    <div class="price-order">
 			   <span class="price-box">
@@ -372,8 +370,9 @@ const moveRight = () => {
 const moveLeft = () => {
 	holder.scrollLeft -= holder.clientWidth;
 };
-
+let timer;
 const animateCartButtonText = (target) => {
+	clearTimeout(timer);
 	if (target.nodeName === "BUTTON") {
 		target.children[1].style.opacity = "0";
 		target.children[1].style.transition = ".2s";
@@ -383,7 +382,7 @@ const animateCartButtonText = (target) => {
 		}, 200);
 
 		target.onmouseout = function () {
-			setTimeout(() => {
+			timer = setTimeout(() => {
 				target.children[1].innerText = "add to cart";
 				target.children[1].style.opacity = "1";
 			}, 1000);
@@ -398,13 +397,16 @@ const animateCartButtonText = (target) => {
 			target.innerText = "In cart";
 		}, 200);
 		target.parentNode.onmouseout = function () {
-			setTimeout(() => {
-				target.innerText = "Add to cart";
+			timer = setTimeout(() => {
+				target.innerText = "add to cart";
 				target.style.opacity = "1";
 			}, 1000);
 		};
 	}
 };
+
+let me = document.querySelectorAll("#cart-text");
+console.log(me);
 
 // ADD RECENT ITEMS TO CART
 const addToCartt = (event, ITT) => {
