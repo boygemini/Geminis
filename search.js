@@ -597,11 +597,12 @@ const onLoad = () => {
 	try {
 		QueryName = urlWithQuery.split("?")[1].split("=")[0];
 	} catch (error) {}
+	console.log(QueryName);
 
 	if (
 		QueryName !== "SearchQuery" &&
 		QueryName !== "category" &&
-		QueryName.length > 1
+		QueryName !== undefined
 	) {
 		getResults.pageNotFound();
 	}

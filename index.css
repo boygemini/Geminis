@@ -2302,7 +2302,7 @@ footer {
 		max-height: 400px;
 		row-gap: 0px;
 		padding: 5px;
-		background-color: #f4f4f6;
+		/* background-color: #f4f4f6; */
 	}
 
 	.sel-container,
@@ -2384,11 +2384,13 @@ footer {
 		width: auto;
 		background-color: white;
 		color: #111111;
+		padding: 0;
 	}
 
 	.view-all:hover {
-		background-color: #111111;
-		color: white;
+		/* background-color: #111111; */
+		text-decoration: underline 1px solid #111111;
+		text-underline-offset: 5px;
 	}
 
 	#sel-container {
