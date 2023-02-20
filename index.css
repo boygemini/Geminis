@@ -2379,6 +2379,13 @@ footer {
 
 	.view-all {
 		width: auto;
+		background-color: white;
+		color: #111111;
+	}
+
+	.view-all:hover {
+		background-color: #111111;
+		color: white;
 	}
 
 	#sel-container {
