@@ -2299,12 +2299,16 @@ footer {
 		max-height: 400px;
 		row-gap: 0px;
 		padding: 5px;
-		/* background-color: #f4f4f6; */
+		background-color: #f4f4f6;
 	}
 
 	.sel-container,
 	.recent-container {
-		padding-bottom: 0px;
+		padding-bottom: 5px;
+	}
+
+	#sel-holder {
+		column-gap: 10px;
 	}
 
 	.item-description {
@@ -2376,10 +2380,6 @@ footer {
 		height: auto;
 	}
 
-	.mainsel {
-		width: 50%;
-	}
-
 	.view-all {
 		width: auto;
 	}
@@ -2397,6 +2397,9 @@ footer {
 		font-weight: 600;
 		font-size: 30px;
 		color: #111111;
+		width: auto;
+		font-size: 20px;
+		text-transform: uppercase;
 	}
 
 	.view-all {
