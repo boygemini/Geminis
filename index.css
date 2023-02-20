@@ -2307,10 +2307,6 @@ footer {
 		padding-bottom: 5px;
 	}
 
-	#sel-holder {
-		column-gap: 10px;
-	}
-
 	.item-description {
 		white-space: wrap;
 		max-height: 34px;
@@ -2389,7 +2385,7 @@ footer {
 
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-		gap: 5px 0px;
+		gap: 5px 5px;
 		height: auto;
 	}
 
@@ -2436,7 +2432,7 @@ footer {
 		display: grid;
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		column-gap: 1px;
+		gap: 5px;
 	}
 
 	/*Electornic*/
