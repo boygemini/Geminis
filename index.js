@@ -373,6 +373,39 @@ const moveLeft = () => {
 	holder.scrollLeft -= holder.clientWidth;
 };
 
+const animateCartButtonText = (target) => {
+	if (target.nodeName === "BUTTON") {
+		target.children[1].style.opacity = "0";
+		target.children[1].style.transition = ".2s";
+		setTimeout(() => {
+			target.children[1].style.opacity = "1";
+			target.children[1].innerText = "In cart";
+		}, 200);
+
+		target.onmouseout = function () {
+			setTimeout(() => {
+				target.children[1].innerText = "add to cart";
+				target.children[1].style.opacity = "1";
+			}, 1000);
+		};
+	}
+
+	if (target.nodeName === "P") {
+		target.style.opacity = "0";
+		target.style.transition = ".2s";
+		setTimeout(() => {
+			target.style.opacity = "1";
+			target.innerText = "In cart";
+		}, 200);
+		target.parentNode.onmouseout = function () {
+			setTimeout(() => {
+				target.innerText = "Add to cart";
+				target.style.opacity = "1";
+			}, 1000);
+		};
+	}
+};
+
 // ADD RECENT ITEMS TO CART
 const addToCartt = (event, ITT) => {
 	event.stopPropagation();
@@ -397,13 +430,7 @@ const addToCartt = (event, ITT) => {
 		}
 	}
 	Me();
-	let cartButtonText = event.target.children[1] || event.target;
-	cartButtonText.style.opacity = "0";
-	cartButtonText.style.transition = ".2s";
-	setTimeout(() => {
-		cartButtonText.innerText = "In cart";
-		cartButtonText.style.opacity = "1";
-	}, 200);
+	animateCartButtonText(event.target);
 };
 
 // CHANGE TABS BASED ON ITEM'S CATEGORY
@@ -453,40 +480,8 @@ const addToCart = (event, ITT) => {
 			console.log(error);
 		}
 	}
-
-	let cartButtonText = event.target.children[1] || event.target;
-	cartButtonText.style.opacity = "0";
-	cartButtonText.style.transition = ".2s";
-	setTimeout(() => {
-		event.target.innerHTML = "<p>Add to cart</p>";
-		event.target.style.opacity = "1";
-	}, 200);
-
-	// if (
-	// 	event.target.nodeNode === "BUTTON" ||
-	// 	event.target.parentNode.nodeName === "BUTTON"
-	// ) {
-	// 	event.target.addEventListener("mouseout", (event) => {
-	// 		event.target.innerText = "add to cart";
-	// 		setTimeout(() => {
-	// 			event.target.innerText = "add to cart";
-	// 		}, 300);
-	// 	});
-	// }
+	animateCartButtonText(event.target);
 };
-
-let allCartBtn = document.querySelectorAll("#cart-btn");
-setTimeout(() => {
-	console.log(allCartBtn);
-}, 2000);
-allCartBtn.forEach((btnn) => {
-	btnn.addEventListener("mouseout", (e) => {
-		let cartText = btnn.children[1];
-		setTimeout(() => {
-			cartText.innerText = "add to cart";
-		}, 300);
-	});
-});
 
 console.log("Test : code ran successfully [OK]");
 //END OF CODE
