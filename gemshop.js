@@ -692,9 +692,9 @@ const debounce = (fn, delay) => {
 	};
 };
 
-// window.onresize = debounce(function () {
-// 	window.location.reload();
-// }, 50);
+window.onresize = debounce(function () {
+	window.location.reload();
+}, 50);
 
 const phoneFilters = () => {
 	// Price filter
