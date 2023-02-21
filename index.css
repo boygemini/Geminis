@@ -1745,13 +1745,16 @@ nav ul li {
 }
 
 .item-description {
+	/* background-color: #00534b8a; */
 	white-space: wrap;
-	max-height: 34px;
+	max-height: 40px;
+	min-height: 40px;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	min-width: 100%;
 }
 
 .price-box {
@@ -1982,7 +1985,7 @@ footer {
 	}
 
 	.banner-content {
-		margin-top: 7vh;
+		margin-top: 80px;
 	}
 
 	.discount {
@@ -2053,7 +2056,7 @@ footer {
 
 	.logo-nav {
 		padding: 15px 0px;
-		width: 100%;
+		max-width: 90%;
 		margin: auto;
 	}
 
@@ -2301,8 +2304,8 @@ footer {
 	.sel-box {
 		min-width: 45vw;
 		max-width: 45vw;
-		min-height: 325px;
-		max-height: 325px;
+		min-height: 350px;
+		max-height: 350px;
 		row-gap: 0px;
 		padding: 5px;
 		padding-bottom: 10px;
@@ -2315,8 +2318,10 @@ footer {
 	}
 
 	.item-description {
+		/* background-color: #00534b8a; */
 		white-space: wrap;
-		max-height: 34px;
+		max-height: 40px;
+		min-height: 40px;
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
@@ -2995,8 +3000,8 @@ footer {
 
 	.sel-box {
 		width: 300px;
-		min-height: 370px;
-		max-height: 370px;
+		min-height: 400px;
+		max-height: 400px;
 		row-gap: 5px;
 		padding-bottom: 10px;
 	}
@@ -3324,8 +3329,8 @@ footer {
 	}
 
 	.sel-box {
-		min-height: 400px;
-		max-height: 400px;
+		min-height: 420px;
+		max-height: 420px;
 		row-gap: 0px;
 		padding: 5px;
 		/* background-color: #f4f4f6; */

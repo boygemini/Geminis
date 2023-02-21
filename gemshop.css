@@ -1521,7 +1521,7 @@ select:hover {
 	color: #090a0ab6;
 	max-height: 75px;
 	text-overflow: ellipsis;
-	overflow: hidden;
+	/* overflow: hidden; */
 	white-space: wrap;
 }
 /****************/
@@ -1561,7 +1561,8 @@ select:hover {
 
 .item-description {
 	white-space: wrap;
-	max-height: 34px;
+	min-height: 40px;
+	max-height: 40px;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
@@ -1812,6 +1813,55 @@ footer {
 	bottom: 0;
 }
 
+#select {
+	width: 90px;
+	background-color: transparent;
+	height: 40px;
+	padding: 5px 10px;
+	border: 1px solid #11111152;
+}
+
+.select-dropdown,
+.select-dropdown * {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	box-sizing: border-box;
+}
+.select-dropdown {
+	position: relative;
+	background-color: transparent;
+	border-radius: 4px;
+}
+.select-dropdown select {
+	font-size: 1rem;
+	font-weight: normal;
+	max-width: 100%;
+	padding: 8px 24px 8px 10px;
+	border: none;
+	background-color: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.select-dropdown select:active,
+.select-dropdown select:focus {
+	outline: none;
+	box-shadow: none;
+}
+.select-dropdown:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	width: 0;
+	height: 0;
+	margin-top: -2px;
+	border-top: 5px solid #aaa;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+}
+
 @media screen and (max-width: 401px) {
 	.menu-box {
 		width: 100%;
@@ -2039,6 +2089,7 @@ footer {
 	}
 
 	.banner-content {
+		margin-top: 300px;
 	}
 
 	.littlebans {
@@ -2086,8 +2137,8 @@ footer {
 	.sel-box {
 		min-width: 45vw;
 		max-width: 45vw;
-		min-height: 315px;
-		max-height: 315px;
+		min-height: 350px;
+		max-height: 350px;
 		row-gap: 0px;
 		padding: 5px;
 		padding-bottom: 10px;
@@ -2310,55 +2361,6 @@ footer {
 		flex-direction: row;
 	}
 
-	#select {
-		width: 90px;
-		background-color: transparent;
-		height: 40px;
-		padding: 5px 10px;
-		border: 1px solid #11111152;
-	}
-
-	.select-dropdown,
-	.select-dropdown * {
-		margin: 0;
-		padding: 0;
-		position: relative;
-		box-sizing: border-box;
-	}
-	.select-dropdown {
-		position: relative;
-		background-color: transparent;
-		border-radius: 4px;
-	}
-	.select-dropdown select {
-		font-size: 1rem;
-		font-weight: normal;
-		max-width: 100%;
-		padding: 8px 24px 8px 10px;
-		border: none;
-		background-color: transparent;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-	}
-	.select-dropdown select:active,
-	.select-dropdown select:focus {
-		outline: none;
-		box-shadow: none;
-	}
-	.select-dropdown:after {
-		content: "";
-		position: absolute;
-		top: 50%;
-		right: 8px;
-		width: 0;
-		height: 0;
-		margin-top: -2px;
-		border-top: 5px solid #aaa;
-		border-right: 5px solid transparent;
-		border-left: 5px solid transparent;
-	}
-
 	.red-header {
 		width: 100%;
 		display: flex;
@@ -2369,11 +2371,34 @@ footer {
 	.fitlers2 {
 		display: none;
 	}
+
+	.sel-box {
+		min-width: 45vw;
+		max-width: 45vw;
+		min-height: 350px;
+		max-height: 350px;
+		row-gap: 0px;
+		padding: 5px;
+		padding-bottom: 10px;
+	}
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
 	#body {
 		width: 95%;
+	}
+
+	.top-nav {
+		padding: 0px 0px;
+		width: 95%;
+		margin: auto;
+	}
+
+	.logo-nav {
+		padding: 15px 0px;
+		position: relative;
+		min-width: 95%;
+		max-width: 95%;
 	}
 
 	.shop-body {
@@ -2502,12 +2527,6 @@ footer {
 		border: transparent;
 	}
 
-	.top-nav {
-		padding: 0px 0px;
-		width: 95%;
-		margin: auto;
-	}
-
 	.login-cart {
 		display: flex;
 		align-items: center;
@@ -2518,11 +2537,6 @@ footer {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-
-	.logo-nav {
-		padding: 15px 0px;
-		position: relative;
 	}
 
 	#nav-and-products {
@@ -2672,7 +2686,7 @@ footer {
 
 	/*Banner*/
 	.banner-container {
-		margin-top: 10vh;
+		margin-top: 150px;
 	}
 
 	.banner-content {
@@ -2754,8 +2768,8 @@ footer {
 	}
 
 	.sel-box {
-		min-height: 390px;
-		max-height: 390px;
+		min-height: 400px;
+		max-height: 400px;
 		row-gap: 0px;
 		padding: 5px;
 		padding-bottom: 10px;
@@ -3005,6 +3019,7 @@ footer {
 		max-height: 400px;
 		row-gap: 0px;
 		padding: 5px;
+		row-gap: 10px;
 		/* background-color: #f4f4f6; */
 	}
 
