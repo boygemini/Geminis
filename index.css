@@ -2457,10 +2457,10 @@ footer {
 	/*About*/
 	.about {
 		height: auto;
-		background-color: #f4f4f6;
+		/* background-color: #f4f4f6; */
 		width: 100%;
 		margin-top: 25px;
-		padding: 20px;
+		padding: 0px;
 	}
 
 	.ab {
