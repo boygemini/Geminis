@@ -384,6 +384,50 @@ body {
 	position: relative;
 }
 
+#cart-btn {
+	margin: 0px;
+	overflow: hidden;
+}
+
+#cart-text {
+	background-color: transparent;
+}
+
+@media screen and (min-width: 769px) {
+	.cart-btn:hover #addto-cart-img {
+		transform: translateY(150%);
+		-webkit-transform: translateY(150%);
+		-moz-transform: translateY(150%);
+		-ms-transform: translateY(150%);
+		-o-transform: translateY(150%);
+	}
+
+	.cart-btn:hover #cart-text {
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		position: absolute;
+	}
+
+	#cart-btn p {
+		font-size: 14px;
+		top: -30%;
+		transform: translateY(-20%);
+		-webkit-transform: translateY(-20%);
+		-moz-transform: translateY(-20%);
+		-ms-transform: translateY(-20%);
+		-o-transform: translateY(-20%);
+		position: absolute;
+		color: whitesmoke;
+		padding: 0;
+		margin: auto;
+		min-width: 100%;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.login-cart {
 		column-gap: 10px;
@@ -397,5 +441,73 @@ body {
 	#user-img {
 		width: 23px;
 		height: 23px;
+	}
+
+	#cart-img {
+		width: 28px;
+		height: 28px;
+	}
+
+	#cart-btn {
+		opacity: 1;
+		color: white;
+		min-width: 100%;
+	}
+
+	.cart-box {
+		background-color: whitesmoke;
+	}
+
+	.cart-btn {
+		opacity: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 30px;
+		padding: 5px 8px;
+		background-color: #111111;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
+		-webkit-transition: 0.3s ease-in-out;
+		-moz-transition: 0.3s ease-in-out;
+		-ms-transition: 0.3s ease-in-out;
+		-o-transition: 0.3s ease-in-out;
+		padding: 0px;
+	}
+
+	.cart-btn p {
+		color: white;
+		text-transform: uppercase;
+	}
+
+	#cart-text {
+		min-width: 100%;
+		font-weight: 600;
+		position: relative;
+		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-ms-transform: translateY(0px);
+		-o-transform: translateY(0px);
+	}
+
+	.cart-btn:hover #cart-text {
+		position: relative;
+		color: white;
+		background-color: transparent;
+	}
+
+	#cart-btn img {
+		display: none;
+	}
+
+	.banner-container {
+		display: none;
 	}
 }

@@ -508,28 +508,31 @@ class display {
 						<span class = "price" > $${directory[k].itemInfo.newItemPrice} </span>
 						<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 					</span>
+					<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} onclick = "addToCart(event)">
+			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<p data-id= ${directory[k].id} class="cart-btn" id="cart-text" onclick = "addToCart(event)"> Add to Cart<p></button>
 
-					<div id="item-props">
-						<div class="prop" id="add-to-cart" data-id= ${directory[k].id} onclick = "addToCart(event)">
-							<img src="IMAGES/add-cart.png" data-id= ${directory[k].id} onclick = "addToCart(event)">
-							<p data-id= ${directory[k].id} onclick = "addToCart(event)" class="cart-tool-tip" id="tooltip">Add to Cart</p>
-						</div>
-						<div class="prop" id="love">
-							<img src="IMAGES/heart.png"/>
-							<p class="love-tool-tip" id="tooltip">Love</p>
-						</div>
-						<div class="prop" id="wishlist">
-							<img src="IMAGES/bookmark.png"/>
-							<p class="wish-tool-tip" id="tooltip">Add to Wishlist</p>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</a>`;
 			}
-			// <button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} onclick = "addToCart(event)">
-			// <img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-			// <p data-id= ${directory[k].id} class="cart-btn" id="cart-text" onclick = "addToCart(event)"> Add to Cart<p></button>
+
+			// <div id="item-props">
+			// 			<div class="prop" id="add-to-cart" data-id= ${directory[k].id} onclick = "addToCart(event)">
+			// 				<img src="IMAGES/add-cart.png" data-id= ${directory[k].id} onclick = "addToCart(event)">
+			// 				<p data-id= ${directory[k].id} onclick = "addToCart(event)" class="cart-tool-tip" id="tooltip">Add to Cart</p>
+			// 			</div>
+			// 			<div class="prop" id="love">
+			// 				<img src="IMAGES/heart.png"/>
+			// 				<p class="love-tool-tip" id="tooltip">Love</p>
+			// 			</div>
+			// 			<div class="prop" id="wishlist">
+			// 				<img src="IMAGES/bookmark.png"/>
+			// 				<p class="wish-tool-tip" id="tooltip">Add to Wishlist</p>
+			// 			</div>
+			// 		</div>
+
 			document.getElementById(category).innerText = boxID;
 			document.getElementById(boxID).innerHTML = y;
 		}
