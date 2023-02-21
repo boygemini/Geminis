@@ -2301,8 +2301,8 @@ footer {
 	.sel-box {
 		min-width: 45vw;
 		max-width: 45vw;
-		min-height: 315px;
-		max-height: 315px;
+		min-height: 325px;
+		max-height: 325px;
 		row-gap: 0px;
 		padding: 5px;
 		padding-bottom: 10px;
@@ -2428,6 +2428,8 @@ footer {
 		flex-direction: column;
 		row-gap: 2px;
 		align-items: flex-start;
+		position: absolute;
+		bottom: 0;
 	}
 
 	.cart-btn {
