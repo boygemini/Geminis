@@ -40,7 +40,7 @@
 							class="menu"
 							onclick="openMenu()"
 						/>
-						<h1 class="logo" id="mob-logo" onclick="goHome()">Geminis.</h1>
+						<a href="index.html" class="logo" id="mob-logo">Geminis.</a>
 						<div class="products">
 							<ul>
 								<li id="games">Shop</li>
@@ -76,7 +76,7 @@
 								srcset=""
 							/>
 						</div>
-						<div class="cart-box" onclick="toCart()">
+						<a href="cart.html" class="cart-box">
 							<img
 								src="IMAGES/shopping-cart.png"
 								alt=""
@@ -84,10 +84,10 @@
 								onclick="toCart()"
 							/>
 							<p id="items-in-cart">0</p>
-						</div>
+						</a>
 						<button type="button" class="login">Login</button>
 						<div class="account cart-box">
-							<img src="/IMAGES/user.png" alt="" />
+							<img src="IMAGES/user.png" alt="" />
 						</div>
 					</div>
 				</div>
@@ -103,25 +103,34 @@
 					<div class="main-menu">
 						<div class="menu-cat">
 							<h1>Shop By Department</h1>
-							<ul id="kk">
-								<li>Cell Phones</li>
-								<li>Televisions</li>
-								<li>Laptops & Computers</li>
-								<li>Speakers</li>
-								<li>Video Games</li>
-							</ul>
+							<div id="kk">
+								<a>Cell Phones</a>
+								<a>Televisions</a>
+								<a>Laptops & Computers</a>
+								<a>Speakers</a>
+								<a>Video Games</a>
+							</div>
+						</div>
+						<div class="menu-cat">
+							<h1>Sections</h1>
+							<div id="kk">
+								<a id="link" href="gemshop.html">Shop</a>
+								<a>Products</a>
+								<a>About Us</a>
+								<a>Contact Us</a>
+							</div>
 						</div>
 						<div class="menu-cat">
 							<h1>Support</h1>
-							<ul id="kk">
-								<li>Visit Our Support</li>
-								<li>Online Support</li>
-							</ul>
+							<div id="kk">
+								<a>Visit Our Support</a>
+								<a>Online Support</a>
+							</div>
 						</div>
 						<div class="menu-cat">
-							<ul>
-								<li style="border: none; color: red">Logout</li>
-							</ul>
+							<div>
+								<a style="border: none; color: red">Logout</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -153,9 +162,10 @@
 
         <section class="body">
             <div class="image">
-                <div id="img-con">
-                    <div id="img-cont"></div>
-                </div>
+                <div class="img-con" id="lImg">
+                    <div class="img-cont" id="largeImage2">
+                    </div>
+               </div>
                 <img src="" alt="" id="largeImage">
                 <div class="image-thumbnail">
                     <button id="lbtn" onclick="bwd()">

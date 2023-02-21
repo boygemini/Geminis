@@ -240,28 +240,35 @@ nav ul li {
 
 .menu-cat h1 {
 	font-weight: 500;
+	background-color: #f4f4f6;
+	padding: 10px;
 }
 
-.menu-cat ul {
-	width: 100%;
-	list-style: none;
+#kk {
+	display: flex;
+	flex-direction: column;
 }
 
-.menu-cat li {
-	width: 100%;
+#kk a {
+	font-size: 20px;
+	min-width: 100%;
 	padding: 15px 0px;
-	border-bottom: 0.5px solid #11111123;
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
 	-webkit-transition: 0.2s ease-in-out;
 	-moz-transition: 0.2s ease-in-out;
 	-ms-transition: 0.2s ease-in-out;
 	-o-transition: 0.2s ease-in-out;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
 }
 
-.menu-cat li:hover {
-	background-color: whitesmoke;
-	border-bottom: 0.5px solid transparent;
+#kk a:hover {
+	text-decoration: 2px solid underline #111111;
+	text-underline-offset: 10px;
 }
 
 .menuin {
@@ -375,7 +382,7 @@ nav ul li {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	background-color: #232121d2;
+	background-color: white;
 	z-index: 468969826896078458758715478578458752;
 	display: flex;
 	justify-content: center;

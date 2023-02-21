@@ -68,15 +68,21 @@ const showSuggesttions = (event) => {
 
 // SEARCH & SUGGESTION
 let suggestionBox = document.querySelector(".searchcontainer");
+let allMenu = [...document.querySelectorAll("li")];
+
+allMenu.forEach((menu) => {
+	menu.addEventListener("click", (event) => {
+		event.stopPropagation();
+	});
+});
 const openSearch = () => {
-	event.stopPropagation();
 	suggestionBox.classList.add("searchfadein");
 	suggestionBox.style.display = "flex";
 	let searchBox = document.getElementById("search");
 	setTimeout(() => {
 		suggestionBox.classList.remove("searchfadein");
 		document.lastChild.style.overflow = "hidden";
-	}, 100);
+	}, 600);
 };
 
 const closeSearch = () => {

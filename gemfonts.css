@@ -300,6 +300,10 @@ body {
 	text-underline-offset: 5px;
 }
 
+.sel-box:hover .item-description {
+	/* color: #a73ef8; */
+}
+
 .sel-box:hover .img-con {
 	background-color: transparent;
 	/* border-top: 2px solid #111111; */
@@ -325,7 +329,7 @@ body {
 
 @keyframes sfadein {
 	from {
-		opacity: 0;
+		opacity: 0.6;
 	}
 	to {
 		opacity: 1;

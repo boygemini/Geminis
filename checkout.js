@@ -138,6 +138,7 @@ const displayForm = (counter) => {
 };
 
 const back = () => {
+	window.scrollTo(0, 0);
 	if (complete <= 0) {
 		complete = 0;
 	} else {
@@ -297,6 +298,7 @@ const customerInformationReview = (customerInfo) => {
 let count = 0;
 
 const checkFields = (e) => {
+	window.scrollTo(0, 0);
 	const customerInfo = {
 		shippingInformation: {
 			name: shippingName.value,

@@ -118,7 +118,7 @@ nav,
 }
 
 .cart-box p {
-	background-color: #00a192;
+	background-color: #111111;
 	padding: 2px 5px;
 	color: white;
 	font-weight: 600;
@@ -250,28 +250,35 @@ nav ul li {
 
 .menu-cat h1 {
 	font-weight: 500;
+	background-color: #f4f4f6;
+	padding: 10px;
 }
 
-.menu-cat ul {
-	width: 100%;
-	list-style: none;
+#kk {
+	display: flex;
+	flex-direction: column;
 }
 
-.menu-cat li {
-	width: 100%;
+#kk a {
+	font-size: 20px;
+	min-width: 100%;
 	padding: 15px 0px;
-	border-bottom: 0.5px solid #11111123;
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
 	-webkit-transition: 0.2s ease-in-out;
 	-moz-transition: 0.2s ease-in-out;
 	-ms-transition: 0.2s ease-in-out;
 	-o-transition: 0.2s ease-in-out;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
 }
 
-.menu-cat li:hover {
-	background-color: whitesmoke;
-	border-bottom: 0.5px solid transparent;
+#kk a:hover {
+	text-decoration: 2px solid underline #111111;
+	text-underline-offset: 10px;
 }
 
 .menuin {
@@ -385,7 +392,7 @@ nav ul li {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	background-color: #232121d2;
+	background-color: white;
 	z-index: 468969826896078458758715478578458752;
 	display: flex;
 	justify-content: center;
@@ -722,8 +729,8 @@ nav ul li {
 
 #ads p {
 	font-size: 13px;
-	font-weight: lighter;
-	color: #2a2d32;
+	font-weight: 400;
+	color: #111111d2;
 }
 
 .iitem img {
@@ -1454,13 +1461,11 @@ form input[type="submit"] {
 }
 
 .cart-top {
-	position: sticky;
-	top: 20px;
 }
 
 .progress {
 	position: sticky;
-	top: 100px;
+	top: 40px;
 }
 
 .completed {
@@ -1760,7 +1765,7 @@ footer {
 
 	.logo-nav {
 		padding: 15px 0px;
-		width: 100%;
+		width: 95%;
 	}
 
 	#nav-and-products {
@@ -1885,7 +1890,7 @@ footer {
 	}
 
 	.sec {
-		padding: 30px 0px;
+		padding: 10px 0px;
 	}
 
 	.form-group {
@@ -2130,13 +2135,13 @@ footer {
 
 	.cart-full-details {
 		width: 95%;
-		padding: 10px;
+		padding: 10px 0px;
 		border: none;
+		margin-top: 0px;
 	}
 
 	.progress {
 		width: 95%;
-		top: 110px;
 	}
 
 	.sec {

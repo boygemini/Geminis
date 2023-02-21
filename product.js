@@ -62,10 +62,15 @@ const item = () => {
 let Item = item();
 Item.amount = 1;
 let itemCategory = Item.itemInfo.category;
+let firstBigImgContainer = document.getElementById("lImg");
+let firstBigImg = document.getElementById("largeImage2");
+let secondBigImg = document.getElementById("largeImage");
 const loadThumbnails = () => {
 	let thumbnails = Item.itemInfo.itemImg;
 	price.innerText = Item.itemInfo.newItemPrice;
-	largeImage.src = Item.itemInfo.itemImg[0];
+	firstBigImg.style.backgroundImage = `url(${Item.itemInfo.itemImg[0]})`;
+	secondBigImg.src = Item.itemInfo.itemImg[0];
+
 	for (let i in thumbnails) {
 		document.getElementById(
 			"thumbnailPanel"
