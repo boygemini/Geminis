@@ -1469,8 +1469,9 @@ footer {
 
 	.row-title {
 		width: auto;
-		font-size: 17px;
+		font-size: 23px;
 		font-weight: 500;
+		color: #111111;
 	}
 
 	.Pickup {
@@ -1482,7 +1483,12 @@ footer {
 	}
 
 	.levels {
-		column-gap: 20px;
+		flex-direction: column;
+		row-gap: 30px;
+	}
+
+	.row-content {
+		width: 100%;
 	}
 
 	.group-head {
