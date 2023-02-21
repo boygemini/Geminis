@@ -929,6 +929,11 @@ p span {
 	display: none;
 }
 
+#all-category {
+	background-color: #111111;
+	color: white;
+}
+
 /* The container */
 .container {
 	display: block;
@@ -1239,7 +1244,7 @@ p span {
 	align-items: center;
 	flex-direction: row;
 	row-gap: 10px;
-	border-bottom: 2px solid #111111;
+	border-bottom: 1px solid #111111b4;
 	border-radius: 0;
 }
 
@@ -1527,6 +1532,8 @@ select:hover {
 	justify-content: flex-start;
 	width: 100%;
 	row-gap: 5px;
+	position: absolute;
+	bottom: 1px;
 }
 
 .price {
@@ -2079,10 +2086,11 @@ footer {
 	.sel-box {
 		min-width: 45vw;
 		max-width: 45vw;
-		min-height: 300px;
-		max-height: 300px;
+		min-height: 315px;
+		max-height: 315px;
 		row-gap: 0px;
 		padding: 5px;
+		padding-bottom: 10px;
 		/* background-color: #f4f4f6; */
 	}
 	.sfu {
@@ -2743,6 +2751,24 @@ footer {
 
 	.av-box {
 		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.sel-box {
+		min-height: 390px;
+		max-height: 390px;
+		row-gap: 0px;
+		padding: 5px;
+		padding-bottom: 10px;
+		row-gap: 10px;
+		/* background-color: #f4f4f6; */
+	}
+
+	.sfu {
+		padding-bottom: 10px;
+	}
+
+	.price-box {
+		position: absolute;
 	}
 }
 
