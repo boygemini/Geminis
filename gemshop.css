@@ -2999,4 +2999,16 @@ footer {
 		grid-template-rows: 1fr;
 		gap: 10px;
 	}
+
+	.sel-box {
+		min-height: 400px;
+		max-height: 400px;
+		row-gap: 0px;
+		padding: 5px;
+		/* background-color: #f4f4f6; */
+	}
+
+	.sfu {
+		height: 100%;
+	}
 }
