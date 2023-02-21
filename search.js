@@ -296,20 +296,9 @@ const displayResults = (directory, Query) => {
 					<span class = "price" > $ ${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<div id="item-props">
-						<div class="prop" id="add-to-cart" data-id= ${directory[k].id} onclick = "addToCart(event)">
-							<img src="IMAGES/add-cart.png" data-id= ${directory[k].id} onclick = "addToCart(event)">
-							<p data-id= ${directory[k].id} onclick = "addToCart(event)" class="cart-tool-tip" id="tooltip">Add to Cart</p>
-						</div>
-						<div class="prop" id="love">
-							<img src="IMAGES/heart.png"/>
-							<p class="love-tool-tip" id="tooltip">Love</p>
-						</div>
-						<div class="prop" id="wishlist">
-							<img src="IMAGES/bookmark.png"/>
-							<p class="wish-tool-tip" id="tooltip">Add to Wishlist</p>
-						</div>
-					</div>
+				<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} onclick = "addToCart(event)">
+			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<p data-id= ${directory[k].id} class="cart-btn" id="cart-text" onclick = "addToCart(event)"> Add to Cart<p></button>
 			</div>
 		</div>
 		</a>`;
@@ -355,20 +344,9 @@ const displayFiltereddResults = (results, category) => {
 					<span class = "price" > $${results[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${results[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<div id="item-props">
-						<div class="prop" id="add-to-cart" data-id= ${results[k].id} onclick = "addToCart(event)">
-							<img src="IMAGES/add-cart.png" data-id= ${results[k].id} onclick = "addToCart(event)">
-							<p data-id= ${results[k].id} onclick = "addToCart(event)" class="cart-tool-tip" id="tooltip">Add to Cart</p>
-						</div>
-						<div class="prop" id="love">
-							<img src="IMAGES/heart.png"/>
-							<p class="love-tool-tip" id="tooltip">Love</p>
-						</div>
-						<div class="prop" id="wishlist">
-							<img src="IMAGES/bookmark.png"/>
-							<p class="wish-tool-tip" id="tooltip">Add to Wishlist</p>
-						</div>
-					</div>
+				<button id="cart-btn" class="cart-btn"  data-id= ${results[k].id} onclick = "addToCart(event)">
+			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${results[k].id} class="cart-btn" onclick = "addToCart(event)">
+			<p data-id= ${results[k].id} class="cart-btn" id="cart-text" onclick = "addToCart(event)"> Add to Cart<p></button>
 			</div>
 		</div>
 		</a>`;
