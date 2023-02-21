@@ -461,14 +461,23 @@ const displayFilteredResults = (directory) => {
 			</div>
 			<div class="price-order">
 				<span class="price-box">
-					<span class = "price" > <span class = "currency"
-					id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
+					<span class = "price" > $${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<p data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)"> Add to Cart<p></button>
-			</div>
+				<div id="item-props">
+						<div class="prop" id="add-to-cart" data-id= ${directory[k].id} onclick = "addToCart(event)">
+							<img src="IMAGES/add-cart.png" data-id= ${directory[k].id} onclick = "addToCart(event)">
+							<p data-id= ${directory[k].id} onclick = "addToCart(event)" class="cart-tool-tip" id="tooltip">Add to Cart</p>
+						</div>
+						<div class="prop" id="love">
+							<img src="IMAGES/heart.png"/>
+							<p class="love-tool-tip" id="tooltip">Love</p>
+						</div>
+						<div class="prop" id="wishlist">
+							<img src="IMAGES/bookmark.png"/>
+							<p class="wish-tool-tip" id="tooltip">Add to Wishlist</p>
+						</div>
+					</div>
 		</div>
 		</a>`;
 	}

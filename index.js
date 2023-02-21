@@ -370,40 +370,6 @@ const moveRight = () => {
 const moveLeft = () => {
 	holder.scrollLeft -= holder.clientWidth;
 };
-let timer;
-const animateCartButtonText = (target) => {
-	clearTimeout(timer);
-	if (target.nodeName === "BUTTON") {
-		target.children[1].style.opacity = "0";
-		target.children[1].style.transition = ".2s";
-		setTimeout(() => {
-			target.children[1].style.opacity = "1";
-			target.children[1].innerText = "In cart";
-		}, 200);
-
-		target.onmouseout = function () {
-			timer = setTimeout(() => {
-				target.children[1].innerText = "add to cart";
-				target.children[1].style.opacity = "1";
-			}, 1000);
-		};
-	}
-
-	if (target.nodeName === "P") {
-		target.style.opacity = "0";
-		target.style.transition = ".2s";
-		setTimeout(() => {
-			target.style.opacity = "1";
-			target.innerText = "In cart";
-		}, 200);
-		target.parentNode.onmouseout = function () {
-			timer = setTimeout(() => {
-				target.innerText = "add to cart";
-				target.style.opacity = "1";
-			}, 1000);
-		};
-	}
-};
 
 let me = document.querySelectorAll("#cart-text");
 console.log(me);

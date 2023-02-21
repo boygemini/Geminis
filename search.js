@@ -293,13 +293,23 @@ const displayResults = (directory, Query) => {
 			</div>
 			<div class="price-order">
 				<span class="price-box">
-					<span class = "price" > <span class = "currency"
-					id = "currency" > $ </span> ${directory[k].itemInfo.newItemPrice} </span>
+					<span class = "price" > $ ${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<p data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)"> Add to Cart<p></button>
+				<div id="item-props">
+						<div class="prop" id="add-to-cart" data-id= ${directory[k].id} onclick = "addToCart(event)">
+							<img src="IMAGES/add-cart.png" data-id= ${directory[k].id} onclick = "addToCart(event)">
+							<p data-id= ${directory[k].id} onclick = "addToCart(event)" class="cart-tool-tip" id="tooltip">Add to Cart</p>
+						</div>
+						<div class="prop" id="love">
+							<img src="IMAGES/heart.png"/>
+							<p class="love-tool-tip" id="tooltip">Love</p>
+						</div>
+						<div class="prop" id="wishlist">
+							<img src="IMAGES/bookmark.png"/>
+							<p class="wish-tool-tip" id="tooltip">Add to Wishlist</p>
+						</div>
+					</div>
 			</div>
 		</div>
 		</a>`;
@@ -342,13 +352,23 @@ const displayFiltereddResults = (results, category) => {
 			</div>
 			<div class="price-order">
 				<span class="price-box">
-					<span class = "price" > <span class = "currency"
-					id = "currency" > $ </span> ${results[k].itemInfo.newItemPrice} </span>
+					<span class = "price" > $${results[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${results[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" class="cart-btn"  data-id= ${results[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${results[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<p data-id= ${results[k].id} class="cart-btn" onclick = "addToCart(event)"> Add to Cart<p></button>
+				<div id="item-props">
+						<div class="prop" id="add-to-cart" data-id= ${results[k].id} onclick = "addToCart(event)">
+							<img src="IMAGES/add-cart.png" data-id= ${results[k].id} onclick = "addToCart(event)">
+							<p data-id= ${results[k].id} onclick = "addToCart(event)" class="cart-tool-tip" id="tooltip">Add to Cart</p>
+						</div>
+						<div class="prop" id="love">
+							<img src="IMAGES/heart.png"/>
+							<p class="love-tool-tip" id="tooltip">Love</p>
+						</div>
+						<div class="prop" id="wishlist">
+							<img src="IMAGES/bookmark.png"/>
+							<p class="wish-tool-tip" id="tooltip">Add to Wishlist</p>
+						</div>
+					</div>
 			</div>
 		</div>
 		</a>`;
@@ -597,7 +617,6 @@ const onLoad = () => {
 	try {
 		QueryName = urlWithQuery.split("?")[1].split("=")[0];
 	} catch (error) {}
-	console.log(QueryName);
 
 	if (
 		QueryName !== "SearchQuery" &&
@@ -812,6 +831,70 @@ const viewProduct = (event) => {
 		window.location = url;
 	}
 };
+
+// This controls/animate the add to cart button. It changes the button text to "IN CART"
+// when the button is click and item is being added to the cart after which the button text
+// returns to "ADD TO CART" after a second of being out of focus.
+// It was push here because all the website page runs this search script
+let timer;
+let allCartBtn = [...document.querySelectorAll("#cart-btn")];
+let allCartText = [...document.querySelectorAll("#cart-text")];
+const animateCartButtonText = (target) => {
+	clearTimeout(timer);
+	if (target.nodeName === "BUTTON") {
+		target.children[1].style.opacity = "0";
+		target.children[1].style.transition = ".2s";
+		setTimeout(() => {
+			target.children[1].style.opacity = "1";
+			target.children[1].innerText = "In cart";
+		}, 200);
+	}
+
+	if (target.nodeName === "P") {
+		target.style.opacity = "0";
+		target.style.transition = ".2s";
+		setTimeout(() => {
+			target.style.opacity = "1";
+			target.innerText = "In cart";
+		}, 200);
+	}
+};
+
+allCartBtn.forEach((btn) => {
+	btn.addEventListener("mouseover", (e) => {
+		clearTimeout(timer);
+	});
+
+	btn.addEventListener("mouseout", (e) => {
+		clearTimeout(timer);
+		timer = setTimeout(() => {
+			btn.children[1].style.opacity = "0";
+			btn.children[1].style.transition = ".2s";
+			setTimeout(() => {
+				btn.children[1].innerText = "add to cart";
+				btn.children[1].style.opacity = "1";
+			}, 200);
+		}, 1000);
+	});
+});
+
+allCartText.forEach((txt) => {
+	txt.addEventListener("mouseover", (e) => {
+		clearTimeout(timer);
+	});
+
+	txt.addEventListener("mouseout", (e) => {
+		clearTimeout(timer);
+		timer = setTimeout(() => {
+			txt.style.opacity = "0";
+			txt.style.transition = ".2s";
+			setTimeout(() => {
+				txt.innerHTML = `<img src="IMAGES/add-cart-white.png" alt=""  data-id= ${results[k].id} class="cart-btn" onclick = "addToCart(event)">Add to cart`;
+				txt.style.opacity = "1";
+			}, 800);
+		}, 1000);
+	});
+});
 
 window.onload = onLoad;
 
