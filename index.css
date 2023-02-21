@@ -1572,15 +1572,10 @@ nav ul li {
 	font-weight: 600;
 	transition: 0.3s ease-in-out;
 	cursor: pointer;
-
 	height: 100%;
-	border-top: none;
-	border-left: none;
-	border-right: none;
+	border: 1px solid #f4f4f6;
 	width: 100px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	background-color: #f4f4f6;
+	/* background-color: #f4f4f6; */
 }
 
 .sel-table ul li:hover {
@@ -1594,7 +1589,7 @@ nav ul li {
 
 .active-li {
 	color: #111111;
-	border: 2px solid #111111;
+	border: 1px solid #111111;
 	background-color: #f4f4f6;
 }
 
