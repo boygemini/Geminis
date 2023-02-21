@@ -1377,10 +1377,10 @@ nav ul li {
 	padding: 30px;
 	/* background-color: #4f90ab; */
 	height: 100%;
-	background: linear-gradient(to left, transparent 30%, #00534b8a 80%);
-	background: -webkit-linear-gradient(to left, transparent 30%, #00534b8a 80%);
-	background: -o-linear-gradient(to left, transparent 30%, #00534b8a 80%);
-	background: -moz-linear-gradient(to left, transparent 30%, #00534b8a 80%);
+	background: linear-gradient(to left, transparent 30%, #00534bd5 80%);
+	background: -webkit-linear-gradient(to left, transparent 30%, #00534bd5 80%);
+	background: -o-linear-gradient(to left, transparent 30%, #00534bd5 80%);
+	background: -moz-linear-gradient(to left, transparent 30%, #00534bd5 80%);
 }
 
 .h-text {
@@ -1974,6 +1974,12 @@ footer {
 @media screen and (max-width: 768px) {
 	.banner-container {
 		margin-top: 60px;
+		width: 90%;
+		margin: auto;
+	}
+
+	.banner-content {
+		margin-top: 7vh;
 	}
 
 	.discount {
@@ -2452,6 +2458,13 @@ footer {
 
 	.h-text h1 {
 		font-size: 2.4rem;
+	}
+
+	.home {
+		background: linear-gradient(to left, transparent 0%, #00534ba5 0%);
+		background: -webkit-linear-gradient(to left, transparent 0%, #00534ba5 0%);
+		background: -o-linear-gradient(to left, transparent 0%, #00534ba5 0%);
+		background: -moz-linear-gradient(to left, transparent 0%, #00534ba5 0%);
 	}
 
 	/*About*/
