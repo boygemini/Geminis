@@ -218,11 +218,14 @@
 							<h1 id="result-title" class="cat-head"></h1>
 							<div class="sort-hol">
 								<p>Sort</p>
-								<select name="sort" id="select" onchange="sorting(event)">
-									<option value="Random">Random</option>
-									<option value="Ascending">Ascending price</option>
-									<option value="Descending">Descending price</option>
-								</select>
+								<div class="select-dropdown">
+									<select name="sort" id="select" onchange="sorting(event)">
+										<option value="Random">Random</option>
+										<option value="Ascending">Ascending price</option>
+										<option value="Descending">Descending price</option>
+									</select>
+								</div>
+
 								<button onclick="openFilter()" id="fbtn">
 									<img src="IMAGES/filter.png" alt="" />
 								</button>
