@@ -532,7 +532,7 @@ nav ul li {
 
 .shade:hover p {
 	background-color: white;
-	color: #a73ef8;
+	color: #111111;
 	padding: 5px 10px;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -586,6 +586,7 @@ nav ul li {
 	display: flex;
 	align-items: center;
 	padding: 30px;
+	display: none;
 }
 
 .banner-text {
@@ -1859,6 +1860,11 @@ footer {
 	.shop-body {
 		padding: 0;
 	}
+
+	.banner-container {
+		display: none;
+	}
+
 	#mob-logo {
 		display: block;
 	}
@@ -2073,8 +2079,8 @@ footer {
 	.sel-box {
 		min-width: 45vw;
 		max-width: 45vw;
-		min-height: 370px;
-		max-height: 370px;
+		min-height: 300px;
+		max-height: 300px;
 		row-gap: 0px;
 		padding: 5px;
 		/* background-color: #f4f4f6; */
@@ -2320,6 +2326,7 @@ footer {
 	.shop-body {
 		flex-direction: column;
 		padding: 0px;
+		margin-top: 10vh;
 	}
 
 	.filters {
@@ -2702,6 +2709,7 @@ footer {
 	.shop-body {
 		flex-direction: row;
 		padding: 0px;
+		margin-top: 14vh;
 	}
 
 	#mob-logo {

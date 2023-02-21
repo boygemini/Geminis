@@ -296,6 +296,11 @@ body {
 	/* background-color: white; */
 }
 
+.sel-box:hover p {
+	text-decoration: 1px solid #111111 underline;
+	text-underline-offset: 5px;
+}
+
 .sel-box:hover .img-con {
 	background-color: transparent;
 	/* border-top: 2px solid #111111; */
@@ -506,8 +511,8 @@ body {
 	#cart-btn img {
 		display: none;
 	}
+}
 
-	.banner-container {
-		display: none;
-	}
+#cart-btn {
+	display: none;
 }

@@ -2297,8 +2297,8 @@ footer {
 	.sel-box {
 		min-width: 45vw;
 		max-width: 45vw;
-		min-height: 400px;
-		max-height: 400px;
+		min-height: 30px;
+		max-height: 300px;
 		row-gap: 0px;
 		padding: 5px;
 		/* background-color: #f4f4f6; */
@@ -2306,7 +2306,7 @@ footer {
 
 	.sel-container,
 	.recent-container {
-		padding-bottom: 5px;
+		padding-bottom: 15px;
 	}
 
 	.item-description {
