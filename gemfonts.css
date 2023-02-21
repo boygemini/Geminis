@@ -345,7 +345,7 @@ body {
 	font-weight: 600;
 }
 
-@media screen and (max-width: 295px) {
+@media screen and (max-width: 320px) {
 	/* .slimb-right {
 		display: flex;
 		flex-direction: column;
