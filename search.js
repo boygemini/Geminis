@@ -82,7 +82,7 @@ const openSearch = () => {
 	setTimeout(() => {
 		suggestionBox.classList.remove("searchfadein");
 		document.lastChild.style.overflow = "hidden";
-	}, 600);
+	}, 500);
 };
 
 const closeSearch = () => {

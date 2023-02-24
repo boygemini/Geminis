@@ -2136,13 +2136,17 @@ footer {
 		min-height: 350px;
 		max-height: 350px;
 		row-gap: 0px;
-		padding: 5px;
+		padding: 0px;
 		padding-bottom: 10px;
 		background-color: transparent;
 	}
+
+	.sell-box {
+		padding: 0px;
+	}
 	.sfu {
 		height: 100%;
-		padding: 10px 0px 0px 0px;
+		padding: 10px;
 	}
 
 	.price-box {
@@ -2150,6 +2154,7 @@ footer {
 		flex-direction: column;
 		row-gap: 2px;
 		align-items: flex-start;
+		padding-left: 10px;
 	}
 
 	.cart-btn {

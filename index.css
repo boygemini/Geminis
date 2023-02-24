@@ -771,9 +771,9 @@ nav ul li {
 	width: 100%;
 	height: 70vh;
 	display: grid;
-	grid-template-rows: 1fr 1fr;
-	grid-template-columns: 2fr 1fr 1fr 1fr;
-	gap: 0px;
+	grid-template-rows: 1f;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap: 5px;
 }
 
 .ssp {
@@ -784,47 +784,47 @@ nav ul li {
 
 #grid-0 {
 	background-color: #7bded9;
-	grid-row-start: 1;
+	/* grid-row-start: 1;
 	grid-column-start: 1;
 
 	grid-row-end: 3;
-	grid-column-end: 2;
+	grid-column-end: 2; */
 	background-image: url(IMAGES/cell-big2.jpg);
 }
 #grid-1 {
 	background-color: #77e7b7;
-	grid-row-start: 2;
+	/* grid-row-start: 2;
 	grid-column-start: 2;
 
 	grid-row-end: 3;
-	grid-column-end: 4;
+	grid-column-end: 4; */
 	background-image: url(IMAGES/lapp-big-3.jpg);
 }
 #grid-2 {
 	background-color: #7e5e7f;
-	grid-row-start: 2;
+	/* grid-row-start: 2;
 	grid-column-start: 4;
 
 	grid-row-end: 3;
-	grid-column-end: 5;
+	grid-column-end: 5; */
 	background-image: url(IMAGES/spekk-big.jpg);
 }
 #grid-3 {
 	background-color: #db86cd;
-	grid-row-start: 1;
+	/* grid-row-start: 1;
 	grid-column-start: 3;
 
 	grid-row-end: 2;
-	grid-column-end: 5;
+	grid-column-end: 5; */
 	background-image: url(IMAGES/tvv-big.jpg);
 }
 #grid-4 {
 	background-color: #95bba9;
-	grid-row-start: 1;
+	/* grid-row-start: 1;
 	grid-column-start: 2;
 
 	grid-row-end: 2;
-	grid-column-end: 3;
+	grid-column-end: 3; */
 	background-image: url(IMAGES/game-big.jpg);
 }
 
@@ -866,9 +866,8 @@ nav ul li {
 	background: -o-linear-gradient(to bottom, transparent 0%, #00534b8a 110%);
 	background: -moz-linear-gradient(to bottom, transparent 0%, #00534b8a 110%);
 	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
-	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
 	transition: all 1s ease-in-out;
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
@@ -876,22 +875,52 @@ nav ul li {
 	-o-transition: all 1s ease-in-out;
 }
 
-.shade:hover {
-	background: linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
-	background: -webkit-linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
-	background: -o-linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
-	background: -moz-linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
+/* .shade:hover {
+	animation: mma 0.5s;
+	-webkit-animation: mma 0.5s;
 }
 
-a .shade h1 {
+@keyframes mma {
+	from {
+		background: linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
+		background: -webkit-linear-gradient(
+			to bottom,
+			transparent 0%,
+			#00534b8a 10%
+		);
+		background: -o-linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
+		background: -moz-linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
+	}
+	to {
+		background: linear-gradient(to bottom, transparent 0%, #00534b8a 110%);
+		background: -webkit-linear-gradient(
+			to bottom,
+			transparent 0%,
+			#00534b8a 110%
+		);
+		background: -o-linear-gradient(to bottom, transparent 0%, #00534b8a 110%);
+		background: -moz-linear-gradient(to bottom, transparent 0%, #00534b8a 110%);
+	}
+} */
+
+.shade h1 {
 	color: #111111;
 	font-size: 30px;
 	font-weight: 800;
 	background-color: white;
 	padding: 10px 15px;
 	width: auto;
+	height: auto;
 	justify-self: flex-start;
 	align-self: flex-start;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+}
+
+.cat-head {
 }
 
 .cat-text {
@@ -909,7 +938,6 @@ a .shade h1 {
 }
 
 .cat-p {
-	overflow: hidden;
 	height: auto;
 }
 
@@ -940,6 +968,7 @@ a .shade h1 {
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
 	cursor: pointer;
+	display: none;
 }
 
 .gridbtn img {
@@ -2201,7 +2230,7 @@ footer {
 	.hero-grid {
 		display: flex;
 		flex-direction: column;
-		row-gap: 0px;
+		gap: 10px;
 		height: auto;
 	}
 
@@ -2334,7 +2363,7 @@ footer {
 		min-height: 350px;
 		max-height: 350px;
 		row-gap: 0px;
-		padding: 5px;
+		/* padding: 5px; */
 		padding-bottom: 10px;
 		background-color: transparent;
 		/* background-color: #f4f4f6; */
@@ -2359,7 +2388,7 @@ footer {
 
 	.sfu {
 		height: 100%;
-		padding: 10px 0px 0px 0px;
+		padding: 10px;
 	}
 
 	.img-con {
@@ -2462,7 +2491,6 @@ footer {
 		row-gap: 2px;
 		align-items: flex-start;
 		position: absolute;
-		bottom: 0;
 	}
 
 	.cart-btn {
