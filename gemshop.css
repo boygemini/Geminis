@@ -468,7 +468,7 @@ nav ul li {
 
 .littlebans {
 	display: flex;
-	column-gap: 30px;
+	column-gap: 5px;
 	width: 100%;
 }
 
@@ -1217,8 +1217,7 @@ p span {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
+	gap: 5px;
 	width: 100%;
 	align-self: center;
 	flex-wrap: wrap;
@@ -2093,7 +2092,7 @@ footer {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		overflow-x: scroll;
-		gap: 20px;
+		gap: 5px;
 	}
 
 	.b-holder {
@@ -2139,7 +2138,7 @@ footer {
 		row-gap: 0px;
 		padding: 5px;
 		padding-bottom: 10px;
-		/* background-color: #f4f4f6; */
+		background-color: transparent;
 	}
 	.sfu {
 		height: 100%;
@@ -2238,7 +2237,7 @@ footer {
 		width: 100%;
 		grid-template-rows: auto;
 		grid-template-columns: 50% 50%;
-		gap: 5px 5px;
+		gap: 5px;
 		/* display: flex;
 		flex-wrap: wrap;
 		flex-direction: row; */
@@ -2695,7 +2694,7 @@ footer {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		overflow-x: scroll;
-		gap: 20px;
+		gap: 5px;
 	}
 
 	.b-holder {
@@ -2757,7 +2756,7 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: 1fr;
-		gap: 10px;
+		gap: 5px;
 	}
 
 	.av-box {
@@ -2916,7 +2915,7 @@ footer {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		overflow-x: scroll;
-		gap: 20px;
+		gap: 5px;
 	}
 
 	.b-holder {
@@ -3008,7 +3007,7 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: 1fr;
-		gap: 10px;
+		gap: 5px;
 	}
 
 	.sel-box {

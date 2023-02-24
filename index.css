@@ -883,7 +883,7 @@ nav ul li {
 	background: -moz-linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
 }
 
-.shade h1 {
+a .shade h1 {
 	color: #111111;
 	font-size: 30px;
 	font-weight: 800;
@@ -1282,8 +1282,7 @@ nav ul li {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 7px;
+	gap: 5px;
 }
 
 .recent {
@@ -1599,24 +1598,23 @@ nav ul li {
 	transition: 0.3s ease-in-out;
 	cursor: pointer;
 	height: 100%;
-	border: 1px solid #f4f4f6;
 	width: 100px;
 	/* background-color: #f4f4f6; */
 }
 
 .sel-table ul li:hover {
+	border: 2px solid #111111;
 	color: #111111;
 }
 
 .inactive-li {
 	color: #11111191;
-	border: 2px solid transparent;
+	border: 2px solid #f4f4f6;
 }
 
 .active-li {
 	color: #111111;
-	border: 1px solid #111111;
-	background-color: #f4f4f6;
+	border: 2px solid #111111;
 }
 
 .view-all {
@@ -2338,6 +2336,7 @@ footer {
 		row-gap: 0px;
 		padding: 5px;
 		padding-bottom: 10px;
+		background-color: transparent;
 		/* background-color: #f4f4f6; */
 	}
 
@@ -3088,7 +3087,7 @@ footer {
 
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-		gap: 5px 0px;
+		gap: 5px;
 		height: auto;
 	}
 
@@ -3124,7 +3123,7 @@ footer {
 		display: grid;
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		column-gap: 1px;
+		gap: 5px;
 	}
 
 	/*Electornic*/
@@ -3363,5 +3362,10 @@ footer {
 		row-gap: 0px;
 		padding: 5px;
 		/* background-color: #f4f4f6; */
+	}
+
+	#sel-container,
+	.Weekly-Container {
+		gap: 5px;
 	}
 }
