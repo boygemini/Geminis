@@ -52,32 +52,32 @@ window.addEventListener("click", (e) => {
 });
 
 // GRIDS
-const grids = [...document.querySelectorAll(".shade")];
-const gridTextDOM = document.querySelectorAll(".cat-text");
-let headerTextHeight;
-gridTextDOM.forEach((grid) => {
-	headerTextHeight = grid.childNodes[1].scrollHeight;
-	grid.style.height = headerTextHeight + "px";
-});
+// const grids = [...document.querySelectorAll(".shade")];
+// const gridTextDOM = document.querySelectorAll(".cat-text");
+// let headerTextHeight;
+// gridTextDOM.forEach((grid) => {
+// 	headerTextHeight = grid.childNodes[1].scrollHeight;
+// 	grid.style.height = headerTextHeight + "px";
+// });
 
-for (let i in grids) {
-	grids[i].addEventListener(
-		"mousemove",
-		(e) => {
-			gridTextDOM[i].style.height = `${gridTextDOM[i].scrollHeight}px`;
-		},
-		false
-	);
+// for (let i in grids) {
+// 	grids[i].addEventListener(
+// 		"mousemove",
+// 		(e) => {
+// 			gridTextDOM[i].style.height = `${gridTextDOM[i].scrollHeight}px`;
+// 		},
+// 		false
+// 	);
 
-	grids[i].addEventListener(
-		"mouseout",
-		(e) => {
-			gridTextDOM[i].style.height =
-				grids[i].childNodes[1].childNodes[1].scrollHeight + "px";
-		},
-		false
-	);
-}
+// 	grids[i].addEventListener(
+// 		"mouseout",
+// 		(e) => {
+// 			gridTextDOM[i].style.height =
+// 				grids[i].childNodes[1].childNodes[1].scrollHeight + "px";
+// 		},
+// 		false
+// 	);
+// }
 
 // ITEMS STORAGE AND DISPLAY
 let itemName = document.querySelectorAll("#itemName"),

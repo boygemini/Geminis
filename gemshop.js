@@ -4,6 +4,23 @@ let webPage = document.querySelector("html");
 webPage.style.opacity = "1";
 webPage.style.transition = "1s ease-in-out";
 
+const allSecTitle = [...document.querySelectorAll(".section-title")];
+window.addEventListener("scroll", (e) => {
+	allSecTitle.forEach((tit) => {
+		if (tit.getBoundingClientRect().top === 0) {
+			tit.style.padding = "10px 0px";
+			tit.style.boxShadow = "0px 10px 50px -20px grey";
+			tit.style.borderBottom = "transparent";
+		}
+
+		if (tit.getBoundingClientRect().top > 0) {
+			tit.style.padding = "30px 0px";
+			tit.style.boxShadow = "";
+			tit.style.border = "";
+		}
+	});
+});
+
 let filterBox = document.querySelectorAll("#filters");
 let filterUIObjects = {
 	gaming() {

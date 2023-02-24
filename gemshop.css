@@ -1239,6 +1239,10 @@ p span {
 	row-gap: 10px;
 	border-bottom: 1px solid #111111b4;
 	border-radius: 0;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background-color: white;
 }
 
 /* #sec-name-cellphones,
