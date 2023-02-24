@@ -857,27 +857,46 @@ nav ul li {
 	width: 100%;
 	height: 100%;
 	background-color: #00a19138;
-	background: linear-gradient(to bottom, transparent 10%, #00534b8a 110%);
+	background: linear-gradient(to bottom, transparent 0%, #00534b8a 110%);
 	background: -webkit-linear-gradient(
 		to bottom,
-		transparent 10%,
+		transparent 0%,
 		#00534b8a 110%
 	);
-	background: -o-linear-gradient(to bottom, transparent 10%, #00534b8a 110%);
-	background: -moz-linear-gradient(to bottom, transparent 10%, #00534b8a 110%);
+	background: -o-linear-gradient(to bottom, transparent 0%, #00534b8a 110%);
+	background: -moz-linear-gradient(to bottom, transparent 0%, #00534b8a 110%);
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
 	vertical-align: middle;
+	transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+
+.shade:hover {
+	background: linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
+	background: -webkit-linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
+	background: -o-linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
+	background: -moz-linear-gradient(to bottom, transparent 0%, #00534b8a 10%);
 }
 
 .shade h1 {
-	color: white;
+	color: #111111;
 	font-size: 30px;
 	font-weight: 800;
+	background-color: white;
+	padding: 10px 15px;
+	width: auto;
+	justify-self: flex-start;
+	align-self: flex-start;
 }
 
 .cat-text {
+	display: flex;
+	flex-direction: column;
 	bottom: 10px;
 	position: absolute;
 	left: 10px;
