@@ -70,11 +70,15 @@ const loadThumbnails = () => {
 	price.innerText = Item.itemInfo.newItemPrice;
 	firstBigImg.style.backgroundImage = `url(${Item.itemInfo.itemImg[0]})`;
 	secondBigImg.src = Item.itemInfo.itemImg[0];
+	// secondBigImg.style.display = "block";
+	// firstBigImg.style.display = "flex";
 
 	for (let i in thumbnails) {
 		document.getElementById(
 			"thumbnailPanel"
-		).innerHTML += `<div class="tbcon" onclick='changeMainThumbNail(event)' data-id="${i}" data-name=${thumbnails[i]} style='background-image:url(${thumbnails[i]})'></div>`;
+		).innerHTML += `<div class="tbcon" onmouseover='changeMainThumbNail(event)' data-id="${i}" data-name=${thumbnails[i]}>
+		<div class="tbcon-in" onmouseover='changeMainThumbNail(event)' data-id="${i}" data-name=${thumbnails[i]} style='background-image:url(${thumbnails[i]})'></div>
+		</div>`;
 	}
 };
 if (itemCategory === "Cellphones") {
@@ -286,6 +290,7 @@ const indicateActiveThumbNail = (event) => {
 
 const changeMainThumbNail = (event) => {
 	largeImage.src = event.target.dataset.name;
+	firstBigImg.style.backgroundImage = `url(${event.target.dataset.name})`;
 	indicateActiveThumbNail(event);
 };
 
@@ -298,6 +303,7 @@ const fwd = () => {
 
 	counter++;
 	largeImage.src = imageArray[counter];
+	firstBigImg.style.backgroundImage = `url(${imageArray[counter]})`;
 	thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter;
 	indicateActiveThumbNail(event);
 };
@@ -311,6 +317,7 @@ const bwd = () => {
 
 	counter--;
 	largeImage.src = imageArray[counter];
+	firstBigImg.style.backgroundImage = `url(${imageArray[counter]})`;
 	thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter;
 	indicateActiveThumbNail(event);
 };

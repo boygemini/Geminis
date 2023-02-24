@@ -14,18 +14,16 @@
 					"itemInfo": {
 						"name": "Xbox 3",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/61BEpu+HTAL._SL1500_.png",
+							"IMAGES/pro-img/612YEtRWckL._SL1500_.jpg",
+							"IMAGES/pro-img/51eOztNdCkL._SL1500_.jpg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "PS 5",
 						"description2": "",
 						"newItemPrice": "630",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "Xbox",
+						"brand": "ps",
 						"category": "Gaming",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -38,20 +36,17 @@
 				{
 					"id": "1077",
 					"itemInfo": {
-						"name": "Xbox 4",
+						"name": "PS 2",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/61pETE6v4vL._SL1500_.png",
+							"IMAGES/pro-img/51EhttI30bL._SL1200_.jpg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "PS 2",
 						"description2": "",
 						"newItemPrice": "400",
 						"oldItemPrice": "$544",
 						"itemTotal": "400",
-						"brand": "Xbox",
+						"brand": "ps",
 						"category": "Gaming",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -64,15 +59,15 @@
 				{
 					"id": "1890",
 					"itemInfo": {
-						"name": "PS 2",
+						"name": "PS 4",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/71pFnHBrvgL._SL1500_.png",
+							"IMAGES/pro-img/71-WrFQo1FL._SL1500_.jpg",
+							"IMAGES/pro-img/71XrnwP7yjL._SL1500_.jpg",
+							"IMAGES/pro-img/ipad2.png",
+							"IMAGES/pro-img/ipad2.png"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "PS 4",
 						"description2": "",
 						"newItemPrice": "540",
 						"oldItemPrice": "$544",
@@ -90,15 +85,12 @@
 				{
 					"id": "1131",
 					"itemInfo": {
-						"name": "PS 3",
+						"name": "PS 2",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/81bHi3vo88L._SL1500_.png",
+							"IMAGES/pro-img/81HMFRvlxiL._SL1500_.jpg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "PS 2",
 						"description2": "",
 						"newItemPrice": "620",
 						"oldItemPrice": "$544",
@@ -116,15 +108,15 @@
 				{
 					"id": "1001",
 					"itemInfo": {
-						"name": "PS 3",
+						"name": "PS 5",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/51C0Nbg5QNL._SL1500_.png",
+							"IMAGES/pro-img/61U86M+XTlL._SL1500_.jpg",
+							"IMAGES/pro-img/61kg+jnrz0L._SL1500_.jpg",
+							"IMAGES/pro-img/61T9Sylvn6L._SL1500_.jpg",
+							"IMAGES/pro-img/51fySIAYsCL._SL1450_.jpg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "PS 5",
 						"description2": "",
 						"newItemPrice": "600",
 						"oldItemPrice": "$544",
@@ -140,17 +132,15 @@
 					}
 				},
 				{
-					"id": "1931",
+					"id": "8210",
 					"itemInfo": {
-						"name": "PS 4",
+						"name": "PS 5",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/61WnudgMYwL._AC_SL1500_.png",
+							"IMAGES/pro-img/61BQMgRgqfL._AC_SL1500_.jpg",
+							"IMAGES/pro-img/61muxUUn0NL._AC_SL1500_.jpg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "PS 5",
 						"description2": "",
 						"newItemPrice": "330",
 						"oldItemPrice": "$544",
@@ -166,17 +156,15 @@
 					}
 				},
 				{
-					"id": "7793",
+					"id": "8320",
 					"itemInfo": {
-						"name": "PS 5",
+						"name": "PS 4",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/51HPlBnOoBL._AC_SL1500_.png",
+							"IMAGES/pro-img/41A5YRynOAL._SL1000_.jpg",
+							"IMAGES/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "PS 4",
 						"description2": "",
 						"newItemPrice": "850",
 						"oldItemPrice": "$544",
@@ -192,17 +180,15 @@
 					}
 				},
 				{
-					"id": "3392",
+					"id": "9293",
 					"itemInfo": {
-						"name": "PS 3",
+						"name": "PS 4",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/51SmNTnYT2L._SL1500_.png",
+							"IMAGES/pro-img/61dXkVvoq6L._SL1500_.jpg",
+							"IMAGES/pro-img/718xi8SwUUL._SL1500_.jpg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "PS 4",
 						"description2": "",
 						"newItemPrice": "900",
 						"oldItemPrice": "$544",
@@ -218,17 +204,15 @@
 					}
 				},
 				{
-					"id": "7294",
+					"id": "88204",
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/717JafCjCAL._SL1500_.png",
+							"IMAGES/pro-img/712VxqaHDvL._SL1500_.jpg",
+							"IMAGES/pro-img/8192qTuzoEL._SL1500_.jpg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "XBOX",
 						"description2": "",
 						"newItemPrice": "1200",
 						"oldItemPrice": "$544",
@@ -244,15 +228,13 @@
 					}
 				},
 				{
-					"id": "8294",
+					"id": "9282",
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/61gjug2NzvL._SL1500_.png",
+							"IMAGES/pro-img/616-K1n0NeL._SL1500_.jpg",
+							"IMAGES/pro-img/61H-v5npLZL._SL1500_.jpg"
 						],
 						"description1": "Lorem ipsum dolor sit amet",
 						"description2": "",
@@ -270,17 +252,125 @@
 					}
 				},
 				{
-					"id": "8183",
+					"id": "7298",
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/51yQkquCiWL._SL1000_.png",
+							"IMAGES/pro-img/51vRipjKjML._SL1200_.jpg",
+							"IMAGES/pro-img/61-uVCKZhtL._SL1200_.jpg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "89924",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": [
+							"IMAGES/pro-img/51hV2qz3WuL._AC_SL1080_.png",
+							"IMAGES/pro-img/51GONCGpiWL._AC_SL1200_.jpg",
+							"IMAGES/pro-img/51MeEV7Bu6L._AC_SL1200_.jpg",
+							"IMAGES/pro-img/41lfqMsh3+S._AC_SL1200_.jpg"
+						],
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "428742",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": ["IMAGES/pro-img/61oFqsoj9nL._SL1000_.png"],
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "740297",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": ["IMAGES/pro-img/6171R6ucvIL._SL1000_.png"],
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "572942",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": [
+							"IMAGES/pro-img/61ybkGQPDrL._SL1000_.png",
+							"IMAGES/pro-img/51e2Q-TWUEL._SL1200_.jpg",
+							"IMAGES/pro-img/51J7qkVOezL._SL1000_.jpg",
+							"IMAGES/pro-img/61jkjQejpyL._SL1000_.jpg"
+						],
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "84272",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": ["IMAGES/pro-img/61RA2sUPu+L._SL1000_.png"],
+						"description1": "XBOX",
 						"description2": "",
 						"newItemPrice": "1112",
 						"oldItemPrice": "$544",
@@ -298,22 +388,19 @@
 			],
 			"cellphones": [
 				{
-					"id": "1040",
+					"id": "47092",
 					"itemInfo": {
-						"name": "LG",
+						"name": "iPhone 12",
 						"itemImg": [
-							"IMAGES/frontIpad.png",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/ipad2.png",
-							"IMAGES/jbl.png"
+							"IMAGES/pro-img/iphone-14-blue.png",
+							"IMAGES/pro-img/iphone-14-blue.webp"
 						],
-						"description1": "LG X16",
+						"description1": "iPhone 12 - Blue",
 						"description2": "",
 						"newItemPrice": "1200",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "LG",
+						"brand": "Apple",
 						"memory": "16",
 						"category": "Cellphones",
 						"color": "🇺🇦",
@@ -325,17 +412,14 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "47914",
 					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
+						"name": "iPhone 14",
 						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
+							"IMAGES/pro-img/iphone-14-blackii.png",
+							"IMAGES/pro-img/iphone-14-black.jpg"
 						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
+						"description1": "iPhone 14 - Black",
 						"description2": "",
 						"newItemPrice": "950",
 						"oldItemPrice": "$544",
@@ -352,125 +436,15 @@
 					}
 				},
 				{
-					"id": "4219",
+					"id": "89291",
 					"itemInfo": {
-						"name": "Samsung S9 Plus",
+						"name": "iPhone XS",
 						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
+							"IMAGES/pro-img/6522700ld.png",
+							"IMAGES/pro-img/6522700cv2d.jpeg",
+							"IMAGES/pro-img/6522700cv1d.jpeg"
 						],
-						"description1": "iPhone 12 Pro Max - Gold",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Samsung",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "1032",
-					"itemInfo": {
-						"name": "Samsung S8 Plus",
-						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Samsung",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "9284",
-					"itemInfo": {
-						"name": "Itel A33",
-						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Gold",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Itel",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "1032",
-					"itemInfo": {
-						"name": "Infinix HOT20",
-						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Infinix",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "8283",
-					"itemInfo": {
-						"name": "iPhone 14 Pro Max",
-						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Gold",
+						"description1": "iPhone Xs - Jet Black",
 						"description2": "",
 						"newItemPrice": "520",
 						"oldItemPrice": "$544",
@@ -487,71 +461,17 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "98821",
 					"itemInfo": {
-						"name": "iPhone 11 ",
+						"name": "Samsung S22",
 						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
+							"IMAGES/pro-img/6494435ld.png",
+							"IMAGES/pro-img/6494435cv12d.jpeg",
+							"IMAGES/pro-img/6494435cv11d.jpeg",
+							"IMAGES/pro-img/6494435_sd.jpeg",
+							"IMAGES/pro-img/6494435_rd.jpeg"
 						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "9127",
-					"itemInfo": {
-						"name": "iPhone 13 Mini",
-						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Gold",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "1032",
-					"itemInfo": {
-						"name": "Samsung S10",
-						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
+						"description1": "Samsung S22 - Pink",
 						"description2": "",
 						"newItemPrice": "950",
 						"oldItemPrice": "$544",
@@ -568,22 +488,22 @@
 					}
 				},
 				{
-					"id": "5284",
+					"id": "42293",
 					"itemInfo": {
-						"name": "iPhone 13 Mini",
+						"name": "Samsung S22",
 						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
+							"IMAGES/pro-img/6494419ld.png",
+							"IMAGES/pro-img/6494419cv12d.jpeg",
+							"IMAGES/pro-img/6494419cv11d.jpeg",
+							"IMAGES/pro-img/6494419_sd.jpeg",
+							"IMAGES/pro-img/6494419_rd.jpeg"
 						],
-						"description1": "iPhone 12 Pro Max - Gold",
+						"description1": "Samsung S22 - Black",
 						"description2": "",
 						"newItemPrice": "520",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "Apple",
+						"brand": "Samsung",
 						"memory": "128",
 						"category": "Cellphones",
 						"color": "🇺🇦",
@@ -595,25 +515,24 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "81982",
 					"itemInfo": {
-						"name": "Infinix HOT 65",
+						"name": "Xiaomi Redmi",
 						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
+							"IMAGES/pro-img/81TOxp5xrJL._AC_SX679_.png",
+							"IMAGES/pro-img/81yt7HHmCFL._AC_SY741_.jpg",
+							"IMAGES/pro-img/81q+h01rwzL._AC_SY741_.jpg",
+							"IMAGES/pro-img/81On+oiF1FL._AC_SY679_.jpg"
 						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
+						"description1": "Xiaomi Redmi",
 						"description2": "",
 						"newItemPrice": "950",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "Infinix",
+						"brand": "Xiaomi",
 						"memory": "128",
 						"category": "Cellphones",
-						"color": "🇺🇦",
+						"color": "Black",
 						"OS": "🫶🏼",
 						"CPU": "🁼",
 						"smop": "😘",
@@ -622,17 +541,15 @@
 					}
 				},
 				{
-					"id": "2193",
+					"id": "81921",
 					"itemInfo": {
-						"name": "LG X9",
+						"name": "LG",
 						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
+							"IMAGES/pro-img/61Wmy7c+spL._AC_SX679_.png",
+							"IMAGES/pro-img/61VURWvX+7L._AC_SX679_.jpg",
+							"IMAGES/pro-img/61XmyRtUsZL._AC_SY741_.jpg"
 						],
-						"description1": "iPhone 12 Pro Max - Gold",
+						"description1": "LG - Gold",
 						"description2": "",
 						"newItemPrice": "520",
 						"oldItemPrice": "$544",
@@ -649,17 +566,53 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "21401",
 					"itemInfo": {
-						"name": "LG AS8",
-						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
+						"name": "Xiaomi Redmi",
+						"itemImg": ["IMAGES/pro-img/61bKP6RU4ZL._AC_SX679_.png"],
+						"description1": "Xiaomi Redmi - Black",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xiaomi",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "48913",
+					"itemInfo": {
+						"name": "Xiaomi Redmi",
+						"itemImg": ["IMAGES/pro-img/51oEezK-4lL._AC_SX679_.png"],
+						"description1": "Xiaomi Redmi - Black",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xiaomi",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "84910",
+					"itemInfo": {
+						"name": "LG",
+						"itemImg": ["IMAGES/pro-img/61GzwFzwhIL._AC_SX679_.png"],
+						"description1": "LG - Space Grey",
 						"description2": "",
 						"newItemPrice": "950",
 						"oldItemPrice": "$544",
@@ -676,17 +629,261 @@
 					}
 				},
 				{
-					"id": "6489",
+					"id": "19384",
 					"itemInfo": {
-						"name": "iPhone 13 Mini",
+						"name": "Samsung S22 Ultra",
 						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
+							"IMAGES/pro-img/51H91olBMML._AC_SY679_.png",
+							"IMAGES/pro-img/51EvYzOiyxL._AC_SX679_.jpg",
+							"IMAGES/pro-img/51EkCa-XUTL._AC_SX679_.jpg"
 						],
-						"description1": "iPhone 12 Pro Max - Gold",
+						"description1": "Samsung S22 Ultra - Black",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Samsung",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "57191",
+					"itemInfo": {
+						"name": "iPhone Xr",
+						"itemImg": [
+							"IMAGES/pro-img/6398617_bd.png",
+							"IMAGES/pro-img/6398617_sd.jpeg",
+							"IMAGES/pro-img/6398617cv2d.jpeg"
+						],
+						"description1": "iPhone Xr - Red",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "Red",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "473810",
+					"itemInfo": {
+						"name": "Samsung S22 Ultra",
+						"itemImg": [
+							"IMAGES/pro-img/6472835_sd.png",
+							"IMAGES/pro-img/6472835cv11d.jpeg",
+							"IMAGES/pro-img/6472835_rd.jpeg",
+							"IMAGES/pro-img/6472835ld.jpeg"
+						],
+						"description1": "Samsung S22 Ultra - Wine",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Samsung",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "847193",
+					"itemInfo": {
+						"name": "Samsung S22",
+						"itemImg": ["IMAGES/pro-img/51K437SfYOL._AC_SX679_.png"],
+						"description1": "Samsung S22 - Blue",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Samsung",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "919932",
+					"itemInfo": {
+						"name": "Samsung A11",
+						"itemImg": [
+							"IMAGES/pro-img/61FHIXy334L._AC_SX679_.png",
+							"IMAGES/pro-img/61E5sTroE+L._AC_SX679_.jpg"
+						],
+						"description1": "Samsung A11 - Black",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Samsung",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "89183",
+					"itemInfo": {
+						"name": "Samsung S15",
+						"itemImg": [
+							"IMAGES/pro-img/61b7ywCsH2L._AC_SX679_.png",
+							"IMAGES/pro-img/61G1cC5bTYL._AC_SX679_.jpg"
+						],
+						"description1": "Samsung S15 - Blue",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Samsung",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "45819",
+					"itemInfo": {
+						"name": "Samsung S15",
+						"itemImg": ["IMAGES/pro-img/51LVTBV6tjL._AC_SX679_.png"],
+						"description1": "Samsung S15 - Black",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Samsung",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "471918",
+					"itemInfo": {
+						"name": "Samsung S22",
+						"itemImg": [
+							"IMAGES/pro-img/6494417_rd.png",
+							"IMAGES/pro-img/6494417_sd.jpeg",
+							"IMAGES/pro-img/6494417cv11d.jpeg",
+							"IMAGES/pro-img/6494417ld.jpeg"
+						],
+						"description1": "Samsung S22 - Green",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Samsung",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "57191",
+					"itemInfo": {
+						"name": "Samsung A10",
+						"itemImg": ["IMAGES/pro-img/51LVTBV6tjL._AC_SX679_.png"],
+						"description1": "Samsung A10 - Black",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Samsung",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "47810",
+					"itemInfo": {
+						"name": "iPhone X",
+						"itemImg": [
+							"IMAGES/pro-img/6394669_sd.png",
+							"IMAGES/pro-img/6394669_bd.jpeg",
+							"IMAGES/pro-img/6394669cv21d.jpeg",
+							"IMAGES/pro-img/6394669cv2d.jpeg"
+						],
+						"description1": "iPhone X - Black",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "Black",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "57108",
+					"itemInfo": {
+						"name": "iPhone 13",
+						"itemImg": [
+							"IMAGES/pro-img/6009728_sd.png",
+							"IMAGES/pro-img/6009728cv11d.jpeg",
+							"IMAGES/pro-img/6009728cv12d.jpeg"
+						],
+						"description1": "iPhone 13 - White",
 						"description2": "",
 						"newItemPrice": "520",
 						"oldItemPrice": "$544",
@@ -703,15 +900,193 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "72910",
+					"itemInfo": {
+						"name": "iPhone 13 Pro",
+						"itemImg": [
+							"IMAGES/pro-img/6009823_sd.png",
+							"IMAGES/pro-img/6009823cv11d.jpeg",
+							"IMAGES/pro-img/6009823cv12d.jpeg"
+						],
+						"description1": "iPhone 13 Pro - Space Grey",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "Space Grey",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "48291",
+					"itemInfo": {
+						"name": "iPhone 13 Pro",
+						"itemImg": [
+							"IMAGES/pro-img/6341308cv12d.png",
+							"IMAGES/pro-img/6341308_sd.jpeg",
+							"IMAGES/pro-img/6341308cv15d.jpeg"
+						],
+						"description1": "iPhone 13 Pro - Gold",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "470183",
+					"itemInfo": {
+						"name": "iPhone 11 Pro Max",
+						"itemImg": [
+							"IMAGES/pro-img/6341561cv12d.png",
+							"IMAGES/pro-img/6341561cv11d.jpeg",
+							"IMAGES/pro-img/6341561_sd.jpeg"
+						],
+						"description1": "iPhone 11 Pro Max - Space Grey",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "79174",
+					"itemInfo": {
+						"name": "iPhone 11",
+						"itemImg": [
+							"IMAGES/pro-img/6510048cv2d.png",
+							"IMAGES/pro-img/6510048cv1d.jpeg",
+							"IMAGES/pro-img/6510048_sd.jpeg",
+							"IMAGES/pro-img/6510048_rd.jpeg"
+						],
+						"description1": "iPhone 11 - Black",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "928812",
+					"itemInfo": {
+						"name": "iPhone Xs Max",
+						"itemImg": [
+							"IMAGES/pro-img/6398612_bd.png",
+							"IMAGES/pro-img/6398612_sd.jpeg",
+							"IMAGES/pro-img/6398612cv2d.jpeg",
+							"IMAGES/pro-img/6398612cv11d.jpeg"
+						],
+						"description1": "iPhone Xs Max - White",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "782919",
+					"itemInfo": {
+						"name": "iPhone Xs Max",
+						"itemImg": [
+							"IMAGES/pro-img/6398614_sd.png",
+							"IMAGES/pro-img/6398614cv2d.jpeg",
+							"IMAGES/pro-img/6398614_bd.jpeg"
+						],
+						"description1": "iPhone Xs Max - Black",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "849193",
+					"itemInfo": {
+						"name": "iPhone Xr",
+						"itemImg": [
+							"IMAGES/pro-img/6398621_bd.png",
+							"IMAGES/pro-img/6398621_sd.jpeg",
+							"IMAGES/pro-img/6398621cv2d.jpeg"
+						],
+						"description1": "iPhone Xr - White",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "68291",
 					"itemInfo": {
 						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
+							"IMAGES/pro-img/6443098_sd.png",
+							"IMAGES/pro-img/6443098cv11d.jpeg",
+							"IMAGES/pro-img/6443098cv12d.jpeg",
+							"IMAGES/pro-img/6443098cv13d.jpeg"
 						],
 						"description1": "iPhone 12 Pro Max - Space Grey",
 						"description2": "",
@@ -730,69 +1105,14 @@
 					}
 				},
 				{
-					"id": "6193",
+					"id": "94901",
 					"itemInfo": {
-						"name": "Infinix J9",
+						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Gold",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Infinix",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "1032",
-					"itemInfo": {
-						"name": "Itel R10",
-						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Itel",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "5629",
-					"itemInfo": {
-						"name": "iPhone 13 Mini",
-						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
+							"IMAGES/pro-img/6443100_sd.png",
+							"IMAGES/pro-img/6443100cv11d.jpeg",
+							"IMAGES/pro-img/6443100cv12d.jpeg",
+							"IMAGES/pro-img/6443100cv13d.jpeg"
 						],
 						"description1": "iPhone 12 Pro Max - Gold",
 						"description2": "",
@@ -811,17 +1131,16 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "948992",
 					"itemInfo": {
 						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
+							"IMAGES/pro-img/6443101_sd.png",
+							"IMAGES/pro-img/6443101cv11d.jpeg",
+							"IMAGES/pro-img/6443101cv12d.jpeg",
+							"IMAGES/pro-img/6443101cv13d.jpeg"
 						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
+						"description1": "iPhone 12 Pro Max - Blue",
 						"description2": "",
 						"newItemPrice": "950",
 						"oldItemPrice": "$544",
@@ -838,17 +1157,16 @@
 					}
 				},
 				{
-					"id": "9180",
+					"id": "974829",
 					"itemInfo": {
-						"name": "iPhone 13 Mini",
+						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
+							"IMAGES/pro-img/6443289_sd.png",
+							"IMAGES/pro-img/6443289cv11d.jpeg",
+							"IMAGES/pro-img/6443289cv12d.jpeg",
+							"IMAGES/pro-img/6443289cv13d.jpeg"
 						],
-						"description1": "iPhone 12 Pro Max - Gold",
+						"description1": "iPhone 12 Pro Max - Deep Blue",
 						"description2": "",
 						"newItemPrice": "520",
 						"oldItemPrice": "$544",
@@ -865,17 +1183,15 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "47291",
 					"itemInfo": {
 						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
+							"IMAGES/pro-img/6487231_sd.png",
+							"IMAGES/pro-img/6487231ld.jpeg",
+							"IMAGES/pro-img/6487231_bd.jpeg"
 						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
+						"description1": "iPhone 12 Pro Max - Red",
 						"description2": "",
 						"newItemPrice": "950",
 						"oldItemPrice": "$544",
@@ -892,17 +1208,17 @@
 					}
 				},
 				{
-					"id": "7481",
+					"id": "94918",
 					"itemInfo": {
-						"name": "iPhone 13 Mini",
+						"name": "iPhone 14",
 						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
+							"IMAGES/pro-img/6487243_sd.png",
+							"IMAGES/pro-img/6487243cv2d.jpeg",
+							"IMAGES/pro-img/6487243ld.jpeg",
+							"IMAGES/pro-img/iphone3.webp",
+							"IMAGES/pro-img/iphone3.webp"
 						],
-						"description1": "iPhone 12 Pro Max - Gold",
+						"description1": "iPhone 14 Plus - Grey",
 						"description2": "",
 						"newItemPrice": "520",
 						"oldItemPrice": "$544",
@@ -919,125 +1235,16 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "48719",
 					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
+						"name": "iPhone 13",
 						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
+							"IMAGES/pro-img/6487295_sd.png",
+							"IMAGES/pro-img/6487295cv1d.jpeg",
+							"IMAGES/pro-img/6487295cv2d.jpeg",
+							"IMAGES/pro-img/6487295cv11d.jpeg"
 						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "7389",
-					"itemInfo": {
-						"name": "iPhone 13 Mini",
-						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Gold",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "1032",
-					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
-						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "1830",
-					"itemInfo": {
-						"name": "iPhone 13 Mini",
-						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Gold",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "1032",
-					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
-						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
+						"description1": "iPhone 13 - Green",
 						"description2": "",
 						"newItemPrice": "950",
 						"oldItemPrice": "$544",
@@ -1054,17 +1261,15 @@
 					}
 				},
 				{
-					"id": "4729",
+					"id": "99918",
 					"itemInfo": {
 						"name": "iPhone 13 Mini",
 						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
+							"IMAGES/pro-img/6504816_sd.png",
+							"IMAGES/pro-img/6504816ld.jpeg",
+							"IMAGES/pro-img/6504816_bd.jpeg"
 						],
-						"description1": "iPhone 12 Pro Max - Gold",
+						"description1": "iPhone 13 Mini - White Gold",
 						"description2": "",
 						"newItemPrice": "520",
 						"oldItemPrice": "$544",
@@ -1081,19 +1286,17 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "88291",
 					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
+						"name": "iPhone 13 Mini",
 						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
+							"IMAGES/pro-img/6505478_sd.png",
+							"IMAGES/pro-img/6505478ld.jpeg",
+							"IMAGES/pro-img/6505478_bd.jpeg"
 						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
+						"description1": "iPhone 13 Mini - White Blue",
 						"description2": "",
-						"newItemPrice": "950",
+						"newItemPrice": "520",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
 						"brand": "Apple",
@@ -1108,23 +1311,21 @@
 					}
 				},
 				{
-					"id": "1992",
+					"id": "22291",
 					"itemInfo": {
 						"name": "iPhone 13 Mini",
 						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
+							"IMAGES/pro-img/6505505_sd.png",
+							"IMAGES/pro-img/6505505ld.jpeg",
+							"IMAGES/pro-img/6505505_bd.jpeg"
 						],
-						"description1": "iPhone 12 Pro Max - Gold",
+						"description1": "iPhone 13 Mini - White Blue",
 						"description2": "",
 						"newItemPrice": "520",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
 						"brand": "Apple",
-						"memory": "64",
+						"memory": "256",
 						"category": "Cellphones",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -1135,15 +1336,14 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "491932",
 					"itemInfo": {
 						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
+							"IMAGES/pro-img/6516546_sd.png",
+							"IMAGES/pro-img/6516546_rd.jpeg",
+							"IMAGES/pro-img/6516546cv1d.jpeg",
+							"IMAGES/pro-img/6516546ld.jpeg"
 						],
 						"description1": "iPhone 12 Pro Max - Space Grey",
 						"description2": "",
@@ -1162,22 +1362,19 @@
 					}
 				},
 				{
-					"id": "3131",
+					"id": "488103",
 					"itemInfo": {
-						"name": "iPhone 13 Mini",
+						"name": "Samsung S22 Ultra",
 						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
+							"IMAGES/pro-img/71GoXXLv9AL._AC_SX679_.png",
+							"IMAGES/pro-img/71GoXXLv9AL._AC_SY300_SX300_.jpg"
 						],
-						"description1": "iPhone 12 Pro Max - Gold",
+						"description1": "Samsung S22 Ultra - Pink",
 						"description2": "",
 						"newItemPrice": "520",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "Apple",
+						"brand": "Samsung",
 						"memory": "64",
 						"category": "Cellphones",
 						"color": "🇺🇦",
@@ -1189,22 +1386,16 @@
 					}
 				},
 				{
-					"id": "1032",
+					"id": "8772921",
 					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
-						"itemImg": [
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp",
-							"IMAGES/iphone2.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
+						"name": "Samsung S22",
+						"itemImg": ["IMAGES/pro-img/71++2+4pHrL._AC_SY450_.png"],
+						"description1": "Samsung S22 - Space Grey",
 						"description2": "",
 						"newItemPrice": "950",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "Apple",
+						"brand": "Samsung",
 						"memory": "32",
 						"category": "Cellphones",
 						"color": "🇺🇦",
@@ -1216,22 +1407,37 @@
 					}
 				},
 				{
-					"id": "4211",
+					"id": "94829",
 					"itemInfo": {
-						"name": "iPhone 13 Mini",
-						"itemImg": [
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp",
-							"IMAGES/iphone3.webp"
-						],
-						"description1": "iPhone 12 Pro Max - Gold",
+						"name": "Samsung S22",
+						"itemImg": ["IMAGES/pro-img/71Wkk4n9olL._AC_SX450_.png"],
+						"description1": "Samsung S22 - Space Grey",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Samsung",
+						"memory": "32",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "948291",
+					"itemInfo": {
+						"name": "LG",
+						"itemImg": ["IMAGES/pro-img/71fg+BrjQlL._AC_SX679_.png"],
+						"description1": "LG - Gold",
 						"description2": "",
 						"newItemPrice": "520",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "Apple",
+						"brand": "LG",
 						"memory": "32",
 						"category": "Cellphones",
 						"color": "🇺🇦",
@@ -1245,17 +1451,16 @@
 			],
 			"speakers": [
 				{
-					"id": "9183",
+					"id": "19928",
 					"itemInfo": {
-						"name": "JBL Flip 3",
+						"name": "JBL Charge 4",
 						"itemImg": [
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png"
+							"IMAGES/pro-img/6213284_rd.png",
+							"IMAGES/pro-img/6213284_sd.jpeg",
+							"IMAGES/pro-img/6213284cv11d.jpeg",
+							"IMAGES/pro-img/6213284cv13d.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "JBL Charge 4 - Black",
 						"description2": "",
 						"newItemPrice": "2300",
 						"oldItemPrice": "$544",
@@ -1271,24 +1476,24 @@
 					}
 				},
 				{
-					"id": "8840",
+					"id": "929193",
 					"itemInfo": {
-						"name": "JBL Flip 3",
+						"name": "JBL Flip 5",
 						"itemImg": [
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png"
+							"IMAGES/pro-img/6356534cv11d.png",
+							"IMAGES/pro-img/6356534cv12d.jpeg",
+							"IMAGES/pro-img/6356534cv13d.jpeg",
+							"IMAGES/pro-img/6356534_sd.jpeg",
+							"IMAGES/pro-img/6356534ld.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "JBL Flip 5 - Red",
 						"description2": "",
 						"newItemPrice": "2100",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
 						"brand": "jbl",
 						"category": "Speakers",
-						"color": "🇺🇦",
+						"color": "Red",
 						"OS": "🫶🏼",
 						"CPU": "🁼",
 						"smop": "😘",
@@ -1297,19 +1502,71 @@
 					}
 				},
 				{
-					"id": "9324",
+					"id": "989183",
 					"itemInfo": {
-						"name": "JBL Flip 3",
+						"name": "JBL Flip 5",
 						"itemImg": [
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png"
+							"IMAGES/pro-img/6356535_sd.png",
+							"IMAGES/pro-img/6356535cv11d.jpeg",
+							"IMAGES/pro-img/6356535cv12d.jpeg",
+							"IMAGES/pro-img/6356535cv13d.jpeg",
+							"IMAGES/pro-img/6356535ld.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "JBL Flip 5 - Black",
 						"description2": "",
-						"newItemPrice": "2220",
+						"newItemPrice": "2100",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "Red",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "891838",
+					"itemInfo": {
+						"name": "JBL Boombox",
+						"itemImg": [
+							"IMAGES/pro-img/6381755_rd.png",
+							"IMAGES/pro-img/6381755cv1d.jpeg",
+							"IMAGES/pro-img/6381755cv11d.jpeg",
+							"IMAGES/pro-img/6381755cv12d.jpeg",
+							"IMAGES/pro-img/6381755cv13d.jpeg"
+						],
+						"description1": "JBL Boombox - Black",
+						"description2": "",
+						"newItemPrice": "2100",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "Red",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "949193",
+					"itemInfo": {
+						"name": "JBL Charge 5",
+						"itemImg": [
+							"IMAGES/pro-img/6400615_rd.png",
+							"IMAGES/pro-img/6400615_sd.jpeg",
+							"IMAGES/pro-img/6400615cv11d.jpeg",
+							"IMAGES/pro-img/6400615cv12d.jpeg",
+							"IMAGES/pro-img/6400615cv13d.jpeg"
+						],
+						"description1": "JBL Charge 5 - Black",
+						"description2": "",
+						"newItemPrice": "480",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
 						"brand": "jbl",
@@ -1323,48 +1580,22 @@
 					}
 				},
 				{
-					"id": "9943",
+					"id": "928182",
 					"itemInfo": {
-						"name": "Oraimo",
+						"name": "JBL Charge 5",
 						"itemImg": [
-							"IMAGES/headphone.png",
-							"IMAGES/headphone.png",
-							"IMAGES/headphone.png",
-							"IMAGES/headphone.png",
-							"IMAGES/headphone.png"
+							"IMAGES/pro-img/6445548_rd.png",
+							"IMAGES/pro-img/6445548_sd.jpeg",
+							"IMAGES/pro-img/6445548cv1d.jpeg",
+							"IMAGES/pro-img/6445548cv12d.jpeg",
+							"IMAGES/pro-img/6445548ld.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
-						"description2": "",
-						"newItemPrice": "1150",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "oraimo",
-						"category": "Speakers",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "1453",
-					"itemInfo": {
-						"name": "Oraimo",
-						"itemImg": [
-							"IMAGES/speaker.png",
-							"IMAGES/speaker.png",
-							"IMAGES/speaker.png",
-							"IMAGES/speaker.png",
-							"IMAGES/speaker.png"
-						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "JBL Charge 5 - Black",
 						"description2": "",
 						"newItemPrice": "480",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "oraimo",
+						"brand": "jbl",
 						"category": "Speakers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -1375,22 +1606,21 @@
 					}
 				},
 				{
-					"id": "1837",
+					"id": "919193",
 					"itemInfo": {
-						"name": "Oraimo",
+						"name": "JBL Charge 5",
 						"itemImg": [
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png",
-							"IMAGES/jbl.png"
+							"IMAGES/pro-img/6454257_rd.png",
+							"IMAGES/pro-img/6454257_sd.jpeg",
+							"IMAGES/pro-img/6454257cv1d.jpeg",
+							"IMAGES/pro-img/6454257ld.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "JBL Charge 5 - Blue",
 						"description2": "",
-						"newItemPrice": "920",
+						"newItemPrice": "480",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "oraimo",
+						"brand": "jbl",
 						"category": "Speakers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -1401,22 +1631,200 @@
 					}
 				},
 				{
-					"id": "1003",
+					"id": "928328",
 					"itemInfo": {
-						"name": "Beatz",
+						"name": "JBL Charge 5",
 						"itemImg": [
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png"
+							"IMAGES/pro-img/6454258_rd.png",
+							"IMAGES/pro-img/6454258_sd.jpeg",
+							"IMAGES/pro-img/6454258cv1d.jpeg",
+							"IMAGES/pro-img/6454258ld.jpeg",
+							"IMAGES/pro-img/6454258cv12d.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "JBL Charge 5 - Red",
+						"description2": "",
+						"newItemPrice": "480",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "194819",
+					"itemInfo": {
+						"name": "Sony Round Box",
+						"itemImg": [
+							"IMAGES/pro-img/6456731_rd.png",
+							"IMAGES/pro-img/6456731_sd.jpeg",
+							"IMAGES/pro-img/6456731cv1d.jpeg",
+							"IMAGES/pro-img/6456731ld.jpeg"
+						],
+						"description1": "Sony Round Box - Black",
+						"description2": "",
+						"newItemPrice": "480",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "sony",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "192933",
+					"itemInfo": {
+						"name": "Sony Round Box",
+						"itemImg": [
+							"IMAGES/pro-img/6456735_rd.png",
+							"IMAGES/pro-img/6456735_sd.jpeg",
+							"IMAGES/pro-img/6456735cv1d.jpeg",
+							"IMAGES/pro-img/6456735ld.jpeg"
+						],
+						"description1": "Sony Round Box - Blue",
+						"description2": "",
+						"newItemPrice": "480",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "sony",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "998282",
+					"itemInfo": {
+						"name": "Sony Boom Box",
+						"itemImg": [
+							"IMAGES/pro-img/6457637_rd.png",
+							"IMAGES/pro-img/6457637_sd.jpeg",
+							"IMAGES/pro-img/6457637cv11d.jpeg",
+							"IMAGES/pro-img/6457637cv12d.jpeg",
+							"IMAGES/pro-img/6457637ld.jpeg"
+						],
+						"description1": "Sony Boom Box - Black",
+						"description2": "",
+						"newItemPrice": "480",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "sony",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "982929",
+					"itemInfo": {
+						"name": "JBL Flip 5",
+						"itemImg": [
+							"IMAGES/pro-img/6488913_rd.png",
+							"IMAGES/pro-img/6488913_sd.jpeg",
+							"IMAGES/pro-img/6488913cv1d.jpeg",
+							"IMAGES/pro-img/6488913cv11d.jpeg",
+							"IMAGES/pro-img/6488913ld.jpeg"
+						],
+						"description1": "JBL Charge 5 - Blue",
+						"description2": "",
+						"newItemPrice": "480",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "4921919",
+					"itemInfo": {
+						"name": "JBL Flip 5",
+						"itemImg": [
+							"IMAGES/pro-img/6488914_rd.png",
+							"IMAGES/pro-img/6488914_sd.jpeg",
+							"IMAGES/pro-img/6488914ld.jpeg",
+							"IMAGES/pro-img/6488914cv13d.jpeg"
+						],
+						"description1": "JBL Charge 5 - Grey",
+						"description2": "",
+						"newItemPrice": "480",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "9993181",
+					"itemInfo": {
+						"name": "JBL BOOMBOX",
+						"itemImg": [
+							"IMAGES/pro-img/6407390_rd.png",
+							"IMAGES/pro-img/6407390_sd.jpeg",
+							"IMAGES/pro-img/6407390cv11d.jpeg",
+							"IMAGES/pro-img/6407390cv12d.jpeg",
+							"IMAGES/pro-img/6407390ld.jpeg"
+						],
+						"description1": "JBL BOOMBOX - Black",
+						"description2": "",
+						"newItemPrice": "480",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "18829",
+					"itemInfo": {
+						"name": "JBL Bass",
+						"itemImg": [
+							"IMAGES/pro-img/6412152_rd.png",
+							"IMAGES/pro-img/6412152_sd.jpeg",
+							"IMAGES/pro-img/6412152cv14d.jpeg",
+							"IMAGES/pro-img/6412152cv15d.jpeg"
+						],
+						"description1": "JBL Bass - Black",
 						"description2": "",
 						"newItemPrice": "630",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "beatz",
+						"brand": "jbl",
 						"category": "Speakers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -1427,22 +1835,22 @@
 					}
 				},
 				{
-					"id": "1534",
+					"id": "84819",
 					"itemInfo": {
-						"name": "Beatz",
+						"name": "Sony Sound Barz",
 						"itemImg": [
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png"
+							"IMAGES/pro-img/6412174_sd.png",
+							"IMAGES/pro-img/6412174_rd.jpeg",
+							"IMAGES/pro-img/6412174cv11d.jpeg",
+							"IMAGES/pro-img/6412174cv12d.jpeg",
+							"IMAGES/pro-img/6412174cv13d.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "Sony Sound Barz - Black",
 						"description2": "",
 						"newItemPrice": "550",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "beatz",
+						"brand": "sony",
 						"category": "Speakers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -1453,22 +1861,21 @@
 					}
 				},
 				{
-					"id": "1493",
+					"id": "93819",
 					"itemInfo": {
-						"name": "Beatz",
+						"name": "Sony Sound Barz",
 						"itemImg": [
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png",
-							"IMAGES/jblflip6.png"
+							"IMAGES/pro-img/6412176_sd.png",
+							"IMAGES/pro-img/6412176cv11d.jpeg",
+							"IMAGES/pro-img/6412176ld.jpeg",
+							"IMAGES/pro-img/6412176_rd.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "Sony Sound Barz - Green",
 						"description2": "",
-						"newItemPrice": "800",
+						"newItemPrice": "550",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "beatz",
+						"brand": "sony",
 						"category": "Speakers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -1479,22 +1886,21 @@
 					}
 				},
 				{
-					"id": "1743",
+					"id": "42193",
 					"itemInfo": {
-						"name": "Beatz",
+						"name": "Sony Sound Barz",
 						"itemImg": [
-							"IMAGES/headphone.png",
-							"IMAGES/headphone.png",
-							"IMAGES/headphone.png",
-							"IMAGES/headphone.png",
-							"IMAGES/headphone.png"
+							"IMAGES/pro-img/6412177_sd.png",
+							"IMAGES/pro-img/6412177_rd.jpeg",
+							"IMAGES/pro-img/6412177cv11d.jpeg",
+							"IMAGES/pro-img/6412177ld.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "Sony Sound Barz - Blue",
 						"description2": "",
-						"newItemPrice": "600",
+						"newItemPrice": "550",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "beatz",
+						"brand": "sony",
 						"category": "Speakers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -1505,23 +1911,23 @@
 					}
 				},
 				{
-					"id": "2992",
+					"id": "59294",
 					"itemInfo": {
-						"name": "Xbox",
+						"name": "JBL BOOMBOX",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/6426699cv1d.png",
+							"IMAGES/pro-img/6426699cv11d.jpeg",
+							"IMAGES/pro-img/6426699cv13d.jpegg",
+							"IMAGES/pro-img/6426699cv24d.jpeg",
+							"IMAGES/pro-img/6426699ld.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "JBL BOOMBOX - Black",
 						"description2": "",
 						"newItemPrice": "1112",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "Xbox",
-						"category": "Gaming",
+						"brand": "jbl",
+						"category": "Speakers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
 						"CPU": "🁼",
@@ -1531,23 +1937,23 @@
 					}
 				},
 				{
-					"id": "4149",
+					"id": "93148",
 					"itemInfo": {
-						"name": "Xbox",
+						"name": "JBL Boombox",
 						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
+							"IMAGES/pro-img/6426700_sd.png",
+							"IMAGES/pro-img/6426700cv1d.jpeg",
+							"IMAGES/pro-img/6426700cv11d.jpeg",
+							"IMAGES/pro-img/6426700cv12d.jpeg",
+							"IMAGES/pro-img/6426700cv13d.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "JBL Boombox - Black",
 						"description2": "",
 						"newItemPrice": "1112",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "Xbox",
-						"category": "Gaming",
+						"brand": "jbl",
+						"category": "Speakers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
 						"CPU": "🁼",
@@ -1557,23 +1963,452 @@
 					}
 				},
 				{
-					"id": "1901",
+					"id": "761876",
 					"itemInfo": {
-						"name": "Xbox",
-						"itemImg": [
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png",
-							"IMAGES/ipad2.png"
-						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"name": "JBL Headphone",
+						"itemImg": ["IMAGES/pro-img/headphone.png"],
+						"description1": "JBL Headphone - Cream",
 						"description2": "",
 						"newItemPrice": "1112",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
 						"brand": "Xbox",
-						"category": "Gaming",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "739848",
+					"itemInfo": {
+						"name": "Jbl Small Box",
+						"itemImg": [
+							"IMAGES/pro-img/6427076_rd.png",
+							"IMAGES/pro-img/6427076_sd.jpeg",
+							"IMAGES/pro-img/6427076cv12d.jpeg",
+							"IMAGES/pro-img/6427076cv13d.jpeg",
+							"IMAGES/pro-img/6427076ld.jpeg"
+						],
+						"description1": "JBL Small Box - Black",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "76289",
+					"itemInfo": {
+						"name": "Jbl Small Box",
+						"itemImg": [
+							"IMAGES/pro-img/6427078_rd.png",
+							"IMAGES/pro-img/6427078_sd.jpeg",
+							"IMAGES/pro-img/6427078cv11d.jpeg",
+							"IMAGES/pro-img/6427078cv12d.jpeg",
+							"IMAGES/pro-img/6427078ld.jpeg"
+						],
+						"description1": "JBL Small Box - Blue",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "862838",
+					"itemInfo": {
+						"name": "Jbl Clip",
+						"itemImg": [
+							"IMAGES/pro-img/6445544_rd.png",
+							"IMAGES/pro-img/6445544_sd.jpeg",
+							"IMAGES/pro-img/6445544cv11d.jpeg",
+							"IMAGES/pro-img/6445544cv12d.jpeg",
+							"IMAGES/pro-img/6445544ld.jpeg"
+						],
+						"description1": "JBL Clip - Blue",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "517352",
+					"itemInfo": {
+						"name": "JBL Headphone",
+						"itemImg": ["IMAGES/pro-img/headphone.png"],
+						"description1": "JBL Headphone - Cream",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "651772",
+					"itemInfo": {
+						"name": "Jbl Clip",
+						"itemImg": [
+							"IMAGES/pro-img/6445546_rd.png",
+							"IMAGES/pro-img/6445546_sd.jpeg",
+							"IMAGES/pro-img/6445546cv1d.jpeg",
+							"IMAGES/pro-img/6445546ld.jpeg"
+						],
+						"description1": "JBL Clip - Black",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "918719",
+					"itemInfo": {
+						"name": "Jbl Clip",
+						"itemImg": [
+							"IMAGES/pro-img/6445547_rd.png",
+							"IMAGES/pro-img/6445547_sd.jpeg",
+							"IMAGES/pro-img/6445547cv11d.jpeg",
+							"IMAGES/pro-img/6445547cv12d.jpeg",
+							"IMAGES/pro-img/6445547ld.jpeg"
+						],
+						"description1": "JBL Clip - Grey",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "157822",
+					"itemInfo": {
+						"name": "Sony Boon Box",
+						"itemImg": [
+							"IMAGES/pro-img/6427871_rd.png",
+							"IMAGES/pro-img/6427871_sd.jpeg",
+							"IMAGES/pro-img/6427871cv11d.jpeg"
+						],
+						"description1": "Sony Boon Box - Black",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "sony",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "756178",
+					"itemInfo": {
+						"name": "JBL Headphone",
+						"itemImg": [
+							"IMAGES/pro-img/6427089ld.png",
+							"IMAGES/pro-img/6427089_sd.jpeg",
+							"IMAGES/pro-img/6427089_rd.jpegg",
+							"IMAGES/pro-img/6427089cv11d.jpeg"
+						],
+						"description1": "JBL Headphone - Black",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "618368",
+					"itemInfo": {
+						"name": "JBL Headphone",
+						"itemImg": [
+							"IMAGES/pro-img/6517767_sd.png",
+							"IMAGES/pro-img/6517767_rd.jpeg",
+							"IMAGES/pro-img/6517767ld.jpeg"
+						],
+						"description1": "JBL Headphone - Black",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "761828",
+					"itemInfo": {
+						"name": "JBL Headphone",
+						"itemImg": [
+							"IMAGES/pro-img/6514486ld.png",
+							"IMAGES/pro-img/6514486_rd.jpeg",
+							"IMAGES/pro-img/6514486_sd.jpeg",
+							"IMAGES/pro-img/6463749cv13d.jpeg"
+						],
+						"description1": "JBL Headphone - Black",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "188291",
+					"itemInfo": {
+						"name": "JBL Headphone",
+						"itemImg": [
+							"IMAGES/pro-img/6385493_sd.png",
+							"IMAGES/pro-img/6385493cv11d.jpeg",
+							"IMAGES/pro-img/6385493cv12d.jpeg",
+							"IMAGES/pro-img/6463749cv13d.jpeg"
+						],
+						"description1": "JBL Headphone - Red",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "65641678",
+					"itemInfo": {
+						"name": "JBL Headphone",
+						"itemImg": [
+							"IMAGES/pro-img/6501224cv12d.png",
+							"IMAGES/pro-img/6501224ld.jpeg",
+							"IMAGES/pro-img/6501224_rd.jpeg",
+							"IMAGES/pro-img/6501224_sd.jpeg"
+						],
+						"description1": "JBL Headphone - Black",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "8717282",
+					"itemInfo": {
+						"name": "JBL Headphone",
+						"itemImg": [
+							"IMAGES/pro-img/6505728cv11d.png",
+							"IMAGES/pro-img/6505728ld.jpeg",
+							"IMAGES/pro-img/6505728_sd.jpeg",
+							"IMAGES/pro-img/6505728_rd.jpeg"
+						],
+						"description1": "JBL Headphone - Cream",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "772828",
+					"itemInfo": {
+						"name": "JBL Headphone",
+						"itemImg": ["IMAGES/pro-img/headphone.png"],
+						"description1": "JBL Headphone - Cream",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "917382",
+					"itemInfo": {
+						"name": "Sony Headphone",
+						"itemImg": [
+							"IMAGES/pro-img/6480256ld.png",
+							"IMAGES/pro-img/6480256_sd.jpeg",
+							"IMAGES/pro-img/6480256_rd.jpeg",
+							"IMAGES/pro-img/6480256_bd.jpeg"
+						],
+						"description1": "Sony - Ash",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "sony",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "177281",
+					"itemInfo": {
+						"name": "Sony Headphone",
+						"itemImg": [
+							"IMAGES/pro-img/6471737_sd.png",
+							"IMAGES/pro-img/6471737_rd.jpeg"
+						],
+						"description1": "Sony - Ash",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "sony",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "188891",
+					"itemInfo": {
+						"name": "JBL Headphone",
+						"itemImg": ["IMAGES/pro-img/headphone.png"],
+						"description1": "JBL Headphone - Cream",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Speakers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "463891",
+					"itemInfo": {
+						"name": "JBL Airpod",
+						"itemImg": [
+							"IMAGES/pro-img/6495841cv12d.png",
+							"IMAGES/pro-img/6495841ld.jpeg",
+							"IMAGES/pro-img/6495841cv11d.jpeg",
+							"IMAGES/pro-img/6495841_rd.jpeg"
+						],
+						"description1": "JBL Airpod - Black",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "jbl",
+						"category": "Speakers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
 						"CPU": "🁼",
@@ -1585,17 +2420,17 @@
 			],
 			"computers": [
 				{
-					"id": "1264",
+					"id": "668282",
 					"itemInfo": {
-						"name": "Apple MacBook Pro 2021",
+						"name": "Apple MacBook Pro 2022",
 						"itemImg": [
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png"
+							"IMAGES/pro-img/6450858_sd.png",
+							"IMAGES/pro-img/6450858cv1d.jpeg",
+							"IMAGES/pro-img/6450858cv3d.jpeg",
+							"IMAGES/pro-img/6450858cv4d.jpeg",
+							"IMAGES/pro-img/6450858cv7d.jpeg"
 						],
-						"description1": "Apple MacBook Pro 13 inches",
+						"description1": "Apple MacBook Pro 2022 - Grey",
 						"description2": "",
 						"newItemPrice": "1200",
 						"oldItemPrice": "$544",
@@ -1614,17 +2449,16 @@
 					}
 				},
 				{
-					"id": "2943",
+					"id": "872819",
 					"itemInfo": {
 						"name": "Apple MacBook Air 2020",
 						"itemImg": [
-							"IMAGES/tv5.png",
-							"IMAGES/tv5.png",
-							"IMAGES/tv5.png",
-							"IMAGES/tv5.png",
-							"IMAGES/tv5.png"
+							"IMAGES/pro-img/6489618cv11d.png",
+							"IMAGES/pro-img/6489618cv12d.jpeg",
+							"IMAGES/pro-img/6489618cv14d.jpeg",
+							"IMAGES/pro-img/6489618cv15d.jpeg"
 						],
-						"description1": "Apple MacBook Air 2020 16 inches Apple MacBook Air 2020 16 inches - Gold",
+						"description1": "Apple MacBook Air 2020",
 						"description2": "",
 						"newItemPrice": "1100",
 						"oldItemPrice": "$544",
@@ -1643,25 +2477,25 @@
 					}
 				},
 				{
-					"id": "8462",
+					"id": "1112778",
 					"itemInfo": {
-						"name": "HP Pavailon",
+						"name": "Apple MacBook Air 2020",
 						"itemImg": [
-							"IMAGES/tv4.png",
-							"IMAGES/tv4.png",
-							"IMAGES/tv4.png",
-							"IMAGES/tv4.png",
-							"IMAGES/tv4.png"
+							"IMAGES/pro-img/6489836_sd.png",
+							"IMAGES/pro-img/6489836cv11d.jpeg",
+							"IMAGES/pro-img/6489836cv12d.jpeg",
+							"IMAGES/pro-img/6489836cv13d.jpeg",
+							"IMAGES/pro-img/6489836cv14d.jpeg"
 						],
-						"description1": "HP Pavailon X16",
+						"description1": "Apple MacBook Air 2020",
 						"description2": "",
-						"newItemPrice": "1250",
+						"newItemPrice": "1100",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"ram": 8,
-						"rom": 512,
-						"screen": 13,
-						"brand": "HP",
+						"ram": 4,
+						"rom": 256,
+						"screen": 16,
+						"brand": "Mac",
 						"category": "Computers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -1672,15 +2506,254 @@
 					}
 				},
 				{
-					"id": "9384",
+					"id": "187818",
+					"itemInfo": {
+						"name": "Apple MacBook Air 2020",
+						"itemImg": [
+							"IMAGES/pro-img/6489842_sd.png",
+							"IMAGES/pro-img/6489842cv11d.jpeg",
+							"IMAGES/pro-img/6489842cv12d.jpeg"
+						],
+						"description1": "Apple MacBook Air 2020",
+						"description2": "",
+						"newItemPrice": "1100",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 4,
+						"rom": 256,
+						"screen": 16,
+						"brand": "Mac",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "198811",
+					"itemInfo": {
+						"name": "Apple MacBook Air 2020",
+						"itemImg": [
+							"IMAGES/pro-img/5721600_sd.png",
+							"IMAGES/pro-img/5721600cv11d.jpeg",
+							"IMAGES/pro-img/6489842cv12d.jpeg",
+							"IMAGES/pro-img/5721600cv13d.jpeg",
+							"IMAGES/pro-img/5721600cv14d.jpeg"
+						],
+						"description1": "Apple MacBook Air 2020",
+						"description2": "",
+						"newItemPrice": "1100",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 4,
+						"rom": 256,
+						"screen": 16,
+						"brand": "Mac",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "8882738",
+					"itemInfo": {
+						"name": "Apple MacBook Air 2020",
+						"itemImg": [
+							"IMAGES/pro-img/6455369_sd.png",
+							"IMAGES/pro-img/6455369_rd.jpeg",
+							"IMAGES/pro-img/6450858cv7d.jpeg",
+							"IMAGES/pro-img/6450858cv4d.jpeg"
+						],
+						"description1": "Apple MacBook Air 2020",
+						"description2": "",
+						"newItemPrice": "1100",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 4,
+						"rom": 256,
+						"screen": 16,
+						"brand": "Mac",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "7716272",
+					"itemInfo": {
+						"name": "Apple MacBook Air 2020",
+						"itemImg": ["IMAGES/pro-img/6413734_rd.png"],
+						"description1": "Apple MacBook Air 2020",
+						"description2": "",
+						"newItemPrice": "1100",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 4,
+						"rom": 256,
+						"screen": 16,
+						"brand": "Mac",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "991838",
+					"itemInfo": {
+						"name": "Apple MacBook Air 2020",
+						"itemImg": ["IMAGES/pro-img/6413734_sd.png"],
+						"description1": "Apple MacBook Air 2020",
+						"description2": "",
+						"newItemPrice": "1100",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 4,
+						"rom": 256,
+						"screen": 16,
+						"brand": "Mac",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "6262719",
+					"itemInfo": {
+						"name": "Apple MacBook Pro",
+						"itemImg": [
+							"IMAGES/pro-img/6509650_sd.png",
+							"IMAGES/pro-img/6509650cv11d.jpeg",
+							"IMAGES/pro-img/6509650cv12d.jpeg"
+						],
+						"description1": "Apple MacBook Pro 2020",
+						"description2": "",
+						"newItemPrice": "1100",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 4,
+						"rom": 256,
+						"screen": 16,
+						"brand": "Mac",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "7711882",
+					"itemInfo": {
+						"name": "Apple MacBook Pro",
+						"itemImg": [
+							"IMAGES/pro-img/6489721cv12d.png",
+							"IMAGES/pro-img/6489721_sd.jpeg",
+							"IMAGES/pro-img/6515448cv11d.jpeg"
+						],
+						"description1": "Apple MacBook Pro 2020",
+						"description2": "",
+						"newItemPrice": "1100",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 4,
+						"rom": 256,
+						"screen": 16,
+						"brand": "Mac",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "726278",
+					"itemInfo": {
+						"name": "Apple MacBook Pro",
+						"itemImg": [
+							"IMAGES/pro-img/6515448_sd.png",
+							"IMAGES/pro-img/6515448cv12d.jpeg"
+						],
+						"description1": "Apple MacBook Pro 2020",
+						"description2": "",
+						"newItemPrice": "1100",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 4,
+						"rom": 256,
+						"screen": 16,
+						"brand": "Mac",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "881738",
 					"itemInfo": {
 						"name": "ASUS",
 						"itemImg": [
-							"IMAGES/tv4.png",
-							"IMAGES/tv4.png",
-							"IMAGES/tv4.png",
-							"IMAGES/tv4.png",
-							"IMAGES/tv4.png"
+							"IMAGES/pro-img/6492794_rd.png",
+							"IMAGES/pro-img/6492794_sd.jpeg",
+							"IMAGES/pro-img/6492794cv1d.jpeg",
+							"IMAGES/pro-img/6492794cv3d.jpeg",
+							"IMAGES/pro-img/6492794cv10d.jpeg"
+						],
+						"description1": "ASUS - White",
+						"description2": "",
+						"newItemPrice": "1250",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 8,
+						"rom": 512,
+						"screen": 13,
+						"brand": "asus",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "772881",
+					"itemInfo": {
+						"name": "ASUS",
+						"itemImg": [
+							"IMAGES/pro-img/6501561_sd.png",
+							"IMAGES/pro-img/6501561_rd.jpeg",
+							"IMAGES/pro-img/6501561ld.jpeg",
+							"IMAGES/pro-img/6501561cv1d.jpeg",
+							"IMAGES/pro-img/6501561cv3d.jpeg"
 						],
 						"description1": "ASUS",
 						"description2": "",
@@ -1701,25 +2774,25 @@
 					}
 				},
 				{
-					"id": "8494",
+					"id": "82726182",
 					"itemInfo": {
-						"name": "Toshiba",
+						"name": "ASUS",
 						"itemImg": [
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg"
+							"IMAGES/pro-img/6494331_rd.png",
+							"IMAGES/pro-img/6494331_sd.jpeg",
+							"IMAGES/pro-img/6494331cv1d.jpeg",
+							"IMAGES/pro-img/6494331cv3d.jpeg",
+							"IMAGES/pro-img/6494331ld.jpeg"
 						],
-						"description1": "Toshiba 2020",
+						"description1": "ASUS",
 						"description2": "",
-						"newItemPrice": "1000",
+						"newItemPrice": "1500",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"ram": 8,
-						"rom": 512,
+						"ram": 16,
+						"rom": 1000,
 						"screen": 16,
-						"brand": "Toshiba",
+						"brand": "ASUS",
 						"category": "Computers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -1730,15 +2803,461 @@
 					}
 				},
 				{
-					"id": "4724",
+					"id": "8172811",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6494580_sd.png",
+							"IMAGES/pro-img/6494580cv11d.jpeg",
+							"IMAGES/pro-img/6494331cv1d.jpeg",
+							"IMAGES/pro-img/6494331cv3d.jpeg",
+							"IMAGES/pro-img/6494331ld.jpeg"
+						],
+						"description1": "ASUS Zebook - Silver",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "777272",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6535501_sd.png",
+							"IMAGES/pro-img/6535501_rd.jpeg",
+							"IMAGES/pro-img/6535501ld.jpeg",
+							"IMAGES/pro-img/6535501cv1d.jpeg",
+							"IMAGES/pro-img/6535501cv3d.jpeg"
+						],
+						"description1": "ASUS Zebook - Silver",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "881737",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6494642_sd.png",
+							"IMAGES/pro-img/6494642_rd.jpeg",
+							"IMAGES/pro-img/6494642ld.jpeg",
+							"IMAGES/pro-img/6494642cv1d.jpeg"
+						],
+						"description1": "ASUS Zenbook - Black",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "1727377",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6486485_sd.png",
+							"IMAGES/pro-img/6486485ld.jpeg",
+							"IMAGES/pro-img/6486485cv1d.jpeg",
+							"IMAGES/pro-img/6486485cv3d.jpeg",
+							"IMAGES/pro-img/6486485cv4d.jpeg",
+							"IMAGES/pro-img/66486485cv7d.jpeg"
+						],
+						"description1": "ASUS Zenbook - Black",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "447627",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": ["IMAGES/pro-img/6494637_sd.png"],
+						"description1": "ASUS Zenbook - Black",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "881837",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6494637_rd.png",
+							"IMAGES/pro-img/6494637ld.jpeg",
+							"IMAGES/pro-img/6494637cv1d.jpeg",
+							"IMAGES/pro-img/6513491_sd.jpeg"
+						],
+						"description1": "ASUS Zenbook - Black",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "1183813",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6513491cv14d.png",
+							"IMAGES/pro-img/6513491cv16d.jpeg",
+							"IMAGES/pro-img/6494637cv1d.jpeg",
+							"IMAGES/pro-img/6513491_sd.jpeg"
+						],
+						"description1": "ASUS Zenbook - Black",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "8818371",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6513491cv14d.png",
+							"IMAGES/pro-img/6513491cv16d.jpeg",
+							"IMAGES/pro-img/6494637cv1d.jpeg",
+							"IMAGES/pro-img/6494580_sd.jpeg"
+						],
+						"description1": "ASUS Zenbook - Black",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "4718372",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6508083_sd.png",
+							"IMAGES/pro-img/6508083_rd.jpeg",
+							"IMAGES/pro-img/6508083cv1d.jpeg",
+							"IMAGES/pro-img/6508083cv3d.jpeg"
+						],
+						"description1": "ASUS Zenbook - Black",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "1988818",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6508083cv4d.png",
+							"IMAGES/pro-img/6508083cv7d.jpeg",
+							"IMAGES/pro-img/6508083cv3d.jpeg",
+							"IMAGES/pro-img/6508083cv1d.jpeg"
+						],
+						"description1": "ASUS Zenbook - Black",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "8176274",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6494331_sd.png",
+							"IMAGES/pro-img/6494331_rd.jpeg",
+							"IMAGES/pro-img/6494331ld.jpeg",
+							"IMAGES/pro-img/6494331cv1d.jpeg",
+							"IMAGES/pro-img/6494331cv3d.jpeg"
+						],
+						"description1": "ASUS Zenbook - Black",
+						"description2": "",
+						"newItemPrice": "1500",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 16,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "ASUS",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "516241",
+					"itemInfo": {
+						"name": "HP Mini Pavilon",
+						"itemImg": [
+							"IMAGES/pro-img/6515546_sd.png",
+							"IMAGES/pro-img/6515546_rd.jpeg",
+							"IMAGES/pro-img/6515546ld.jpeg",
+							"IMAGES/pro-img/6515546cv1d.jpeg"
+						],
+						"description1": "HP Pavilon Mini",
+						"description2": "",
+						"newItemPrice": "1000",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 8,
+						"rom": 512,
+						"screen": 16,
+						"brand": "HP",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "7665172",
+					"itemInfo": {
+						"name": "HP Pavilon",
+						"itemImg": [
+							"IMAGES/pro-img/6515546cv7d.png",
+							"IMAGES/pro-img/6502179_sd.jpeg",
+							"IMAGES/pro-img/6502179_rd.jpeg",
+							"IMAGES/pro-img/6502179ld.jpeg",
+							"IMAGES/pro-img/6502179cv1d.jpeg"
+						],
+						"description1": "HP Pavilon ",
+						"description2": "",
+						"newItemPrice": "1000",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 8,
+						"rom": 512,
+						"screen": 16,
+						"brand": "HP",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "1762728",
+					"itemInfo": {
+						"name": "Omen",
+						"itemImg": [
+							"IMAGES/pro-img/6503849_sd.png",
+							"IMAGES/pro-img/6503849_rd.jpeg",
+							"IMAGES/pro-img/6503849ld.jpeg",
+							"IMAGES/pro-img/6503849cv1d.jpeg",
+							"IMAGES/pro-img/6503849cv4d.jpeg"
+						],
+						"description1": "Omen",
+						"description2": "",
+						"newItemPrice": "1000",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 8,
+						"rom": 512,
+						"screen": 16,
+						"brand": "omen",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "4762911",
+					"itemInfo": {
+						"name": "Omen",
+						"itemImg": [
+							"IMAGES/pro-img/6503845_rd.png",
+							"IMAGES/pro-img/6503845ld.jpeg",
+							"IMAGES/pro-img/6503845cv1d.jpeg"
+						],
+						"description1": "Omen",
+						"description2": "",
+						"newItemPrice": "1000",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 8,
+						"rom": 512,
+						"screen": 16,
+						"brand": "omen",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "848828",
+					"itemInfo": {
+						"name": "Omen",
+						"itemImg": [
+							"IMAGES/pro-img/6503845_rd.png",
+							"IMAGES/pro-img/6503845ld.jpeg",
+							"IMAGES/pro-img/6503845cv1d.jpeg"
+						],
+						"description1": "Omen",
+						"description2": "",
+						"newItemPrice": "1000",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 8,
+						"rom": 512,
+						"screen": 16,
+						"brand": "omen",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "484828",
 					"itemInfo": {
 						"name": "HP Elite Pro Z20",
 						"itemImg": [
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg"
+							"IMAGES/pro-img/6502185_sd.png",
+							"IMAGES/pro-img/6502185_rd.jpeg",
+							"IMAGES/pro-img/6502185cv1d.jpeg"
 						],
 						"description1": "HP Elite Pro Z20",
 						"description2": "",
@@ -1759,80 +3278,22 @@
 					}
 				},
 				{
-					"id": "9374",
+					"id": "1989383",
 					"itemInfo": {
-						"name": "Apple MacBook Pro",
+						"name": "HP Elite Pro Z20",
 						"itemImg": [
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png"
+							"IMAGES/pro-img/6499753_sd.png",
+							"IMAGES/pro-img/6499753_rd.jpeg",
+							"IMAGES/pro-img/6499753ld.jpeg",
+							"IMAGES/pro-img/6499753cv1d.jpeg",
+							"IMAGES/pro-img/6499753cv3d.jpeg"
 						],
-						"description1": "Apple MacBook Pro 2021",
-						"description2": "",
-						"newItemPrice": "1300",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"ram": 8,
-						"rom": 1000,
-						"screen": 16,
-						"brand": "Mac",
-						"category": "Computers",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "4824",
-					"itemInfo": {
-						"name": "Apple MacBook Pro",
-						"itemImg": [
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png",
-							"IMAGES/tv3.png"
-						],
-						"description1": "Apple MacBook Pro 2021",
-						"description2": "",
-						"newItemPrice": "1300",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"ram": 8,
-						"rom": 1000,
-						"screen": 16,
-						"brand": "Mac",
-						"category": "Computers",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "3572",
-					"itemInfo": {
-						"name": "HP Elite Pro V20",
-						"itemImg": [
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg"
-						],
-						"description1": "HP Elite Pro V20",
+						"description1": "HP Elite Pro Z20",
 						"description2": "",
 						"newItemPrice": "980",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"ram": 8,
+						"ram": 4,
 						"rom": 256,
 						"screen": 13,
 						"brand": "HP",
@@ -1846,25 +3307,108 @@
 					}
 				},
 				{
-					"id": "4752",
+					"id": "919183",
 					"itemInfo": {
-						"name": "Toshiba",
+						"name": "Microsoft",
 						"itemImg": [
-							"IMAGES/tv5.png",
-							"IMAGES/tv5.png",
-							"IMAGES/tv5.png",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.png"
+							"IMAGES/pro-img/6505202cv14d.png",
+							"IMAGES/pro-img/6505202cv11d.jpeg",
+							"IMAGES/pro-img/6505202_sd.jpeg",
+							"IMAGES/pro-img/6505202cv12d.jpeg",
+							"IMAGES/pro-img/6505202cv15d.jpeg"
 						],
-						"description1": "Toshiba 2020",
+						"description1": "Microsoft",
 						"description2": "",
-						"newItemPrice": "1100",
+						"newItemPrice": "980",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 4,
+						"rom": 256,
+						"screen": 13,
+						"brand": "microsoft",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "9183891",
+					"itemInfo": {
+						"name": "Omen",
+						"itemImg": [
+							"IMAGES/pro-img/6503845_rd.png",
+							"IMAGES/pro-img/6503845ld.jpeg",
+							"IMAGES/pro-img/6503845cv1d.jpeg"
+						],
+						"description1": "Omen",
+						"description2": "",
+						"newItemPrice": "1000",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
 						"ram": 8,
 						"rom": 512,
 						"screen": 16,
-						"brand": "Toshiba",
+						"brand": "omen",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "949918",
+					"itemInfo": {
+						"name": "ASUS Zenbook",
+						"itemImg": [
+							"IMAGES/pro-img/6498803ld.png",
+							"IMAGES/pro-img/6498803cv1d.jpeg",
+							"IMAGES/pro-img/6498803cv4d.jpeg",
+							"IMAGES/pro-img/6498803cv7d.jpeg",
+							"IMAGES/pro-img/6498803_rd.jpeg"
+						],
+						"description1": "ASUS Zenbook",
+						"description2": "",
+						"newItemPrice": "1300",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 8,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "asus",
+						"category": "Computers",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "9484819",
+					"itemInfo": {
+						"name": "HP Elite",
+						"itemImg": [
+							"IMAGES/pro-img/6517655_sd.png",
+							"IMAGES/pro-img/6517655cv11d.jpeg",
+							"IMAGES/pro-img/6517655cv12d.jpeg"
+						],
+						"description1": "HP Elite",
+						"description2": "",
+						"newItemPrice": "1300",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"ram": 8,
+						"rom": 1000,
+						"screen": 16,
+						"brand": "HP",
 						"category": "Computers",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -1877,17 +3421,11 @@
 			],
 			"tv": [
 				{
-					"id": "5928",
+					"id": "494991",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": [
-							"IMAGES/tv1.jpg",
-							"IMAGES/tv1.jpg",
-							"IMAGES/tv1.jpg",
-							"IMAGES/tv1.jpg",
-							"IMAGES/tv1.jpg"
-						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"itemImg": ["IMAGES/pro-img/biobo.png"],
+						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
 						"oldItemPrice": "$544",
@@ -1904,17 +3442,250 @@
 					}
 				},
 				{
-					"id": "4295",
+					"id": "949910",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": ["IMAGES/pro-img/obii.png", "IMAGES/pro-img/nviob.jpeg"],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "9492891",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": ["IMAGES/pro-img/90vn.png", "IMAGES/pro-img/nosi.jpeg"],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "944289",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": ["IMAGES/pro-img/nvio2.png", "IMAGES/pro-img/nvi.jpeg"],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "492991",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": ["IMAGES/pro-img/nvnsoin0.png"],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "4929194",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": ["IMAGES/pro-img/vbioi.png"],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "4299911",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": ["IMAGES/pro-img/niovno.png"],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "849291",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": [
+							"IMAGES/pro-img/2ihew.png",
+							"IMAGES/pro-img/nownosnw.jpeg",
+							"IMAGES/pro-img/vebio.jpeg"
+						],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "484899",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": ["IMAGES/pro-img/bbvw.png"],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "9193933",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": ["IMAGES/pro-img/snionw.png"],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "825838",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": ["IMAGES/pro-img/vnio.png"],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "881848",
+					"itemInfo": {
+						"name": "Hisense",
+						"itemImg": [
+							"IMAGES/pro-img/new.png",
+							"IMAGES/pro-img/nwio.jpeg",
+							"IMAGES/pro-img/vinio.jpeg"
+						],
+						"description1": "Hisense TV",
+						"description2": "",
+						"newItemPrice": "928",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "hisense",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "482194",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": [
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg"
-						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"itemImg": ["IMAGES/pro-img/beobw.png"],
+						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "999",
 						"oldItemPrice": "$544",
@@ -1931,22 +3702,100 @@
 					}
 				},
 				{
-					"id": "4945",
+					"id": "489192",
 					"itemInfo": {
-						"name": "Midea",
-						"itemImg": [
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg"
-						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"name": "LG",
+						"itemImg": ["IMAGES/pro-img/bfw.png"],
+						"description1": "LG TV",
+						"description2": "",
+						"newItemPrice": "999",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "lg",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "482819",
+					"itemInfo": {
+						"name": "LG",
+						"itemImg": ["IMAGES/pro-img/ivboib.png"],
+						"description1": "LG TV",
+						"description2": "",
+						"newItemPrice": "999",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "lg",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "4881893",
+					"itemInfo": {
+						"name": "LG",
+						"itemImg": ["IMAGES/pro-img/vvib3.png"],
+						"description1": "LG TV",
+						"description2": "",
+						"newItemPrice": "999",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "lg",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "9429919",
+					"itemInfo": {
+						"name": "LG",
+						"itemImg": ["IMAGES/pro-img/boi.png", "IMAGES/pro-img/nfw.jpeg"],
+						"description1": "LG TV",
+						"description2": "",
+						"newItemPrice": "999",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "lg",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "4982919",
+					"itemInfo": {
+						"name": "Samsung",
+						"itemImg": ["IMAGES/pro-img/buvibb.png"],
+						"description1": "Samsung TV",
 						"description2": "",
 						"newItemPrice": "1600",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "midea",
+						"brand": "samsung",
 						"size": 43,
 						"category": "TV",
 						"color": "🇺🇦",
@@ -1958,22 +3807,20 @@
 					}
 				},
 				{
-					"id": "5082",
+					"id": "9199332",
 					"itemInfo": {
-						"name": "Hisense",
+						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg"
+							"IMAGES/pro-img/isbow.png",
+							"IMAGES/pro-img/2vw.jpeg",
+							"IMAGES/pro-img/iobw.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "Samsung TV",
 						"description2": "",
-						"newItemPrice": "1400",
+						"newItemPrice": "1600",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "hisense",
+						"brand": "samsung",
 						"size": 43,
 						"category": "TV",
 						"color": "🇺🇦",
@@ -1985,22 +3832,16 @@
 					}
 				},
 				{
-					"id": "8425",
+					"id": "4929101",
 					"itemInfo": {
-						"name": "Hisense",
-						"itemImg": [
-							"IMAGES/tv3.jpg",
-							"IMAGES/tv3.jpg",
-							"IMAGES/tv3.jpg",
-							"IMAGES/tv3.jpg",
-							"IMAGES/tv3.jpg"
-						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"name": "Samsung",
+						"itemImg": ["IMAGES/pro-img/bb92.png", "IMAGES/pro-img/vbsub.jpeg"],
+						"description1": "Samsung TV",
 						"description2": "",
-						"newItemPrice": "1300",
+						"newItemPrice": "1600",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "hisense",
+						"brand": "samsung",
 						"size": 43,
 						"category": "TV",
 						"color": "🇺🇦",
@@ -2012,76 +3853,16 @@
 					}
 				},
 				{
-					"id": "1835",
+					"id": "1129291",
 					"itemInfo": {
-						"name": "Toshiba",
-						"itemImg": [
-							"IMAGES/tv3.jpg",
-							"IMAGES/tv3.jpg",
-							"IMAGES/tv3.jpg",
-							"IMAGES/tv3.jpg",
-							"IMAGES/tv3.jpg"
-						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"name": "Samsung",
+						"itemImg": ["IMAGES/pro-img/n92h.png"],
+						"description1": "Samsung TV",
 						"description2": "",
-						"newItemPrice": "1250",
+						"newItemPrice": "1600",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "toshiba",
-						"size": 55,
-						"category": "TV",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "5942",
-					"itemInfo": {
-						"name": "Toshiba",
-						"itemImg": [
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg"
-						],
-						"description1": "Lorem ipsum dolor sit amet",
-						"description2": "",
-						"newItemPrice": "1100",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "toshiba",
-						"size": 55,
-						"category": "TV",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "5852",
-					"itemInfo": {
-						"name": "Midea",
-						"itemImg": [
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg",
-							"IMAGES/tv2.jpg"
-						],
-						"description1": "Lorem ipsum dolor sit amet",
-						"description2": "",
-						"newItemPrice": "1850",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "midea",
+						"brand": "samsung",
 						"size": 43,
 						"category": "TV",
 						"color": "🇺🇦",
@@ -2093,17 +3874,183 @@
 					}
 				},
 				{
-					"id": "9724",
+					"id": "499213",
+					"itemInfo": {
+						"name": "Samsung",
+						"itemImg": [
+							"IMAGES/pro-img/bvbiiw.png",
+							"IMAGES/pro-img/ivbsio92.jpeg"
+						],
+						"description1": "Samsung TV",
+						"description2": "",
+						"newItemPrice": "1600",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "samsung",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "199194",
+					"itemInfo": {
+						"name": "Samsung",
+						"itemImg": [
+							"IMAGES/pro-img/sni.png",
+							"IMAGES/pro-img/bowbwm.jpeg",
+							"IMAGES/pro-img/boib.jpeg"
+						],
+						"description1": "Samsung TV",
+						"description2": "",
+						"newItemPrice": "1600",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "samsung",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "4849193",
+					"itemInfo": {
+						"name": "Samsung",
+						"itemImg": ["IMAGES/pro-img/bvoibw.png"],
+						"description1": "Samsung TV",
+						"description2": "",
+						"newItemPrice": "1600",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "samsung",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "981882",
+					"itemInfo": {
+						"name": "Samsung",
+						"itemImg": [
+							"IMAGES/pro-img/inoviosn.png",
+							"IMAGES/pro-img/9029hew.jpeg"
+						],
+						"description1": "Samsung TV",
+						"description2": "",
+						"newItemPrice": "1600",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "samsung",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "4929911",
+					"itemInfo": {
+						"name": "Samsung",
+						"itemImg": [
+							"IMAGES/pro-img/sni.png",
+							"IMAGES/pro-img/bowbwm.jpeg",
+							"IMAGES/pro-img/boib.jpeg"
+						],
+						"description1": "Samsung TV",
+						"description2": "",
+						"newItemPrice": "1600",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "samsung",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "49199819",
+					"itemInfo": {
+						"name": "Samsung",
+						"itemImg": [
+							"IMAGES/pro-img/bvsoib.png",
+							"IMAGES/pro-img/vnoinion.jpeg"
+						],
+						"description1": "Samsung TV",
+						"description2": "",
+						"newItemPrice": "1600",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "samsung",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "8191938",
+					"itemInfo": {
+						"name": "Samsung",
+						"itemImg": ["IMAGES/pro-img/woi.png", "IMAGES/pro-img/inovef.jpeg"],
+						"description1": "Samsung TV",
+						"description2": "",
+						"newItemPrice": "1600",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "samsung",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "5819184",
 					"itemInfo": {
 						"name": "LG",
 						"itemImg": [
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg",
-							"IMAGES/tv5.jpg"
+							"IMAGES/pro-img/6503080cv12d.png",
+							"IMAGES/pro-img/6503080cv11d.jpeg",
+							"IMAGES/pro-img/6503080_sd.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "300",
 						"oldItemPrice": "$544",
@@ -2120,23 +4067,120 @@
 					}
 				},
 				{
-					"id": "3742",
+					"id": "4829198",
 					"itemInfo": {
-						"name": "Samsung",
+						"name": "Toshiba",
 						"itemImg": [
-							"IMAGES/tv1.jpg",
-							"IMAGES/tv1.jpg",
-							"IMAGES/tv1.jpg",
-							"IMAGES/tv1.jpg",
-							"IMAGES/tv1.jpg"
+							"IMAGES/pro-img/6472252cv12d.png",
+							"IMAGES/pro-img/6472252cv13d.jpeg",
+							"IMAGES/pro-img/6472252_sd.jpeg"
 						],
-						"description1": "Lorem ipsum dolor sit amet",
+						"description1": "Toshiba TV",
 						"description2": "",
-						"newItemPrice": "1200",
+						"newItemPrice": "300",
 						"oldItemPrice": "$544",
 						"itemTotal": "630",
-						"brand": "samsung",
-						"size": 32,
+						"brand": "toshiba",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "199883",
+					"itemInfo": {
+						"name": "Toshiba",
+						"itemImg": [
+							"IMAGES/pro-img/6458648cv13d.png",
+							"IMAGES/pro-img/6458648cv12d.jpeg",
+							"IMAGES/pro-img/6458648cv11d.jpeg"
+						],
+						"description1": "Toshiba TV",
+						"description2": "",
+						"newItemPrice": "300",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "toshiba",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "482919",
+					"itemInfo": {
+						"name": "Toshiba",
+						"itemImg": [
+							"IMAGES/pro-img/6479694cv12d.png",
+							"IMAGES/pro-img/6479694cv13d.jpeg",
+							"IMAGES/pro-img/6479694_sd.jpeg"
+						],
+						"description1": "Toshiba TV",
+						"description2": "",
+						"newItemPrice": "300",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "toshiba",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "489199842",
+					"itemInfo": {
+						"name": "LG",
+						"itemImg": [
+							"IMAGES/pro-img/6501896_bd.png",
+							"IMAGES/pro-img/6501896ld.jpeg",
+							"IMAGES/pro-img/6501896_rd.jpeg"
+						],
+						"description1": "LG TV",
+						"description2": "",
+						"newItemPrice": "300",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "lg",
+						"size": 43,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "4892919",
+					"itemInfo": {
+						"name": "LG",
+						"itemImg": [
+							"IMAGES/pro-img/6501896_sd.png",
+							"IMAGES/pro-img/6501902_bd.jpeg"
+						],
+						"description1": "LG TV",
+						"description2": "",
+						"newItemPrice": "300",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "lg",
+						"size": 43,
 						"category": "TV",
 						"color": "🇺🇦",
 						"OS": "🫶🏼",
@@ -2152,281 +4196,277 @@
 
 	"recentlyAdded": [
 		{
-			"id": "1",
+			"id": "8320",
 			"itemInfo": {
+				"name": "PS 4",
+				"itemImg": [
+					"IMAGES/pro-img/51HPlBnOoBL._AC_SL1500_.png",
+					"IMAGES/pro-img/41A5YRynOAL._SL1000_.jpg",
+					"IMAGES/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
+				],
+				"description1": "PS 4",
+				"description2": "",
+				"newItemPrice": "850",
+				"oldItemPrice": "$544",
+				"itemTotal": "850",
+				"brand": "Ps",
 				"category": "Gaming",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",
 				"CPU": "🁼",
 				"smop": "😘",
 				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
-				"itemImg": [
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png"
-				],
-				"description1": "Lorem ipsum dolor sit amet",
-				"description2": "",
-				"newItemPrice": "880",
-				"oldItemPrice": "$544",
-				"itemTotal": "630"
+				"aom": "🌑"
 			}
 		},
 		{
-			"id": "12",
+			"id": "48719",
 			"itemInfo": {
-				"category": "Gaming",
-				"color": "🇺🇦",
-				"OS": "🫶🏼",
-				"CPU": "🁼",
-				"smop": "😘",
-				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
+				"name": "iPhone 13",
 				"itemImg": [
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png"
+					"IMAGES/pro-img/6487295_sd.png",
+					"IMAGES/pro-img/6487295cv1d.jpeg",
+					"IMAGES/pro-img/6487295cv2d.jpeg",
+					"IMAGES/pro-img/6487295cv11d.jpeg"
 				],
-				"description1": "Lorem ipsum dolor sit amet",
+				"description1": "iPhone 13 - Green",
 				"description2": "",
-				"newItemPrice": "920",
+				"newItemPrice": "950",
 				"oldItemPrice": "$544",
-				"itemTotal": "630"
-			}
-		},
-		{
-			"id": "2",
-			"itemInfo": {
+				"itemTotal": "630",
+				"brand": "Apple",
+				"memory": "256",
 				"category": "Cellphones",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",
 				"CPU": "🁼",
 				"smop": "😘",
 				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
-				"itemImg": [
-					"IMAGES/frontIpad.png",
-					"IMAGES/frontIpad.png",
-					"IMAGES/frontIpad.png",
-					"IMAGES/frontIpad.png",
-					"IMAGES/frontIpad.png"
-				],
-				"description1": "Lorem ipsum dolor sit amet",
-				"description2": "",
-				"newItemPrice": "500",
-				"oldItemPrice": "$544",
-				"itemTotal": "630"
+				"aom": "🌑"
 			}
 		},
 		{
-			"id": "3",
+			"id": "668282",
 			"itemInfo": {
-				"category": "Speakers",
-				"color": "🇺🇦",
-				"OS": "🫶🏼",
-				"CPU": "🁼",
-				"smop": "😘",
-				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
+				"name": "Apple MacBook Pro 2022",
 				"itemImg": [
-					"IMAGES/jblflip6.png",
-					"IMAGES/jblflip6.png",
-					"IMAGES/jblflip6.png",
-					"IMAGES/jblflip6.png",
-					"IMAGES/jblflip6.png"
+					"IMAGES/pro-img/6450858_sd.png",
+					"IMAGES/pro-img/6450858cv1d.jpeg",
+					"IMAGES/pro-img/6450858cv3d.jpeg",
+					"IMAGES/pro-img/6450858cv4d.jpeg",
+					"IMAGES/pro-img/6450858cv7d.jpeg"
 				],
-				"description1": "Lorem ipsum dolor sit amet",
+				"description1": "Apple MacBook Pro 2022 - Grey",
 				"description2": "",
-				"newItemPrice": "600",
+				"newItemPrice": "1200",
 				"oldItemPrice": "$544",
-				"itemTotal": "630"
-			}
-		},
-		{
-			"id": "4",
-			"itemInfo": {
+				"itemTotal": "630",
+				"ram": 4,
+				"rom": 256,
+				"screen": 16,
+				"brand": "Mac",
 				"category": "Computers",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",
 				"CPU": "🁼",
 				"smop": "😘",
 				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
-				"itemImg": [
-					"IMAGES/tv4.png",
-					"IMAGES/tv4.png",
-					"IMAGES/tv4.png",
-					"IMAGES/tv4.png",
-					"IMAGES/tv4.png"
-				],
-				"description1": "Lorem ipsum dolor sit amet",
-				"description2": "",
-				"newItemPrice": "630",
-				"oldItemPrice": "$544",
-				"itemTotal": "630"
+				"aom": "🌑"
 			}
 		},
 		{
-			"id": "5",
+			"id": "989183",
 			"itemInfo": {
+				"name": "JBL Flip 5",
+				"itemImg": [
+					"IMAGES/pro-img/6356535_sd.png",
+					"IMAGES/pro-img/6356535cv11d.jpeg",
+					"IMAGES/pro-img/6356535cv12d.jpeg",
+					"IMAGES/pro-img/6356535cv13d.jpeg",
+					"IMAGES/pro-img/6356535ld.jpeg"
+				],
+				"description1": "JBL Flip 5 - Black",
+				"description2": "",
+				"newItemPrice": "2100",
+				"oldItemPrice": "$544",
+				"itemTotal": "630",
+				"brand": "jbl",
+				"category": "Speakers",
+				"color": "Red",
+				"OS": "🫶🏼",
+				"CPU": "🁼",
+				"smop": "😘",
+				"ct": "🌕",
+				"aom": "🌑"
+			}
+		},
+		{
+			"id": "4929194",
+			"itemInfo": {
+				"name": "Hisense",
+				"itemImg": ["IMAGES/pro-img/vbioi.png"],
+				"description1": "Hisense TV",
+				"description2": "",
+				"newItemPrice": "928",
+				"oldItemPrice": "$544",
+				"itemTotal": "630",
+				"brand": "hisense",
+				"size": 32,
 				"category": "TV",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",
 				"CPU": "🁼",
 				"smop": "😘",
 				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
+				"aom": "🌑"
+			}
+		},
+		{
+			"id": "473810",
+			"itemInfo": {
+				"name": "Samsung S22 Ultra",
 				"itemImg": [
-					"IMAGES/tv5.jpg",
-					"IMAGES/tv5.jpg",
-					"IMAGES/tv5.jpg",
-					"IMAGES/tv5.jpg",
-					"IMAGES/tv5.jpg"
+					"IMAGES/pro-img/6472835_sd.png",
+					"IMAGES/pro-img/6472835cv11d.jpeg",
+					"IMAGES/pro-img/6472835_rd.jpeg",
+					"IMAGES/pro-img/6472835ld.jpeg"
 				],
-				"description1": "Lorem ipsum dolor sit amet",
+				"description1": "Samsung S22 Ultra - Wine",
 				"description2": "",
-				"newItemPrice": "650",
+				"newItemPrice": "520",
 				"oldItemPrice": "$544",
-				"itemTotal": "630"
+				"itemTotal": "630",
+				"brand": "Samsung",
+				"memory": "128",
+				"category": "Cellphones",
+				"color": "🇺🇦",
+				"OS": "🫶🏼",
+				"CPU": "🁼",
+				"smop": "😘",
+				"ct": "🌕",
+				"aom": "🌑"
 			}
 		}
 	],
 
 	"WeeklyFeatured": [
 		{
-			"id": "3001",
+			"id": "84272",
 			"itemInfo": {
+				"name": "Xbox",
+				"itemImg": ["IMAGES/pro-img/61RA2sUPu+L._SL1000_.png"],
+				"description1": "XBOX",
+				"description2": "",
+				"newItemPrice": "1112",
+				"oldItemPrice": "$544",
+				"itemTotal": "630",
+				"brand": "Xbox",
 				"category": "Gaming",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",
 				"CPU": "🁼",
 				"smop": "😘",
 				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
-				"itemImg": [
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png",
-					"IMAGES/ipad2.png"
-				],
-				"description1": "Lorem ipsum dolor sit amet",
-				"description2": "",
-				"newItemPrice": "425",
-				"oldItemPrice": "$544",
-				"itemTotal": "630"
+				"aom": "🌑"
 			}
 		},
 		{
-			"id": "2302",
+			"id": "89183",
 			"itemInfo": {
+				"name": "Samsung S15",
+				"itemImg": [
+					"IMAGES/pro-img/61b7ywCsH2L._AC_SX679_.png",
+					"IMAGES/pro-img/61G1cC5bTYL._AC_SX679_.jpg"
+				],
+				"description1": "Samsung S15 - Blue",
+				"description2": "",
+				"newItemPrice": "520",
+				"oldItemPrice": "$544",
+				"itemTotal": "630",
+				"brand": "Samsung",
+				"memory": "128",
 				"category": "Cellphones",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",
 				"CPU": "🁼",
 				"smop": "😘",
 				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
-				"itemImg": [
-					"IMAGES/frontIpad.png",
-					"IMAGES/frontIpad.png",
-					"IMAGES/frontIpad.png",
-					"IMAGES/frontIpad.png",
-					"IMAGES/frontIpad.png"
-				],
-				"description1": "Lorem ipsum dolor sit amet",
-				"description2": "",
-				"newItemPrice": "950",
-				"oldItemPrice": "$544",
-				"itemTotal": "630"
+				"aom": "🌑"
 			}
 		},
 		{
-			"id": "3931",
+			"id": "982929",
 			"itemInfo": {
+				"name": "JBL Flip 5",
+				"itemImg": [
+					"IMAGES/pro-img/6488913_rd.png",
+					"IMAGES/pro-img/6488913_sd.jpeg",
+					"IMAGES/pro-img/6488913cv1d.jpeg",
+					"IMAGES/pro-img/6488913cv11d.jpeg",
+					"IMAGES/pro-img/6488913ld.jpeg"
+				],
+				"description1": "JBL Charge 5 - Blue",
+				"description2": "",
+				"newItemPrice": "480",
+				"oldItemPrice": "$544",
+				"itemTotal": "630",
+				"brand": "jbl",
 				"category": "Speakers",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",
 				"CPU": "🁼",
 				"smop": "😘",
 				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
-				"itemImg": [
-					"IMAGES/jblflip6.png",
-					"IMAGES/jblflip6.png",
-					"IMAGES/jblflip6.png",
-					"IMAGES/jblflip6.png",
-					"IMAGES/jblflip6.png"
-				],
-				"description1": "Lorem ipsum dolor sit amet",
-				"description2": "",
-				"newItemPrice": "995",
-				"oldItemPrice": "$544",
-				"itemTotal": "630"
+				"aom": "🌑"
 			}
 		},
 		{
-			"id": "3391",
+			"id": "8882738",
 			"itemInfo": {
+				"name": "Apple MacBook Air 2020",
+				"itemImg": [
+					"IMAGES/pro-img/6455369_sd.png",
+					"IMAGES/pro-img/6455369_rd.jpeg",
+					"IMAGES/pro-img/6450858cv7d.jpeg",
+					"IMAGES/pro-img/6450858cv4d.jpeg"
+				],
+				"description1": "Apple MacBook Air 2020",
+				"description2": "",
+				"newItemPrice": "1100",
+				"oldItemPrice": "$544",
+				"itemTotal": "630",
+				"ram": 4,
+				"rom": 256,
+				"screen": 16,
+				"brand": "Mac",
 				"category": "Computers",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",
 				"CPU": "🁼",
 				"smop": "😘",
 				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
-				"itemImg": [
-					"IMAGES/tv4.png",
-					"IMAGES/tv4.png",
-					"IMAGES/tv4.png",
-					"IMAGES/tv4.png",
-					"IMAGES/tv4.png"
-				],
-				"description1": "Lorem ipsum dolor sit amet",
-				"description2": "",
-				"newItemPrice": "870",
-				"oldItemPrice": "$544",
-				"itemTotal": "630"
+				"aom": "🌑"
 			}
 		},
 		{
-			"id": "5931",
+			"id": "1129291",
 			"itemInfo": {
+				"name": "Samsung",
+				"itemImg": ["IMAGES/pro-img/n92h.png"],
+				"description1": "Samsung TV",
+				"description2": "",
+				"newItemPrice": "1600",
+				"oldItemPrice": "$544",
+				"itemTotal": "630",
+				"brand": "samsung",
+				"size": 43,
 				"category": "TV",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",
 				"CPU": "🁼",
 				"smop": "😘",
 				"ct": "🌕",
-				"aom": "🌑",
-				"name": "XBOX 1",
-				"itemImg": [
-					"IMAGES/tv5.jpg",
-					"IMAGES/tv5.jpg",
-					"IMAGES/tv5.jpg",
-					"IMAGES/tv5.jpg",
-					"IMAGES/tv5.jpg"
-				],
-				"description1": "Lorem ipsum dolor sit amet",
-				"description2": "",
-				"newItemPrice": "670",
-				"oldItemPrice": "$544",
-				"itemTotal": "630"
+				"aom": "🌑"
 			}
 		}
 	]

@@ -229,7 +229,7 @@ nav,
 	align-items: center;
 }
 
-.products ul {
+.products .main-links {
 	display: flex;
 	justify-content: center;
 	list-style: none;
@@ -237,7 +237,7 @@ nav,
 	width: 100% inherit;
 }
 
-.products ul li {
+.products a {
 	font-weight: 600;
 	cursor: pointer;
 	color: #111111;
@@ -773,7 +773,7 @@ nav ul li {
 	display: grid;
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 2fr 1fr 1fr 1fr;
-	gap: 20px;
+	gap: 0px;
 }
 
 .ssp {
@@ -789,7 +789,7 @@ nav ul li {
 
 	grid-row-end: 3;
 	grid-column-end: 2;
-	background-image: url(IMAGES/iphone3.png);
+	background-image: url(IMAGES/cell-big2.jpg);
 }
 #grid-1 {
 	background-color: #77e7b7;
@@ -798,7 +798,7 @@ nav ul li {
 
 	grid-row-end: 3;
 	grid-column-end: 4;
-	background-image: url(IMAGES/dlap.jpg);
+	background-image: url(IMAGES/lapp-big-3.jpg);
 }
 #grid-2 {
 	background-color: #7e5e7f;
@@ -807,7 +807,7 @@ nav ul li {
 
 	grid-row-end: 3;
 	grid-column-end: 5;
-	background-image: url(IMAGES/sspk.jpg);
+	background-image: url(IMAGES/spekk-big.jpg);
 }
 #grid-3 {
 	background-color: #db86cd;
@@ -816,7 +816,7 @@ nav ul li {
 
 	grid-row-end: 2;
 	grid-column-end: 5;
-	background-image: url(IMAGES/tele.jpg);
+	background-image: url(IMAGES/tvv-big.jpg);
 }
 #grid-4 {
 	background-color: #95bba9;
@@ -825,21 +825,21 @@ nav ul li {
 
 	grid-row-end: 2;
 	grid-column-end: 3;
-	background-image: url(IMAGES/game.png);
+	background-image: url(IMAGES/game-big.jpg);
 }
 
 .grid {
 	width: 100%;
 	height: 100%;
 	background-position: center;
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
 	transition: all 0.4s ease-in-out;
 	-webkit-transition: all 0.4s ease-in-out;
 	-moz-transition: all 0.4s ease-in-out;
@@ -847,9 +847,9 @@ nav ul li {
 	-o-transition: all 0.4s ease-in-out;
 }
 
-.grid:hover {
+/* .grid:hover {
 	background-size: 120%;
-}
+} */
 
 .shade {
 	border-radius: 3px;
@@ -1665,6 +1665,7 @@ nav ul li {
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
+	background-color: #f4f4f6;
 	/* border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -2880,7 +2881,7 @@ footer {
 
 		grid-row-end: 2;
 		grid-column-end: 3;
-		background-image: url(IMAGES/iphone3.png);
+		background-image: url(IMAGES/cell-big.jpg);
 	}
 	#grid-1 {
 		background-color: #9bfc78;
@@ -2889,7 +2890,7 @@ footer {
 
 		grid-row-end: 3;
 		grid-column-end: 2;
-		background-image: url(IMAGES/dlap.jpg);
+		background-image: url(IMAGES/surf-big.jpg);
 	}
 	#grid-2 {
 		background-color: #858757;
@@ -2898,7 +2899,7 @@ footer {
 
 		grid-row-end: 3;
 		grid-column-end: 3;
-		background-image: url(IMAGES/sspk.jpg);
+		background-image: url(IMAGES/spekk-big.jpg);
 	}
 	#grid-3 {
 		background-color: #6ba9da;
@@ -2907,7 +2908,7 @@ footer {
 
 		grid-row-end: 4;
 		grid-column-end: 3;
-		background-image: url(IMAGES/tele.jpg);
+		background-image: url(IMAGES/tvv-big.jpg);
 	}
 	#grid-4 {
 		background-color: #da5adf;
@@ -2916,7 +2917,7 @@ footer {
 
 		grid-row-end: 4;
 		grid-column-end: 2;
-		background-image: url(IMAGES/game.png);
+		background-image: url(IMAGES/game-big.jpg);
 	}
 
 	.gridbtn {

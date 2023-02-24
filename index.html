@@ -43,12 +43,12 @@
 							>Geminis.</a
 						>
 						<div class="products">
-							<ul>
-								<li id="games"><a href="/gemshop.html">Shop</a></li>
-								<li id="phones">Products</li>
-								<li id="coms">About Us</li>
-								<li id="spks">Contact Us</li>
-							</ul>
+							<div class="main-links">
+								<a id="games" href="gemshop.html">Shop</a>
+								<a id="phones">Products</a>
+								<a id="coms">About Us</a>
+								<a id="spks">Contact Us</a>
+							</div>
 						</div>
 					</nav>
 					<div class="justme">
@@ -171,7 +171,9 @@
 					<h1 id="hero-text">Find Your Next Favorite Gadget</h1>
 					<p class="discount">Shop Our Collection Now</p>
 					<!-- <button class="shopbtn">Shop Now</button> -->
-					<span>Start Shopping</span>
+					<span onclick="window.location.href = 'gemshop.html'"
+						>Start Shopping</span
+					>
 				</div>
 				<div class="hero-grid">
 					<a
@@ -348,16 +350,6 @@
 							<ul>
 								<li
 									class="tab inactive-li"
-									id="gaming"
-									onclick="displayProduct.createItem(event,'#sel-container',
-                                Products.getSelectedProducts().selectedProducts[0].gaming,
-                                'gaming'
-                              )"
-								>
-									Gaming
-								</li>
-								<li
-									class="tab inactive-li"
 									id="cellphones"
 									onclick="displayProduct.createItem(event,'#sel-container',
                                 Products.getSelectedProducts().selectedProducts[0].cellphones,
@@ -365,6 +357,16 @@
                               )"
 								>
 									Cell Phones
+								</li>
+								<li
+									class="tab inactive-li"
+									id="gaming"
+									onclick="displayProduct.createItem(event,'#sel-container',
+                                Products.getSelectedProducts().selectedProducts[0].gaming,
+                                'gaming'
+                              )"
+								>
+									Gaming
 								</li>
 								<li
 									class="tab inactive-li"

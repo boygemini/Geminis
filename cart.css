@@ -66,19 +66,6 @@ nav,
 	align-items: center;
 }
 
-.products ul {
-	display: flex;
-	justify-content: center;
-	list-style: none;
-	column-gap: 30px;
-	width: 100% inherit;
-}
-
-.products ul li {
-	font-weight: 600;
-	cursor: pointer;
-}
-
 .products {
 	width: 100%;
 }

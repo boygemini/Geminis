@@ -334,8 +334,8 @@ displayProduct.displayRecentItems(Storage.getRecentItems());
 displayProduct.createItem(
 	event,
 	"#sel-container",
-	Products.getSelectedProducts().selectedProducts[0].gaming,
-	"gaming"
+	Products.getSelectedProducts().selectedProducts[0].cellphones,
+	"cellphones"
 );
 
 // DISPLAY WEEKLY PRODUCTS

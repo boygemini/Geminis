@@ -64,19 +64,6 @@ nav,
 	align-items: center;
 }
 
-.products ul {
-	display: flex;
-	justify-content: center;
-	list-style: none;
-	column-gap: 30px;
-	width: 100% inherit;
-}
-
-.products ul li {
-	font-weight: 600;
-	cursor: pointer;
-}
-
 .products {
 	width: 100%;
 }
@@ -508,7 +495,7 @@ nav ul li {
 }
 
 .hol1 {
-	background: url("IMAGES/game.jpg");
+	background: url("IMAGES/game-small.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -526,7 +513,7 @@ nav ul li {
 }
 
 .hol4 {
-	background: url("IMAGES/speak.jpg");
+	background: url("IMAGES/spekk.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -802,7 +789,7 @@ p span {
 
 .filters {
 	background-color: white;
-	box-shadow: 0px 15px 25px -10px #021e541a;
+	/* box-shadow: 0px 15px 25px -10px #021e541a; */
 	width: 20%;
 	height: 90vh;
 	position: sticky;
@@ -1444,6 +1431,7 @@ select:hover {
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
+	background-color: #f6f6f6;
 	/* background-color: white; */
 	/* box-shadow: 0px 15px 25px -10px #021e541a; */
 	/* border: 0.5px solid rgba(112, 128, 144, 0.29); */

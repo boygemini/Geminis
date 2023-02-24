@@ -205,6 +205,20 @@ a {
 	-o-border-radius: 3px;
 }
 
+.products .main-links {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	column-gap: 30px;
+	width: 100% inherit;
+}
+
+.products a {
+	font-weight: 600;
+	cursor: pointer;
+	color: #111111;
+}
+
 .main-menu {
 	max-height: 85vh;
 	padding-bottom: 60px;
