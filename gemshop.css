@@ -2379,7 +2379,7 @@ footer {
 		min-height: 350px;
 		max-height: 350px;
 		row-gap: 0px;
-		padding: 5px;
+		padding: 0px;
 		padding-bottom: 10px;
 	}
 }

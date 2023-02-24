@@ -910,7 +910,6 @@ nav ul li {
 	background-color: white;
 	padding: 10px 15px;
 	width: auto;
-	height: auto;
 	justify-self: flex-start;
 	align-self: flex-start;
 	transform: rotate(90deg);
@@ -1701,11 +1700,12 @@ nav ul li {
 	height: 470px;
 	/*max-height: 400px;
     */
+	padding: 0px;
 	padding-bottom: 10px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 20px;
-	border: 5px solid transparent;
+	border: none;
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -2363,7 +2363,7 @@ footer {
 		min-height: 350px;
 		max-height: 350px;
 		row-gap: 0px;
-		/* padding: 5px; */
+		padding: 0px;
 		padding-bottom: 10px;
 		background-color: transparent;
 		/* background-color: #f4f4f6; */
@@ -2491,6 +2491,7 @@ footer {
 		row-gap: 2px;
 		align-items: flex-start;
 		position: absolute;
+		bottom: 0;
 	}
 
 	.cart-btn {
