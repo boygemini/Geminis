@@ -388,6 +388,392 @@
 			],
 			"cellphones": [
 				{
+					"id": "57108",
+					"itemInfo": {
+						"name": "iPhone 13",
+						"itemImg": [
+							"IMAGES/pro-img/6009728_sd.png",
+							"IMAGES/pro-img/6009728cv11d.jpeg",
+							"IMAGES/pro-img/6009728cv12d.jpeg"
+						],
+						"description1": "iPhone 13 - White",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "72910",
+					"itemInfo": {
+						"name": "iPhone 13 Pro",
+						"itemImg": [
+							"IMAGES/pro-img/6009823_sd.png",
+							"IMAGES/pro-img/6009823cv11d.jpeg",
+							"IMAGES/pro-img/6009823cv12d.jpeg"
+						],
+						"description1": "iPhone 13 Pro - Space Grey",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "Space Grey",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "48291",
+					"itemInfo": {
+						"name": "iPhone 13 Pro",
+						"itemImg": [
+							"IMAGES/pro-img/6341308cv12d.png",
+							"IMAGES/pro-img/6341308_sd.jpeg",
+							"IMAGES/pro-img/6341308cv15d.jpeg"
+						],
+						"description1": "iPhone 13 Pro - Gold",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "470183",
+					"itemInfo": {
+						"name": "iPhone 11 Pro Max",
+						"itemImg": [
+							"IMAGES/pro-img/6341561cv12d.png",
+							"IMAGES/pro-img/6341561cv11d.jpeg",
+							"IMAGES/pro-img/6341561_sd.jpeg"
+						],
+						"description1": "iPhone 11 Pro Max - Space Grey",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "79174",
+					"itemInfo": {
+						"name": "iPhone 11",
+						"itemImg": [
+							"IMAGES/pro-img/6510048cv2d.png",
+							"IMAGES/pro-img/6510048cv1d.jpeg",
+							"IMAGES/pro-img/6510048_sd.jpeg",
+							"IMAGES/pro-img/6510048_rd.jpeg"
+						],
+						"description1": "iPhone 11 - Black",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+
+				{
+					"id": "928812",
+					"itemInfo": {
+						"name": "iPhone Xs Max",
+						"itemImg": [
+							"IMAGES/pro-img/6398612_bd.png",
+							"IMAGES/pro-img/6398612_sd.jpeg",
+							"IMAGES/pro-img/6398612cv2d.jpeg",
+							"IMAGES/pro-img/6398612cv11d.jpeg"
+						],
+						"description1": "iPhone Xs Max - White",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "782919",
+					"itemInfo": {
+						"name": "iPhone Xs Max",
+						"itemImg": [
+							"IMAGES/pro-img/6398614_sd.png",
+							"IMAGES/pro-img/6398614cv2d.jpeg",
+							"IMAGES/pro-img/6398614_bd.jpeg"
+						],
+						"description1": "iPhone Xs Max - Black",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "849193",
+					"itemInfo": {
+						"name": "iPhone Xr",
+						"itemImg": [
+							"IMAGES/pro-img/6398621_bd.png",
+							"IMAGES/pro-img/6398621_sd.jpeg",
+							"IMAGES/pro-img/6398621cv2d.jpeg"
+						],
+						"description1": "iPhone Xr - White",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "68291",
+					"itemInfo": {
+						"name": "iPhone 12 Pro Max",
+						"itemImg": [
+							"IMAGES/pro-img/6443098_sd.png",
+							"IMAGES/pro-img/6443098cv11d.jpeg",
+							"IMAGES/pro-img/6443098cv12d.jpeg",
+							"IMAGES/pro-img/6443098cv13d.jpeg"
+						],
+						"description1": "iPhone 12 Pro Max - Space Grey",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "94901",
+					"itemInfo": {
+						"name": "iPhone 12 Pro Max",
+						"itemImg": [
+							"IMAGES/pro-img/6443100_sd.png",
+							"IMAGES/pro-img/6443100cv11d.jpeg",
+							"IMAGES/pro-img/6443100cv12d.jpeg",
+							"IMAGES/pro-img/6443100cv13d.jpeg"
+						],
+						"description1": "iPhone 12 Pro Max - Gold",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "948992",
+					"itemInfo": {
+						"name": "iPhone 12 Pro Max",
+						"itemImg": [
+							"IMAGES/pro-img/6443101_sd.png",
+							"IMAGES/pro-img/6443101cv11d.jpeg",
+							"IMAGES/pro-img/6443101cv12d.jpeg",
+							"IMAGES/pro-img/6443101cv13d.jpeg"
+						],
+						"description1": "iPhone 12 Pro Max - Blue",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "974829",
+					"itemInfo": {
+						"name": "iPhone 12 Pro Max",
+						"itemImg": [
+							"IMAGES/pro-img/6443289_sd.png",
+							"IMAGES/pro-img/6443289cv11d.jpeg",
+							"IMAGES/pro-img/6443289cv12d.jpeg",
+							"IMAGES/pro-img/6443289cv13d.jpeg"
+						],
+						"description1": "iPhone 12 Pro Max - Deep Blue",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "47291",
+					"itemInfo": {
+						"name": "iPhone 12 Pro Max",
+						"itemImg": [
+							"IMAGES/pro-img/6487231_sd.png",
+							"IMAGES/pro-img/6487231ld.jpeg",
+							"IMAGES/pro-img/6487231_bd.jpeg"
+						],
+						"description1": "iPhone 12 Pro Max - Red",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "94918",
+					"itemInfo": {
+						"name": "iPhone 14",
+						"itemImg": [
+							"IMAGES/pro-img/6487243_sd.png",
+							"IMAGES/pro-img/6487243cv2d.jpeg",
+							"IMAGES/pro-img/6487243ld.jpeg",
+							"IMAGES/pro-img/iphone3.webp",
+							"IMAGES/pro-img/iphone3.webp"
+						],
+						"description1": "iPhone 14 Plus - Grey",
+						"description2": "",
+						"newItemPrice": "520",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "128",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "48719",
+					"itemInfo": {
+						"name": "iPhone 13",
+						"itemImg": [
+							"IMAGES/pro-img/6487295_sd.png",
+							"IMAGES/pro-img/6487295cv1d.jpeg",
+							"IMAGES/pro-img/6487295cv2d.jpeg",
+							"IMAGES/pro-img/6487295cv11d.jpeg"
+						],
+						"description1": "iPhone 13 - Green",
+						"description2": "",
+						"newItemPrice": "950",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Apple",
+						"memory": "256",
+						"category": "Cellphones",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
 					"id": "47092",
 					"itemInfo": {
 						"name": "iPhone 12",
@@ -874,392 +1260,7 @@
 						"aom": "🌑"
 					}
 				},
-				{
-					"id": "57108",
-					"itemInfo": {
-						"name": "iPhone 13",
-						"itemImg": [
-							"IMAGES/pro-img/6009728_sd.png",
-							"IMAGES/pro-img/6009728cv11d.jpeg",
-							"IMAGES/pro-img/6009728cv12d.jpeg"
-						],
-						"description1": "iPhone 13 - White",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "72910",
-					"itemInfo": {
-						"name": "iPhone 13 Pro",
-						"itemImg": [
-							"IMAGES/pro-img/6009823_sd.png",
-							"IMAGES/pro-img/6009823cv11d.jpeg",
-							"IMAGES/pro-img/6009823cv12d.jpeg"
-						],
-						"description1": "iPhone 13 Pro - Space Grey",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "Space Grey",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "48291",
-					"itemInfo": {
-						"name": "iPhone 13 Pro",
-						"itemImg": [
-							"IMAGES/pro-img/6341308cv12d.png",
-							"IMAGES/pro-img/6341308_sd.jpeg",
-							"IMAGES/pro-img/6341308cv15d.jpeg"
-						],
-						"description1": "iPhone 13 Pro - Gold",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "470183",
-					"itemInfo": {
-						"name": "iPhone 11 Pro Max",
-						"itemImg": [
-							"IMAGES/pro-img/6341561cv12d.png",
-							"IMAGES/pro-img/6341561cv11d.jpeg",
-							"IMAGES/pro-img/6341561_sd.jpeg"
-						],
-						"description1": "iPhone 11 Pro Max - Space Grey",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
 
-				{
-					"id": "79174",
-					"itemInfo": {
-						"name": "iPhone 11",
-						"itemImg": [
-							"IMAGES/pro-img/6510048cv2d.png",
-							"IMAGES/pro-img/6510048cv1d.jpeg",
-							"IMAGES/pro-img/6510048_sd.jpeg",
-							"IMAGES/pro-img/6510048_rd.jpeg"
-						],
-						"description1": "iPhone 11 - Black",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-
-				{
-					"id": "928812",
-					"itemInfo": {
-						"name": "iPhone Xs Max",
-						"itemImg": [
-							"IMAGES/pro-img/6398612_bd.png",
-							"IMAGES/pro-img/6398612_sd.jpeg",
-							"IMAGES/pro-img/6398612cv2d.jpeg",
-							"IMAGES/pro-img/6398612cv11d.jpeg"
-						],
-						"description1": "iPhone Xs Max - White",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "782919",
-					"itemInfo": {
-						"name": "iPhone Xs Max",
-						"itemImg": [
-							"IMAGES/pro-img/6398614_sd.png",
-							"IMAGES/pro-img/6398614cv2d.jpeg",
-							"IMAGES/pro-img/6398614_bd.jpeg"
-						],
-						"description1": "iPhone Xs Max - Black",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "849193",
-					"itemInfo": {
-						"name": "iPhone Xr",
-						"itemImg": [
-							"IMAGES/pro-img/6398621_bd.png",
-							"IMAGES/pro-img/6398621_sd.jpeg",
-							"IMAGES/pro-img/6398621cv2d.jpeg"
-						],
-						"description1": "iPhone Xr - White",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "68291",
-					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
-						"itemImg": [
-							"IMAGES/pro-img/6443098_sd.png",
-							"IMAGES/pro-img/6443098cv11d.jpeg",
-							"IMAGES/pro-img/6443098cv12d.jpeg",
-							"IMAGES/pro-img/6443098cv13d.jpeg"
-						],
-						"description1": "iPhone 12 Pro Max - Space Grey",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "94901",
-					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
-						"itemImg": [
-							"IMAGES/pro-img/6443100_sd.png",
-							"IMAGES/pro-img/6443100cv11d.jpeg",
-							"IMAGES/pro-img/6443100cv12d.jpeg",
-							"IMAGES/pro-img/6443100cv13d.jpeg"
-						],
-						"description1": "iPhone 12 Pro Max - Gold",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "948992",
-					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
-						"itemImg": [
-							"IMAGES/pro-img/6443101_sd.png",
-							"IMAGES/pro-img/6443101cv11d.jpeg",
-							"IMAGES/pro-img/6443101cv12d.jpeg",
-							"IMAGES/pro-img/6443101cv13d.jpeg"
-						],
-						"description1": "iPhone 12 Pro Max - Blue",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "974829",
-					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
-						"itemImg": [
-							"IMAGES/pro-img/6443289_sd.png",
-							"IMAGES/pro-img/6443289cv11d.jpeg",
-							"IMAGES/pro-img/6443289cv12d.jpeg",
-							"IMAGES/pro-img/6443289cv13d.jpeg"
-						],
-						"description1": "iPhone 12 Pro Max - Deep Blue",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "47291",
-					"itemInfo": {
-						"name": "iPhone 12 Pro Max",
-						"itemImg": [
-							"IMAGES/pro-img/6487231_sd.png",
-							"IMAGES/pro-img/6487231ld.jpeg",
-							"IMAGES/pro-img/6487231_bd.jpeg"
-						],
-						"description1": "iPhone 12 Pro Max - Red",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "94918",
-					"itemInfo": {
-						"name": "iPhone 14",
-						"itemImg": [
-							"IMAGES/pro-img/6487243_sd.png",
-							"IMAGES/pro-img/6487243cv2d.jpeg",
-							"IMAGES/pro-img/6487243ld.jpeg",
-							"IMAGES/pro-img/iphone3.webp",
-							"IMAGES/pro-img/iphone3.webp"
-						],
-						"description1": "iPhone 14 Plus - Grey",
-						"description2": "",
-						"newItemPrice": "520",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "128",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "48719",
-					"itemInfo": {
-						"name": "iPhone 13",
-						"itemImg": [
-							"IMAGES/pro-img/6487295_sd.png",
-							"IMAGES/pro-img/6487295cv1d.jpeg",
-							"IMAGES/pro-img/6487295cv2d.jpeg",
-							"IMAGES/pro-img/6487295cv11d.jpeg"
-						],
-						"description1": "iPhone 13 - Green",
-						"description2": "",
-						"newItemPrice": "950",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Apple",
-						"memory": "256",
-						"category": "Cellphones",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
 				{
 					"id": "99918",
 					"itemInfo": {
