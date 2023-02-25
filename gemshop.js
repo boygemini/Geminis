@@ -709,7 +709,7 @@ const openFilter = () => {
 const closeFilter = () => {
 	filterContainer1.style.display = "none";
 	document.lastChild.style.overflow = "scroll";
-	applyFilterReloadPage();
+	// applyFilterReloadPage();
 };
 
 const applyFilter = document.querySelectorAll("#apply");
