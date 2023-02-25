@@ -70,8 +70,6 @@ const loadThumbnails = () => {
 	price.innerText = Item.itemInfo.newItemPrice;
 	firstBigImg.style.backgroundImage = `url(${Item.itemInfo.itemImg[0]})`;
 	secondBigImg.src = Item.itemInfo.itemImg[0];
-	// secondBigImg.style.display = "block";
-	// firstBigImg.style.display = "flex";
 
 	for (let i in thumbnails) {
 		document.getElementById(
@@ -282,6 +280,9 @@ const indicateActiveThumbNail = (event) => {
 	thumbNails.forEach((tb) => tb.classList.remove("tbnactive"));
 	if (event.target.className === "tbcon") {
 		event.target.classList.add("tbnactive");
+		counter = clickedThumbnailId;
+	} else if (event.target.parentNode.className === "tbcon") {
+		event.target.parentNode.classList.add("tbnactive");
 		counter = clickedThumbnailId;
 	} else {
 		thumbNails[counter].classList.add("tbnactive");

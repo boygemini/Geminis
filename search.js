@@ -70,15 +70,9 @@ const showSuggesttions = (event) => {
 let suggestionBox = document.querySelector(".searchcontainer");
 let allMenu = [...document.querySelectorAll("li")];
 
-allMenu.forEach((menu) => {
-	menu.addEventListener("click", (event) => {
-		event.stopPropagation();
-	});
-});
 const openSearch = () => {
 	suggestionBox.classList.add("searchfadein");
 	suggestionBox.style.display = "flex";
-	let searchBox = document.getElementById("search");
 	setTimeout(() => {
 		suggestionBox.classList.remove("searchfadein");
 		document.lastChild.style.overflow = "hidden";
@@ -237,26 +231,33 @@ class getResults {
 		</div>`;
 		document.getElementById("filter").style.display = "none";
 		document.querySelector(".sort-hol").style.display = "none";
+		document.querySelector(".res-sort").style.display = "none";
 		document.querySelector(".pgd").style.display = "none";
 		document.querySelector(".littlebans").style.display = "none";
-		document.getElementById("footer").style.position = "relative";
+		document.querySelector(".banner-container").style.display = "none";
+		document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
+		document.getElementById("footer").style.position = "absolute";
 		document.getElementById("footer").style.bottom = "0";
+
 		showBox.classList.remove("showboxgrid");
 	}
 
 	static positiveResults() {
 		document.getElementById("filter").style.display = "";
+		document.querySelector(".res-sort").style.display = "";
+		document.getElementById("filter").style.display = "";
 		document.querySelector(".sort-hol").style.display = "";
 		document.querySelector(".pgd").style.display = "";
 		document.querySelector(".littlebans").style.display = "";
 		document.getElementById("footer").style.position = "";
+		document.getElementById("bodyy").style.backgroundColor = "";
 		document.getElementById("footer").style.bottom = "0";
 		showBox.classList += " showboxgrid";
 	}
 
 	static pageNotFound() {
 		document.querySelector(".banner-container").style.display = "none";
-		document.getElementById("bodyy").style.backgroundColor = "whitesmoke";
+		document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
 		document.getElementById("footer").style.position = "absolute";
 		document.getElementById("footer").style.bottom = "0";
 		document.querySelector(
@@ -502,9 +503,16 @@ function createPagination(results, numberOnEachPage, pageNumber) {
 
 	// Just in case someone altered the page number from the url
 	if (!paginatedResult[pageNumber]) {
-		document.getElementById("showbox").innerHTML = `<div class="noresult">
-					<h1 class = "cat-head" > This page is empty </h1>  <p>Try checking your spelling or use more general terms</p >
-					</div>`;
+		document.querySelector(".banner-container").style.display = "none";
+		document.getElementById("bodyy").style.backgroundColor = "whitesmoke";
+		document.getElementById("footer").style.position = "absolute";
+		document.getElementById("footer").style.bottom = "0";
+		document.querySelector(".shop-body").innerHTML = `<div class="noresult">
+			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> This Page is Empty </h1><p>Try checking your spelling or use more general terms</p></div>
+			<span>Go back to</span>
+			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtohome'>Market Area</a></div>
+		</div>`;
+		document.querySelector(".pagindiv").style.display = "none";
 	}
 
 	// Pagination UI

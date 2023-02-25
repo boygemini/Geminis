@@ -1114,7 +1114,7 @@ p span {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	row-gap: 20px;
+	row-gap: 40px;
 }
 
 #showbox {
@@ -1125,7 +1125,7 @@ p span {
 	display: flex;
 	flex-direction: row;
 	column-gap: 20px;
-	row-gap: 20px;
+	row-gap: 50px;
 	flex-wrap: wrap;
 }
 
@@ -1226,7 +1226,7 @@ p span {
 
 .section-title {
 	width: 100%;
-	padding: 30px 0px;
+	padding: 10px 0px;
 	border-radius: 3px;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -1239,9 +1239,7 @@ p span {
 	row-gap: 10px;
 	border-bottom: 1px solid #111111b4;
 	border-radius: 0;
-	position: sticky;
-	top: 0;
-	z-index: 1;
+	/* z-index: 1; */
 	background-color: white;
 }
 
@@ -1300,9 +1298,8 @@ p span {
 }
 
 #nores-h1 {
-	font-size: 40px;
 	padding: 0;
-	text-align: right;
+	text-align: center;
 }
 
 .noresult span {
@@ -1327,6 +1324,7 @@ p span {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	row-gap: 5px;
 }
 
 .noresultbuttons {
@@ -1370,7 +1368,7 @@ p span {
 
 .notfound {
 	height: 100%;
-	padding: 50px;
+	padding: 20px;
 }
 
 .cat-head {
@@ -1899,6 +1897,18 @@ footer {
 @media screen and (max-width: 768px) {
 	*::-webkit-scrollbar {
 		display: none;
+	}
+
+	.available-items {
+		row-gap: 20px;
+	}
+
+	.section-title {
+		margin-top: 70px;
+	}
+
+	.fir-sec {
+		margin-top: 20px;
 	}
 
 	.notify-box {

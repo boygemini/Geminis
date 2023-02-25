@@ -7,15 +7,20 @@ webPage.style.transition = "1s ease-in-out";
 const allSecTitle = [...document.querySelectorAll(".section-title")];
 window.addEventListener("scroll", (e) => {
 	allSecTitle.forEach((tit) => {
-		if (tit.getBoundingClientRect().top === 0) {
-			tit.style.padding = "10px 0px";
+		if (tit.getBoundingClientRect().top <= 0) {
+			tit.style.position = "sticky";
+			tit.style.top = "0";
+			tit.style.zIndex = "1";
+			// tit.style.boxShadow = "0px 10px 50px -20px grey";
 			tit.style.borderBottom = "transparent";
 		}
 
 		if (tit.getBoundingClientRect().top > 0) {
-			tit.style.padding = "30px 0px";
 			tit.style.boxShadow = "";
 			tit.style.border = "";
+			tit.style.position = "";
+			tit.style.top = "";
+			tit.style.zIndex = "";
 		}
 	});
 });
@@ -1366,7 +1371,7 @@ const openMenu = () => {
 const closeMenu = () => {
 	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
 	setTimeout(() => (menuDOM.style.display = "none"), 450);
-	document.lastChild.style.overflow = "scroll"; // Enables the window scrolling
+	document.lastChild.style.overflow = ""; // Enables the window scrolling
 };
 
 // CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
