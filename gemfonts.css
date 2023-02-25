@@ -192,11 +192,6 @@ a {
 	font-weight: 400;
 	font-size: 0.95rem;
 	scroll-behavior: smooth;
-	transition: all 0.2s ease-in-out;
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-ms-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
 	outline: none;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
