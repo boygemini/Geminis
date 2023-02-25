@@ -663,6 +663,14 @@ if (document.lastChild.offsetWidth <= 768) {
 // 	}
 // });
 
+const applyFilterReloadPage = () => {
+	let queryUrlFromLocalStorage = localStorage.getItem("Url");
+	window.location.href = queryUrlFromLocalStorage;
+	if (document.lastChild.offsetWidth <= 768) {
+		filterContainer1.style.display = "none";
+	}
+};
+
 const openFilter = () => {
 	// Ipads
 	if (
@@ -701,17 +709,12 @@ const openFilter = () => {
 const closeFilter = () => {
 	filterContainer1.style.display = "none";
 	document.lastChild.style.overflow = "scroll";
+	applyFilterReloadPage();
 };
 
 const applyFilter = document.querySelectorAll("#apply");
 applyFilter.forEach((applyBtn) => {
-	applyBtn.onclick = function () {
-		let queryUrlFromLocalStorage = localStorage.getItem("Url");
-		window.location.href = queryUrlFromLocalStorage;
-		if (document.lastChild.offsetWidth <= 768) {
-			filterContainer1.style.display = "none";
-		}
-	};
+	applyBtn.addEventListener("click", applyFilterReloadPage);
 });
 
 // const phonesBrandCheck = (apple, brand) => {
