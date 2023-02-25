@@ -52,32 +52,19 @@ window.addEventListener("click", (e) => {
 });
 
 // GRIDS
-// const grids = [...document.querySelectorAll(".shade")];
-// const gridTextDOM = document.querySelectorAll(".cat-text");
-// let headerTextHeight;
-// gridTextDOM.forEach((grid) => {
-// 	headerTextHeight = grid.childNodes[1].scrollHeight;
-// 	grid.style.height = headerTextHeight + "px";
-// });
-
-// for (let i in grids) {
-// 	grids[i].addEventListener(
-// 		"mousemove",
-// 		(e) => {
-// 			gridTextDOM[i].style.height = `${gridTextDOM[i].scrollHeight}px`;
-// 		},
-// 		false
-// 	);
-
-// 	grids[i].addEventListener(
-// 		"mouseout",
-// 		(e) => {
-// 			gridTextDOM[i].style.height =
-// 				grids[i].childNodes[1].childNodes[1].scrollHeight + "px";
-// 		},
-// 		false
-// 	);
-// }
+const grids = [...document.querySelectorAll(".shade")];
+const gridTextDOM = document.querySelectorAll(".cat-text");
+if (document.lastChild.offsetWidth > 768) {
+	grids[2].parentElement.style.width = "100%";
+	grids.forEach((grid) => {
+		grid.addEventListener("mouseover", (e) => {
+			for (let i in grids) {
+				grids[i].parentElement.style.width = "10%";
+			}
+			grid.parentElement.style.width = "100%";
+		});
+	});
+}
 
 // ITEMS STORAGE AND DISPLAY
 let itemName = document.querySelectorAll("#itemName"),
