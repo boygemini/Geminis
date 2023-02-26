@@ -98,14 +98,23 @@ const popupNotification = (itemName, itemImage) => {
 class Products {
 	// LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
 	static selectedForYou() {
-		let product_request = new XMLHttpRequest();
-		product_request.open("GET", "product.json", false);
-		product_request.onload = function () {
-			if (product_request.status === 200) {
-				localStorage.StoreItems = this.responseText;
-			}
-		};
-		product_request.send();
+		return new Promise((resolve, reject) => {
+			resolve(
+				fetch("product.json", {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json",
+					},
+				})
+					.then((response) => {
+						return response.json();
+					})
+					.then((products) => {
+						localStorage.setItem("StoreItems", JSON.stringify(products));
+						return products;
+					})
+			);
+		});
 	}
 
 	// RETRIEVE ALL ITEMS FROM LOCAL STORAGE

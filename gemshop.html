@@ -3,10 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="shop" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Shop</title>
-		<link rel="stylesheet" href="gemshop.css" />
-		<link rel="stylesheet" href="gemfonts.css" />
+		<link rel="stylesheet" href="gemshop.css" preload />
+		<link rel="stylesheet" href="gemfonts.css" preload />
 		<script src="gemshop.js" defer></script>
 		<script src="search.js" defer></script>
 		<script src="filters.js" defer></script>
@@ -47,9 +48,9 @@
 						<div class="products">
 							<div class="main-links">
 								<a id="games" href="gemshop.html">Shop</a>
-								<a id="phones">Products</a>
-								<a id="coms">About Us</a>
-								<a id="spks">Contact Us</a>
+								<a id="phones" href="#">Products</a>
+								<a id="coms" href="#">About Us</a>
+								<a id="spks" href="#">Contact Us</a>
 							</div>
 						</div>
 					</nav>
@@ -98,27 +99,27 @@
 						<div class="menu-cat">
 							<h1>Shop By Department</h1>
 							<div id="kk">
-								<a>Cell Phones</a>
-								<a>Televisions</a>
-								<a>Laptops & Computers</a>
-								<a>Speakers</a>
-								<a>Video Games</a>
+								<a href="#"> Cell Phones</a>
+								<a href="#"> Televisions</a>
+								<a href="#"> Laptops & Computers</a>
+								<a href="#"> Speakers</a>
+								<a href="#"> Video Games</a>
 							</div>
 						</div>
 						<div class="menu-cat">
 							<h1>Sections</h1>
 							<div id="kk">
 								<a id="link" href="gemshop.html">Shop</a>
-								<a>Products</a>
-								<a>About Us</a>
-								<a>Contact Us</a>
+								<a href="#"> Products</a>
+								<a href="#"> About Us</a>
+								<a href="#"> Contact Us</a>
 							</div>
 						</div>
 						<div class="menu-cat">
 							<h1>Support</h1>
 							<div id="kk">
-								<a>Visit Our Support</a>
-								<a>Online Support</a>
+								<a href="#"> Visit Our Support</a>
+								<a href="#"> Online Support</a>
 							</div>
 						</div>
 						<div class="menu-cat">
@@ -221,7 +222,14 @@
 									</select>
 								</div>
 
-								<button onclick="openFilter()" id="fbtn">
+								<button
+									onclick="openFilter()"
+									id="fbtn"
+									type="button"
+									name="button"
+									aria-label="button"
+									aria-labelledby="button"
+								>
 									<img src="IMAGES/filter.png" alt="" />
 								</button>
 							</div>
@@ -237,7 +245,14 @@
 							</div>
 							<div class="filterss" id="filters"></div>
 							<div class="apply">
-								<button class="" id="apply">Apply Filter</button>
+								<button
+									class=""
+									id="apply"
+									aria-label="button"
+									aria-labelledby="button"
+								>
+									Apply Filter
+								</button>
 							</div>
 						</div>
 					</div>
@@ -328,7 +343,7 @@
 		<footer id="footer">
 			<h1>
 				Shop by
-				<a href="http://" target="_blank" rel="noopener noreferrer"
+				<a href="#" target="_blank" rel="noopener noreferrer"
 					>jubril bolajoko</a
 				>
 			</h1>

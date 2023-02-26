@@ -2330,8 +2330,8 @@ footer {
 	.sel-box {
 		min-width: 45vw;
 		max-width: 45vw;
-		min-height: 350px;
-		max-height: 350px;
+		min-height: 320px;
+		max-height: 320px;
 		row-gap: 0px;
 		padding: 0px;
 		padding-bottom: 10px;
@@ -2347,10 +2347,10 @@ footer {
 	.item-description {
 		/* background-color: #00534b8a; */
 		white-space: wrap;
-		max-height: 40px;
-		min-height: 40px;
+		max-height: 20px;
+		min-height: 20px;
 		display: -webkit-box;
-		-webkit-line-clamp: 2;
+		-webkit-line-clamp: 1;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 		text-overflow: ellipsis;

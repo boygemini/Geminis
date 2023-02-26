@@ -7,21 +7,16 @@ SEARCH AND SEARCH SUGGESTIONS
 */
 
 //Variables
-// const allAnchorTags = [...document.querySelectorAll("a")];
-// allAnchorTags.forEach((tag) => {
-// 	tag.addEventListener("click", (event) => {
-// 		event.preventDefault();
-// 		event.stopImmediatePropagation();
-// 		// window.location.href = tag.href;
-// 	});
-// });
 
-let dir2 = JSON.parse(localStorage.getItem("StoreItems"));
+let allProducts = JSON.parse(localStorage.getItem("StoreItems"));
 let hs = document.getElementById("hold");
 let search = document.getElementById("search");
 let go = document.getElementById("GO");
-let dir = dir2.selectedProducts[0];
 let displaybox = document.querySelector(".sug-holder");
+let dir;
+try {
+	dir = allProducts.selectedProducts[0];
+} catch (error) {}
 
 //Function
 

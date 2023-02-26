@@ -931,6 +931,7 @@ p span {
 #all-category {
 	background-color: #111111;
 	color: white;
+	letter-spacing: 0.5px;
 }
 
 /* The container */
@@ -1245,7 +1246,7 @@ p span {
 	border-bottom: 1px solid #111111b4;
 	border-radius: 0;
 	/* z-index: 1; */
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.462);
 }
 
 /* #sec-name-cellphones,
@@ -2152,12 +2153,11 @@ footer {
 	.sel-box {
 		min-width: 45vw;
 		max-width: 45vw;
-		min-height: 350px;
-		max-height: 350px;
+		min-height: 320px;
+		max-height: 320px;
 		row-gap: 0px;
 		padding: 0px;
 		padding-bottom: 10px;
-		background-color: transparent;
 	}
 
 	.sell-box {
@@ -2168,12 +2168,19 @@ footer {
 		padding: 10px;
 	}
 
+	.item-description {
+		max-height: 20px;
+		min-height: 20px;
+		-webkit-line-clamp: 1;
+	}
+
 	.price-box {
 		display: flex;
 		flex-direction: column;
 		row-gap: 2px;
 		align-items: flex-start;
 		padding-left: 10px;
+		bottom: 5px;
 	}
 
 	.cart-btn {
@@ -2275,7 +2282,7 @@ footer {
 
 	.view-all {
 		text-align: center;
-		font-family: "Open Sans", Helvetica;
+		/* font-family: "Open Sans", Helvetica; */
 		text-transform: uppercase;
 	}
 
@@ -2390,16 +2397,6 @@ footer {
 
 	.fitlers2 {
 		display: none;
-	}
-
-	.sel-box {
-		min-width: 45vw;
-		max-width: 45vw;
-		min-height: 350px;
-		max-height: 350px;
-		row-gap: 0px;
-		padding: 0px;
-		padding-bottom: 10px;
 	}
 }
 

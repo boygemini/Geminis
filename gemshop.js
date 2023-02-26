@@ -8,14 +8,25 @@ const allSecTitle = [...document.querySelectorAll(".section-title")];
 window.addEventListener("scroll", (e) => {
 	allSecTitle.forEach((tit) => {
 		if (tit.getBoundingClientRect().top <= 0) {
+			// tit.style.boxShadow = "0px 10px 50px -20px grey";
+
+			if (document.lastChild.offsetWidth < 769) {
+				tit.children[1].style.fontSize = "12px";
+				tit.children[0].style.fontSize = "23px";
+			}
 			tit.style.position = "sticky";
 			tit.style.top = "0";
 			tit.style.zIndex = "1";
-			// tit.style.boxShadow = "0px 10px 50px -20px grey";
 			tit.style.borderBottom = "transparent";
+			tit.children[1].style.boxShadow = "#00000059 0px 6px 16px 0px";
 		}
 
 		if (tit.getBoundingClientRect().top > 0) {
+			if (document.lastChild.offsetWidth < 769) {
+				tit.children[1].style.fontSize = "14px";
+				tit.children[0].style.fontSize = "";
+			}
+			tit.children[1].style.boxShadow = "";
 			tit.style.boxShadow = "";
 			tit.style.border = "";
 			tit.style.position = "";
@@ -441,30 +452,33 @@ let currentItemsOnDisplay;
 class Products {
 	//LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
 	static saveItems() {
-		let req = new XMLHttpRequest();
-		req.open("GET", "product.json", false);
-		req.onload = function () {
-			if (req.status === 200) {
-				if (localStorage.StoreItems) {
-					localStorage.setItem("StoreItems", this.responseText);
-				} else {
-					localStorage.StoreItems = this.responseText;
-				}
-			}
-		};
-		req.send();
+		return new Promise((resolve, reject) => {
+			resolve(
+				fetch("product.json", {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json",
+					},
+				})
+					.then((response) => {
+						return response.json();
+					})
+					.then((products) => {
+						localStorage.setItem("StoreItems", JSON.stringify(products));
+						return products;
+					})
+			);
+		});
 	}
 
 	//RETRIEVE ALL ITEMS FROM LOCAL STORAGE
-	static getAllItems() {
+	static async getAllItems() {
 		return JSON.parse(localStorage.StoreItems);
 	}
 }
 
 //Fetch All Items and store them
 Products.saveItems();
-let productRoute = Products.getAllItems().selectedProducts[0];
-
 const placeFilterUI = (filterNode1, filterNode2, filterUI) => {
 	if (
 		document.lastChild.offsetWidth > 768 &&
@@ -506,7 +520,7 @@ class display {
 	static allUI(directory, category, boxID) {
 		let y = "";
 		if (directory.length > 0) {
-			for (let k = 0; k < 10; k++) {
+			for (let k = 0; k < 12; k++) {
 				y += `
 			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id}>
 
@@ -559,9 +573,9 @@ class display {
 		}
 	}
 
-	static displayAll() {
+	static async displayAll() {
 		let sortDOM = document.getElementById("res-sort");
-		let dir2 = JSON.parse(localStorage.getItem("StoreItems"));
+		let dir2 = await Products.saveItems();
 		let dir = dir2.selectedProducts[0];
 		this.allUI(dir.cellphones, "sec-name-cellphones", "cellphones");
 		this.allUI(dir.gaming, "sec-name-gaming", "gamings");
@@ -571,7 +585,7 @@ class display {
 		sortDOM.style.display = "none";
 	}
 }
-// display.displayAll()
+// display.displayAll();
 
 const emptyParameters = () => {
 	let Parameters = {
