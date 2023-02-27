@@ -907,6 +907,7 @@ allCartText.forEach((txt) => {
 // OPEN MENU
 const menuDOM = document.getElementById("menu");
 const menuBtn = document.getElementById("mb");
+const allSecTitle = [...document.querySelectorAll(".section-title")];
 menuDOM.style.display = "none";
 
 const openMenu = () => {
@@ -917,6 +918,9 @@ const openMenu = () => {
 	}
 	menuDOM.style.display = "block";
 	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
+	allSecTitle.forEach((st) => {
+		st.style.zIndex = "0";
+	});
 };
 
 // CLOSE MENU
@@ -924,6 +928,9 @@ const closeMenu = () => {
 	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
 	setTimeout(() => (menuDOM.style.display = "none"), 400);
 	document.lastChild.style.overflow = ""; // Enables the window scrolling
+	allSecTitle.forEach((st) => {
+		st.style.zIndex = "";
+	});
 };
 
 // CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED

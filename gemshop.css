@@ -2207,6 +2207,7 @@ footer {
 	.section-title {
 		position: sticky;
 		top: 0;
+		z-index: 1;
 	}
 
 	.section-title button {
