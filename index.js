@@ -118,25 +118,31 @@ class Products {
 	}
 
 	// RETRIEVE ALL ITEMS FROM LOCAL STORAGE
-	static getSelectedProducts() {
-		return JSON.parse(localStorage.StoreItems);
+	static async getSelectedProducts() {
+		let products = await Products.selectedForYou();
+		return products;
 	}
 }
 
+Products.getSelectedProducts();
+
 class Storage {
 	// RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS
-	static getAllProducts() {
-		return JSON.parse(localStorage.getItem("StoreItems"));
+	static async getAllProducts() {
+		let products = await Products.selectedForYou();
+		return products;
 	}
 
 	// RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS
-	static getRecentItems() {
-		return this.getAllProducts().recentlyAdded;
+	static async getRecentItems() {
+		let products = await Products.selectedForYou();
+		return products.recentlyAdded;
 	}
 
 	// RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS
-	static weeklyFeaturedItems() {
-		return this.getAllProducts().WeeklyFeatured;
+	static async weeklyFeaturedItems() {
+		let products = await Products.selectedForYou();
+		return products.WeeklyFeatured;
 	}
 
 	// SAVE ITEMS TO CART
@@ -322,20 +328,77 @@ class displayProduct {
 
 // DISPLAY SELECTED PRODUCTS
 Products.selectedForYou();
+(async () => {
+	let products = await Products.selectedForYou();
+	// DISPLAY RECENT PRODUCTS
+	displayProduct.displayRecentItems(products.recentlyAdded);
 
-// DISPLAY RECENT PRODUCTS
-displayProduct.displayRecentItems(Storage.getRecentItems());
+	// DISPLAYS CELLPHONE ITEMS BY DEFAULT
+	displayProduct.createItem(
+		event,
+		"#sel-container",
+		products.selectedProducts[0].cellphones,
+		"cellphones"
+	);
 
-// DISPLAYS GAMING ITEMS BY DEFAULT
-displayProduct.createItem(
-	event,
-	"#sel-container",
-	Products.getSelectedProducts().selectedProducts[0].cellphones,
-	"cellphones"
-);
+	// DISPLAY WEEKLY PRODUCTS
+	displayProduct.displayWeeklyFeatured(products.WeeklyFeatured);
+})();
 
-// DISPLAY WEEKLY PRODUCTS
-displayProduct.displayWeeklyFeatured(Storage.weeklyFeaturedItems());
+let cellPhoneTab = document.getElementById("cellphones");
+cellPhoneTab.addEventListener("click", async (e) => {
+	let products = await Products.selectedForYou();
+	displayProduct.createItem(
+		event,
+		"#sel-container",
+		products.selectedProducts[0].cellphones,
+		"cellphones"
+	);
+});
+
+let gamingTab = document.getElementById("gaming");
+gamingTab.addEventListener("click", async (e) => {
+	let products = await Products.selectedForYou();
+	displayProduct.createItem(
+		event,
+		"#sel-container",
+		products.selectedProducts[0].gaming,
+		"gaming"
+	);
+});
+
+let speakersTab = document.getElementById("speakers");
+speakersTab.addEventListener("click", async (e) => {
+	let products = await Products.selectedForYou();
+	displayProduct.createItem(
+		event,
+		"#sel-container",
+		products.selectedProducts[0].speakers,
+		"speakers"
+	);
+});
+
+let computersTab = document.getElementById("computers");
+computersTab.addEventListener("click", async (e) => {
+	let products = await Products.selectedForYou();
+	displayProduct.createItem(
+		event,
+		"#sel-container",
+		products.selectedProducts[0].computers,
+		"computers"
+	);
+});
+
+let tvTab = document.getElementById("tv");
+tvTab.addEventListener("click", async (e) => {
+	let products = await Products.selectedForYou();
+	displayProduct.createItem(
+		event,
+		"#sel-container",
+		products.selectedProducts[0].tv,
+		"tv"
+	);
+});
 
 // SELECTED FOR YOU SLIDER
 let holder = document.getElementById("sel-holder");

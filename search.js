@@ -1,22 +1,32 @@
 "use strict";
 
-/*
+const allProducts = new Promise((resolve, reject) => {
+	resolve(
+		fetch("product.json", {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => {
+				return response.json();
+			})
+			.then((products) => {
+				localStorage.setItem("StoreItems", JSON.stringify(products));
+				return products;
+			})
+	);
+});
 
-SEARCH AND SEARCH SUGGESTIONS
+const allSelectedProduct = async () => {
+	let m = await allProducts;
+	return m.selectedProducts[0];
+};
 
-*/
-
-//Variables
-
-let allProducts = JSON.parse(localStorage.getItem("StoreItems"));
 let hs = document.getElementById("hold");
 let search = document.getElementById("search");
 let go = document.getElementById("GO");
 let displaybox = document.querySelector(".sug-holder");
-let dir;
-try {
-	dir = allProducts.selectedProducts[0];
-} catch (error) {}
 
 //Function
 
@@ -26,11 +36,11 @@ const showSuggesttions = (event) => {
 	let sugResult = [];
 	let sugCategory = ["Gaming", "Cellphones", "Speakers", "Computers", "TV"];
 	let sugDirectory = [
-		dir.gaming,
-		dir.cellphones,
-		dir.speakers,
-		dir.computers,
-		dir.tv,
+		allSelectedProduct().gaming,
+		allSelectedProduct().cellphones,
+		allSelectedProduct().speakers,
+		allSelectedProduct().computers,
+		allSelectedProduct().tv,
 	];
 
 	sugDirectory.forEach((subDirectory) =>
@@ -360,21 +370,37 @@ const displayFiltereddResults = (results, category) => {
 
 const getCatFiltersAndSearchResults = (Query, Category) => {
 	let gamekey = [
-		...new Set(dir["gaming"].map((itemName) => itemName.itemInfo.name)),
+		...new Set(
+			allSelectedProduct()["gaming"].map((itemName) => itemName.itemInfo.name)
+		),
 	];
 
 	let phonekey = [
-		...new Set(dir["cellphones"].map((itemName) => itemName.itemInfo.name)),
+		...new Set(
+			allSelectedProduct()["cellphones"].map(
+				(itemName) => itemName.itemInfo.name
+			)
+		),
 	];
 
-	let tvkey = [...new Set(dir["tv"].map((itemName) => itemName.itemInfo.name))];
+	let tvkey = [
+		...new Set(
+			allSelectedProduct()["tv"].map((itemName) => itemName.itemInfo.name)
+		),
+	];
 
 	let speakerkey = [
-		...new Set(dir["speakers"].map((itemName) => itemName.itemInfo.name)),
+		...new Set(
+			allSelectedProduct()["speakers"].map((itemName) => itemName.itemInfo.name)
+		),
 	];
 
 	let comkey = [
-		...new Set(dir["computers"].map((itemName) => itemName.itemInfo.name)),
+		...new Set(
+			allSelectedProduct()["computers"].map(
+				(itemName) => itemName.itemInfo.name
+			)
+		),
 	];
 
 	let general = [gamekey, phonekey, tvkey, speakerkey, comkey];

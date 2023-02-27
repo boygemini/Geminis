@@ -8,29 +8,12 @@ const allSecTitle = [...document.querySelectorAll(".section-title")];
 window.addEventListener("scroll", (e) => {
 	allSecTitle.forEach((tit) => {
 		if (tit.getBoundingClientRect().top <= 0) {
-			// tit.style.boxShadow = "0px 10px 50px -20px grey";
-
-			if (document.lastChild.offsetWidth < 769) {
-				tit.children[1].style.fontSize = "12px";
-				tit.children[0].style.fontSize = "23px";
-			}
-			tit.style.position = "sticky";
-			tit.style.top = "0";
 			tit.style.zIndex = "1";
-			tit.style.borderBottom = "transparent";
 			tit.children[1].style.boxShadow = "#00000059 0px 6px 16px 0px";
 		}
 
 		if (tit.getBoundingClientRect().top > 0) {
-			if (document.lastChild.offsetWidth < 769) {
-				tit.children[1].style.fontSize = "14px";
-				tit.children[0].style.fontSize = "";
-			}
 			tit.children[1].style.boxShadow = "";
-			tit.style.boxShadow = "";
-			tit.style.border = "";
-			tit.style.position = "";
-			tit.style.top = "";
 			tit.style.zIndex = "";
 		}
 	});
@@ -143,18 +126,13 @@ let filterUIObjects = {
             <span class="checkmark"></span>
         </label>
         <label class="option container">
-            <input type="checkbox" class="brandcheck" name="" id="itel">
-            <p>Itel</p>
+            <input type="checkbox" class="brandcheck" name="" id="xiaomi">
+            <p>Xiaomi</p>
             <span class="checkmark"></span>
         </label>
         <label class="option container">
             <input type="checkbox" class="brandcheck" name="" id="samsung">
             <p>Samsung</p>
-            <span class="checkmark"></span>
-        </label>
-        <label class="option container">
-            <input type="checkbox" class="brandcheck" name="" id="infinix">
-            <p>Infinix</p>
             <span class="checkmark"></span>
         </label>
         <label class="option container">
@@ -244,8 +222,13 @@ let filterUIObjects = {
             <span class="checkmark"></span>
         </label>
         <label class="option container">
-            <input type="checkbox" class="brandcheck" name="" id="toshiba">
-            <p>Toshiba</p>
+            <input type="checkbox" class="brandcheck" name="" id="omen">
+            <p>Omen</p>
+            <span class="checkmark"></span>
+        </label>
+		 <label class="option container">
+            <input type="checkbox" class="brandcheck" name="" id="microsoft">
+            <p>Microsoft</p>
             <span class="checkmark"></span>
         </label>
     </div>
@@ -350,13 +333,8 @@ let filterUIObjects = {
             <span class="checkmark"></span>
         </label>
         <label class="option container">
-            <input type="checkbox" class="brandcheck" name="" id="oraimo">
-            <p>ORAIMO</p>
-            <span class="checkmark"></span>
-        </label>
-        <label class="option container">
-            <input type="checkbox" class="brandcheck" name="" id="beatz">
-            <p>BEATZ</p>
+            <input type="checkbox" class="brandcheck" name="" id="sony">
+            <p>Sony</p>
             <span class="checkmark"></span>
         </label>
     </div>`;
@@ -413,10 +391,6 @@ let filterUIObjects = {
         <label class="option container">
             <input type="checkbox" class="memorycheck" name="" id="lg">
             <p>LG</p><span class="checkmark"></span>
-        </label>
-        <label class="option container">
-            <input type="checkbox" class="memorycheck" name="" id="midea">
-            <p>MIDEA</p><span class="checkmark"></span>
         </label>
          <label class="option container">
              <input type="checkbox" class="memorycheck" name="" id="toshiba">
@@ -631,56 +605,6 @@ if (document.lastChild.offsetWidth <= 768) {
 	filterContainer2.style.display = "none";
 }
 
-// window.addEventListener("resize", (e) => {
-// 	if (
-// 		document.lastChild.offsetWidth > 600 &&
-// 		document.lastChild.offsetWidth <= 1024
-// 	) {
-// 		filterContainer2.style.display = "flex";
-// 		filterContainer2.style.height = "0px";
-// 		filterContainer2.style.opacity = "0";
-// 		filterContainer1.style.display = "none";
-
-// 		//GET THE CURRENT CATEGORY TO MAKE THE FILTER MORE RESPONSE
-// 		let currentCategory = document.URL.split("category=")[1].split("&")[0];
-
-// 		if (currentCategory === "tv") {
-// 			getFilter.allTv();
-// 		}
-// 		if (currentCategory === "gaming") {
-// 			getFilter.allGaming();
-// 		}
-// 		if (currentCategory === "cellphones") {
-// 			getFilter.allCellPhones();
-// 		}
-// 		if (currentCategory === "computers") {
-// 			getFilter.allComputer();
-// 		}
-// 		if (currentCategory === "speakers") {
-// 			getFilter.allSpeaker();
-// 		}
-
-// 		// As thr window is being resized we keep filter checked boxes intact
-// 		returnCheckedBoxes();
-// 	}
-
-// 	if (document.lastChild.offsetWidth <= 600) {
-// 		filterContainer1.style.display = "none";
-// 		filterContainer2.style.height = "0px";
-// 		filterContainer2.style.opacity = "0";
-// 		filterContainer2.style.visibility = "hidden";
-// 	}
-
-// 	if (document.lastChild.offsetWidth >= 1024) {
-// 		filterContainer1.style.display = "block";
-// 		filterContainer2.style.height = "0px";
-// 		filterContainer2.style.opacity = "0";
-// 		if (filterBox[0].style.display === "none") {
-// 			filterBox[0].style.display = "block";
-// 		}
-// 	}
-// });
-
 const applyFilterReloadPage = () => {
 	let queryUrlFromLocalStorage = localStorage.getItem("Url");
 	window.location.href = queryUrlFromLocalStorage;
@@ -802,12 +726,8 @@ const phoneFilters = () => {
 		displayFilteredResults(filter.brand(event, "cellphones", "Samsung"));
 	});
 
-	itel.addEventListener("click", (event) => {
-		displayFilteredResults(filter.brand(event, "cellphones", "Itel"));
-	});
-
-	infinix.addEventListener("click", (event) => {
-		displayFilteredResults(filter.brand(event, "cellphones", "Infinix"));
+	xiaomi.addEventListener("click", (event) => {
+		displayFilteredResults(filter.brand(event, "cellphones", "Xiaomi"));
 	});
 
 	lg.addEventListener("click", (event) => {
@@ -921,8 +841,11 @@ const comFilters = () => {
 	asus.addEventListener("click", (event) => {
 		displayFilteredResults(filter.brand(event, "computers", "ASUS"));
 	});
-	toshiba.addEventListener("click", (event) => {
-		displayFilteredResults(filter.brand(event, "computers", "Toshiba"));
+	omen.addEventListener("click", (event) => {
+		displayFilteredResults(filter.brand(event, "computers", "Omen"));
+	});
+	microsoft.addEventListener("click", (event) => {
+		displayFilteredResults(filter.brand(event, "computers", "Microsoft"));
 	});
 
 	// RAM
@@ -1003,11 +926,8 @@ const speakerFilters = () => {
 	});
 
 	// Brand Filter
-	oraimo.addEventListener("click", (event) => {
-		displayFilteredResults(filter.brand(event, "speakers", "oraimo"));
-	});
-	beatz.addEventListener("click", (event) => {
-		displayFilteredResults(filter.brand(event, "speakers", "beatz"));
+	sony.addEventListener("click", (event) => {
+		displayFilteredResults(filter.brand(event, "speakers", "Sony"));
 	});
 	jbl.addEventListener("click", (event) => {
 		displayFilteredResults(filter.brand(event, "speakers", "jbl"));
@@ -1055,9 +975,6 @@ const tvFilters = () => {
 	});
 	lg.addEventListener("click", (event) => {
 		displayFilteredResults(filter.brand(event, "tv", "lg"));
-	});
-	midea.addEventListener("click", (event) => {
-		displayFilteredResults(filter.brand(event, "tv", "midea"));
 	});
 	toshiba.addEventListener("click", (event) => {
 		displayFilteredResults(filter.brand(event, "tv", "toshiba"));
