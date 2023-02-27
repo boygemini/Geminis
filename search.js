@@ -1,26 +1,23 @@
 "use strict";
 
-const allProducts = new Promise((resolve, reject) => {
-	resolve(
-		fetch("product.json", {
-			method: "GET",
-			headers: {
-				"Content-Type": "application/json",
-			},
-		})
-			.then((response) => {
-				return response.json();
+const allProducts = () => {
+	return new Promise((resolve, reject) => {
+		resolve(
+			fetch("product.json", {
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json",
+				},
 			})
-			.then((products) => {
-				localStorage.setItem("StoreItems", JSON.stringify(products));
-				return products;
-			})
-	);
-});
-
-const allSelectedProduct = async () => {
-	let m = await allProducts;
-	return m.selectedProducts[0];
+				.then((response) => {
+					return response.json();
+				})
+				.then((products) => {
+					localStorage.setItem("StoreItems", JSON.stringify(products));
+					return products;
+				})
+		);
+	});
 };
 
 let hs = document.getElementById("hold");
@@ -30,17 +27,19 @@ let displaybox = document.querySelector(".sug-holder");
 
 //Function
 
-const showSuggesttions = (event) => {
+const showSuggesttions = async (event) => {
+	let dir = await allProducts();
+	dir = dir.selectedProducts[0];
 	let searchValue = event.target.value.toLowerCase();
 	let finalSug = [];
 	let sugResult = [];
 	let sugCategory = ["Gaming", "Cellphones", "Speakers", "Computers", "TV"];
 	let sugDirectory = [
-		allSelectedProduct().gaming,
-		allSelectedProduct().cellphones,
-		allSelectedProduct().speakers,
-		allSelectedProduct().computers,
-		allSelectedProduct().tv,
+		dir.gaming,
+		dir.cellphones,
+		dir.speakers,
+		dir.computers,
+		dir.tv,
 	];
 
 	sugDirectory.forEach((subDirectory) =>
@@ -68,6 +67,7 @@ const showSuggesttions = (event) => {
 
 	mm = [...new Set(mm)];
 	let uniqueArray = Array.from(new Set(mm.map(JSON.stringify))).map(JSON.parse);
+	console.log(uniqueArray);
 	return uniqueArray;
 };
 
@@ -94,8 +94,8 @@ const closeSearch = () => {
 };
 
 // DISPLAY SUGGESTIONS
-search.addEventListener("input", (event) => {
-	let suggestArray = showSuggesttions(event);
+search.addEventListener("input", async (event) => {
+	let suggestArray = await showSuggesttions(event);
 	let x = "";
 	suggestArray.forEach((suggestion) => {
 		x += `
@@ -192,7 +192,9 @@ const controlSort = (arr) => {
 };
 
 class getResults {
-	static suggestionsResult(Query, Category) {
+	static async suggestionsResult(Query, Category) {
+		let dir = await allProducts();
+		dir = dir.selectedProducts[0];
 		let arr = [];
 		let searchDirectory = dir[`${Category}`];
 
@@ -209,7 +211,9 @@ class getResults {
 		displayFiltereddResults(arr, Query);
 	}
 
-	static searchBarResult(Query) {
+	static async searchBarResult(Query) {
+		let dir = await allProducts();
+		dir = dir.selectedProducts[0];
 		let Category = ["gaming", "cellphones", "speakers", "computers", "tv"];
 		let arr = [];
 		for (let i in Category) {
@@ -368,39 +372,25 @@ const displayFiltereddResults = (results, category) => {
 	}
 };
 
-const getCatFiltersAndSearchResults = (Query, Category) => {
+const getCatFiltersAndSearchResults = async (Query, Category) => {
+	let dir = await allProducts();
+	dir = dir.selectedProducts[0];
 	let gamekey = [
-		...new Set(
-			allSelectedProduct()["gaming"].map((itemName) => itemName.itemInfo.name)
-		),
+		...new Set(dir["gaming"].map((itemName) => itemName.itemInfo.name)),
 	];
 
 	let phonekey = [
-		...new Set(
-			allSelectedProduct()["cellphones"].map(
-				(itemName) => itemName.itemInfo.name
-			)
-		),
+		...new Set(dir["cellphones"].map((itemName) => itemName.itemInfo.name)),
 	];
 
-	let tvkey = [
-		...new Set(
-			allSelectedProduct()["tv"].map((itemName) => itemName.itemInfo.name)
-		),
-	];
+	let tvkey = [...new Set(dir["tv"].map((itemName) => itemName.itemInfo.name))];
 
 	let speakerkey = [
-		...new Set(
-			allSelectedProduct()["speakers"].map((itemName) => itemName.itemInfo.name)
-		),
+		...new Set(dir["speakers"].map((itemName) => itemName.itemInfo.name)),
 	];
 
 	let comkey = [
-		...new Set(
-			allSelectedProduct()["computers"].map(
-				(itemName) => itemName.itemInfo.name
-			)
-		),
+		...new Set(dir["computers"].map((itemName) => itemName.itemInfo.name)),
 	];
 
 	let general = [gamekey, phonekey, tvkey, speakerkey, comkey];
@@ -907,6 +897,44 @@ allCartText.forEach((txt) => {
 			}, 800);
 		}, 1000);
 	});
+});
+
+// OPEN MENU
+const menuDOM = document.getElementById("menu");
+const menuBtn = document.getElementById("mb");
+menuDOM.style.display = "none";
+
+const openMenu = () => {
+	menuDOM.style.display = "block";
+
+	if (menuDOM.className.includes("menuout")) {
+		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
+	} else {
+		menuDOM.className += " menuin";
+	}
+	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
+};
+
+// CLOSE MENU
+const closeMenu = () => {
+	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
+	setTimeout(() => (menuDOM.style.display = "none"), 500);
+	document.lastChild.style.overflow = ""; // Enables the window scrolling
+};
+
+// CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
+window.addEventListener("click", (e) => {
+	if (menuDOM.style.display === "block") {
+		let parent =
+			e.target.parentNode.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode.parentNode === menuDOM ||
+			e.target.parentNode.parentNode === menuDOM ||
+			e.target.parentNode === menuDOM;
+
+		if (!parent && e.target !== menuBtn) {
+			closeMenu();
+		}
+	}
 });
 
 window.onload = onLoad;

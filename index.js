@@ -10,47 +10,6 @@ const shopNow = () => {
 	window.location = "gemshop.html";
 };
 
-// OPEN MENU
-const menuDOM = document.getElementById("menu");
-const menuBtn = document.getElementById("mb");
-menuDOM.style.display = "none";
-
-const openMenu = () => {
-	menuDOM.style.display = "block";
-	if (menuDOM.className.includes("menuout")) {
-		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
-	} else {
-		menuDOM.className += " menuin";
-	}
-	setTimeout(() => {
-		document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
-	}, 600);
-};
-
-// CLOSE MENU
-const closeMenu = () => {
-	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
-	setTimeout(() => (menuDOM.style.display = "none"), 450);
-	document.lastChild.style.overflow = "scroll"; // Enables the window scrolling
-};
-
-// CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
-window.addEventListener("click", (e) => {
-	if (menuDOM.style.display === "block") {
-		let parent =
-			e.target.parentNode.parentNode.parentNode.parentNode === menuDOM ||
-			e.target.parentNode.parentNode.parentNode === menuDOM ||
-			e.target.parentNode.parentNode === menuDOM ||
-			e.target.parentNode === menuDOM;
-
-		if (!parent !== menuBtn && e.target !== menuBtn) {
-			closeMenu();
-		}
-
-		console.log(menuBtn);
-	}
-});
-
 // GRIDS
 const grids = [...document.querySelectorAll(".shade")];
 const gridTextDOM = document.querySelectorAll(".cat-text");
