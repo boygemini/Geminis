@@ -33,7 +33,7 @@ const allSecTitle = [...document.querySelectorAll(".section-title")];
 window.addEventListener("scroll", (e) => {
 	allSecTitle.forEach((tit) => {
 		if (tit.getBoundingClientRect().top <= 0) {
-			tit.style.zIndex = "1";
+			tit.style.zIndex = "686986896668";
 			tit.children[1].style.boxShadow = "#00000059 0px 6px 16px 0px";
 		}
 
