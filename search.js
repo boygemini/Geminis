@@ -287,6 +287,9 @@ const displayResults = (directory, Query) => {
 	}
 
 	if (directory.length > 0) {
+		setTimeout(() => {
+			showPreloader(false);
+		}, 1000);
 		getResults.positiveResults();
 		for (let k in directory) {
 			if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
@@ -336,6 +339,9 @@ const displayFiltereddResults = (results, category) => {
 	}
 
 	if (results.length > 0) {
+		setTimeout(() => {
+			showPreloader(false);
+		}, 0);
 		getResults.positiveResults();
 		for (let k in results) {
 			y += `
@@ -586,7 +592,6 @@ const convertUrlParametersIntoObject = (urlWithQuery) => {
 const onLoad = () => {
 	let cpUrl = new URL(document.URL);
 	if (cpUrl.search.length <= 0 && cpUrl.pathname === "/gemshop.html") {
-		indicateLoadingWhileAwaitingResults(false);
 	} else if (cpUrl.search.length > 0 && cpUrl.pathname === "/gemshop.html") {
 		indicateLoadingWhileAwaitingResults(true);
 	}
@@ -905,20 +910,19 @@ const menuBtn = document.getElementById("mb");
 menuDOM.style.display = "none";
 
 const openMenu = () => {
-	menuDOM.style.display = "block";
-
 	if (menuDOM.className.includes("menuout")) {
 		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
 	} else {
 		menuDOM.className += " menuin";
 	}
+	menuDOM.style.display = "block";
 	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
 };
 
 // CLOSE MENU
 const closeMenu = () => {
 	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
-	setTimeout(() => (menuDOM.style.display = "none"), 500);
+	setTimeout(() => (menuDOM.style.display = "none"), 400);
 	document.lastChild.style.overflow = ""; // Enables the window scrolling
 };
 

@@ -211,8 +211,9 @@
 					</div>
 					<div class="res-sort" id="res-sort">
 						<div class="red-header" id="red-header">
-							<h1 id="result-title" class="cat-head"></h1>
-							<div class="sort-hol">
+							<div class="pre pre-sort"></div>
+							<h1 id="result-title" class="main-content cat-head"></h1>
+							<div id="main-content" class="main-content sort-hol">
 								<p>Sort</p>
 								<div class="select-dropdown">
 									<select name="sort" id="select" onchange="sorting(event)">
@@ -224,13 +225,14 @@
 
 								<button
 									onclick="openFilter()"
+									class="main-content"
 									id="fbtn"
 									type="button"
 									name="button"
 									aria-label="button"
 									aria-labelledby="button"
 								>
-									<img src="IMAGES/filter.png" alt="" />
+									<img src="IMAGES/filter.png" class="main-content" alt="" />
 								</button>
 							</div>
 						</div>
@@ -258,7 +260,32 @@
 					</div>
 
 					<div id="showbox" class="showboxflex" onload="onLoad()">
-						<div class="full-cat">
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+
+						<div id="main-content" class="main-content full-cat">
 							<div class="section-title fir-sec">
 								<h1 id="sec-name-cellphones"></h1>
 								<button
@@ -271,7 +298,7 @@
 							</div>
 							<div class="av-box" id="cellphones"></div>
 						</div>
-						<div class="full-cat">
+						<div id="main-content" class="full-cat">
 							<div class="section-title">
 								<h1 id="sec-name-computer"></h1>
 								<button
@@ -284,7 +311,7 @@
 							</div>
 							<div class="av-box" id="computers"></div>
 						</div>
-						<div class="full-cat">
+						<div id="main-content" class="main-content full-cat">
 							<div class="section-title">
 								<h1 id="sec-name-speakers"></h1>
 								<button
@@ -297,7 +324,7 @@
 							</div>
 							<div class="av-box" id="speakers"></div>
 						</div>
-						<div class="full-cat">
+						<div id="main-content" class="main-content full-cat">
 							<div class="section-title">
 								<h1 id="sec-name-gaming"></h1>
 								<button
@@ -310,7 +337,7 @@
 							</div>
 							<div class="av-box" id="gamings"></div>
 						</div>
-						<div class="full-cat">
+						<div id="main-content" class="main-content full-cat">
 							<div class="section-title">
 								<h1 id="sec-name-tv"></h1>
 								<button

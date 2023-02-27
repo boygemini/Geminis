@@ -1,4 +1,29 @@
 "use strict";
+const showPreloader = (bool) => {
+	let pre = document.querySelectorAll(".pre");
+	let mainContent = [
+		...document.querySelectorAll("#main-content"),
+		...document.querySelectorAll("#result-title"),
+	];
+
+	if (bool) {
+		pre.forEach((p) => {
+			p.style.display = "flex";
+		});
+		mainContent.forEach((m) => {
+			m.style.display = "none";
+		});
+	}
+	if (!bool) {
+		pre.forEach((p) => {
+			p.style.display = "none";
+		});
+		mainContent.forEach((m) => {
+			m.style.display = "flex";
+		});
+	}
+};
+showPreloader(true);
 
 let webPage = document.querySelector("html");
 webPage.style.opacity = "1";
@@ -542,6 +567,7 @@ class display {
 			// 			</div>
 			// 		</div>
 
+			showPreloader(false);
 			document.getElementById(category).innerText = boxID;
 			document.getElementById(boxID).innerHTML = y;
 		}
@@ -1068,16 +1094,12 @@ const indicateLoadingWhileAwaitingResults = (awaiting) => {
 let newUrl = new URL(document.URL);
 console.log(newUrl.search.length);
 if (newUrl.search.length === 0) {
-	indicateLoadingWhileAwaitingResults(false);
+	// showPreloader(false);
 	display.displayAll();
 	document.querySelector(".filters").style.display = "none";
 	document.querySelector(".sort-hol").style.display = "none";
 	document.querySelector(".pgd").style.display = "none";
 	document.querySelector("#showbox").classList = "showboxflex";
-}
-
-if (newUrl.search.length > 0) {
-	indicateLoadingWhileAwaitingResults(true);
 }
 
 if (newUrl.search.length > 0) {
