@@ -2204,6 +2204,11 @@ footer {
 		background-color: #f4f4f6;
 	}
 
+	.section-title {
+		position: sticky;
+		top: 0;
+	}
+
 	.section-title button {
 		width: auto;
 		background-color: transparent;
