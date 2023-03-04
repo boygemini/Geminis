@@ -233,21 +233,24 @@ class getResults {
 	}
 
 	static async negativeResults(Query) {
-		showBox.innerHTML = `<div class="noresult">
+		let products = await allProducts();
+		if (products) {
+			showBox.innerHTML = `<div class="noresult">
 			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> Oops, there are no results for  "${Query}" </h1><p>Try checking your spelling or use more general terms</p></div>
 			<span>Go back to</span>
 			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
 		</div>`;
-		document.getElementById("filter").style.display = "none";
-		document.querySelector(".sort-hol").style.display = "none";
-		document.querySelector(".res-sort").style.display = "none";
-		document.querySelector(".pgd").style.display = "none";
-		document.querySelector(".littlebans").style.display = "none";
-		document.querySelector(".banner-container").style.display = "none";
-		document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
-		document.getElementById("footer").style.position = "absolute";
-		document.getElementById("footer").style.bottom = "0";
-		showBox.classList.remove("showboxgrid");
+			document.getElementById("filter").style.display = "none";
+			document.querySelector(".sort-hol").style.display = "none";
+			document.querySelector(".res-sort").style.display = "none";
+			document.querySelector(".pgd").style.display = "none";
+			document.querySelector(".littlebans").style.display = "none";
+			document.querySelector(".banner-container").style.display = "none";
+			document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
+			document.getElementById("footer").style.position = "absolute";
+			document.getElementById("footer").style.bottom = "0";
+			showBox.classList.remove("showboxgrid");
+		}
 	}
 
 	static async positiveResults() {
