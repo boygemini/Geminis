@@ -1577,6 +1577,11 @@ nav ul li {
 	align-items: center;
 	background-color: #111111;
 	cursor: pointer;
+	column-gap: 5px;
+}
+
+.viewall-arrow {
+	width: 20px;
 }
 
 .sel-container {
@@ -2372,13 +2377,18 @@ footer {
 		width: auto;
 		background-color: white;
 		color: #111111;
-		padding: 0;
+		padding: 0px 0px;
+		border: 1px solid transparent;
+		border-radius: 0px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-ms-border-radius: 0px;
+		-o-border-radius: 0px;
 	}
 
 	.view-all:hover {
 		/* background-color: #111111; */
-		text-decoration: underline 1px solid #111111;
-		text-underline-offset: 5px;
+		border-bottom: 1px solid #111111;
 	}
 
 	#sel-container {
@@ -2393,19 +2403,18 @@ footer {
 	.sec-heading {
 		font-weight: 600;
 		font-size: 30px;
-		color: #111111;
 		width: auto;
 		font-size: 18px;
 		text-transform: uppercase;
 	}
 
-	.view-all {
+	/* .view-all {
 		text-align: center;
 		background-color: #111111;
 		color: white;
 		text-transform: capitalize;
 		padding: 10px 10px;
-	}
+	} */
 
 	.price-box {
 		display: flex;
@@ -3058,7 +3067,6 @@ footer {
 	.sec-heading {
 		font-weight: 600;
 		font-size: 30px;
-		color: #111111;
 	}
 
 	.view-all {
@@ -3183,7 +3191,6 @@ footer {
 	.sec-heading {
 		font-weight: 600;
 		font-size: 30px;
-		color: #111111;
 	}
 
 	.major-container {
@@ -3339,5 +3346,9 @@ footer {
 
 	.grid {
 		width: 10%;
+	}
+
+	.viewall-arrow {
+		display: none;
 	}
 }

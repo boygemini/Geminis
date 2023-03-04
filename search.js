@@ -236,7 +236,7 @@ class getResults {
 		showBox.innerHTML = `<div class="noresult">
 			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> Oops, there are no results for "${Query}" </h1><p>Try checking your spelling or use more general terms</p></div>
 			<span>Go back to</span>
-			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtohome'>Market Area</a></div>
+			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
 		</div>`;
 		document.getElementById("filter").style.display = "none";
 		document.querySelector(".sort-hol").style.display = "none";
@@ -274,7 +274,7 @@ class getResults {
 		).innerHTML = `<div class="noresult notfound">
 			<div class ="noresulttext"><h1 class = "cat-head" > Page not found</h1><p>We couldn’t find the page you are looking for</p></div>
 			<span>Go back to</span>
-			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtohome'>Market Area</a></div>
+			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
 		</div>`;
 	}
 }
@@ -527,7 +527,7 @@ function createPagination(results, numberOnEachPage, pageNumber) {
 		document.querySelector(".shop-body").innerHTML = `<div class="noresult">
 			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> This Page is Empty </h1><p>Try checking your spelling or use more general terms</p></div>
 			<span>Go back to</span>
-			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtohome'>Market Area</a></div>
+			<div class="noresultbuttons"><a href="index.html" id="" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
 		</div>`;
 		document.querySelector(".pagindiv").style.display = "none";
 	}
