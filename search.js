@@ -418,35 +418,35 @@ const getCatFiltersAndSearchResults = async (Query, Category) => {
 	for (let i in gamekey) {
 		if (gamekey[i].toLowerCase().includes(Query)) {
 			Gamings();
-			Call(Query, Category);
+			return Call(Query, Category);
 		}
 	}
 
 	for (let i in phonekey) {
 		if (phonekey[i].toLowerCase().includes(Query)) {
 			cellPhones();
-			Call(Query, Category);
+			return Call(Query, Category);
 		}
 	}
 
 	for (let i in tvkey) {
 		if (tvkey[i].toLowerCase().includes(Query)) {
 			TVs();
-			Call(Query, Category);
+			return Call(Query, Category);
 		}
 	}
 
 	for (let i in speakerkey) {
 		if (speakerkey[i].toLowerCase().includes(Query)) {
 			Speakers();
-			Call(Query, Category);
+			return Call(Query, Category);
 		}
 	}
 
 	for (let i in comkey) {
 		if (comkey[i].toLowerCase().includes(Query)) {
 			Computers();
-			Call(Query, Category);
+			return Call(Query, Category);
 		}
 	}
 
