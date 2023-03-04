@@ -400,9 +400,9 @@ const getCatFiltersAndSearchResults = async (Query, Category) => {
 	let general = [gamekey, phonekey, tvkey, speakerkey, comkey];
 	let generalKeyWords = new Array();
 
-	for (let i in generalKeyWords) {
-		if (generalKeyWords[i].toLowerCase() !== Query) {
-			return getResults.negativeResults(Query);
+	for (let i in general) {
+		for (let j in general[i]) {
+			generalKeyWords.push(general[i][j]);
 		}
 	}
 
@@ -450,9 +450,9 @@ const getCatFiltersAndSearchResults = async (Query, Category) => {
 		}
 	}
 
-	for (let i in general) {
-		for (let j in general[i]) {
-			generalKeyWords.push(general[i][j]);
+	for (let i in generalKeyWords) {
+		if (generalKeyWords[i].toLowerCase() !== Query) {
+			return getResults.negativeResults(Query);
 		}
 	}
 };
