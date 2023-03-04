@@ -63,6 +63,20 @@ body {
 	overflow-x: hidden;
 }
 
+* {
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	/* Set line height for readability */
+	line-height: 1.5;
+
+	/* Adjust letter spacing (kerning) */
+	letter-spacing: 0.05em;
+}
+
 /* #slimbanner {
 	display: flex;
 	background-color: black;
