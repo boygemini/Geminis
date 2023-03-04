@@ -219,7 +219,9 @@ class getResults {
 		for (let i in Category) {
 			let searchDirectory = dir[`${Category[i]}`];
 			for (let j in searchDirectory) {
-				if (searchDirectory[j].itemInfo.name.toLowerCase().includes(Query)) {
+				if (
+					searchDirectory[j].itemInfo.name.toLowerCase().includes(Query.trim())
+				) {
 					arr.push(searchDirectory[j]);
 				}
 			}
@@ -614,7 +616,7 @@ const onLoad = () => {
 		urlWithQuery.split("category=").length === 1
 	) {
 		let Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0];
-		Query = removeThe20Nonsense(Query);
+		Query = removeThe20Nonsense(Query).trim();
 		return getCatFiltersAndSearchResults(Query);
 	}
 
