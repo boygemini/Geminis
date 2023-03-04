@@ -1955,6 +1955,12 @@ footer {
 	-o-border-radius: 3px;
 }
 
+@media screen and (max-height: 800px) {
+	.grid {
+		min-height: 75vh;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.banner-container {
 		margin-top: 60px;
@@ -2154,6 +2160,13 @@ footer {
 		flex-direction: column;
 		gap: 10px;
 		height: auto;
+	}
+
+	.gridbtn {
+		display: flex;
+		right: 20px;
+		bottom: 35px;
+		background-color: white;
 	}
 
 	.grid {
