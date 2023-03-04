@@ -12,6 +12,7 @@ const shopNow = () => {
 
 // GRIDS
 const grids = [...document.querySelectorAll(".shade")];
+const gridBtn = document.querySelectorAll(".gridbtn");
 const gridTextDOM = document.querySelectorAll(".cat-text");
 if (document.lastChild.offsetWidth > 768) {
 	grids[2].parentElement.style.width = "100%";
@@ -19,7 +20,9 @@ if (document.lastChild.offsetWidth > 768) {
 		grid.addEventListener("mouseover", (e) => {
 			for (let i in grids) {
 				grids[i].parentElement.style.width = "10%";
+				grids[i].children[1].style.display = "none";
 			}
+			grid.children[1].style.display = "flex";
 			grid.parentElement.style.width = "100%";
 		});
 	});
@@ -424,11 +427,16 @@ let tab = [...document.querySelectorAll(".tab")];
 tab[0].className += " active-li";
 for (let x in tab) {
 	tab[x].addEventListener("click", (event) => {
-		tab[0].className = tab[0].className.replace(" active-li", "");
-		for (let y in tab) {
-			tab[y].classList.remove("active-li");
+		tab.forEach((t) => {
+			t.classList.remove("active-li");
+			t.classList.add("inactive-li");
+		});
+		if (event.target.className.includes("inactive-li")) {
+			event.target.className = event.target.className.replace(
+				"inactive-li",
+				" active-li"
+			);
 		}
-		event.target.className += " active-li";
 	});
 }
 

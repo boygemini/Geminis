@@ -872,24 +872,26 @@ nav ul li {
 }
 
 .gridbtn {
-	background-color: #111111;
+	display: none;
+	right: 20px;
+	bottom: 35px;
+	background-color: white;
 	width: 50px;
 	height: 50px;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	border: none;
 	color: #111111;
 	position: absolute;
-	bottom: 10px;
-	right: 10px;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
 	cursor: pointer;
-	display: none;
+}
+
+.gridbtn {
 }
 
 .gridbtn img {
@@ -1532,7 +1534,7 @@ nav ul li {
 
 .sel-table ul {
 	display: flex;
-	column-gap: 30px;
+	column-gap: 5px;
 	list-style: none;
 	height: 70px;
 	align-self: flex-end;
@@ -1547,24 +1549,27 @@ nav ul li {
 	font-weight: 600;
 	transition: 0.3s ease-in-out;
 	cursor: pointer;
-	height: 100%;
+	height: 50px;
 	width: 100px;
 	/* background-color: #f4f4f6; */
 }
 
 .sel-table ul li:hover {
 	border: 2px solid #111111;
-	color: #111111;
+	color: white;
+	background-color: #111111;
 }
 
 .inactive-li {
-	color: #11111191;
-	border: 2px solid #f4f4f6;
+	color: #111111;
+	border: 2px solid #111111;
+	background-color: white;
 }
 
 .active-li {
-	color: #111111;
 	border: 2px solid #111111;
+	color: white;
+	background-color: #111111;
 }
 
 .view-all {
@@ -2462,10 +2467,10 @@ footer {
 	}
 
 	.home {
-		background: linear-gradient(to left, transparent 0%, #00534ba5 0%);
-		background: -webkit-linear-gradient(to left, transparent 0%, #00534ba5 0%);
-		background: -o-linear-gradient(to left, transparent 0%, #00534ba5 0%);
-		background: -moz-linear-gradient(to left, transparent 0%, #00534ba5 0%);
+		background: linear-gradient(to left, transparent 0%, #11111198 0%);
+		background: -webkit-linear-gradient(to left, transparent 0%, 11111198 0%);
+		background: -o-linear-gradient(to left, transparent 0%, 11111198 0%);
+		background: -moz-linear-gradient(to left, transparent 0%, 11111198 0%);
 	}
 
 	/*About*/
