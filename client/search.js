@@ -282,10 +282,6 @@ class getResults {
 const displayResults = (directory, Query) => {
 	let x = "";
 	let y = "";
-	if (directory.length === 0) {
-		getResults.negativeResults(Query);
-	}
-
 	if (directory.length > 0) {
 		setTimeout(() => {
 			showPreloader(false);
@@ -329,14 +325,14 @@ const displayResults = (directory, Query) => {
 		).innerHTML = `Results for <span id="search-entry"> ${Query}</span>`;
 		showBox.innerHTML = y;
 	}
+	if (directory.length === 0) {
+		getResults.negativeResults(Query);
+	}
 };
 
 const displayFiltereddResults = (results, category) => {
 	let x = ``;
 	let y = "";
-	if (results.length === 0) {
-		getResults.negativeResults(Query);
-	}
 
 	if (results.length > 0) {
 		setTimeout(() => {
@@ -375,6 +371,9 @@ const displayFiltereddResults = (results, category) => {
 		}
 		document.getElementById("result-title").innerText = `${category}`;
 		showBox.innerHTML = y;
+	}
+	if (results.length === 0) {
+		getResults.negativeResults(Query);
 	}
 };
 

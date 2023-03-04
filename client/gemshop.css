@@ -1912,7 +1912,7 @@ footer {
 	}
 }
 
-@media screen and (min-width: 402px) and (max-width: 460px) {
+@media screen and (min-width: 402px) and (max-width: 600px) {
 	#result-title {
 		display: flex;
 		flex-direction: column;
