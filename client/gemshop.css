@@ -1343,10 +1343,7 @@ p span {
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
-	border: none;
 	cursor: pointer;
-	background-color: #090a0a;
-	color: white;
 	font-weight: 500;
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -1363,6 +1360,18 @@ p span {
 	background-color: white;
 	border: 2px solid #090a0a;
 	color: #090a0a;
+}
+
+.backtohome {
+	background-color: #111111;
+	border: 2px solid #090a0a;
+	color: white;
+}
+
+.backtoshop {
+	background-color: white;
+	border: 2px solid #111111;
+	color: #111111;
 }
 
 .notfound {
