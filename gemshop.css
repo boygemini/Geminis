@@ -1278,6 +1278,7 @@ p span {
 
 #result-title {
 	text-transform: capitalize;
+	column-gap: 10px;
 }
 
 .section-title button:hover {
@@ -1406,6 +1407,10 @@ p span {
 
 .sort-hol p {
 	font-weight: 500;
+}
+
+.red-header {
+	column-gap: 10px;
 }
 
 select {
@@ -1880,6 +1885,11 @@ footer {
 		flex-direction: column;
 	}
 
+	#result-title {
+		display: flex;
+		flex-direction: row;
+	}
+
 	.cat-head {
 		align-self: flex-start;
 	}
@@ -1900,6 +1910,16 @@ footer {
 	#select {
 		width: 90px;
 	}
+}
+
+@media screen and (min-width: 402px) and (max-width: 460px) {
+	#result-title {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 768px) {
 }
 
 @media screen and (max-width: 768px) {
@@ -2132,6 +2152,11 @@ footer {
 	/* .sel-table::-webkit-scrollbar {
 		display: none;
 	} */
+
+	.red-header {
+		display: flex;
+		flex-direction: column;
+	}
 
 	.uarr {
 		position: absolute;
