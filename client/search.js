@@ -232,7 +232,7 @@ class getResults {
 		displayResults(arr, Query);
 	}
 
-	static negativeResults(Query) {
+	static async negativeResults(Query) {
 		showBox.innerHTML = `<div class="noresult">
 			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> Oops, there are no results for  "${Query}" </h1><p>Try checking your spelling or use more general terms</p></div>
 			<span>Go back to</span>
@@ -247,11 +247,10 @@ class getResults {
 		document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
 		document.getElementById("footer").style.position = "absolute";
 		document.getElementById("footer").style.bottom = "0";
-
 		showBox.classList.remove("showboxgrid");
 	}
 
-	static positiveResults() {
+	static async positiveResults() {
 		document.getElementById("filter").style.display = "";
 		document.querySelector(".res-sort").style.display = "";
 		document.getElementById("filter").style.display = "";
@@ -264,7 +263,7 @@ class getResults {
 		showBox.classList += " showboxgrid";
 	}
 
-	static pageNotFound() {
+	static async pageNotFound() {
 		document.querySelector(".banner-container").style.display = "none";
 		document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
 		document.getElementById("footer").style.position = "absolute";
