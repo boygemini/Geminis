@@ -1920,9 +1920,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 768px) {
 	*::-webkit-scrollbar {
 		display: none;
 	}
@@ -1933,6 +1930,35 @@ footer {
 
 	.section-title {
 		margin-top: 70px;
+	}
+
+	#red-header {
+		width: 100%;
+		display: flex;
+		row-gap: 10px;
+		flex-direction: column;
+	}
+
+	#result-title {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.cat-head {
+		align-self: flex-start;
+	}
+
+	.sort-hol {
+		display: flex;
+		width: 100%;
+		align-self: flex-end;
+		position: relative;
+	}
+
+	#fbtn {
+		position: absolute;
+		right: 0;
+		height: 100%;
 	}
 
 	.fir-sec {
