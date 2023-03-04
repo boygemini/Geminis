@@ -14,6 +14,8 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
 	},
 });
 
+const PORT = process.env.PORT || 0525;
+
 app.use(express.static(process.env.STATIC_DIR));
 app.use(
 	express.json({
@@ -90,6 +92,6 @@ app.post("/webhook", async (req, res) => {
 	res.sendStatus(200);
 });
 
-app.listen(4242, () =>
-	console.log(`Node server listening at http://localhost:4242`)
+app.listen(PORT, () =>
+	console.log(`Node server listening at http://localhost:${PORT}`)
 );
