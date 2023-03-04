@@ -1844,6 +1844,24 @@ footer {
 	.address {
 		column-gap: 20px;
 	}
+
+	.confirmation-code {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.confirm-note p {
+		text-align: center;
+		line-height: 30px;
+	}
+
+	.ordercom {
+		left: 0;
+		font-family: 5px;
+		font-size: 20px;
+		margin: 0;
+		top: 0;
+	}
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
