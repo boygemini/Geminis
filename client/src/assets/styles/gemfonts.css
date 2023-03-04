@@ -77,46 +77,6 @@ body {
 	letter-spacing: 0.05em;
 }
 
-/* #slimbanner {
-	display: flex;
-	background-color: black;
-	z-index: 5670968574656475869708657465342647586970685746524647586970685746542647586970685746532347586970698574654758697068574653475869706857465;
-	justify-content: center;
-	align-items: center;
-}
-
-.slimcontent {
-	display: flex;
-	justify-content: space-between;
-	padding: 10px 0px;
-	width: 95%;
-}
-
-.slimb-left,
-.slimb-right {
-	display: flex;
-	column-gap: 10px;
-}
-
-.slimb-left p,
-.slimb-right p {
-	font-size: 12px;
-	color: white;
-	text-transform: capitalize;
-}
-
-.vhr {
-	width: 1px;
-	height: 100%;
-	color: white;
-}
-
-.dis-more {
-	text-decoration: 1px solid underline;
-	color: white;
-	font-weight: bold;
-} */
-
 .top-nav {
 	/* border-bottom: 1px solid #111111; */
 	border-radius: 0px;
