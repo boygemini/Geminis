@@ -416,35 +416,35 @@ const getCatFiltersAndSearchResults = async (Query, Category) => {
 	}
 
 	for (let i in gamekey) {
-		if (gamekey[i].toLowerCase().includes(Query)) {
+		if (gamekey[i].toLowerCase().trim().includes(Query)) {
 			Gamings();
 			return Call(Query, Category);
 		}
 	}
 
 	for (let i in phonekey) {
-		if (phonekey[i].toLowerCase().includes(Query)) {
+		if (phonekey[i].toLowerCase().trim().includes(Query)) {
 			cellPhones();
 			return Call(Query, Category);
 		}
 	}
 
 	for (let i in tvkey) {
-		if (tvkey[i].toLowerCase().includes(Query)) {
+		if (tvkey[i].toLowerCase().trim().includes(Query)) {
 			TVs();
 			return Call(Query, Category);
 		}
 	}
 
 	for (let i in speakerkey) {
-		if (speakerkey[i].toLowerCase().includes(Query)) {
+		if (speakerkey[i].toLowerCase().trim().includes(Query)) {
 			Speakers();
 			return Call(Query, Category);
 		}
 	}
 
 	for (let i in comkey) {
-		if (comkey[i].toLowerCase().includes(Query)) {
+		if (comkey[i].toLowerCase().trim().includes(Query)) {
 			Computers();
 			return Call(Query, Category);
 		}
