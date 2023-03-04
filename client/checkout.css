@@ -1317,6 +1317,7 @@ form input[type="submit"] {
 	height: 5px;
 	background-color: whitesmoke;
 	position: relative;
+	z-index: 0;
 }
 
 .stage-container {
@@ -1848,6 +1849,7 @@ footer {
 	.confirmation-code {
 		justify-content: center;
 		align-items: center;
+		min-height: 70vh;
 	}
 
 	.confirm-note p {
