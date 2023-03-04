@@ -29,19 +29,17 @@ let webPage = document.querySelector("html");
 webPage.style.opacity = "1";
 webPage.style.transition = "1s ease-in-out";
 
-// window.addEventListener("scroll", (e) => {
-// 	allSecTitle.forEach((tit) => {
-// 		if (tit.getBoundingClientRect().top <= 0) {
-// 			tit.style.zIndex = "1";
-// 			tit.children[1].style.boxShadow = "#00000059 0px 6px 16px 0px";
-// 		}
+window.addEventListener("scroll", (e) => {
+	allSecTitle.forEach((tit) => {
+		if (tit.getBoundingClientRect().top <= 0) {
+			tit.style.border = "none";
+		}
 
-// 		if (tit.getBoundingClientRect().top > 0) {
-// 			tit.children[1].style.boxShadow = "";
-// 			tit.style.zIndex = "";
-// 		}
-// 	});
-// });
+		if (tit.getBoundingClientRect().top > 0) {
+			tit.style.border = "";
+		}
+	});
+});
 
 let filterBox = document.querySelectorAll("#filters");
 let filterUIObjects = {
