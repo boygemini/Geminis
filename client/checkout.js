@@ -175,7 +175,7 @@ const removeError = () => {
 form.forEach((form) => {
 	form.style.display = "none";
 });
-form[4].style.display = "flex";
+form[0].style.display = "flex";
 
 // Match shipping information with billing information
 const matchButton = document.getElementById("matchaddress");
