@@ -234,7 +234,7 @@ class getResults {
 
 	static negativeResults(Query) {
 		showBox.innerHTML = `<div class="noresult">
-			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> Oops, there are no results for "${Query}" </h1><p>Try checking your spelling or use more general terms</p></div>
+			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> Oops, there are no results for  "${Query}" </h1><p>Try checking your spelling or use more general terms</p></div>
 			<span>Go back to</span>
 			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
 		</div>`;
@@ -326,7 +326,7 @@ const displayResults = (directory, Query) => {
 
 		document.getElementById(
 			"result-title"
-		).innerHTML = `Results for <span id="search-entry">${Query}</span>`;
+		).innerHTML = `Results for <span id="search-entry"> ${Query}</span>`;
 		showBox.innerHTML = y;
 	}
 };
