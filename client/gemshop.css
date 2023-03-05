@@ -461,9 +461,11 @@ nav ul li {
 	display: flex;
 	column-gap: 5px;
 	width: 100%;
+	scroll-snap-type: x mandatory;
 }
 
 .b-holder {
+	scroll-snap-align: center;
 	width: 150px;
 	height: 150px;
 	outline: 2px dashed transparent;
@@ -2164,7 +2166,7 @@ footer {
 	}
 
 	.b-holder {
-		width: 120px;
+		width: 300px;
 		height: 100px;
 		outline: none;
 		border: none;

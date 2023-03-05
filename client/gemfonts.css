@@ -198,6 +198,8 @@ a {
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
+	scroll-snap-align: start;
+	scroll-snap-type: y mandatory;
 }
 
 .products .main-links {
