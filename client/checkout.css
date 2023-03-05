@@ -1388,11 +1388,11 @@ form input[type="submit"] {
 	width: 40px;
 	height: 40px;
 	background-color: var(--black);
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;

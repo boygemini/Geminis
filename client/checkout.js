@@ -150,6 +150,7 @@ const back = () => {
 		count = complete;
 	}
 
+	removeError();
 	unMarkComplete(complete + 1);
 	displayForm(complete);
 	continueButton.innerText = "Continue";
