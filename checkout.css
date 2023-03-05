@@ -1586,13 +1586,8 @@ footer {
 	}
 
 	.circle {
-		width: 25px;
-		height: 25px;
-		border-radius: 3px;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		-ms-border-radius: 3px;
-		-o-border-radius: 3px;
+		width: 30px;
+		height: 30px;
 	}
 
 	/* .next-stage,
@@ -1640,8 +1635,8 @@ footer {
 	}
 
 	.circle {
-		height: 35px;
-		width: 35px;
+		height: 40px;
+		width: 40px;
 		border: none;
 	}
 
