@@ -2310,8 +2310,8 @@ footer {
 		row-gap: 0px;
 		padding: 0px;
 		padding-bottom: 10px;
-		background-color: transparent;
-		/* background-color: #f4f4f6; */
+		/* background-color: transparent; */
+		background-color: #f4f4f6;
 	}
 
 	.sel-container,
