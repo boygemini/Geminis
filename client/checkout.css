@@ -606,11 +606,11 @@ nav ul li {
 	border: 2px solid transparent;
 }
 
-.next:hover {
+/* .next:hover {
 	background-color: white;
 	color: var(--black);
 	border: 2px solid var(--black);
-}
+} */
 
 .formslide {
 	width: 100%;
