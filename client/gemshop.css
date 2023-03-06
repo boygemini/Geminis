@@ -697,29 +697,16 @@ p span {
 	0% {
 		opacity: 0;
 		height: 0px;
-		padding: 0;
-		transform: scale(0.3);
-		-webkit-transform: scale(0.3);
-		-moz-transform: scale(0.3);
-		-ms-transform: scale(0.3);
-		-o-transform: scale(0.3);
 		margin-top: 0px;
 	}
 
 	70% {
 		opacity: 1;
-		height: 60px;
-		transform: scale(1);
-		-webkit-transform: scale(1);
-		-moz-transform: scale(1);
-		-ms-transform: scale(1);
-		-o-transform: scale(1);
 		margin-top: 5px;
 	}
 
 	100% {
 		opacity: 1;
-		height: 60px;
 		margin-top: 10px;
 	}
 }

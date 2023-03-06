@@ -809,7 +809,7 @@ form,
 	width: 100%;
 	height: 50px;
 	padding: 10px;
-	border: 1px solid #090a0a5f;
+	border: 2px solid #090a0a5f;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -819,7 +819,7 @@ form,
 }
 
 .form-group input:focus {
-	border: 1px solid #111111;
+	border: 2px solid #111111;
 	max-width: 100%;
 	max-height: 50px;
 	-webkit-text-size-adjust: none;
@@ -847,7 +847,7 @@ form,
 }
 
 label {
-	padding: 5px 10px;
+	padding: 5px 0px;
 	font-weight: 500;
 	color: #111111c1;
 }
