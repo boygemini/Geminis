@@ -289,75 +289,71 @@ class displayProduct {
 }
 
 // DISPLAY SELECTED PRODUCTS
+let allStoreProducts;
 Products.selectedForYou();
 (async () => {
-	let products = await Products.selectedForYou();
+	allStoreProducts = await Products.selectedForYou();
 	// DISPLAY RECENT PRODUCTS
-	displayProduct.displayRecentItems(products.recentlyAdded);
+	displayProduct.displayRecentItems(allStoreProducts.recentlyAdded);
 
 	// DISPLAYS CELLPHONE ITEMS BY DEFAULT
 	displayProduct.createItem(
 		event,
 		"#sel-container",
-		products.selectedProducts[0].cellphones,
+		allStoreProducts.selectedProducts[0].cellphones,
 		"cellphones"
 	);
 
 	// DISPLAY WEEKLY PRODUCTS
-	displayProduct.displayWeeklyFeatured(products.WeeklyFeatured);
+	displayProduct.displayWeeklyFeatured(allStoreProducts.WeeklyFeatured);
 })();
 
 let cellPhoneTab = document.getElementById("cellphones");
 cellPhoneTab.addEventListener("click", async (e) => {
-	let products = await Products.selectedForYou();
 	displayProduct.createItem(
 		event,
 		"#sel-container",
-		products.selectedProducts[0].cellphones,
+		allStoreProducts.selectedProducts[0].cellphones,
 		"cellphones"
 	);
 });
 
 let gamingTab = document.getElementById("gaming");
 gamingTab.addEventListener("click", async (e) => {
-	let products = await Products.selectedForYou();
 	displayProduct.createItem(
 		event,
 		"#sel-container",
-		products.selectedProducts[0].gaming,
+		allStoreProducts.selectedProducts[0].gaming,
 		"gaming"
 	);
 });
 
 let speakersTab = document.getElementById("speakers");
 speakersTab.addEventListener("click", async (e) => {
-	let products = await Products.selectedForYou();
 	displayProduct.createItem(
 		event,
 		"#sel-container",
-		products.selectedProducts[0].speakers,
+		allStoreProducts.selectedProducts[0].speakers,
 		"speakers"
 	);
 });
 
 let computersTab = document.getElementById("computers");
 computersTab.addEventListener("click", async (e) => {
-	let products = await Products.selectedForYou();
 	displayProduct.createItem(
 		event,
 		"#sel-container",
-		products.selectedProducts[0].computers,
+		allStoreProducts.selectedProducts[0].computers,
 		"computers"
 	);
 });
 
 let tvTab = document.getElementById("tv");
 tvTab.addEventListener("click", async (e) => {
-	let products = await Products.selectedForYou();
 	displayProduct.createItem(
 		event,
 		"#sel-container",
-		products.selectedProducts[0].tv,
+		allStoreProducts.selectedProducts[0].tv,
 		"tv"
 	);
 });

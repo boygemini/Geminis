@@ -10,6 +10,144 @@
 		{
 			"gaming": [
 				{
+					"id": "7298",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-xbox-controller-png-9253.webp",
+							"IMAGES/pro-img/51vRipjKjML._SL1200_.jpg",
+							"IMAGES/pro-img/61-uVCKZhtL._SL1200_.jpg"
+						],
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "89924",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": [
+							"IMAGES/pro-img/51hV2qz3WuL._AC_SL1080_.webp",
+							"IMAGES/pro-img/51GONCGpiWL._AC_SL1200_.jpg",
+							"IMAGES/pro-img/51MeEV7Bu6L._AC_SL1200_.jpg",
+							"IMAGES/pro-img/41lfqMsh3+S._AC_SL1200_.jpg"
+						],
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "428742",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-xbox-360-console-png-4295427.webp"
+						],
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "740297",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-xbox-live-png-4855673.webp"
+						],
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "572942",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-xbox-controller-png-9253.webp",
+							"IMAGES/pro-img/51e2Q-TWUEL._SL1200_.jpg",
+							"IMAGES/pro-img/51J7qkVOezL._SL1000_.jpg",
+							"IMAGES/pro-img/61jkjQejpyL._SL1000_.jpg"
+						],
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "84272",
+					"itemInfo": {
+						"name": "Xbox",
+						"itemImg": ["IMAGES/pro-img/61RA2sUPu+L._SL1000_.webp"],
+						"description1": "XBOX",
+						"description2": "",
+						"newItemPrice": "1112",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "Xbox",
+						"category": "Gaming",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
 					"id": "1914",
 					"itemInfo": {
 						"name": "Xbox 3",
@@ -61,7 +199,7 @@
 					"itemInfo": {
 						"name": "PS 4",
 						"itemImg": [
-							"IMAGES/pro-img/71pFnHBrvgL._SL1500_.webp",
+							"IMAGES/pro-img/pngfind.com-ps4-png-520012.webp",
 							"IMAGES/pro-img/71-WrFQo1FL._SL1500_.jpg",
 							"IMAGES/pro-img/71XrnwP7yjL._SL1500_.jpg",
 							"IMAGES/pro-img/ipad2.webp",
@@ -160,7 +298,7 @@
 					"itemInfo": {
 						"name": "PS 4",
 						"itemImg": [
-							"IMAGES/pro-img/51HPlBnOoBL._AC_SL1500_.png",
+							"IMAGES/pro-img/pngfind.com-ps4-cover-png-4164715.webp",
 							"IMAGES/pro-img/41A5YRynOAL._SL1000_.jpg",
 							"IMAGES/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
 						],
@@ -184,6 +322,7 @@
 					"itemInfo": {
 						"name": "PS 4",
 						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-ps4-pro-png-2649225.webp",
 							"IMAGES/pro-img/51SmNTnYT2L._SL1500_.webp",
 							"IMAGES/pro-img/61dXkVvoq6L._SL1500_.jpg",
 							"IMAGES/pro-img/718xi8SwUUL._SL1500_.jpg"
@@ -237,140 +376,6 @@
 							"IMAGES/pro-img/61H-v5npLZL._SL1500_.jpg"
 						],
 						"description1": "Lorem ipsum dolor sit amet",
-						"description2": "",
-						"newItemPrice": "1112",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Xbox",
-						"category": "Gaming",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "7298",
-					"itemInfo": {
-						"name": "Xbox",
-						"itemImg": [
-							"IMAGES/pro-img/51yQkquCiWL._SL1000_.webp",
-							"IMAGES/pro-img/51vRipjKjML._SL1200_.jpg",
-							"IMAGES/pro-img/61-uVCKZhtL._SL1200_.jpg"
-						],
-						"description1": "XBOX",
-						"description2": "",
-						"newItemPrice": "1112",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Xbox",
-						"category": "Gaming",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "89924",
-					"itemInfo": {
-						"name": "Xbox",
-						"itemImg": [
-							"IMAGES/pro-img/51hV2qz3WuL._AC_SL1080_.webp",
-							"IMAGES/pro-img/51GONCGpiWL._AC_SL1200_.jpg",
-							"IMAGES/pro-img/51MeEV7Bu6L._AC_SL1200_.jpg",
-							"IMAGES/pro-img/41lfqMsh3+S._AC_SL1200_.jpg"
-						],
-						"description1": "XBOX",
-						"description2": "",
-						"newItemPrice": "1112",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Xbox",
-						"category": "Gaming",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "428742",
-					"itemInfo": {
-						"name": "Xbox",
-						"itemImg": ["IMAGES/pro-img/61oFqsoj9nL._SL1000_.webp"],
-						"description1": "XBOX",
-						"description2": "",
-						"newItemPrice": "1112",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Xbox",
-						"category": "Gaming",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "740297",
-					"itemInfo": {
-						"name": "Xbox",
-						"itemImg": ["IMAGES/pro-img/6171R6ucvIL._SL1000_.png"],
-						"description1": "XBOX",
-						"description2": "",
-						"newItemPrice": "1112",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Xbox",
-						"category": "Gaming",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "572942",
-					"itemInfo": {
-						"name": "Xbox",
-						"itemImg": [
-							"IMAGES/pro-img/61ybkGQPDrL._SL1000_.webp",
-							"IMAGES/pro-img/51e2Q-TWUEL._SL1200_.jpg",
-							"IMAGES/pro-img/51J7qkVOezL._SL1000_.jpg",
-							"IMAGES/pro-img/61jkjQejpyL._SL1000_.jpg"
-						],
-						"description1": "XBOX",
-						"description2": "",
-						"newItemPrice": "1112",
-						"oldItemPrice": "$544",
-						"itemTotal": "630",
-						"brand": "Xbox",
-						"category": "Gaming",
-						"color": "🇺🇦",
-						"OS": "🫶🏼",
-						"CPU": "🁼",
-						"smop": "😘",
-						"ct": "🌕",
-						"aom": "🌑"
-					}
-				},
-				{
-					"id": "84272",
-					"itemInfo": {
-						"name": "Xbox",
-						"itemImg": ["IMAGES/pro-img/61RA2sUPu+L._SL1000_.webp"],
-						"description1": "XBOX",
 						"description2": "",
 						"newItemPrice": "1112",
 						"oldItemPrice": "$544",
@@ -4204,7 +4209,7 @@
 			"itemInfo": {
 				"name": "PS 4",
 				"itemImg": [
-					"IMAGES/pro-img/51HPlBnOoBL._AC_SL1500_.png",
+					"IMAGES/pro-img/pngfind.com-ps4-cover-png-4164715.webp",
 					"IMAGES/pro-img/41A5YRynOAL._SL1000_.jpg",
 					"IMAGES/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
 				],

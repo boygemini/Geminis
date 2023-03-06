@@ -1,4 +1,5 @@
 "use strict";
+
 const showPreloader = (bool) => {
 	let pre = document.querySelectorAll(".pre");
 	let mainContent = [
@@ -521,7 +522,7 @@ class display {
 			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id}>
 
 		<div class="img-con" id="main-con">
-				<div class="img-cont" style='background-image:url(${directory[k].itemInfo.itemImg[0]})'>
+				<div class="img-cont" data-src=${directory[k].itemInfo.itemImg[0]}>
 
 				</div>
 				</div>
@@ -1282,24 +1283,6 @@ const item = (ItemID) => {
 			}
 		}
 	}
-};
-
-// POP-UP NOTIFICATION
-const popupNotification = (itemName, itemImage) => {
-	let notification = document.getElementById("notify-box");
-	let creatNotBox = document.createElement("div");
-	creatNotBox.classList = " notification on";
-	creatNotBox.innerHTML = `<img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to cart</p>`;
-	notification.appendChild(creatNotBox);
-	setTimeout(() => {
-		creatNotBox.classList = " notification off";
-	}, 2500);
-	setTimeout(() => {
-		creatNotBox.classList = "complete-off";
-	}, 3200);
-	setTimeout(() => {
-		creatNotBox.classList = "die";
-	}, 3200);
 };
 
 // DISPLAY NUMBER OF ITEMS IN CART
