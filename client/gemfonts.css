@@ -547,13 +547,13 @@ body {
 }
 
 .menuin {
-	animation: menuin 0.5s ease-in-out;
-	-webkit-animation: menuin 0.5s ease-in-out;
+	animation: menuin 3s ease-in-out;
+	-webkit-animation: menuin 3s ease-in-out;
 }
 
 .menuout {
-	animation: menuout 0.4s ease-in-out;
-	-webkit-animation: menuout 0.4s ease-in-out;
+	animation: menuout 3s ease-in-out;
+	-webkit-animation: menuout 3s ease-in-out;
 }
 
 @keyframes menuin {

@@ -936,7 +936,7 @@ const prog = document.querySelector(".progress");
 
 const openMenu = () => {
 	menuDOM.style.display = "block";
-
+	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
 	if (menuDOM.className.includes("menuout")) {
 		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
 	} else {
@@ -945,8 +945,7 @@ const openMenu = () => {
 
 	setTimeout(() => {
 		menuDOM.classList.remove("menuin");
-		document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
-	}, 450);
+	}, 3000);
 
 	allSecTitle.forEach((st) => {
 		st.style.zIndex = "0";
@@ -960,7 +959,6 @@ const openMenu = () => {
 const closeMenu = () => {
 	menuDOM.classList.add("menuout");
 	setTimeout(() => {
-		document.lastChild.style.overflow = ""; // Enables the window scrolling
 		menuDOM.style.display = "none";
 		allSecTitle.forEach((st) => {
 			st.style.zIndex = "";
@@ -968,7 +966,8 @@ const closeMenu = () => {
 		try {
 			prog.style.zIndex = "";
 		} catch (error) {}
-	}, 400);
+	}, 3000);
+	document.lastChild.style.overflow = ""; // Enables the window scrolling
 };
 
 // CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
