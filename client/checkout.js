@@ -218,6 +218,7 @@ const confirmPayment = async (elements, _stripe) => {
 		displayError(error.message);
 		continueButton.innerText = "Make Payment";
 	} else {
+		removeError();
 		displayForm(4);
 		markComplete(4);
 		continueButton.innerText = "Continue Shopping";
