@@ -907,6 +907,7 @@ allCartText.forEach((txt) => {
 const menuDOM = document.getElementById("menu");
 const menuBtn = document.getElementById("mb");
 const allSecTitle = [...document.querySelectorAll(".section-title")];
+const prog = document.querySelector(".progress");
 menuDOM.style.display = "none";
 
 const openMenu = () => {
@@ -920,6 +921,9 @@ const openMenu = () => {
 	allSecTitle.forEach((st) => {
 		st.style.zIndex = "0";
 	});
+	try {
+		prog.style.zIndex = "0";
+	} catch (error) {}
 };
 
 // CLOSE MENU
@@ -930,6 +934,9 @@ const closeMenu = () => {
 	allSecTitle.forEach((st) => {
 		st.style.zIndex = "";
 	});
+	try {
+		prog.style.zIndex = "";
+	} catch (error) {}
 };
 
 // CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
