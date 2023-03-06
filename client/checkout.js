@@ -69,15 +69,17 @@ let progressBar = document.getElementById("progress-bar");
 const markComplete = (step) => {
 	if (step < 4) {
 		progressBar.style.width = `${(step + 1) * 25}%`;
+		completionCircles[step + 1].className += " next-stage";
+	} else {
+		completionCircles[step].className += " next-stage";
 	}
+	console.log(step);
 	// formStateDOM.innerText = formStage[step + 2];
 	// formStateDOM.innerText = formStage[step];
 	completionCircles[step].classList.remove("next-stage");
 	completionCircles[step].className += " completed";
 	completionCircles[step].innerHTML =
 		"<img class='check-image' src='IMAGES/check-mark.png'></img>";
-	completionCircles[step + 1].className += " next-stage";
-	console.log(completionCircles[step].className);
 };
 
 const unMarkComplete = (step) => {

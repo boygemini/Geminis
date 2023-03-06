@@ -14,7 +14,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
 	},
 });
 
-const PORT = process.env.PORT || 0525;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static(process.env.STATIC_DIR));
 app.use(
