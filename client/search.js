@@ -944,13 +944,14 @@ const openMenu = () => {
 		menuDOM.style.boxShadow = "";
 		menuDOM.style.transition = ".5s";
 	}, 10);
-	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
+
 	allSecTitle.forEach((st) => {
 		st.style.zIndex = "0";
 	});
 	try {
 		prog.style.zIndex = "0";
 	} catch (error) {}
+	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
 };
 
 // CLOSE MENU
@@ -959,7 +960,7 @@ const closeMenu = () => {
 	menuDOM.style.boxShadow = "none";
 	menuDOM.style.transition = ".5s";
 	setTimeout(() => {
-		menuDOM.style.display = "block";
+		menuDOM.style.display = "none";
 		allSecTitle.forEach((st) => {
 			st.style.zIndex = "";
 		});
