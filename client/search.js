@@ -934,14 +934,12 @@ const menuBtn = document.getElementById("mb");
 const allSecTitle = [...document.querySelectorAll(".section-title")];
 const prog = document.querySelector(".progress");
 menuDOM.style.display = "none";
-menuDOM.style.opacity = "0";
 menuDOM.style.transform = "translateX(-100%)";
 menuDOM.style.boxShadow = "none";
 
 const openMenu = () => {
 	menuDOM.style.display = "block";
 	setTimeout(() => {
-		menuDOM.style.opacity = "1";
 		menuDOM.style.transform = "translateX(0)";
 		menuDOM.style.boxShadow = "";
 		menuDOM.style.transition = ".5s";
@@ -960,7 +958,6 @@ const closeMenu = () => {
 	menuDOM.style.transform = "translateX(-100%)";
 	menuDOM.style.boxShadow = "none";
 	menuDOM.style.transition = ".5s";
-	menuDOM.style.opacity = "0";
 	setTimeout(() => {
 		menuDOM.style.display = "block";
 		allSecTitle.forEach((st) => {

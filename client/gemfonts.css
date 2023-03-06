@@ -464,6 +464,10 @@ body {
 		max-zoom: 1;
 	}
 
+	.menu-box {
+		box-shadow: none;
+	}
+
 	.login-cart {
 		column-gap: 10px;
 	}
