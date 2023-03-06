@@ -1059,43 +1059,53 @@ try {
 switch (urlCategory) {
 	case "cellphones":
 		cellPhones();
-		phones.scrollIntoView({
-			behaviour: "smooth",
-			block: "center",
-			inline: "center",
-		});
+		setTimeout(() => {
+			phones.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
 		break;
 	case "computers":
 		Computers();
-		coms.scrollIntoView({
-			behaviour: "smooth",
-			block: "center",
-			inline: "center",
-		});
+		setTimeout(() => {
+			coms.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
 		break;
 	case "speakers":
 		Speakers();
-		spks.scrollIntoView({
-			behaviour: "smooth",
-			block: "center",
-			inline: "center",
-		});
+		setTimeout(() => {
+			spks.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
 		break;
 	case "tv":
 		TVs();
-		tele.scrollIntoView({
-			behaviour: "smooth",
-			block: "center",
-			inline: "center",
-		});
+		setTimeout(() => {
+			tele.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
 		break;
 	case "gaming":
 		Gamings();
-		games.scrollIntoView({
-			behaviour: "smooth",
-			block: "center",
-			inline: "center",
-		});
+		setTimeout(() => {
+			games.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
 		break;
 }
 
