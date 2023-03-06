@@ -3525,7 +3525,7 @@
 					}
 				},
 				{
-					"id": "4929194",
+					"id": "4924294",
 					"itemInfo": {
 						"name": "Hisense",
 						"itemImg": ["IMAGES/pro-img/try3.webp"],
@@ -4444,6 +4444,27 @@
 				"screen": 16,
 				"brand": "Mac",
 				"category": "Computers",
+				"color": "🇺🇦",
+				"OS": "🫶🏼",
+				"CPU": "🁼",
+				"smop": "😘",
+				"ct": "🌕",
+				"aom": "🌑"
+			}
+		},
+		{
+			"id": "4929324",
+			"itemInfo": {
+				"name": "Hisense",
+				"itemImg": ["IMAGES/pro-img/try3.webp"],
+				"description1": "Hisense TV",
+				"description2": "",
+				"newItemPrice": "928",
+				"oldItemPrice": "$544",
+				"itemTotal": "630",
+				"brand": "hisense",
+				"size": 32,
+				"category": "TV",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",
 				"CPU": "🁼",

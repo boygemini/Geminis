@@ -1317,7 +1317,7 @@ form input[type="submit"] {
 	height: 5px;
 	background-color: whitesmoke;
 	position: relative;
-	z-index: 0;
+	z-index: 123;
 }
 
 .stage-container {
