@@ -216,8 +216,8 @@ const confirmPayment = async (elements, _stripe) => {
 
 	if (error) {
 		displayError(error.message);
+		continueButton.innerText = "Make Payment";
 	} else {
-		// thankYouPage.style.height = thankYouPageOriginalHeight + "px";
 		displayForm(4);
 		markComplete(4);
 		continueButton.innerText = "Continue Shopping";
@@ -388,11 +388,11 @@ const checkFields = (e) => {
 	}
 
 	if (form[2].style.display === "flex") {
-		animatFormForward();
-		displayForm(3);
-		markComplete(3);
 		loadPaymentElement();
 		validateForm();
+		displayForm(3);
+		markComplete(3);
+		animatFormForward();
 		return;
 	}
 };
