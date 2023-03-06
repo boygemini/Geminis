@@ -292,7 +292,7 @@ const displayResults = (directory, Query) => {
 			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id} >
 
 		<div class="img-con" id="main-con">
-				<div class="img-cont" style='background-image:url(${directory[k].itemInfo.itemImg[0]})'>
+				<div class="img-cont" data-src=${directory[k].itemInfo.itemImg[0]}>
 
 				</div>
 				</div>
@@ -343,7 +343,7 @@ const displayFiltereddResults = (results, category) => {
 			<a href="product.html?item=${results[k].id}" class="sell-box sel-box" data-id=${results[k].id} >
 
 		<div class="img-con" id="main-con">
-				<div class="img-cont" style='background-image:url(${results[k].itemInfo.itemImg[0]})'>
+				<div class="img-cont" data-src=${results[k].itemInfo.itemImg[0]}>
 
 				</div>
 				</div>
@@ -823,6 +823,31 @@ const onLoad = () => {
 		// PASSING RESULTS TO UI FUNCTION
 		displayFiltereddResults(results, parameterCategory);
 	}
+
+	// LOAD IMAGES WHEN THEY ARE IN VIEW PORT
+	let theCurrentPage = new URL(document.URL);
+	if (theCurrentPage.pathname.includes("gemshop")) {
+		(async () => {
+			let dir = await allProducts();
+			dir = dir.selectedProducts[0];
+			if (typeof dir === "object") {
+				let images = document.querySelectorAll(".img-cont");
+				let observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							let image = entry.target;
+							image.style.backgroundImage = `url(${image.dataset.src})`;
+							observer.unobserve(image);
+						}
+					});
+				});
+
+				images.forEach((image) => {
+					observer.observe(image);
+				});
+			}
+		})();
+	}
 };
 
 // PRODUCT DISPLAY (SEARCH)
@@ -944,6 +969,18 @@ window.addEventListener("click", (e) => {
 			closeMenu();
 		}
 	}
+});
+
+// PREVENT PAGE FROM ZOOMING WHEN AN INPUT FIELD IS FOCUSED ON
+let allInputs = document.querySelectorAll("input");
+allInputs.forEach((input) => {
+	input.addEventListener("focus", (e) => {
+		let head = document.lastChild.children[0];
+		head.innerHTML += `<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+		/>`;
+	});
 });
 
 window.onload = onLoad;

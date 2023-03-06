@@ -446,7 +446,7 @@ const displayFilteredResults = (directory) => {
 			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" >
 
 		<div class="img-con" id="main-con">
-				<div class="img-cont" style='background-image:url(${directory[k].itemInfo.itemImg[0]})'>
+				<div class="img-cont" data-src=${directory[k].itemInfo.itemImg[0]}>
 
 				</div>
 				</div>
