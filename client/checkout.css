@@ -188,7 +188,7 @@ nav ul li {
 	position: fixed;
 	z-index: 499420942429292;
 	top: 0;
-	left: 0;
+	left: 0px;
 	box-shadow: 0px 0px 0px 100vw #1111116a;
 	display: none;
 }
@@ -226,7 +226,6 @@ nav ul li {
 	row-gap: 20px;
 	padding: 20px;
 	width: 100%;
-	z-index: -2;
 }
 
 .menu-cat {
