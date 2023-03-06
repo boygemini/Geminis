@@ -547,8 +547,8 @@ body {
 }
 
 .menuin {
-	animation: menuin 0.3s ease-in-out;
-	-webkit-animation: menuin 0.3s ease-in-out;
+	animation: menuin 0.5s ease-in-out;
+	-webkit-animation: menuin 0.5s ease-in-out;
 }
 
 .menuout {

@@ -937,12 +937,13 @@ menuDOM.style.display = "none";
 
 const openMenu = () => {
 	menuDOM.style.display = "block";
+	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
 	if (menuDOM.className.includes("menuout")) {
 		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
 	} else {
 		menuDOM.className += " menuin";
 	}
-	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
+
 	allSecTitle.forEach((st) => {
 		st.style.zIndex = "0";
 	});
