@@ -944,7 +944,7 @@ const openMenu = () => {
 		menuDOM.style.opacity = "1";
 		menuDOM.style.transform = "translateX(0)";
 		menuDOM.style.boxShadow = "";
-		menuDOM.style.transition = ".4s";
+		menuDOM.style.transition = ".5s";
 	}, 10);
 	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
 	allSecTitle.forEach((st) => {
@@ -957,10 +957,10 @@ const openMenu = () => {
 
 // CLOSE MENU
 const closeMenu = () => {
-	menuDOM.style.opacity = "0";
 	menuDOM.style.transform = "translateX(-100%)";
 	menuDOM.style.boxShadow = "none";
-	menuDOM.style.transition = ".4s";
+	menuDOM.style.transition = ".5s";
+	menuDOM.style.opacity = "0";
 	setTimeout(() => {
 		menuDOM.style.display = "block";
 		allSecTitle.forEach((st) => {
@@ -969,7 +969,7 @@ const closeMenu = () => {
 		try {
 			prog.style.zIndex = "";
 		} catch (error) {}
-	}, 400);
+	}, 500);
 	document.lastChild.style.overflow = ""; // Enables the window scrolling
 };
 
