@@ -945,7 +945,7 @@ const openMenu = () => {
 
 	setTimeout(() => {
 		menuDOM.classList.remove("menuin");
-	}, 3000);
+	}, 600);
 
 	allSecTitle.forEach((st) => {
 		st.style.zIndex = "0";
@@ -966,7 +966,7 @@ const closeMenu = () => {
 		try {
 			prog.style.zIndex = "";
 		} catch (error) {}
-	}, 3000);
+	}, 300);
 	document.lastChild.style.overflow = ""; // Enables the window scrolling
 };
 
