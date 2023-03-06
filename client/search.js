@@ -944,6 +944,10 @@ const openMenu = () => {
 		menuDOM.className += " menuin";
 	}
 
+	setTimeout(() => {
+		menuDOM.classList.remove("menuin");
+	}, 450);
+
 	allSecTitle.forEach((st) => {
 		st.style.zIndex = "0";
 	});
@@ -954,15 +958,17 @@ const openMenu = () => {
 
 // CLOSE MENU
 const closeMenu = () => {
-	menuDOM.className = menuDOM.className.replace("menuin", " menuout");
-	setTimeout(() => (menuDOM.style.display = "none"), 400);
+	menuDOM.classList.add("menuout");
+	setTimeout(() => {
+		menuDOM.style.display = "none";
+		allSecTitle.forEach((st) => {
+			st.style.zIndex = "";
+		});
+		try {
+			prog.style.zIndex = "";
+		} catch (error) {}
+	}, 400);
 	document.lastChild.style.overflow = ""; // Enables the window scrolling
-	allSecTitle.forEach((st) => {
-		st.style.zIndex = "";
-	});
-	try {
-		prog.style.zIndex = "";
-	} catch (error) {}
 };
 
 // CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
