@@ -459,6 +459,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+	input:focus {
+		max-zoom: 1;
+	}
+
 	.login-cart {
 		column-gap: 10px;
 	}

@@ -936,12 +936,12 @@ const prog = document.querySelector(".progress");
 menuDOM.style.display = "none";
 
 const openMenu = () => {
+	menuDOM.style.display = "block";
 	if (menuDOM.className.includes("menuout")) {
 		menuDOM.className = menuDOM.className.replace("menuout", " menuin");
 	} else {
 		menuDOM.className += " menuin";
 	}
-	menuDOM.style.display = "block";
 	document.lastChild.style.overflow = "hidden"; // Disables the window scrolling
 	allSecTitle.forEach((st) => {
 		st.style.zIndex = "0";
@@ -977,18 +977,6 @@ window.addEventListener("click", (e) => {
 			closeMenu();
 		}
 	}
-});
-
-// PREVENT PAGE FROM ZOOMING WHEN AN INPUT FIELD IS FOCUSED ON
-let allInputs = document.querySelectorAll("input");
-allInputs.forEach((input) => {
-	input.addEventListener("focus", (e) => {
-		let head = document.lastChild.children[0];
-		head.innerHTML += `<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
-		/>`;
-	});
 });
 
 window.onload = onLoad;
