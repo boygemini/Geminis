@@ -1060,6 +1060,7 @@ try {
 switch (urlCategory) {
 	case "cellphones":
 		cellPhones();
+<<<<<<< HEAD:gemshop.js
 		break;
 	case "computers":
 		Computers();
@@ -1072,6 +1073,55 @@ switch (urlCategory) {
 		break;
 	case "gaming":
 		Gamings();
+=======
+		setTimeout(() => {
+			phones.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
+		break;
+	case "computers":
+		Computers();
+		setTimeout(() => {
+			coms.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
+		break;
+	case "speakers":
+		Speakers();
+		setTimeout(() => {
+			spks.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
+		break;
+	case "tv":
+		TVs();
+		setTimeout(() => {
+			tele.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
+		break;
+	case "gaming":
+		Gamings();
+		setTimeout(() => {
+			games.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
+>>>>>>> d4968da (Worked on load speed):client/gemshop.js
 		break;
 }
 
