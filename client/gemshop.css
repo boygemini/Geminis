@@ -347,7 +347,7 @@ nav ul li {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	background-color: transparent;
+	background-color: white;
 	z-index: 468969826896078458758715478578458752;
 	display: flex;
 	justify-content: center;
@@ -2081,7 +2081,7 @@ footer {
 		flex-direction: column;
 		justify-content: flex-start;
 		padding-top: 10px;
-		background-color: transparent;
+		background-color: white;
 	}
 
 	.searchbox {

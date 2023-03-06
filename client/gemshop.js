@@ -1059,18 +1059,23 @@ try {
 switch (urlCategory) {
 	case "cellphones":
 		cellPhones();
+		phones.scrollIntoView();
 		break;
 	case "computers":
 		Computers();
+		coms.scrollIntoView();
 		break;
 	case "speakers":
 		Speakers();
+		spks.scrollIntoView();
 		break;
 	case "tv":
 		TVs();
+		tele.scrollIntoView();
 		break;
 	case "gaming":
 		Gamings();
+		games.scrollIntoView();
 		break;
 }
 
