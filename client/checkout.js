@@ -74,9 +74,10 @@ const markComplete = (step) => {
 	// formStateDOM.innerText = formStage[step];
 	completionCircles[step].classList.remove("next-stage");
 	completionCircles[step].className += " completed";
-	completionCircles[step].className += " next-stage";
 	completionCircles[step].innerHTML =
 		"<img class='check-image' src='IMAGES/check-mark.png'></img>";
+	completionCircles[step + 1].className += " next-stage";
+	console.log(completionCircles[step].className);
 };
 
 const unMarkComplete = (step) => {
