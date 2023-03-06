@@ -705,7 +705,6 @@ if (document.lastChild.offsetWidth >= 1024) {
 const phoneFilters = () => {
 	// Price filter
 	firstlevelprice.addEventListener("click", (event) => {
-		console.log("CLicke");
 		displayFilteredResults(filter.price(event, "cellphones", 300, 799));
 	});
 
@@ -1089,7 +1088,6 @@ const indicateLoadingWhileAwaitingResults = (awaiting) => {
 };
 
 let newUrl = new URL(document.URL);
-console.log(newUrl.search.length);
 if (newUrl.search.length === 0) {
 	// showPreloader(false);
 	display.displayAll();
@@ -1203,7 +1201,6 @@ class Storage {
 			let check = getbackcart.find(
 				(item) => Number(item.id) === Number(pickedItemID)
 			);
-			console.log(pickedItemID);
 
 			if (check) {
 				check.amount += 1;

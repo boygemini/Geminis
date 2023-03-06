@@ -67,7 +67,6 @@ const showSuggesttions = async (event) => {
 
 	mm = [...new Set(mm)];
 	let uniqueArray = Array.from(new Set(mm.map(JSON.stringify))).map(JSON.parse);
-	console.log(uniqueArray);
 	return uniqueArray;
 };
 

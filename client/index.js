@@ -184,7 +184,7 @@ class displayProduct {
 				  <span class="price">$${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			<button id="cart-btn" class="cart-btn" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
+			<button aria-labelledby="button" aria-label="button" id="cart-btn" class="cart-btn" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
 			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
 			<p data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])" id="cart-text"> Add to Cart<p></button>
 		    </div>
@@ -231,7 +231,7 @@ class displayProduct {
 						  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
 						  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 					   </span>
-					   <button id="cart-btn" class="cart-btn" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)">
+					   <button aria-labelledby="button" aria-label="button" id="cart-btn" class="cart-btn" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)">
 					   <img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)">
 					 	<p id="cart-text" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"> Add to Cart<p></button>
 					   </button>
@@ -248,7 +248,7 @@ class displayProduct {
 			// 						</div>
 			// 						<div class="price-order">
 			// 							<span class="recentPrice">$${category[i].itemInfo.newItemPrice}</span>
-			// 							<button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
+			// 							<button aria-labelledby="button" aria-label="button" id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
 			// 						</div>
 			// 					</div>
 			// 				</div>`;
@@ -276,7 +276,7 @@ class displayProduct {
 				  <span class="price">$${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button id="cart-btn" class="cart-btn" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)">
+			   <button aria-labelledby="button" aria-label="button" id="cart-btn" class="cart-btn" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)">
 			   <img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt="" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)">
 			 	<p id="cart-text" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"> Add to Cart<p></button>
 			   </button>
@@ -393,7 +393,6 @@ const moveLeft = () => {
 };
 
 let me = document.querySelectorAll("#cart-text");
-console.log(me);
 
 // ADD RECENT ITEMS TO CART
 const addToCartt = (event, ITT) => {
@@ -470,14 +469,11 @@ const addToCart = (event, ITT) => {
 	if (pickItemFromStore) {
 		try {
 			Storage.getItemAndSaveToCart();
-		} catch (error) {
-			console.log(error);
-		}
+		} catch (error) {}
 	}
 	animateCartButtonText(event.target);
 };
 
-console.log("Test : code ran successfully [OK]");
 //END OF CODE
 //END OF CODE
 //END OF CODE

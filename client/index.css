@@ -768,13 +768,13 @@ nav ul li {
 	background-image: url(IMAGES/cell-big2.jpg);
 }
 #grid-3 {
-	background-color: #db86cd;
+	background-color: #a695bb;
 	/* grid-row-start: 1;
 	grid-column-start: 3;
 
 	grid-row-end: 2;
 	grid-column-end: 5; */
-	background-image: url(IMAGES/tvv-big.jpg);
+	background-image: url(IMAGES/tvv.webp);
 }
 #grid-4 {
 	background-color: #95bba9;
@@ -783,7 +783,7 @@ nav ul li {
 
 	grid-row-end: 2;
 	grid-column-end: 3; */
-	background-image: url(IMAGES/game-big.jpg);
+	background-image: url(IMAGES/gamme.png);
 }
 
 .grid {
@@ -2300,6 +2300,16 @@ footer {
 		width: 600px;
 		column-gap: 5px;
 		padding: 0;
+	}
+
+	.inactive-li {
+		border: none;
+		background-color: transparent;
+		border: 2px solid #f4f4f6;
+	}
+
+	.active-li {
+		background-color: #111111;
 	}
 
 	.sel-box {

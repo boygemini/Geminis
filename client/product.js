@@ -499,9 +499,7 @@ const addToCart = () => {
 				pickItemFromStore.itemInfo.name,
 				pickItemFromStore.itemInfo.itemImg[0]
 			);
-		} catch (error) {
-			console.log(error);
-		}
+		} catch (error) {}
 	}
 };
 

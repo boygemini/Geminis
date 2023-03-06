@@ -323,8 +323,6 @@ const checkFields = (e) => {
 		},
 	};
 
-	console.log(customerInfo.shippingInformation);
-
 	const inputGood = (filterFilledFields) => {
 		filterFilledFields.forEach((box) => {
 			box.style.border = ".5px solid #090a0a5f";

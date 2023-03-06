@@ -320,7 +320,7 @@ nav ul li {
 }
 
 .search:focus {
-	background-color: white;
+	background-color: transparent;
 	border: 1px solid #11111190;
 	outline: none;
 }
@@ -347,7 +347,7 @@ nav ul li {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	background-color: white;
+	background-color: transparent;
 	z-index: 468969826896078458758715478578458752;
 	display: flex;
 	justify-content: center;
@@ -361,7 +361,7 @@ nav ul li {
 .search-mainbox {
 	width: 70%;
 	height: auto;
-	/* background-color: white; */
+	/* background-color: transparent; */
 	padding: 20px;
 }
 
@@ -374,7 +374,7 @@ nav ul li {
 	flex-direction: column;
 	row-gap: 10px;
 	height: auto;
-	background-color: white;
+	background-color: transparent;
 	padding: 20px;
 	overflow: hidden;
 }
@@ -386,7 +386,7 @@ nav ul li {
 #search {
 	height: 45px;
 	padding: 5px 20px;
-	background-color: white;
+	background-color: transparent;
 	border: 2px solid #111111;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -488,31 +488,31 @@ nav ul li {
 }
 
 .hol1 {
-	background: url("IMAGES/game-small.jpg");
+	background: url("IMAGES/gamme-small.png");
 	background-size: cover;
 	background-position: center;
 }
 
 .hol2 {
-	background: url("IMAGES/cell.jpg");
+	background: url("IMAGES/cell-big2-small.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 .hol3 {
-	background: url("IMAGES/wiin.jpg");
+	background: url("IMAGES/lapp-big-3-small.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 .hol4 {
-	background: url("IMAGES/spekk.jpg");
+	background: url("IMAGES/spekk-big-small.webp");
 	background-size: cover;
 	background-position: center;
 }
 
 .hol5 {
-	background: url("IMAGES/tele.jpg");
+	background: url("IMAGES/tvv-small.webp");
 	background-size: cover;
 	background-position: center;
 }
@@ -601,7 +601,7 @@ p span {
 }
 
 .banner-text button {
-	background-color: white;
+	background-color: transparent;
 	width: 150px;
 	height: 45px;
 	border: none;
@@ -770,7 +770,7 @@ p span {
 }
 
 .shop-body {
-	background-color: white;
+	background-color: transparent;
 	height: auto;
 	width: 100%;
 	margin: auto;
@@ -781,7 +781,7 @@ p span {
 }
 
 .filters {
-	background-color: white;
+	background-color: transparent;
 	/* box-shadow: 0px 15px 25px -10px #021e541a; */
 	width: 20%;
 	height: 90vh;
@@ -1022,7 +1022,7 @@ p span {
 .label {
 	position: absolute;
 	transform: translateY(-50%);
-	background-color: white;
+	background-color: transparent;
 	width: auto;
 	padding: 0px 5px;
 	left: 10px;
@@ -1148,7 +1148,7 @@ p span {
 	width: 35px;
 	height: 35px;
 	border: 1px solid #70809096;
-	background-color: white;
+	background-color: transparent;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -1183,7 +1183,7 @@ p span {
 	height: 35px;
 	padding: 5px 30px;
 	border: 1px solid rgba(112, 128, 144, 0.589);
-	background-color: white;
+	background-color: transparent;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -1238,7 +1238,7 @@ p span {
 	align-items: center;
 	flex-direction: row;
 	row-gap: 10px;
-	border-bottom: 1px solid #111111b4;
+	/* border-bottom: 1px solid #111111b4; */
 	border-radius: 0;
 	/* z-index: 1; */
 	background-color: rgba(255, 255, 255, 0.462);
@@ -1360,7 +1360,7 @@ p span {
 }
 
 .noresultbuttons a:hover {
-	background-color: white;
+	background-color: transparent;
 	border: 2px solid #090a0a;
 	color: #090a0a;
 }
@@ -1372,7 +1372,7 @@ p span {
 }
 
 .backtoshop {
-	background-color: white;
+	background-color: transparent;
 	border: 2px solid #111111;
 	color: #111111;
 }
@@ -1448,7 +1448,7 @@ select:hover {
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	background-color: #f6f6f6;
-	/* background-color: white; */
+	/* background-color: transparent; */
 	/* box-shadow: 0px 15px 25px -10px #021e541a; */
 	/* border: 0.5px solid rgba(112, 128, 144, 0.29); */
 }
@@ -1459,7 +1459,7 @@ select:hover {
 	cursor: pointer;
 	/* box-shadow: 0px 15px 25px -10px #021e541a; */
 	/* box-shadow: 0px 15px 25px -10px #7080903b; */
-	/* background-color: white; */
+	/* background-color: transparent; */
 }
 
 .sel-box:hover .img-con {
@@ -1625,7 +1625,7 @@ select:hover {
 }
 
 .cart-btn:active {
-	background-color: white;
+	background-color: transparent;
 	transition-duration: 0.05s;
 }
 
@@ -2081,7 +2081,7 @@ footer {
 		flex-direction: column;
 		justify-content: flex-start;
 		padding-top: 10px;
-		background-color: white;
+		background-color: transparent;
 	}
 
 	.searchbox {
@@ -2111,7 +2111,7 @@ footer {
 
 	.search-mainbox {
 		width: 100%;
-		/* background-color: white; */
+		/* background-color: transparent; */
 		padding: 0px;
 	}
 
@@ -2166,7 +2166,7 @@ footer {
 	}
 
 	.b-holder {
-		width: 300px;
+		width: 70vw;
 		height: 100px;
 		outline: none;
 		border: none;
@@ -2370,7 +2370,7 @@ footer {
 		display: none;
 		flex-direction: column;
 		position: fixed;
-		background-color: white;
+		background-color: transparent;
 		width: 100vw;
 		height: 100vh;
 		z-index: 1;
@@ -2871,6 +2871,10 @@ footer {
 	.price-box {
 		position: absolute;
 	}
+
+	#res-sort {
+		padding: 0;
+	}
 }
 
 @media screen and (min-width: 1201px) {
@@ -3112,5 +3116,9 @@ footer {
 
 	.sfu {
 		height: 100%;
+	}
+
+	#res-sort {
+		padding: 0;
 	}
 }

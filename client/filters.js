@@ -124,7 +124,6 @@ const returnUncheckedBoxes = (targetBox) => {
 			.split("&")[0]
 			.split(",");
 		getBoxesCheck = getBoxesCheck.filter((box) => box !== targetBox);
-		console.log(getBoxesCheck);
 		Parameters.Filters = getBoxesCheck;
 	} catch (error) {}
 };
