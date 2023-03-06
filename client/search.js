@@ -933,7 +933,6 @@ const menuDOM = document.getElementById("menu");
 const menuBtn = document.getElementById("mb");
 const allSecTitle = [...document.querySelectorAll(".section-title")];
 const prog = document.querySelector(".progress");
-menuDOM.style.display = "none";
 
 const openMenu = () => {
 	menuDOM.style.display = "block";
