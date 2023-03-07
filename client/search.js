@@ -635,7 +635,7 @@ const onLoad = () => {
 		getCatFiltersAndSearchResults(Query);
 		setTimeout(() => {
 			imageObserver();
-		}, 100);
+		}, 1000);
 		return;
 	}
 
