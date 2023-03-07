@@ -587,7 +587,6 @@ const imageObserver = () => {
 				let observer = new IntersectionObserver((entries) => {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting) {
-							console.log("object");
 							let image = entry.target;
 							image.style.backgroundImage = `url(${image.dataset.src})`;
 							observer.unobserve(image);
