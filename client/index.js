@@ -141,7 +141,7 @@ class displayProduct {
 		let itemCreated = "";
 		let Holder = document.getElementById("holder-rec");
 		for (let i in category) {
-			itemCreated += `<a href="product.html?item=${category[i].id}" class="sell-box sel-box" id="recbox" data-id=${category[i].id} onclick = "viewProduct(event)">
+			itemCreated += `<a href="product.html?item=${category[i].id}" class="sell-box sel-box" id=${i} data-id=${category[i].id} onclick = "viewProduct(event)">
 				<div class="img-con" id="rec-con">
 				<div class="img-cont" style='background-image:url(${category[i].itemInfo.itemImg[0]})'>
 

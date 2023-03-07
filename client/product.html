@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Product page">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
     <title>Document</title>
     <link  rel="stylesheet" href="product.css">
     <link  rel="stylesheet" href="gemfonts.css">
@@ -44,10 +45,10 @@
 						<a href="index.html" class="logo" id="mob-logo">Geminis.</a>
 						<div class="products">
 							<div class="main-links">
-								<a id="games" href="gemshop.html">Shop</a>
-								<a id="phones">Products</a>
-								<a id="coms">About Us</a>
-								<a id="spks">Contact Us</a>
+								<a href="#" id="games" href="gemshop.html">Shop</a>
+								<a href="#" id="phones">Products</a>
+								<a href="#" id="coms">About Us</a>
+								<a href="#" id="spks">Contact Us</a>
 							</div>
 						</div>
 					</nav>
@@ -63,6 +64,8 @@
 								placeholder="Search..."
 								autocomplete="off"
 								onclick="openSearch()"
+                                aria-label="input"
+                                aria-labelledby="input"
 							/>
 							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
 							<div class="serc-img">
@@ -92,7 +95,7 @@
 							/>
 							<p id="items-in-cart">0</p>
 						</a>
-						<button type="button" class="login">Login</button>
+						<button aria-label="button" aria-labelledby="button" type="button" type="button" class="login">Login</button>
 						<div class="account cart-box">
 							<img src="IMAGES/user.png" alt="" />
 						</div>
@@ -132,21 +135,21 @@
 							<h1>Sections</h1>
 							<div id="kk">
 								<a id="link" href="gemshop.html">Shop</a>
-								<a>Products</a>
-								<a>About Us</a>
-								<a>Contact Us</a>
+								<a href="#">Products</a>
+								<a href="#">About Us</a>
+								<a href="#">Contact Us</a>
 							</div>
 						</div>
 						<div class="menu-cat">
 							<h1>Support</h1>
 							<div id="kk">
-								<a>Visit Our Support</a>
-								<a>Online Support</a>
+								<a href="#">Visit Our Support</a>
+								<a href="#">Online Support</a>
 							</div>
 						</div>
 						<div class="menu-cat">
 							<div>
-								<a style="border: none; color: red">Logout</a>
+								<a href="#" style="border: none; color: red">Logout</a>
 							</div>
 						</div>
 					</div>
@@ -168,8 +171,10 @@
 							placeholder="Search a Product"
 							autocomplete="off"
 							autofocus
+                            aria-label="input" aria-labelledby="input"
 						/>
-						<input type="submit" class="go" value="Search" id="GO" />
+						<input type="submit" class="go" value="Search" id="GO" aria-label="input"
+                                aria-labelledby="input"/>
 					</div>
 					<div class="suggestion">
 						<div class="sug-holder"></div>
@@ -185,12 +190,12 @@
                </div>
                 <img src="" alt="" id="largeImage">
                 <div class="image-thumbnail">
-                    <button id="lbtn" onclick="bwd()">
+                    <button aria-label="button" aria-labelledby="button" type="button" id="lbtn" onclick="bwd()">
                     </button>
                     <div class="tbs" id="thumbnailPanel">
 
                     </div>
-                    <button id="rbtn" onclick="fwd()"></button>
+                    <button aria-label="button" aria-labelledby="button" type="button" id="rbtn" onclick="fwd()"></button>
                 </div>
             </div>
             <div class="product-details-container">
@@ -222,7 +227,7 @@
                 <div class="qty">
                     <h2>Quantity</h2>
                     <div class="quantity">
-                        <button>-</button><input type="text" value="1"><button>+</button>
+                        <button aria-label="button" aria-labelledby="button" type="button">-</button><input type="text" value="1"><button aria-label="button" aria-labelledby="button" type="button">+</button>
                     </div>
                 </div>
                 <div class="shipping-pickup">
@@ -245,8 +250,8 @@
                                 mins</span></p>
                     </div>
                     <div class="to-cart-buy">
-                        <button class="add-to-cart" id="addItemToCart" onclick="addToCart()">🛒 Add to Cart</button>
-                        <button class="buy-now" onclick="buyItem()">Buy Now</button>
+                        <button aria-label="button" aria-labelledby="button" type="button" class="add-to-cart" id="addItemToCart" onclick="addToCart()">🛒 Add to Cart</button>
+                        <button aria-label="button" aria-labelledby="button" type="button" class="buy-now" onclick="buyItem()">Buy Now</button>
                     </div>
                 </div>
             </div>
@@ -463,10 +468,16 @@
 
     <footer>
         <h1>
-            Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
+            Shop by <a href="#" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
         </h1>
     </footer>
-    <button id="backtotop" onclick="backToTop()"></button>
+    <button aria-label="button" aria-labelledby="button" type="button"
+			id="backtotop"
+			aria-labelledby="button"
+			aria-label="button"
+			type="button"
+			onclick="backToTop()"
+		></button>
 
 </body>
 

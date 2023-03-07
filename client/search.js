@@ -258,17 +258,20 @@ class getResults {
 	}
 
 	static async pageNotFound() {
-		document.querySelector(".banner-container").style.display = "none";
-		document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
-		document.getElementById("footer").style.position = "absolute";
-		document.getElementById("footer").style.bottom = "0";
-		document.querySelector(
-			".shop-body"
-		).innerHTML = `<div class="noresult notfound">
+		let theCurrentPage = new URL(document.URL);
+		if (theCurrentPage.pathname.includes("gemshop")) {
+			document.querySelector(".banner-container").style.display = "none";
+			document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
+			document.getElementById("footer").style.position = "absolute";
+			document.getElementById("footer").style.bottom = "0";
+			document.querySelector(
+				".shop-body"
+			).innerHTML = `<div class="noresult notfound">
 			<div class ="noresulttext"><h1 class = "cat-head" > Page not found</h1><p>We couldn’t find the page you are looking for</p></div>
 			<span>Go back to</span>
 			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
 		</div>`;
+		}
 	}
 }
 

@@ -5,10 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="description" content="shop" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
+		<!-- <meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, user-scalable=no"
-		/>
+		/> -->
 		<title>Shop</title>
 		<link rel="stylesheet" href="gemshop.css" preload />
 		<link rel="stylesheet" href="gemfonts.css" preload />
@@ -303,7 +303,7 @@
 								<h1 id="sec-name-cellphones"></h1>
 								<button
 									class="all-category"
-									id="all-category"
+									id="1"
 									onclick="window.location='gemshop.html?category=cellphones&Order=Random&Page=0'"
 								>
 									See All Cell Phones
@@ -316,7 +316,7 @@
 								<h1 id="sec-name-computer"></h1>
 								<button
 									class="all-category"
-									id="all-category"
+									id="2"
 									onclick="window.location='gemshop.html?category=computers&Order=Random&Page=0'"
 								>
 									See All Computers
@@ -329,7 +329,7 @@
 								<h1 id="sec-name-speakers"></h1>
 								<button
 									class="all-category"
-									id="all-category"
+									id="3"
 									onclick="window.location='gemshop.html?category=speakers&Order=Random&Page=0'"
 								>
 									See All Speakers
@@ -342,7 +342,7 @@
 								<h1 id="sec-name-tv"></h1>
 								<button
 									class="all-category"
-									id="all-category"
+									id="4"
 									onclick="window.location='gemshop.html?category=tv&Order=Random&Page=0'"
 								>
 									See All TVs
@@ -355,7 +355,7 @@
 								<h1 id="sec-name-gaming"></h1>
 								<button
 									class="all-category"
-									id="all-category"
+									id="5"
 									onclick="window.location='gemshop.html?category=gaming&Order=Random&Page=0'"
 								>
 									See All Gamings
@@ -388,6 +388,12 @@
 				>
 			</h1>
 		</footer>
-		<button id="backtotop" onclick="backToTop()"></button>
+		<button
+			id="backtotop"
+			aria-labelledby="button"
+			aria-label="button"
+			type="button"
+			onclick="backToTop()"
+		></button>
 	</body>
 </html>

@@ -275,7 +275,9 @@ class displayItems {
 
 		<a href="product.html?item=${
 			category[i].id
-		}" id="img-con" onclick="viewProduct(event)" data-id=${category[i].id}>
+		}" id="img-con" onclick="viewProduct(event)" data-id=${
+				category[i].id
+			} aria-label="visit product">
 			<div id="img-cont"
 			style='background-image:url(${category[i].itemInfo.itemImg[0]})' alt=""  >
 			</div>
@@ -309,7 +311,7 @@ class displayItems {
                 <div class="quantity">
                     <button onclick = "CartItems.decreaseItem(${
 											category[i].id
-										})">-</button><input type="text" value="${getCount()}" id = "amount" onblur = "CartItems.updateQuantity(${
+										})">-</button><input type="text" value="${getCount()}" aria-labelledby="quantity" aria-label="quantity" id = "amount" onblur = "CartItems.updateQuantity(${
 				category[i].id
 			})"><button onclick = "CartItems.increaseItem(${
 				category[i].id

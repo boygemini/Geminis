@@ -108,7 +108,7 @@ if (itemCategory === "Cellphones") {
 	<div class="qty">
 	<h2>Quantity</h2>
 	<div class="quantity">
-	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" value="1"><button onclick="cartItems.increase()">+</button>
+	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" aria-label="input" aria-labelledby="input" value="1"><button onclick="cartItems.increase()">+</button>
 	</div>
 	</div>
 	<div class="shipping-pickup">
@@ -156,7 +156,7 @@ if (itemCategory === "Computers") {
 	<div class="qty">
 	<h2>Quantity</h2>
 	<div class="quantity">
-	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" value="1"><button onclick="cartItems.increase()">+</button>
+	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" aria-label="input" aria-labelledby="input" value="1"><button onclick="cartItems.increase()">+</button>
 	</div>
 	</div>
 	<div class="shipping-pickup">
@@ -190,7 +190,7 @@ if (itemCategory === "Speakers") {
 	<div class="qty">
 	<h2>Quantity</h2>
 	<div class="quantity">
-	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" value="1"><button onclick="cartItems.increase()">+</button>
+	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" aria-label="input" aria-labelledby="input" value="1"><button onclick="cartItems.increase()">+</button>
 	</div>
 	</div>
 	<div class="shipping-pickup">
@@ -215,7 +215,7 @@ if (itemCategory === "Gaming") {
 	<div class="qty">
 	<h2>Quantity</h2>
 	<div class="quantity">
-	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" value="1"><button onclick="cartItems.increase()">+</button>
+	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" aria-label="input" aria-labelledby="input" value="1"><button onclick="cartItems.increase()">+</button>
 	</div>
 	</div>
 	<div class="shipping-pickup">
@@ -240,7 +240,7 @@ if (itemCategory === "TV") {
 	<div class="qty">
 	<h2>Quantity</h2>
 	<div class="quantity">
-	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" value="1"><button onclick="cartItems.increase()">+</button>
+	<button onclick="cartItems.decrease()">-</button><input type="text" id="amount" aria-label="input" aria-labelledby="input" value="1"><button onclick="cartItems.increase()">+</button>
 	</div>
 	</div>
 	<div class="specifications">
@@ -495,12 +495,12 @@ const addToCart = () => {
 	if (pickItemFromStore) {
 		try {
 			Storage.getItemAndSaveToCart();
-			popupNotification(
-				pickItemFromStore.itemInfo.name,
-				pickItemFromStore.itemInfo.itemImg[0]
-			);
 		} catch (error) {}
 	}
+	popupNotification(
+		pickItemFromStore.itemInfo.name,
+		pickItemFromStore.itemInfo.itemImg[0]
+	);
 };
 
 const buyItem = () => {

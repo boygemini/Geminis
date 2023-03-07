@@ -4,10 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
+		<meta name="description" content="cart" />
+		<!-- <meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, user-scalable=no"
-		/>
+		/> -->
 		<title>Shopping Cart</title>
 		<link rel="stylesheet" href="cart.css" />
 		<link rel="stylesheet" href="gemfonts.css" />
@@ -51,9 +52,9 @@
 						<div class="products">
 							<div class="main-links">
 								<a id="games" href="gemshop.html">Shop</a>
-								<a id="phones">Products</a>
-								<a id="coms">About Us</a>
-								<a id="spks">Contact Us</a>
+								<a href="#" id="phones">Products</a>
+								<a href="#" id="coms">About Us</a>
+								<a href="#" id="spks">Contact Us</a>
 							</div>
 						</div>
 					</nav>
@@ -134,21 +135,21 @@
 							<h1>Sections</h1>
 							<div id="kk">
 								<a id="link" href="gemshop.html">Shop</a>
-								<a>Products</a>
-								<a>About Us</a>
-								<a>Contact Us</a>
+								<a href="#">Products</a>
+								<a href="#">About Us</a>
+								<a href="#">Contact Us</a>
 							</div>
 						</div>
 						<div class="menu-cat">
 							<h1>Support</h1>
 							<div id="kk">
-								<a>Visit Our Support</a>
-								<a>Online Support</a>
+								<a href="#">Visit Our Support</a>
+								<a href="#">Online Support</a>
 							</div>
 						</div>
 						<div class="menu-cat">
 							<div>
-								<a style="border: none; color: red">Logout</a>
+								<a href="#" style="border: none; color: red">Logout</a>
 							</div>
 						</div>
 					</div>
@@ -290,10 +291,14 @@
 	<footer>
 		<h1>
 			Shop by
-			<a href="http://" target="_blank" rel="noopener noreferrer"
-				>jubril bolajoko</a
-			>
+			<a href="#" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
 		</h1>
 	</footer>
-	<button id="backtotop" onclick="backToTop()"></button>
+	<button
+		id="backtotop"
+		aria-labelledby="button"
+		aria-label="button"
+		type="button"
+		onclick="backToTop()"
+	></button>
 </html>
