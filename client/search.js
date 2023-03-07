@@ -479,8 +479,10 @@ function Prev(event) {
 
 const markPagination = () => {
 	let page = document.URL.split("Page=")[1].split("&")[0];
-	if (page.length === 0) page = "0";
-	document.getElementById(page).className += " active";
+	setTimeout(() => {
+		if (page.length === 0) page = "0";
+		document.getElementById(page).className += " active";
+	}, 500);
 };
 
 function createPagination(results, numberOnEachPage, pageNumber) {
