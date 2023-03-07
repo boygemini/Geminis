@@ -217,7 +217,7 @@ const createUrl = (category) => {
 	let stringifyNewParameters = JSON.stringify(Parameters);
 	localStorage.setItem("Parameters", stringifyNewParameters);
 	localStorage.setItem("Url", url);
-	if (document.lastChild.offsetWidth > 1024) {
+	if (document.lastChild.offsetWidth > 1200) {
 		window.location = url;
 	}
 };
@@ -463,9 +463,6 @@ const displayFilteredResults = (directory) => {
 					<span class = "price" > $${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} onclick = "addToCart(event)">
-			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<p data-id= ${directory[k].id} class="cart-btn" id="cart-text" onclick = "addToCart(event)"> Add to Cart<p></button>
 		</div>
 		</a>`;
 	}

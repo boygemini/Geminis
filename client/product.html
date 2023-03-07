@@ -55,18 +55,23 @@
 						<h1 class="logo" id="web-logo" onclick="goHome()">Geminis.</h1>
 					</div>
 					<div class="login-cart">
-						<div class="search-section search-web" onclick="openSearch()">
+							<div class="search-section search-web">
 							<input
 								type="search"
 								class="search"
 								name="search"
 								placeholder="Search..."
 								autocomplete="off"
-								disabled
+								onclick="openSearch()"
 							/>
 							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
 							<div class="serc-img">
-								<img src="IMAGES/search.png" alt="" srcset="" />
+								<img
+									src="IMAGES/search.png"
+									alt=""
+									srcset=""
+									onclick="openSearch()"
+								/>
 							</div>
 						</div>
 						<div class="cart-box" id="searc-cart" onclick="openSearch()">
@@ -75,6 +80,7 @@
 								id="mob-search-icon"
 								alt=""
 								srcset=""
+								onclick="openSearch()"
 							/>
 						</div>
 						<a href="cart.html" class="cart-box">
@@ -460,6 +466,7 @@
             Shop by <a href="http://" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
         </h1>
     </footer>
+    <button id="backtotop" onclick="backToTop()"></button>
 
 </body>
 

@@ -249,18 +249,6 @@ class CartItems {
 	}
 }
 
-// function viewProduct(event) {
-// 	let itemID =
-// 		event.target.dataset.id ||
-// 		event.target.parentNode.dataset.id ||
-// 		event.target.parentNode.parentNode.dataset.id ||
-// 		event.target.parentNode.parentNode.parentNode.dataset.id;
-// 	if (itemID) {
-// 		let url = `product.html?item=${encodeURIComponent(itemID)}`;
-// 		window.location = url;
-// 	}
-// }
-
 class displayItems {
 	static CART(category) {
 		let itemCreated = "";
@@ -399,7 +387,3 @@ if (Number(Storage.numberOfItemsInCart()) !== 0) {
 
 // DISPLAY SUM OF ONE ITEM
 _item.sumTotal();
-
-//EOC
-//EOC
-//EOC

@@ -1,11 +1,13 @@
 "use strict";
 
+// PAGE FADE-IN ON LOAD
 (() => {
 	let webPage = document.querySelector("html");
 	webPage.style.opacity = "1";
 	webPage.style.transition = "1s ease-in-out";
 })();
 
+// GO TO SHOP BUTTON
 const shopNow = () => {
 	window.location = "gemshop.html";
 };
@@ -37,25 +39,6 @@ let itemName = document.querySelectorAll("#itemName"),
 
 /* CREATING STORAGE GROUPS FOR ITEMS */
 localStorage.setItem("StoreItems", "");
-let cart = [];
-
-// POPUP NOTIFICATION
-const popupNotification = (itemName, itemImage) => {
-	let notification = document.getElementById("notify-box");
-	let creatNotBox = document.createElement("div");
-	creatNotBox.classList = " notification on";
-	creatNotBox.innerHTML = `<img src=${itemImage} alt="" srcset="" class="noti-img"><p>You added <strong id="itemname">${itemName}</strong> to cart</p>`;
-	notification.appendChild(creatNotBox);
-	setTimeout(() => {
-		creatNotBox.classList = " notification off";
-	}, 2500);
-	setTimeout(() => {
-		creatNotBox.classList = "complete-off";
-	}, 3200);
-	setTimeout(() => {
-		creatNotBox.classList = "die";
-	}, 3200);
-};
 
 class Products {
 	// LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
@@ -86,33 +69,10 @@ class Products {
 	}
 }
 
+// RETRUN AND SAVE ALL PRODUCTS IN BROWSER'S LOCAL STORAGE
 Products.getSelectedProducts();
 
 class Storage {
-	// RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS
-	static async getAllProducts() {
-		let products = await Products.selectedForYou();
-		return products;
-	}
-
-	// RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS
-	static async getRecentItems() {
-		let products = await Products.selectedForYou();
-		return products.recentlyAdded;
-	}
-
-	// RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS
-	static async weeklyFeaturedItems() {
-		let products = await Products.selectedForYou();
-		return products.WeeklyFeatured;
-	}
-
-	// SAVE ITEMS TO CART
-	static saveSelectedItemsToCart(cart) {
-		localStorage.Cart = JSON.stringify(cart);
-		localStorage.setItem("Cart", localStorage.Cart);
-	}
-
 	// RETRIEVE ALL ITEMS FROM CART
 	static getItemsInCart() {
 		return JSON.parse(localStorage.getItem("Cart"));
@@ -126,37 +86,6 @@ class Storage {
 			let mapCart = this.getItemsInCart().map((cI) => cI.amount);
 			let reduceCart = mapCart.reduce((x, y) => x + y, 0);
 			return reduceCart;
-		}
-	}
-
-	// UPDATE CART
-	static updateCart(cartName) {
-		this.saveSelectedItemsToCart(cartName);
-		cartDom.innerText = this.numainBtnerOfItemsInCart();
-	}
-
-	// GET AND SAVE PICKED ITEM TO CART
-	static getItemAndSaveToCart() {
-		let getbackcart = JSON.parse(localStorage.getItem("Cart"));
-
-		if (cart === null || cart.length === 0) {
-			cart = [pickedItem];
-			this.updateCart(cart);
-		}
-
-		if (cart !== null || cart.length !== 0) {
-			let pickedItemID = event.target.dataset.id;
-			let check = getbackcart.find((item) => item.id === pickedItemID);
-
-			if (check) {
-				check.amount += 1;
-				this.updateCart(getbackcart);
-			}
-
-			if (!check) {
-				getbackcart = [...getbackcart, pickedItem];
-				this.updateCart(getbackcart);
-			}
 		}
 	}
 }
@@ -184,9 +113,6 @@ class displayProduct {
 				  <span class="price">$${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			<button aria-labelledby="button" aria-label="button" id="cart-btn" class="cart-btn" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
-			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])">
-			<p data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])" id="cart-text"> Add to Cart<p></button>
 		    </div>
 		</div>
 	 </a>`;
@@ -231,27 +157,9 @@ class displayProduct {
 						  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
 						  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 					   </span>
-					   <button aria-labelledby="button" aria-label="button" id="cart-btn" class="cart-btn" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)">
-					   <img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)">
-					 	<p id="cart-text" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"> Add to Cart<p></button>
-					   </button>
 				    </div>
 				</div>
 			 </a>`;
-
-			// itemCreated += `<div class="recent">
-			// 					<img src=${category[i].itemInfo.itemImg[0]} alt="" />
-			// 					<div class="receInfo">
-			// 						<div class="rec-det">
-			// 							<h1 class="itemName">${category[i].itemInfo.name}</h1>
-			// 							<p class="itemInfo">${category[i].itemInfo.description1}</p>
-			// 						</div>
-			// 						<div class="price-order">
-			// 							<span class="recentPrice">$${category[i].itemInfo.newItemPrice}</span>
-			// 							<button aria-labelledby="button" aria-label="button" id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
-			// 						</div>
-			// 					</div>
-			// 				</div>`;
 		}
 		Holder.innerHTML = itemCreated;
 	}
@@ -276,10 +184,6 @@ class displayProduct {
 				  <span class="price">$${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button aria-labelledby="button" aria-label="button" id="cart-btn" class="cart-btn" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)">
-			   <img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt="" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)">
-			 	<p id="cart-text" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"> Add to Cart<p></button>
-			   </button>
 		    </div>
 		</div>
 	 </a>`;
@@ -292,7 +196,9 @@ class displayProduct {
 let allStoreProducts;
 Products.selectedForYou();
 (async () => {
+	// WAIT FOR PRODUCTS FROM THE SERVER
 	allStoreProducts = await Products.selectedForYou();
+
 	// DISPLAY RECENT PRODUCTS
 	displayProduct.displayRecentItems(allStoreProducts.recentlyAdded);
 
@@ -388,35 +294,6 @@ const moveLeft = () => {
 	holder.scrollLeft -= holder.clientWidth;
 };
 
-let me = document.querySelectorAll("#cart-text");
-
-// ADD RECENT ITEMS TO CART
-const addToCartt = (event, ITT) => {
-	event.stopPropagation();
-	event.preventDefault();
-
-	function Me() {
-		let pickItemFromStore = ITT.find(
-			(item) => item.id === event.target.dataset.id
-		);
-		popupNotification(
-			pickItemFromStore.itemInfo.name,
-			pickItemFromStore.itemInfo.itemImg[0]
-		);
-		pickedItem = {
-			...pickItemFromStore,
-			amount: 1,
-		};
-		if (pickItemFromStore) {
-			try {
-				Storage.getItemAndSaveToCart();
-			} catch (error) {}
-		}
-	}
-	Me();
-	animateCartButtonText(event.target);
-};
-
 // CHANGE TABS BASED ON ITEM'S CATEGORY
 let tab = [...document.querySelectorAll(".tab")];
 tab[0].className += " active-li";
@@ -435,41 +312,6 @@ for (let x in tab) {
 	});
 }
 
-// ADD SELECTED ITEMS TO CART
+// DISPLAY NUMBER IF ITEMS IN CART
 let cartDom = document.getElementById("items-in-cart");
-try {
-	cartDom.innerText = Storage.numainBtnerOfItemsInCart();
-} catch (error) {} // Displays numainBtner of Items in Cart
-let pickedItem;
-
-let ItemsInCart = JSON.parse(localStorage.getItem("Cart"));
-const addToCart = (event, ITT) => {
-	event.stopPropagation();
-	event.preventDefault();
-
-	let ItemCategory = event.target.dataset.category;
-	let pickItemFromStore = ITT[`${ItemCategory}`].find(
-		(item) => item.id === event.target.dataset.id
-	);
-
-	popupNotification(
-		pickItemFromStore.itemInfo.name,
-		pickItemFromStore.itemInfo.itemImg[0]
-	);
-
-	pickedItem = {
-		...pickItemFromStore,
-		amount: 1,
-	};
-
-	if (pickItemFromStore) {
-		try {
-			Storage.getItemAndSaveToCart();
-		} catch (error) {}
-	}
-	animateCartButtonText(event.target);
-};
-
-//END OF CODE
-//END OF CODE
-//END OF CODE
+cartDom.innerText = Storage.numainBtnerOfItemsInCart();

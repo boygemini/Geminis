@@ -458,7 +458,32 @@ body {
 		min-width: 100%;
 	}
 }
-
+#backtotop {
+	width: 60px;
+	height: 60px;
+	background-color: #111111;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border: none;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+	background-image: url(IMAGES/go-up.png);
+	background-position: center;
+	background-size: 55%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	opacity: 0;
+	transition: 0.2s ease-out;
+	-webkit-transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-out;
+	-ms-transition: 0.2s ease-out;
+	-o-transition: 0.2s ease-out;
+	z-index: 568970807996857645758697675645347586970968576453475869706875645;
+}
 @media screen and (max-width: 768px) {
 	input:focus {
 		max-zoom: 1;
@@ -466,6 +491,11 @@ body {
 
 	.menu-box {
 		box-shadow: none;
+	}
+
+	#backtotop {
+		width: 50px;
+		height: 50px;
 	}
 
 	.login-cart {

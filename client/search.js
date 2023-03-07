@@ -20,12 +20,11 @@ const allProducts = () => {
 	});
 };
 
+// SEARCH AND SUGGESTIONS
 let hs = document.getElementById("hold");
 let search = document.getElementById("search");
 let go = document.getElementById("GO");
 let displaybox = document.querySelector(".sug-holder");
-
-//Function
 
 const showSuggesttions = async (event) => {
 	let dir = await allProducts();
@@ -150,12 +149,6 @@ try {
 		}
 	});
 } catch (error) {}
-
-// search.addEventListener("keydown", (event) => {
-// 	if (event.key === "Enter" && search.value !== "") {
-// 		sendQueryGO();
-// 	}
-// });
 
 const markAndCreatePagination = (results) => {
 	let pageNumber = document.URL.split("Page=")[1];
@@ -311,9 +304,6 @@ const displayResults = (directory, Query) => {
 					<span class = "price" > $ ${directory[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} onclick = "addToCart(event)">
-			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<p data-id= ${directory[k].id} class="cart-btn" id="cart-text" onclick = "addToCart(event)"> Add to Cart<p></button>
 			</div>
 		</div>
 		</a>`;
@@ -362,9 +352,6 @@ const displayFiltereddResults = (results, category) => {
 					<span class = "price" > $${results[k].itemInfo.newItemPrice} </span>
 					<span class = "old-price price" > ${results[k].itemInfo.oldItemPrice}</span>
 				</span>
-				<button id="cart-btn" class="cart-btn"  data-id= ${results[k].id} onclick = "addToCart(event)">
-			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${results[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<p data-id= ${results[k].id} class="cart-btn" id="cart-text" onclick = "addToCart(event)"> Add to Cart<p></button>
 			</div>
 		</div>
 		</a>`;
@@ -588,6 +575,34 @@ const convertUrlParametersIntoObject = (urlWithQuery) => {
 	return newUrlParameters;
 };
 
+// LOAD IMAGES WHEN THEY ARE IN VIEW PORT
+const imageObserver = () => {
+	let theCurrentPage = new URL(document.URL);
+	if (theCurrentPage.pathname.includes("gemshop")) {
+		(async () => {
+			let dir = await allProducts();
+			dir = dir.selectedProducts[0];
+			if (typeof dir === "object") {
+				let images = document.querySelectorAll(".img-cont");
+				let observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							console.log("object");
+							let image = entry.target;
+							image.style.backgroundImage = `url(${image.dataset.src})`;
+							observer.unobserve(image);
+						}
+					});
+				});
+
+				images.forEach((image) => {
+					observer.observe(image);
+				});
+			}
+		})();
+	}
+};
+
 const onLoad = () => {
 	let cpUrl = new URL(document.URL);
 	if (cpUrl.search.length <= 0 && cpUrl.pathname === "/gemshop.html") {
@@ -605,8 +620,9 @@ const onLoad = () => {
 		let Query = urlWithQuery.split("SearchQuery=")[1].split("&")[0];
 		let Category = urlWithQuery.split("category=")[1].toString().split("&")[0];
 		Query = removeThe20Nonsense(Query);
-		getCatFiltersAndSearchResults(Query, Category);
-		return getResults.suggestionsResult(Query, Category);
+		getResults.suggestionsResult(Query, Category);
+		imageObserver();
+		return;
 	}
 
 	// LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR
@@ -616,7 +632,11 @@ const onLoad = () => {
 	) {
 		let Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0];
 		Query = removeThe20Nonsense(Query).trim();
-		return getCatFiltersAndSearchResults(Query);
+		getCatFiltersAndSearchResults(Query);
+		setTimeout(() => {
+			imageObserver();
+		}, 100);
+		return;
 	}
 
 	// IF THE URL IS BADLY ALTERED IT SHOULD RETURN A NOT FOUND PAGE
@@ -824,109 +844,8 @@ const onLoad = () => {
 		// PASSING RESULTS TO UI FUNCTION
 		displayFiltereddResults(results, parameterCategory);
 	}
-
-	// LOAD IMAGES WHEN THEY ARE IN VIEW PORT
-	let theCurrentPage = new URL(document.URL);
-	if (theCurrentPage.pathname.includes("gemshop")) {
-		(async () => {
-			let dir = await allProducts();
-			dir = dir.selectedProducts[0];
-			if (typeof dir === "object") {
-				let images = document.querySelectorAll(".img-cont");
-				let observer = new IntersectionObserver((entries) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							let image = entry.target;
-							image.style.backgroundImage = `url(${image.dataset.src})`;
-							observer.unobserve(image);
-						}
-					});
-				});
-
-				images.forEach((image) => {
-					observer.observe(image);
-				});
-			}
-		})();
-	}
+	imageObserver();
 };
-
-// PRODUCT DISPLAY (SEARCH)
-const viewProduct = (event) => {
-	let itemID =
-		event.target.dataset.id ||
-		event.target.parentNode.dataset.id ||
-		event.target.parentNode.parentNode.dataset.id ||
-		event.target.parentNode.parentNode.parentNode.dataset.id;
-	if (itemID) {
-		let url = `product.html?item=${encodeURIComponent(itemID)}`;
-		window.location = url;
-	}
-};
-
-// This controls/animate the add to cart button. It changes the button text to "IN CART"
-// when the button is click and item is being added to the cart after which the button text
-// returns to "ADD TO CART" after a second of being out of focus.
-// It was push here because all the website page runs this search script
-let timer;
-let allCartBtn = [...document.querySelectorAll("#cart-btn")];
-let allCartText = [...document.querySelectorAll("#cart-text")];
-const animateCartButtonText = (target) => {
-	clearTimeout(timer);
-	if (target.nodeName === "BUTTON") {
-		target.children[1].style.opacity = "0";
-		target.children[1].style.transition = ".2s";
-		setTimeout(() => {
-			target.children[1].style.opacity = "1";
-			target.children[1].innerText = "In cart";
-		}, 200);
-	}
-
-	if (target.nodeName === "P") {
-		target.style.opacity = "0";
-		target.style.transition = ".2s";
-		setTimeout(() => {
-			target.style.opacity = "1";
-			target.innerText = "In cart";
-		}, 200);
-	}
-};
-
-allCartBtn.forEach((btn) => {
-	btn.addEventListener("mouseover", (e) => {
-		clearTimeout(timer);
-	});
-
-	btn.addEventListener("mouseout", (e) => {
-		clearTimeout(timer);
-		timer = setTimeout(() => {
-			btn.children[1].style.opacity = "0";
-			btn.children[1].style.transition = ".2s";
-			setTimeout(() => {
-				btn.children[1].innerText = "add to cart";
-				btn.children[1].style.opacity = "1";
-			}, 200);
-		}, 1000);
-	});
-});
-
-allCartText.forEach((txt) => {
-	txt.addEventListener("mouseover", (e) => {
-		clearTimeout(timer);
-	});
-
-	txt.addEventListener("mouseout", (e) => {
-		clearTimeout(timer);
-		timer = setTimeout(() => {
-			txt.style.opacity = "0";
-			txt.style.transition = ".2s";
-			setTimeout(() => {
-				txt.innerHTML = `<img src="IMAGES/add-cart-white.png" alt=""  data-id= ${results[k].id} class="cart-btn" onclick = "addToCart(event)">Add to cart`;
-				txt.style.opacity = "1";
-			}, 800);
-		}, 1000);
-	});
-});
 
 // OPEN MENU
 const menuDOM = document.getElementById("menu");
@@ -986,8 +905,18 @@ window.addEventListener("click", (e) => {
 	}
 });
 
-window.onload = onLoad;
+// SCROLL TO TOP BUTTON
+const backToTopBtn = document.getElementById("backtotop");
+const backToTop = () => {
+	window.scrollTo(0, 0);
+};
 
-//EOC
-//EOC
-//EOC
+window.addEventListener("scroll", (e) => {
+	if (window.scrollY > 200) {
+		backToTopBtn.style.opacity = "1";
+	} else {
+		backToTopBtn.style.opacity = "0";
+	}
+});
+
+window.onload = onLoad;
