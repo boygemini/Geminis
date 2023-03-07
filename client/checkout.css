@@ -378,11 +378,6 @@ nav ul li {
 	-o-border-radius: 3px;
 }
 
-#search:focus {
-	border: 1px solid #111111;
-	outline: 1px solid #111111;
-}
-
 #GO {
 	width: 100%;
 	height: 45px;
@@ -1690,7 +1685,6 @@ footer {
 	.search:focus,
 	#search:focus {
 		background-color: transparent;
-		border: transparent;
 	}
 
 	.top-nav {
@@ -1930,7 +1924,6 @@ footer {
 	.search:focus,
 	#search:focus {
 		background-color: transparent;
-		border: transparent;
 	}
 
 	.top-nav {
