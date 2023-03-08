@@ -659,19 +659,12 @@ const openFilter = () => {
 const closeFilter = () => {
 	filterContainer1.style.display = "none";
 	document.lastChild.style.overflow = "scroll";
-	// applyFilterReloadPage();
 };
 
 const applyFilter = document.querySelectorAll("#apply");
 applyFilter.forEach((applyBtn) => {
 	applyBtn.addEventListener("click", applyFilterReloadPage);
 });
-
-// const phonesBrandCheck = (apple, brand) => {
-// 	apple.addEventListener("click", (event) => {
-// 		displayFilteredResults(filter.brand(event, "cellphones", brand));
-// 	});
-// };
 
 const debounce = (fn, delay) => {
 	let timer;
@@ -1025,14 +1018,14 @@ const Computers = () => {
 const Speakers = () => {
 	getFilter.allSpeaker();
 
-	// Computers Filters
+	// Speaker Filters
 	speakerFilters();
 };
 
 const TVs = () => {
 	getFilter.allTv();
 
-	// Computers Filters
+	// TV Filters
 	tvFilters();
 };
 

@@ -170,18 +170,14 @@ nav ul li {
 .logo {
 	cursor: pointer;
 	color: #111111;
-	font-family: DSIndigo, Helvetica, Arial, sans-serif;
 	height: 100%;
 	display: flex;
 	align-items: center;
-	font-size: 17px;
+	font-size: 40px;
 	font-weight: 600;
 	text-transform: uppercase;
-	border: 2px solid #111111;
-	border-left: none;
-	border-right: none;
-	padding: 5px;
-	outline: 2px solid #111111;
+	/* border: 2px solid #111111; */
+	padding: 10px;
 	outline-offset: 2px;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -776,6 +772,10 @@ p span {
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
+}
+
+.filters1 {
+	/* background-color: #f4f4f684; */
 }
 
 .fil-head {
@@ -2474,7 +2474,6 @@ footer {
 	.shop-body {
 		flex-direction: column;
 		padding: 0px;
-		margin-top: 10vh;
 	}
 
 	.filters {
@@ -2768,6 +2767,8 @@ footer {
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		overflow-x: scroll;
 		gap: 5px;
+		margin-top: 100px;
+		position: relative;
 	}
 
 	.b-holder {
@@ -2780,6 +2781,10 @@ footer {
 	.b-holder:hover {
 		outline: none;
 		border: none;
+	}
+
+	.available-items {
+		margin-top: 20px;
 	}
 
 	#hero-text {
@@ -2867,7 +2872,7 @@ footer {
 	.shop-body {
 		flex-direction: row;
 		padding: 0px;
-		margin-top: 14vh;
+		margin-top: 40px;
 	}
 
 	#mob-logo {
@@ -2993,6 +2998,7 @@ footer {
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		overflow-x: scroll;
 		gap: 5px;
+		margin-top: 100px;
 	}
 
 	.b-holder {
