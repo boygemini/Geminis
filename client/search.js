@@ -186,10 +186,10 @@ const controlSort = (arr) => {
 };
 
 class getResults {
-	static async suggestionsResult(Query, Category) {
-		let dir = await allProducts();
-		dir = dir.selectedProducts[0];
+	static suggestionsResult(Query, Category) {
 		let arr = [];
+		let dir = JSON.parse(localStorage.getItem("StoreItems"))
+			.selectedProducts[0];
 		let searchDirectory = dir[`${Category}`];
 
 		for (let j in searchDirectory) {
@@ -205,11 +205,11 @@ class getResults {
 		displayFiltereddResults(arr, Query);
 	}
 
-	static async searchBarResult(Query) {
-		let dir = await allProducts();
-		dir = dir.selectedProducts[0];
+	static searchBarResult(Query) {
 		let Category = ["gaming", "cellphones", "speakers", "computers", "tv"];
 		let arr = [];
+		let dir = JSON.parse(localStorage.getItem("StoreItems"))
+			.selectedProducts[0];
 		for (let i in Category) {
 			let searchDirectory = dir[`${Category[i]}`];
 			for (let j in searchDirectory) {
@@ -283,7 +283,7 @@ const displayResults = (directory, Query) => {
 	if (directory.length > 0) {
 		setTimeout(() => {
 			showPreloader(false);
-		}, 1000);
+		}, 0);
 		getResults.positiveResults();
 		for (let k in directory) {
 			if (directory[k].itemInfo.name.toLowerCase().includes(Query)) {
@@ -370,8 +370,10 @@ const displayFiltereddResults = (results, category) => {
 };
 
 const getCatFiltersAndSearchResults = async (Query, Category) => {
-	let dir = await allProducts();
-	dir = dir.selectedProducts[0];
+	let localStore = JSON.parse(localStorage.getItem("StoreItems"))
+		.selectedProducts[0];
+	let products = await allProducts();
+	let dir = localStore || products.selectedProducts[0];
 	let gamekey = [
 		...new Set(dir["gaming"].map((itemName) => itemName.itemInfo.name)),
 	];
@@ -609,246 +611,253 @@ const imageObserver = () => {
 	}
 };
 
-const onLoad = () => {
-	let cpUrl = new URL(document.URL);
-	if (cpUrl.search.length <= 0 && cpUrl.pathname === "/gemshop.html") {
-	} else if (cpUrl.search.length > 0 && cpUrl.pathname === "/gemshop.html") {
-		indicateLoadingWhileAwaitingResults(true);
-	}
+const onLoad = async () => {
+	let dir = await allProducts();
+	if (typeof dir === "object") {
+		let cpUrl = new URL(document.URL);
+		if (cpUrl.search.length <= 0 && cpUrl.pathname === "/gemshop.html") {
+		} else if (cpUrl.search.length > 0 && cpUrl.pathname === "/gemshop.html") {
+			indicateLoadingWhileAwaitingResults(true);
+		}
 
-	let urlWithQuery = document.URL;
+		let urlWithQuery = document.URL;
 
-	// LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR SUGGESTION
-	if (
-		urlWithQuery.split("&SearchQuery=").length > 1 &&
-		urlWithQuery.split("category=").length > 1
-	) {
-		let Query = urlWithQuery.split("SearchQuery=")[1].split("&")[0];
-		let Category = urlWithQuery.split("category=")[1].toString().split("&")[0];
-		Query = removeThe20Nonsense(Query);
-		getResults.suggestionsResult(Query, Category);
+		// LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR SUGGESTION
+		if (
+			urlWithQuery.split("&SearchQuery=").length > 1 &&
+			urlWithQuery.split("category=").length > 1
+		) {
+			let Query = urlWithQuery.split("SearchQuery=")[1].split("&")[0];
+			let Category = urlWithQuery
+				.split("category=")[1]
+				.toString()
+				.split("&")[0];
+			Query = removeThe20Nonsense(Query);
+			getCatFiltersAndSearchResults(Query);
+			imageObserver();
+			return;
+		}
+
+		// LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR
+		if (
+			urlWithQuery.split("?SearchQuery=").length > 1 &&
+			urlWithQuery.split("category=").length === 1
+		) {
+			let Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0];
+			Query = removeThe20Nonsense(Query).trim();
+			getCatFiltersAndSearchResults(Query);
+			imageObserver();
+			return;
+		}
+
+		// IF THE URL IS BADLY ALTERED IT SHOULD RETURN A NOT FOUND PAGE
+		let QueryName;
+		try {
+			QueryName = urlWithQuery.split("?")[1].split("=")[0];
+		} catch (error) {}
+
+		if (
+			QueryName !== "SearchQuery" &&
+			QueryName !== "category" &&
+			QueryName !== undefined
+		) {
+			getResults.pageNotFound();
+		}
+
+		// LOAD FILTER RESULTS FROM URL
+		if (urlWithQuery.split("?category").length > 1) {
+			let parameterCategory = urlWithQuery
+				.split("?category=")[1]
+				.toString()
+				.split("&")[0];
+
+			let allItems = JSON.parse(localStorage.getItem("StoreItems"));
+
+			let allItemsInCategory =
+				allItems.selectedProducts[0][`${parameterCategory}`];
+
+			let results = [];
+
+			if (results.length === 0) {
+				results = allItemsInCategory;
+			}
+
+			/*
+			 * USE PROPER ERROR HANDLING HERE
+			 */
+			// PARAMETERS FROM THE URL
+			let newUrlParameters = convertUrlParametersIntoObject(urlWithQuery);
+			try {
+				newUrlParameters.Price = newUrlParameters.Price.replace(
+					/%20/g,
+					""
+				).split("-");
+				priceFromUrl = [
+					{
+						high: Number(newUrlParameters.Price[1]),
+						low: Number(newUrlParameters.Price[0]),
+					},
+				];
+			} catch (error) {}
+			try {
+				brandFromUrl = newUrlParameters.Brand.split(",");
+			} catch (error) {}
+			try {
+				filterFromUrl = newUrlParameters.Filters.split(",");
+			} catch (error) {}
+			try {
+				memoryFromUrl = newUrlParameters.Memory.toString().split(",");
+			} catch (error) {}
+			try {
+				ramFromUrl = newUrlParameters.Ram.toString().split(",");
+			} catch (error) {}
+			try {
+				romFromUrl = newUrlParameters.Rom.split(",");
+			} catch (error) {}
+			try {
+				screenFromUrl = newUrlParameters.Screen.split(",");
+			} catch (error) {}
+			try {
+				sizeFromUrl = newUrlParameters.Size.split(",");
+			} catch (error) {}
+			try {
+				pageFromUrl = newUrlParameters.Page;
+			} catch (error) {}
+
+			try {
+				orderFromUrl = newUrlParameters.Order;
+			} catch (error) {}
+
+			// Filtering / Price
+			if (priceFromUrl && priceFromUrl.length > 0) {
+				let pr = [];
+				for (let a in results) {
+					if (
+						Number(results[a].itemInfo.newItemPrice) >= priceFromUrl[0].low &&
+						Number(results[a].itemInfo.newItemPrice) <= priceFromUrl[0].high
+					) {
+						pr.push(results[a]);
+					}
+				}
+				if (pr.length > 0) {
+					results = pr;
+				}
+			}
+
+			// Brand
+			if (brandFromUrl && brandFromUrl.length > 0) {
+				let ba = [];
+				for (let b in results) {
+					for (let c in brandFromUrl) {
+						if (results[b].itemInfo.brand === brandFromUrl[c]) {
+							ba.push(results[b]);
+						}
+					}
+				}
+				if (ba.length > 0) {
+					results = ba;
+				}
+			}
+
+			// Memory
+			if (memoryFromUrl && memoryFromUrl.length > 0) {
+				let ma = [];
+				for (let m in results) {
+					for (let mi in memoryFromUrl) {
+						if (
+							Number(results[m].itemInfo.memory) === Number(memoryFromUrl[mi])
+						) {
+							ma.push(results[m]);
+						}
+					}
+				}
+				if (ma.length > 0) {
+					results = ma;
+				}
+			}
+
+			// Ram
+			if (ramFromUrl && ramFromUrl.length > 0) {
+				let ra = [];
+				for (let r in results) {
+					for (let re in ramFromUrl) {
+						if (Number(results[r].itemInfo.ram) === Number(ramFromUrl[re])) {
+							ra.push(results[r]);
+						}
+					}
+				}
+
+				if (ra.length > 0) {
+					results = ra;
+				}
+			}
+
+			// Rom
+			if (romFromUrl && romFromUrl.length > 0) {
+				let ro = [];
+				for (let ri in results) {
+					for (let rc in romFromUrl) {
+						if (Number(results[ri].itemInfo.rom) === Number(romFromUrl[rc])) {
+							ro.push(results[ri]);
+						}
+					}
+				}
+
+				if (ro.length > 0) {
+					results = ro;
+				}
+			}
+
+			// Screen
+			if (screenFromUrl && screenFromUrl.length > 0) {
+				let sc = [];
+				for (let s in results) {
+					for (let sv in screenFromUrl) {
+						if (
+							Number(results[s].itemInfo.screen) === Number(screenFromUrl[sv])
+						) {
+							sc.push(results[s]);
+						}
+					}
+				}
+				if (sc.length > 0) {
+					results = sc;
+				}
+			}
+
+			// Size
+			if (sizeFromUrl && sizeFromUrl.length > 0) {
+				let sz = [];
+				for (let si in results) {
+					for (let sy in sizeFromUrl) {
+						if (Number(results[si].itemInfo.size) === Number(sizeFromUrl[sy])) {
+							sz.push(results[si]);
+						}
+					}
+				}
+				if (sz.length > 0) {
+					results = sz;
+				}
+			}
+
+			// Page & Pagination
+			if (!pageFromUrl) {
+				results = createPagination(results, 12, 0);
+			}
+
+			if (pageFromUrl) {
+				results = createPagination(results, 12, Number(pageFromUrl));
+			}
+			markPagination();
+
+			// Result Sorting
+			controlSort(results);
+
+			// PASSING RESULTS TO UI FUNCTION
+			displayFiltereddResults(results, parameterCategory);
+		}
 		imageObserver();
-		return;
 	}
-
-	// LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR
-	if (
-		urlWithQuery.split("?SearchQuery=").length > 1 &&
-		urlWithQuery.split("category=").length === 1
-	) {
-		let Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0];
-		Query = removeThe20Nonsense(Query).trim();
-		getCatFiltersAndSearchResults(Query);
-		setTimeout(imageObserver, 100);
-		return;
-	}
-
-	// IF THE URL IS BADLY ALTERED IT SHOULD RETURN A NOT FOUND PAGE
-	let QueryName;
-	try {
-		QueryName = urlWithQuery.split("?")[1].split("=")[0];
-	} catch (error) {}
-
-	if (
-		QueryName !== "SearchQuery" &&
-		QueryName !== "category" &&
-		QueryName !== undefined
-	) {
-		getResults.pageNotFound();
-	}
-
-	// LOAD FILTER RESULTS FROM URL
-	if (urlWithQuery.split("?category").length > 1) {
-		let parameterCategory = urlWithQuery
-			.split("?category=")[1]
-			.toString()
-			.split("&")[0];
-
-		let allItems = JSON.parse(localStorage.getItem("StoreItems"));
-
-		let allItemsInCategory =
-			allItems.selectedProducts[0][`${parameterCategory}`];
-
-		let results = [];
-
-		if (results.length === 0) {
-			results = allItemsInCategory;
-		}
-
-		/*
-		 * USE PROPER ERROR HANDLING HERE
-		 */
-		// PARAMETERS FROM THE URL
-		let newUrlParameters = convertUrlParametersIntoObject(urlWithQuery);
-		try {
-			newUrlParameters.Price = newUrlParameters.Price.replace(/%20/g, "").split(
-				"-"
-			);
-			priceFromUrl = [
-				{
-					high: Number(newUrlParameters.Price[1]),
-					low: Number(newUrlParameters.Price[0]),
-				},
-			];
-		} catch (error) {}
-		try {
-			brandFromUrl = newUrlParameters.Brand.split(",");
-		} catch (error) {}
-		try {
-			filterFromUrl = newUrlParameters.Filters.split(",");
-		} catch (error) {}
-		try {
-			memoryFromUrl = newUrlParameters.Memory.toString().split(",");
-		} catch (error) {}
-		try {
-			ramFromUrl = newUrlParameters.Ram.toString().split(",");
-		} catch (error) {}
-		try {
-			romFromUrl = newUrlParameters.Rom.split(",");
-		} catch (error) {}
-		try {
-			screenFromUrl = newUrlParameters.Screen.split(",");
-		} catch (error) {}
-		try {
-			sizeFromUrl = newUrlParameters.Size.split(",");
-		} catch (error) {}
-		try {
-			pageFromUrl = newUrlParameters.Page;
-		} catch (error) {}
-
-		try {
-			orderFromUrl = newUrlParameters.Order;
-		} catch (error) {}
-
-		// Filtering / Price
-		if (priceFromUrl && priceFromUrl.length > 0) {
-			let pr = [];
-			for (let a in results) {
-				if (
-					Number(results[a].itemInfo.newItemPrice) >= priceFromUrl[0].low &&
-					Number(results[a].itemInfo.newItemPrice) <= priceFromUrl[0].high
-				) {
-					pr.push(results[a]);
-				}
-			}
-			if (pr.length > 0) {
-				results = pr;
-			}
-		}
-
-		// Brand
-		if (brandFromUrl && brandFromUrl.length > 0) {
-			let ba = [];
-			for (let b in results) {
-				for (let c in brandFromUrl) {
-					if (results[b].itemInfo.brand === brandFromUrl[c]) {
-						ba.push(results[b]);
-					}
-				}
-			}
-			if (ba.length > 0) {
-				results = ba;
-			}
-		}
-
-		// Memory
-		if (memoryFromUrl && memoryFromUrl.length > 0) {
-			let ma = [];
-			for (let m in results) {
-				for (let mi in memoryFromUrl) {
-					if (
-						Number(results[m].itemInfo.memory) === Number(memoryFromUrl[mi])
-					) {
-						ma.push(results[m]);
-					}
-				}
-			}
-			if (ma.length > 0) {
-				results = ma;
-			}
-		}
-
-		// Ram
-		if (ramFromUrl && ramFromUrl.length > 0) {
-			let ra = [];
-			for (let r in results) {
-				for (let re in ramFromUrl) {
-					if (Number(results[r].itemInfo.ram) === Number(ramFromUrl[re])) {
-						ra.push(results[r]);
-					}
-				}
-			}
-
-			if (ra.length > 0) {
-				results = ra;
-			}
-		}
-
-		// Rom
-		if (romFromUrl && romFromUrl.length > 0) {
-			let ro = [];
-			for (let ri in results) {
-				for (let rc in romFromUrl) {
-					if (Number(results[ri].itemInfo.rom) === Number(romFromUrl[rc])) {
-						ro.push(results[ri]);
-					}
-				}
-			}
-
-			if (ro.length > 0) {
-				results = ro;
-			}
-		}
-
-		// Screen
-		if (screenFromUrl && screenFromUrl.length > 0) {
-			let sc = [];
-			for (let s in results) {
-				for (let sv in screenFromUrl) {
-					if (
-						Number(results[s].itemInfo.screen) === Number(screenFromUrl[sv])
-					) {
-						sc.push(results[s]);
-					}
-				}
-			}
-			if (sc.length > 0) {
-				results = sc;
-			}
-		}
-
-		// Size
-		if (sizeFromUrl && sizeFromUrl.length > 0) {
-			let sz = [];
-			for (let si in results) {
-				for (let sy in sizeFromUrl) {
-					if (Number(results[si].itemInfo.size) === Number(sizeFromUrl[sy])) {
-						sz.push(results[si]);
-					}
-				}
-			}
-			if (sz.length > 0) {
-				results = sz;
-			}
-		}
-
-		// Page & Pagination
-		if (!pageFromUrl) {
-			results = createPagination(results, 12, 0);
-		}
-
-		if (pageFromUrl) {
-			results = createPagination(results, 12, Number(pageFromUrl));
-		}
-		markPagination();
-
-		// Result Sorting
-		controlSort(results);
-
-		// PASSING RESULTS TO UI FUNCTION
-		displayFiltereddResults(results, parameterCategory);
-	}
-	imageObserver();
 };
 
 // OPEN MENU
