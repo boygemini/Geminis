@@ -75,15 +75,13 @@ let allMenu = [...document.querySelectorAll("li")];
 // suggestionBox.style.display = "none";
 suggestionBox.style.opacity = "0";
 const openSearch = () => {
-	suggestionBox.style.display = "block";
+	suggestionBox.style.display = "flex";
 	setTimeout(() => {
 		suggestionBox.style.opacity = "1";
 		suggestionBox.style.transition = ".3s ease-in-out";
 	}, 0);
-	setTimeout(() => {
-		search.focus();
-		document.lastChild.style.overflow = "hidden";
-	}, 400);
+	setTimeout(search.focus(), 400);
+	document.lastChild.style.overflow = "hidden";
 };
 
 const closeSearch = () => {
