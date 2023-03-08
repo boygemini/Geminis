@@ -80,6 +80,7 @@ const openSearch = () => {
 		suggestionBox.classList.remove("searchfadein");
 		document.lastChild.style.overflow = "hidden";
 	}, 500);
+	search.focus();
 };
 
 const closeSearch = () => {
