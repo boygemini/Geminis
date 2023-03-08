@@ -546,6 +546,11 @@ class display {
 			}
 
 			showPreloader(false);
+			if (boxID == "cellphones") boxID = "cellphone";
+			if (boxID == "speakers") boxID = "speaker";
+			if (boxID == "gamings") boxID = "gaming";
+			if (boxID == "computers") boxID = "computer";
+			if (boxID == "TV") boxID = "television";
 			document.getElementById(category).innerText = boxID;
 			document.getElementById(boxID).innerHTML = y;
 		}
@@ -563,7 +568,6 @@ class display {
 		sortDOM.style.display = "none";
 	}
 }
-// display.displayAll();
 
 const emptyParameters = () => {
 	let Parameters = {

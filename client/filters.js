@@ -415,6 +415,7 @@ class filter {
 
 	static sort(currentSort, results) {
 		currentSort = currentSort.toLowerCase();
+		results = results.page;
 		switch (currentSort) {
 			case "random":
 				results = results.sort((a, b) => Number(a.id) < Number(b.id));
@@ -435,37 +436,3 @@ class filter {
 		return results;
 	}
 }
-
-// DISPLAY FILTERED RESULTS
-const displayFilteredResults = (directory) => {
-	let x = "";
-	let y = "";
-	for (let k in directory) {
-		y += `
-			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" >
-
-		<div class="img-con" id="main-con">
-				<div class="img-cont" data-src=${directory[k].itemInfo.itemImg[0]}>
-
-				</div>
-				</div>
-				<div class="sfu">
-					<div class="text-hold">
-						<p class="itemName2">${directory[k].itemInfo.name}</p>
-						<div div class = "description-box"
-						data-id=${directory[k].id} onclick = "viewProduct(event)">
-			<p class = "item-description" > ${directory[k].itemInfo.description1}
-			</p>
-		</div>
-			</div>
-			<div class="price-order">
-				<span class="price-box">
-					<span class = "price" > $${directory[k].itemInfo.newItemPrice} </span>
-					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
-				</span>
-		</div>
-		</a>`;
-	}
-	document.getElementById("result-title").innerText = `${category}`;
-	showBox.innerHTML = y;
-};

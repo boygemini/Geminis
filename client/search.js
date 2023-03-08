@@ -202,7 +202,7 @@ class getResults {
 
 		controlSort(arr);
 		markPagination();
-		displayFiltereddResults(arr, Query);
+		displayFilteredResults(arr, Query);
 	}
 
 	static searchBarResult(Query) {
@@ -225,7 +225,7 @@ class getResults {
 
 		markPagination();
 		controlSort(arr);
-		displayResults(arr, Query);
+		displaySearchResults(arr, Query);
 	}
 
 	static async negativeResults(Query) {
@@ -277,9 +277,11 @@ class getResults {
 	}
 }
 
-const displayResults = (directory, Query) => {
+const displaySearchResults = (directory, Query) => {
 	let x = "";
 	let y = "";
+	let totalItems = directory.totalItems.length;
+	directory = directory.page;
 	if (directory.length > 0) {
 		setTimeout(() => {
 			showPreloader(false);
@@ -317,7 +319,7 @@ const displayResults = (directory, Query) => {
 
 		document.getElementById(
 			"result-title"
-		).innerHTML = `Results for <span id="search-entry"> ${Query}</span>`;
+		).innerHTML = `${totalItems} Results for <span id="search-entry"> ${Query}</span>`;
 		showBox.innerHTML = y;
 	}
 	if (directory.length === 0) {
@@ -325,9 +327,10 @@ const displayResults = (directory, Query) => {
 	}
 };
 
-const displayFiltereddResults = (results, category) => {
+const displayFilteredResults = (results, category) => {
 	let x = ``;
 	let y = "";
+	results = results.page;
 
 	if (results.length > 0) {
 		setTimeout(() => {
@@ -361,6 +364,7 @@ const displayFiltereddResults = (results, category) => {
 		</div>
 		</a>`;
 		}
+		if (category === "tv") category = "televisions";
 		document.getElementById("result-title").innerText = `${category}`;
 		showBox.innerHTML = y;
 	}
@@ -566,7 +570,11 @@ function createPagination(results, numberOnEachPage, pageNumber) {
 		});
 
 		document.getElementById("pagindiv").innerHTML = n;
-		return paginatedResult[pageNumber];
+		let summary = {
+			page: paginatedResult[pageNumber],
+			totalItems: results,
+		};
+		return summary;
 	}
 }
 
@@ -854,7 +862,7 @@ const onLoad = async () => {
 			controlSort(results);
 
 			// PASSING RESULTS TO UI FUNCTION
-			displayFiltereddResults(results, parameterCategory);
+			displayFilteredResults(results, parameterCategory);
 		}
 		imageObserver();
 	}
@@ -900,7 +908,7 @@ const closeMenu = () => {
 			prog.style.zIndex = "";
 		} catch (error) {}
 	}, 500);
-	document.lastChild.style.overflow = ""; // Enables the window scrolling
+	document.lastChild.style.overflow = ""; // ReEnables the window scrolling
 };
 
 // CLOSES MENU IF ANY AREA OUTSIDE THE MENU BOX GETS CLICKED
