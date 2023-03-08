@@ -639,9 +639,7 @@ const onLoad = () => {
 		let Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0];
 		Query = removeThe20Nonsense(Query).trim();
 		getCatFiltersAndSearchResults(Query);
-		setTimeout(() => {
-			imageObserver();
-		}, 1000);
+		setTimeout(imageObserver, 100);
 		return;
 	}
 
