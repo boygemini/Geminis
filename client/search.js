@@ -80,8 +80,10 @@ const openSearch = () => {
 		suggestionBox.style.opacity = "1";
 		suggestionBox.style.transition = ".3s ease-in-out";
 	}, 0);
-	search.focus();
-	document.lastChild.style.overflow = "hidden";
+	setTimeout(() => {
+		search.focus();
+		document.lastChild.style.overflow = "hidden";
+	}, 400);
 };
 
 const closeSearch = () => {
