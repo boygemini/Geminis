@@ -72,23 +72,24 @@ const showSuggesttions = async (event) => {
 // SEARCH & SUGGESTION
 let suggestionBox = document.querySelector(".searchcontainer");
 let allMenu = [...document.querySelectorAll("li")];
-
+// suggestionBox.style.display = "none";
+suggestionBox.style.opacity = "0";
 const openSearch = () => {
-	suggestionBox.classList.add("searchfadein");
-	suggestionBox.style.display = "flex";
+	suggestionBox.style.display = "block";
 	setTimeout(() => {
-		suggestionBox.classList.remove("searchfadein");
-		document.lastChild.style.overflow = "hidden";
-	}, 500);
+		suggestionBox.style.opacity = "1";
+		suggestionBox.style.transition = ".3s ease-in-out";
+	}, 0);
 	search.focus();
+	document.lastChild.style.overflow = "hidden";
 };
 
 const closeSearch = () => {
-	suggestionBox.classList.add("searchfadeout");
+	suggestionBox.style.opacity = "0";
+	suggestionBox.style.transition = ".3s ease-in-out";
 	setTimeout(() => {
 		suggestionBox.style.display = "none";
-		suggestionBox.classList.remove("searchfadeout");
-	}, 300);
+	}, 400);
 	document.lastChild.style.overflow = "";
 };
 
