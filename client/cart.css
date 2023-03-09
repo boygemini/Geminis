@@ -1785,6 +1785,7 @@ footer {
 	.breakdown {
 		width: 30%;
 		min-width: 300px;
+		max-width: 400px;
 	}
 
 	.cart-top {

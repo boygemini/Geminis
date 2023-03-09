@@ -405,7 +405,7 @@ const getCatFiltersAndSearchResults = async (Query, Category) => {
 		}
 	}
 
-	function Call(Query, Category) {
+	function Call(Query) {
 		if (Category) {
 			return getResults.suggestionsResult(Query, Category);
 		}
@@ -417,35 +417,35 @@ const getCatFiltersAndSearchResults = async (Query, Category) => {
 	for (let i in gamekey) {
 		if (gamekey[i].toLowerCase().trim().includes(Query)) {
 			Gamings();
-			return Call(Query, Category);
+			return Call(Query);
 		}
 	}
 
 	for (let i in phonekey) {
 		if (phonekey[i].toLowerCase().trim().includes(Query)) {
 			cellPhones();
-			return Call(Query, Category);
+			return Call(Query);
 		}
 	}
 
 	for (let i in tvkey) {
 		if (tvkey[i].toLowerCase().trim().includes(Query)) {
 			TVs();
-			return Call(Query, Category);
+			return Call(Query);
 		}
 	}
 
 	for (let i in speakerkey) {
 		if (speakerkey[i].toLowerCase().trim().includes(Query)) {
 			Speakers();
-			return Call(Query, Category);
+			return Call(Query);
 		}
 	}
 
 	for (let i in comkey) {
 		if (comkey[i].toLowerCase().trim().includes(Query)) {
 			Computers();
-			return Call(Query, Category);
+			return Call(Query);
 		}
 	}
 
@@ -641,7 +641,7 @@ const onLoad = async () => {
 				.toString()
 				.split("&")[0];
 			Query = removeThe20Nonsense(Query);
-			getCatFiltersAndSearchResults(Query);
+			getCatFiltersAndSearchResults(Query, Category);
 			imageObserver();
 			return;
 		}
