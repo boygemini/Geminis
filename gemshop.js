@@ -135,11 +135,17 @@ let filterUIObjects = {
        </div>
        <div class="option minn">
 			<p class="applymm" id="applyminmax">APPLY</p>
-           <div class="mmdiv">
-               <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
-               <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
-           </div>
-       </div>
+            <div class="mmdiv">
+			<div class="inputContainer">
+				<span class="label">Min</span>
+				<input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+			</div>
+			<div class="inputContainer">
+				<span class="label">Max</span>
+				<input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			</div>
+            </div>
+        </div>
     </div>
     <div class="fil-box">
         <h1>Brand</h1><br>
@@ -222,8 +228,14 @@ let filterUIObjects = {
         <div class="option minn">
 			<p class="applymm" id="applyminmax">APPLY</p>
             <div class="mmdiv">
-                <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
-                <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			<div class="inputContainer">
+				<span class="label">Min</span>
+				<input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+			</div>
+			<div class="inputContainer">
+				<span class="label">Max</span>
+				<input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			</div>
             </div>
         </div>
     </div>
@@ -343,8 +355,14 @@ let filterUIObjects = {
         <div class="option minn">
 			<p class="applymm" id="applyminmax">APPLY</p>
             <div class="mmdiv">
-                <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
-                <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			<div class="inputContainer">
+				<span class="label">Min</span>
+				<input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+			</div>
+			<div class="inputContainer">
+				<span class="label">Max</span>
+				<input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			</div>
             </div>
         </div>
     </div>
@@ -393,11 +411,17 @@ let filterUIObjects = {
                 </label>
             </div>
         </div>
-        <div class="option minn">
+       <div class="option minn">
 			<p class="applymm" id="applyminmax">APPLY</p>
             <div class="mmdiv">
-                <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
-                <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			<div class="inputContainer">
+				<span class="label">Min</span>
+				<input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+			</div>
+			<div class="inputContainer">
+				<span class="label">Max</span>
+				<input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			</div>
             </div>
         </div>
     </div>
@@ -540,32 +564,17 @@ class display {
 						<span class = "price" > $${directory[k].itemInfo.newItemPrice} </span>
 						<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
 					</span>
-					<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} onclick = "addToCart(event)">
-			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<p data-id= ${directory[k].id} class="cart-btn" id="cart-text" onclick = "addToCart(event)"> Add to Cart<p></button>
-
-
 				</div>
 			</div>
 		</a>`;
 			}
 
-			// <div id="item-props">
-			// 			<div class="prop" id="add-to-cart" data-id= ${directory[k].id} onclick = "addToCart(event)">
-			// 				<img src="IMAGES/add-cart.png" data-id= ${directory[k].id} onclick = "addToCart(event)">
-			// 				<p data-id= ${directory[k].id} onclick = "addToCart(event)" class="cart-tool-tip" id="tooltip">Add to Cart</p>
-			// 			</div>
-			// 			<div class="prop" id="love">
-			// 				<img src="IMAGES/heart.png"/>
-			// 				<p class="love-tool-tip" id="tooltip">Love</p>
-			// 			</div>
-			// 			<div class="prop" id="wishlist">
-			// 				<img src="IMAGES/bookmark.png"/>
-			// 				<p class="wish-tool-tip" id="tooltip">Add to Wishlist</p>
-			// 			</div>
-			// 		</div>
-
 			showPreloader(false);
+			if (boxID == "cellphones") boxID = "cellphone";
+			if (boxID == "speakers") boxID = "speaker";
+			if (boxID == "gamings") boxID = "gaming";
+			if (boxID == "computers") boxID = "computer";
+			if (boxID == "TV") boxID = "television";
 			document.getElementById(category).innerText = boxID;
 			document.getElementById(boxID).innerHTML = y;
 		}
@@ -583,7 +592,6 @@ class display {
 		sortDOM.style.display = "none";
 	}
 }
-// display.displayAll();
 
 const emptyParameters = () => {
 	let Parameters = {
@@ -675,19 +683,12 @@ const openFilter = () => {
 const closeFilter = () => {
 	filterContainer1.style.display = "none";
 	document.lastChild.style.overflow = "scroll";
-	// applyFilterReloadPage();
 };
 
 const applyFilter = document.querySelectorAll("#apply");
 applyFilter.forEach((applyBtn) => {
 	applyBtn.addEventListener("click", applyFilterReloadPage);
 });
-
-// const phonesBrandCheck = (apple, brand) => {
-// 	apple.addEventListener("click", (event) => {
-// 		displayFilteredResults(filter.brand(event, "cellphones", brand));
-// 	});
-// };
 
 const debounce = (fn, delay) => {
 	let timer;
@@ -706,7 +707,6 @@ if (document.lastChild.offsetWidth >= 1024) {
 const phoneFilters = () => {
 	// Price filter
 	firstlevelprice.addEventListener("click", (event) => {
-		console.log("CLicke");
 		displayFilteredResults(filter.price(event, "cellphones", 300, 799));
 	});
 
@@ -1042,14 +1042,14 @@ const Computers = () => {
 const Speakers = () => {
 	getFilter.allSpeaker();
 
-	// Computers Filters
+	// Speaker Filters
 	speakerFilters();
 };
 
 const TVs = () => {
 	getFilter.allTv();
 
-	// Computers Filters
+	// TV Filters
 	tvFilters();
 };
 
@@ -1061,20 +1061,6 @@ try {
 switch (urlCategory) {
 	case "cellphones":
 		cellPhones();
-<<<<<<< HEAD:gemshop.js
-		break;
-	case "computers":
-		Computers();
-		break;
-	case "speakers":
-		Speakers();
-		break;
-	case "tv":
-		TVs();
-		break;
-	case "gaming":
-		Gamings();
-=======
 		setTimeout(() => {
 			phones.scrollIntoView({
 				behaviour: "smooth",
@@ -1122,7 +1108,6 @@ switch (urlCategory) {
 				inline: "center",
 			});
 		}, 1000);
->>>>>>> d4968da (Worked on load speed):client/gemshop.js
 		break;
 }
 
@@ -1140,7 +1125,6 @@ const indicateLoadingWhileAwaitingResults = (awaiting) => {
 };
 
 let newUrl = new URL(document.URL);
-console.log(newUrl.search.length);
 if (newUrl.search.length === 0) {
 	// showPreloader(false);
 	display.displayAll();
@@ -1197,27 +1181,6 @@ if (newUrl.search.length > 0) {
 // ADD ITEMS TO CART
 let cart = [];
 class Storage {
-	// RETRIEVE RETRIEVE ALL ITEMS TOTAL PRODUCTS
-	static getAllProducts() {
-		return JSON.parse(localStorage.getItem("StoreItems"));
-	}
-
-	// RETRIEVE RECENTLY ADDED ITEMS FROM TOTAL PRODUCTS
-	static getRecentItems() {
-		return Storage.getAllProducts().recentlyAdded;
-	}
-
-	// RETRIEVE WEEKLY FEATURE ITEMS FROM TOAL PRODUCTS
-	static weeklyFeaturedItems() {
-		return Storage.getAllProducts().WeeklyFeatured;
-	}
-
-	// SAVE ITEMS TO CART
-	static saveSelectedItemsToCart(cart) {
-		localStorage.Cart = JSON.stringify(cart);
-		localStorage.setItem("Cart", localStorage.Cart);
-	}
-
 	// RETRIEVE ALL ITEMS FROM CART
 	static getItemsInCart() {
 		return JSON.parse(localStorage.getItem("Cart"));
@@ -1233,103 +1196,8 @@ class Storage {
 			return reduceCart;
 		}
 	}
-
-	// UPDATE CART
-	static updateCart(cartName) {
-		Storage.saveSelectedItemsToCart(cartName);
-		cartDom.innerText = Storage.numberOfItemsInCart();
-	}
-
-	// GET AND SAVE PICKED ITEM TO CART
-	static getItemAndSaveToCart(event) {
-		let getbackcart = JSON.parse(localStorage.getItem("Cart"));
-
-		if (cart === null || cart.length === 0) {
-			cart = [pickedItem];
-			Storage.updateCart(cart);
-		}
-
-		if (cart !== null || cart.length !== 0) {
-			let pickedItemID = event.target.dataset.id;
-			let check = getbackcart.find(
-				(item) => Number(item.id) === Number(pickedItemID)
-			);
-			console.log(pickedItemID);
-
-			if (check) {
-				check.amount += 1;
-				Storage.updateCart(getbackcart);
-			}
-
-			if (!check) {
-				getbackcart = [...getbackcart, pickedItem];
-				Storage.updateCart(getbackcart);
-			}
-		}
-	}
 }
-
-// GET ITEMS AND SORT
-const getAllItems = () => {
-	let allItems = JSON.parse(localStorage.getItem("StoreItems"));
-	return allItems;
-};
-
-const item = (ItemID) => {
-	let recentlyAdded = getAllItems().recentlyAdded;
-	let WeeklyFeatured = getAllItems().WeeklyFeatured;
-
-	for (let i in recentlyAdded) {
-		if (recentlyAdded[i].id === ItemID) {
-			return recentlyAdded[i];
-		}
-	}
-
-	for (let i in WeeklyFeatured) {
-		if (WeeklyFeatured[i].id === ItemID) {
-			return WeeklyFeatured[i];
-		}
-	}
-
-	let category = ["gaming", "cellphones", "speakers", "computers", "tv"];
-	let allItems = getAllItems().selectedProducts[0];
-	for (let i in category) {
-		let all = allItems[`${category[i]}`];
-		for (let j in all) {
-			if (all[j].id === ItemID) {
-				return all[j];
-			}
-		}
-	}
-};
 
 // DISPLAY NUMBER OF ITEMS IN CART
 let cartDom = document.getElementById("items-in-cart");
-try {
-	cartDom.innerText = Storage.numberOfItemsInCart();
-} catch (error) {}
-
-// ADD ITEM TO CART
-let ItemsInCart = JSON.parse(localStorage.getItem("Cart")),
-	pickedItem;
-const addToCart = (event) => {
-	event.stopPropagation();
-	event.preventDefault();
-	let ItemID = event.target.dataset.id;
-	let pickItemFromStore = item(ItemID);
-	popupNotification(
-		pickItemFromStore.itemInfo.name,
-		pickItemFromStore.itemInfo.itemImg[0]
-	);
-	pickedItem = {
-		...pickItemFromStore,
-		amount: 1,
-	};
-
-	if (pickItemFromStore) {
-		try {
-			Storage.getItemAndSaveToCart(event);
-		} catch (error) {}
-	}
-	animateCartButtonText(event.target);
-};
+cartDom.innerText = Storage.numberOfItemsInCart();

@@ -5,6 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="description" content="shop" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
 		<title>Shop</title>
 		<link rel="stylesheet" href="gemshop.css" preload />
 		<link rel="stylesheet" href="gemfonts.css" preload />
@@ -14,12 +18,6 @@
 	</head>
 
 	<body id="bodyy">
-		<div class="notify-box">
-			<div id="notify-box">
-				<!-- <img src="/IMAGES/tv4.png" alt="" srcset="" class="noti-img">
-			<p>You added <strong id="itemname">${itemName}</strong> to cart</p> -->
-			</div>
-		</div>
 		<section class="slimbanner" id="slimbanner">
 			<div class="slimcontent">
 				<div class="slimb-left">
@@ -47,10 +45,10 @@
 						<a href="index.html" class="logo" id="mob-logo">Geminis.</a>
 						<div class="products">
 							<div class="main-links">
-								<a id="games" href="gemshop.html">Shop</a>
-								<a id="phones" href="#">Products</a>
-								<a id="coms" href="#">About Us</a>
-								<a id="spks" href="#">Contact Us</a>
+								<a id="" href="gemshop.html">Shop</a>
+								<a id="" href="#">Products</a>
+								<a id="" href="#">About Us</a>
+								<a id="" href="#">Contact Us</a>
 							</div>
 						</div>
 					</nav>
@@ -58,18 +56,23 @@
 						<a href="index.html" class="logo" id="web-logo">Geminis.</a>
 					</div>
 					<div class="login-cart">
-						<div class="search-section search-web" onclick="openSearch()">
+						<div class="search-section search-web">
 							<input
 								type="search"
 								class="search"
 								name="search"
 								placeholder="Search..."
 								autocomplete="off"
-								disabled
+								onclick="openSearch()"
 							/>
 							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
 							<div class="serc-img">
-								<img src="IMAGES/search.png" alt="" srcset="" />
+								<img
+									src="IMAGES/search.png"
+									alt=""
+									srcset=""
+									onclick="openSearch()"
+								/>
 							</div>
 						</div>
 						<div class="cart-box" id="searc-cart" onclick="openSearch()">
@@ -78,6 +81,7 @@
 								id="mob-search-icon"
 								alt=""
 								srcset=""
+								onclick="openSearch()"
 							/>
 						</div>
 						<a href="cart.html" class="cart-box">
@@ -134,7 +138,7 @@
 						</div>
 						<div class="menu-cat">
 							<div>
-								<a style="border: none; color: red">Logout</a>
+								<a href="logout" style="border: none; color: red">Logout</a>
 							</div>
 						</div>
 					</div>
@@ -155,6 +159,7 @@
 							id="search"
 							placeholder="Search a Product"
 							autocomplete="off"
+							autofocus="true"
 						/>
 						<input type="submit" class="go" value="Search" id="GO" />
 					</div>
@@ -174,6 +179,34 @@
 				</div>
 			</section>
 
+			<div class="littlebans">
+				<div class="b-holder hol1">
+					<div class="shade" id="games">
+						<p>Gaming</p>
+					</div>
+				</div>
+				<div class="b-holder hol2">
+					<div class="shade" id="phones">
+						<p>Cell Phones</p>
+					</div>
+				</div>
+				<div class="b-holder hol3">
+					<div class="shade" id="coms">
+						<p>Computers & Laptops</p>
+					</div>
+				</div>
+				<div class="b-holder hol4">
+					<div class="shade" id="spks">
+						<p>Speakers</p>
+					</div>
+				</div>
+				<div class="b-holder hol5">
+					<div class="shade" id="tele">
+						<p>Television</p>
+					</div>
+				</div>
+			</div>
+
 			<section class="shop-body" id="shop-body">
 				<div class="filters filters1" id="filter">
 					<div class="fil-head">
@@ -191,33 +224,6 @@
 					</div>
 				</div>
 				<div class="available-items">
-					<div class="littlebans">
-						<div class="b-holder hol1">
-							<div class="shade" id="games">
-								<p>Gaming</p>
-							</div>
-						</div>
-						<div class="b-holder hol2">
-							<div class="shade" id="phones">
-								<p>Cell Phones</p>
-							</div>
-						</div>
-						<div class="b-holder hol3">
-							<div class="shade" id="coms">
-								<p>Computers & Laptops</p>
-							</div>
-						</div>
-						<div class="b-holder hol4">
-							<div class="shade" id="spks">
-								<p>Speakers</p>
-							</div>
-						</div>
-						<div class="b-holder hol5">
-							<div class="shade" id="tele">
-								<p>Television</p>
-							</div>
-						</div>
-					</div>
 					<div class="res-sort" id="res-sort">
 						<div class="red-header" id="red-header">
 							<div class="pre pre-sort"></div>
@@ -299,65 +305,65 @@
 								<h1 id="sec-name-cellphones"></h1>
 								<button
 									class="all-category"
-									id="all-category"
+									id="1"
 									onclick="window.location='gemshop.html?category=cellphones&Order=Random&Page=0'"
 								>
 									See All Cell Phones
 								</button>
 							</div>
-							<div class="av-box" id="cellphones"></div>
+							<div class="av-box" id="cellphone"></div>
 						</div>
 						<div id="main-content" class="full-cat">
 							<div class="section-title">
 								<h1 id="sec-name-computer"></h1>
 								<button
 									class="all-category"
-									id="all-category"
+									id="2"
 									onclick="window.location='gemshop.html?category=computers&Order=Random&Page=0'"
 								>
 									See All Computers
 								</button>
 							</div>
-							<div class="av-box" id="computers"></div>
+							<div class="av-box" id="computer"></div>
 						</div>
 						<div id="main-content" class="main-content full-cat">
 							<div class="section-title">
 								<h1 id="sec-name-speakers"></h1>
 								<button
 									class="all-category"
-									id="all-category"
+									id="3"
 									onclick="window.location='gemshop.html?category=speakers&Order=Random&Page=0'"
 								>
 									See All Speakers
 								</button>
 							</div>
-							<div class="av-box" id="speakers"></div>
-						</div>
-						<div id="main-content" class="main-content full-cat">
-							<div class="section-title">
-								<h1 id="sec-name-gaming"></h1>
-								<button
-									class="all-category"
-									id="all-category"
-									onclick="window.location='gemshop.html?category=gaming&Order=Random&Page=0'"
-								>
-									See All Gamings
-								</button>
-							</div>
-							<div class="av-box" id="gamings"></div>
+							<div class="av-box" id="speaker"></div>
 						</div>
 						<div id="main-content" class="main-content full-cat">
 							<div class="section-title">
 								<h1 id="sec-name-tv"></h1>
 								<button
 									class="all-category"
-									id="all-category"
+									id="4"
 									onclick="window.location='gemshop.html?category=tv&Order=Random&Page=0'"
 								>
 									See All TVs
 								</button>
 							</div>
-							<div class="av-box" id="TV"></div>
+							<div class="av-box" id="television"></div>
+						</div>
+						<div id="main-content" class="main-content full-cat">
+							<div class="section-title">
+								<h1 id="sec-name-gaming"></h1>
+								<button
+									class="all-category"
+									id="5"
+									onclick="window.location='gemshop.html?category=gaming&Order=Random&Page=0'"
+								>
+									See All Gamings
+								</button>
+							</div>
+							<div class="av-box" id="gaming"></div>
 						</div>
 					</div>
 					<div class="pagindiv pgd">
@@ -384,5 +390,12 @@
 				>
 			</h1>
 		</footer>
+		<button
+			id="backtotop"
+			aria-labelledby="button"
+			aria-label="button"
+			type="button"
+			onclick="backToTop()"
+		></button>
 	</body>
 </html>

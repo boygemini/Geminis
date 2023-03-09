@@ -124,7 +124,6 @@ const returnUncheckedBoxes = (targetBox) => {
 			.split("&")[0]
 			.split(",");
 		getBoxesCheck = getBoxesCheck.filter((box) => box !== targetBox);
-		console.log(getBoxesCheck);
 		Parameters.Filters = getBoxesCheck;
 	} catch (error) {}
 };
@@ -218,7 +217,7 @@ const createUrl = (category) => {
 	let stringifyNewParameters = JSON.stringify(Parameters);
 	localStorage.setItem("Parameters", stringifyNewParameters);
 	localStorage.setItem("Url", url);
-	if (document.lastChild.offsetWidth > 1024) {
+	if (document.lastChild.offsetWidth > 1200) {
 		window.location = url;
 	}
 };
@@ -416,6 +415,7 @@ class filter {
 
 	static sort(currentSort, results) {
 		currentSort = currentSort.toLowerCase();
+		results = results.page;
 		switch (currentSort) {
 			case "random":
 				results = results.sort((a, b) => Number(a.id) < Number(b.id));
@@ -436,40 +436,3 @@ class filter {
 		return results;
 	}
 }
-
-// DISPLAY FILTERED RESULTS
-const displayFilteredResults = (directory) => {
-	let x = "";
-	let y = "";
-	for (let k in directory) {
-		y += `
-			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" >
-
-		<div class="img-con" id="main-con">
-				<div class="img-cont" data-src=${directory[k].itemInfo.itemImg[0]}>
-
-				</div>
-				</div>
-				<div class="sfu">
-					<div class="text-hold">
-						<p class="itemName2">${directory[k].itemInfo.name}</p>
-						<div div class = "description-box"
-						data-id=${directory[k].id} onclick = "viewProduct(event)">
-			<p class = "item-description" > ${directory[k].itemInfo.description1}
-			</p>
-		</div>
-			</div>
-			<div class="price-order">
-				<span class="price-box">
-					<span class = "price" > $${directory[k].itemInfo.newItemPrice} </span>
-					<span class = "old-price price" > ${directory[k].itemInfo.oldItemPrice}</span>
-				</span>
-				<button id="cart-btn" class="cart-btn"  data-id= ${directory[k].id} onclick = "addToCart(event)">
-			<img id="addto-cart-img" src="IMAGES/add-cart-white.png" alt=""  data-id= ${directory[k].id} class="cart-btn" onclick = "addToCart(event)">
-			<p data-id= ${directory[k].id} class="cart-btn" id="cart-text" onclick = "addToCart(event)"> Add to Cart<p></button>
-		</div>
-		</a>`;
-	}
-	document.getElementById("result-title").innerText = `${category}`;
-	showBox.innerHTML = y;
-};

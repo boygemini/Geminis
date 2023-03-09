@@ -4,6 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
 		<meta name="description" content="Online Gadget Store" />
 		<title>Gemini store | Home</title>
 		<link rel="stylesheet" href="index.css" />
@@ -96,7 +100,14 @@
 							/>
 							<p id="items-in-cart">0</p>
 						</div>
-						<button type="button" class="login">Login</button>
+						<button
+							aria-labelledby="button"
+							aria-label="button"
+							type="button"
+							class="login"
+						>
+							Login
+						</button>
 						<div class="account cart-box">
 							<img src="IMAGES/user.png" id="user-img" alt="" />
 						</div>
@@ -181,7 +192,7 @@
 				<div class="banner-content">
 					<h1 id="hero-text">Find Your Next Favorite Gadget</h1>
 					<p class="discount">Shop Our Collection Now</p>
-					<!-- <button class="shopbtn">Shop Now</button> -->
+					<!-- <button aria-labelledby="button" aria-label="button" class="shopbtn">Shop Now</button> -->
 					<span onclick="window.location.href = 'gemshop.html'"
 						>Start Shopping</span
 					>
@@ -194,8 +205,17 @@
 					>
 						<div class="shade" id="mys">
 							<div class="cat-text">Speakers</div>
-							<button class="gridbtn">
-								<img src="IMAGES/r-arrow.png" alt="" srcset="" />
+							<button
+								aria-labelledby="button"
+								aria-label="button"
+								class="gridbtn"
+							>
+								<img
+									class="thinarrow"
+									src="IMAGES/thinarrow.png"
+									alt=""
+									srcset=""
+								/>
 							</button>
 						</div>
 					</a>
@@ -206,8 +226,17 @@
 					>
 						<div class="shade">
 							<div class="cat-text">Laptops & Computers</div>
-							<button class="gridbtn">
-								<img src="IMAGES/r-arrow.png" alt="" srcset="" />
+							<button
+								aria-labelledby="button"
+								aria-label="button"
+								class="gridbtn"
+							>
+								<img
+									class="thinarrow"
+									src="IMAGES/thinarrow.png"
+									alt=""
+									srcset=""
+								/>
 							</button>
 						</div>
 					</a>
@@ -218,8 +247,17 @@
 					>
 						<div class="shade">
 							<div class="cat-text">Cell Phones</div>
-							<button class="gridbtn">
-								<img src="IMAGES/r-arrow.png" alt="" srcset="" />
+							<button
+								aria-labelledby="button"
+								aria-label="button"
+								class="gridbtn"
+							>
+								<img
+									class="thinarrow"
+									src="IMAGES/thinarrow.png"
+									alt=""
+									srcset=""
+								/>
 							</button>
 						</div>
 					</a>
@@ -230,8 +268,17 @@
 					>
 						<div class="shade">
 							<div class="cat-text">TV</div>
-							<button class="gridbtn">
-								<img src="IMAGES/r-arrow.png" alt="" srcset="" />
+							<button
+								aria-labelledby="button"
+								aria-label="button"
+								class="gridbtn"
+							>
+								<img
+									class="thinarrow"
+									src="IMAGES/thinarrow.png"
+									alt=""
+									srcset=""
+								/>
 							</button>
 						</div>
 					</a>
@@ -242,8 +289,17 @@
 					>
 						<div class="shade">
 							<div class="cat-text">Video Games</div>
-							<button class="gridbtn">
-								<img src="IMAGES/r-arrow.png" alt="" srcset="" />
+							<button
+								aria-labelledby="button"
+								aria-label="button"
+								class="gridbtn"
+							>
+								<img
+									class="thinarrow"
+									src="IMAGES/thinarrow.png"
+									alt=""
+									srcset=""
+								/>
 							</button>
 						</div>
 					</a>
@@ -287,7 +343,7 @@
 									</div>
 									<div class="price-order">
 										<span class="recentPrice">$1,475</span>
-										<button
+										<button aria-labelledby="button" aria-label="button"
 											data-id="${category[i].id}"
 											data-category="${sub}"
 											id="cart-btn"
@@ -383,7 +439,7 @@
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
 								perspiciatis dignissimos iure facilis?
 							</p>
-							<button>Shop</button>
+							<button aria-labelledby="button" aria-label="button">Shop</button>
 						</article>
 					</div>
 				</section>
@@ -497,7 +553,14 @@
 						<h1>Visit our Support Center</h1>
 						<img src="IMAGES/customer-support(1).png" alt="" />
 					</div>
-					<button class="visit" type="button">Visit</button>
+					<button
+						aria-labelledby="button"
+						aria-label="button"
+						class="visit"
+						type="button"
+					>
+						Visit
+					</button>
 				</section>
 			</section>
 		</section>
@@ -509,6 +572,14 @@
 				>
 			</h1>
 		</footer>
+
+		<button
+			id="backtotop"
+			aria-labelledby="button"
+			aria-label="button"
+			type="button"
+			onclick="backToTop()"
+		></button>
 
 		<script>
 			"use strict";

@@ -139,18 +139,14 @@ nav ul li {
 .logo {
 	cursor: pointer;
 	color: #111111;
-	font-family: DSIndigo, Helvetica, Arial, sans-serif;
 	height: 100%;
 	display: flex;
 	align-items: center;
-	font-size: 17px;
+	font-size: 40px;
 	font-weight: 600;
 	text-transform: uppercase;
-	border: 2px solid #111111;
-	border-left: none;
-	border-right: none;
-	padding: 5px;
-	outline: 2px solid #111111;
+	/* border: 2px solid #111111; */
+	padding: 10px;
 	outline-offset: 2px;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -367,11 +363,6 @@ nav ul li {
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
-}
-
-#search:focus {
-	border: 1px solid #111111;
-	outline: 1px solid #111111;
 }
 
 #GO {
@@ -723,7 +714,7 @@ nav ul li {
 }
 
 .item-title {
-	color: #a73ef8;
+	color: #9203ff;
 }
 
 .qty {
@@ -804,10 +795,13 @@ nav ul li {
 	text-decoration: 1px solid underline#111111;
 }
 
+.delete {
+	padding: 5px 10px;
+}
+
 .delete:hover {
 	color: red;
 	background-color: rgba(255, 0, 0, 0.37);
-	padding: 5px 10px;
 }
 
 .item-price {
@@ -1037,7 +1031,7 @@ nav ul li {
 }
 
 .total h1 span {
-	color: #a73ef8;
+	color: #9000ff;
 	font-weight: 600;
 }
 
@@ -1107,7 +1101,6 @@ footer {
 	.search:focus,
 	#search:focus {
 		background-color: transparent;
-		border: transparent;
 	}
 
 	.top-nav {
@@ -1250,6 +1243,15 @@ footer {
 
 	.order {
 		width: 100%;
+		border-radius: 0px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-ms-border-radius: 0px;
+		-o-border-radius: 0px;
+	}
+
+	.order:hover {
+		background-color: transparent;
 	}
 
 	.breakdown {
@@ -1311,11 +1313,15 @@ footer {
 		top: 0;
 		left: 5px;
 		position: absolute;
-		transform: translateX(-70%);
-		-webkit-transform: translateX(-70%);
-		-moz-transform: translateX(-70%);
-		-ms-transform: translateX(-70%);
-		-o-transform: translateX(-70%);
+		transform: translateX(-65%);
+		-webkit-transform: translateX(-65%);
+		-moz-transform: translateX(-65%);
+		-ms-transform: translateX(-65%);
+		-o-transform: translateX(-65%);
+		background-color: white;
+		color: #1111118f;
+		font-weight: 700;
+		font-size: 25px;
 	}
 
 	.order {
@@ -1489,7 +1495,6 @@ footer {
 	.search:focus,
 	#search:focus {
 		background-color: transparent;
-		border: transparent;
 	}
 
 	.top-nav {
@@ -1780,6 +1785,7 @@ footer {
 	.breakdown {
 		width: 30%;
 		min-width: 300px;
+		max-width: 400px;
 	}
 
 	.cart-top {

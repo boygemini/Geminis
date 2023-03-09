@@ -2597,7 +2597,7 @@
 					"id": "7716272",
 					"itemInfo": {
 						"name": "Apple MacBook Air 2020",
-						"itemImg": ["IMAGES/pro-img/6413734_rd.png"],
+						"itemImg": ["IMAGES/pro-img/6455369_sd.webp"],
 						"description1": "Apple MacBook Air 2020",
 						"description2": "",
 						"newItemPrice": "1100",
@@ -3428,7 +3428,7 @@
 					"id": "494991",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/biobo.webp"],
+						"itemImg": ["IMAGES/pro-img/try8.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3449,10 +3449,7 @@
 					"id": "949910",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": [
-							"IMAGES/pro-img/obii.webp",
-							"IMAGES/pro-img/nviob.jpeg"
-						],
+						"itemImg": ["IMAGES/pro-img/tyr77.png"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3473,7 +3470,7 @@
 					"id": "9492891",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/90vn.webp", "IMAGES/pro-img/nosi.jpeg"],
+						"itemImg": ["IMAGES/pro-img/try6.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3494,7 +3491,7 @@
 					"id": "944289",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/nvio2.webp", "IMAGES/pro-img/nvi.jpeg"],
+						"itemImg": ["IMAGES/pro-img/try5.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3515,7 +3512,7 @@
 					"id": "492991",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/nvnsoin0.webp"],
+						"itemImg": ["IMAGES/pro-img/try4.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3533,10 +3530,10 @@
 					}
 				},
 				{
-					"id": "4929194",
+					"id": "4924294",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/vbioi.webp"],
+						"itemImg": ["IMAGES/pro-img/try3.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3557,7 +3554,7 @@
 					"id": "4299911",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/niovno.webp"],
+						"itemImg": ["IMAGES/pro-img/try2.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3578,11 +3575,7 @@
 					"id": "849291",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": [
-							"IMAGES/pro-img/2ihew.webp",
-							"IMAGES/pro-img/nownosnw.jpeg",
-							"IMAGES/pro-img/vebio.jpeg"
-						],
+						"itemImg": ["IMAGES/pro-img/pngfind.com-apple-tv-png-6649938.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3603,7 +3596,9 @@
 					"id": "484899",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/bbvw.webp"],
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-wall-led-tv-png-6207876.webp"
+						],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3624,7 +3619,9 @@
 					"id": "9193933",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/snionw.webp"],
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-tv-top-view-png-3722350.webp"
+						],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3645,7 +3642,7 @@
 					"id": "825838",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/vnio.webp"],
+						"itemImg": ["IMAGES/pro-img/pngfind.com-tv-png-6141897.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3666,11 +3663,7 @@
 					"id": "881848",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": [
-							"IMAGES/pro-img/new.webp",
-							"IMAGES/pro-img/nwio.jpeg",
-							"IMAGES/pro-img/vinio.jpeg"
-						],
+						"itemImg": ["IMAGES/pro-img/pngfind.com-tv-png-1036874.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3691,7 +3684,7 @@
 					"id": "482194",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/beobw.webp"],
+						"itemImg": ["IMAGES/pro-img/pngfind.com-tv-png-604165.webp"],
 						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "999",
@@ -3712,7 +3705,7 @@
 					"id": "489192",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/bfw.webp"],
+						"itemImg": ["IMAGES/pro-img/pngfind.com-tv-frame-png-2260206.webp"],
 						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "999",
@@ -3733,7 +3726,9 @@
 					"id": "482819",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/ivboib.webp"],
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-television-png-3239976.webp"
+						],
 						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "999",
@@ -3754,7 +3749,28 @@
 					"id": "4881893",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/vvib3.webp"],
+						"itemImg": ["IMAGES/pro-img/pngfind.com-smart-tv-png-6086400.webp"],
+						"description1": "LG TV",
+						"description2": "",
+						"newItemPrice": "999",
+						"oldItemPrice": "$544",
+						"itemTotal": "630",
+						"brand": "lg",
+						"size": 32,
+						"category": "TV",
+						"color": "🇺🇦",
+						"OS": "🫶🏼",
+						"CPU": "🁼",
+						"smop": "😘",
+						"ct": "🌕",
+						"aom": "🌑"
+					}
+				},
+				{
+					"id": "4881893",
+					"itemInfo": {
+						"name": "LG",
+						"itemImg": ["IMAGES/pro-img/pngfind.com-apple-tv-png-6650041.webp"],
 						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "999",
@@ -3775,7 +3791,9 @@
 					"id": "9429919",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/boi.webp", "IMAGES/pro-img/nfw.jpeg"],
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-samsung-tv-png-5392498.webp"
+						],
 						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "999",
@@ -3796,7 +3814,9 @@
 					"id": "4982919",
 					"itemInfo": {
 						"name": "Samsung",
-						"itemImg": ["IMAGES/pro-img/buvibb.webp"],
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-samsung-tv-png-5392548.webp"
+						],
 						"description1": "Samsung TV",
 						"description2": "",
 						"newItemPrice": "1600",
@@ -3818,9 +3838,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/isbow.webp",
-							"IMAGES/pro-img/2vw.jpeg",
-							"IMAGES/pro-img/iobw.jpeg"
+							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-3123133.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3843,8 +3861,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/bb92.webp",
-							"IMAGES/pro-img/vbsub.jpeg"
+							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-3123130.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3866,7 +3883,9 @@
 					"id": "1129291",
 					"itemInfo": {
 						"name": "Samsung",
-						"itemImg": ["IMAGES/pro-img/n92h.webp"],
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-3123104.webp"
+						],
 						"description1": "Samsung TV",
 						"description2": "",
 						"newItemPrice": "1600",
@@ -3888,8 +3907,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/bvbiiw.webp",
-							"IMAGES/pro-img/ivbsio92.jpeg"
+							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-2220829.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3912,9 +3930,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/sni.webp",
-							"IMAGES/pro-img/bowbwm.jpeg",
-							"IMAGES/pro-img/boib.jpeg"
+							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-2220242.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3937,7 +3953,9 @@
 					"id": "4849193",
 					"itemInfo": {
 						"name": "Samsung",
-						"itemImg": ["IMAGES/pro-img/bvoibw.webp"],
+						"itemImg": [
+							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-1457864.webp"
+						],
 						"description1": "Samsung TV",
 						"description2": "",
 						"newItemPrice": "1600",
@@ -3960,8 +3978,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/inoviosn.webp",
-							"IMAGES/pro-img/9029hew.jpeg"
+							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-1457255.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3984,9 +4001,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/sni.webp",
-							"IMAGES/pro-img/bowbwm.jpeg",
-							"IMAGES/pro-img/boib.jpeg"
+							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-1456870.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -4008,10 +4023,7 @@
 					"id": "49199819",
 					"itemInfo": {
 						"name": "Samsung",
-						"itemImg": [
-							"IMAGES/pro-img/bvsoib.webp",
-							"IMAGES/pro-img/vnoinion.jpeg"
-						],
+						"itemImg": ["IMAGES/pro-img/pngfind.com-live-tv-png-5294774.webp"],
 						"description1": "Samsung TV",
 						"description2": "",
 						"newItemPrice": "1600",
@@ -4033,10 +4045,7 @@
 					"id": "8191938",
 					"itemInfo": {
 						"name": "Samsung",
-						"itemImg": [
-							"IMAGES/pro-img/woi.webp",
-							"IMAGES/pro-img/inovef.jpeg"
-						],
+						"itemImg": ["IMAGES/pro-img/pngfind.com-led-tvs-png-5392992.webp"],
 						"description1": "Samsung TV",
 						"description2": "",
 						"newItemPrice": "1600",
@@ -4059,9 +4068,7 @@
 					"itemInfo": {
 						"name": "LG",
 						"itemImg": [
-							"IMAGES/pro-img/6503080cv12d.webp",
-							"IMAGES/pro-img/6503080cv11d.jpeg",
-							"IMAGES/pro-img/6503080_sd.jpeg"
+							"IMAGES/pro-img/pngfind.com-led-tv-png-lg-5994058.webp"
 						],
 						"description1": "LG TV",
 						"description2": "",
@@ -4084,9 +4091,7 @@
 					"itemInfo": {
 						"name": "Toshiba",
 						"itemImg": [
-							"IMAGES/pro-img/6472252cv12d.webp",
-							"IMAGES/pro-img/6472252cv13d.jpeg",
-							"IMAGES/pro-img/6472252_sd.jpeg"
+							"IMAGES/pro-img/pngfind.com-led-tv-images-png-2500423.webp"
 						],
 						"description1": "Toshiba TV",
 						"description2": "",
@@ -4109,9 +4114,7 @@
 					"itemInfo": {
 						"name": "Toshiba",
 						"itemImg": [
-							"IMAGES/pro-img/6458648cv13d.webp",
-							"IMAGES/pro-img/6458648cv12d.jpeg",
-							"IMAGES/pro-img/6458648cv11d.jpeg"
+							"IMAGES/pro-img/pngfind.com-led-tv-images-png-2500416.webp"
 						],
 						"description1": "Toshiba TV",
 						"description2": "",
@@ -4133,11 +4136,7 @@
 					"id": "482919",
 					"itemInfo": {
 						"name": "Toshiba",
-						"itemImg": [
-							"IMAGES/pro-img/6479694cv12d.webp",
-							"IMAGES/pro-img/6479694cv13d.jpeg",
-							"IMAGES/pro-img/6479694_sd.jpeg"
-						],
+						"itemImg": ["IMAGES/pro-img/pngfind.com-hd-tv-png-6136704.webp"],
 						"description1": "Toshiba TV",
 						"description2": "",
 						"newItemPrice": "300",
@@ -4159,9 +4158,7 @@
 					"itemInfo": {
 						"name": "LG",
 						"itemImg": [
-							"IMAGES/pro-img/6501896_bd.webp",
-							"IMAGES/pro-img/6501896ld.jpeg",
-							"IMAGES/pro-img/6501896_rd.jpeg"
+							"IMAGES/pro-img/pngfind.com-flat-screen-tv-png-3193976.webp"
 						],
 						"description1": "LG TV",
 						"description2": "",
@@ -4184,8 +4181,7 @@
 					"itemInfo": {
 						"name": "LG",
 						"itemImg": [
-							"IMAGES/pro-img/6501896_sd.webp",
-							"IMAGES/pro-img/6501902_bd.jpeg"
+							"IMAGES/pro-img/pngfind.com-flat-screen-tv-on-3513033.webp"
 						],
 						"description1": "LG TV",
 						"description2": "",
@@ -4317,7 +4313,7 @@
 			"id": "4929194",
 			"itemInfo": {
 				"name": "Hisense",
-				"itemImg": ["IMAGES/pro-img/vbioi.webp"],
+				"itemImg": ["IMAGES/pro-img/try8.webp"],
 				"description1": "Hisense TV",
 				"description2": "",
 				"newItemPrice": "928",
@@ -4462,17 +4458,17 @@
 			}
 		},
 		{
-			"id": "1129291",
+			"id": "4929324",
 			"itemInfo": {
-				"name": "Samsung",
-				"itemImg": ["IMAGES/pro-img/n92h.webp"],
-				"description1": "Samsung TV",
+				"name": "Hisense",
+				"itemImg": ["IMAGES/pro-img/try3.webp"],
+				"description1": "Hisense TV",
 				"description2": "",
-				"newItemPrice": "1600",
+				"newItemPrice": "928",
 				"oldItemPrice": "$544",
 				"itemTotal": "630",
-				"brand": "samsung",
-				"size": 43,
+				"brand": "hisense",
+				"size": 32,
 				"category": "TV",
 				"color": "🇺🇦",
 				"OS": "🫶🏼",

@@ -4,6 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="cart" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
 		<title>Shopping Cart</title>
 		<link rel="stylesheet" href="cart.css" />
 		<link rel="stylesheet" href="gemfonts.css" />
@@ -47,9 +52,9 @@
 						<div class="products">
 							<div class="main-links">
 								<a id="games" href="gemshop.html">Shop</a>
-								<a id="phones">Products</a>
-								<a id="coms">About Us</a>
-								<a id="spks">Contact Us</a>
+								<a href="#" id="phones">Products</a>
+								<a href="#" id="coms">About Us</a>
+								<a href="#" id="spks">Contact Us</a>
 							</div>
 						</div>
 					</nav>
@@ -57,18 +62,23 @@
 						<h1 class="logo" id="web-logo" onclick="goHome()">Geminis.</h1>
 					</div>
 					<div class="login-cart">
-						<div class="search-section search-web" onclick="openSearch()">
+						<div class="search-section search-web">
 							<input
 								type="search"
 								class="search"
 								name="search"
 								placeholder="Search..."
 								autocomplete="off"
-								disabled
+								onclick="openSearch()"
 							/>
 							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
 							<div class="serc-img">
-								<img src="IMAGES/search.png" alt="" srcset="" />
+								<img
+									src="IMAGES/search.png"
+									alt=""
+									srcset=""
+									onclick="openSearch()"
+								/>
 							</div>
 						</div>
 						<div class="cart-box" id="searc-cart" onclick="openSearch()">
@@ -77,6 +87,7 @@
 								id="mob-search-icon"
 								alt=""
 								srcset=""
+								onclick="openSearch()"
 							/>
 						</div>
 						<div class="cart-box" onclick="toCart()">
@@ -124,21 +135,21 @@
 							<h1>Sections</h1>
 							<div id="kk">
 								<a id="link" href="gemshop.html">Shop</a>
-								<a>Products</a>
-								<a>About Us</a>
-								<a>Contact Us</a>
+								<a href="#">Products</a>
+								<a href="#">About Us</a>
+								<a href="#">Contact Us</a>
 							</div>
 						</div>
 						<div class="menu-cat">
 							<h1>Support</h1>
 							<div id="kk">
-								<a>Visit Our Support</a>
-								<a>Online Support</a>
+								<a href="#">Visit Our Support</a>
+								<a href="#">Online Support</a>
 							</div>
 						</div>
 						<div class="menu-cat">
 							<div>
-								<a style="border: none; color: red">Logout</a>
+								<a href="#" style="border: none; color: red">Logout</a>
 							</div>
 						</div>
 					</div>
@@ -186,37 +197,7 @@
 				<section class="cart-full-details">
 					<div class="cart-orders">
 						<button class="clear-cart" onclick="clearCart()">Clear Cart</button>
-						<div class="orders-in-cart" id="orders-in-cart">
-							<!-- <div class="order">
-                            <img src="IMAGES/frontIpad.png" alt="">
-                            <div class="order-info">
-                                <div class="info">
-                                    <h1 class="item-name">iPhone 13 Pro Max</h1>
-                                    <h2 class="item-title">Apple - iPhone 13 Pro Max 5G 256GB - Sierra Blue</h2>
-                                    <h2>Color : <span> Space Grey</span></h2>
-                                </div>
-                                <div class="qty">
-                                    <h2>Quantity</h2>
-                                    <div class="quantity">
-                                        <button>-</button><input type="text" value="1"><button>+</button>
-                                    </div>
-                                </div>
-
-                                <div class="save-delete">
-                                    <h2>Save for later</h2>
-                                    <h2 class="delete">Delete</h2>
-                                </div>
-                            </div>
-                            <div class="item-price">
-                                <div class="item-price-total">
-                                    <span class="currency">$</span><span class="price">37</span>
-                                </div>
-                                <div class="item-price-calc">
-                                    <span>1</span><span>x</span><span><span>$</span>37</span>
-                                </div>
-                            </div>
-                        </div> -->
-						</div>
+						<div class="orders-in-cart" id="orders-in-cart"></div>
 					</div>
 					<div class="breakdown">
 						<div class="delivery">
@@ -226,7 +207,7 @@
 							</div>
 							<div class="dels2">
 								<p>Delivery by</p>
-								<h2>July 25th, 2022</h2>
+								<h2>September 24th, 2023</h2>
 							</div>
 						</div>
 						<div class="promo-code">
@@ -236,10 +217,6 @@
 							/>
 						</div>
 						<div class="breaking">
-							<!-- <div class="sub-total">
-                            <h1>Subtotal</h1>
-                            <h1><span>$</span><span id="cartsum2">1,024.99</span></h1>
-                        </div> -->
 							<div class="anyname">
 								<div class="dets discount">
 									<h2>Discount</h2>
@@ -280,9 +257,14 @@
 	<footer>
 		<h1>
 			Shop by
-			<a href="http://" target="_blank" rel="noopener noreferrer"
-				>jubril bolajoko</a
-			>
+			<a href="#" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
 		</h1>
 	</footer>
+	<button
+		id="backtotop"
+		aria-labelledby="button"
+		aria-label="button"
+		type="button"
+		onclick="backToTop()"
+	></button>
 </html>
