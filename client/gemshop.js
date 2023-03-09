@@ -135,11 +135,17 @@ let filterUIObjects = {
        </div>
        <div class="option minn">
 			<p class="applymm" id="applyminmax">APPLY</p>
-           <div class="mmdiv">
-               <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
-               <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
-           </div>
-       </div>
+            <div class="mmdiv">
+			<div class="inputContainer">
+				<span class="label">Min</span>
+				<input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+			</div>
+			<div class="inputContainer">
+				<span class="label">Max</span>
+				<input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			</div>
+            </div>
+        </div>
     </div>
     <div class="fil-box">
         <h1>Brand</h1><br>
@@ -222,8 +228,14 @@ let filterUIObjects = {
         <div class="option minn">
 			<p class="applymm" id="applyminmax">APPLY</p>
             <div class="mmdiv">
-                <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
-                <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			<div class="inputContainer">
+				<span class="label">Min</span>
+				<input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+			</div>
+			<div class="inputContainer">
+				<span class="label">Max</span>
+				<input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			</div>
             </div>
         </div>
     </div>
@@ -343,8 +355,14 @@ let filterUIObjects = {
         <div class="option minn">
 			<p class="applymm" id="applyminmax">APPLY</p>
             <div class="mmdiv">
-                <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
-                <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			<div class="inputContainer">
+				<span class="label">Min</span>
+				<input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+			</div>
+			<div class="inputContainer">
+				<span class="label">Max</span>
+				<input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			</div>
             </div>
         </div>
     </div>
@@ -393,11 +411,17 @@ let filterUIObjects = {
                 </label>
             </div>
         </div>
-        <div class="option minn">
+       <div class="option minn">
 			<p class="applymm" id="applyminmax">APPLY</p>
             <div class="mmdiv">
-                <input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
-                <input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			<div class="inputContainer">
+				<span class="label">Min</span>
+				<input type="text" class="minmax" name="" id="min" value="300" placeholder="Min">
+			</div>
+			<div class="inputContainer">
+				<span class="label">Max</span>
+				<input type="text" name="" class="minmax" id="max" value="5000" placeholder="Max">
+			</div>
             </div>
         </div>
     </div>

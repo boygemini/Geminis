@@ -405,47 +405,46 @@ const getCatFiltersAndSearchResults = async (Query, Category) => {
 		}
 	}
 
-	function Call(Query) {
-		if (Category) {
-			return getResults.suggestionsResult(Query, Category);
-		}
-		if (!Category) {
-			return getResults.searchBarResult(Query);
-		}
+	if (Category) {
+		return getResults.suggestionsResult(Query, Category);
+	}
+
+	function searchResults(Query) {
+		return getResults.searchBarResult(Query);
 	}
 
 	for (let i in gamekey) {
 		if (gamekey[i].toLowerCase().trim().includes(Query)) {
 			Gamings();
-			return Call(Query);
+			return searchResults(Query);
 		}
 	}
 
 	for (let i in phonekey) {
 		if (phonekey[i].toLowerCase().trim().includes(Query)) {
 			cellPhones();
-			return Call(Query);
+			return searchResults(Query);
 		}
 	}
 
 	for (let i in tvkey) {
 		if (tvkey[i].toLowerCase().trim().includes(Query)) {
 			TVs();
-			return Call(Query);
+			return searchResults(Query);
 		}
 	}
 
 	for (let i in speakerkey) {
 		if (speakerkey[i].toLowerCase().trim().includes(Query)) {
 			Speakers();
-			return Call(Query);
+			return searchResults(Query);
 		}
 	}
 
 	for (let i in comkey) {
 		if (comkey[i].toLowerCase().trim().includes(Query)) {
 			Computers();
-			return Call(Query);
+			return searchResults(Query);
 		}
 	}
 
