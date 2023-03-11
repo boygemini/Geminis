@@ -546,7 +546,7 @@ class display {
 			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id}>
 
 		<div class="img-con" id="main-con">
-				<div class="img-cont" data-src=${directory[k].itemInfo.itemImg[0]}>
+				<div class="img-cont" style="background-image: url(/assets/${directory[k].itemInfo.itemImg[0]});">
 
 				</div>
 				</div>
