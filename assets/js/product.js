@@ -68,14 +68,14 @@ let secondBigImg = document.getElementById("largeImage");
 const loadThumbnails = () => {
 	let thumbnails = Item.itemInfo.itemImg;
 	price.innerText = Item.itemInfo.newItemPrice;
-	firstBigImg.style.backgroundImage = `url(${Item.itemInfo.itemImg[0]})`;
+	firstBigImg.style.backgroundImage = `url("/assets/${Item.itemInfo.itemImg[0]}")`;
 	secondBigImg.src = Item.itemInfo.itemImg[0];
 
 	for (let i in thumbnails) {
 		document.getElementById(
 			"thumbnailPanel"
 		).innerHTML += `<div class="tbcon" onmouseover='changeMainThumbNail(event)' data-id="${i}" data-name=${thumbnails[i]}>
-		<div class="tbcon-in" onmouseover='changeMainThumbNail(event)' data-id="${i}" data-name=${thumbnails[i]} style='background-image:url(${thumbnails[i]})'></div>
+		<div class="tbcon-in" onmouseover='changeMainThumbNail(event)' data-id="${i}" data-name=${thumbnails[i]} style='background-image:url("/assets/${thumbnails[i]}")'></div>
 		</div>`;
 	}
 };
@@ -291,7 +291,7 @@ const indicateActiveThumbNail = (event) => {
 
 const changeMainThumbNail = (event) => {
 	largeImage.src = event.target.dataset.name;
-	firstBigImg.style.backgroundImage = `url(${event.target.dataset.name})`;
+	firstBigImg.style.backgroundImage = `url("/assets/${event.target.dataset.name}")`;
 	indicateActiveThumbNail(event);
 };
 
@@ -304,7 +304,7 @@ const fwd = () => {
 
 	counter++;
 	largeImage.src = imageArray[counter];
-	firstBigImg.style.backgroundImage = `url(${imageArray[counter]})`;
+	firstBigImg.style.backgroundImage = `url("/assets/${imageArray[counter]}")`;
 	thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter;
 	indicateActiveThumbNail(event);
 };
@@ -318,7 +318,7 @@ const bwd = () => {
 
 	counter--;
 	largeImage.src = imageArray[counter];
-	firstBigImg.style.backgroundImage = `url(${imageArray[counter]})`;
+	firstBigImg.style.backgroundImage = `url("/assets/${imageArray[counter]}")`;
 	thumbnailPanel.scrollLeft = thumbNails[0].clientWidth * counter;
 	indicateActiveThumbNail(event);
 };
