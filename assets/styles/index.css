@@ -598,7 +598,7 @@ nav ul li {
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
-	background: url("IMAGES/stackphone.png");
+	background: url("../images/stackphone.png");
 	background-size: cover;
 	background-position: center;
 	transition: all 0.3s ease-in-out;
@@ -616,31 +616,31 @@ nav ul li {
 }
 
 .hol1 {
-	/* background: url('IMAGES/game.jpg'); */
+	/* background: url('"../images/game.jpg'); "*/
 	background-size: cover;
 	background-position: center;
 }
 
 .hol2 {
-	/* background: url('IMAGES/cell.jpg'); */
+	/* background: url('"../images/cell.jpg'); "*/
 	background-size: cover;
 	background-position: center;
 }
 
 .hol3 {
-	/* background: url('IMAGES/wiin.jpg'); */
+	/* background: url('"../images/wiin.jpg'); "*/
 	background-size: cover;
 	background-position: center;
 }
 
 .hol4 {
-	/* background: url('IMAGES/speak.jpg'); */
+	/* background: url('"../images/speak.jpg'); "*/
 	background-size: cover;
 	background-position: center;
 }
 
 .hol5 {
-	/* background: url('IMAGES/tele.jpg'); */
+	/* background: url('"../images/tele.jpg'); "*/
 	background-size: cover;
 	background-position: center;
 }
@@ -707,10 +707,6 @@ nav ul li {
 	height: 50px;
 	border: none;
 	border-radius: 3px;
-	-webkit-border-radius: ;
-	-moz-border-radius: ;
-	-ms-border-radius: ;
-	-o-border-radius: ;
 	font-weight: 500;
 	color: #111111;
 	justify-self: flex-end;
@@ -740,7 +736,7 @@ nav ul li {
 
 	grid-row-end: 3;
 	grid-column-end: 2; */
-	background-image: url(IMAGES/spekk-big.jpg);
+	background-image: url("../images/spekk-big.jpg");
 }
 #grid-1 {
 	background-color: #77e7b7;
@@ -749,7 +745,7 @@ nav ul li {
 
 	grid-row-end: 3;
 	grid-column-end: 4; */
-	background-image: url(IMAGES/lapp-big-3.jpg);
+	background-image: url("../images/lapp-big-3.jpg");
 }
 #grid-2 {
 	background-color: #7e5e7f;
@@ -758,7 +754,7 @@ nav ul li {
 
 	grid-row-end: 3;
 	grid-column-end: 5; */
-	background-image: url(IMAGES/cell-big2.jpg);
+	background-image: url("../images/cell-big2.jpg");
 }
 #grid-3 {
 	background-color: #a695bb;
@@ -767,7 +763,7 @@ nav ul li {
 
 	grid-row-end: 2;
 	grid-column-end: 5; */
-	background-image: url(IMAGES/tvv.webp);
+	background-image: url("../images/tvv.webp");
 }
 #grid-4 {
 	background-color: #95bba9;
@@ -776,7 +772,7 @@ nav ul li {
 
 	grid-row-end: 2;
 	grid-column-end: 3; */
-	background-image: url(IMAGES/gamme.png);
+	background-image: url("../images/gamme.png");
 }
 
 .grid {
@@ -940,35 +936,35 @@ nav ul li {
 }
 
 .bimg1 {
-	background-image: url("IMAGES/apple-logo.png");
+	background-image: url("../images/apple-logo.png");
 }
 
 .bimg2 {
-	background-image: url("IMAGES/samsung-logo.png");
+	background-image: url("../images/samsung-logo.png");
 }
 
 .bimg3 {
-	background-image: url("IMAGES/hp-logo.png");
+	background-image: url("../images/hp-logo.png");
 }
 
 .bimg4 {
-	background-image: url("IMAGES/midea-logo.png");
+	background-image: url("../images/midea-logo.png");
 }
 
 .bimg5 {
-	background-image: url("IMAGES/lg-logo.png");
+	background-image: url("../images/lg-logo.png");
 }
 
 .bimg6 {
-	background-image: url("IMAGES/hisense-logo.png");
+	background-image: url("../images/hisense-logo.png");
 }
 
 .bimg7 {
-	background-image: url("IMAGES/toshiba-logo.png");
+	background-image: url("../images/toshiba-logo.png");
 }
 
 .bimg8 {
-	background-image: url("IMAGES/xbox-logo.png");
+	background-image: url("../images/xbox-logo.png");
 }
 
 .extra-brand {
@@ -1290,7 +1286,7 @@ nav ul li {
 	width: 100%;
 	height: 400px;
 	border-radius: 3px;
-	background-image: url(IMAGES/hm.png);
+	background-image: url("../images/hm.png");
 	background-position: right;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -1479,10 +1475,6 @@ nav ul li {
 	color: #111111;
 }
 
-.sel {
-	/* background-color: #111111; */
-	/* width: 50%; */
-}
 
 .sel-table ul {
 	display: flex;
@@ -1631,7 +1623,7 @@ nav ul li {
 	max-height: 300px;
 }
 
-#wk-con {
+/* #wk-con {
 	background-color: ;
 }
 
@@ -1641,7 +1633,7 @@ nav ul li {
 
 #rec-con {
 	background-color: ;
-}
+} */
 
 .img-cont {
 	width: 100%;
@@ -2688,7 +2680,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(IMAGES/search.png);
+		/* background-image: url("../images/search.png");
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */
@@ -3164,7 +3156,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(IMAGES/search.png);
+		/* background-image: url("../images/search.png");
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */

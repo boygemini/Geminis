@@ -9,7 +9,7 @@
 
 // GO TO SHOP BUTTON
 const shopNow = () => {
-	window.location = "gemshop.html";
+	window.location = "shop.html";
 };
 
 // GRIDS

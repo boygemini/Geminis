@@ -408,7 +408,7 @@ body {
 	-moz-border-radius: 100%;
 	-ms-border-radius: 100%;
 	-o-border-radius: 100%;
-	background-image: url(IMAGES/go-up.png);
+	background-image: url("../images/go-up.png");
 	background-position: center;
 	background-size: 55%;
 	background-repeat: no-repeat;

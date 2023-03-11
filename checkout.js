@@ -79,7 +79,7 @@ const markComplete = (step) => {
 	completionCircles[step].classList.remove("next-stage");
 	completionCircles[step].className += " completed";
 	completionCircles[step].innerHTML =
-		"<img class='check-image' src='IMAGES/check-mark.png'></img>";
+		"<img class='check-image' src='./assets/images/check-mark.png'></img>";
 };
 
 const unMarkComplete = (step) => {
@@ -229,7 +229,7 @@ const confirmPayment = async (elements, _stripe) => {
 		prevFormButton.style.display = "none";
 
 		continueButton.addEventListener("click", (e) => {
-			window.location.href = "gemshop.html";
+			window.location.href = "shop.html";
 		});
 
 		if (lastPage.pathname === "/product.html") {
@@ -412,7 +412,7 @@ if (itemsInCart === null) {
 	continueButton.innerText = "Go to Shop";
 	continueShoppingBtn.style.display = "none";
 	continueButton.addEventListener("click", (e) => {
-		window.location.href = "gemshop.html";
+		window.location.href = "shop.html";
 	});
 	// prevFormButton.style.display = "none";
 }
@@ -420,7 +420,7 @@ if (itemsInCart === null) {
 let x = "";
 if (itemsInCart !== null) {
 	continueShoppingBtn.addEventListener("click", (e) => {
-		window.location.href = "gemshop.html";
+		window.location.href = "shop.html";
 	});
 
 	try {

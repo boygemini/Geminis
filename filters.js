@@ -152,7 +152,7 @@ const createUrl = (category) => {
 		radio = "",
 		searchQuery = "",
 		page = "";
-	let currentUrl = "gemshop.html";
+	let currentUrl = "shop.html";
 	let url = `${currentUrl}?category=${category}&Order=${
 		Parameters.Order
 	}&Page=${Parameters.Page.toString()}`;

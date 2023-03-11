@@ -224,7 +224,7 @@
 
 /* Hero */
 .hero {
-    /* background-image: url('/IMAGES/li-lin-P5xn4DBeA3A-unsplash.jpg'); */
+    /* background-image: url('/./assets/images/li-lin-P5xn4DBeA3A-unsplash.jpg'); */
     height: 95vh;
     width: 90%;
     background-position: center;
@@ -362,31 +362,31 @@
 } */
 
 #imm1 {
-    background: url('/IMAGES/gabriel-beaudry-5X5dCf4Pp44-unsplash.jpg');
+    background: url('/./assets/images/gabriel-beaudry-5X5dCf4Pp44-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }
 
 #imm2 {
-    background: url('/IMAGES/hector-martinez-EG49vTtKdvI-unsplash.jpg');
+    background: url('/./assets/images/hector-martinez-EG49vTtKdvI-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }
 
 #imm3 {
-    background: url('/IMAGES/li-lin-P5xn4DBeA3A-unsplash.jpg');
+    background: url('/./assets/images/li-lin-P5xn4DBeA3A-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }
 
 #imm4 {
-    background: url('/IMAGES/sigmund-8zfhRkrs2xU-unsplash.jpg');
+    background: url('/./assets/images/sigmund-8zfhRkrs2xU-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }
 
 #imm5 {
-    background: url('/IMAGES/giorgio-trovato-8krX0HkXw8c-unsplash.jpg');
+    background: url('/./assets/images/giorgio-trovato-8krX0HkXw8c-unsplash.jpg');
     background-position: center;
     background-size: cover;
 }

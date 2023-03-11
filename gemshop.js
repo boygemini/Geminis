@@ -1142,7 +1142,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		Gamings();
 		emptyParameters();
-		window.location = "gemshop.html?category=gaming&Order=Random&Page=0";
+		window.location = "shop.html?category=gaming&Order=Random&Page=0";
 	})
 );
 
@@ -1150,7 +1150,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		cellPhones();
 		emptyParameters();
-		window.location = "gemshop.html?category=cellphones&Order=Random&Page=0";
+		window.location = "shop.html?category=cellphones&Order=Random&Page=0";
 	})
 );
 
@@ -1158,7 +1158,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		Computers();
 		emptyParameters();
-		window.location = "gemshop.html?category=computers&Order=Random&Page=0";
+		window.location = "shop.html?category=computers&Order=Random&Page=0";
 	})
 );
 
@@ -1166,7 +1166,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		Speakers();
 		emptyParameters();
-		window.location = "gemshop.html?category=speakers&Order=Random&Page=0";
+		window.location = "shop.html?category=speakers&Order=Random&Page=0";
 	})
 );
 
@@ -1174,7 +1174,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		TVs();
 		emptyParameters();
-		window.location = "gemshop.html?category=tv&Order=Random&Page=0";
+		window.location = "shop.html?category=tv&Order=Random&Page=0";
 	})
 );
 

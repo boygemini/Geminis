@@ -88,7 +88,7 @@ setInterval(startSlide, 9000);
 
 
 const shopNow = () => {
-  window.location = "gemshop.html";
+  window.location = "shop.html";
 };
 
 
@@ -249,7 +249,7 @@ class displayProduct {
 				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
+			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/./assets/images/add-to-cart.png" alt="" data-id=${category[i].id} data-category =${sub} onclick = "addToCart(event,Storage.getAllProducts().selectedProducts[0])"></button>
 		    </div>
 		</div>
 	 </div>`;
@@ -283,7 +283,7 @@ class displayProduct {
 				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
+			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/./assets/images/add-to-cart.png" alt="" data-id= ${category[i].id} data-category= "${sub}" onclick= "addToCartt(event,Storage.getAllProducts().recentlyAdded)"></button>
 		    </div>
 		</div>
 	 </div>`;
@@ -312,7 +312,7 @@ class displayProduct {
 				  <span class="price"><span class="currency" id="currency">$</span>${category[i].itemInfo.newItemPrice}</span>
 				  <span class="old-price price">${category[i].itemInfo.oldItemPrice}</span>
 			   </span>
-			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/IMAGES/add-to-cart.png" alt="" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"></button>
+			   <button id="cart-btn" class="cart-btn" ><img id="addto-cart-img" src="/./assets/images/add-to-cart.png" alt="" data-id= ${category[i].id} data-category="${sub}" onclick= "addToCartt(event,Storage.getAllProducts().WeeklyFeatured)"></button>
 		    </div>
 		</div>
 	 </div>`;

@@ -17,7 +17,7 @@ let Message = document.getElementById("message");
 
 // Button links
 const toShop = () => {
-	window.location.href = "gemshop.html";
+	window.location.href = "shop.html";
 };
 
 const goHome = () => {
