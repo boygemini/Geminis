@@ -1,6 +1,7 @@
 "use strict";
+import allProducts from './product.json'
 
-const showPreloader = (bool) => {
+export const showPreloader = (bool) => {
 	let pre = document.querySelectorAll(".pre");
 	let mainContent = [
 		...document.querySelectorAll("#main-content"),
@@ -462,33 +463,35 @@ let filterUIObjects = {
 	},
 };
 
-let showBox = document.getElementById("showbox");
-let gamingBox = document.getElementById("gaming"),
-	cellPhoneBox = document.getElementById("cellphones"),
-	computerBox = document.getElementById("computer"),
-	speakersBox = document.getElementById("speakers"),
-	tvsBox = document.getElementById("TV");
-let currentItemsOnDisplay;
+// let showBox = document.getElementById("showbox");
+// let gamingBox = document.getElementById("gaming"),
+// 	cellPhoneBox = document.getElementById("cellphones"),
+// 	computerBox = document.getElementById("computer"),
+// 	speakersBox = document.getElementById("speakers"),
+// 	tvsBox = document.getElementById("TV");
+// let currentItemsOnDisplay;
 
 class Products {
 	//LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
 	static saveItems() {
 		return new Promise((resolve, reject) => {
-			resolve(
-				fetch("product.json", {
-					method: "GET",
-					headers: {
-						"Content-Type": "application/json",
-					},
-				})
-					.then((response) => {
-						return response.json();
-					})
-					.then((products) => {
-						localStorage.setItem("StoreItems", JSON.stringify(products));
-						return products;
-					})
-			);
+			localStorage.setItem("StoreItems", JSON.stringify(allProducts));
+			resolve(allProducts)
+			// resolve(
+			// 	fetch("product.json", {
+			// 		method: "GET",
+			// 		headers: {
+			// 			"Content-Type": "application/json",
+			// 		},
+			// 	})
+			// 		.then((response) => {
+			// 			return response.json();
+			// 		})
+			// 		.then((products) => {
+			// 			localStorage.setItem("StoreItems", JSON.stringify(products));
+			// 			return products;
+			// 		})
+			// );
 		});
 	}
 
@@ -1111,8 +1114,9 @@ switch (urlCategory) {
 		break;
 }
 
-let allDefaultCategories = document.querySelectorAll(".full-cat");
-const indicateLoadingWhileAwaitingResults = (awaiting) => {
+
+export const indicateLoadingWhileAwaitingResults = (awaiting) => {
+	let allDefaultCategories = document.querySelectorAll(".full-cat");
 	if (awaiting) {
 		allDefaultCategories.forEach((category) => {
 			category.style.display = "none";

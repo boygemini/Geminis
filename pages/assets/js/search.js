@@ -1,22 +1,27 @@
 "use strict";
+import products from './product.json';
+import {indicateLoadingWhileAwaitingResults, showPreloader} from './shop';
+import {filter} from './filters';
 
 const allProducts = () => {
 	return new Promise((resolve, reject) => {
-		resolve(
-			fetch("product.json", {
-				method: "GET",
-				headers: {
-					"Content-Type": "application/json",
-				},
-			})
-				.then((response) => {
-					return response.json();
-				})
-				.then((products) => {
-					localStorage.setItem("StoreItems", JSON.stringify(products));
-					return products;
-				})
-		);
+		localStorage.setItem("StoreItems", JSON.stringify(products));
+		resolve(products)
+		// resolve(
+		// 	fetch("product.json", {
+		// 		method: "GET",
+		// 		headers: {
+		// 			"Content-Type": "application/json",
+		// 		},
+		// 	})
+		// 		.then((response) => {
+		// 			return response.json();
+		// 		})
+		// 		.then((products) => {
+		// 			localStorage.setItem("StoreItems", JSON.stringify(products));
+		// 			return products;
+		// 		})
+		// );
 	});
 };
 
@@ -25,6 +30,16 @@ let hs = document.getElementById("hold");
 let search = document.getElementById("search");
 let go = document.getElementById("GO");
 let displaybox = document.querySelector(".sug-holder");
+let showBox = document.getElementById("showbox");
+
+let priceFromUrl,
+	brandFromUrl,
+	ramFromUrl,
+	romFromUrl,
+	memoryFromUrl,
+	screenFromUrl,
+	sizeFromUrl,
+	pageFromUrl
 
 const showSuggesttions = async (event) => {
 	let dir = await allProducts();
