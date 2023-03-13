@@ -3,8 +3,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  root: './pages',
+  root: './src',
   publicDir:'assets',
-  
 //   base: '/static',
 })
