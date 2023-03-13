@@ -279,7 +279,7 @@ class displayItems {
 				category[i].id
 			} aria-label="visit product">
 			<div id="img-cont"
-			style='background-image:url(${category[i].itemInfo.itemImg[0]})' alt=""  >
+			style='background-image:url("/assets/${category[i].itemInfo.itemImg[0]}")' alt=""  >
 			</div>
 		</a>
 

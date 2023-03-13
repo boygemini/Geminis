@@ -293,7 +293,7 @@ const displaySearchResults = (directory, Query) => {
 			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id} >
 
 		<div class="img-con" id="main-con">
-				<div class="img-cont" data-src=${directory[k].itemInfo.itemImg[0]}>
+				<div class="img-cont" data-src="${directory[k].itemInfo.itemImg[0]}" style="background-image: url('/assets/${directory[k].itemInfo.itemImg[0]}')">
 
 				</div>
 				</div>
@@ -342,7 +342,7 @@ const displayFilteredResults = (results, category) => {
 			<a href="product.html?item=${results[k].id}" class="sell-box sel-box" data-id=${results[k].id} >
 
 		<div class="img-con" id="main-con">
-				<div class="img-cont" data-src=${results[k].itemInfo.itemImg[0]}>
+				<div class="img-cont" data-src=${results[k].itemInfo.itemImg[0]} style="background-image: url('/assets/${results[k].itemInfo.itemImg[0]}')">
 
 				</div>
 				</div>
@@ -604,7 +604,7 @@ const imageObserver = () => {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting) {
 							let image = entry.target;
-							image.style.backgroundImage = `url(${image.dataset.src})`;
+							image.style.backgroundImage = `url("/assets/${image.dataset.src}")`;
 							observer.unobserve(image);
 						}
 					});
