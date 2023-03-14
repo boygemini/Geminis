@@ -1,4 +1,5 @@
 "use strict";
+import products from './product.json';
 
 // PAGE FADE-IN ON LOAD
 (() => {
@@ -44,6 +45,7 @@ class Products {
 	// LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
 	static selectedForYou() {
 		return new Promise((resolve, reject) => {
+<<<<<<< HEAD
 			resolve(
 				fetch("../product.json", {
 					method: "GET",
@@ -59,6 +61,25 @@ class Products {
 						return products;
 					})
 			);
+=======
+			localStorage.setItem("StoreItems", JSON.stringify(products));
+			resolve(products)
+			// resolve(
+			// 	fetch("product.json", {
+			// 		method: "GET",
+			// 		headers: {
+			// 			"Content-Type": "application/json",
+			// 		},
+			// 	})
+			// 		.then((response) => {
+			// 			return response.json();
+			// 		})
+			// 		.then((products) => {
+			// 			localStorage.setItem("StoreItems", JSON.stringify(products));
+			// 			return products;
+			// 		})
+			// );
+>>>>>>> origin/gh-pages
 		});
 	}
 

@@ -79,7 +79,11 @@ const markComplete = (step) => {
 	completionCircles[step].classList.remove("next-stage");
 	completionCircles[step].className += " completed";
 	completionCircles[step].innerHTML =
+<<<<<<< HEAD
 		"<img class='check-image' src='assets/images/check-mark.png'></img>";
+=======
+		"<img class='check-image' src='./assets/images/check-mark.png'></img>";
+>>>>>>> origin/gh-pages
 };
 
 const unMarkComplete = (step) => {
@@ -257,8 +261,13 @@ const loadPaymentElement = async (e) => {
 			totalItemPrice: totalItemPrice,
 		}),
 	}).then((r) => r.json());
+	let elements;
+	try{
 
-	const elements = await stripe.elements({ clientSecret });
+		elements = await stripe.elements({ clientSecret });
+	}catch (err){
+		console.error(err);
+	}
 	const paymentElement = elements.create("payment");
 	paymentElement.mount("#payment-element");
 	formContainer.style.height = "auto";
@@ -434,7 +443,7 @@ if (itemsInCart !== null) {
 		x += `<li>
 			<div class="iitem">
 				<span class='itemamount'>${item.amount} x</span>
-				<img src=${item.itemInfo.itemImg[0]} alt="" /><span
+				<img src="/assets/${item.itemInfo.itemImg[0]}" alt="" /><span
 					class="item-name"
 					>${item.itemInfo.name}</span
 				>

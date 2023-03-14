@@ -2696,7 +2696,11 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
+<<<<<<< HEAD
 		/* background-image: url(../images/search.png);
+=======
+		/* background-image: url(./assets/images/search.png);
+>>>>>>> origin/gh-pages
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */
@@ -2928,7 +2932,11 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
+<<<<<<< HEAD
 		/* background-image: url(../images/search.png);
+=======
+		/* background-image: url(./assets/images/search.png);
+>>>>>>> origin/gh-pages
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */

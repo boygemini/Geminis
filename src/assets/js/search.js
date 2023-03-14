@@ -1,7 +1,11 @@
 "use strict";
+import products from './product.json';
+import {indicateLoadingWhileAwaitingResults, showPreloader} from './shop';
+import {filter} from './filters';
 
 const allProducts = () => {
 	return new Promise((resolve, reject) => {
+<<<<<<< HEAD
 		resolve(
 			fetch("../product.json", {
 				method: "GET",
@@ -17,6 +21,25 @@ const allProducts = () => {
 					return products;
 				})
 		);
+=======
+		localStorage.setItem("StoreItems", JSON.stringify(products));
+		resolve(products)
+		// resolve(
+		// 	fetch("product.json", {
+		// 		method: "GET",
+		// 		headers: {
+		// 			"Content-Type": "application/json",
+		// 		},
+		// 	})
+		// 		.then((response) => {
+		// 			return response.json();
+		// 		})
+		// 		.then((products) => {
+		// 			localStorage.setItem("StoreItems", JSON.stringify(products));
+		// 			return products;
+		// 		})
+		// );
+>>>>>>> origin/gh-pages
 	});
 };
 
@@ -25,6 +48,16 @@ let hs = document.getElementById("hold");
 let search = document.getElementById("search");
 let go = document.getElementById("GO");
 let displaybox = document.querySelector(".sug-holder");
+let showBox = document.getElementById("showbox");
+
+let priceFromUrl,
+	brandFromUrl,
+	ramFromUrl,
+	romFromUrl,
+	memoryFromUrl,
+	screenFromUrl,
+	sizeFromUrl,
+	pageFromUrl
 
 const showSuggesttions = async (event) => {
 	let dir = await allProducts();
@@ -101,7 +134,11 @@ search.addEventListener("input", async (event) => {
 		x += `
 		<div class="sug" onclick="sendQuery(event)">
 			<h1 id="sug-h1" onclick="sugClicked(event)">${suggestion[0]}</h1>
+<<<<<<< HEAD
 			<img src="assets/images/thinarrow.png"/>
+=======
+			<img src="./assets/images/thinarrow.png"/>
+>>>>>>> origin/gh-pages
 			<h1 class="category" id="sug-cat" disabled>${suggestion[1]}</h1>
 		</div>
 		`;
@@ -293,7 +330,7 @@ const displaySearchResults = (directory, Query) => {
 			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id} >
 
 		<div class="img-con" id="main-con">
-				<div class="img-cont" data-src=${directory[k].itemInfo.itemImg[0]}>
+				<div class="img-cont" data-src="${directory[k].itemInfo.itemImg[0]}" style="background-image: url('/assets/${directory[k].itemInfo.itemImg[0]}')">
 
 				</div>
 				</div>
@@ -342,7 +379,7 @@ const displayFilteredResults = (results, category) => {
 			<a href="product.html?item=${results[k].id}" class="sell-box sel-box" data-id=${results[k].id} >
 
 		<div class="img-con" id="main-con">
-				<div class="img-cont" data-src=${results[k].itemInfo.itemImg[0]}>
+				<div class="img-cont" data-src=${results[k].itemInfo.itemImg[0]} style="background-image: url('/assets/${results[k].itemInfo.itemImg[0]}')">
 
 				</div>
 				</div>
@@ -604,7 +641,7 @@ const imageObserver = () => {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting) {
 							let image = entry.target;
-							image.style.backgroundImage = `url(${image.dataset.src})`;
+							image.style.backgroundImage = `url("/assets/${image.dataset.src}")`;
 							observer.unobserve(image);
 						}
 					});

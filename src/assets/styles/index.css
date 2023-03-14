@@ -616,31 +616,51 @@ nav ul li {
 }
 
 .hol1 {
+<<<<<<< HEAD
 	/* background: url('../images/game.jpg'); */
+=======
+	/* background: url('"../images/game.jpg'); "*/
+>>>>>>> origin/gh-pages
 	background-size: cover;
 	background-position: center;
 }
 
 .hol2 {
+<<<<<<< HEAD
 	/* background: url('../images/cell.jpg'); */
+=======
+	/* background: url('"../images/cell.jpg'); "*/
+>>>>>>> origin/gh-pages
 	background-size: cover;
 	background-position: center;
 }
 
 .hol3 {
+<<<<<<< HEAD
 	/* background: url('../images/wiin.jpg'); */
+=======
+	/* background: url('"../images/wiin.jpg'); "*/
+>>>>>>> origin/gh-pages
 	background-size: cover;
 	background-position: center;
 }
 
 .hol4 {
+<<<<<<< HEAD
 	/* background: url('../images/speak.jpg'); */
+=======
+	/* background: url('"../images/speak.jpg'); "*/
+>>>>>>> origin/gh-pages
 	background-size: cover;
 	background-position: center;
 }
 
 .hol5 {
+<<<<<<< HEAD
 	/* background: url('../images/tele.jpg'); */
+=======
+	/* background: url('"../images/tele.jpg'); "*/
+>>>>>>> origin/gh-pages
 	background-size: cover;
 	background-position: center;
 }
@@ -707,10 +727,6 @@ nav ul li {
 	height: 50px;
 	border: none;
 	border-radius: 3px;
-	-webkit-border-radius: ;
-	-moz-border-radius: ;
-	-ms-border-radius: ;
-	-o-border-radius: ;
 	font-weight: 500;
 	color: #111111;
 	justify-self: flex-end;
@@ -740,7 +756,11 @@ nav ul li {
 
 	grid-row-end: 3;
 	grid-column-end: 2; */
+<<<<<<< HEAD
 	background-image: url(../images/spekk-big.jpg);
+=======
+	background-image: url("../images/spekk-big.jpg");
+>>>>>>> origin/gh-pages
 }
 #grid-1 {
 	background-color: #77e7b7;
@@ -749,7 +769,11 @@ nav ul li {
 
 	grid-row-end: 3;
 	grid-column-end: 4; */
+<<<<<<< HEAD
 	background-image: url(../images/lapp-big-3.jpg);
+=======
+	background-image: url("../images/lapp-big-3.jpg");
+>>>>>>> origin/gh-pages
 }
 #grid-2 {
 	background-color: #7e5e7f;
@@ -758,7 +782,11 @@ nav ul li {
 
 	grid-row-end: 3;
 	grid-column-end: 5; */
+<<<<<<< HEAD
 	background-image: url(../images/cell-big2.jpg);
+=======
+	background-image: url("../images/cell-big2.jpg");
+>>>>>>> origin/gh-pages
 }
 #grid-3 {
 	background-color: #a695bb;
@@ -767,7 +795,11 @@ nav ul li {
 
 	grid-row-end: 2;
 	grid-column-end: 5; */
+<<<<<<< HEAD
 	background-image: url(../images/tvv.webp);
+=======
+	background-image: url("../images/tvv.webp");
+>>>>>>> origin/gh-pages
 }
 #grid-4 {
 	background-color: #95bba9;
@@ -776,7 +808,11 @@ nav ul li {
 
 	grid-row-end: 2;
 	grid-column-end: 3; */
+<<<<<<< HEAD
 	background-image: url(../images/gamme.png);
+=======
+	background-image: url("../images/gamme.png");
+>>>>>>> origin/gh-pages
 }
 
 .grid {
@@ -1290,7 +1326,11 @@ nav ul li {
 	width: 100%;
 	height: 400px;
 	border-radius: 3px;
+<<<<<<< HEAD
 	background-image: url(../images/hm.png);
+=======
+	background-image: url("../images/hm.png");
+>>>>>>> origin/gh-pages
 	background-position: right;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -1479,10 +1519,6 @@ nav ul li {
 	color: #111111;
 }
 
-.sel {
-	/* background-color: #111111; */
-	/* width: 50%; */
-}
 
 .sel-table ul {
 	display: flex;
@@ -1631,7 +1667,7 @@ nav ul li {
 	max-height: 300px;
 }
 
-#wk-con {
+/* #wk-con {
 	background-color: ;
 }
 
@@ -1641,7 +1677,7 @@ nav ul li {
 
 #rec-con {
 	background-color: ;
-}
+} */
 
 .img-cont {
 	width: 100%;
@@ -2688,7 +2724,11 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
+<<<<<<< HEAD
 		/* background-image: url(../images/search.png);
+=======
+		/* background-image: url("../images/search.png");
+>>>>>>> origin/gh-pages
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */
@@ -3164,7 +3204,11 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
+<<<<<<< HEAD
 		/* background-image: url(../images/search.png);
+=======
+		/* background-image: url("../images/search.png");
+>>>>>>> origin/gh-pages
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */
