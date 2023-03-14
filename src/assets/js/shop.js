@@ -1,7 +1,6 @@
 "use strict";
-import allProducts from './product.json'
 
-export const showPreloader = (bool) => {
+const showPreloader = (bool) => {
 	let pre = document.querySelectorAll(".pre");
 	let mainContent = [
 		...document.querySelectorAll("#main-content"),
@@ -463,19 +462,18 @@ let filterUIObjects = {
 	},
 };
 
-// let showBox = document.getElementById("showbox");
-// let gamingBox = document.getElementById("gaming"),
-// 	cellPhoneBox = document.getElementById("cellphones"),
-// 	computerBox = document.getElementById("computer"),
-// 	speakersBox = document.getElementById("speakers"),
-// 	tvsBox = document.getElementById("TV");
-// let currentItemsOnDisplay;
+let showBox = document.getElementById("showbox");
+let gamingBox = document.getElementById("gaming"),
+	cellPhoneBox = document.getElementById("cellphones"),
+	computerBox = document.getElementById("computer"),
+	speakersBox = document.getElementById("speakers"),
+	tvsBox = document.getElementById("TV");
+let currentItemsOnDisplay;
 
 class Products {
 	//LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
 	static saveItems() {
 		return new Promise((resolve, reject) => {
-<<<<<<< HEAD
 			resolve(
 				fetch("../product.json", {
 					method: "GET",
@@ -491,25 +489,6 @@ class Products {
 						return products;
 					})
 			);
-=======
-			localStorage.setItem("StoreItems", JSON.stringify(allProducts));
-			resolve(allProducts)
-			// resolve(
-			// 	fetch("product.json", {
-			// 		method: "GET",
-			// 		headers: {
-			// 			"Content-Type": "application/json",
-			// 		},
-			// 	})
-			// 		.then((response) => {
-			// 			return response.json();
-			// 		})
-			// 		.then((products) => {
-			// 			localStorage.setItem("StoreItems", JSON.stringify(products));
-			// 			return products;
-			// 		})
-			// );
->>>>>>> origin/gh-pages
 		});
 	}
 
@@ -567,7 +546,7 @@ class display {
 			<a href="product.html?item=${directory[k].id}" class="sell-box sel-box" data-id=${directory[k].id}>
 
 		<div class="img-con" id="main-con">
-				<div class="img-cont" style="background-image: url(/assets/${directory[k].itemInfo.itemImg[0]});">
+				<div class="img-cont" data-src=${directory[k].itemInfo.itemImg[0]}>
 
 				</div>
 				</div>
@@ -1115,9 +1094,8 @@ switch (urlCategory) {
 		break;
 }
 
-
-export const indicateLoadingWhileAwaitingResults = (awaiting) => {
-	let allDefaultCategories = document.querySelectorAll(".full-cat");
+let allDefaultCategories = document.querySelectorAll(".full-cat");
+const indicateLoadingWhileAwaitingResults = (awaiting) => {
 	if (awaiting) {
 		allDefaultCategories.forEach((category) => {
 			category.style.display = "none";

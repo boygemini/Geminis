@@ -223,7 +223,7 @@ const createUrl = (category) => {
 };
 
 // FILTER CLASS
-export class filter {
+class filter {
 	// EVENT TRIGGERED IF PRICE WAS SET
 	static price(event, category, low, high) {
 		// EVENT TRIGGERED WHEN A BOX IS CHECKED
