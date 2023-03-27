@@ -3109,4 +3109,8 @@ footer {
 	#res-sort {
 		padding: 0;
 	}
+
+	.noresult {
+		margin-top: 3rem;
+	}
 }
