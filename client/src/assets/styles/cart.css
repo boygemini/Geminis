@@ -517,15 +517,14 @@ nav ul li {
 }
 
 .boxmodal {
-	min-width: 100vw;
-	min-height: 100vh;
+	width: 100%;
+	height: 100%;
 	position: fixed;
-	top: 0;
 	display: none;
 	justify-content: center;
 	align-items: center;
 	background-color: #090a0a1b;
-	z-index: 873289339743813927487;
+	z-index: 94930949;
 }
 
 .askdiv {
@@ -1610,7 +1609,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(IMAGES/search.png);
+		/* background-image: url(../images/search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */
@@ -1856,7 +1855,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(IMAGES/search.png);
+		/* background-image: url(../images/search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */

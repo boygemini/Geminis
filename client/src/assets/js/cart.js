@@ -17,7 +17,7 @@ let Message = document.getElementById("message");
 
 // Button links
 const toShop = () => {
-	window.location.href = "gemshop.html";
+	window.location.href = "shop.html";
 };
 
 const goHome = () => {
@@ -268,6 +268,8 @@ class displayItems {
 					return Number(i) + 1;
 				}
 			};
+
+			console.log(category[i].itemInfo.itemImg[0]);
 
 			itemCreated += `<div class="order">
       <h1 class = "numbering">${displayNumbering()}</h1>

@@ -3,7 +3,7 @@
 const allProducts = () => {
 	return new Promise((resolve, reject) => {
 		resolve(
-			fetch("product.json", {
+			fetch("../product.json", {
 				method: "GET",
 				headers: {
 					"Content-Type": "application/json",
@@ -101,7 +101,7 @@ search.addEventListener("input", async (event) => {
 		x += `
 		<div class="sug" onclick="sendQuery(event)">
 			<h1 id="sug-h1" onclick="sugClicked(event)">${suggestion[0]}</h1>
-			<img src="IMAGES/thinarrow.png"/>
+			<img src="assets/images/thinarrow.png"/>
 			<h1 class="category" id="sug-cat" disabled>${suggestion[1]}</h1>
 		</div>
 		`;
@@ -118,14 +118,14 @@ search.addEventListener("keydown", (e) => {
 
 const sendQueryGO = (event) => {
 	let query = search.value.toLowerCase();
-	let url = `gemshop.html?SearchQuery=${encodeURIComponent(
+	let url = `shop.html?SearchQuery=${encodeURIComponent(
 		query
 	)}&Order=Random&Page=0`;
 	window.location.href = url;
 };
 
 const makeUrl = (query, queryCategory) => {
-	let url = `gemshop.html?category=${encodeURIComponent(
+	let url = `shop.html?category=${encodeURIComponent(
 		queryCategory
 	)}&SearchQuery=${encodeURIComponent(query)}&Order=Random&Page=0`;
 	return (window.location.href = url);
@@ -232,7 +232,7 @@ class getResults {
 		showBox.innerHTML = `<div class="noresult">
 			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> Oops, there are no results for  "${Query}" </h1><p>Try checking your spelling or use more general terms</p></div>
 			<span>Go back to</span>
-			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
+			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="shop.html" class='backtoshop'>Shop</a></div>
 			</div>`;
 		document.getElementById("filter").style.display = "none";
 		document.querySelector(".sort-hol").style.display = "none";
@@ -261,7 +261,7 @@ class getResults {
 
 	static async pageNotFound() {
 		let theCurrentPage = new URL(document.URL);
-		if (theCurrentPage.pathname.includes("gemshop")) {
+		if (theCurrentPage.pathname.includes("shop")) {
 			document.querySelector(".banner-container").style.display = "none";
 			document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
 			document.getElementById("footer").style.position = "absolute";
@@ -271,7 +271,7 @@ class getResults {
 			).innerHTML = `<div class="noresult notfound">
 			<div class ="noresulttext"><h1 class = "cat-head" > Page not found</h1><p>We couldn’t find the page you are looking for</p></div>
 			<span>Go back to</span>
-			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
+			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="shop.html" class='backtoshop'>Shop</a></div>
 		</div>`;
 		}
 	}
@@ -525,7 +525,7 @@ function createPagination(results, numberOnEachPage, pageNumber) {
 		document.querySelector(".shop-body").innerHTML = `<div class="noresult">
 			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> This Page is Empty </h1><p>Try checking your spelling or use more general terms</p></div>
 			<span>Go back to</span>
-			<div class="noresultbuttons"><a href="index.html" id="" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
+			<div class="noresultbuttons"><a href="index.html" id="" class='backtohome'>Homepage</a><a href="shop.html" class='backtoshop'>Shop</a></div>
 		</div>`;
 		document.querySelector(".pagindiv").style.display = "none";
 	}
@@ -582,7 +582,7 @@ const convertUrlParametersIntoObject = (urlWithQuery) => {
 		.split("?category")
 		.toString()
 		.split("&")
-		.filter((arr) => !arr.includes("gemshop.html"));
+		.filter((arr) => !arr.includes("shop.html"));
 	let newUrlParameters = new Array();
 	for (let i in urlParameters) {
 		let sp = urlParameters[i].split("=");
@@ -594,7 +594,7 @@ const convertUrlParametersIntoObject = (urlWithQuery) => {
 // LOAD IMAGES WHEN THEY ARE IN VIEW PORT
 const imageObserver = () => {
 	let theCurrentPage = new URL(document.URL);
-	if (theCurrentPage.pathname.includes("gemshop")) {
+	if (theCurrentPage.pathname.includes("shop")) {
 		(async () => {
 			let dir = await allProducts();
 			dir = dir.selectedProducts[0];
@@ -622,8 +622,8 @@ const onLoad = async () => {
 	let dir = await allProducts();
 	if (typeof dir === "object") {
 		let cpUrl = new URL(document.URL);
-		if (cpUrl.search.length <= 0 && cpUrl.pathname === "/gemshop.html") {
-		} else if (cpUrl.search.length > 0 && cpUrl.pathname === "/gemshop.html") {
+		if (cpUrl.search.length <= 0 && cpUrl.pathname === "/shop.html") {
+		} else if (cpUrl.search.length > 0 && cpUrl.pathname === "/shop.html") {
 			indicateLoadingWhileAwaitingResults(true);
 		}
 

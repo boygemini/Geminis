@@ -149,8 +149,10 @@ const createUrl = (category) => {
 		rom = "",
 		screen = "",
 		size = "",
-		searchQuery = "";
-	let currentUrl = "gemshop.html";
+		radio = "",
+		searchQuery = "",
+		page = "";
+	let currentUrl = "shop.html";
 	let url = `${currentUrl}?category=${category}&Order=${
 		Parameters.Order
 	}&Page=${Parameters.Page.toString()}`;

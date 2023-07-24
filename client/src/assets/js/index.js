@@ -9,7 +9,7 @@
 
 // GO TO SHOP BUTTON
 const shopNow = () => {
-	window.location = "gemshop.html";
+	window.location = "shop.html";
 };
 
 // GRIDS
@@ -45,7 +45,7 @@ class Products {
 	static selectedForYou() {
 		return new Promise((resolve, reject) => {
 			resolve(
-				fetch("product.json", {
+				fetch("../product.json", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json",

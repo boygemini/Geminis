@@ -475,7 +475,7 @@ class Products {
 	static saveItems() {
 		return new Promise((resolve, reject) => {
 			resolve(
-				fetch("product.json", {
+				fetch("../product.json", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json",
@@ -1058,56 +1058,39 @@ let urlCategory = document.URL;
 try {
 	urlCategory = urlCategory.split("?")[1].split("=")[1].split("&")[0];
 } catch (error) {}
+
+const scrollCategoryBannerIntoView = (category) => {
+	if (document.lastChild.offsetWidth <= 768) {
+		setTimeout(() => {
+			category.scrollIntoView({
+				behaviour: "smooth",
+				block: "center",
+				inline: "center",
+			});
+		}, 1000);
+	}
+};
+
 switch (urlCategory) {
 	case "cellphones":
 		cellPhones();
-		setTimeout(() => {
-			phones.scrollIntoView({
-				behaviour: "smooth",
-				block: "center",
-				inline: "center",
-			});
-		}, 1000);
+		scrollCategoryBannerIntoView(phones);
 		break;
 	case "computers":
 		Computers();
-		setTimeout(() => {
-			coms.scrollIntoView({
-				behaviour: "smooth",
-				block: "center",
-				inline: "center",
-			});
-		}, 1000);
+		scrollCategoryBannerIntoView(coms);
 		break;
 	case "speakers":
 		Speakers();
-		setTimeout(() => {
-			spks.scrollIntoView({
-				behaviour: "smooth",
-				block: "center",
-				inline: "center",
-			});
-		}, 1000);
+		scrollCategoryBannerIntoView(spks);
 		break;
 	case "tv":
 		TVs();
-		setTimeout(() => {
-			tele.scrollIntoView({
-				behaviour: "smooth",
-				block: "center",
-				inline: "center",
-			});
-		}, 1000);
+		scrollCategoryBannerIntoView(tele);
 		break;
 	case "gaming":
 		Gamings();
-		setTimeout(() => {
-			games.scrollIntoView({
-				behaviour: "smooth",
-				block: "center",
-				inline: "center",
-			});
-		}, 1000);
+		scrollCategoryBannerIntoView(games);
 		break;
 }
 
@@ -1142,7 +1125,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		Gamings();
 		emptyParameters();
-		window.location = "gemshop.html?category=gaming&Order=Random&Page=0";
+		window.location = "shop.html?category=gaming&Order=Random&Page=0";
 	})
 );
 
@@ -1150,7 +1133,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		cellPhones();
 		emptyParameters();
-		window.location = "gemshop.html?category=cellphones&Order=Random&Page=0";
+		window.location = "shop.html?category=cellphones&Order=Random&Page=0";
 	})
 );
 
@@ -1158,7 +1141,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		Computers();
 		emptyParameters();
-		window.location = "gemshop.html?category=computers&Order=Random&Page=0";
+		window.location = "shop.html?category=computers&Order=Random&Page=0";
 	})
 );
 
@@ -1166,7 +1149,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		Speakers();
 		emptyParameters();
-		window.location = "gemshop.html?category=speakers&Order=Random&Page=0";
+		window.location = "shop.html?category=speakers&Order=Random&Page=0";
 	})
 );
 
@@ -1174,7 +1157,7 @@ if (newUrl.search.length > 0) {
 	btn.addEventListener("click", (e) => {
 		TVs();
 		emptyParameters();
-		window.location = "gemshop.html?category=tv&Order=Random&Page=0";
+		window.location = "shop.html?category=tv&Order=Random&Page=0";
 	})
 );
 

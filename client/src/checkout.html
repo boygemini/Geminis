@@ -9,11 +9,11 @@
 			content="width=device-width, initial-scale=1.0, user-scalable=no"
 		/>
 		<title>Checkout</title>
-		<link rel="stylesheet" href="checkout.css" />
-		<link rel="stylesheet" href="gemfonts.css" />
+		<link rel="stylesheet" href="assets/styles/checkout.css" />
+		<link rel="stylesheet" href="assets/styles/gemfonts.css" />
 		<script src="https://js.stripe.com/v3/"></script>
-		<script src="search.js" type="text/javascript" defer></script>
-		<script src="checkout.js" type="text/javascript" defer></script>
+		<script src="assets/js/search.js" type="text/javascript" defer></script>
+		<script src="assets/js/checkout.js" type="text/javascript" defer></script>
 	</head>
 
 	<body>
@@ -35,7 +35,7 @@
 				<div class="logo-nav" id="logo-nav">
 					<nav id="nav-and-products">
 						<img
-							src="IMAGES/menu.png"
+							src="assets/images/menu.png"
 							alt=""
 							id="mb"
 							class="menu"
@@ -44,7 +44,7 @@
 						<h1 class="logo" id="mob-logo" onclick="goHome()">Geminis.</h1>
 						<div class="products">
 							<div class="main-links">
-								<a id="games" href="gemshop.html">Shop</a>
+								<a id="games" href="shop.html">Shop</a>
 								<a id="phones">Products</a>
 								<a id="coms">About Us</a>
 								<a id="spks">Contact Us</a>
@@ -67,7 +67,7 @@
 							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
 							<div class="serc-img">
 								<img
-									src="IMAGES/search.png"
+									src="assets/images/search.png"
 									alt=""
 									srcset=""
 									onclick="openSearch()"
@@ -76,7 +76,7 @@
 						</div>
 						<div class="cart-box" id="searc-cart" onclick="openSearch()">
 							<img
-								src="IMAGES/search.png"
+								src="assets/images/search.png"
 								id="mob-search-icon"
 								alt=""
 								srcset=""
@@ -85,7 +85,7 @@
 						</div>
 						<div class="cart-box" onclick="toCart()">
 							<img
-								src="IMAGES/shopping-cart.png"
+								src="assets/images/shopping-cart.png"
 								alt=""
 								srcset=""
 								onclick="toCart()"
@@ -94,32 +94,36 @@
 						</div>
 						<button type="button" class="login">Login</button>
 						<div class="account cart-box">
-							<img src="IMAGES/user.png" alt="" />
+							<img src="assets/images/user.png" alt="" />
 						</div>
 					</div>
 				</div>
 				<div class="menu-box" id="menu">
 					<div class="menu-heading">
 						<h1>Menu</h1>
-						<img class="cancel" onclick="closeMenu()" src="IMAGES/close.png" />
+						<img
+							class="cancel"
+							onclick="closeMenu()"
+							src="assets/images/close.png"
+						/>
 					</div>
 					<div class="main-menu">
 						<div class="menu-cat">
 							<h1>Shop By Department</h1>
 							<div id="kk">
-								<a href="gemshop.html?category=cellphones&Order=Random&Page=0"
+								<a href="shop.html?category=cellphones&Order=Random&Page=0"
 									>Cell Phones</a
 								>
-								<a href="gemshop.html?category=tv&Order=Random&Page=0"
+								<a href="shop.html?category=tv&Order=Random&Page=0"
 									>Televisions</a
 								>
-								<a href="gemshop.html?category=computers&Order=Random&Page=0"
+								<a href="shop.html?category=computers&Order=Random&Page=0"
 									>Laptops & Computers</a
 								>
-								<a href="gemshop.html?category=speakers&Order=Random&Page=0"
+								<a href="shop.html?category=speakers&Order=Random&Page=0"
 									>Speakers</a
 								>
-								<a href="gemshop.html?category=gaming&Order=Random&Page=0"
+								<a href="shop.html?category=gaming&Order=Random&Page=0"
 									>Video Games</a
 								>
 							</div>
@@ -127,7 +131,7 @@
 						<div class="menu-cat">
 							<h1>Sections</h1>
 							<div id="kk">
-								<a id="link" href="gemshop.html">Shop</a>
+								<a id="link" href="shop.html">Shop</a>
 								<a>Products</a>
 								<a>About Us</a>
 								<a>Contact Us</a>
@@ -154,7 +158,11 @@
 					<div class="searchbox">
 						<div class="search-cancel">
 							<h1>Hello 👋🏻, what are you looking for?</h1>
-							<img src="IMAGES/close(1).png" alt="" onclick="closeSearch()" />
+							<img
+								src="assets/images/close(1).png"
+								alt=""
+								onclick="closeSearch()"
+							/>
 						</div>
 						<input
 							type=""
@@ -507,7 +515,7 @@
 							<div class="fs sec confirmation-code">
 								<h1 class="ordercom">Order Completed</h1>
 								<div class="thank-you-content">
-									<img src="IMAGES/order.png" alt="" />
+									<img src="assets/images/order.png" alt="" />
 									<div class="confirm-note">
 										<h1>Thank you!</h1>
 										<p>
@@ -571,7 +579,7 @@
 						<button class="prev" id="prev">
 							<img
 								class="back-arrow"
-								src="IMAGES/thinarrow2.png"
+								src="assets/images/thinarrow2.png"
 								alt=""
 								srcset=""
 							/>Back

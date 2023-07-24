@@ -14,9 +14,9 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-xbox-controller-png-9253.webp",
-							"IMAGES/pro-img/51vRipjKjML._SL1200_.jpg",
-							"IMAGES/pro-img/61-uVCKZhtL._SL1200_.jpg"
+							"assets/images/pro-img/pngfind.com-xbox-controller-png-9253.webp",
+							"assets/images/pro-img/51vRipjKjML._SL1200_.jpg",
+							"assets/images/pro-img/61-uVCKZhtL._SL1200_.jpg"
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -38,10 +38,10 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-							"IMAGES/pro-img/51hV2qz3WuL._AC_SL1080_.webp",
-							"IMAGES/pro-img/51GONCGpiWL._AC_SL1200_.jpg",
-							"IMAGES/pro-img/51MeEV7Bu6L._AC_SL1200_.jpg",
-							"IMAGES/pro-img/41lfqMsh3+S._AC_SL1200_.jpg"
+							"assets/images/pro-img/51hV2qz3WuL._AC_SL1080_.webp",
+							"assets/images/pro-img/51GONCGpiWL._AC_SL1200_.jpg",
+							"assets/images/pro-img/51MeEV7Bu6L._AC_SL1200_.jpg",
+							"assets/images/pro-img/41lfqMsh3+S._AC_SL1200_.jpg"
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -63,7 +63,7 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-xbox-360-console-png-4295427.webp"
+							"assets/images/pro-img/pngfind.com-xbox-360-console-png-4295427.webp"
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -85,7 +85,7 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-xbox-live-png-4855673.webp"
+							"assets/images/pro-img/pngfind.com-xbox-live-png-4855673.webp"
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -107,10 +107,10 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-xbox-controller-png-9253.webp",
-							"IMAGES/pro-img/51e2Q-TWUEL._SL1200_.jpg",
-							"IMAGES/pro-img/51J7qkVOezL._SL1000_.jpg",
-							"IMAGES/pro-img/61jkjQejpyL._SL1000_.jpg"
+							"assets/images/pro-img/pngfind.com-xbox-controller-png-9253.webp",
+							"assets/images/pro-img/51e2Q-TWUEL._SL1200_.jpg",
+							"assets/images/pro-img/51J7qkVOezL._SL1000_.jpg",
+							"assets/images/pro-img/61jkjQejpyL._SL1000_.jpg"
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -131,7 +131,7 @@
 					"id": "84272",
 					"itemInfo": {
 						"name": "Xbox",
-						"itemImg": ["IMAGES/pro-img/61RA2sUPu+L._SL1000_.webp"],
+						"itemImg": ["assets/images/pro-img/61RA2sUPu+L._SL1000_.webp"],
 						"description1": "XBOX",
 						"description2": "",
 						"newItemPrice": "1112",
@@ -152,9 +152,9 @@
 					"itemInfo": {
 						"name": "Xbox 3",
 						"itemImg": [
-							"IMAGES/pro-img/61BEpu+HTAL._SL1500_.webp",
-							"IMAGES/pro-img/612YEtRWckL._SL1500_.jpg",
-							"IMAGES/pro-img/51eOztNdCkL._SL1500_.jpg"
+							"assets/images/pro-img/61BEpu+HTAL._SL1500_.webp",
+							"assets/images/pro-img/612YEtRWckL._SL1500_.jpg",
+							"assets/images/pro-img/51eOztNdCkL._SL1500_.jpg"
 						],
 						"description1": "PS 5",
 						"description2": "",
@@ -176,8 +176,8 @@
 					"itemInfo": {
 						"name": "PS 2",
 						"itemImg": [
-							"IMAGES/pro-img/61pETE6v4vL._SL1500_.webp",
-							"IMAGES/pro-img/51EhttI30bL._SL1200_.jpg"
+							"assets/images/pro-img/61pETE6v4vL._SL1500_.webp",
+							"assets/images/pro-img/51EhttI30bL._SL1200_.jpg"
 						],
 						"description1": "PS 2",
 						"description2": "",
@@ -199,11 +199,11 @@
 					"itemInfo": {
 						"name": "PS 4",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-ps4-png-520012.webp",
-							"IMAGES/pro-img/71-WrFQo1FL._SL1500_.jpg",
-							"IMAGES/pro-img/71XrnwP7yjL._SL1500_.jpg",
-							"IMAGES/pro-img/ipad2.webp",
-							"IMAGES/pro-img/ipad2.webp"
+							"assets/images/pro-img/pngfind.com-ps4-png-520012.webp",
+							"assets/images/pro-img/71-WrFQo1FL._SL1500_.jpg",
+							"assets/images/pro-img/71XrnwP7yjL._SL1500_.jpg",
+							"assets/images/pro-img/ipad2.webp",
+							"assets/images/pro-img/ipad2.webp"
 						],
 						"description1": "PS 4",
 						"description2": "",
@@ -225,8 +225,8 @@
 					"itemInfo": {
 						"name": "PS 2",
 						"itemImg": [
-							"IMAGES/pro-img/81bHi3vo88L._SL1500_.webp",
-							"IMAGES/pro-img/81HMFRvlxiL._SL1500_.jpg"
+							"assets/images/pro-img/81bHi3vo88L._SL1500_.webp",
+							"assets/images/pro-img/81HMFRvlxiL._SL1500_.jpg"
 						],
 						"description1": "PS 2",
 						"description2": "",
@@ -248,11 +248,11 @@
 					"itemInfo": {
 						"name": "PS 5",
 						"itemImg": [
-							"IMAGES/pro-img/51C0Nbg5QNL._SL1500_.webp",
-							"IMAGES/pro-img/61U86M+XTlL._SL1500_.jpg",
-							"IMAGES/pro-img/61kg+jnrz0L._SL1500_.jpg",
-							"IMAGES/pro-img/61T9Sylvn6L._SL1500_.jpg",
-							"IMAGES/pro-img/51fySIAYsCL._SL1450_.jpg"
+							"assets/images/pro-img/51C0Nbg5QNL._SL1500_.webp",
+							"assets/images/pro-img/61U86M+XTlL._SL1500_.jpg",
+							"assets/images/pro-img/61kg+jnrz0L._SL1500_.jpg",
+							"assets/images/pro-img/61T9Sylvn6L._SL1500_.jpg",
+							"assets/images/pro-img/51fySIAYsCL._SL1450_.jpg"
 						],
 						"description1": "PS 5",
 						"description2": "",
@@ -274,9 +274,9 @@
 					"itemInfo": {
 						"name": "PS 5",
 						"itemImg": [
-							"IMAGES/pro-img/61WnudgMYwL._AC_SL1500_.webp",
-							"IMAGES/pro-img/61BQMgRgqfL._AC_SL1500_.jpg",
-							"IMAGES/pro-img/61muxUUn0NL._AC_SL1500_.jpg"
+							"assets/images/pro-img/61WnudgMYwL._AC_SL1500_.webp",
+							"assets/images/pro-img/61BQMgRgqfL._AC_SL1500_.jpg",
+							"assets/images/pro-img/61muxUUn0NL._AC_SL1500_.jpg"
 						],
 						"description1": "PS 5",
 						"description2": "",
@@ -298,9 +298,9 @@
 					"itemInfo": {
 						"name": "PS 4",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-ps4-cover-png-4164715.webp",
-							"IMAGES/pro-img/41A5YRynOAL._SL1000_.jpg",
-							"IMAGES/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
+							"assets/images/pro-img/pngfind.com-ps4-cover-png-4164715.webp",
+							"assets/images/pro-img/41A5YRynOAL._SL1000_.jpg",
+							"assets/images/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
 						],
 						"description1": "PS 4",
 						"description2": "",
@@ -322,10 +322,10 @@
 					"itemInfo": {
 						"name": "PS 4",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-ps4-pro-png-2649225.webp",
-							"IMAGES/pro-img/51SmNTnYT2L._SL1500_.webp",
-							"IMAGES/pro-img/61dXkVvoq6L._SL1500_.jpg",
-							"IMAGES/pro-img/718xi8SwUUL._SL1500_.jpg"
+							"assets/images/pro-img/pngfind.com-ps4-pro-png-2649225.webp",
+							"assets/images/pro-img/51SmNTnYT2L._SL1500_.webp",
+							"assets/images/pro-img/61dXkVvoq6L._SL1500_.jpg",
+							"assets/images/pro-img/718xi8SwUUL._SL1500_.jpg"
 						],
 						"description1": "PS 4",
 						"description2": "",
@@ -347,9 +347,9 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-							"IMAGES/pro-img/717JafCjCAL._SL1500_.webp",
-							"IMAGES/pro-img/712VxqaHDvL._SL1500_.jpg",
-							"IMAGES/pro-img/8192qTuzoEL._SL1500_.jpg"
+							"assets/images/pro-img/717JafCjCAL._SL1500_.webp",
+							"assets/images/pro-img/712VxqaHDvL._SL1500_.jpg",
+							"assets/images/pro-img/8192qTuzoEL._SL1500_.jpg"
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -371,9 +371,9 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-							"IMAGES/pro-img/61gjug2NzvL._SL1500_.webp",
-							"IMAGES/pro-img/616-K1n0NeL._SL1500_.jpg",
-							"IMAGES/pro-img/61H-v5npLZL._SL1500_.jpg"
+							"assets/images/pro-img/61gjug2NzvL._SL1500_.webp",
+							"assets/images/pro-img/616-K1n0NeL._SL1500_.jpg",
+							"assets/images/pro-img/61H-v5npLZL._SL1500_.jpg"
 						],
 						"description1": "Lorem ipsum dolor sit amet",
 						"description2": "",
@@ -397,9 +397,9 @@
 					"itemInfo": {
 						"name": "iPhone 13",
 						"itemImg": [
-							"IMAGES/pro-img/6009728_sd.png",
-							"IMAGES/pro-img/6009728cv11d.jpeg",
-							"IMAGES/pro-img/6009728cv12d.jpeg"
+							"assets/images/pro-img/6009728_sd.png",
+							"assets/images/pro-img/6009728cv11d.jpeg",
+							"assets/images/pro-img/6009728cv12d.jpeg"
 						],
 						"description1": "iPhone 13 - White",
 						"description2": "",
@@ -422,9 +422,9 @@
 					"itemInfo": {
 						"name": "iPhone 13 Pro",
 						"itemImg": [
-							"IMAGES/pro-img/6009823_sd.webp",
-							"IMAGES/pro-img/6009823cv11d.jpeg",
-							"IMAGES/pro-img/6009823cv12d.jpeg"
+							"assets/images/pro-img/6009823_sd.webp",
+							"assets/images/pro-img/6009823cv11d.jpeg",
+							"assets/images/pro-img/6009823cv12d.jpeg"
 						],
 						"description1": "iPhone 13 Pro - Space Grey",
 						"description2": "",
@@ -447,9 +447,9 @@
 					"itemInfo": {
 						"name": "iPhone 13 Pro",
 						"itemImg": [
-							"IMAGES/pro-img/6341308cv12d.png",
-							"IMAGES/pro-img/6341308_sd.jpeg",
-							"IMAGES/pro-img/6341308cv15d.jpeg"
+							"assets/images/pro-img/6341308cv12d.png",
+							"assets/images/pro-img/6341308_sd.jpeg",
+							"assets/images/pro-img/6341308cv15d.jpeg"
 						],
 						"description1": "iPhone 13 Pro - Gold",
 						"description2": "",
@@ -472,9 +472,9 @@
 					"itemInfo": {
 						"name": "iPhone 11 Pro Max",
 						"itemImg": [
-							"IMAGES/pro-img/6341561cv12d.png",
-							"IMAGES/pro-img/6341561cv11d.jpeg",
-							"IMAGES/pro-img/6341561_sd.jpeg"
+							"assets/images/pro-img/6341561cv12d.png",
+							"assets/images/pro-img/6341561cv11d.jpeg",
+							"assets/images/pro-img/6341561_sd.jpeg"
 						],
 						"description1": "iPhone 11 Pro Max - Space Grey",
 						"description2": "",
@@ -498,10 +498,10 @@
 					"itemInfo": {
 						"name": "iPhone 11",
 						"itemImg": [
-							"IMAGES/pro-img/6510048cv2d.png",
-							"IMAGES/pro-img/6510048cv1d.jpeg",
-							"IMAGES/pro-img/6510048_sd.jpeg",
-							"IMAGES/pro-img/6510048_rd.jpeg"
+							"assets/images/pro-img/6510048cv2d.png",
+							"assets/images/pro-img/6510048cv1d.jpeg",
+							"assets/images/pro-img/6510048_sd.jpeg",
+							"assets/images/pro-img/6510048_rd.jpeg"
 						],
 						"description1": "iPhone 11 - Black",
 						"description2": "",
@@ -525,10 +525,10 @@
 					"itemInfo": {
 						"name": "iPhone Xs Max",
 						"itemImg": [
-							"IMAGES/pro-img/6398612_bd.webp",
-							"IMAGES/pro-img/6398612_sd.jpeg",
-							"IMAGES/pro-img/6398612cv2d.jpeg",
-							"IMAGES/pro-img/6398612cv11d.jpeg"
+							"assets/images/pro-img/6398612_bd.webp",
+							"assets/images/pro-img/6398612_sd.jpeg",
+							"assets/images/pro-img/6398612cv2d.jpeg",
+							"assets/images/pro-img/6398612cv11d.jpeg"
 						],
 						"description1": "iPhone Xs Max - White",
 						"description2": "",
@@ -551,9 +551,9 @@
 					"itemInfo": {
 						"name": "iPhone Xs Max",
 						"itemImg": [
-							"IMAGES/pro-img/6398614_sd.png",
-							"IMAGES/pro-img/6398614cv2d.jpeg",
-							"IMAGES/pro-img/6398614_bd.jpeg"
+							"assets/images/pro-img/6398614_sd.png",
+							"assets/images/pro-img/6398614cv2d.jpeg",
+							"assets/images/pro-img/6398614_bd.jpeg"
 						],
 						"description1": "iPhone Xs Max - Black",
 						"description2": "",
@@ -576,9 +576,9 @@
 					"itemInfo": {
 						"name": "iPhone Xr",
 						"itemImg": [
-							"IMAGES/pro-img/6398621_bd.webp",
-							"IMAGES/pro-img/6398621_sd.jpeg",
-							"IMAGES/pro-img/6398621cv2d.jpeg"
+							"assets/images/pro-img/6398621_bd.webp",
+							"assets/images/pro-img/6398621_sd.jpeg",
+							"assets/images/pro-img/6398621cv2d.jpeg"
 						],
 						"description1": "iPhone Xr - White",
 						"description2": "",
@@ -601,10 +601,10 @@
 					"itemInfo": {
 						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/pro-img/6443098_sd.png",
-							"IMAGES/pro-img/6443098cv11d.jpeg",
-							"IMAGES/pro-img/6443098cv12d.jpeg",
-							"IMAGES/pro-img/6443098cv13d.jpeg"
+							"assets/images/pro-img/6443098_sd.png",
+							"assets/images/pro-img/6443098cv11d.jpeg",
+							"assets/images/pro-img/6443098cv12d.jpeg",
+							"assets/images/pro-img/6443098cv13d.jpeg"
 						],
 						"description1": "iPhone 12 Pro Max - Space Grey",
 						"description2": "",
@@ -627,10 +627,10 @@
 					"itemInfo": {
 						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/pro-img/6443100_sd.png",
-							"IMAGES/pro-img/6443100cv11d.jpeg",
-							"IMAGES/pro-img/6443100cv12d.jpeg",
-							"IMAGES/pro-img/6443100cv13d.jpeg"
+							"assets/images/pro-img/6443100_sd.png",
+							"assets/images/pro-img/6443100cv11d.jpeg",
+							"assets/images/pro-img/6443100cv12d.jpeg",
+							"assets/images/pro-img/6443100cv13d.jpeg"
 						],
 						"description1": "iPhone 12 Pro Max - Gold",
 						"description2": "",
@@ -653,10 +653,10 @@
 					"itemInfo": {
 						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/pro-img/6443101_sd.webp",
-							"IMAGES/pro-img/6443101cv11d.jpeg",
-							"IMAGES/pro-img/6443101cv12d.jpeg",
-							"IMAGES/pro-img/6443101cv13d.jpeg"
+							"assets/images/pro-img/6443101_sd.webp",
+							"assets/images/pro-img/6443101cv11d.jpeg",
+							"assets/images/pro-img/6443101cv12d.jpeg",
+							"assets/images/pro-img/6443101cv13d.jpeg"
 						],
 						"description1": "iPhone 12 Pro Max - Blue",
 						"description2": "",
@@ -679,10 +679,10 @@
 					"itemInfo": {
 						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/pro-img/6443289_sd.webp",
-							"IMAGES/pro-img/6443289cv11d.jpeg",
-							"IMAGES/pro-img/6443289cv12d.jpeg",
-							"IMAGES/pro-img/6443289cv13d.jpeg"
+							"assets/images/pro-img/6443289_sd.webp",
+							"assets/images/pro-img/6443289cv11d.jpeg",
+							"assets/images/pro-img/6443289cv12d.jpeg",
+							"assets/images/pro-img/6443289cv13d.jpeg"
 						],
 						"description1": "iPhone 12 Pro Max - Deep Blue",
 						"description2": "",
@@ -705,9 +705,9 @@
 					"itemInfo": {
 						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/pro-img/6487231_sd.webp",
-							"IMAGES/pro-img/6487231ld.jpeg",
-							"IMAGES/pro-img/6487231_bd.jpeg"
+							"assets/images/pro-img/6487231_sd.webp",
+							"assets/images/pro-img/6487231ld.jpeg",
+							"assets/images/pro-img/6487231_bd.jpeg"
 						],
 						"description1": "iPhone 12 Pro Max - Red",
 						"description2": "",
@@ -730,9 +730,9 @@
 					"itemInfo": {
 						"name": "iPhone 14",
 						"itemImg": [
-							"IMAGES/pro-img/6487243_sd.webp",
-							"IMAGES/pro-img/6487243cv2d.jpeg",
-							"IMAGES/pro-img/6487243ld.jpeg"
+							"assets/images/pro-img/6487243_sd.webp",
+							"assets/images/pro-img/6487243cv2d.jpeg",
+							"assets/images/pro-img/6487243ld.jpeg"
 						],
 						"description1": "iPhone 14 Plus - Grey",
 						"description2": "",
@@ -755,10 +755,10 @@
 					"itemInfo": {
 						"name": "iPhone 13",
 						"itemImg": [
-							"IMAGES/pro-img/6487295_sd.webp",
-							"IMAGES/pro-img/6487295cv1d.jpeg",
-							"IMAGES/pro-img/6487295cv2d.jpeg",
-							"IMAGES/pro-img/6487295cv11d.jpeg"
+							"assets/images/pro-img/6487295_sd.webp",
+							"assets/images/pro-img/6487295cv1d.jpeg",
+							"assets/images/pro-img/6487295cv2d.jpeg",
+							"assets/images/pro-img/6487295cv11d.jpeg"
 						],
 						"description1": "iPhone 13 - Green",
 						"description2": "",
@@ -781,8 +781,8 @@
 					"itemInfo": {
 						"name": "iPhone 12",
 						"itemImg": [
-							"IMAGES/pro-img/iphone-14-blue.webp",
-							"IMAGES/pro-img/iphone-14-blue.png"
+							"assets/images/pro-img/iphone-14-blue.webp",
+							"assets/images/pro-img/iphone-14-blue.png"
 						],
 						"description1": "iPhone 12 - Blue",
 						"description2": "",
@@ -805,8 +805,8 @@
 					"itemInfo": {
 						"name": "iPhone 14",
 						"itemImg": [
-							"IMAGES/pro-img/iphone-14-blackii.png",
-							"IMAGES/pro-img/iphone-14-black.jpg"
+							"assets/images/pro-img/iphone-14-blackii.png",
+							"assets/images/pro-img/iphone-14-black.jpg"
 						],
 						"description1": "iPhone 14 - Black",
 						"description2": "",
@@ -829,9 +829,9 @@
 					"itemInfo": {
 						"name": "iPhone XS",
 						"itemImg": [
-							"IMAGES/pro-img/6522700ld.webp",
-							"IMAGES/pro-img/6522700cv2d.jpeg",
-							"IMAGES/pro-img/6522700cv1d.jpeg"
+							"assets/images/pro-img/6522700ld.webp",
+							"assets/images/pro-img/6522700cv2d.jpeg",
+							"assets/images/pro-img/6522700cv1d.jpeg"
 						],
 						"description1": "iPhone Xs - Jet Black",
 						"description2": "",
@@ -854,11 +854,11 @@
 					"itemInfo": {
 						"name": "Samsung S22",
 						"itemImg": [
-							"IMAGES/pro-img/6494435ld.png",
-							"IMAGES/pro-img/6494435cv12d.jpeg",
-							"IMAGES/pro-img/6494435cv11d.jpeg",
-							"IMAGES/pro-img/6494435_sd.jpeg",
-							"IMAGES/pro-img/6494435_rd.jpeg"
+							"assets/images/pro-img/6494435ld.png",
+							"assets/images/pro-img/6494435cv12d.jpeg",
+							"assets/images/pro-img/6494435cv11d.jpeg",
+							"assets/images/pro-img/6494435_sd.jpeg",
+							"assets/images/pro-img/6494435_rd.jpeg"
 						],
 						"description1": "Samsung S22 - Pink",
 						"description2": "",
@@ -881,11 +881,11 @@
 					"itemInfo": {
 						"name": "Samsung S22",
 						"itemImg": [
-							"IMAGES/pro-img/6494419ld.png",
-							"IMAGES/pro-img/6494419cv12d.jpeg",
-							"IMAGES/pro-img/6494419cv11d.jpeg",
-							"IMAGES/pro-img/6494419_sd.jpeg",
-							"IMAGES/pro-img/6494419_rd.jpeg"
+							"assets/images/pro-img/6494419ld.png",
+							"assets/images/pro-img/6494419cv12d.jpeg",
+							"assets/images/pro-img/6494419cv11d.jpeg",
+							"assets/images/pro-img/6494419_sd.jpeg",
+							"assets/images/pro-img/6494419_rd.jpeg"
 						],
 						"description1": "Samsung S22 - Black",
 						"description2": "",
@@ -908,10 +908,10 @@
 					"itemInfo": {
 						"name": "Xiaomi Redmi",
 						"itemImg": [
-							"IMAGES/pro-img/81TOxp5xrJL._AC_SX679_.png",
-							"IMAGES/pro-img/81yt7HHmCFL._AC_SY741_.jpg",
-							"IMAGES/pro-img/81q+h01rwzL._AC_SY741_.jpg",
-							"IMAGES/pro-img/81On+oiF1FL._AC_SY679_.jpg"
+							"assets/images/pro-img/81TOxp5xrJL._AC_SX679_.png",
+							"assets/images/pro-img/81yt7HHmCFL._AC_SY741_.jpg",
+							"assets/images/pro-img/81q+h01rwzL._AC_SY741_.jpg",
+							"assets/images/pro-img/81On+oiF1FL._AC_SY679_.jpg"
 						],
 						"description1": "Xiaomi Redmi",
 						"description2": "",
@@ -934,9 +934,9 @@
 					"itemInfo": {
 						"name": "LG",
 						"itemImg": [
-							"IMAGES/pro-img/61Wmy7c+spL._AC_SX679_.webp",
-							"IMAGES/pro-img/61VURWvX+7L._AC_SX679_.jpg",
-							"IMAGES/pro-img/61XmyRtUsZL._AC_SY741_.jpg"
+							"assets/images/pro-img/61Wmy7c+spL._AC_SX679_.webp",
+							"assets/images/pro-img/61VURWvX+7L._AC_SX679_.jpg",
+							"assets/images/pro-img/61XmyRtUsZL._AC_SY741_.jpg"
 						],
 						"description1": "LG - Gold",
 						"description2": "",
@@ -958,7 +958,7 @@
 					"id": "21401",
 					"itemInfo": {
 						"name": "Xiaomi Redmi",
-						"itemImg": ["IMAGES/pro-img/61bKP6RU4ZL._AC_SX679_.webp"],
+						"itemImg": ["assets/images/pro-img/61bKP6RU4ZL._AC_SX679_.webp"],
 						"description1": "Xiaomi Redmi - Black",
 						"description2": "",
 						"newItemPrice": "950",
@@ -979,7 +979,7 @@
 					"id": "48913",
 					"itemInfo": {
 						"name": "Xiaomi Redmi",
-						"itemImg": ["IMAGES/pro-img/51oEezK-4lL._AC_SX679_.webp"],
+						"itemImg": ["assets/images/pro-img/51oEezK-4lL._AC_SX679_.webp"],
 						"description1": "Xiaomi Redmi - Black",
 						"description2": "",
 						"newItemPrice": "520",
@@ -1000,7 +1000,7 @@
 					"id": "84910",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/61GzwFzwhIL._AC_SX679_.webp"],
+						"itemImg": ["assets/images/pro-img/61GzwFzwhIL._AC_SX679_.webp"],
 						"description1": "LG - Space Grey",
 						"description2": "",
 						"newItemPrice": "950",
@@ -1022,9 +1022,9 @@
 					"itemInfo": {
 						"name": "Samsung S22 Ultra",
 						"itemImg": [
-							"IMAGES/pro-img/51H91olBMML._AC_SY679_.png",
-							"IMAGES/pro-img/51EvYzOiyxL._AC_SX679_.jpg",
-							"IMAGES/pro-img/51EkCa-XUTL._AC_SX679_.jpg"
+							"assets/images/pro-img/51H91olBMML._AC_SY679_.png",
+							"assets/images/pro-img/51EvYzOiyxL._AC_SX679_.jpg",
+							"assets/images/pro-img/51EkCa-XUTL._AC_SX679_.jpg"
 						],
 						"description1": "Samsung S22 Ultra - Black",
 						"description2": "",
@@ -1047,9 +1047,9 @@
 					"itemInfo": {
 						"name": "iPhone Xr",
 						"itemImg": [
-							"IMAGES/pro-img/6398617_bd.webp",
-							"IMAGES/pro-img/6398617_sd.jpeg",
-							"IMAGES/pro-img/6398617cv2d.jpeg"
+							"assets/images/pro-img/6398617_bd.webp",
+							"assets/images/pro-img/6398617_sd.jpeg",
+							"assets/images/pro-img/6398617cv2d.jpeg"
 						],
 						"description1": "iPhone Xr - Red",
 						"description2": "",
@@ -1072,10 +1072,10 @@
 					"itemInfo": {
 						"name": "Samsung S22 Ultra",
 						"itemImg": [
-							"IMAGES/pro-img/6472835_sd.png",
-							"IMAGES/pro-img/6472835cv11d.jpeg",
-							"IMAGES/pro-img/6472835_rd.jpeg",
-							"IMAGES/pro-img/6472835ld.jpeg"
+							"assets/images/pro-img/6472835_sd.png",
+							"assets/images/pro-img/6472835cv11d.jpeg",
+							"assets/images/pro-img/6472835_rd.jpeg",
+							"assets/images/pro-img/6472835ld.jpeg"
 						],
 						"description1": "Samsung S22 Ultra - Wine",
 						"description2": "",
@@ -1098,7 +1098,7 @@
 					"id": "847193",
 					"itemInfo": {
 						"name": "Samsung S22",
-						"itemImg": ["IMAGES/pro-img/51K437SfYOL._AC_SX679_.webp"],
+						"itemImg": ["assets/images/pro-img/51K437SfYOL._AC_SX679_.webp"],
 						"description1": "Samsung S22 - Blue",
 						"description2": "",
 						"newItemPrice": "520",
@@ -1121,8 +1121,8 @@
 					"itemInfo": {
 						"name": "Samsung A11",
 						"itemImg": [
-							"IMAGES/pro-img/61FHIXy334L._AC_SX679_.png",
-							"IMAGES/pro-img/61E5sTroE+L._AC_SX679_.jpg"
+							"assets/images/pro-img/61FHIXy334L._AC_SX679_.png",
+							"assets/images/pro-img/61E5sTroE+L._AC_SX679_.jpg"
 						],
 						"description1": "Samsung A11 - Black",
 						"description2": "",
@@ -1146,8 +1146,8 @@
 					"itemInfo": {
 						"name": "Samsung S15",
 						"itemImg": [
-							"IMAGES/pro-img/61b7ywCsH2L._AC_SX679_.webp",
-							"IMAGES/pro-img/61G1cC5bTYL._AC_SX679_.jpg"
+							"assets/images/pro-img/61b7ywCsH2L._AC_SX679_.webp",
+							"assets/images/pro-img/61G1cC5bTYL._AC_SX679_.jpg"
 						],
 						"description1": "Samsung S15 - Blue",
 						"description2": "",
@@ -1170,7 +1170,7 @@
 					"id": "45819",
 					"itemInfo": {
 						"name": "Samsung S15",
-						"itemImg": ["IMAGES/pro-img/51LVTBV6tjL._AC_SX679_.webp"],
+						"itemImg": ["assets/images/pro-img/51LVTBV6tjL._AC_SX679_.webp"],
 						"description1": "Samsung S15 - Black",
 						"description2": "",
 						"newItemPrice": "520",
@@ -1193,10 +1193,10 @@
 					"itemInfo": {
 						"name": "Samsung S22",
 						"itemImg": [
-							"IMAGES/pro-img/6494417_rd.png",
-							"IMAGES/pro-img/6494417_sd.jpeg",
-							"IMAGES/pro-img/6494417cv11d.jpeg",
-							"IMAGES/pro-img/6494417ld.jpeg"
+							"assets/images/pro-img/6494417_rd.png",
+							"assets/images/pro-img/6494417_sd.jpeg",
+							"assets/images/pro-img/6494417cv11d.jpeg",
+							"assets/images/pro-img/6494417ld.jpeg"
 						],
 						"description1": "Samsung S22 - Green",
 						"description2": "",
@@ -1219,7 +1219,7 @@
 					"id": "57191",
 					"itemInfo": {
 						"name": "Samsung A10",
-						"itemImg": ["IMAGES/pro-img/51LVTBV6tjL._AC_SX679_.webp"],
+						"itemImg": ["assets/images/pro-img/51LVTBV6tjL._AC_SX679_.webp"],
 						"description1": "Samsung A10 - Black",
 						"description2": "",
 						"newItemPrice": "520",
@@ -1242,10 +1242,10 @@
 					"itemInfo": {
 						"name": "iPhone X",
 						"itemImg": [
-							"IMAGES/pro-img/6394669_sd.webp",
-							"IMAGES/pro-img/6394669_bd.jpeg",
-							"IMAGES/pro-img/6394669cv21d.jpeg",
-							"IMAGES/pro-img/6394669cv2d.jpeg"
+							"assets/images/pro-img/6394669_sd.webp",
+							"assets/images/pro-img/6394669_bd.jpeg",
+							"assets/images/pro-img/6394669cv21d.jpeg",
+							"assets/images/pro-img/6394669cv2d.jpeg"
 						],
 						"description1": "iPhone X - Black",
 						"description2": "",
@@ -1269,9 +1269,9 @@
 					"itemInfo": {
 						"name": "iPhone 13 Mini",
 						"itemImg": [
-							"IMAGES/pro-img/6504816_sd.webp",
-							"IMAGES/pro-img/6504816ld.jpeg",
-							"IMAGES/pro-img/6504816_bd.jpeg"
+							"assets/images/pro-img/6504816_sd.webp",
+							"assets/images/pro-img/6504816ld.jpeg",
+							"assets/images/pro-img/6504816_bd.jpeg"
 						],
 						"description1": "iPhone 13 Mini - White Gold",
 						"description2": "",
@@ -1294,9 +1294,9 @@
 					"itemInfo": {
 						"name": "iPhone 13 Mini",
 						"itemImg": [
-							"IMAGES/pro-img/6505478_sd.webp",
-							"IMAGES/pro-img/6505478ld.jpeg",
-							"IMAGES/pro-img/6505478_bd.jpeg"
+							"assets/images/pro-img/6505478_sd.webp",
+							"assets/images/pro-img/6505478ld.jpeg",
+							"assets/images/pro-img/6505478_bd.jpeg"
 						],
 						"description1": "iPhone 13 Mini - White Blue",
 						"description2": "",
@@ -1319,9 +1319,9 @@
 					"itemInfo": {
 						"name": "iPhone 13 Mini",
 						"itemImg": [
-							"IMAGES/pro-img/6505505_sd.webp",
-							"IMAGES/pro-img/6505505ld.jpeg",
-							"IMAGES/pro-img/6505505_bd.jpeg"
+							"assets/images/pro-img/6505505_sd.webp",
+							"assets/images/pro-img/6505505ld.jpeg",
+							"assets/images/pro-img/6505505_bd.jpeg"
 						],
 						"description1": "iPhone 13 Mini - White Blue",
 						"description2": "",
@@ -1344,10 +1344,10 @@
 					"itemInfo": {
 						"name": "iPhone 12 Pro Max",
 						"itemImg": [
-							"IMAGES/pro-img/6516546_sd.png",
-							"IMAGES/pro-img/6516546_rd.jpeg",
-							"IMAGES/pro-img/6516546cv1d.jpeg",
-							"IMAGES/pro-img/6516546ld.jpeg"
+							"assets/images/pro-img/6516546_sd.png",
+							"assets/images/pro-img/6516546_rd.jpeg",
+							"assets/images/pro-img/6516546cv1d.jpeg",
+							"assets/images/pro-img/6516546ld.jpeg"
 						],
 						"description1": "iPhone 12 Pro Max - Space Grey",
 						"description2": "",
@@ -1370,8 +1370,8 @@
 					"itemInfo": {
 						"name": "Samsung S22 Ultra",
 						"itemImg": [
-							"IMAGES/pro-img/71GoXXLv9AL._AC_SX679_.webp",
-							"IMAGES/pro-img/71GoXXLv9AL._AC_SY300_SX300_.jpg"
+							"assets/images/pro-img/71GoXXLv9AL._AC_SX679_.webp",
+							"assets/images/pro-img/71GoXXLv9AL._AC_SY300_SX300_.jpg"
 						],
 						"description1": "Samsung S22 Ultra - Pink",
 						"description2": "",
@@ -1393,7 +1393,7 @@
 					"id": "8772921",
 					"itemInfo": {
 						"name": "Samsung S22",
-						"itemImg": ["IMAGES/pro-img/71++2+4pHrL._AC_SY450_.png"],
+						"itemImg": ["assets/images/pro-img/71++2+4pHrL._AC_SY450_.png"],
 						"description1": "Samsung S22 - Space Grey",
 						"description2": "",
 						"newItemPrice": "950",
@@ -1414,7 +1414,7 @@
 					"id": "94829",
 					"itemInfo": {
 						"name": "Samsung S22",
-						"itemImg": ["IMAGES/pro-img/71Wkk4n9olL._AC_SX450_.png"],
+						"itemImg": ["assets/images/pro-img/71Wkk4n9olL._AC_SX450_.png"],
 						"description1": "Samsung S22 - Space Grey",
 						"description2": "",
 						"newItemPrice": "950",
@@ -1435,7 +1435,7 @@
 					"id": "948291",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/71fg+BrjQlL._AC_SX679_.webp"],
+						"itemImg": ["assets/images/pro-img/71fg+BrjQlL._AC_SX679_.webp"],
 						"description1": "LG - Gold",
 						"description2": "",
 						"newItemPrice": "520",
@@ -1459,10 +1459,10 @@
 					"itemInfo": {
 						"name": "JBL Charge 4",
 						"itemImg": [
-							"IMAGES/pro-img/6213284_rd.png",
-							"IMAGES/pro-img/6213284_sd.jpeg",
-							"IMAGES/pro-img/6213284cv11d.jpeg",
-							"IMAGES/pro-img/6213284cv13d.jpeg"
+							"assets/images/pro-img/6213284_rd.png",
+							"assets/images/pro-img/6213284_sd.jpeg",
+							"assets/images/pro-img/6213284cv11d.jpeg",
+							"assets/images/pro-img/6213284cv13d.jpeg"
 						],
 						"description1": "JBL Charge 4 - Black",
 						"description2": "",
@@ -1484,11 +1484,11 @@
 					"itemInfo": {
 						"name": "JBL Flip 5",
 						"itemImg": [
-							"IMAGES/pro-img/6356534cv11d.png",
-							"IMAGES/pro-img/6356534cv12d.jpeg",
-							"IMAGES/pro-img/6356534cv13d.jpeg",
-							"IMAGES/pro-img/6356534_sd.jpeg",
-							"IMAGES/pro-img/6356534ld.jpeg"
+							"assets/images/pro-img/6356534cv11d.png",
+							"assets/images/pro-img/6356534cv12d.jpeg",
+							"assets/images/pro-img/6356534cv13d.jpeg",
+							"assets/images/pro-img/6356534_sd.jpeg",
+							"assets/images/pro-img/6356534ld.jpeg"
 						],
 						"description1": "JBL Flip 5 - Red",
 						"description2": "",
@@ -1510,11 +1510,11 @@
 					"itemInfo": {
 						"name": "JBL Flip 5",
 						"itemImg": [
-							"IMAGES/pro-img/6356535_sd.png",
-							"IMAGES/pro-img/6356535cv11d.jpeg",
-							"IMAGES/pro-img/6356535cv12d.jpeg",
-							"IMAGES/pro-img/6356535cv13d.jpeg",
-							"IMAGES/pro-img/6356535ld.jpeg"
+							"assets/images/pro-img/6356535_sd.png",
+							"assets/images/pro-img/6356535cv11d.jpeg",
+							"assets/images/pro-img/6356535cv12d.jpeg",
+							"assets/images/pro-img/6356535cv13d.jpeg",
+							"assets/images/pro-img/6356535ld.jpeg"
 						],
 						"description1": "JBL Flip 5 - Black",
 						"description2": "",
@@ -1536,11 +1536,11 @@
 					"itemInfo": {
 						"name": "JBL Boombox",
 						"itemImg": [
-							"IMAGES/pro-img/6381755_rd.webp",
-							"IMAGES/pro-img/6381755cv1d.jpeg",
-							"IMAGES/pro-img/6381755cv11d.jpeg",
-							"IMAGES/pro-img/6381755cv12d.jpeg",
-							"IMAGES/pro-img/6381755cv13d.jpeg"
+							"assets/images/pro-img/6381755_rd.webp",
+							"assets/images/pro-img/6381755cv1d.jpeg",
+							"assets/images/pro-img/6381755cv11d.jpeg",
+							"assets/images/pro-img/6381755cv12d.jpeg",
+							"assets/images/pro-img/6381755cv13d.jpeg"
 						],
 						"description1": "JBL Boombox - Black",
 						"description2": "",
@@ -1562,11 +1562,11 @@
 					"itemInfo": {
 						"name": "JBL Charge 5",
 						"itemImg": [
-							"IMAGES/pro-img/6400615_rd.webp",
-							"IMAGES/pro-img/6400615_sd.jpeg",
-							"IMAGES/pro-img/6400615cv11d.jpeg",
-							"IMAGES/pro-img/6400615cv12d.jpeg",
-							"IMAGES/pro-img/6400615cv13d.jpeg"
+							"assets/images/pro-img/6400615_rd.webp",
+							"assets/images/pro-img/6400615_sd.jpeg",
+							"assets/images/pro-img/6400615cv11d.jpeg",
+							"assets/images/pro-img/6400615cv12d.jpeg",
+							"assets/images/pro-img/6400615cv13d.jpeg"
 						],
 						"description1": "JBL Charge 5 - Black",
 						"description2": "",
@@ -1588,11 +1588,11 @@
 					"itemInfo": {
 						"name": "JBL Charge 5",
 						"itemImg": [
-							"IMAGES/pro-img/6445548_rd.webp",
-							"IMAGES/pro-img/6445548_sd.jpeg",
-							"IMAGES/pro-img/6445548cv1d.jpeg",
-							"IMAGES/pro-img/6445548cv12d.jpeg",
-							"IMAGES/pro-img/6445548ld.jpeg"
+							"assets/images/pro-img/6445548_rd.webp",
+							"assets/images/pro-img/6445548_sd.jpeg",
+							"assets/images/pro-img/6445548cv1d.jpeg",
+							"assets/images/pro-img/6445548cv12d.jpeg",
+							"assets/images/pro-img/6445548ld.jpeg"
 						],
 						"description1": "JBL Charge 5 - Black",
 						"description2": "",
@@ -1614,10 +1614,10 @@
 					"itemInfo": {
 						"name": "JBL Charge 5",
 						"itemImg": [
-							"IMAGES/pro-img/6454257_rd.webp",
-							"IMAGES/pro-img/6454257_sd.jpeg",
-							"IMAGES/pro-img/6454257cv1d.jpeg",
-							"IMAGES/pro-img/6454257ld.jpeg"
+							"assets/images/pro-img/6454257_rd.webp",
+							"assets/images/pro-img/6454257_sd.jpeg",
+							"assets/images/pro-img/6454257cv1d.jpeg",
+							"assets/images/pro-img/6454257ld.jpeg"
 						],
 						"description1": "JBL Charge 5 - Blue",
 						"description2": "",
@@ -1639,11 +1639,11 @@
 					"itemInfo": {
 						"name": "JBL Charge 5",
 						"itemImg": [
-							"IMAGES/pro-img/6454258_rd.png",
-							"IMAGES/pro-img/6454258_sd.jpeg",
-							"IMAGES/pro-img/6454258cv1d.jpeg",
-							"IMAGES/pro-img/6454258ld.jpeg",
-							"IMAGES/pro-img/6454258cv12d.jpeg"
+							"assets/images/pro-img/6454258_rd.png",
+							"assets/images/pro-img/6454258_sd.jpeg",
+							"assets/images/pro-img/6454258cv1d.jpeg",
+							"assets/images/pro-img/6454258ld.jpeg",
+							"assets/images/pro-img/6454258cv12d.jpeg"
 						],
 						"description1": "JBL Charge 5 - Red",
 						"description2": "",
@@ -1665,10 +1665,10 @@
 					"itemInfo": {
 						"name": "Sony Round Box",
 						"itemImg": [
-							"IMAGES/pro-img/6456731_rd.webp",
-							"IMAGES/pro-img/6456731_sd.jpeg",
-							"IMAGES/pro-img/6456731cv1d.jpeg",
-							"IMAGES/pro-img/6456731ld.jpeg"
+							"assets/images/pro-img/6456731_rd.webp",
+							"assets/images/pro-img/6456731_sd.jpeg",
+							"assets/images/pro-img/6456731cv1d.jpeg",
+							"assets/images/pro-img/6456731ld.jpeg"
 						],
 						"description1": "Sony Round Box - Black",
 						"description2": "",
@@ -1690,10 +1690,10 @@
 					"itemInfo": {
 						"name": "Sony Round Box",
 						"itemImg": [
-							"IMAGES/pro-img/6456735_rd.webp",
-							"IMAGES/pro-img/6456735_sd.jpeg",
-							"IMAGES/pro-img/6456735cv1d.jpeg",
-							"IMAGES/pro-img/6456735ld.jpeg"
+							"assets/images/pro-img/6456735_rd.webp",
+							"assets/images/pro-img/6456735_sd.jpeg",
+							"assets/images/pro-img/6456735cv1d.jpeg",
+							"assets/images/pro-img/6456735ld.jpeg"
 						],
 						"description1": "Sony Round Box - Blue",
 						"description2": "",
@@ -1715,11 +1715,11 @@
 					"itemInfo": {
 						"name": "Sony Boom Box",
 						"itemImg": [
-							"IMAGES/pro-img/6457637_rd.webp",
-							"IMAGES/pro-img/6457637_sd.jpeg",
-							"IMAGES/pro-img/6457637cv11d.jpeg",
-							"IMAGES/pro-img/6457637cv12d.jpeg",
-							"IMAGES/pro-img/6457637ld.jpeg"
+							"assets/images/pro-img/6457637_rd.webp",
+							"assets/images/pro-img/6457637_sd.jpeg",
+							"assets/images/pro-img/6457637cv11d.jpeg",
+							"assets/images/pro-img/6457637cv12d.jpeg",
+							"assets/images/pro-img/6457637ld.jpeg"
 						],
 						"description1": "Sony Boom Box - Black",
 						"description2": "",
@@ -1741,11 +1741,11 @@
 					"itemInfo": {
 						"name": "JBL Flip 5",
 						"itemImg": [
-							"IMAGES/pro-img/6488913_rd.png",
-							"IMAGES/pro-img/6488913_sd.jpeg",
-							"IMAGES/pro-img/6488913cv1d.jpeg",
-							"IMAGES/pro-img/6488913cv11d.jpeg",
-							"IMAGES/pro-img/6488913ld.jpeg"
+							"assets/images/pro-img/6488913_rd.png",
+							"assets/images/pro-img/6488913_sd.jpeg",
+							"assets/images/pro-img/6488913cv1d.jpeg",
+							"assets/images/pro-img/6488913cv11d.jpeg",
+							"assets/images/pro-img/6488913ld.jpeg"
 						],
 						"description1": "JBL Charge 5 - Blue",
 						"description2": "",
@@ -1767,10 +1767,10 @@
 					"itemInfo": {
 						"name": "JBL Flip 5",
 						"itemImg": [
-							"IMAGES/pro-img/6488914_rd.png",
-							"IMAGES/pro-img/6488914_sd.jpeg",
-							"IMAGES/pro-img/6488914ld.jpeg",
-							"IMAGES/pro-img/6488914cv13d.jpeg"
+							"assets/images/pro-img/6488914_rd.png",
+							"assets/images/pro-img/6488914_sd.jpeg",
+							"assets/images/pro-img/6488914ld.jpeg",
+							"assets/images/pro-img/6488914cv13d.jpeg"
 						],
 						"description1": "JBL Charge 5 - Grey",
 						"description2": "",
@@ -1792,11 +1792,11 @@
 					"itemInfo": {
 						"name": "JBL BOOMBOX",
 						"itemImg": [
-							"IMAGES/pro-img/6407390_rd.png",
-							"IMAGES/pro-img/6407390_sd.jpeg",
-							"IMAGES/pro-img/6407390cv11d.jpeg",
-							"IMAGES/pro-img/6407390cv12d.jpeg",
-							"IMAGES/pro-img/6407390ld.jpeg"
+							"assets/images/pro-img/6407390_rd.png",
+							"assets/images/pro-img/6407390_sd.jpeg",
+							"assets/images/pro-img/6407390cv11d.jpeg",
+							"assets/images/pro-img/6407390cv12d.jpeg",
+							"assets/images/pro-img/6407390ld.jpeg"
 						],
 						"description1": "JBL BOOMBOX - Black",
 						"description2": "",
@@ -1818,10 +1818,10 @@
 					"itemInfo": {
 						"name": "JBL Bass",
 						"itemImg": [
-							"IMAGES/pro-img/6412152_rd.png",
-							"IMAGES/pro-img/6412152_sd.jpeg",
-							"IMAGES/pro-img/6412152cv14d.jpeg",
-							"IMAGES/pro-img/6412152cv15d.jpeg"
+							"assets/images/pro-img/6412152_rd.png",
+							"assets/images/pro-img/6412152_sd.jpeg",
+							"assets/images/pro-img/6412152cv14d.jpeg",
+							"assets/images/pro-img/6412152cv15d.jpeg"
 						],
 						"description1": "JBL Bass - Black",
 						"description2": "",
@@ -1843,11 +1843,11 @@
 					"itemInfo": {
 						"name": "Sony Sound Barz",
 						"itemImg": [
-							"IMAGES/pro-img/6412174_sd.webp",
-							"IMAGES/pro-img/6412174_rd.jpeg",
-							"IMAGES/pro-img/6412174cv11d.jpeg",
-							"IMAGES/pro-img/6412174cv12d.jpeg",
-							"IMAGES/pro-img/6412174cv13d.jpeg"
+							"assets/images/pro-img/6412174_sd.webp",
+							"assets/images/pro-img/6412174_rd.jpeg",
+							"assets/images/pro-img/6412174cv11d.jpeg",
+							"assets/images/pro-img/6412174cv12d.jpeg",
+							"assets/images/pro-img/6412174cv13d.jpeg"
 						],
 						"description1": "Sony Sound Barz - Black",
 						"description2": "",
@@ -1869,10 +1869,10 @@
 					"itemInfo": {
 						"name": "Sony Sound Barz",
 						"itemImg": [
-							"IMAGES/pro-img/6412176_sd.webp",
-							"IMAGES/pro-img/6412176cv11d.jpeg",
-							"IMAGES/pro-img/6412176ld.jpeg",
-							"IMAGES/pro-img/6412176_rd.jpeg"
+							"assets/images/pro-img/6412176_sd.webp",
+							"assets/images/pro-img/6412176cv11d.jpeg",
+							"assets/images/pro-img/6412176ld.jpeg",
+							"assets/images/pro-img/6412176_rd.jpeg"
 						],
 						"description1": "Sony Sound Barz - Green",
 						"description2": "",
@@ -1894,10 +1894,10 @@
 					"itemInfo": {
 						"name": "Sony Sound Barz",
 						"itemImg": [
-							"IMAGES/pro-img/6412177_sd.webp",
-							"IMAGES/pro-img/6412177_rd.jpeg",
-							"IMAGES/pro-img/6412177cv11d.jpeg",
-							"IMAGES/pro-img/6412177ld.jpeg"
+							"assets/images/pro-img/6412177_sd.webp",
+							"assets/images/pro-img/6412177_rd.jpeg",
+							"assets/images/pro-img/6412177cv11d.jpeg",
+							"assets/images/pro-img/6412177ld.jpeg"
 						],
 						"description1": "Sony Sound Barz - Blue",
 						"description2": "",
@@ -1919,11 +1919,11 @@
 					"itemInfo": {
 						"name": "JBL BOOMBOX",
 						"itemImg": [
-							"IMAGES/pro-img/6426699cv1d.png",
-							"IMAGES/pro-img/6426699cv11d.jpeg",
-							"IMAGES/pro-img/6426699cv13d.jpegg",
-							"IMAGES/pro-img/6426699cv24d.jpeg",
-							"IMAGES/pro-img/6426699ld.jpeg"
+							"assets/images/pro-img/6426699cv1d.png",
+							"assets/images/pro-img/6426699cv11d.jpeg",
+							"assets/images/pro-img/6426699cv13d.jpegg",
+							"assets/images/pro-img/6426699cv24d.jpeg",
+							"assets/images/pro-img/6426699ld.jpeg"
 						],
 						"description1": "JBL BOOMBOX - Black",
 						"description2": "",
@@ -1945,11 +1945,11 @@
 					"itemInfo": {
 						"name": "JBL Boombox",
 						"itemImg": [
-							"IMAGES/pro-img/6426700_sd.png",
-							"IMAGES/pro-img/6426700cv1d.jpeg",
-							"IMAGES/pro-img/6426700cv11d.jpeg",
-							"IMAGES/pro-img/6426700cv12d.jpeg",
-							"IMAGES/pro-img/6426700cv13d.jpeg"
+							"assets/images/pro-img/6426700_sd.png",
+							"assets/images/pro-img/6426700cv1d.jpeg",
+							"assets/images/pro-img/6426700cv11d.jpeg",
+							"assets/images/pro-img/6426700cv12d.jpeg",
+							"assets/images/pro-img/6426700cv13d.jpeg"
 						],
 						"description1": "JBL Boombox - Black",
 						"description2": "",
@@ -1970,7 +1970,7 @@
 					"id": "761876",
 					"itemInfo": {
 						"name": "JBL Headphone",
-						"itemImg": ["IMAGES/pro-img/headphone.png"],
+						"itemImg": ["assets/images/pro-img/headphone.png"],
 						"description1": "JBL Headphone - Cream",
 						"description2": "",
 						"newItemPrice": "1112",
@@ -1991,11 +1991,11 @@
 					"itemInfo": {
 						"name": "Jbl Small Box",
 						"itemImg": [
-							"IMAGES/pro-img/6427076_rd.png",
-							"IMAGES/pro-img/6427076_sd.jpeg",
-							"IMAGES/pro-img/6427076cv12d.jpeg",
-							"IMAGES/pro-img/6427076cv13d.jpeg",
-							"IMAGES/pro-img/6427076ld.jpeg"
+							"assets/images/pro-img/6427076_rd.png",
+							"assets/images/pro-img/6427076_sd.jpeg",
+							"assets/images/pro-img/6427076cv12d.jpeg",
+							"assets/images/pro-img/6427076cv13d.jpeg",
+							"assets/images/pro-img/6427076ld.jpeg"
 						],
 						"description1": "JBL Small Box - Black",
 						"description2": "",
@@ -2017,11 +2017,11 @@
 					"itemInfo": {
 						"name": "Jbl Small Box",
 						"itemImg": [
-							"IMAGES/pro-img/6427078_rd.png",
-							"IMAGES/pro-img/6427078_sd.jpeg",
-							"IMAGES/pro-img/6427078cv11d.jpeg",
-							"IMAGES/pro-img/6427078cv12d.jpeg",
-							"IMAGES/pro-img/6427078ld.jpeg"
+							"assets/images/pro-img/6427078_rd.png",
+							"assets/images/pro-img/6427078_sd.jpeg",
+							"assets/images/pro-img/6427078cv11d.jpeg",
+							"assets/images/pro-img/6427078cv12d.jpeg",
+							"assets/images/pro-img/6427078ld.jpeg"
 						],
 						"description1": "JBL Small Box - Blue",
 						"description2": "",
@@ -2043,11 +2043,11 @@
 					"itemInfo": {
 						"name": "Jbl Clip",
 						"itemImg": [
-							"IMAGES/pro-img/6445544_rd.webp",
-							"IMAGES/pro-img/6445544_sd.jpeg",
-							"IMAGES/pro-img/6445544cv11d.jpeg",
-							"IMAGES/pro-img/6445544cv12d.jpeg",
-							"IMAGES/pro-img/6445544ld.jpeg"
+							"assets/images/pro-img/6445544_rd.webp",
+							"assets/images/pro-img/6445544_sd.jpeg",
+							"assets/images/pro-img/6445544cv11d.jpeg",
+							"assets/images/pro-img/6445544cv12d.jpeg",
+							"assets/images/pro-img/6445544ld.jpeg"
 						],
 						"description1": "JBL Clip - Blue",
 						"description2": "",
@@ -2068,7 +2068,7 @@
 					"id": "517352",
 					"itemInfo": {
 						"name": "JBL Headphone",
-						"itemImg": ["IMAGES/pro-img/headphone.png"],
+						"itemImg": ["assets/images/pro-img/headphone.png"],
 						"description1": "JBL Headphone - Cream",
 						"description2": "",
 						"newItemPrice": "1112",
@@ -2089,10 +2089,10 @@
 					"itemInfo": {
 						"name": "Jbl Clip",
 						"itemImg": [
-							"IMAGES/pro-img/6445546_rd.png",
-							"IMAGES/pro-img/6445546_sd.jpeg",
-							"IMAGES/pro-img/6445546cv1d.jpeg",
-							"IMAGES/pro-img/6445546ld.jpeg"
+							"assets/images/pro-img/6445546_rd.png",
+							"assets/images/pro-img/6445546_sd.jpeg",
+							"assets/images/pro-img/6445546cv1d.jpeg",
+							"assets/images/pro-img/6445546ld.jpeg"
 						],
 						"description1": "JBL Clip - Black",
 						"description2": "",
@@ -2114,11 +2114,11 @@
 					"itemInfo": {
 						"name": "Jbl Clip",
 						"itemImg": [
-							"IMAGES/pro-img/6445547_rd.webp",
-							"IMAGES/pro-img/6445547_sd.jpeg",
-							"IMAGES/pro-img/6445547cv11d.jpeg",
-							"IMAGES/pro-img/6445547cv12d.jpeg",
-							"IMAGES/pro-img/6445547ld.jpeg"
+							"assets/images/pro-img/6445547_rd.webp",
+							"assets/images/pro-img/6445547_sd.jpeg",
+							"assets/images/pro-img/6445547cv11d.jpeg",
+							"assets/images/pro-img/6445547cv12d.jpeg",
+							"assets/images/pro-img/6445547ld.jpeg"
 						],
 						"description1": "JBL Clip - Grey",
 						"description2": "",
@@ -2140,9 +2140,9 @@
 					"itemInfo": {
 						"name": "Sony Boon Box",
 						"itemImg": [
-							"IMAGES/pro-img/6427871_rd.webp",
-							"IMAGES/pro-img/6427871_sd.jpeg",
-							"IMAGES/pro-img/6427871cv11d.jpeg"
+							"assets/images/pro-img/6427871_rd.webp",
+							"assets/images/pro-img/6427871_sd.jpeg",
+							"assets/images/pro-img/6427871cv11d.jpeg"
 						],
 						"description1": "Sony Boon Box - Black",
 						"description2": "",
@@ -2164,10 +2164,10 @@
 					"itemInfo": {
 						"name": "JBL Headphone",
 						"itemImg": [
-							"IMAGES/pro-img/6427089ld.webp",
-							"IMAGES/pro-img/6427089_sd.jpeg",
-							"IMAGES/pro-img/6427089_rd.jpegg",
-							"IMAGES/pro-img/6427089cv11d.jpeg"
+							"assets/images/pro-img/6427089ld.webp",
+							"assets/images/pro-img/6427089_sd.jpeg",
+							"assets/images/pro-img/6427089_rd.jpegg",
+							"assets/images/pro-img/6427089cv11d.jpeg"
 						],
 						"description1": "JBL Headphone - Black",
 						"description2": "",
@@ -2189,9 +2189,9 @@
 					"itemInfo": {
 						"name": "JBL Headphone",
 						"itemImg": [
-							"IMAGES/pro-img/6517767_sd.webp",
-							"IMAGES/pro-img/6517767_rd.jpeg",
-							"IMAGES/pro-img/6517767ld.jpeg"
+							"assets/images/pro-img/6517767_sd.webp",
+							"assets/images/pro-img/6517767_rd.jpeg",
+							"assets/images/pro-img/6517767ld.jpeg"
 						],
 						"description1": "JBL Headphone - Black",
 						"description2": "",
@@ -2213,10 +2213,10 @@
 					"itemInfo": {
 						"name": "JBL Headphone",
 						"itemImg": [
-							"IMAGES/pro-img/6514486ld.webp",
-							"IMAGES/pro-img/6514486_rd.jpeg",
-							"IMAGES/pro-img/6514486_sd.jpeg",
-							"IMAGES/pro-img/6463749cv13d.jpeg"
+							"assets/images/pro-img/6514486ld.webp",
+							"assets/images/pro-img/6514486_rd.jpeg",
+							"assets/images/pro-img/6514486_sd.jpeg",
+							"assets/images/pro-img/6463749cv13d.jpeg"
 						],
 						"description1": "JBL Headphone - Black",
 						"description2": "",
@@ -2238,10 +2238,10 @@
 					"itemInfo": {
 						"name": "JBL Headphone",
 						"itemImg": [
-							"IMAGES/pro-img/6385493_sd.png",
-							"IMAGES/pro-img/6385493cv11d.jpeg",
-							"IMAGES/pro-img/6385493cv12d.jpeg",
-							"IMAGES/pro-img/6463749cv13d.jpeg"
+							"assets/images/pro-img/6385493_sd.png",
+							"assets/images/pro-img/6385493cv11d.jpeg",
+							"assets/images/pro-img/6385493cv12d.jpeg",
+							"assets/images/pro-img/6463749cv13d.jpeg"
 						],
 						"description1": "JBL Headphone - Red",
 						"description2": "",
@@ -2263,10 +2263,10 @@
 					"itemInfo": {
 						"name": "JBL Headphone",
 						"itemImg": [
-							"IMAGES/pro-img/6501224cv12d.webp",
-							"IMAGES/pro-img/6501224ld.jpeg",
-							"IMAGES/pro-img/6501224_rd.jpeg",
-							"IMAGES/pro-img/6501224_sd.jpeg"
+							"assets/images/pro-img/6501224cv12d.webp",
+							"assets/images/pro-img/6501224ld.jpeg",
+							"assets/images/pro-img/6501224_rd.jpeg",
+							"assets/images/pro-img/6501224_sd.jpeg"
 						],
 						"description1": "JBL Headphone - Black",
 						"description2": "",
@@ -2288,10 +2288,10 @@
 					"itemInfo": {
 						"name": "JBL Headphone",
 						"itemImg": [
-							"IMAGES/pro-img/6505728cv11d.png",
-							"IMAGES/pro-img/6505728ld.jpeg",
-							"IMAGES/pro-img/6505728_sd.jpeg",
-							"IMAGES/pro-img/6505728_rd.jpeg"
+							"assets/images/pro-img/6505728cv11d.png",
+							"assets/images/pro-img/6505728ld.jpeg",
+							"assets/images/pro-img/6505728_sd.jpeg",
+							"assets/images/pro-img/6505728_rd.jpeg"
 						],
 						"description1": "JBL Headphone - Cream",
 						"description2": "",
@@ -2312,7 +2312,7 @@
 					"id": "772828",
 					"itemInfo": {
 						"name": "JBL Headphone",
-						"itemImg": ["IMAGES/pro-img/headphone.png"],
+						"itemImg": ["assets/images/pro-img/headphone.png"],
 						"description1": "JBL Headphone - Cream",
 						"description2": "",
 						"newItemPrice": "1112",
@@ -2333,10 +2333,10 @@
 					"itemInfo": {
 						"name": "Sony Headphone",
 						"itemImg": [
-							"IMAGES/pro-img/6480256ld.webp",
-							"IMAGES/pro-img/6480256_sd.jpeg",
-							"IMAGES/pro-img/6480256_rd.jpeg",
-							"IMAGES/pro-img/6480256_bd.jpeg"
+							"assets/images/pro-img/6480256ld.webp",
+							"assets/images/pro-img/6480256_sd.jpeg",
+							"assets/images/pro-img/6480256_rd.jpeg",
+							"assets/images/pro-img/6480256_bd.jpeg"
 						],
 						"description1": "Sony - Ash",
 						"description2": "",
@@ -2358,8 +2358,8 @@
 					"itemInfo": {
 						"name": "Sony Headphone",
 						"itemImg": [
-							"IMAGES/pro-img/6471737_sd.png",
-							"IMAGES/pro-img/6471737_rd.jpeg"
+							"assets/images/pro-img/6471737_sd.png",
+							"assets/images/pro-img/6471737_rd.jpeg"
 						],
 						"description1": "Sony - Ash",
 						"description2": "",
@@ -2380,7 +2380,7 @@
 					"id": "188891",
 					"itemInfo": {
 						"name": "JBL Headphone",
-						"itemImg": ["IMAGES/pro-img/headphone.png"],
+						"itemImg": ["assets/images/pro-img/headphone.png"],
 						"description1": "JBL Headphone - Cream",
 						"description2": "",
 						"newItemPrice": "1112",
@@ -2401,10 +2401,10 @@
 					"itemInfo": {
 						"name": "JBL Airpod",
 						"itemImg": [
-							"IMAGES/pro-img/6495841cv12d.webp",
-							"IMAGES/pro-img/6495841ld.jpeg",
-							"IMAGES/pro-img/6495841cv11d.jpeg",
-							"IMAGES/pro-img/6495841_rd.jpeg"
+							"assets/images/pro-img/6495841cv12d.webp",
+							"assets/images/pro-img/6495841ld.jpeg",
+							"assets/images/pro-img/6495841cv11d.jpeg",
+							"assets/images/pro-img/6495841_rd.jpeg"
 						],
 						"description1": "JBL Airpod - Black",
 						"description2": "",
@@ -2428,11 +2428,11 @@
 					"itemInfo": {
 						"name": "Apple MacBook Pro 2022",
 						"itemImg": [
-							"IMAGES/pro-img/6450858_sd.webp",
-							"IMAGES/pro-img/6450858cv1d.jpeg",
-							"IMAGES/pro-img/6450858cv3d.jpeg",
-							"IMAGES/pro-img/6450858cv4d.jpeg",
-							"IMAGES/pro-img/6450858cv7d.jpeg"
+							"assets/images/pro-img/6450858_sd.webp",
+							"assets/images/pro-img/6450858cv1d.jpeg",
+							"assets/images/pro-img/6450858cv3d.jpeg",
+							"assets/images/pro-img/6450858cv4d.jpeg",
+							"assets/images/pro-img/6450858cv7d.jpeg"
 						],
 						"description1": "Apple MacBook Pro 2022 - Grey - Apple MacBook Pro 2022 - Grey",
 						"description2": "",
@@ -2457,10 +2457,10 @@
 					"itemInfo": {
 						"name": "Apple MacBook Air 2020",
 						"itemImg": [
-							"IMAGES/pro-img/6489618cv11d.png",
-							"IMAGES/pro-img/6489618cv12d.jpeg",
-							"IMAGES/pro-img/6489618cv14d.jpeg",
-							"IMAGES/pro-img/6489618cv15d.jpeg"
+							"assets/images/pro-img/6489618cv11d.png",
+							"assets/images/pro-img/6489618cv12d.jpeg",
+							"assets/images/pro-img/6489618cv14d.jpeg",
+							"assets/images/pro-img/6489618cv15d.jpeg"
 						],
 						"description1": "Apple MacBook Air 2020",
 						"description2": "",
@@ -2485,11 +2485,11 @@
 					"itemInfo": {
 						"name": "Apple MacBook Air 2020",
 						"itemImg": [
-							"IMAGES/pro-img/6489836_sd.png",
-							"IMAGES/pro-img/6489836cv11d.jpeg",
-							"IMAGES/pro-img/6489836cv12d.jpeg",
-							"IMAGES/pro-img/6489836cv13d.jpeg",
-							"IMAGES/pro-img/6489836cv14d.jpeg"
+							"assets/images/pro-img/6489836_sd.png",
+							"assets/images/pro-img/6489836cv11d.jpeg",
+							"assets/images/pro-img/6489836cv12d.jpeg",
+							"assets/images/pro-img/6489836cv13d.jpeg",
+							"assets/images/pro-img/6489836cv14d.jpeg"
 						],
 						"description1": "Apple MacBook Air 2020",
 						"description2": "",
@@ -2514,9 +2514,9 @@
 					"itemInfo": {
 						"name": "Apple MacBook Air 2020",
 						"itemImg": [
-							"IMAGES/pro-img/6489842_sd.webp",
-							"IMAGES/pro-img/6489842cv11d.jpeg",
-							"IMAGES/pro-img/6489842cv12d.jpeg"
+							"assets/images/pro-img/6489842_sd.webp",
+							"assets/images/pro-img/6489842cv11d.jpeg",
+							"assets/images/pro-img/6489842cv12d.jpeg"
 						],
 						"description1": "Apple MacBook Air 2020",
 						"description2": "",
@@ -2541,11 +2541,11 @@
 					"itemInfo": {
 						"name": "Apple MacBook Air 2020",
 						"itemImg": [
-							"IMAGES/pro-img/5721600_sd.webp",
-							"IMAGES/pro-img/5721600cv11d.jpeg",
-							"IMAGES/pro-img/6489842cv12d.jpeg",
-							"IMAGES/pro-img/5721600cv13d.jpeg",
-							"IMAGES/pro-img/5721600cv14d.jpeg"
+							"assets/images/pro-img/5721600_sd.webp",
+							"assets/images/pro-img/5721600cv11d.jpeg",
+							"assets/images/pro-img/6489842cv12d.jpeg",
+							"assets/images/pro-img/5721600cv13d.jpeg",
+							"assets/images/pro-img/5721600cv14d.jpeg"
 						],
 						"description1": "Apple MacBook Air 2020",
 						"description2": "",
@@ -2570,10 +2570,10 @@
 					"itemInfo": {
 						"name": "Apple MacBook Air 2020",
 						"itemImg": [
-							"IMAGES/pro-img/6455369_sd.webp",
-							"IMAGES/pro-img/6455369_rd.jpeg",
-							"IMAGES/pro-img/6450858cv7d.jpeg",
-							"IMAGES/pro-img/6450858cv4d.jpeg"
+							"assets/images/pro-img/6455369_sd.webp",
+							"assets/images/pro-img/6455369_rd.jpeg",
+							"assets/images/pro-img/6450858cv7d.jpeg",
+							"assets/images/pro-img/6450858cv4d.jpeg"
 						],
 						"description1": "Apple MacBook Air 2020",
 						"description2": "",
@@ -2597,7 +2597,7 @@
 					"id": "7716272",
 					"itemInfo": {
 						"name": "Apple MacBook Air 2020",
-						"itemImg": ["IMAGES/pro-img/6455369_sd.webp"],
+						"itemImg": ["assets/images/pro-img/6455369_sd.webp"],
 						"description1": "Apple MacBook Air 2020",
 						"description2": "",
 						"newItemPrice": "1100",
@@ -2620,7 +2620,7 @@
 					"id": "991838",
 					"itemInfo": {
 						"name": "Apple MacBook Air 2020",
-						"itemImg": ["IMAGES/pro-img/6413734_sd.png"],
+						"itemImg": ["assets/images/pro-img/6413734_sd.png"],
 						"description1": "Apple MacBook Air 2020",
 						"description2": "",
 						"newItemPrice": "1100",
@@ -2644,9 +2644,9 @@
 					"itemInfo": {
 						"name": "Apple MacBook Pro",
 						"itemImg": [
-							"IMAGES/pro-img/6509650_sd.png",
-							"IMAGES/pro-img/6509650cv11d.jpeg",
-							"IMAGES/pro-img/6509650cv12d.jpeg"
+							"assets/images/pro-img/6509650_sd.png",
+							"assets/images/pro-img/6509650cv11d.jpeg",
+							"assets/images/pro-img/6509650cv12d.jpeg"
 						],
 						"description1": "Apple MacBook Pro 2020",
 						"description2": "",
@@ -2671,9 +2671,9 @@
 					"itemInfo": {
 						"name": "Apple MacBook Pro",
 						"itemImg": [
-							"IMAGES/pro-img/6489721cv12d.webp",
-							"IMAGES/pro-img/6489721_sd.jpeg",
-							"IMAGES/pro-img/6515448cv11d.jpeg"
+							"assets/images/pro-img/6489721cv12d.webp",
+							"assets/images/pro-img/6489721_sd.jpeg",
+							"assets/images/pro-img/6515448cv11d.jpeg"
 						],
 						"description1": "Apple MacBook Pro 2020",
 						"description2": "",
@@ -2698,8 +2698,8 @@
 					"itemInfo": {
 						"name": "Apple MacBook Pro",
 						"itemImg": [
-							"IMAGES/pro-img/6515448_sd.png",
-							"IMAGES/pro-img/6515448cv12d.jpeg"
+							"assets/images/pro-img/6515448_sd.png",
+							"assets/images/pro-img/6515448cv12d.jpeg"
 						],
 						"description1": "Apple MacBook Pro 2020",
 						"description2": "",
@@ -2724,11 +2724,11 @@
 					"itemInfo": {
 						"name": "ASUS",
 						"itemImg": [
-							"IMAGES/pro-img/6492794_rd.webp",
-							"IMAGES/pro-img/6492794_sd.jpeg",
-							"IMAGES/pro-img/6492794cv1d.jpeg",
-							"IMAGES/pro-img/6492794cv3d.jpeg",
-							"IMAGES/pro-img/6492794cv10d.jpeg"
+							"assets/images/pro-img/6492794_rd.webp",
+							"assets/images/pro-img/6492794_sd.jpeg",
+							"assets/images/pro-img/6492794cv1d.jpeg",
+							"assets/images/pro-img/6492794cv3d.jpeg",
+							"assets/images/pro-img/6492794cv10d.jpeg"
 						],
 						"description1": "ASUS - White",
 						"description2": "",
@@ -2753,11 +2753,11 @@
 					"itemInfo": {
 						"name": "ASUS",
 						"itemImg": [
-							"IMAGES/pro-img/6501561_sd.png",
-							"IMAGES/pro-img/6501561_rd.jpeg",
-							"IMAGES/pro-img/6501561ld.jpeg",
-							"IMAGES/pro-img/6501561cv1d.jpeg",
-							"IMAGES/pro-img/6501561cv3d.jpeg"
+							"assets/images/pro-img/6501561_sd.png",
+							"assets/images/pro-img/6501561_rd.jpeg",
+							"assets/images/pro-img/6501561ld.jpeg",
+							"assets/images/pro-img/6501561cv1d.jpeg",
+							"assets/images/pro-img/6501561cv3d.jpeg"
 						],
 						"description1": "ASUS",
 						"description2": "",
@@ -2782,11 +2782,11 @@
 					"itemInfo": {
 						"name": "ASUS",
 						"itemImg": [
-							"IMAGES/pro-img/6494331_rd.png",
-							"IMAGES/pro-img/6494331_sd.jpeg",
-							"IMAGES/pro-img/6494331cv1d.jpeg",
-							"IMAGES/pro-img/6494331cv3d.jpeg",
-							"IMAGES/pro-img/6494331ld.jpeg"
+							"assets/images/pro-img/6494331_rd.png",
+							"assets/images/pro-img/6494331_sd.jpeg",
+							"assets/images/pro-img/6494331cv1d.jpeg",
+							"assets/images/pro-img/6494331cv3d.jpeg",
+							"assets/images/pro-img/6494331ld.jpeg"
 						],
 						"description1": "ASUS",
 						"description2": "",
@@ -2811,11 +2811,11 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6494580_sd.webp",
-							"IMAGES/pro-img/6494580cv11d.jpeg",
-							"IMAGES/pro-img/6494331cv1d.jpeg",
-							"IMAGES/pro-img/6494331cv3d.jpeg",
-							"IMAGES/pro-img/6494331ld.jpeg"
+							"assets/images/pro-img/6494580_sd.webp",
+							"assets/images/pro-img/6494580cv11d.jpeg",
+							"assets/images/pro-img/6494331cv1d.jpeg",
+							"assets/images/pro-img/6494331cv3d.jpeg",
+							"assets/images/pro-img/6494331ld.jpeg"
 						],
 						"description1": "ASUS Zebook - Silver",
 						"description2": "",
@@ -2840,11 +2840,11 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6535501_sd.png",
-							"IMAGES/pro-img/6535501_rd.jpeg",
-							"IMAGES/pro-img/6535501ld.jpeg",
-							"IMAGES/pro-img/6535501cv1d.jpeg",
-							"IMAGES/pro-img/6535501cv3d.jpeg"
+							"assets/images/pro-img/6535501_sd.png",
+							"assets/images/pro-img/6535501_rd.jpeg",
+							"assets/images/pro-img/6535501ld.jpeg",
+							"assets/images/pro-img/6535501cv1d.jpeg",
+							"assets/images/pro-img/6535501cv3d.jpeg"
 						],
 						"description1": "ASUS Zebook - Silver",
 						"description2": "",
@@ -2869,10 +2869,10 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6494642_sd.png",
-							"IMAGES/pro-img/6494642_rd.jpeg",
-							"IMAGES/pro-img/6494642ld.jpeg",
-							"IMAGES/pro-img/6494642cv1d.jpeg"
+							"assets/images/pro-img/6494642_sd.png",
+							"assets/images/pro-img/6494642_rd.jpeg",
+							"assets/images/pro-img/6494642ld.jpeg",
+							"assets/images/pro-img/6494642cv1d.jpeg"
 						],
 						"description1": "ASUS Zenbook - Black",
 						"description2": "",
@@ -2897,12 +2897,12 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6486485_sd.webp",
-							"IMAGES/pro-img/6486485ld.jpeg",
-							"IMAGES/pro-img/6486485cv1d.jpeg",
-							"IMAGES/pro-img/6486485cv3d.jpeg",
-							"IMAGES/pro-img/6486485cv4d.jpeg",
-							"IMAGES/pro-img/66486485cv7d.jpeg"
+							"assets/images/pro-img/6486485_sd.webp",
+							"assets/images/pro-img/6486485ld.jpeg",
+							"assets/images/pro-img/6486485cv1d.jpeg",
+							"assets/images/pro-img/6486485cv3d.jpeg",
+							"assets/images/pro-img/6486485cv4d.jpeg",
+							"assets/images/pro-img/66486485cv7d.jpeg"
 						],
 						"description1": "ASUS Zenbook - Black",
 						"description2": "",
@@ -2926,7 +2926,7 @@
 					"id": "447627",
 					"itemInfo": {
 						"name": "ASUS Zenbook",
-						"itemImg": ["IMAGES/pro-img/6494637_sd.png"],
+						"itemImg": ["assets/images/pro-img/6494637_sd.png"],
 						"description1": "ASUS Zenbook - Black",
 						"description2": "",
 						"newItemPrice": "1500",
@@ -2950,10 +2950,10 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6494637_rd.webp",
-							"IMAGES/pro-img/6494637ld.jpeg",
-							"IMAGES/pro-img/6494637cv1d.jpeg",
-							"IMAGES/pro-img/6513491_sd.jpeg"
+							"assets/images/pro-img/6494637_rd.webp",
+							"assets/images/pro-img/6494637ld.jpeg",
+							"assets/images/pro-img/6494637cv1d.jpeg",
+							"assets/images/pro-img/6513491_sd.jpeg"
 						],
 						"description1": "ASUS Zenbook - Black",
 						"description2": "",
@@ -2978,10 +2978,10 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6513491cv14d.webp",
-							"IMAGES/pro-img/6513491cv16d.jpeg",
-							"IMAGES/pro-img/6494637cv1d.jpeg",
-							"IMAGES/pro-img/6513491_sd.jpeg"
+							"assets/images/pro-img/6513491cv14d.webp",
+							"assets/images/pro-img/6513491cv16d.jpeg",
+							"assets/images/pro-img/6494637cv1d.jpeg",
+							"assets/images/pro-img/6513491_sd.jpeg"
 						],
 						"description1": "ASUS Zenbook - Black",
 						"description2": "",
@@ -3006,10 +3006,10 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6513491cv14d.webp",
-							"IMAGES/pro-img/6513491cv16d.jpeg",
-							"IMAGES/pro-img/6494637cv1d.jpeg",
-							"IMAGES/pro-img/6494580_sd.jpeg"
+							"assets/images/pro-img/6513491cv14d.webp",
+							"assets/images/pro-img/6513491cv16d.jpeg",
+							"assets/images/pro-img/6494637cv1d.jpeg",
+							"assets/images/pro-img/6494580_sd.jpeg"
 						],
 						"description1": "ASUS Zenbook - Black",
 						"description2": "",
@@ -3034,10 +3034,10 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6508083_sd.webp",
-							"IMAGES/pro-img/6508083_rd.jpeg",
-							"IMAGES/pro-img/6508083cv1d.jpeg",
-							"IMAGES/pro-img/6508083cv3d.jpeg"
+							"assets/images/pro-img/6508083_sd.webp",
+							"assets/images/pro-img/6508083_rd.jpeg",
+							"assets/images/pro-img/6508083cv1d.jpeg",
+							"assets/images/pro-img/6508083cv3d.jpeg"
 						],
 						"description1": "ASUS Zenbook - Black",
 						"description2": "",
@@ -3062,10 +3062,10 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6508083cv4d.webp",
-							"IMAGES/pro-img/6508083cv7d.jpeg",
-							"IMAGES/pro-img/6508083cv3d.jpeg",
-							"IMAGES/pro-img/6508083cv1d.jpeg"
+							"assets/images/pro-img/6508083cv4d.webp",
+							"assets/images/pro-img/6508083cv7d.jpeg",
+							"assets/images/pro-img/6508083cv3d.jpeg",
+							"assets/images/pro-img/6508083cv1d.jpeg"
 						],
 						"description1": "ASUS Zenbook - Black",
 						"description2": "",
@@ -3090,11 +3090,11 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6494331_sd.png",
-							"IMAGES/pro-img/6494331_rd.jpeg",
-							"IMAGES/pro-img/6494331ld.jpeg",
-							"IMAGES/pro-img/6494331cv1d.jpeg",
-							"IMAGES/pro-img/6494331cv3d.jpeg"
+							"assets/images/pro-img/6494331_sd.png",
+							"assets/images/pro-img/6494331_rd.jpeg",
+							"assets/images/pro-img/6494331ld.jpeg",
+							"assets/images/pro-img/6494331cv1d.jpeg",
+							"assets/images/pro-img/6494331cv3d.jpeg"
 						],
 						"description1": "ASUS Zenbook - Black",
 						"description2": "",
@@ -3119,10 +3119,10 @@
 					"itemInfo": {
 						"name": "HP Mini Pavilon",
 						"itemImg": [
-							"IMAGES/pro-img/6515546_sd.png",
-							"IMAGES/pro-img/6515546_rd.jpeg",
-							"IMAGES/pro-img/6515546ld.jpeg",
-							"IMAGES/pro-img/6515546cv1d.jpeg"
+							"assets/images/pro-img/6515546_sd.png",
+							"assets/images/pro-img/6515546_rd.jpeg",
+							"assets/images/pro-img/6515546ld.jpeg",
+							"assets/images/pro-img/6515546cv1d.jpeg"
 						],
 						"description1": "HP Pavilon Mini",
 						"description2": "",
@@ -3147,11 +3147,11 @@
 					"itemInfo": {
 						"name": "HP Pavilon",
 						"itemImg": [
-							"IMAGES/pro-img/6515546cv7d.webp",
-							"IMAGES/pro-img/6502179_sd.jpeg",
-							"IMAGES/pro-img/6502179_rd.jpeg",
-							"IMAGES/pro-img/6502179ld.jpeg",
-							"IMAGES/pro-img/6502179cv1d.jpeg"
+							"assets/images/pro-img/6515546cv7d.webp",
+							"assets/images/pro-img/6502179_sd.jpeg",
+							"assets/images/pro-img/6502179_rd.jpeg",
+							"assets/images/pro-img/6502179ld.jpeg",
+							"assets/images/pro-img/6502179cv1d.jpeg"
 						],
 						"description1": "HP Pavilon ",
 						"description2": "",
@@ -3176,11 +3176,11 @@
 					"itemInfo": {
 						"name": "Omen",
 						"itemImg": [
-							"IMAGES/pro-img/6503849_sd.png",
-							"IMAGES/pro-img/6503849_rd.jpeg",
-							"IMAGES/pro-img/6503849ld.jpeg",
-							"IMAGES/pro-img/6503849cv1d.jpeg",
-							"IMAGES/pro-img/6503849cv4d.jpeg"
+							"assets/images/pro-img/6503849_sd.png",
+							"assets/images/pro-img/6503849_rd.jpeg",
+							"assets/images/pro-img/6503849ld.jpeg",
+							"assets/images/pro-img/6503849cv1d.jpeg",
+							"assets/images/pro-img/6503849cv4d.jpeg"
 						],
 						"description1": "Omen",
 						"description2": "",
@@ -3205,9 +3205,9 @@
 					"itemInfo": {
 						"name": "Omen",
 						"itemImg": [
-							"IMAGES/pro-img/6503845_rd.png",
-							"IMAGES/pro-img/6503845ld.jpeg",
-							"IMAGES/pro-img/6503845cv1d.jpeg"
+							"assets/images/pro-img/6503845_rd.png",
+							"assets/images/pro-img/6503845ld.jpeg",
+							"assets/images/pro-img/6503845cv1d.jpeg"
 						],
 						"description1": "Omen",
 						"description2": "",
@@ -3232,9 +3232,9 @@
 					"itemInfo": {
 						"name": "Omen",
 						"itemImg": [
-							"IMAGES/pro-img/6503845_rd.png",
-							"IMAGES/pro-img/6503845ld.jpeg",
-							"IMAGES/pro-img/6503845cv1d.jpeg"
+							"assets/images/pro-img/6503845_rd.png",
+							"assets/images/pro-img/6503845ld.jpeg",
+							"assets/images/pro-img/6503845cv1d.jpeg"
 						],
 						"description1": "Omen",
 						"description2": "",
@@ -3259,9 +3259,9 @@
 					"itemInfo": {
 						"name": "HP Elite Pro Z20",
 						"itemImg": [
-							"IMAGES/pro-img/6502185_sd.png",
-							"IMAGES/pro-img/6502185_rd.jpeg",
-							"IMAGES/pro-img/6502185cv1d.jpeg"
+							"assets/images/pro-img/6502185_sd.png",
+							"assets/images/pro-img/6502185_rd.jpeg",
+							"assets/images/pro-img/6502185cv1d.jpeg"
 						],
 						"description1": "HP Elite Pro Z20",
 						"description2": "",
@@ -3286,11 +3286,11 @@
 					"itemInfo": {
 						"name": "HP Elite Pro Z20",
 						"itemImg": [
-							"IMAGES/pro-img/6499753_sd.webp",
-							"IMAGES/pro-img/6499753_rd.jpeg",
-							"IMAGES/pro-img/6499753ld.jpeg",
-							"IMAGES/pro-img/6499753cv1d.jpeg",
-							"IMAGES/pro-img/6499753cv3d.jpeg"
+							"assets/images/pro-img/6499753_sd.webp",
+							"assets/images/pro-img/6499753_rd.jpeg",
+							"assets/images/pro-img/6499753ld.jpeg",
+							"assets/images/pro-img/6499753cv1d.jpeg",
+							"assets/images/pro-img/6499753cv3d.jpeg"
 						],
 						"description1": "HP Elite Pro Z20",
 						"description2": "",
@@ -3315,11 +3315,11 @@
 					"itemInfo": {
 						"name": "Microsoft",
 						"itemImg": [
-							"IMAGES/pro-img/6505202cv14d.png",
-							"IMAGES/pro-img/6505202cv11d.jpeg",
-							"IMAGES/pro-img/6505202_sd.jpeg",
-							"IMAGES/pro-img/6505202cv12d.jpeg",
-							"IMAGES/pro-img/6505202cv15d.jpeg"
+							"assets/images/pro-img/6505202cv14d.png",
+							"assets/images/pro-img/6505202cv11d.jpeg",
+							"assets/images/pro-img/6505202_sd.jpeg",
+							"assets/images/pro-img/6505202cv12d.jpeg",
+							"assets/images/pro-img/6505202cv15d.jpeg"
 						],
 						"description1": "Microsoft",
 						"description2": "",
@@ -3344,9 +3344,9 @@
 					"itemInfo": {
 						"name": "Omen",
 						"itemImg": [
-							"IMAGES/pro-img/6503845_rd.png",
-							"IMAGES/pro-img/6503845ld.jpeg",
-							"IMAGES/pro-img/6503845cv1d.jpeg"
+							"assets/images/pro-img/6503845_rd.png",
+							"assets/images/pro-img/6503845ld.jpeg",
+							"assets/images/pro-img/6503845cv1d.jpeg"
 						],
 						"description1": "Omen",
 						"description2": "",
@@ -3371,11 +3371,11 @@
 					"itemInfo": {
 						"name": "ASUS Zenbook",
 						"itemImg": [
-							"IMAGES/pro-img/6498803ld.png",
-							"IMAGES/pro-img/6498803cv1d.jpeg",
-							"IMAGES/pro-img/6498803cv4d.jpeg",
-							"IMAGES/pro-img/6498803cv7d.jpeg",
-							"IMAGES/pro-img/6498803_rd.jpeg"
+							"assets/images/pro-img/6498803ld.png",
+							"assets/images/pro-img/6498803cv1d.jpeg",
+							"assets/images/pro-img/6498803cv4d.jpeg",
+							"assets/images/pro-img/6498803cv7d.jpeg",
+							"assets/images/pro-img/6498803_rd.jpeg"
 						],
 						"description1": "ASUS Zenbook",
 						"description2": "",
@@ -3400,9 +3400,9 @@
 					"itemInfo": {
 						"name": "HP Elite",
 						"itemImg": [
-							"IMAGES/pro-img/6517655_sd.png",
-							"IMAGES/pro-img/6517655cv11d.jpeg",
-							"IMAGES/pro-img/6517655cv12d.jpeg"
+							"assets/images/pro-img/6517655_sd.png",
+							"assets/images/pro-img/6517655cv11d.jpeg",
+							"assets/images/pro-img/6517655cv12d.jpeg"
 						],
 						"description1": "HP Elite",
 						"description2": "",
@@ -3428,7 +3428,7 @@
 					"id": "494991",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/try8.webp"],
+						"itemImg": ["assets/images/pro-img/try8.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3449,7 +3449,7 @@
 					"id": "949910",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/tyr77.png"],
+						"itemImg": ["assets/images/pro-img/tyr77.png"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3470,7 +3470,7 @@
 					"id": "9492891",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/try6.webp"],
+						"itemImg": ["assets/images/pro-img/try6.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3491,7 +3491,7 @@
 					"id": "944289",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/try5.webp"],
+						"itemImg": ["assets/images/pro-img/try5.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3512,7 +3512,7 @@
 					"id": "492991",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/try4.webp"],
+						"itemImg": ["assets/images/pro-img/try4.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3533,7 +3533,7 @@
 					"id": "4924294",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/try3.webp"],
+						"itemImg": ["assets/images/pro-img/try3.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3554,7 +3554,7 @@
 					"id": "4299911",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/try2.webp"],
+						"itemImg": ["assets/images/pro-img/try2.webp"],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3575,7 +3575,9 @@
 					"id": "849291",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/pngfind.com-apple-tv-png-6649938.webp"],
+						"itemImg": [
+							"assets/images/pro-img/pngfind.com-apple-tv-png-6649938.webp"
+						],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3597,7 +3599,7 @@
 					"itemInfo": {
 						"name": "Hisense",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-wall-led-tv-png-6207876.webp"
+							"assets/images/pro-img/pngfind.com-wall-led-tv-png-6207876.webp"
 						],
 						"description1": "Hisense TV",
 						"description2": "",
@@ -3620,7 +3622,7 @@
 					"itemInfo": {
 						"name": "Hisense",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-tv-top-view-png-3722350.webp"
+							"assets/images/pro-img/pngfind.com-tv-top-view-png-3722350.webp"
 						],
 						"description1": "Hisense TV",
 						"description2": "",
@@ -3642,7 +3644,9 @@
 					"id": "825838",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/pngfind.com-tv-png-6141897.webp"],
+						"itemImg": [
+							"assets/images/pro-img/pngfind.com-tv-png-6141897.webp"
+						],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3663,7 +3667,9 @@
 					"id": "881848",
 					"itemInfo": {
 						"name": "Hisense",
-						"itemImg": ["IMAGES/pro-img/pngfind.com-tv-png-1036874.webp"],
+						"itemImg": [
+							"assets/images/pro-img/pngfind.com-tv-png-1036874.webp"
+						],
 						"description1": "Hisense TV",
 						"description2": "",
 						"newItemPrice": "928",
@@ -3684,7 +3690,7 @@
 					"id": "482194",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/pngfind.com-tv-png-604165.webp"],
+						"itemImg": ["assets/images/pro-img/pngfind.com-tv-png-604165.webp"],
 						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "999",
@@ -3705,7 +3711,9 @@
 					"id": "489192",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/pngfind.com-tv-frame-png-2260206.webp"],
+						"itemImg": [
+							"assets/images/pro-img/pngfind.com-tv-frame-png-2260206.webp"
+						],
 						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "999",
@@ -3727,7 +3735,7 @@
 					"itemInfo": {
 						"name": "LG",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-television-png-3239976.webp"
+							"assets/images/pro-img/pngfind.com-television-png-3239976.webp"
 						],
 						"description1": "LG TV",
 						"description2": "",
@@ -3749,7 +3757,9 @@
 					"id": "4881893",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/pngfind.com-smart-tv-png-6086400.webp"],
+						"itemImg": [
+							"assets/images/pro-img/pngfind.com-smart-tv-png-6086400.webp"
+						],
 						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "999",
@@ -3770,7 +3780,9 @@
 					"id": "4881893",
 					"itemInfo": {
 						"name": "LG",
-						"itemImg": ["IMAGES/pro-img/pngfind.com-apple-tv-png-6650041.webp"],
+						"itemImg": [
+							"assets/images/pro-img/pngfind.com-apple-tv-png-6650041.webp"
+						],
 						"description1": "LG TV",
 						"description2": "",
 						"newItemPrice": "999",
@@ -3792,7 +3804,7 @@
 					"itemInfo": {
 						"name": "LG",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-samsung-tv-png-5392498.webp"
+							"assets/images/pro-img/pngfind.com-samsung-tv-png-5392498.webp"
 						],
 						"description1": "LG TV",
 						"description2": "",
@@ -3815,7 +3827,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-samsung-tv-png-5392548.webp"
+							"assets/images/pro-img/pngfind.com-samsung-tv-png-5392548.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3838,7 +3850,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-3123133.webp"
+							"assets/images/pro-img/pngfind.com-samsung-led-tv-png-3123133.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3861,7 +3873,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-3123130.webp"
+							"assets/images/pro-img/pngfind.com-samsung-led-tv-png-3123130.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3884,7 +3896,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-3123104.webp"
+							"assets/images/pro-img/pngfind.com-samsung-led-tv-png-3123104.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3907,7 +3919,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-2220829.webp"
+							"assets/images/pro-img/pngfind.com-samsung-led-tv-png-2220829.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3930,7 +3942,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-2220242.webp"
+							"assets/images/pro-img/pngfind.com-samsung-led-tv-png-2220242.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3954,7 +3966,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-1457864.webp"
+							"assets/images/pro-img/pngfind.com-samsung-led-tv-png-1457864.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -3978,7 +3990,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-1457255.webp"
+							"assets/images/pro-img/pngfind.com-samsung-led-tv-png-1457255.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -4001,7 +4013,7 @@
 					"itemInfo": {
 						"name": "Samsung",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-samsung-led-tv-png-1456870.webp"
+							"assets/images/pro-img/pngfind.com-samsung-led-tv-png-1456870.webp"
 						],
 						"description1": "Samsung TV",
 						"description2": "",
@@ -4023,7 +4035,9 @@
 					"id": "49199819",
 					"itemInfo": {
 						"name": "Samsung",
-						"itemImg": ["IMAGES/pro-img/pngfind.com-live-tv-png-5294774.webp"],
+						"itemImg": [
+							"assets/images/pro-img/pngfind.com-live-tv-png-5294774.webp"
+						],
 						"description1": "Samsung TV",
 						"description2": "",
 						"newItemPrice": "1600",
@@ -4045,7 +4059,9 @@
 					"id": "8191938",
 					"itemInfo": {
 						"name": "Samsung",
-						"itemImg": ["IMAGES/pro-img/pngfind.com-led-tvs-png-5392992.webp"],
+						"itemImg": [
+							"assets/images/pro-img/pngfind.com-led-tvs-png-5392992.webp"
+						],
 						"description1": "Samsung TV",
 						"description2": "",
 						"newItemPrice": "1600",
@@ -4068,7 +4084,7 @@
 					"itemInfo": {
 						"name": "LG",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-led-tv-png-lg-5994058.webp"
+							"assets/images/pro-img/pngfind.com-led-tv-png-lg-5994058.webp"
 						],
 						"description1": "LG TV",
 						"description2": "",
@@ -4091,7 +4107,7 @@
 					"itemInfo": {
 						"name": "Toshiba",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-led-tv-images-png-2500423.webp"
+							"assets/images/pro-img/pngfind.com-led-tv-images-png-2500423.webp"
 						],
 						"description1": "Toshiba TV",
 						"description2": "",
@@ -4114,7 +4130,7 @@
 					"itemInfo": {
 						"name": "Toshiba",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-led-tv-images-png-2500416.webp"
+							"assets/images/pro-img/pngfind.com-led-tv-images-png-2500416.webp"
 						],
 						"description1": "Toshiba TV",
 						"description2": "",
@@ -4136,7 +4152,9 @@
 					"id": "482919",
 					"itemInfo": {
 						"name": "Toshiba",
-						"itemImg": ["IMAGES/pro-img/pngfind.com-hd-tv-png-6136704.webp"],
+						"itemImg": [
+							"assets/images/pro-img/pngfind.com-hd-tv-png-6136704.webp"
+						],
 						"description1": "Toshiba TV",
 						"description2": "",
 						"newItemPrice": "300",
@@ -4158,7 +4176,7 @@
 					"itemInfo": {
 						"name": "LG",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-flat-screen-tv-png-3193976.webp"
+							"assets/images/pro-img/pngfind.com-flat-screen-tv-png-3193976.webp"
 						],
 						"description1": "LG TV",
 						"description2": "",
@@ -4181,7 +4199,7 @@
 					"itemInfo": {
 						"name": "LG",
 						"itemImg": [
-							"IMAGES/pro-img/pngfind.com-flat-screen-tv-on-3513033.webp"
+							"assets/images/pro-img/pngfind.com-flat-screen-tv-on-3513033.webp"
 						],
 						"description1": "LG TV",
 						"description2": "",
@@ -4209,9 +4227,9 @@
 			"itemInfo": {
 				"name": "PS 4",
 				"itemImg": [
-					"IMAGES/pro-img/pngfind.com-ps4-cover-png-4164715.webp",
-					"IMAGES/pro-img/41A5YRynOAL._SL1000_.jpg",
-					"IMAGES/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
+					"assets/images/pro-img/pngfind.com-ps4-cover-png-4164715.webp",
+					"assets/images/pro-img/41A5YRynOAL._SL1000_.jpg",
+					"assets/images/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
 				],
 				"description1": "PS 4",
 				"description2": "",
@@ -4233,10 +4251,10 @@
 			"itemInfo": {
 				"name": "iPhone 13",
 				"itemImg": [
-					"IMAGES/pro-img/6487295_sd.webp",
-					"IMAGES/pro-img/6487295cv1d.jpeg",
-					"IMAGES/pro-img/6487295cv2d.jpeg",
-					"IMAGES/pro-img/6487295cv11d.jpeg"
+					"assets/images/pro-img/6487295_sd.webp",
+					"assets/images/pro-img/6487295cv1d.jpeg",
+					"assets/images/pro-img/6487295cv2d.jpeg",
+					"assets/images/pro-img/6487295cv11d.jpeg"
 				],
 				"description1": "iPhone 13 - Green",
 				"description2": "",
@@ -4259,11 +4277,11 @@
 			"itemInfo": {
 				"name": "Apple MacBook Pro 2022",
 				"itemImg": [
-					"IMAGES/pro-img/6450858_sd.webp",
-					"IMAGES/pro-img/6450858cv1d.jpeg",
-					"IMAGES/pro-img/6450858cv3d.jpeg",
-					"IMAGES/pro-img/6450858cv4d.jpeg",
-					"IMAGES/pro-img/6450858cv7d.jpeg"
+					"assets/images/pro-img/6450858_sd.webp",
+					"assets/images/pro-img/6450858cv1d.jpeg",
+					"assets/images/pro-img/6450858cv3d.jpeg",
+					"assets/images/pro-img/6450858cv4d.jpeg",
+					"assets/images/pro-img/6450858cv7d.jpeg"
 				],
 				"description1": "Apple MacBook Pro 2022 - Grey",
 				"description2": "",
@@ -4288,11 +4306,11 @@
 			"itemInfo": {
 				"name": "JBL Flip 5",
 				"itemImg": [
-					"IMAGES/pro-img/6356535_sd.png",
-					"IMAGES/pro-img/6356535cv11d.jpeg",
-					"IMAGES/pro-img/6356535cv12d.jpeg",
-					"IMAGES/pro-img/6356535cv13d.jpeg",
-					"IMAGES/pro-img/6356535ld.jpeg"
+					"assets/images/pro-img/6356535_sd.png",
+					"assets/images/pro-img/6356535cv11d.jpeg",
+					"assets/images/pro-img/6356535cv12d.jpeg",
+					"assets/images/pro-img/6356535cv13d.jpeg",
+					"assets/images/pro-img/6356535ld.jpeg"
 				],
 				"description1": "JBL Flip 5 - Black",
 				"description2": "",
@@ -4313,7 +4331,7 @@
 			"id": "4929194",
 			"itemInfo": {
 				"name": "Hisense",
-				"itemImg": ["IMAGES/pro-img/try8.webp"],
+				"itemImg": ["assets/images/pro-img/try8.webp"],
 				"description1": "Hisense TV",
 				"description2": "",
 				"newItemPrice": "928",
@@ -4335,10 +4353,10 @@
 			"itemInfo": {
 				"name": "Samsung S22 Ultra",
 				"itemImg": [
-					"IMAGES/pro-img/6472835_sd.png",
-					"IMAGES/pro-img/6472835cv11d.jpeg",
-					"IMAGES/pro-img/6472835_rd.jpeg",
-					"IMAGES/pro-img/6472835ld.jpeg"
+					"assets/images/pro-img/6472835_sd.png",
+					"assets/images/pro-img/6472835cv11d.jpeg",
+					"assets/images/pro-img/6472835_rd.jpeg",
+					"assets/images/pro-img/6472835ld.jpeg"
 				],
 				"description1": "Samsung S22 Ultra - Wine",
 				"description2": "",
@@ -4363,7 +4381,7 @@
 			"id": "84272",
 			"itemInfo": {
 				"name": "Xbox",
-				"itemImg": ["IMAGES/pro-img/61RA2sUPu+L._SL1000_.webp"],
+				"itemImg": ["assets/images/pro-img/61RA2sUPu+L._SL1000_.webp"],
 				"description1": "XBOX",
 				"description2": "",
 				"newItemPrice": "1112",
@@ -4384,8 +4402,8 @@
 			"itemInfo": {
 				"name": "Samsung S15",
 				"itemImg": [
-					"IMAGES/pro-img/61b7ywCsH2L._AC_SX679_.webp",
-					"IMAGES/pro-img/61G1cC5bTYL._AC_SX679_.jpg"
+					"assets/images/pro-img/61b7ywCsH2L._AC_SX679_.webp",
+					"assets/images/pro-img/61G1cC5bTYL._AC_SX679_.jpg"
 				],
 				"description1": "Samsung S15 - Blue",
 				"description2": "",
@@ -4408,11 +4426,11 @@
 			"itemInfo": {
 				"name": "JBL Flip 5",
 				"itemImg": [
-					"IMAGES/pro-img/6488913_rd.png",
-					"IMAGES/pro-img/6488913_sd.jpeg",
-					"IMAGES/pro-img/6488913cv1d.jpeg",
-					"IMAGES/pro-img/6488913cv11d.jpeg",
-					"IMAGES/pro-img/6488913ld.jpeg"
+					"assets/images/pro-img/6488913_rd.png",
+					"assets/images/pro-img/6488913_sd.jpeg",
+					"assets/images/pro-img/6488913cv1d.jpeg",
+					"assets/images/pro-img/6488913cv11d.jpeg",
+					"assets/images/pro-img/6488913ld.jpeg"
 				],
 				"description1": "JBL Charge 5 - Blue",
 				"description2": "",
@@ -4434,10 +4452,10 @@
 			"itemInfo": {
 				"name": "Apple MacBook Air 2020",
 				"itemImg": [
-					"IMAGES/pro-img/6455369_sd.webp",
-					"IMAGES/pro-img/6455369_rd.jpeg",
-					"IMAGES/pro-img/6450858cv7d.jpeg",
-					"IMAGES/pro-img/6450858cv4d.jpeg"
+					"assets/images/pro-img/6455369_sd.webp",
+					"assets/images/pro-img/6455369_rd.jpeg",
+					"assets/images/pro-img/6450858cv7d.jpeg",
+					"assets/images/pro-img/6450858cv4d.jpeg"
 				],
 				"description1": "Apple MacBook Air 2020",
 				"description2": "",
@@ -4461,7 +4479,7 @@
 			"id": "4929324",
 			"itemInfo": {
 				"name": "Hisense",
-				"itemImg": ["IMAGES/pro-img/try3.webp"],
+				"itemImg": ["assets/images/pro-img/try3.webp"],
 				"description1": "Hisense TV",
 				"description2": "",
 				"newItemPrice": "928",

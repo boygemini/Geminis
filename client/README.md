@@ -1,2 +1,0 @@
-# Geministore
-E-commerce website

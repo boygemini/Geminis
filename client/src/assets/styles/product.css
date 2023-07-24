@@ -598,14 +598,14 @@ nav ul li {
 }
 
 #lbtn {
-	background-image: url(IMAGES/goleft.png);
+	background-image: url(../images/goleft.png);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 #rbtn {
-	background-image: url(IMAGES/goright.png);
+	background-image: url(../images/goright.png);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -651,7 +651,7 @@ nav ul li {
 	justify-content: center;
 	align-items: center;
 	width: 100px;
-	/* background-image: url(IMAGES/ipad1.jpg); */
+	/* background-image: url(../images/ipad1.jpg); */
 }
 
 .tbcon-in {
@@ -1565,7 +1565,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(IMAGES/search.png);
+		/* background-image: url(../images/search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */
@@ -1789,7 +1789,7 @@ footer {
 		width: auto;
 		padding: 15px;
 		position: relative;
-		/* background-image: url(IMAGES/search.png);
+		/* background-image: url(../images/search.png);
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat; */

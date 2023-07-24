@@ -8,7 +8,7 @@
 function storeItemsIfNotAlreadyStored() {
 	if (localStorage.StoreItems === undefined) {
 		let product_request = new XMLHttpRequest();
-		product_request.open("GET", "product.json", false);
+		product_request.open("GET", "../product.json", false);
 		product_request.onload = function () {
 			if (product_request.status === 200) {
 				localStorage.StoreItems = this.responseText;
@@ -327,7 +327,7 @@ class Products {
 	// LOAD ALL PRODUCTS AND SAVE THEM TO THE LOCALSTORAGE
 	static selectedForYou() {
 		let product_request = new XMLHttpRequest();
-		product_request.open("GET", "product.json", false);
+		product_request.open("GET", "../product.json", false);
 		product_request.onload = function () {
 			if (product_request.status === 200) {
 				localStorage.StoreItems = this.responseText;
