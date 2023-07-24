@@ -14,15 +14,9 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/pngfind.com-xbox-controller-png-9253.webp",
-							"IMAGES/pro-img/51vRipjKjML._SL1200_.jpg",
-							"IMAGES/pro-img/61-uVCKZhtL._SL1200_.jpg"
-=======
 							"assets/images/pro-img/pngfind.com-xbox-controller-png-9253.webp",
 							"assets/images/pro-img/51vRipjKjML._SL1200_.jpg",
 							"assets/images/pro-img/61-uVCKZhtL._SL1200_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -44,17 +38,10 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/51hV2qz3WuL._AC_SL1080_.webp",
-							"IMAGES/pro-img/51GONCGpiWL._AC_SL1200_.jpg",
-							"IMAGES/pro-img/51MeEV7Bu6L._AC_SL1200_.jpg",
-							"IMAGES/pro-img/41lfqMsh3+S._AC_SL1200_.jpg"
-=======
 							"assets/images/pro-img/51hV2qz3WuL._AC_SL1080_.webp",
 							"assets/images/pro-img/51GONCGpiWL._AC_SL1200_.jpg",
 							"assets/images/pro-img/51MeEV7Bu6L._AC_SL1200_.jpg",
 							"assets/images/pro-img/41lfqMsh3+S._AC_SL1200_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -76,11 +63,7 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/pngfind.com-xbox-360-console-png-4295427.webp"
-=======
 							"assets/images/pro-img/pngfind.com-xbox-360-console-png-4295427.webp"
->>>>>>> master:client/product.json
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -102,11 +85,7 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/pngfind.com-xbox-live-png-4855673.webp"
-=======
 							"assets/images/pro-img/pngfind.com-xbox-live-png-4855673.webp"
->>>>>>> master:client/product.json
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -128,17 +107,10 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/pngfind.com-xbox-controller-png-9253.webp",
-							"IMAGES/pro-img/51e2Q-TWUEL._SL1200_.jpg",
-							"IMAGES/pro-img/51J7qkVOezL._SL1000_.jpg",
-							"IMAGES/pro-img/61jkjQejpyL._SL1000_.jpg"
-=======
 							"assets/images/pro-img/pngfind.com-xbox-controller-png-9253.webp",
 							"assets/images/pro-img/51e2Q-TWUEL._SL1200_.jpg",
 							"assets/images/pro-img/51J7qkVOezL._SL1000_.jpg",
 							"assets/images/pro-img/61jkjQejpyL._SL1000_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -159,11 +131,7 @@
 					"id": "84272",
 					"itemInfo": {
 						"name": "Xbox",
-<<<<<<< HEAD:product.json
-						"itemImg": ["IMAGES/pro-img/61RA2sUPu+L._SL1000_.webp"],
-=======
 						"itemImg": ["assets/images/pro-img/61RA2sUPu+L._SL1000_.webp"],
->>>>>>> master:client/product.json
 						"description1": "XBOX",
 						"description2": "",
 						"newItemPrice": "1112",
@@ -184,15 +152,9 @@
 					"itemInfo": {
 						"name": "Xbox 3",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/61BEpu+HTAL._SL1500_.webp",
-							"IMAGES/pro-img/612YEtRWckL._SL1500_.jpg",
-							"IMAGES/pro-img/51eOztNdCkL._SL1500_.jpg"
-=======
 							"assets/images/pro-img/61BEpu+HTAL._SL1500_.webp",
 							"assets/images/pro-img/612YEtRWckL._SL1500_.jpg",
 							"assets/images/pro-img/51eOztNdCkL._SL1500_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "PS 5",
 						"description2": "",
@@ -214,13 +176,8 @@
 					"itemInfo": {
 						"name": "PS 2",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/61pETE6v4vL._SL1500_.webp",
-							"IMAGES/pro-img/51EhttI30bL._SL1200_.jpg"
-=======
 							"assets/images/pro-img/61pETE6v4vL._SL1500_.webp",
 							"assets/images/pro-img/51EhttI30bL._SL1200_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "PS 2",
 						"description2": "",
@@ -242,19 +199,11 @@
 					"itemInfo": {
 						"name": "PS 4",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/pngfind.com-ps4-png-520012.webp",
-							"IMAGES/pro-img/71-WrFQo1FL._SL1500_.jpg",
-							"IMAGES/pro-img/71XrnwP7yjL._SL1500_.jpg",
-							"IMAGES/pro-img/ipad2.webp",
-							"IMAGES/pro-img/ipad2.webp"
-=======
 							"assets/images/pro-img/pngfind.com-ps4-png-520012.webp",
 							"assets/images/pro-img/71-WrFQo1FL._SL1500_.jpg",
 							"assets/images/pro-img/71XrnwP7yjL._SL1500_.jpg",
 							"assets/images/pro-img/ipad2.webp",
 							"assets/images/pro-img/ipad2.webp"
->>>>>>> master:client/product.json
 						],
 						"description1": "PS 4",
 						"description2": "",
@@ -276,13 +225,8 @@
 					"itemInfo": {
 						"name": "PS 2",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/81bHi3vo88L._SL1500_.webp",
-							"IMAGES/pro-img/81HMFRvlxiL._SL1500_.jpg"
-=======
 							"assets/images/pro-img/81bHi3vo88L._SL1500_.webp",
 							"assets/images/pro-img/81HMFRvlxiL._SL1500_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "PS 2",
 						"description2": "",
@@ -304,19 +248,11 @@
 					"itemInfo": {
 						"name": "PS 5",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/51C0Nbg5QNL._SL1500_.webp",
-							"IMAGES/pro-img/61U86M+XTlL._SL1500_.jpg",
-							"IMAGES/pro-img/61kg+jnrz0L._SL1500_.jpg",
-							"IMAGES/pro-img/61T9Sylvn6L._SL1500_.jpg",
-							"IMAGES/pro-img/51fySIAYsCL._SL1450_.jpg"
-=======
 							"assets/images/pro-img/51C0Nbg5QNL._SL1500_.webp",
 							"assets/images/pro-img/61U86M+XTlL._SL1500_.jpg",
 							"assets/images/pro-img/61kg+jnrz0L._SL1500_.jpg",
 							"assets/images/pro-img/61T9Sylvn6L._SL1500_.jpg",
 							"assets/images/pro-img/51fySIAYsCL._SL1450_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "PS 5",
 						"description2": "",
@@ -338,15 +274,9 @@
 					"itemInfo": {
 						"name": "PS 5",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/61WnudgMYwL._AC_SL1500_.webp",
-							"IMAGES/pro-img/61BQMgRgqfL._AC_SL1500_.jpg",
-							"IMAGES/pro-img/61muxUUn0NL._AC_SL1500_.jpg"
-=======
 							"assets/images/pro-img/61WnudgMYwL._AC_SL1500_.webp",
 							"assets/images/pro-img/61BQMgRgqfL._AC_SL1500_.jpg",
 							"assets/images/pro-img/61muxUUn0NL._AC_SL1500_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "PS 5",
 						"description2": "",
@@ -368,15 +298,9 @@
 					"itemInfo": {
 						"name": "PS 4",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/pngfind.com-ps4-cover-png-4164715.webp",
-							"IMAGES/pro-img/41A5YRynOAL._SL1000_.jpg",
-							"IMAGES/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
-=======
 							"assets/images/pro-img/pngfind.com-ps4-cover-png-4164715.webp",
 							"assets/images/pro-img/41A5YRynOAL._SL1000_.jpg",
 							"assets/images/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "PS 4",
 						"description2": "",
@@ -398,17 +322,10 @@
 					"itemInfo": {
 						"name": "PS 4",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/pngfind.com-ps4-pro-png-2649225.webp",
-							"IMAGES/pro-img/51SmNTnYT2L._SL1500_.webp",
-							"IMAGES/pro-img/61dXkVvoq6L._SL1500_.jpg",
-							"IMAGES/pro-img/718xi8SwUUL._SL1500_.jpg"
-=======
 							"assets/images/pro-img/pngfind.com-ps4-pro-png-2649225.webp",
 							"assets/images/pro-img/51SmNTnYT2L._SL1500_.webp",
 							"assets/images/pro-img/61dXkVvoq6L._SL1500_.jpg",
 							"assets/images/pro-img/718xi8SwUUL._SL1500_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "PS 4",
 						"description2": "",
@@ -430,15 +347,9 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/717JafCjCAL._SL1500_.webp",
-							"IMAGES/pro-img/712VxqaHDvL._SL1500_.jpg",
-							"IMAGES/pro-img/8192qTuzoEL._SL1500_.jpg"
-=======
 							"assets/images/pro-img/717JafCjCAL._SL1500_.webp",
 							"assets/images/pro-img/712VxqaHDvL._SL1500_.jpg",
 							"assets/images/pro-img/8192qTuzoEL._SL1500_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "XBOX",
 						"description2": "",
@@ -460,15 +371,9 @@
 					"itemInfo": {
 						"name": "Xbox",
 						"itemImg": [
-<<<<<<< HEAD:product.json
-							"IMAGES/pro-img/61gjug2NzvL._SL1500_.webp",
-							"IMAGES/pro-img/616-K1n0NeL._SL1500_.jpg",
-							"IMAGES/pro-img/61H-v5npLZL._SL1500_.jpg"
-=======
 							"assets/images/pro-img/61gjug2NzvL._SL1500_.webp",
 							"assets/images/pro-img/616-K1n0NeL._SL1500_.jpg",
 							"assets/images/pro-img/61H-v5npLZL._SL1500_.jpg"
->>>>>>> master:client/product.json
 						],
 						"description1": "Lorem ipsum dolor sit amet",
 						"description2": "",
@@ -4322,15 +4227,9 @@
 			"itemInfo": {
 				"name": "PS 4",
 				"itemImg": [
-<<<<<<< HEAD:product.json
-					"IMAGES/pro-img/pngfind.com-ps4-cover-png-4164715.webp",
-					"IMAGES/pro-img/41A5YRynOAL._SL1000_.jpg",
-					"IMAGES/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
-=======
 					"assets/images/pro-img/pngfind.com-ps4-cover-png-4164715.webp",
 					"assets/images/pro-img/41A5YRynOAL._SL1000_.jpg",
 					"assets/images/pro-img/51tbWVPtckL._AC_SL1500_.jpg"
->>>>>>> master:client/product.json
 				],
 				"description1": "PS 4",
 				"description2": "",
