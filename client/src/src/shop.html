@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="shop" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
+		<title>Shop</title>
+		<link rel="stylesheet" href="assets/styles/shop.css" preload />
+		<link rel="stylesheet" href="assets/styles/gemfonts.css" preload />
+		<script src="assets/js/shop.js" defer></script>
+		<script src="assets/js/search.js" defer></script>
+		<script src="assets/js/filters.js" defer></script>
+	</head>
+
+	<body id="bodyy">
+		<section class="slimbanner" id="slimbanner">
+			<div class="slimcontent">
+				<div class="slimb-left">
+					<p>Open doors to a world of Electronics</p>
+					<hr class="vhr" />
+					<p class="dis-more">Discover More</p>
+				</div>
+				<div class="slimb-right">
+					<p>English</p>
+					<p>USD</p>
+				</div>
+			</div>
+		</section>
+		<section id="body">
+			<section class="top-nav">
+				<div class="logo-nav">
+					<nav id="nav-and-products">
+						<img
+							src="assets/images/menu.png"
+							alt=""
+							id="mb"
+							class="menu"
+							onclick="openMenu()"
+						/>
+						<a href="index.html" class="logo" id="mob-logo">Geminis.</a>
+						<div class="products">
+							<div class="main-links">
+								<a id="" href="shop.html">Shop</a>
+								<a id="" href="#">Products</a>
+								<a id="" href="#">About Us</a>
+								<a id="" href="#">Contact Us</a>
+							</div>
+						</div>
+					</nav>
+					<div class="justme">
+						<a href="index.html" class="logo" id="web-logo">Geminis.</a>
+					</div>
+					<div class="login-cart">
+						<div class="search-section search-web">
+							<input
+								type="search"
+								class="search"
+								name="search"
+								placeholder="Search..."
+								autocomplete="off"
+								onclick="openSearch()"
+							/>
+							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
+							<div class="serc-img">
+								<img
+									src="assets/images/search.png"
+									alt=""
+									srcset=""
+									onclick="openSearch()"
+								/>
+							</div>
+						</div>
+						<div class="cart-box" id="searc-cart" onclick="openSearch()">
+							<img
+								src="assets/images/search.png"
+								id="mob-search-icon"
+								alt=""
+								srcset=""
+								onclick="openSearch()"
+							/>
+						</div>
+						<a href="cart.html" class="cart-box">
+							<img src="assets/images/shopping-cart.png" alt="" srcset="" />
+							<p id="items-in-cart">0</p>
+						</a>
+						<button type="button" class="login">Login</button>
+						<div class="account cart-box">
+							<img src="assets/images/user.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="menu-box" id="menu">
+					<div class="menu-heading">
+						<h1>Menu</h1>
+						<img
+							class="cancel"
+							onclick="closeMenu()"
+							src="assets/images/close.png"
+						/>
+					</div>
+					<div class="main-menu">
+						<div class="menu-cat">
+							<h1>Shop By Department</h1>
+							<div id="kk">
+<<<<<<<< HEAD:src/src/shop.html
+<<<<<<< HEAD:gemshop.html
+								<a href="gemshop.html?category=cellphones&Order=Random&Page=0"
+========
+								<a href="shop.html?category=cellphones&Order=Random&Page=0"
+>>>>>>>> origin/gh-pages:src/shop.html
+									>Cell Phones</a
+								>
+								<a href="shop.html?category=tv&Order=Random&Page=0"
+									>Televisions</a
+								>
+								<a href="shop.html?category=computers&Order=Random&Page=0"
+									>Laptops & Computers</a
+								>
+								<a href="shop.html?category=speakers&Order=Random&Page=0"
+									>Speakers</a
+								>
+<<<<<<<< HEAD:src/src/shop.html
+								<a href="gemshop.html?category=gaming&Order=Random&Page=0"
+=======
+								<a href="shop.html?category=cellphones&Order=Random&Page=0"
+									>Cell Phones</a
+								>
+								<a href="shop.html?category=tv&Order=Random&Page=0"
+									>Televisions</a
+								>
+								<a href="shop.html?category=computers&Order=Random&Page=0"
+									>Laptops & Computers</a
+								>
+								<a href="shop.html?category=speakers&Order=Random&Page=0"
+									>Speakers</a
+								>
+								<a href="shop.html?category=gaming&Order=Random&Page=0"
+>>>>>>> master:client/src/shop.html
+========
+								<a href="shop.html?category=gaming&Order=Random&Page=0"
+>>>>>>>> origin/gh-pages:src/shop.html
+									>Video Games</a
+								>
+							</div>
+						</div>
+						<div class="menu-cat">
+							<h1>Sections</h1>
+							<div id="kk">
+								<a id="link" href="shop.html">Shop</a>
+								<a href="#"> Products</a>
+								<a href="#"> About Us</a>
+								<a href="#"> Contact Us</a>
+							</div>
+						</div>
+						<div class="menu-cat">
+							<h1>Support</h1>
+							<div id="kk">
+								<a href="#"> Visit Our Support</a>
+								<a href="#"> Online Support</a>
+							</div>
+						</div>
+						<div class="menu-cat">
+							<div>
+								<a href="logout" style="border: none; color: red">Logout</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="searchcontainer">
+				<div class="search-mainbox">
+					<div class="searchbox">
+						<div class="search-cancel">
+							<h1>Hello 👋🏻, what are you looking for?</h1>
+							<img
+								src="assets/images/close(1).png"
+								alt=""
+								onclick="closeSearch()"
+							/>
+						</div>
+						<input
+							type=""
+							class="sb-search"
+							name="search"
+							id="search"
+							placeholder="Search a Product"
+							autocomplete="off"
+<<<<<<<< HEAD:src/src/shop.html
+<<<<<<< HEAD:gemshop.html
+=======
+							autofocus="true"
+>>>>>>> master:client/src/shop.html
+========
+							autofocus="true"
+>>>>>>>> origin/gh-pages:src/shop.html
+						/>
+						<input type="submit" class="go" value="Search" id="GO" />
+					</div>
+					<div class="suggestion">
+						<div class="sug-holder"></div>
+					</div>
+				</div>
+			</div>
+
+			<section class="banner-container">
+				<div class="banner-shade">
+					<div class="banner-text">
+						<h1>BLACK FRIDAY DEALS</h1>
+						<p><span>50%</span> OFF</p>
+						<button>Shop Now</button>
+					</div>
+				</div>
+			</section>
+
+			<div class="littlebans">
+				<div class="b-holder hol1">
+					<div class="shade" id="games">
+						<p>Gaming</p>
+					</div>
+				</div>
+				<div class="b-holder hol2">
+					<div class="shade" id="phones">
+						<p>Cell Phones</p>
+					</div>
+				</div>
+				<div class="b-holder hol3">
+					<div class="shade" id="coms">
+						<p>Computers & Laptops</p>
+					</div>
+				</div>
+				<div class="b-holder hol4">
+					<div class="shade" id="spks">
+						<p>Speakers</p>
+					</div>
+				</div>
+				<div class="b-holder hol5">
+					<div class="shade" id="tele">
+						<p>Television</p>
+					</div>
+				</div>
+			</div>
+
+			<section class="shop-body" id="shop-body">
+				<div class="filters filters1" id="filter">
+					<div class="fil-head">
+						<h1>Filters</h1>
+						<div class="filter-cancel">
+							<button onclick="closeFilter()">
+								<img src="assets/images/close(1).png" alt="" /> Close
+							</button>
+						</div>
+					</div>
+
+					<div class="filterss" id="filters"></div>
+					<div class="apply">
+						<button class="" id="apply">Apply Filter</button>
+					</div>
+				</div>
+				<div class="available-items">
+					<div class="res-sort" id="res-sort">
+						<div class="red-header" id="red-header">
+							<div class="pre pre-sort"></div>
+							<h1 id="result-title" class="main-content cat-head"></h1>
+							<div id="main-content" class="main-content sort-hol">
+								<p>Sort</p>
+								<div class="select-dropdown">
+									<select name="sort" id="select" onchange="sorting(event)">
+										<option value="Random">Random</option>
+										<option value="Ascending">Ascending price</option>
+										<option value="Descending">Descending price</option>
+									</select>
+								</div>
+
+								<button
+									onclick="openFilter()"
+									class="main-content"
+									id="fbtn"
+									type="button"
+									name="button"
+									aria-label="button"
+									aria-labelledby="button"
+								>
+									<img
+										src="assets/images/filter.png"
+										class="main-content"
+										alt=""
+									/>
+								</button>
+							</div>
+						</div>
+						<div class="filters filters2" id="filter">
+							<div class="filter-cancel">
+								<button onclick="closeFilter()">
+									<img src="assets/images/close(1).png" alt="" /> Close
+								</button>
+							</div>
+							<div class="fil-head">
+								<h1>Filters</h1>
+							</div>
+							<div class="filterss" id="filters"></div>
+							<div class="apply">
+								<button
+									class=""
+									id="apply"
+									aria-label="button"
+									aria-labelledby="button"
+								>
+									Apply Filter
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div id="showbox" class="showboxflex" onload="onLoad()">
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+						<div class="pre preload-container">
+							<div class="preload-box"></div>
+							<p class="preload-title"></p>
+						</div>
+
+						<div id="main-content" class="main-content full-cat">
+							<div class="section-title fir-sec">
+								<h1 id="sec-name-cellphones"></h1>
+								<button
+									class="all-category"
+									id="1"
+									onclick="window.location='shop.html?category=cellphones&Order=Random&Page=0'"
+								>
+									See All Cell Phones
+								</button>
+							</div>
+							<div class="av-box" id="cellphone"></div>
+						</div>
+						<div id="main-content" class="full-cat">
+							<div class="section-title">
+								<h1 id="sec-name-computer"></h1>
+								<button
+									class="all-category"
+									id="2"
+									onclick="window.location='shop.html?category=computers&Order=Random&Page=0'"
+								>
+									See All Computers
+								</button>
+							</div>
+							<div class="av-box" id="computer"></div>
+						</div>
+						<div id="main-content" class="main-content full-cat">
+							<div class="section-title">
+								<h1 id="sec-name-speakers"></h1>
+								<button
+									class="all-category"
+									id="3"
+									onclick="window.location='shop.html?category=speakers&Order=Random&Page=0'"
+								>
+									See All Speakers
+								</button>
+							</div>
+							<div class="av-box" id="speaker"></div>
+						</div>
+						<div id="main-content" class="main-content full-cat">
+							<div class="section-title">
+								<h1 id="sec-name-tv"></h1>
+								<button
+									class="all-category"
+									id="4"
+									onclick="window.location='shop.html?category=tv&Order=Random&Page=0'"
+								>
+									See All TVs
+								</button>
+							</div>
+							<div class="av-box" id="television"></div>
+						</div>
+						<div id="main-content" class="main-content full-cat">
+							<div class="section-title">
+								<h1 id="sec-name-gaming"></h1>
+								<button
+									class="all-category"
+									id="5"
+									onclick="window.location='shop.html?category=gaming&Order=Random&Page=0'"
+								>
+									See All Gamings
+								</button>
+							</div>
+							<div class="av-box" id="gaming"></div>
+						</div>
+					</div>
+					<div class="pagindiv pgd">
+						<button class="prev-next" id="prevPage">Prev</button>
+						<div class="pagindiv" id="pagindiv"></div>
+						<button class="prev-next" id="nextPage">Next</button>
+					</div>
+				</div>
+				<!-- <section class="visit-our-support">
+				<div class="vv">
+					<h1>Visit our Support Center</h1>
+					<img src="/assets/images/customer-support.png" alt="">
+				</div>
+				<button class="visit" type="button">Visit</button>
+			</section> -->
+			</section>
+		</section>
+
+		<footer id="footer">
+			<h1>
+				Shop by
+				<a href="#" target="_blank" rel="noopener noreferrer"
+					>jubril bolajoko</a
+				>
+			</h1>
+		</footer>
+		<button
+			id="backtotop"
+			aria-labelledby="button"
+			aria-label="button"
+			type="button"
+			onclick="backToTop()"
+		></button>
+	</body>
+</html>
