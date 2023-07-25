@@ -10,11 +10,7 @@ let itemsInCart = JSON.parse(localStorage.getItem("Cart"));
 let lastPage;
 try {
 	lastPage = new URL(document.referrer);
-<<<<<<<< HEAD:src/src/assets/js/checkout.js
 	if (lastPage.pathname === "/product.html" || "/src/product.html") {
-========
-	if (lastPage.pathname === "/product.html") {
->>>>>>>> origin/gh-pages:src/assets/js/checkout.js
 		itemsInCart = [JSON.parse(localStorage.getItem("buy"))];
 	}
 } catch (error) {}

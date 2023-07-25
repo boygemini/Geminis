@@ -196,19 +196,9 @@ class displayProduct {
 let allStoreProducts;
 Products.selectedForYou();
 (async () => {
-<<<<<<<< HEAD:src/src/assets/js/index.js
-<<<<<<< HEAD:index.js
-	allStoreProducts = await Products.selectedForYou();
-=======
 	// WAIT FOR PRODUCTS FROM THE SERVER
 	allStoreProducts = await Products.selectedForYou();
 
->>>>>>> master:client/src/assets/js/index.js
-========
-	// WAIT FOR PRODUCTS FROM THE SERVER
-	allStoreProducts = await Products.selectedForYou();
-
->>>>>>>> origin/gh-pages:src/assets/js/index.js
 	// DISPLAY RECENT PRODUCTS
 	displayProduct.displayRecentItems(allStoreProducts.recentlyAdded);
 
