@@ -16,7 +16,7 @@
 		"stripe": "^10.0.0"
 	},
 	"engines": {
-		"node": "18",
+		"node": "v18.16.1",
 		"npm": "9.5.0"
 	},
 	"devDependencies": {
