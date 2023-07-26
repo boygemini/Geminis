@@ -10,7 +10,7 @@ let itemsInCart = JSON.parse(localStorage.getItem("Cart"));
 let lastPage;
 try {
 	lastPage = new URL(document.referrer);
-	if (lastPage.pathname === "/product.html" || "/src/product.html") {
+	if (lastPage.pathname.includes("/product.html")) {
 		itemsInCart = [JSON.parse(localStorage.getItem("buy"))];
 	}
 } catch (error) {}

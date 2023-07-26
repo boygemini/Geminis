@@ -30,7 +30,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-	const path = resolve(process.env.STATIC_DIR + "index.html");
+	const path = resolve(process.env.STATIC_DIR + "/index.html");
 	res.sendFile(path);
 });
 

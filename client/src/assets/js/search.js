@@ -232,15 +232,7 @@ class getResults {
 		showBox.innerHTML = `<div class="noresult">
 			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> Oops, there are no results for  "${Query}" </h1><p>Try checking your spelling or use more general terms</p></div>
 			<span>Go back to</span>
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
-=======
 			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="shop.html" class='backtoshop'>Shop</a></div>
->>>>>>> master:client/src/assets/js/search.js
-========
-			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="shop.html" class='backtoshop'>Shop</a></div>
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 			</div>`;
 		document.getElementById("filter").style.display = "none";
 		document.querySelector(".sort-hol").style.display = "none";
@@ -268,19 +260,6 @@ class getResults {
 	}
 
 	static async pageNotFound() {
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-		document.querySelector(".banner-container").style.display = "none";
-		document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
-		document.getElementById("footer").style.position = "absolute";
-		document.getElementById("footer").style.bottom = "0";
-		document.querySelector(
-			".shop-body"
-		).innerHTML = `<div class="noresult notfound">
-			<div class ="noresulttext"><h1 class = "cat-head" > Page not found</h1><p>We couldn’t find the page you are looking for</p></div>
-			<span>Go back to</span>
-			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
-=======
 		let theCurrentPage = new URL(document.URL);
 		if (theCurrentPage.pathname.includes("shop")) {
 			document.querySelector(".banner-container").style.display = "none";
@@ -293,21 +272,6 @@ class getResults {
 			<div class ="noresulttext"><h1 class = "cat-head" > Page not found</h1><p>We couldn’t find the page you are looking for</p></div>
 			<span>Go back to</span>
 			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="shop.html" class='backtoshop'>Shop</a></div>
->>>>>>> master:client/src/assets/js/search.js
-========
-		let theCurrentPage = new URL(document.URL);
-		if (theCurrentPage.pathname.includes("shop")) {
-			document.querySelector(".banner-container").style.display = "none";
-			document.getElementById("bodyy").style.backgroundColor = "#f4f4f6";
-			document.getElementById("footer").style.position = "absolute";
-			document.getElementById("footer").style.bottom = "0";
-			document.querySelector(
-				".shop-body"
-			).innerHTML = `<div class="noresult notfound">
-			<div class ="noresulttext"><h1 class = "cat-head" > Page not found</h1><p>We couldn’t find the page you are looking for</p></div>
-			<span>Go back to</span>
-			<div class="noresultbuttons"><a href="index.html" class='backtohome'>Homepage</a><a href="shop.html" class='backtoshop'>Shop</a></div>
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 		</div>`;
 		}
 	}
@@ -316,16 +280,8 @@ class getResults {
 const displaySearchResults = (directory, Query) => {
 	let x = "";
 	let y = "";
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-=======
 	let totalItems = directory.totalItems.length;
 	directory = directory.page;
->>>>>>> master:client/src/assets/js/search.js
-========
-	let totalItems = directory.totalItems.length;
-	directory = directory.page;
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 	if (directory.length > 0) {
 		setTimeout(() => {
 			showPreloader(false);
@@ -363,15 +319,7 @@ const displaySearchResults = (directory, Query) => {
 
 		document.getElementById(
 			"result-title"
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-		).innerHTML = `Results for <span id="search-entry"> ${Query}</span>`;
-=======
 		).innerHTML = `${totalItems} Results for <span id="search-entry"> ${Query}</span>`;
->>>>>>> master:client/src/assets/js/search.js
-========
-		).innerHTML = `${totalItems} Results for <span id="search-entry"> ${Query}</span>`;
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 		showBox.innerHTML = y;
 	}
 	if (directory.length === 0) {
@@ -382,14 +330,7 @@ const displaySearchResults = (directory, Query) => {
 const displayFilteredResults = (results, category) => {
 	let x = ``;
 	let y = "";
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-=======
 	results = results.page;
->>>>>>> master:client/src/assets/js/search.js
-========
-	results = results.page;
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 
 	if (results.length > 0) {
 		setTimeout(() => {
@@ -464,102 +405,46 @@ const getCatFiltersAndSearchResults = async (Query, Category) => {
 		}
 	}
 
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-	function Call(Query, Category) {
-		if (Category) {
-			return getResults.suggestionsResult(Query, Category);
-		}
-		if (!Category) {
-			return getResults.searchBarResult(Query);
-		}
-=======
-========
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 	if (Category) {
 		return getResults.suggestionsResult(Query, Category);
 	}
 
 	function searchResults(Query) {
 		return getResults.searchBarResult(Query);
-<<<<<<<< HEAD:src/src/assets/js/search.js
->>>>>>> master:client/src/assets/js/search.js
-========
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 	}
 
 	for (let i in gamekey) {
 		if (gamekey[i].toLowerCase().trim().includes(Query)) {
 			Gamings();
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-			return Call(Query, Category);
-=======
 			return searchResults(Query);
->>>>>>> master:client/src/assets/js/search.js
-========
-			return searchResults(Query);
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 		}
 	}
 
 	for (let i in phonekey) {
 		if (phonekey[i].toLowerCase().trim().includes(Query)) {
 			cellPhones();
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-			return Call(Query, Category);
-=======
 			return searchResults(Query);
->>>>>>> master:client/src/assets/js/search.js
-========
-			return searchResults(Query);
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 		}
 	}
 
 	for (let i in tvkey) {
 		if (tvkey[i].toLowerCase().trim().includes(Query)) {
 			TVs();
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-			return Call(Query, Category);
-=======
 			return searchResults(Query);
->>>>>>> master:client/src/assets/js/search.js
-========
-			return searchResults(Query);
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 		}
 	}
 
 	for (let i in speakerkey) {
 		if (speakerkey[i].toLowerCase().trim().includes(Query)) {
 			Speakers();
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-			return Call(Query, Category);
-=======
 			return searchResults(Query);
->>>>>>> master:client/src/assets/js/search.js
-========
-			return searchResults(Query);
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 		}
 	}
 
 	for (let i in comkey) {
 		if (comkey[i].toLowerCase().trim().includes(Query)) {
 			Computers();
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-			return Call(Query, Category);
-=======
 			return searchResults(Query);
->>>>>>> master:client/src/assets/js/search.js
-========
-			return searchResults(Query);
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 		}
 	}
 
@@ -640,15 +525,7 @@ function createPagination(results, numberOnEachPage, pageNumber) {
 		document.querySelector(".shop-body").innerHTML = `<div class="noresult">
 			<div class ="noresulttext"><h1 class = "cat-head" id="nores-h1"> This Page is Empty </h1><p>Try checking your spelling or use more general terms</p></div>
 			<span>Go back to</span>
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-			<div class="noresultbuttons"><a href="index.html" id="" class='backtohome'>Homepage</a><a href="gemshop.html" class='backtoshop'>Shop</a></div>
-=======
 			<div class="noresultbuttons"><a href="index.html" id="" class='backtohome'>Homepage</a><a href="shop.html" class='backtoshop'>Shop</a></div>
->>>>>>> master:client/src/assets/js/search.js
-========
-			<div class="noresultbuttons"><a href="index.html" id="" class='backtohome'>Homepage</a><a href="shop.html" class='backtoshop'>Shop</a></div>
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 		</div>`;
 		document.querySelector(".pagindiv").style.display = "none";
 	}
@@ -716,7 +593,6 @@ const convertUrlParametersIntoObject = (urlWithQuery) => {
 
 // LOAD IMAGES WHEN THEY ARE IN VIEW PORT
 const imageObserver = () => {
-<<<<<<<< HEAD:src/src/assets/js/search.js
 	let theCurrentPage = new URL(document.URL);
 	if (theCurrentPage.pathname.includes("shop")) {
 		(async () => {
@@ -989,287 +865,8 @@ const onLoad = async () => {
 		}
 		imageObserver();
 	}
-
-	// LOAD IMAGES WHEN THEY ARE IN VIEW PORT
-========
->>>>>>>> origin/gh-pages:src/assets/js/search.js
-	let theCurrentPage = new URL(document.URL);
-	if (theCurrentPage.pathname.includes("shop")) {
-		(async () => {
-			let dir = await allProducts();
-			dir = dir.selectedProducts[0];
-			if (typeof dir === "object") {
-				let images = document.querySelectorAll(".img-cont");
-				let observer = new IntersectionObserver((entries) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							let image = entry.target;
-							image.style.backgroundImage = `url(${image.dataset.src})`;
-							observer.unobserve(image);
-						}
-					});
-				});
-
-				images.forEach((image) => {
-					observer.observe(image);
-				});
-			}
-		})();
-	}
 };
 
-<<<<<<<< HEAD:src/src/assets/js/search.js
-========
-const onLoad = async () => {
-	let dir = await allProducts();
-	if (typeof dir === "object") {
-		let cpUrl = new URL(document.URL);
-		if (cpUrl.search.length <= 0 && cpUrl.pathname === "/shop.html") {
-		} else if (cpUrl.search.length > 0 && cpUrl.pathname === "/shop.html") {
-			indicateLoadingWhileAwaitingResults(true);
-		}
-
-		let urlWithQuery = document.URL;
-
-		// LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR SUGGESTION
-		if (
-			urlWithQuery.split("&SearchQuery=").length > 1 &&
-			urlWithQuery.split("category=").length > 1
-		) {
-			let Query = urlWithQuery.split("SearchQuery=")[1].split("&")[0];
-			let Category = urlWithQuery
-				.split("category=")[1]
-				.toString()
-				.split("&")[0];
-			Query = removeThe20Nonsense(Query);
-			getCatFiltersAndSearchResults(Query, Category);
-			imageObserver();
-			return;
-		}
-
-		// LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR
-		if (
-			urlWithQuery.split("?SearchQuery=").length > 1 &&
-			urlWithQuery.split("category=").length === 1
-		) {
-			let Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0];
-			Query = removeThe20Nonsense(Query).trim();
-			getCatFiltersAndSearchResults(Query);
-			imageObserver();
-			return;
-		}
-
-		// IF THE URL IS BADLY ALTERED IT SHOULD RETURN A NOT FOUND PAGE
-		let QueryName;
-		try {
-			QueryName = urlWithQuery.split("?")[1].split("=")[0];
-		} catch (error) {}
-
-		if (
-			QueryName !== "SearchQuery" &&
-			QueryName !== "category" &&
-			QueryName !== undefined
-		) {
-			getResults.pageNotFound();
-		}
-
-		// LOAD FILTER RESULTS FROM URL
-		if (urlWithQuery.split("?category").length > 1) {
-			let parameterCategory = urlWithQuery
-				.split("?category=")[1]
-				.toString()
-				.split("&")[0];
-
-			let allItems = JSON.parse(localStorage.getItem("StoreItems"));
-
-			let allItemsInCategory =
-				allItems.selectedProducts[0][`${parameterCategory}`];
-
-			let results = [];
-
-			if (results.length === 0) {
-				results = allItemsInCategory;
-			}
-
-			/*
-			 * USE PROPER ERROR HANDLING HERE
-			 */
-			// PARAMETERS FROM THE URL
-			let newUrlParameters = convertUrlParametersIntoObject(urlWithQuery);
-			try {
-				newUrlParameters.Price = newUrlParameters.Price.replace(
-					/%20/g,
-					""
-				).split("-");
-				priceFromUrl = [
-					{
-						high: Number(newUrlParameters.Price[1]),
-						low: Number(newUrlParameters.Price[0]),
-					},
-				];
-			} catch (error) {}
-			try {
-				brandFromUrl = newUrlParameters.Brand.split(",");
-			} catch (error) {}
-			try {
-				filterFromUrl = newUrlParameters.Filters.split(",");
-			} catch (error) {}
-			try {
-				memoryFromUrl = newUrlParameters.Memory.toString().split(",");
-			} catch (error) {}
-			try {
-				ramFromUrl = newUrlParameters.Ram.toString().split(",");
-			} catch (error) {}
-			try {
-				romFromUrl = newUrlParameters.Rom.split(",");
-			} catch (error) {}
-			try {
-				screenFromUrl = newUrlParameters.Screen.split(",");
-			} catch (error) {}
-			try {
-				sizeFromUrl = newUrlParameters.Size.split(",");
-			} catch (error) {}
-			try {
-				pageFromUrl = newUrlParameters.Page;
-			} catch (error) {}
-
-			try {
-				orderFromUrl = newUrlParameters.Order;
-			} catch (error) {}
-
-			// Filtering / Price
-			if (priceFromUrl && priceFromUrl.length > 0) {
-				let pr = [];
-				for (let a in results) {
-					if (
-						Number(results[a].itemInfo.newItemPrice) >= priceFromUrl[0].low &&
-						Number(results[a].itemInfo.newItemPrice) <= priceFromUrl[0].high
-					) {
-						pr.push(results[a]);
-					}
-				}
-				if (pr.length > 0) {
-					results = pr;
-				}
-			}
-
-			// Brand
-			if (brandFromUrl && brandFromUrl.length > 0) {
-				let ba = [];
-				for (let b in results) {
-					for (let c in brandFromUrl) {
-						if (results[b].itemInfo.brand === brandFromUrl[c]) {
-							ba.push(results[b]);
-						}
-					}
-				}
-				if (ba.length > 0) {
-					results = ba;
-				}
-			}
-
-			// Memory
-			if (memoryFromUrl && memoryFromUrl.length > 0) {
-				let ma = [];
-				for (let m in results) {
-					for (let mi in memoryFromUrl) {
-						if (
-							Number(results[m].itemInfo.memory) === Number(memoryFromUrl[mi])
-						) {
-							ma.push(results[m]);
-						}
-					}
-				}
-				if (ma.length > 0) {
-					results = ma;
-				}
-			}
-
-			// Ram
-			if (ramFromUrl && ramFromUrl.length > 0) {
-				let ra = [];
-				for (let r in results) {
-					for (let re in ramFromUrl) {
-						if (Number(results[r].itemInfo.ram) === Number(ramFromUrl[re])) {
-							ra.push(results[r]);
-						}
-					}
-				}
-
-				if (ra.length > 0) {
-					results = ra;
-				}
-			}
-
-			// Rom
-			if (romFromUrl && romFromUrl.length > 0) {
-				let ro = [];
-				for (let ri in results) {
-					for (let rc in romFromUrl) {
-						if (Number(results[ri].itemInfo.rom) === Number(romFromUrl[rc])) {
-							ro.push(results[ri]);
-						}
-					}
-				}
-
-				if (ro.length > 0) {
-					results = ro;
-				}
-			}
-
-			// Screen
-			if (screenFromUrl && screenFromUrl.length > 0) {
-				let sc = [];
-				for (let s in results) {
-					for (let sv in screenFromUrl) {
-						if (
-							Number(results[s].itemInfo.screen) === Number(screenFromUrl[sv])
-						) {
-							sc.push(results[s]);
-						}
-					}
-				}
-				if (sc.length > 0) {
-					results = sc;
-				}
-			}
-
-			// Size
-			if (sizeFromUrl && sizeFromUrl.length > 0) {
-				let sz = [];
-				for (let si in results) {
-					for (let sy in sizeFromUrl) {
-						if (Number(results[si].itemInfo.size) === Number(sizeFromUrl[sy])) {
-							sz.push(results[si]);
-						}
-					}
-				}
-				if (sz.length > 0) {
-					results = sz;
-				}
-			}
-
-			// Page & Pagination
-			if (!pageFromUrl) {
-				results = createPagination(results, 12, 0);
-			}
-
-			if (pageFromUrl) {
-				results = createPagination(results, 12, Number(pageFromUrl));
-			}
-			markPagination();
-
-			// Result Sorting
-			controlSort(results);
-
-			// PASSING RESULTS TO UI FUNCTION
-			displayFilteredResults(results, parameterCategory);
-		}
-		imageObserver();
-	}
-};
-
->>>>>>>> origin/gh-pages:src/assets/js/search.js
 // OPEN MENU
 const menuDOM = document.getElementById("menu");
 const menuBtn = document.getElementById("mb");
@@ -1328,39 +925,6 @@ window.addEventListener("click", (e) => {
 	}
 });
 
-<<<<<<<< HEAD:src/src/assets/js/search.js
-<<<<<<< HEAD:search.js
-// PREVENT PAGE FROM ZOOMING WHEN AN INPUT FIELD IS FOCUSED ON
-let allInputs = document.querySelectorAll("input");
-allInputs.forEach((input) => {
-	input.addEventListener("focus", (e) => {
-		let head = document.lastChild.children[0];
-		head.innerHTML += `<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
-		/>`;
-	});
-});
-
-window.onload = onLoad;
-=======
-// SCROLL TO TOP BUTTON
-const backToTopBtn = document.getElementById("backtotop");
-const backToTop = () => {
-	window.scrollTo(0, 0);
-};
->>>>>>> master:client/src/assets/js/search.js
-
-window.addEventListener("scroll", (e) => {
-	if (window.scrollY > 200) {
-		backToTopBtn.style.opacity = "1";
-	} else {
-		backToTopBtn.style.opacity = "0";
-	}
-});
-
-window.onload = onLoad;
-========
 // SCROLL TO TOP BUTTON
 const backToTopBtn = document.getElementById("backtotop");
 const backToTop = () => {
@@ -1376,4 +940,3 @@ window.addEventListener("scroll", (e) => {
 });
 
 window.onload = onLoad;
->>>>>>>> origin/gh-pages:src/assets/js/search.js

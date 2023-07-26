@@ -1355,15 +1355,7 @@ p span {
 }
 
 .backtoshop {
-<<<<<<<< HEAD:src/src/assets/styles/shop.css
-<<<<<<< HEAD:gemshop.css
-	background-color: white;
-=======
 	background-color: transparent;
->>>>>>> master:client/src/assets/styles/shop.css
-========
-	background-color: transparent;
->>>>>>>> origin/gh-pages:src/assets/styles/shop.css
 	border: 2px solid #111111;
 	color: #111111;
 }
@@ -1913,16 +1905,7 @@ footer {
 	}
 }
 
-<<<<<<< HEAD:gemshop.css
 @media screen and (max-width: 768px) {
-<<<<<<<< HEAD:src/src/assets/styles/shop.css
-}
-
-=======
->>>>>>> master:client/src/assets/styles/shop.css
-@media screen and (max-width: 768px) {
-========
->>>>>>>> origin/gh-pages:src/assets/styles/shop.css
 	*::-webkit-scrollbar {
 		display: none;
 	}

@@ -1633,18 +1633,8 @@ footer {
 	}
 
 	.circle {
-<<<<<<<< HEAD:src/src/assets/styles/checkout.css
-<<<<<<< HEAD:checkout.css
-		height: 40px;
-		width: 40px;
-=======
 		height: 37px;
 		width: 37px;
->>>>>>> master:client/src/assets/styles/checkout.css
-========
-		height: 37px;
-		width: 37px;
->>>>>>>> origin/gh-pages:src/assets/styles/checkout.css
 		border: none;
 	}
 
@@ -1850,14 +1840,7 @@ footer {
 	.confirmation-code {
 		justify-content: center;
 		align-items: center;
-<<<<<<<< HEAD:src/src/assets/styles/checkout.css
-<<<<<<< HEAD:checkout.css
-=======
 		min-height: 70vh;
->>>>>>> master:client/src/assets/styles/checkout.css
-========
-		min-height: 70vh;
->>>>>>>> origin/gh-pages:src/assets/styles/checkout.css
 	}
 
 	.confirm-note p {
@@ -1870,15 +1853,7 @@ footer {
 		font-family: 5px;
 		font-size: 20px;
 		margin: 0;
-<<<<<<<< HEAD:src/src/assets/styles/checkout.css
-<<<<<<< HEAD:checkout.css
-		top: 0;
-=======
 		top: 20px;
->>>>>>> master:client/src/assets/styles/checkout.css
-========
-		top: 20px;
->>>>>>>> origin/gh-pages:src/assets/styles/checkout.css
 	}
 }
 

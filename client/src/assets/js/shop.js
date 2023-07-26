@@ -1074,15 +1074,7 @@ const scrollCategoryBannerIntoView = (category) => {
 switch (urlCategory) {
 	case "cellphones":
 		cellPhones();
-<<<<<<<< HEAD:src/src/assets/js/shop.js
-<<<<<<< HEAD:gemshop.js
-<<<<<<< HEAD:gemshop.js
-=======
 		scrollCategoryBannerIntoView(phones);
->>>>>>> master:client/src/assets/js/shop.js
-========
-		scrollCategoryBannerIntoView(phones);
->>>>>>>> origin/gh-pages:src/assets/js/shop.js
 		break;
 	case "computers":
 		Computers();
@@ -1098,63 +1090,7 @@ switch (urlCategory) {
 		break;
 	case "gaming":
 		Gamings();
-<<<<<<<< HEAD:src/src/assets/js/shop.js
-<<<<<<< HEAD:gemshop.js
-=======
-		setTimeout(() => {
-			phones.scrollIntoView({
-				behaviour: "smooth",
-				block: "center",
-				inline: "center",
-			});
-		}, 1000);
-		break;
-	case "computers":
-		Computers();
-		setTimeout(() => {
-			coms.scrollIntoView({
-				behaviour: "smooth",
-				block: "center",
-				inline: "center",
-			});
-		}, 1000);
-		break;
-	case "speakers":
-		Speakers();
-		setTimeout(() => {
-			spks.scrollIntoView({
-				behaviour: "smooth",
-				block: "center",
-				inline: "center",
-			});
-		}, 1000);
-		break;
-	case "tv":
-		TVs();
-		setTimeout(() => {
-			tele.scrollIntoView({
-				behaviour: "smooth",
-				block: "center",
-				inline: "center",
-			});
-		}, 1000);
-		break;
-	case "gaming":
-		Gamings();
-		setTimeout(() => {
-			games.scrollIntoView({
-				behaviour: "smooth",
-				block: "center",
-				inline: "center",
-			});
-		}, 1000);
->>>>>>> d4968da (Worked on load speed):client/gemshop.js
-=======
 		scrollCategoryBannerIntoView(games);
->>>>>>> master:client/src/assets/js/shop.js
-========
-		scrollCategoryBannerIntoView(games);
->>>>>>>> origin/gh-pages:src/assets/js/shop.js
 		break;
 }
 
@@ -1245,46 +1181,6 @@ class Storage {
 	}
 }
 
-<<<<<<<< HEAD:src/src/assets/js/shop.js
-<<<<<<< HEAD:gemshop.js
-// GET ITEMS AND SORT
-const getAllItems = () => {
-	let allItems = JSON.parse(localStorage.getItem("StoreItems"));
-	return allItems;
-};
-
-const item = (ItemID) => {
-	let recentlyAdded = getAllItems().recentlyAdded;
-	let WeeklyFeatured = getAllItems().WeeklyFeatured;
-
-	for (let i in recentlyAdded) {
-		if (recentlyAdded[i].id === ItemID) {
-			return recentlyAdded[i];
-		}
-	}
-
-	for (let i in WeeklyFeatured) {
-		if (WeeklyFeatured[i].id === ItemID) {
-			return WeeklyFeatured[i];
-		}
-	}
-
-	let category = ["gaming", "cellphones", "speakers", "computers", "tv"];
-	let allItems = getAllItems().selectedProducts[0];
-	for (let i in category) {
-		let all = allItems[`${category[i]}`];
-		for (let j in all) {
-			if (all[j].id === ItemID) {
-				return all[j];
-			}
-		}
-	}
-};
-
-=======
->>>>>>> master:client/src/assets/js/shop.js
-========
->>>>>>>> origin/gh-pages:src/assets/js/shop.js
 // DISPLAY NUMBER OF ITEMS IN CART
 let cartDom = document.getElementById("items-in-cart");
 cartDom.innerText = Storage.numberOfItemsInCart();

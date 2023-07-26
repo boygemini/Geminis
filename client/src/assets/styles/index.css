@@ -856,19 +856,9 @@ nav ul li {
 	cursor: pointer;
 }
 
-<<<<<<<< HEAD:src/src/assets/styles/index.css
-<<<<<<< HEAD:index.css
-.gridbtn {
-=======
 .thinarrow {
 	width: 35px;
 	height: 35px;
->>>>>>> master:client/src/assets/styles/index.css
-========
-.thinarrow {
-	width: 35px;
-	height: 35px;
->>>>>>>> origin/gh-pages:src/assets/styles/index.css
 }
 
 .gridbtn img {
@@ -1548,17 +1538,8 @@ nav ul li {
 }
 
 .viewall-arrow {
-<<<<<<<< HEAD:src/src/assets/styles/index.css
-<<<<<<< HEAD:index.css
-	width: 20px;
-=======
 	width: 25px;
 	height: 25px;
->>>>>>> master:client/src/assets/styles/index.css
-========
-	width: 25px;
-	height: 25px;
->>>>>>>> origin/gh-pages:src/assets/styles/index.css
 }
 
 .sel-container {
