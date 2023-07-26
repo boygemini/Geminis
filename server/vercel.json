@@ -9,7 +9,7 @@
 	"routes": [
 		{
 			"src": "/server",
-			"dest": "/index.js"
+			"dest": "/server.js"
 		}
 	],
 	"public": true

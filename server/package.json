@@ -2,9 +2,9 @@
 	"name": "geminis-website",
 	"version": "1.0.0",
 	"description": "Geminis package",
-	"main": "index.js",
+	"main": "server.js",
 	"scripts": {
-		"start": "node index.js"
+		"start": "node server.js"
 	},
 	"author": "stripe-demos",
 	"license": "ISC",
