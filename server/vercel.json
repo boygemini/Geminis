@@ -1,16 +1,10 @@
 {
 	"version": 2,
-	"builds": [
-		{
-			"src": "*.js",
-			"use": "@vercel/node"
-		}
-	],
-	"routes": [
-		{
-			"src": "/(.*)",
-			"dest": "/server/server.js"
-		}
-	],
+	"builds": [{ "src": "index.js", "use": "@vercel/node" }],
+	"routes": [],
+	"static": {
+		"source": "../client",
+		"basePath": "/client"
+	},
 	"public": true
 }
