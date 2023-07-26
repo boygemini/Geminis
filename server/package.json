@@ -2,7 +2,7 @@
 	"name": "geminis-website",
 	"version": "1.0.0",
 	"description": "Geminis package",
-	"main": "server.js",
+	"main": "index.js",
 	"scripts": {
 		"start": "node index.js"
 	},
@@ -18,5 +18,8 @@
 	"engines": {
 		"node": "18.14.2",
 		"npm": "9.5.0"
+	},
+	"devDependencies": {
+		"@vercel/node": "^2.15.6"
 	}
 }
