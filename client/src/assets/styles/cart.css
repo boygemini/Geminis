@@ -519,6 +519,7 @@ nav ul li {
 .boxmodal {
 	width: 100%;
 	height: 100%;
+	top: 0;
 	position: fixed;
 	display: none;
 	justify-content: center;
