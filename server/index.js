@@ -43,8 +43,8 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-	// const path = resolve("");
-	// res.sendFile(path);
+	const path = resolve(process.env.STATIC_DIR);
+	res.sendFile(path);
 	res.json("Hello");
 });
 
