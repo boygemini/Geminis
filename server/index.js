@@ -1,15 +1,15 @@
 const express = require("express");
-// const cors = require("cors");
+const cors = require("cors");
 
 const app = express();
 
-// app.use(
-// 	cors({
-// 		origin: "https://store-front-jet.vercel.app/",
-// 		methods: ["POST", "GET"],
-// 		credentials: true,
-// 	})
-// );
+app.use(
+	cors({
+		origin: "https://store-front-jet.vercel.app",
+		methods: ["POST", "GET"],
+		credentials: true,
+	})
+);
 
 const { resolve } = require("path");
 
@@ -28,7 +28,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
 
 const PORT = process.env.PORT || 3000;
 
-// app.use(express.static(process.env.STATIC_DIR));
+app.use(express.static(process.env.STATIC_DIR));
 
 app.use(
 	express.json({
@@ -42,12 +42,10 @@ app.use(
 	})
 );
 
-console.log(__dirname);
-
 app.get("/", (req, res) => {
-	const path = resolve(process.env.STATIC_DIR);
-	res.sendFile(path);
-	// res.json("Hello");
+	// const path = resolve(process.env.STATIC_DIR);
+	// res.sendFile(path);
+	res.json("sorry🧐, but you are in the wrong place🤷🏾‍♂️.");
 });
 
 app.get("/config", (req, res) => {
