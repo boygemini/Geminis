@@ -1,6 +1,18 @@
 const express = require("express");
+const cors = require("cors");
+
 const app = express();
+
+app.use(
+	cors({
+		origin: "https://geministore-boygemini.vercel.app",
+		methods: ["POST", "GET"],
+		credentials: true,
+	})
+);
+
 const { resolve } = require("path");
+
 // Replace if using a different env file or config
 const env = require("dotenv").config({ path: "./.env" });
 
@@ -30,9 +42,9 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-	// const path = resolve(process.env.STATIC_DIR + "/index.html");
-	// res.sendFile(path);
-	res.json("Hello");
+	const path = resolve(process.env.STATIC_DIR + "/index.html");
+	res.sendFile(path);
+	// res.json("Hello");
 });
 
 app.get("/config", (req, res) => {
