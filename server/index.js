@@ -5,7 +5,7 @@ const app = express();
 
 app.use(
 	cors({
-		origin: "https://store-front-jet.vercel.app",
+		origin: "https://geminis.vercel.app",
 		methods: ["POST", "GET"],
 		credentials: true,
 	})
