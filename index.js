@@ -3,13 +3,13 @@ const express = require("express");
 
 const app = express();
 
-// app.use(
-// 	cors({
-// 		origin: "https://store-front-jet.vercel.app/",
-// 		methods: ["POST", "GET"],
-// 		credentials: true,
-// 	})
-// );
+app.use(
+	cors({
+		origin: "https://store-front-jet.vercel.app/",
+		methods: ["POST", "GET"],
+		credentials: true,
+	})
+);
 
 const { resolve } = require("path");
 

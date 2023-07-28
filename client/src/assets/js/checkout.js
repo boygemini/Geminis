@@ -245,18 +245,23 @@ const confirmPayment = async (elements, _stripe) => {
 const loadPaymentElement = async (e) => {
 	continueButton.innerText = "Please wait...";
 	const totalItemPrice = Number(cartSummary.total * 100).toFixed();
-	const { publishableKey } = await fetch("/config").then((r) => r.json());
+	const { publishableKey } = await fetch(
+		"https://boy-boygemini.vercel.app/config"
+	).then((r) => r.json());
 	const stripe = Stripe(publishableKey);
 
-	const { clientSecret } = await fetch("/create-payment-intent", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({
-			totalItemPrice: totalItemPrice,
-		}),
-	}).then((r) => r.json());
+	const { clientSecret } = await fetch(
+		"https://boy-boygemini.vercel.app/create-payment-intent",
+		{
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				totalItemPrice: totalItemPrice,
+			}),
+		}
+	).then((r) => r.json());
 
 	const elements = await stripe.elements({ clientSecret });
 	const paymentElement = elements.create("payment");
