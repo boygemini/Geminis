@@ -5,7 +5,7 @@ const app = express();
 
 app.use(
 	cors({
-		origin: "https://geministore-boygemini.vercel.app",
+		origin: "https://store-front-jet.vercel.app/",
 		methods: ["POST", "GET"],
 		credentials: true,
 	})
@@ -42,7 +42,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-	const path = resolve(process.env.STATIC_DIR + "/index.html");
+	const path = resolve("https://store-front-jet.vercel.app/src/index.html");
 	res.sendFile(path);
 	// res.json("Hello");
 });
