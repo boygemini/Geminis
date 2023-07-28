@@ -246,12 +246,12 @@ const loadPaymentElement = async (e) => {
 	continueButton.innerText = "Please wait...";
 	const totalItemPrice = Number(cartSummary.total * 100).toFixed();
 	const { publishableKey } = await fetch(
-		"https://store-backend-brown.vercel.app/config"
+		"https://store-backend-boygemini.vercel.app/config"
 	).then((r) => r.json());
 	const stripe = Stripe(publishableKey);
 
 	const { clientSecret } = await fetch(
-		"https://store-backend-brown.vercel.app/create-payment-intent",
+		"https://store-backend-boygemini.vercel.app/create-payment-intent",
 		{
 			method: "POST",
 			headers: {
