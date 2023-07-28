@@ -45,7 +45,7 @@ app.use(
 app.get("/", (req, res) => {
 	// const path = resolve(process.env.STATIC_DIR);
 	// res.sendFile(path);
-	res.json("sorry🧐, but you are in the wrong place🤷🏾‍♂️.");
+	res.json("sorry🧐, but you are in the wrong place🤷🏾‍♂️..");
 });
 
 app.get("/config", (req, res) => {
