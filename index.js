@@ -28,7 +28,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
 
 const PORT = process.env.PORT || 3000;
 
-// app.use(express.static(process.env.STATIC_DIR));
+app.use(express.static(process.env.STATIC_DIR));
 
 app.use(
 	express.json({
@@ -41,8 +41,6 @@ app.use(
 		},
 	})
 );
-
-console.log(__dirname);
 
 app.get("/", (req, res) => {
 	const path = resolve(process.env.STATIC_DIR);
