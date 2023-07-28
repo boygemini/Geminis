@@ -251,7 +251,7 @@ const loadPaymentElement = async (e) => {
 	const stripe = Stripe(publishableKey);
 
 	const { clientSecret } = await fetch(
-		"https://store-backend-brown.vercel.app/create-payment-intent/",
+		"https://store-backend-brown.vercel.app/create-payment-intent",
 		{
 			method: "POST",
 			headers: {
