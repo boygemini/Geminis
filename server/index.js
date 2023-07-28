@@ -3,13 +3,13 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(
-	cors({
-		origin: "https://store-front-jet.vercel.app/",
-		methods: ["POST", "GET"],
-		credentials: true,
-	})
-);
+// app.use(
+// 	cors({
+// 		origin: "https://store-front-jet.vercel.app/",
+// 		methods: ["POST", "GET"],
+// 		credentials: true,
+// 	})
+// );
 
 const { resolve } = require("path");
 
@@ -28,7 +28,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
 
 const PORT = process.env.PORT || 3000;
 
-// app.use(express.static(process.env.STATIC_DIR));
+app.use(express.static(process.env.STATIC_DIR));
 
 app.use(
 	express.json({
