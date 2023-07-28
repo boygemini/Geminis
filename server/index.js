@@ -42,11 +42,11 @@ app.use(
 	})
 );
 
-// app.get("/", (req, res) => {
-// 	const path = resolve("");
-// 	res.sendFile(path);
-// 	// res.json("Hello");
-// });
+app.get("/", (req, res) => {
+	// const path = resolve("");
+	// res.sendFile(path);
+	res.json("Hello");
+});
 
 app.get("/config", (req, res) => {
 	res.send({
