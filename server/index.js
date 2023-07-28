@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");
+// const cors = require("cors");
 
 const app = express();
 
@@ -43,8 +43,8 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-	const path = resolve(process.env.STATIC_DIR);
-	res.sendFile(path);
+	// const path = resolve(process.env.STATIC_DIR);
+	// res.sendFile(path);
 	res.json("Hello");
 });
 
