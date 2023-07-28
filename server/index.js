@@ -29,6 +29,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static(process.env.STATIC_DIR));
+
 app.use(
 	express.json({
 		// We need the raw body to verify webhook signatures.
@@ -41,11 +42,11 @@ app.use(
 	})
 );
 
-app.get("/", (req, res) => {
-	const path = resolve("https://store-front-jet.vercel.app/src/index.html");
-	res.sendFile(path);
-	// res.json("Hello");
-});
+// app.get("/", (req, res) => {
+// 	const path = resolve("");
+// 	res.sendFile(path);
+// 	// res.json("Hello");
+// });
 
 app.get("/config", (req, res) => {
 	res.send({
