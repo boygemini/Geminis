@@ -1502,7 +1502,7 @@ nav ul li {
 	transition: 0.3s ease-in-out;
 	cursor: pointer;
 	height: 50px;
-	width: 100px;
+	min-width: 100%;
 	/* background-color: #f4f4f6; */
 }
 
