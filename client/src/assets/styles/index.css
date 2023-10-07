@@ -1505,7 +1505,6 @@ nav ul li {
 	height: 50px;
 	width: 100%;
 	min-width: 110px;
-	/* background-color: #f4f4f6; */
 }
 
 .sel-table ul li:hover {
@@ -1528,7 +1527,7 @@ nav ul li {
 
 .inactive-li {
 	color: #111111;
-	background-color: transparent;
+	background-color: whitesmoke;
 	border: 2px solid whitesmoke;
 }
 
