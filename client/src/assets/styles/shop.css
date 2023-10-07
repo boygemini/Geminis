@@ -453,15 +453,12 @@ nav ul li {
 	column-gap: 5px;
 	width: 100%;
 	scroll-snap-type: x mandatory;
+	scrollbar-width: none; /* Hide the scrollbar in Firefox */
+	-ms-overflow-style: none;
 }
 
 .littlebans::-webkit-scrollbar {
 	display: none; /* Hide the scrollbar in WebKit (Chrome, Safari, etc.) */
-}
-
-.littlebans {
-	scrollbar-width: none; /* Hide the scrollbar in Firefox */
-	-ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
 }
 
 /* Optional: Style the scrollbar track and thumb */
