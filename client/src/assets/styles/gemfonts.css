@@ -59,13 +59,13 @@ html::-webkit-scrollbar-track {
 	width: 2px;
 }
 
-html,
-body {
+html {
 	min-height: 100vh;
 }
 
 body {
 	overflow-x: hidden;
+	min-height: 100%;
 }
 
 * {
