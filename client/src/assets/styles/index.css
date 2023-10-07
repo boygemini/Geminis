@@ -1490,7 +1490,7 @@ nav ul li {
 	list-style: none;
 	height: 70px;
 	align-self: flex-end;
-	/* width: 70%; */
+	width: 100%;
 }
 
 .sel-table ul li {
@@ -1502,7 +1502,8 @@ nav ul li {
 	transition: 0.3s ease-in-out;
 	cursor: pointer;
 	height: 50px;
-	min-width: 100%;
+	width: 100%;
+	min-width: 110px;
 	/* background-color: #f4f4f6; */
 }
 
