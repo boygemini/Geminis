@@ -73,9 +73,6 @@ const markComplete = (step) => {
 	} else {
 		completionCircles[step].className += " next-stage";
 	}
-	console.log(step);
-	// formStateDOM.innerText = formStage[step + 2];
-	// formStateDOM.innerText = formStage[step];
 	completionCircles[step].classList.remove("next-stage");
 	completionCircles[step].className += " completed";
 	completionCircles[step].innerHTML =
@@ -90,7 +87,6 @@ const unMarkComplete = (step) => {
 	setTimeout(() => {
 		completionCircles[step].className += " next-stage";
 	}, 0);
-	// formStateDOM.innerText = formStage[step - 1];
 };
 
 const animatFormForward = () => {
@@ -402,7 +398,6 @@ const checkFields = (e) => {
 		displayForm(3);
 		markComplete(3);
 		animatFormForward();
-		return;
 	}
 };
 
@@ -419,7 +414,6 @@ if (itemsInCart === null) {
 	continueButton.addEventListener("click", (e) => {
 		window.location.href = "shop.html";
 	});
-	// prevFormButton.style.display = "none";
 }
 
 let x = "";
