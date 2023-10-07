@@ -455,6 +455,24 @@ nav ul li {
 	scroll-snap-type: x mandatory;
 }
 
+.littlebans::-webkit-scrollbar {
+	display: none; /* Hide the scrollbar in WebKit (Chrome, Safari, etc.) */
+}
+
+.littlebans {
+	scrollbar-width: none; /* Hide the scrollbar in Firefox */
+	-ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
+}
+
+/* Optional: Style the scrollbar track and thumb */
+.littlebans::-webkit-scrollbar-track {
+	background-color: #f1f1f1; /* Change the background color of the track */
+}
+
+.littlebans::-webkit-scrollbar-thumb {
+	background-color: #888; /* Change the color of the scrollbar thumb */
+}
+
 .b-holder {
 	scroll-snap-align: center;
 	width: 150px;

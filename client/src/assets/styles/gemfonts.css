@@ -75,7 +75,6 @@ body {
 
 	/* Adjust letter spacing (kerning) */
 	letter-spacing: 0.05em;
-	overflow-x: hidden;
 }
 
 .top-nav {
