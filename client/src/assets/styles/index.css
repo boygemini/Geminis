@@ -1491,6 +1491,7 @@ nav ul li {
 	height: 70px;
 	align-self: flex-end;
 	width: 100%;
+	min-width: 100%;
 }
 
 .sel-table ul li {
