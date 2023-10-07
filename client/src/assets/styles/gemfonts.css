@@ -59,6 +59,11 @@ html::-webkit-scrollbar-track {
 	width: 2px;
 }
 
+html,
+body {
+	min-height: 100vh;
+}
+
 body {
 	overflow-x: hidden;
 }
