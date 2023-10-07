@@ -499,7 +499,6 @@ nav ul li {
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;
-	height: auto;
 	background-color: white;
 	padding: 20px;
 	overflow: hidden;
@@ -707,10 +706,6 @@ nav ul li {
 	height: 50px;
 	border: none;
 	border-radius: 3px;
-	-webkit-border-radius: ;
-	-moz-border-radius: ;
-	-ms-border-radius: ;
-	-o-border-radius: ;
 	font-weight: 500;
 	color: #111111;
 	justify-self: flex-end;
@@ -1641,18 +1636,6 @@ nav ul li {
 	border-top-right-radius: 0px;
 	min-height: 270px;
 	max-height: 300px;
-}
-
-#wk-con {
-	background-color: ;
-}
-
-#main-con {
-	background-color: ;
-}
-
-#rec-con {
-	background-color: ;
 }
 
 .img-cont {
