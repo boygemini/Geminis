@@ -1490,6 +1490,7 @@ nav ul li {
 	list-style: none;
 	height: 70px;
 	align-self: flex-end;
+	width: 100%;
 	/* width: 70%; */
 }
 
@@ -1502,7 +1503,7 @@ nav ul li {
 	transition: 0.3s ease-in-out;
 	cursor: pointer;
 	height: 50px;
-	width: auto;
+	width: 100%;
 	/* background-color: #f4f4f6; */
 }
 
