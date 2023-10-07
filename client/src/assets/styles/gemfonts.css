@@ -61,6 +61,12 @@ html::-webkit-scrollbar-track {
 
 html {
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	justify-self: flex-end !important;
 }
 
 body {
