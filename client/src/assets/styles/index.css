@@ -1514,7 +1514,7 @@ nav ul li {
 	background-color: #111111;
 }
 
-.inactive-li {
+/* .inactive-li {
 	color: #111111;
 	border: 2px solid #111111;
 	background-color: white;
@@ -1524,6 +1524,17 @@ nav ul li {
 	border: 2px solid #111111;
 	color: white;
 	background-color: #111111;
+} */
+
+.inactive-li {
+	color: #111111;
+	background-color: transparent;
+	border: 2px solid #f4f4f6;
+}
+
+.active-li {
+	background-color: #111111;
+	color: white;
 }
 
 .view-all {
