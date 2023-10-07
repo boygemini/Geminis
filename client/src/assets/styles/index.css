@@ -1529,7 +1529,7 @@ nav ul li {
 .inactive-li {
 	color: #111111;
 	background-color: transparent;
-	border: 2px solid #f4f4f6;
+	border: 2px solid whitesmoke;
 }
 
 .active-li {
