@@ -1500,25 +1500,13 @@ nav ul li {
 	height: 50px;
 	width: 100%;
 	min-width: 110px;
+	color: white;
+	background-color: #111111;
 }
 
 .sel-table ul li:hover {
-	border: 2px solid #111111;
-	color: white;
-	background-color: #111111;
+	border: 5px solid #111111;
 }
-
-/* .inactive-li {
-	color: #111111;
-	border: 2px solid #111111;
-	background-color: white;
-}
-
-.active-li {
-	border: 2px solid #111111;
-	color: white;
-	background-color: #111111;
-} */
 
 .inactive-li {
 	color: #111111;
