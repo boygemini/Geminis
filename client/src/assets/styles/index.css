@@ -1500,8 +1500,6 @@ nav ul li {
 	height: 50px;
 	width: 100%;
 	min-width: 110px;
-	color: white;
-	background-color: #111111;
 	border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
@@ -1520,8 +1518,6 @@ nav ul li {
 }
 
 .active-li {
-	
-
 	color: #111111;
 	background-color: whitesmoke;
 }
