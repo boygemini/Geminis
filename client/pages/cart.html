@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="cart" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
+		<title>Shopping Cart</title>
+		<link rel="stylesheet" href="assets/styles/cart.css" />
+		<link rel="stylesheet" href="assets/styles/gemfonts.css" />
+		<script src="assets/js/cart.js" defer></script>
+		<script src="assets/js/search.js" defer></script>
+	</head>
+	<header>
+		<section class="slimbanner" id="slimbanner">
+			<div class="slimcontent">
+				<div class="slimb-left">
+					<p>Open doors to a world of Electronics</p>
+					<hr class="vhr" />
+					<p class="dis-more">Discover More</p>
+				</div>
+				<div class="slimb-right">
+					<p>English</p>
+					<p>USD</p>
+				</div>
+			</div>
+		</section>
+	</header>
+	<body>
+		<div class="boxmodal" id="boxmodal">
+			<div class="askdiv" id="askquestion">
+				<p class="askquestion" id="message"></p>
+				<div class="askbuttondiv" id="askbuttondiv"></div>
+			</div>
+		</div>
+		<section id="body">
+			<section class="top-nav">
+				<div class="logo-nav" id="logo-nav">
+					<nav id="nav-and-products">
+						<img
+							src="assets/images/menu.png"
+							alt=""
+							id="mb"
+							class="menu"
+							onclick="openMenu()"
+						/>
+						<h1 class="logo" id="mob-logo" onclick="goHome()">Geminis.</h1>
+						<div class="products">
+							<div class="main-links">
+								<a id="games" href="shop">Shop</a>
+								<a href="#" id="phones">Products</a>
+								<a href="#" id="coms">About Us</a>
+								<a href="#" id="spks">Contact Us</a>
+							</div>
+						</div>
+					</nav>
+					<div class="justme">
+						<h1 class="logo" id="web-logo" onclick="goHome()">Geminis.</h1>
+					</div>
+					<div class="login-cart">
+						<div class="search-section search-web">
+							<input
+								type="search"
+								class="search"
+								name="search"
+								placeholder="Search..."
+								autocomplete="off"
+								onclick="openSearch()"
+							/>
+							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
+							<div class="serc-img">
+								<img
+									src="assets/images/search.png"
+									alt=""
+									srcset=""
+									onclick="openSearch()"
+								/>
+							</div>
+						</div>
+						<div class="cart-box" id="searc-cart" onclick="openSearch()">
+							<img
+								src="assets/images/search.png"
+								id="mob-search-icon"
+								alt=""
+								srcset=""
+								onclick="openSearch()"
+							/>
+						</div>
+						<div class="cart-box" onclick="toCart()">
+							<img
+								src="assets/images/shopping-cart.png"
+								alt=""
+								srcset=""
+								onclick="toCart()"
+							/>
+							<p id="items-in-cart">0</p>
+						</div>
+						<button type="button" class="login">Login</button>
+						<div class="account cart-box">
+							<img src="assets/images/user.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="menu-box" id="menu">
+					<div class="menu-heading">
+						<h1>Menu</h1>
+						<img
+							class="cancel"
+							onclick="closeMenu()"
+							src="assets/images/close.png"
+						/>
+					</div>
+					<div class="main-menu">
+						<div class="menu-cat">
+							<h1>Shop By Department</h1>
+							<div id="kk">
+								<a href="shop?category=cellphones&Order=Random&Page=0"
+									>Cell Phones</a
+								>
+								<a href="shop?category=tv&Order=Random&Page=0"
+									>Televisions</a
+								>
+								<a href="shop?category=computers&Order=Random&Page=0"
+									>Laptops & Computers</a
+								>
+								<a href="shop?category=speakers&Order=Random&Page=0"
+									>Speakers</a
+								>
+								<a href="shop?category=gaming&Order=Random&Page=0"
+									>Video Games</a
+								>
+							</div>
+						</div>
+						<div class="menu-cat">
+							<h1>Sections</h1>
+							<div id="kk">
+								<a id="link" href="shop">Shop</a>
+								<a href="#">Products</a>
+								<a href="#">About Us</a>
+								<a href="#">Contact Us</a>
+							</div>
+						</div>
+						<div class="menu-cat">
+							<h1>Support</h1>
+							<div id="kk">
+								<a href="#">Visit Our Support</a>
+								<a href="#">Online Support</a>
+							</div>
+						</div>
+						<div class="menu-cat">
+							<div>
+								<a href="#" style="border: none; color: red">Logout</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="searchcontainer">
+				<div class="search-mainbox">
+					<div class="searchbox">
+						<div class="search-cancel">
+							<h1>Hello 👋🏻, what are you looking for?</h1>
+							<img
+								src="assets/images/close(1).png"
+								alt=""
+								onclick="closeSearch()"
+							/>
+						</div>
+						<input
+							type=""
+							class="sb-search"
+							name="search"
+							id="search"
+							placeholder="Search a Product"
+							autocomplete="off"
+							autofocus
+						/>
+						<input type="submit" class="go" value="Search" id="GO" />
+					</div>
+					<div class="suggestion">
+						<div class="sug-holder"></div>
+					</div>
+				</div>
+			</div>
+			<section class="cart-body">
+				<div class="cart-top">
+					<h1 class="head">Shopping Cart</h1>
+					<div class="total-checkout">
+						<h1>
+							<span class="sub-total-head"
+								>Sub Total [<span id="totalquantity"></span> Items]
+							</span>
+							<span>
+								<span class="amount">$ </span
+								><span class="amount" id="cartsum">1,525.96 </span>
+							</span>
+						</h1>
+					</div>
+				</div>
+				<section class="cart-full-details">
+					<div class="cart-orders">
+						<button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+						<div class="orders-in-cart" id="orders-in-cart"></div>
+					</div>
+					<div class="breakdown">
+						<div class="delivery">
+							<div class="dels">
+								<p>Delivery :</p>
+								<h2>Free</h2>
+							</div>
+							<div class="dels2">
+								<p>Delivery by</p>
+								<h2>September 24th, 2023</h2>
+							</div>
+						</div>
+						<div class="promo-code">
+							<input type="text" placeholder="Promocode" /><input
+								type="submit"
+								value="Apply"
+							/>
+						</div>
+						<div class="breaking">
+							<div class="anyname">
+								<div class="dets discount">
+									<h2>Discount</h2>
+									<h2><span id="discount">0</span> <span>%</span></h2>
+								</div>
+								<div class="dets delivery-fee">
+									<h2>Delivery</h2>
+									<h2><span>$</span><span id="deliveryfee">1,024.99</span></h2>
+								</div>
+								<div class="dets tax">
+									<h2>Tax</h2>
+									<h2><span>$</span><span id="tax">10.99</span></h2>
+								</div>
+							</div>
+							<div class="total">
+								<h1>Total</h1>
+								<h1><span>$</span><span id="allTotal">10.99</span></h1>
+							</div>
+							<div class="checkout-proceed">
+								<button class="continue" onclick="toShop()">
+									Continue Shopping
+								</button>
+								<button
+									type="button"
+									id="checkout"
+									class="check-out"
+									onclick="toCheckOut()"
+								>
+									Proceed to Check Out
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</section>
+	</body>
+	<footer>
+		<h1>
+			Shop by
+			<a href="#" target="_blank" rel="noopener noreferrer">jubril bolajoko</a>
+		</h1>
+	</footer>
+	<button
+		id="backtotop"
+		aria-labelledby="button"
+		aria-label="button"
+		type="button"
+		onclick="backToTop()"
+	></button>
+</html>
