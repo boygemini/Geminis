@@ -1502,10 +1502,18 @@ nav ul li {
 	min-width: 110px;
 	color: white;
 	background-color: #111111;
+	border: 5px solid #111111;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
 }
 
 .sel-table ul li:hover {
-	border: 5px solid #111111;
+	border: 5px solid whitesmoke;
+	background-color:whitesmoke;
+	color: #111111;
 }
 
 .inactive-li {
