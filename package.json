@@ -171,8 +171,7 @@
 		"webpack-cli": "^5.1.4"
 	},
 	"scripts": {
-		"start": "node src/index.js",
-		"build": "webpack --mode production"
+		"start": "node src/index.js"
 	},
 	"repository": {
 		"type": "git",
