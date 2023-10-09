@@ -6,12 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0, user-scalable=no"
-		/>
+			content="width=device-width, initial-scale=1.0, user-scalable=no" />
 		<meta name="description" content="Online Gadget Store" />
 		<title>Gemini store | Home</title>
-		<link rel="stylesheet" href="assets/styles/index.css" />
-		<link rel="stylesheet" href="assets/styles/gemfonts.css" />
+		<link rel="stylesheet" href="../../client/assets/styles/index.css" />
+		<link rel="stylesheet" href="../../client/assets/styles/gemfonts.css" />
 		<script src="assets/js/index.js" defer></script>
 		<script src="assets/js/search.js" defer></script>
 	</head>
@@ -42,8 +41,7 @@
 							alt=""
 							id="mb"
 							class="menu"
-							onclick="openMenu()"
-						/>
+							onclick="openMenu()" />
 						<a href="/" class="logo" id="mob-logo" onclick="goHome()"
 							>Geminis.</a
 						>
@@ -69,16 +67,14 @@
 								name="search"
 								placeholder="Search..."
 								autocomplete="off"
-								onclick="openSearch()"
-							/>
+								onclick="openSearch()" />
 							<!-- <input type="submit" class="go" value="GO" id="GO" /> -->
 							<div class="serc-img">
 								<img
 									src="assets/images/search.png"
 									alt=""
 									srcset=""
-									onclick="openSearch()"
-								/>
+									onclick="openSearch()" />
 							</div>
 						</div>
 						<div class="cart-box" id="searc-cart" onclick="openSearch()">
@@ -87,8 +83,7 @@
 								id="mob-search-icon"
 								alt=""
 								srcset=""
-								onclick="openSearch()"
-							/>
+								onclick="openSearch()" />
 						</div>
 						<div class="cart-box" onclick="toCart()">
 							<img
@@ -96,16 +91,14 @@
 								src="assets/images/shopping-cart.png"
 								alt=""
 								srcset=""
-								onclick="toCart()"
-							/>
+								onclick="toCart()" />
 							<p id="items-in-cart">0</p>
 						</div>
 						<button
 							aria-labelledby="button"
 							aria-label="button"
 							type="button"
-							class="login"
-						>
+							class="login">
 							Login
 						</button>
 						<div class="account cart-box">
@@ -119,8 +112,7 @@
 						<img
 							class="cancel"
 							onclick="closeMenu()"
-							src="assets/images/close.png"
-						/>
+							src="assets/images/close.png" />
 					</div>
 					<div class="main-menu">
 						<div class="menu-cat">
@@ -129,9 +121,7 @@
 								<a href="shop?category=cellphones&Order=Random&Page=0"
 									>Cell Phones</a
 								>
-								<a href="shop?category=tv&Order=Random&Page=0"
-									>Televisions</a
-								>
+								<a href="shop?category=tv&Order=Random&Page=0">Televisions</a>
 								<a href="shop?category=computers&Order=Random&Page=0"
 									>Laptops & Computers</a
 								>
@@ -176,8 +166,7 @@
 							<img
 								src="assets/images/close(1).png"
 								alt=""
-								onclick="closeSearch()"
-							/>
+								onclick="closeSearch()" />
 						</div>
 						<input
 							type=""
@@ -186,8 +175,7 @@
 							id="search"
 							placeholder="Search a Product"
 							autocomplete="off"
-							autofocus="off"
-						/>
+							autofocus="off" />
 						<input type="submit" class="go" value="Search" id="GO" />
 					</div>
 					<div class="suggestion">
@@ -201,113 +189,96 @@
 					<h1 id="hero-text">Find Your Next Favorite Gadget</h1>
 					<p class="discount">Shop Our Collection Now</p>
 					<!-- <button aria-labelledby="button" aria-label="button" class="shopbtn">Shop Now</button> -->
-					<span onclick="window.location.href = 'shop'"
-						>Start Shopping</span
-					>
+					<span onclick="window.location.href = 'shop'">Start Shopping</span>
 				</div>
 				<div class="hero-grid">
 					<a
 						href="shop?category=speakers&Order=Random&Page=0"
 						class="grid"
-						id="grid-0"
-					>
+						id="grid-0">
 						<div class="shade" id="mys">
 							<div class="cat-text">Speakers</div>
 							<button
 								aria-labelledby="button"
 								aria-label="button"
-								class="gridbtn"
-							>
+								class="gridbtn">
 								<img
 									class="thinarrow"
 									src="assets/images/thinarrow.png"
 									alt=""
-									srcset=""
-								/>
+									srcset="" />
 							</button>
 						</div>
 					</a>
 					<a
 						href="shop?category=computers&Order=Random&Page=0"
 						class="grid"
-						id="grid-1"
-					>
+						id="grid-1">
 						<div class="shade">
 							<div class="cat-text">Laptops & Computers</div>
 							<button
 								aria-labelledby="button"
 								aria-label="button"
-								class="gridbtn"
-							>
+								class="gridbtn">
 								<img
 									class="thinarrow"
 									src="assets/images/thinarrow.png"
 									alt=""
-									srcset=""
-								/>
+									srcset="" />
 							</button>
 						</div>
 					</a>
 					<a
 						href="shop?category=cellphones&Order=Random&Page=0"
 						class="grid"
-						id="grid-2"
-					>
+						id="grid-2">
 						<div class="shade">
 							<div class="cat-text">Cell Phones</div>
 							<button
 								aria-labelledby="button"
 								aria-label="button"
-								class="gridbtn"
-							>
+								class="gridbtn">
 								<img
 									class="thinarrow"
 									src="assets/images/thinarrow.png"
 									alt=""
-									srcset=""
-								/>
+									srcset="" />
 							</button>
 						</div>
 					</a>
 					<a
 						href="shop?category=tv&Order=Random&Page=0"
 						class="grid"
-						id="grid-3"
-					>
+						id="grid-3">
 						<div class="shade">
 							<div class="cat-text">TV</div>
 							<button
 								aria-labelledby="button"
 								aria-label="button"
-								class="gridbtn"
-							>
+								class="gridbtn">
 								<img
 									class="thinarrow"
 									src="assets/images/thinarrow.png"
 									alt=""
-									srcset=""
-								/>
+									srcset="" />
 							</button>
 						</div>
 					</a>
 					<a
 						href="shop?category=gaming&Order=Random&Page=0"
 						class="grid"
-						id="grid-4"
-					>
+						id="grid-4">
 						<div class="shade">
 							<div class="cat-text">Video Games</div>
 							<button
 								aria-labelledby="button"
 								aria-label="button"
-								class="gridbtn"
-							>
+								class="gridbtn">
 								<img
 									class="thinarrow"
 									src="assets/images/thinarrow.png"
 									alt=""
-									srcset=""
-								/>
+									srcset="" />
 							</button>
 						</div>
 					</a>
@@ -458,8 +429,7 @@
 											src="assets/images/delivery.png"
 											alt=""
 											id="a-icon"
-											class="a-icon"
-										/>
+											class="a-icon" />
 										<h2>Free Shipping</h2>
 									</div>
 									<div class="a-text">
@@ -471,8 +441,7 @@
 										<img
 											src="assets/images/credit-card(1).png"
 											alt=""
-											class="a-icon"
-										/>
+											class="a-icon" />
 										<h2>Secured Payments</h2>
 									</div>
 									<div class="a-text">
@@ -484,8 +453,7 @@
 										<img
 											src="assets/images/24-hours-support.png"
 											alt=""
-											class="a-icon"
-										/>
+											class="a-icon" />
 										<h2>24/7 Online Support</h2>
 									</div>
 									<div class="a-text">
@@ -498,8 +466,7 @@
 										<img
 											src="assets/images/exchange.png"
 											alt=""
-											class="a-icon"
-										/>
+											class="a-icon" />
 										<h2>Free Returns</h2>
 									</div>
 									<div class="a-text">
@@ -521,8 +488,7 @@
 						aria-labelledby="button"
 						aria-label="button"
 						class="visit"
-						type="button"
-					>
+						type="button">
 						Visit
 					</button>
 				</section>
@@ -542,8 +508,7 @@
 			aria-labelledby="button"
 			aria-label="button"
 			type="button"
-			onclick="backToTop()"
-		></button>
+			onclick="backToTop()"></button>
 
 		<script>
 			"use strict";
