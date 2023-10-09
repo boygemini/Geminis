@@ -54,6 +54,11 @@ app.get("/checkout", (req, res) => {
 	res.sendFile(path);
 });
 
+app.get("/assets", (req, res) => {
+	const path = resolve(process.env.STATIC_DIR + "pages/assets/");
+	res.sendFile(path);
+});
+
 app.get("/config", (req, res) => {
 	res.send({
 		publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
