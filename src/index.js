@@ -30,7 +30,6 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-<<<<<<< HEAD:src/index.js
 	const path = resolve(process.env.STATIC_DIR + "pages/index.html");
 	res.sendFile(path);
 });
@@ -53,11 +52,6 @@ app.get("/cart", (req, res) => {
 app.get("/checkout", (req, res) => {
 	const path = resolve(process.env.STATIC_DIR + "pages/checkout.html");
 	res.sendFile(path);
-=======
-	// const path = resolve(process.env.STATIC_DIR);
-	// res.sendFile(path);
-	res.json("sorry🧐, but you are in the wrong place🤷🏾‍♂️.");
->>>>>>> origin/gh-pages:index.js
 });
 
 app.get("/config", (req, res) => {
