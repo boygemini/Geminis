@@ -54,7 +54,6 @@
 		"form-data": "^3.0.1",
 		"forwarded": "^0.2.0",
 		"fresh": "^0.5.2",
-		"fsevents": "^2.3.2",
 		"function-bind": "^1.1.1",
 		"get-intrinsic": "^1.2.1",
 		"glob-parent": "^5.1.2",
