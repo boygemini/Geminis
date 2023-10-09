@@ -188,7 +188,7 @@
 		"url": "https://github.com/boygemini/Geministore/issues"
 	},
 	"engines": {
-		"node": "18.17.0",
+		"node": "14.x",
 		"npm": "9.6.7"
 	},
 	"homepage": "https://github.com/boygemini/Geministore#readme"
