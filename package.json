@@ -2,7 +2,7 @@
 	"name": "geministore",
 	"version": "1.0.0",
 	"description": "e-commerce website",
-	"main": "src/index.js",
+	"main": "src/server.js",
 	"dependencies": {
 		"abbrev": "^1.1.1",
 		"accepts": "^1.3.8",
@@ -119,7 +119,6 @@
 		"safer-buffer": "^2.1.2",
 		"semver": "^7.5.4",
 		"send": "^0.18.0",
-		"serve-static": "^1.15.0",
 		"setprototypeof": "^1.2.0",
 		"side-channel": "^1.0.4",
 		"signal-exit": "^4.0.2",
@@ -165,6 +164,7 @@
 		"net": "^1.0.2",
 		"os-browserify": "^0.3.0",
 		"querystring-es3": "^0.2.1",
+		"serve-static": "^1.15.0",
 		"stream-browserify": "^3.0.0",
 		"stream-http": "^3.2.0",
 		"url": "^0.11.3",
@@ -172,9 +172,9 @@
 		"webpack-cli": "^5.1.4"
 	},
 	"scripts": {
-		"dev": "node src/index.js",
-		"build": "npx babel src/index.js --out-file dist/index.js",
-		"start": "node dist/index.js"
+		"dev": "node src/server.js",
+		"build": "npx babel src/server.js --out-file dist/server.js",
+		"start": "node dist/server.js"
 	},
 	"repository": {
 		"type": "git",

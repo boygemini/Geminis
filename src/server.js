@@ -14,7 +14,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
 	},
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.static(process.env.STATIC_DIR));
 app.use(
@@ -51,11 +51,6 @@ app.get("/cart", (req, res) => {
 
 app.get("/checkout", (req, res) => {
 	const path = resolve(process.env.STATIC_DIR + "pages/checkout.html");
-	res.sendFile(path);
-});
-
-app.get("/assets", (req, res) => {
-	const path = resolve(process.env.STATIC_DIR + "pages/assets/");
 	res.sendFile(path);
 });
 
