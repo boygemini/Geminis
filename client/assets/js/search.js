@@ -862,7 +862,7 @@ const onLoad = async () => {
 
 			// PASSING RESULTS TO UI FUNCTION
 			displayFilteredResults(results, parameterCategory);
-		}
+		} 
 		imageObserver();
 	}
 };

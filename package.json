@@ -57,6 +57,7 @@
 		"function-bind": "^1.1.1",
 		"get-intrinsic": "^1.2.1",
 		"glob-parent": "^5.1.2",
+		"gsap": "^3.12.2",
 		"has": "^1.0.3",
 		"has-flag": "^3.0.0",
 		"has-proto": "^1.0.1",

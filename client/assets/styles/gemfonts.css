@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
 	font-display: block;
 	font-family: "DSIndigo";
@@ -42,8 +45,6 @@
 			format("woff");
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
-
 html::-webkit-scrollbar {
 	height: 100%;
 	width: 2px;
@@ -67,6 +68,7 @@ html {
 
 footer {
 	justify-self: flex-end !important;
+	margin-top: 50px;
 }
 
 body {
@@ -75,6 +77,21 @@ body {
 }
 
 * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "DSIndigo" !important;
+	color: #090a0a;
+	font-weight: 400;
+	font-size: 0.95rem;
+	scroll-behavior: smooth;
+	outline: none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	max-zoom: 0;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -85,7 +102,11 @@ body {
 	line-height: 1.5;
 
 	/* Adjust letter spacing (kerning) */
-	letter-spacing: 0.05em;
+	letter-spacing: 0.02em;
+}
+
+.logo-nav{
+	min-height: 90px;
 }
 
 .top-nav {
@@ -105,23 +126,6 @@ a {
 	cursor: pointer;
 }
 
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-family: "DsIndigo";
-	color: #090a0a;
-	font-weight: 400;
-	font-size: 0.95rem;
-	scroll-behavior: smooth;
-	outline: none;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
-	max-zoom: 0;
-}
 
 .products .main-links {
 	display: flex;
@@ -149,7 +153,7 @@ a {
 	z-index: 98299492992929492992929492994929475869706875645869706857465896749429942;
 }
 .menu-heading {
-	background-color: #0e3530;
+	background-color: #111111;
 	width: 100%;
 	padding: 20px;
 	display: flex;
@@ -217,11 +221,13 @@ body {
 	background-color: white;
 	/* background-color: #f9fafc; */
 	width: 100%;
+	min-height: 100% !important;
+	display: flex;
+	flex-direction: column;
 }
 
 #body {
 	max-width: 2000px;
-	margin: auto;
 }
 
 .sel-box:hover {

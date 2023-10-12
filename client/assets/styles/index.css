@@ -1500,44 +1500,57 @@ nav ul li {
 	height: 50px;
 	width: 100%;
 	min-width: 110px;
-	border-radius:5px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	-ms-border-radius:5px;
-	-o-border-radius:5px;
-}
-
-.sel-table ul li:hover {
-	color: #111111;
-	background-color: whitesmoke;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
 }
 
 .inactive-li {
-	background-color: #111111;
-	color: white;
+	background-color: whitesmoke;
+	color: #111111;
 }
 
 .active-li {
-	color: #111111;
-	background-color: whitesmoke;
+	color: #ffffff;
+	background-color: #111111;
 }
 
 .view-all {
 	font-weight: 500;
 	font-size: 15px;
-	color: white;
+	color: blueviolet;
 	padding: 10px 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #111111;
+	background-color: white;
 	cursor: pointer;
 	column-gap: 5px;
+	white-space: nowrap;
+	border-radius: 0;
+	box-shadow: 0px 1px 0px 0px blueviolet;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+}
+
+.view-all:active,
+.view-all:hover {
+	background-color: whitesmoke;
 }
 
 .viewall-arrow {
 	width: 25px;
 	height: 25px;
+	display: none;
 }
 
 .sel-container {
@@ -1680,7 +1693,7 @@ nav ul li {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	min-width: 100%;
-	font-weight: 500;
+	font-weight: 400 !important;
 	color: #111111b5;
 }
 
@@ -2241,16 +2254,6 @@ footer {
 		padding: 0;
 	}
 
-	.inactive-li {
-		border: none;
-		background-color: transparent;
-		border: 2px solid #f4f4f6;
-	}
-
-	.active-li {
-		background-color: #111111;
-	}
-
 	.sel-box {
 		min-width: 45vw;
 		max-width: 45vw;
@@ -2340,24 +2343,6 @@ footer {
 		height: auto;
 	}
 
-	.view-all {
-		width: auto;
-		background-color: white;
-		color: #111111;
-		padding: 0px 0px;
-		border: 1px solid transparent;
-		border-radius: 0px;
-		-webkit-border-radius: 0px;
-		-moz-border-radius: 0px;
-		-ms-border-radius: 0px;
-		-o-border-radius: 0px;
-	}
-
-	.view-all:hover {
-		/* background-color: #111111; */
-		border-bottom: 1px solid #111111;
-	}
-
 	#sel-container {
 		display: grid;
 
@@ -2374,14 +2359,6 @@ footer {
 		font-size: 18px;
 		text-transform: uppercase;
 	}
-
-	/* .view-all {
-		text-align: center;
-		background-color: #111111;
-		color: white;
-		text-transform: capitalize;
-		padding: 10px 10px;
-	} */
 
 	.price-box {
 		display: flex;
@@ -2966,15 +2943,6 @@ footer {
 	.sec-heading {
 		font-weight: 600;
 		font-size: 30px;
-	}
-
-	.view-all {
-		text-align: center;
-		background-color: transparent;
-		color: #111111;
-		text-decoration: 1px solid #111111 underline;
-		text-underline-offset: 5px;
-		text-transform: capitalize;
 	}
 
 	.price-box {

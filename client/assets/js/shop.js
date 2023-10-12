@@ -42,6 +42,20 @@ window.addEventListener("scroll", (e) => {
 	});
 });
 
+let sectionHeader = document.querySelectorAll(".section-title")
+sectionHeader.forEach(h => {
+	h.addEventListener("scroll", (e)=>{
+		console.log(containerRect.top)
+		const containerRect = h.getBoundingClientRect()
+		 if (containerRect.top <= 0) {
+        // The container has reached or passed the top of the screen
+        container.classList.add('shadow');
+    } else {
+        // The container is below the top of the screen
+        container.classList.remove('shadow');
+    }
+	})
+})
 let filterBox = document.querySelectorAll("#filters");
 let filterUIObjects = {
 	gaming() {
