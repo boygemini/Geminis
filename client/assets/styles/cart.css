@@ -1460,7 +1460,7 @@ footer {
 	}
 
 	.cart-body {
-		margin-top: 13vh;
+		margin-top: 100px;
 		width: 100%;
 		row-gap: 20px;
 	}
@@ -1796,7 +1796,7 @@ footer {
 	}
 
 	.cart-body {
-		margin-top: 15vh;
+		margin-top: 100px;
 		width: 95%;
 	}
 

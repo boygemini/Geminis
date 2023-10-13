@@ -1973,10 +1973,12 @@ footer {
 	}
 }
 
+
+
 @media screen and (min-width: 769px) and (max-width: 1200px) {
 	#body {
 		width: 100%;
-		margin-top: 10vh !important;
+		margin-top: 90px !important;
 	}
 
 	.side-image {
@@ -2235,7 +2237,7 @@ footer {
 		width: 95%;
 		max-width: 2000px;
 		margin: auto;
-		margin-top: 10vh !important;
+		margin-top: 90px !important;
 	}
 
 	.cart-body {
