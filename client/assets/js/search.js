@@ -373,87 +373,74 @@ const displayFilteredResults = (results, category) => {
 	}
 };
 
-const getCatFiltersAndSearchResults = async (Query, Category) => {
-	let localStore = JSON.parse(localStorage.getItem("StoreItems"))
-		.selectedProducts[0];
-	let products = await allProducts();
-	let dir = localStore || products.selectedProducts[0];
-	let gamekey = [
-		...new Set(dir["gaming"].map((itemName) => itemName.itemInfo.name)),
-	];
+const getCatFiltersAndSearchResults = async (searchQuery, category) => {
+  const selectedProducts = JSON.parse(localStorage.getItem("StoreItems"))
+    ?.selectedProducts[0];
+  const allProductsData = await allProducts();
+  const productCatalog =
+    selectedProducts || allProductsData.selectedProducts[0];
 
-	let phonekey = [
-		...new Set(dir["cellphones"].map((itemName) => itemName.itemInfo.name)),
-	];
+  const getCategoryItemNames = (categoryName) => [
+    ...new Set(productCatalog[categoryName].map((item) => item.itemInfo.name)),
+  ];
 
-	let tvkey = [...new Set(dir["tv"].map((itemName) => itemName.itemInfo.name))];
+  const gamingItemNames = getCategoryItemNames("gaming");
+  const cellphonesItemNames = getCategoryItemNames("cellphones");
+  const tvItemNames = getCategoryItemNames("tv");
+  const speakersItemNames = getCategoryItemNames("speakers");
+  const computersItemNames = getCategoryItemNames("computers");
 
-	let speakerkey = [
-		...new Set(dir["speakers"].map((itemName) => itemName.itemInfo.name)),
-	];
+  const allItemNames = [
+    gamingItemNames,
+    cellphonesItemNames,
+    tvItemNames,
+    speakersItemNames,
+    computersItemNames,
+  ];
+  const allItemNamesFlat = allItemNames.flat();
 
-	let comkey = [
-		...new Set(dir["computers"].map((itemName) => itemName.itemInfo.name)),
-	];
+  const searchResults = (query) => getResults.searchBarResult(query);
 
-	let general = [gamekey, phonekey, tvkey, speakerkey, comkey];
-	let generalKeyWords = new Array();
+  if (category) {
+    return getResults.suggestionsResult(searchQuery, category);
+  }
 
-	for (let i in general) {
-		for (let j in general[i]) {
-			generalKeyWords.push(general[i][j]);
-		}
-	}
+  const checkAndPerformSearch = (keywords, action) => {
+    for (const keyword of keywords) {
+      if (keyword.toLowerCase().trim().includes(searchQuery)) {
+        action();
+        return searchResults(searchQuery);
+      }
+    }
+  };
 
-	if (Category) {
-		return getResults.suggestionsResult(Query, Category);
-	}
+  const categoryActions = {
+    gaming: Gamings,
+    cellphones: cellPhones,
+    tv: TVs,
+    speakers: Speakers,
+    computers: Computers,
+  };
 
-	function searchResults(Query) {
-		return getResults.searchBarResult(Query);
-	}
+  for (const [categoryName, action] of Object.entries(categoryActions)) {
+    const categoryItemNames = productCatalog[categoryName].map(
+      (item) => item.itemInfo.name
+    );
+    const result = checkAndPerformSearch(categoryItemNames, action);
+    if (result) {
+      return result;
+    }
+  }
 
-	for (let i in gamekey) {
-		if (gamekey[i].toLowerCase().trim().includes(Query)) {
-			Gamings();
-			return searchResults(Query);
-		}
-	}
+  const negativeResult = allItemNamesFlat.some(
+    (itemName) => itemName.toLowerCase() !== searchQuery
+  )
+    ? getResults.negativeResults(searchQuery)
+    : null;
 
-	for (let i in phonekey) {
-		if (phonekey[i].toLowerCase().trim().includes(Query)) {
-			cellPhones();
-			return searchResults(Query);
-		}
-	}
-
-	for (let i in tvkey) {
-		if (tvkey[i].toLowerCase().trim().includes(Query)) {
-			TVs();
-			return searchResults(Query);
-		}
-	}
-
-	for (let i in speakerkey) {
-		if (speakerkey[i].toLowerCase().trim().includes(Query)) {
-			Speakers();
-			return searchResults(Query);
-		}
-	}
-
-	for (let i in comkey) {
-		if (comkey[i].toLowerCase().trim().includes(Query)) {
-			Computers();
-			return searchResults(Query);
-		}
-	}
-
-	for (let i in generalKeyWords) {
-		if (generalKeyWords[i].toLowerCase() !== Query) {
-			return getResults.negativeResults(Query);
-		}
-	}
+  return negativeResult;
 };
+
 
 const removeThe20Nonsense = (Query) => {
 	if (Query.lastIndexOf("%20") > -1) {
@@ -620,251 +607,141 @@ const imageObserver = () => {
 
 const onLoad = async () => {
 	let dir = await allProducts();
-	if (typeof dir === "object") {
-		let cpUrl = new URL(document.URL);
-		if (cpUrl.search.length <= 0 && cpUrl.pathname === "/shop") {
-		} else if (cpUrl.search.length > 0 && cpUrl.pathname === "/shop") {
-			indicateLoadingWhileAwaitingResults(true);
-		}
+	const handleUrlParameters = () => {
+    let cpUrl = new URL(document.URL);
+    if (!(typeof dir === "object")) return;
 
-		let urlWithQuery = document.URL;
+    if (cpUrl.search.length <= 0 && cpUrl.pathname === "/shop") {
+      return;
+    } else if (cpUrl.search.length > 0 && cpUrl.pathname === "/shop") {
+      indicateLoadingWhileAwaitingResults(true);
+    }
 
-		// LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR SUGGESTION
-		if (
-			urlWithQuery.split("&SearchQuery=").length > 1 &&
-			urlWithQuery.split("category=").length > 1
-		) {
-			let Query = urlWithQuery.split("SearchQuery=")[1].split("&")[0];
-			let Category = urlWithQuery
-				.split("category=")[1]
-				.toString()
-				.split("&")[0];
-			Query = removeThe20Nonsense(Query);
-			getCatFiltersAndSearchResults(Query, Category);
-			imageObserver();
-			return;
-		}
+    let urlWithQuery = document.URL;
 
-		// LOAD RESULTS IF SEARCH WAS FROM SEARCH BAR
-		if (
-			urlWithQuery.split("?SearchQuery=").length > 1 &&
-			urlWithQuery.split("category=").length === 1
-		) {
-			let Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0];
-			Query = removeThe20Nonsense(Query).trim();
-			getCatFiltersAndSearchResults(Query);
-			imageObserver();
-			return;
-		}
+    const handleSearch = () => {
+      let Query, Category;
 
-		// IF THE URL IS BADLY ALTERED IT SHOULD RETURN A NOT FOUND PAGE
-		let QueryName;
-		try {
-			QueryName = urlWithQuery.split("?")[1].split("=")[0];
-		} catch (error) {}
+      if (
+        urlWithQuery.includes("&SearchQuery=") &&
+        urlWithQuery.includes("category=")
+      ) {
+        Query = urlWithQuery.split("SearchQuery=")[1].split("&")[0];
+        Category = urlWithQuery.split("category=")[1].split("&")[0];
+        Query = removeThe20Nonsense(Query);
+        getCatFiltersAndSearchResults(Query, Category);
+        imageObserver();
+        return;
+      }
 
-		if (
-			QueryName !== "SearchQuery" &&
-			QueryName !== "category" &&
-			QueryName !== undefined
-		) {
-			getResults.pageNotFound();
-		}
+      if (
+        urlWithQuery.includes("?SearchQuery=") &&
+        !urlWithQuery.includes("category=")
+      ) {
+        Query = urlWithQuery.split("?SearchQuery=")[1].split("&")[0];
+        Query = removeThe20Nonsense(Query).trim();
+        getCatFiltersAndSearchResults(Query);
+        imageObserver();
+        return;
+      }
 
-		// LOAD FILTER RESULTS FROM URL
-		if (urlWithQuery.split("?category").length > 1) {
-			let parameterCategory = urlWithQuery
-				.split("?category=")[1]
-				.toString()
-				.split("&")[0];
+      let QueryName;
+      try {
+        QueryName = urlWithQuery.split("?")[1].split("=")[0];
+      } catch (error) {}
 
-			let allItems = JSON.parse(localStorage.getItem("StoreItems"));
+      if (
+        QueryName !== "SearchQuery" &&
+        QueryName !== "category" &&
+        QueryName !== undefined
+      ) {
+        getResults.pageNotFound();
+      }
 
-			let allItemsInCategory =
-				allItems.selectedProducts[0][`${parameterCategory}`];
+      if (urlWithQuery.includes("?category")) {
+        let parameterCategory = urlWithQuery
+          .split("?category=")[1]
+          .split("&")[0];
 
-			let results = [];
+        let allItems = JSON.parse(localStorage.getItem("StoreItems"));
 
-			if (results.length === 0) {
-				results = allItemsInCategory;
-			}
+        let allItemsInCategory =
+          allItems.selectedProducts[0][`${parameterCategory}`];
 
-			/*
-			 * USE PROPER ERROR HANDLING HERE
-			 */
-			// PARAMETERS FROM THE URL
-			let newUrlParameters = convertUrlParametersIntoObject(urlWithQuery);
-			try {
-				newUrlParameters.Price = newUrlParameters.Price.replace(
-					/%20/g,
-					""
-				).split("-");
-				priceFromUrl = [
-					{
-						high: Number(newUrlParameters.Price[1]),
-						low: Number(newUrlParameters.Price[0]),
-					},
-				];
-			} catch (error) {}
-			try {
-				brandFromUrl = newUrlParameters.Brand.split(",");
-			} catch (error) {}
-			try {
-				filterFromUrl = newUrlParameters.Filters.split(",");
-			} catch (error) {}
-			try {
-				memoryFromUrl = newUrlParameters.Memory.toString().split(",");
-			} catch (error) {}
-			try {
-				ramFromUrl = newUrlParameters.Ram.toString().split(",");
-			} catch (error) {}
-			try {
-				romFromUrl = newUrlParameters.Rom.split(",");
-			} catch (error) {}
-			try {
-				screenFromUrl = newUrlParameters.Screen.split(",");
-			} catch (error) {}
-			try {
-				sizeFromUrl = newUrlParameters.Size.split(",");
-			} catch (error) {}
-			try {
-				pageFromUrl = newUrlParameters.Page;
-			} catch (error) {}
+        let results = [];
 
-			try {
-				orderFromUrl = newUrlParameters.Order;
-			} catch (error) {}
+        if (results.length === 0) {
+          results = allItemsInCategory;
+        }
 
-			// Filtering / Price
-			if (priceFromUrl && priceFromUrl.length > 0) {
-				let pr = [];
-				for (let a in results) {
-					if (
-						Number(results[a].itemInfo.newItemPrice) >= priceFromUrl[0].low &&
-						Number(results[a].itemInfo.newItemPrice) <= priceFromUrl[0].high
-					) {
-						pr.push(results[a]);
-					}
-				}
-				if (pr.length > 0) {
-					results = pr;
-				}
-			}
+        // Handle URL parameters
+        const newUrlParameters = convertUrlParametersIntoObject(urlWithQuery);
+        handlePriceFilter(newUrlParameters.Price);
+        handleArrayFilter(newUrlParameters.Brand, "itemInfo.brand");
+        handleArrayFilter(newUrlParameters.Filters, "itemInfo.filters");
+        handleArrayFilter(newUrlParameters.Memory, "itemInfo.memory");
+        handleArrayFilter(newUrlParameters.Ram, "itemInfo.ram");
+        handleArrayFilter(newUrlParameters.Rom, "itemInfo.rom");
+        handleArrayFilter(newUrlParameters.Screen, "itemInfo.screen");
+        handleArrayFilter(newUrlParameters.Size, "itemInfo.size");
+        handlePagination(newUrlParameters.Page, results);
+        controlSort(results);
+        displayFilteredResults(results, parameterCategory);
+      }
 
-			// Brand
-			if (brandFromUrl && brandFromUrl.length > 0) {
-				let ba = [];
-				for (let b in results) {
-					for (let c in brandFromUrl) {
-						if (results[b].itemInfo.brand === brandFromUrl[c]) {
-							ba.push(results[b]);
-						}
-					}
-				}
-				if (ba.length > 0) {
-					results = ba;
-				}
-			}
+      imageObserver();
+    };
 
-			// Memory
-			if (memoryFromUrl && memoryFromUrl.length > 0) {
-				let ma = [];
-				for (let m in results) {
-					for (let mi in memoryFromUrl) {
-						if (
-							Number(results[m].itemInfo.memory) === Number(memoryFromUrl[mi])
-						) {
-							ma.push(results[m]);
-						}
-					}
-				}
-				if (ma.length > 0) {
-					results = ma;
-				}
-			}
+    handleSearch();
+  };
 
-			// Ram
-			if (ramFromUrl && ramFromUrl.length > 0) {
-				let ra = [];
-				for (let r in results) {
-					for (let re in ramFromUrl) {
-						if (Number(results[r].itemInfo.ram) === Number(ramFromUrl[re])) {
-							ra.push(results[r]);
-						}
-					}
-				}
+  const handlePriceFilter = (price) => {
+    if (!price) return;
 
-				if (ra.length > 0) {
-					results = ra;
-				}
-			}
+    let pr = [];
+    for (let a in results) {
+      if (
+        Number(results[a].itemInfo.newItemPrice) >= price[0].low &&
+        Number(results[a].itemInfo.newItemPrice) <= price[0].high
+      ) {
+        pr.push(results[a]);
+      }
+    }
+    if (pr.length > 0) {
+      results = pr;
+    }
+  };
 
-			// Rom
-			if (romFromUrl && romFromUrl.length > 0) {
-				let ro = [];
-				for (let ri in results) {
-					for (let rc in romFromUrl) {
-						if (Number(results[ri].itemInfo.rom) === Number(romFromUrl[rc])) {
-							ro.push(results[ri]);
-						}
-					}
-				}
+  const handleArrayFilter = (param, key) => {
+    if (!param || param.length === 0) return;
 
-				if (ro.length > 0) {
-					results = ro;
-				}
-			}
+    let filteredArray = [];
+    for (let i in results) {
+      for (let j in param) {
+        if (results[i][key] === param[j]) {
+          filteredArray.push(results[i]);
+        }
+      }
+    }
+    if (filteredArray.length > 0) {
+      results = filteredArray;
+    }
+  };
 
-			// Screen
-			if (screenFromUrl && screenFromUrl.length > 0) {
-				let sc = [];
-				for (let s in results) {
-					for (let sv in screenFromUrl) {
-						if (
-							Number(results[s].itemInfo.screen) === Number(screenFromUrl[sv])
-						) {
-							sc.push(results[s]);
-						}
-					}
-				}
-				if (sc.length > 0) {
-					results = sc;
-				}
-			}
+  const handlePagination = (page, results) => {
+    if (!page) {
+      results = createPagination(results, 12, 0);
+    }
 
-			// Size
-			if (sizeFromUrl && sizeFromUrl.length > 0) {
-				let sz = [];
-				for (let si in results) {
-					for (let sy in sizeFromUrl) {
-						if (Number(results[si].itemInfo.size) === Number(sizeFromUrl[sy])) {
-							sz.push(results[si]);
-						}
-					}
-				}
-				if (sz.length > 0) {
-					results = sz;
-				}
-			}
+    if (page) {
+      results = createPagination(results, 12, Number(page));
+    }
+    markPagination();
+  };
 
-			// Page & Pagination
-			if (!pageFromUrl) {
-				results = createPagination(results, 12, 0);
-			}
+  // Call the main function
+  handleUrlParameters();
 
-			if (pageFromUrl) {
-				results = createPagination(results, 12, Number(pageFromUrl));
-			}
-			markPagination();
-
-			// Result Sorting
-			controlSort(results);
-
-			// PASSING RESULTS TO UI FUNCTION
-			displayFilteredResults(results, parameterCategory);
-		} 
-		imageObserver();
-	}
 };
 
 // OPEN MENU
