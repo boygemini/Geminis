@@ -72,7 +72,7 @@ const pages = [
 												id="SHIPPINGname"
 												placeholder="Contact Name"
 												class="address"
-												value="Jubril Bolajoko" />
+												value="Jake Erler" />
 										</div>
 										<div class="form-field">
 											<label for="">Street Address</label>
